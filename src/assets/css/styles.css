@@ -810,7 +810,7 @@ footer {
 
 .taxi-list {
   display: grid;
-  grid-template-columns: 1fr 4fr 4fr 4fr;
+  grid-template-columns: 3fr 3fr 2fr 3fr 3fr 3fr;
   width: 100%;
   max-width: 1200px;
   margin: 0 auto;
@@ -821,6 +821,8 @@ footer {
   display: none;
 }
 
+.taxi-list-row-from,
+.taxi-list-row-to,
 .taxi-list-row-duration,
 .taxi-list-row-sedan,
 .taxi-list-row-minivan,
@@ -830,6 +832,8 @@ footer {
   color: var(--color-bg);
   border-bottom: 1px solid var(--color-h3);
 }
+.taxi-list-row-from,
+.taxi-list-row-to,
 .taxi-list-row-duration {
   text-align: left;
 }
@@ -838,6 +842,8 @@ footer {
   color: var(--color-bg);
   display: contents !important;
 }
+.taxi-list-row:first-child .taxi-list-row-from,
+.taxi-list-row:first-child .taxi-list-row-to,
 .taxi-list-row:first-child .taxi-list-row-duration,
 .taxi-list-row:first-child .taxi-list-row-sedan,
 .taxi-list-row:first-child .taxi-list-row-minivan,
@@ -1419,6 +1425,18 @@ select option:checked {
   }
   .no-mobile {
     display: none !important;
+  }
+  .taxi-list {
+    grid-template-columns: 2fr 2fr 1fr 2fr 2fr 2fr;
+    font-size: 12px;
+  }
+  .taxi-list-row-from,
+  .taxi-list-row-to,
+  .taxi-list-row-duration,
+  .taxi-list-row-sedan,
+  .taxi-list-row-minivan,
+  .taxi-list-row-minibus {
+    padding: 8px 4px;
   }
   .pricing-grid-header,
   .pricing-grid-row {

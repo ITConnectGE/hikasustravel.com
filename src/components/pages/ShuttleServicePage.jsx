@@ -84,6 +84,8 @@ export default function ShuttleServicePage() {
         <FadeUp>
           <div className="taxi-list">
             <div className="taxi-list-row" style={{ display: 'contents' }}>
+              <div className="taxi-list-row-from">From</div>
+              <div className="taxi-list-row-to">To</div>
               <div className="taxi-list-row-duration">Duration</div>
               <div className="taxi-list-row-sedan">Sedan<span className="no-mobile"> (1-3 p, 3 bags)</span></div>
               <div className="taxi-list-row-minivan">Minivan<span className="no-mobile"> (4-6 p, 8 bags)</span></div>
@@ -95,6 +97,8 @@ export default function ShuttleServicePage() {
                 key={`${route.start}-${route.stop}-${i}`}
                 className="taxi-list-row active"
               >
+                <div className="taxi-list-row-from">{route.start}</div>
+                <div className="taxi-list-row-to">{route.stop}</div>
                 <div className="taxi-list-row-duration">{route.duration}</div>
                 <div className="taxi-list-row-sedan">€ {route.sedan}</div>
                 <div className="taxi-list-row-minivan">€ {route.minivan}</div>
@@ -104,7 +108,7 @@ export default function ShuttleServicePage() {
 
             {filteredRoutes.length === 0 && (selectedStart || selectedStop) && (
               <div className="taxi-list-row active">
-                <div className="taxi-list-row-duration" style={{ gridColumn: '1 / -1', textAlign: 'center', padding: '20px' }}>
+                <div className="taxi-list-row-from" style={{ gridColumn: '1 / -1', textAlign: 'center', padding: '20px' }}>
                   No routes found for the selected combination.
                 </div>
               </div>
