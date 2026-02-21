@@ -1,6 +1,7 @@
 import { useState, useMemo } from 'react'
 import FadeUp from '../shared/FadeUp'
 import { startLocations, getStopsForStart, getStartsForStop, filterRoutes } from '../../data/shuttleData'
+import asset from '../../utils/basePath'
 
 export default function ShuttleServicePage() {
   const [selectedStart, setSelectedStart] = useState('')
@@ -37,7 +38,7 @@ export default function ShuttleServicePage() {
 
   return (
     <>
-      <section className="fullscreen coverme" style={{ backgroundImage: 'url(/images/files/taxi-service.jpg)' }}>
+      <section className="fullscreen coverme" style={{ backgroundImage: `url(${asset('/images/files/taxi-service.jpg')})` }}>
         <div className="arrow-down taxi-arrow"></div>
       </section>
 

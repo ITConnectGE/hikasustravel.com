@@ -10,8 +10,8 @@
 
 @font-face {
   font-family: "rockwell";
-  src: url("/fonts/rockwellnova-webfont.woff2") format("woff2"),
-    url("/fonts/rockwellnova-webfont.woff") format("woff");
+  src: url("../fonts/rockwellnova-webfont.woff2") format("woff2"),
+    url("../fonts/rockwellnova-webfont.woff") format("woff");
   font-weight: normal;
   font-style: normal;
 }
@@ -265,7 +265,7 @@ section {
   left: 0;
   width: 100%;
   height: 25px;
-  background-image: url("/img/taxi-pattern.svg");
+  background-image: url("../img/taxi-pattern.svg");
   background-repeat: repeat-x;
   background-size: auto 25px;
 }
@@ -484,7 +484,7 @@ tour-info h2 a,
   width: 24px;
   height: 16px;
   margin-left: 8px;
-  background-image: url("/img/arrow.svg");
+  background-image: url("../img/arrow.svg");
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
@@ -668,7 +668,7 @@ footer {
   padding-bottom: 0;
 }
 .instagram::before {
-  content: url("/img/instagram.svg");
+  content: url("../img/instagram.svg");
   display: inline-block;
   width: 16px;
   height: 16px;

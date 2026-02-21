@@ -1,12 +1,13 @@
 import { useState } from 'react'
 import useIntersectionObserver from '../../hooks/useIntersectionObserver'
+import asset from '../../utils/basePath'
 
 export default function BlurUpImage({ src, thumbSrc, alt = '', className = '', style = {} }) {
   const [ref, isIntersecting] = useIntersectionObserver()
   const [loaded, setLoaded] = useState(false)
 
-  // Generate thumb path: /images/files/foo.jpg → /images/files-thumb/foo.jpg
-  const thumb = thumbSrc || src.replace('/images/files/', '/images/files-thumb/')
+  const fullSrc = asset(src)
+  const thumb = thumbSrc ? asset(thumbSrc) : asset(src.replace('/images/files/', '/images/files-thumb/'))
 
   return (
     <div ref={ref} className={`blur-up-container ${className}`} style={style}>
@@ -18,7 +19,7 @@ export default function BlurUpImage({ src, thumbSrc, alt = '', className = '', s
       />
       {isIntersecting && (
         <img
-          src={src}
+          src={fullSrc}
           alt={alt}
           className={`blur-up-full${loaded ? ' loaded' : ''}`}
           onLoad={() => setLoaded(true)}

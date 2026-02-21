@@ -1,5 +1,6 @@
 import { Swiper, SwiperSlide } from 'swiper/react'
 import { Navigation } from 'swiper/modules'
+import asset from '../../utils/basePath'
 
 export default function Gallery({ images }) {
   if (!images || images.length === 0) return null
@@ -15,7 +16,7 @@ export default function Gallery({ images }) {
         >
           {images.map((img, index) => (
             <SwiperSlide key={index}>
-              <img src={img.src} alt={img.caption ? img.caption.replace(/<[^>]*>/g, '') : `Gallery image ${index + 1}`} />
+              <img src={asset(img.src)} alt={img.caption ? img.caption.replace(/<[^>]*>/g, '') : `Gallery image ${index + 1}`} />
               {img.caption && (
                 <div className="gallery-caption" dangerouslySetInnerHTML={{ __html: img.caption }} />
               )}

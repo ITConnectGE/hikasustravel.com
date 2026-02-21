@@ -1,6 +1,7 @@
 import { useState, useEffect, useRef } from 'react'
 import { Link, useLocation } from 'react-router-dom'
 import { navLinks } from '../../data/siteData'
+import asset from '../../utils/basePath'
 
 export default function Header({ variant = 'default' }) {
   const [menuOpen, setMenuOpen] = useState(false)
@@ -39,7 +40,7 @@ export default function Header({ variant = 'default' }) {
     <header className={isTaxi ? 'taxi-header' : ''} id="top">
       <div className="logo">
         <Link to="/" title="Home">
-          <img src="/img/hikasustravel.svg" alt="Hikasus travel" />
+          <img src={asset('/img/hikasustravel.svg')} alt="Hikasus travel" />
         </Link>
       </div>
 

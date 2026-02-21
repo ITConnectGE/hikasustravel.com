@@ -6,6 +6,7 @@ import {
   addSmoothCurve,
   addGeorgiaBorders,
 } from '../../utils/mapUtils'
+import asset from '../../utils/basePath'
 
 export default function MapboxMap({
   id = 'tour-map',
@@ -41,7 +42,7 @@ export default function MapboxMap({
       addCustomMarker(
         map,
         m.coordinates,
-        m.svgUrl || '/img/pennant.svg',
+        asset(m.svgUrl || '/img/pennant.svg'),
         m.width || 30,
         m.height || 36,
         m.offsetX || 0,
