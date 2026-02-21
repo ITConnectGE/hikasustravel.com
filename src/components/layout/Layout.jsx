@@ -3,6 +3,7 @@ import Header from './Header'
 import Footer from './Footer'
 import BackToTop from './BackToTop'
 import ScrollToTop from './ScrollToTop'
+import WhatsAppButton from './WhatsAppButton'
 
 export default function Layout() {
   const location = useLocation()
@@ -16,6 +17,7 @@ export default function Layout() {
         <Outlet />
       </main>
       <BackToTop />
+      <WhatsAppButton />
       <Footer variant={isTaxiPage ? 'taxi' : 'default'} />
     </>
   )
