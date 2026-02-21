@@ -1,0 +1,60 @@
+/* Blur-Up Lazy Loading Transitions */
+
+.blur-up-container {
+  position: relative;
+  overflow: hidden;
+}
+
+.blur-up-thumb {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: blur(20px);
+  transform: scale(1.1);
+  transition: opacity 0.4s ease;
+}
+
+.blur-up-thumb.loaded {
+  opacity: 0;
+}
+
+.blur-up-full {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+.blur-up-full.loaded {
+  opacity: 1;
+}
+
+/* Background image variant */
+.blur-up-bg {
+  position: relative;
+  overflow: hidden;
+}
+
+.blur-up-bg::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  filter: blur(20px);
+  transform: scale(1.1);
+  transition: opacity 0.4s ease;
+  z-index: 0;
+}
+
+.blur-up-bg.bg-loaded::before {
+  opacity: 0;
+}
