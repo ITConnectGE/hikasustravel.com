@@ -1,7 +1,6 @@
 import mapboxgl from 'mapbox-gl'
 
-mapboxgl.accessToken =
-  'pk.eyJ1IjoibWF0dGhla2ltIiwiYSI6ImNrdjZmdW4ydjFibXUydm8wNmoxOWxua3cifQ.t3zhCOwIdsJh180Kgukq8Q'
+mapboxgl.accessToken = import.meta.env.VITE_MAPBOX_TOKEN
 
 const MAP_STYLE = 'mapbox://styles/matthekim/cm9u0hfgr001001s941ym33e3'
 
