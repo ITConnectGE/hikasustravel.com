@@ -1,4 +1,4 @@
-import { useState, useMemo } from 'react'
+import { useState, useMemo, useRef } from 'react'
 import FadeUp from '../shared/FadeUp'
 import { startLocations, getStopsForStart, getStartsForStop, filterRoutes } from '../../data/shuttleData'
 import asset from '../../utils/basePath'
@@ -36,10 +36,17 @@ export default function ShuttleServicePage() {
     }
   }
 
+  const heroRef = useRef(null)
+
+  const scrollToNext = () => {
+    const next = heroRef.current?.nextElementSibling
+    if (next) next.scrollIntoView({ behavior: 'smooth' })
+  }
+
   return (
     <>
-      <section className="fullscreen coverme" style={{ backgroundImage: `url(${asset('/images/files/taxi-service.jpg')})` }}>
-        <div className="arrow-down taxi-arrow"></div>
+      <section ref={heroRef} className="fullscreen coverme" style={{ backgroundImage: `url(${asset('/images/files/taxi-service.jpg')})` }}>
+        <div className="arrow-down taxi-arrow" onClick={scrollToNext} role="button" aria-label="Scroll down"></div>
       </section>
 
       <section className="taxi-items">

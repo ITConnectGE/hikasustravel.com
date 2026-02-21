@@ -272,6 +272,10 @@ section {
 .taxiH1 {
   color: var(--color-h3) !important;
 }
+@keyframes arrow-bounce {
+  0%, 100% { bottom: calc(3 * var(--indent)); }
+  50% { bottom: calc(3 * var(--indent) - 10px); }
+}
 div.arrow-down {
   width: var(--indent);
   height: var(--indent);
@@ -280,6 +284,7 @@ div.arrow-down {
   left: 50%;
   bottom: calc(3 * var(--indent));
   transform: rotate(135deg);
+  animation: arrow-bounce 2s ease-in-out infinite;
 
   &::before {
     content: "";
