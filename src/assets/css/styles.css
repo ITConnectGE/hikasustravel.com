@@ -189,30 +189,30 @@ header > * {
   color: var(--color-bg);
   text-decoration: none;
   font-size: calc(var(--font-size) * 0.9);
-  transition: color 0.2s ease, background-color 0.2s ease;
+  transition: color 0.2s ease, border-color 0.2s ease;
   padding: 6px 14px;
-  border-radius: 4px;
+  padding-bottom: 4px;
+  border-bottom: 2px solid transparent;
   filter: drop-shadow(0 0 2px rgba(0, 0, 0, 0.3));
 }
 .main-menu a:hover {
-  color: var(--color-h3);
-  background-color: rgba(255, 255, 255, 0.1);
+  color: var(--color-bg);
+  border-bottom: 2px solid var(--color-bg);
 }
 .main-menu a.active {
-  color: var(--color-h2) !important;
-  background-color: var(--color-h3);
-  filter: none;
+  color: var(--color-bg) !important;
+  border-bottom: 2px solid var(--color-bg);
 }
 .main-menu.sticky a {
   filter: none;
 }
 .main-menu.sticky a:hover {
-  background-color: rgba(255, 255, 255, 0.12);
-  color: var(--color-h3);
+  color: var(--color-bg);
+  border-bottom: 2px solid var(--color-bg);
 }
 .main-menu.sticky a.active {
-  background-color: var(--color-h3);
-  color: var(--color-h2) !important;
+  color: var(--color-bg) !important;
+  border-bottom: 2px solid var(--color-bg);
 }
 .taxi-menu a {
   color: var(--color-h3) !important;
@@ -260,6 +260,17 @@ section {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+  position: relative;
+}
+.coverme::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.35);
+  pointer-events: none;
 }
 .centerme {
   text-align: center !important;
@@ -267,6 +278,7 @@ section {
 
 .hometop-item {
   position: relative;
+  z-index: 1;
   width: 100%;
   height: 100%;
   display: flex;
@@ -311,6 +323,7 @@ div.arrow-down {
   bottom: calc(3 * var(--indent));
   transform: rotate(135deg);
   animation: arrow-bounce 2s ease-in-out infinite;
+  z-index: 1;
 
   &::before {
     content: "";
@@ -1324,14 +1337,12 @@ select option:checked {
   }
 
   .main-menu a:hover {
-    background-color: rgba(255, 255, 255, 0.08);
-    padding-left: 32px;
+    border-bottom: 2px solid var(--color-bg);
     border-radius: 0;
-    color: var(--color-h3);
+    color: var(--color-bg);
   }
   .main-menu a.active {
-    background-color: rgba(252, 192, 19, 0.15);
-    color: var(--color-h3) !important;
+    color: var(--color-bg) !important;
     border-left: 3px solid var(--color-h3);
   }
 
