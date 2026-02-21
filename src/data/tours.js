@@ -10,8 +10,8 @@ export const tours = [
     "tileImage": "/images/files/Gergeti-Church.jpg",
     "listingImage": "/images/files/Gergeti-Church.jpg",
     "days": 14,
-    "description": "Join our expertly guided 14-day group tour through Georgia, experiencing the best of this incredible country with fellow travelers.",
-    "listingDescription": "Join our expertly guided 14-day group tour through Georgia.",
+    "description": "Experience the essence of Georgia on this immersive 14-day journey through its diverse landscapes, rich cultural heritage, and renowned wine regions.",
+    "listingDescription": "Experience the essence of Georgia on this immersive 14-day journey through its diverse landscapes, rich cultural heritage, and renowned wine regions.",
     "itinerary": [
       {
         "title": "Day 1: Arrival in Tbilisi",
@@ -389,8 +389,9 @@ export const tours = [
     },
     "tourFormTitle": "Georgia Group Tour",
     "groupDates": [
-      "June 15 - June 28, 2025",
-      "September 7 - September 20, 2025"
+      { "start": "23 May", "end": "5 June", "year": "2026" },
+      { "start": "5 September", "end": "18 September", "year": "2026" },
+      { "start": "17 October", "end": "30 October", "year": "2026" }
     ],
     "pricePerPerson": "2,450",
     "singleSupplement": "450",
@@ -407,8 +408,9 @@ export const tours = [
         "label": "Available Dates",
         "type": "dates",
         "values": [
-          "June 15 - June 28, 2025",
-          "September 7 - September 20, 2025"
+          "23 May – 5 June 2026",
+          "5 Sep – 18 Sep 2026",
+          "17 Oct – 30 Oct 2026"
         ]
       },
       {

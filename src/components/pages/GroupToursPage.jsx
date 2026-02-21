@@ -36,9 +36,14 @@ export default function GroupToursPage() {
                 {tour.groupDates && (
                   <>
                     <div className="available">Available Dates</div>
-                    {tour.groupDates.map((d, i) => (
-                      <div key={i}>{d}</div>
-                    ))}
+                    <div className="date-chips">
+                      {tour.groupDates.map((d, i) => (
+                        <div key={i} className="date-chip">
+                          <span className="date-range">{d.start} – {d.end}</span>
+                          <span className="date-year">{d.year}</span>
+                        </div>
+                      ))}
+                    </div>
                   </>
                 )}
                 {tour.pricePerPerson && (

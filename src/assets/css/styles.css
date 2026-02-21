@@ -470,10 +470,32 @@ tour-info h2 a,
 .available {
   border-bottom: 2px solid var(--color-h2);
   padding-bottom: 3px;
-  margin-bottom: 1.6em;
+  margin-bottom: 1em;
   font-size: 14px;
   text-transform: uppercase;
   font-family: "rockwell";
+}
+.date-chips {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+.date-chip {
+  background-color: var(--color-h2);
+  color: var(--color-bg);
+  border-radius: 4px;
+  padding: 6px 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 12px;
+}
+.date-chip .date-range {
+  font-weight: 600;
+}
+.date-chip .date-year {
+  opacity: 0.7;
+  font-size: 11px;
 }
 .more {
   padding-top: calc(1 * 1.6em);
