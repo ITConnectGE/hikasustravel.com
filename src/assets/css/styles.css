@@ -2261,9 +2261,23 @@ footer {
 
 /* Alternating styles for .taxi-items */
 .taxi-items {
-  padding: var(--indent);
+  padding: calc(var(--indent) * 2) var(--indent);
   text-align: center;
   line-height: 1.6em;
+}
+.taxi-items > div,
+.taxi-items > .taxi-trip-selector,
+.taxi-items > .fade-up {
+  max-width: 1000px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.taxi-items > div > p {
+  max-width: 700px;
+  margin: 0 auto;
+  font-size: calc(var(--font-size) * 1.05);
+  line-height: 1.8;
+  text-align: center;
 }
 
 /* Odd items (1st, 3rd, 5th, etc.) */
@@ -2285,9 +2299,11 @@ footer {
   display: grid;
   grid-template-columns: 3fr 3fr 2fr 3fr 3fr 3fr;
   width: 100%;
-  max-width: 1200px;
+  max-width: 1000px;
   margin: 0 auto;
   margin-bottom: calc(var(--indent) * 2);
+  border-radius: 8px;
+  overflow: hidden;
 }
 
 .taxi-list-row {
@@ -2300,10 +2316,10 @@ footer {
 .taxi-list-row-sedan,
 .taxi-list-row-minivan,
 .taxi-list-row-minibus {
-  padding: 10px;
+  padding: 12px 10px;
   text-align: right;
   color: var(--color-bg);
-  border-bottom: 1px solid var(--color-h3);
+  border-bottom: 1px solid rgba(252, 192, 19, 0.2);
 }
 .taxi-list-row-from,
 .taxi-list-row-to,
@@ -2321,36 +2337,52 @@ footer {
 .taxi-list-row:first-child .taxi-list-row-sedan,
 .taxi-list-row:first-child .taxi-list-row-minivan,
 .taxi-list-row:first-child .taxi-list-row-minibus {
-  color: var(--color-h3);
+  background-color: var(--color-h3);
+  color: var(--color-h2);
   font-weight: bold;
-  border-bottom: 1px solid var(--color-h3);
+  border-bottom: none;
+  padding: 14px 10px;
+  font-size: calc(var(--font-size) * 0.85);
+  text-transform: uppercase;
+  letter-spacing: 0.3px;
+}
+.taxi-list-row.active:hover > div {
+  background: rgba(252, 192, 19, 0.08);
 }
 .taxi-trip-selector {
   position: relative;
   text-align: center;
-  padding-top: var(--indent);
-  padding-bottom: var(--indent);
+  padding-top: calc(var(--indent) * 1.5);
+  padding-bottom: calc(var(--indent) * 1.5);
 }
 /* New styles for pulldowns */
+.filter-container {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  flex-wrap: wrap;
+}
 select {
-  margin: 0px 36px;
-  padding: 10px 15px;
+  padding: 12px 40px 12px 16px;
   color: var(--color-h2);
   background-color: var(--color-bg);
-  border: 1px solid var(--color-h2);
-  border-radius: calc(var(--indent) / 2);
-  width: 200px;
+  border: 2px solid rgba(43, 78, 71, 0.2);
+  border-radius: 10px;
+  width: 220px;
   appearance: none;
   background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 12 12"><path fill="#333" d="M6 9l4-5H2z"/></svg>');
   background-repeat: no-repeat;
-  background-position: right 10px center;
+  background-position: right 14px center;
   background-size: 12px;
   cursor: pointer;
-  transition: background-color 0.3s;
+  transition: border-color 0.2s, box-shadow 0.2s;
+  font-size: calc(var(--font-size) * 0.95);
 }
 
 select:focus {
   outline: none;
+  border-color: var(--color-h3);
+  box-shadow: 0 0 0 3px rgba(252, 192, 19, 0.2);
 }
 
 select:hover {
@@ -3213,10 +3245,16 @@ select option:checked {
   .taxi-items h2 {
     text-align: center;
   }
+  .taxi-items > div > p {
+    text-align: justify;
+  }
+  .filter-container {
+    flex-direction: column;
+    align-items: center;
+  }
   select {
     width: 100%;
-    margin: 0;
-    margin-bottom: 10px;
+    max-width: 300px;
   }
   .no-mobile {
     display: none !important;
