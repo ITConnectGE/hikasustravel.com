@@ -23,8 +23,8 @@ export default function ContactPage() {
           <div dangerouslySetInnerHTML={{ __html: page.intro }} />
           <p>
             <strong>{t('contact.email')}</strong> <a href="mailto:info@hikasustravel.com">info@hikasustravel.com</a><br />
-            <strong>{t('contact.belgiumOffice')}</strong> +32 468 32 06 98<br />
-            <strong>{t('contact.georgiaOffice')}</strong> +995 551 098 077<br /><br />
+            <span className="contact-flag">🇧🇪</span> <strong>{t('contact.belgiumOffice')}</strong> +32 468 32 06 98<br />
+            <span className="contact-flag">🇬🇪</span> <strong>{t('contact.georgiaOffice')}</strong> +995 551 098 077<br /><br />
             <strong>{t('contact.getBack')}</strong>
           </p>
         </FadeUp>

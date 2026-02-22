@@ -2536,11 +2536,105 @@ select option:checked {
   text-align: center;
   font-size: calc(var(--font-size) * 1.5);
 }
+.privacy-policy > div {
+  max-width: 800px;
+  margin: 0 auto;
+}
 .privacy-policy h3 {
   color: var(--color-h3);
   margin-bottom: calc(var(--indent) / 2);
+  text-align: left;
+  font-size: calc(var(--font-size) * 1.3);
+  margin-top: calc(var(--indent) * 1.5);
+  padding-bottom: 8px;
+  border-bottom: 2px solid var(--color-h3);
+}
+
+/* About Georgia */
+.about-georgia > div {
+  max-width: 800px;
+  margin: 0 auto;
+}
+.about-georgia h3 {
+  color: var(--color-h3);
+  font-size: calc(var(--font-size) * 1.3);
+  margin-top: calc(var(--indent) * 1.5);
+  margin-bottom: calc(var(--indent) * 0.5);
+  padding-bottom: 8px;
+  border-bottom: 2px solid var(--color-h3);
+  text-align: left;
+}
+.about-georgia > div > p:first-child {
+  font-size: calc(var(--font-size) * 1.05);
+  line-height: 1.8;
   text-align: center;
-  font-size: calc(var(--font-size) * 1.5);
+  margin-bottom: var(--indent);
+}
+.about-georgia ul {
+  list-style: none;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 12px;
+  max-width: none;
+  width: auto;
+  margin: var(--indent) 0;
+}
+.about-georgia li {
+  background: rgba(43, 78, 71, 0.06);
+  border-radius: 8px;
+  padding: 12px 16px;
+  line-height: 1.6;
+  border-left: 3px solid var(--color-h3);
+}
+.about-georgia li strong {
+  color: var(--color-h3);
+  display: block;
+  font-size: calc(var(--font-size) * 0.8);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: 2px;
+}
+
+/* Contact */
+.contact-flag {
+  font-size: calc(var(--font-size) * 1.2);
+  margin-right: 4px;
+}
+
+/* Terms & Conditions */
+.terms-and-conditions > div {
+  max-width: 800px;
+  margin: 0 auto;
+}
+.terms-and-conditions h3 {
+  color: var(--color-h3);
+  font-size: calc(var(--font-size) * 1.3);
+  margin-top: calc(var(--indent) * 1.5);
+  margin-bottom: calc(var(--indent) * 0.5);
+  padding-bottom: 8px;
+  border-bottom: 2px solid var(--color-h3);
+  text-align: left;
+}
+.terms-and-conditions > div > p:first-child {
+  font-size: calc(var(--font-size) * 1.05);
+  line-height: 1.8;
+  opacity: 0.85;
+  text-align: center;
+  margin-bottom: var(--indent);
+}
+.terms-and-conditions ul {
+  padding-left: calc(var(--indent) * 1.2);
+  max-width: none;
+  width: auto;
+  margin: 0;
+}
+.terms-and-conditions li {
+  margin-bottom: 8px;
+  line-height: 1.7;
+}
+.terms-and-conditions li strong {
+  color: var(--color-h3);
 }
 
 /* Group Tour Summary */
