@@ -422,6 +422,37 @@ div.taxi-arrow {
   color: var(--color-h2);
 }
 
+/* FAQ container */
+.faq .acc {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+/* Accordion on dark backgrounds */
+.page-items:nth-child(even) .acc__trigger {
+  color: var(--color-bg);
+}
+.page-items:nth-child(even) .acc__trigger:hover {
+  background: rgba(239, 239, 215, 0.06);
+}
+.page-items:nth-child(even) .acc__panel-inner {
+  color: rgba(239, 239, 215, 0.85);
+}
+.page-items:nth-child(even) .acc__item {
+  border-bottom-color: rgba(239, 239, 215, 0.15);
+}
+.page-items:nth-child(even) .acc__item--open {
+  background: rgba(239, 239, 215, 0.04);
+}
+.page-items:nth-child(even) .acc__toggle-all {
+  color: var(--color-bg);
+  border-color: rgba(239, 239, 215, 0.3);
+}
+.page-items:nth-child(even) .acc__toggle-all:hover {
+  background: rgba(239, 239, 215, 0.08);
+  border-color: var(--color-bg);
+}
+
 p {
   margin-bottom: calc(var(--indent) / 2);
 }
@@ -1518,6 +1549,22 @@ tour-info h2 a,
   max-width: none;
   width: auto;
 }
+.td-form__notice {
+  text-align: center;
+  padding: calc(var(--indent) * 2) var(--indent);
+}
+.td-form__notice p {
+  color: var(--color-bg);
+  max-width: none;
+  width: auto;
+  margin-bottom: 12px;
+  opacity: 0.85;
+}
+.td-form__notice a {
+  color: var(--color-h3);
+  font-size: calc(var(--font-size) * 1.1);
+  font-weight: 700;
+}
 
 /* Map Section */
 .td-map-section {
@@ -2048,7 +2095,7 @@ footer {
   margin: 0 auto;
   padding: calc(var(--indent) * 3) var(--indent) calc(var(--indent) * 2);
   display: grid;
-  grid-template-columns: 1.4fr 0.8fr 0.8fr 1fr;
+  grid-template-columns: 1.4fr 0.8fr 0.8fr 0.8fr 1fr;
   gap: calc(var(--indent) * 1);
 }
 

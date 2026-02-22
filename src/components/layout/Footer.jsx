@@ -44,26 +44,25 @@ export default function Footer({ variant = 'default' }) {
 
         {/* Tours column */}
         <div className="footer-col">
-          <h4 className="footer-col__title">{t('footer.groupTours')}</h4>
+          <h4 className="footer-col__title">{t('footer.tours')}</h4>
           <ul className="footer-col__list">
             <li><LocaleLink to="/group-tours">{t('footer.allGroupTours')}</LocaleLink></li>
-          </ul>
-
-          <h4 className="footer-col__title footer-col__title--mt">{t('footer.privateTours')}</h4>
-          <ul className="footer-col__list">
             <li><LocaleLink to="/private-tours">{t('footer.allPrivateTours')}</LocaleLink></li>
           </ul>
         </div>
 
-        {/* Services + Contact column */}
+        {/* Services column */}
         <div className="footer-col">
           <h4 className="footer-col__title">{t('footer.services')}</h4>
           <ul className="footer-col__list">
             <li><LocaleLink to="/shuttle-service">{t('footer.shuttleService')}</LocaleLink></li>
             <li><LocaleLink to="/taxi-service">{t('footer.taxiService')}</LocaleLink></li>
           </ul>
+        </div>
 
-          <h4 className="footer-col__title footer-col__title--mt">{t('footer.contactUs')}</h4>
+        {/* Contact column */}
+        <div className="footer-col">
+          <h4 className="footer-col__title">{t('footer.contactUs')}</h4>
           <ul className="footer-col__list footer-col__list--contact">
             <li>{contactInfo.address}</li>
             <li>
