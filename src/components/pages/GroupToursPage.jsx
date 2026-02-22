@@ -63,11 +63,6 @@ export default function GroupToursPage() {
                       </div>
                     </>
                   )}
-                  {tour.pricePerPerson && (
-                    <div style={{ marginTop: '1.6em' }}>
-                      <strong>{t('tour.fromPP', { price: tour.pricePerPerson })}</strong>
-                    </div>
-                  )}
                 </div>
               </div>
             </FadeUp>
