@@ -90,11 +90,11 @@ export default function HomePage() {
       <section className="home-items">
         <div className="tours-grid-container">
           <FadeUp>
-            <h2>{t('home.ourTours')}</h2>
+            <h2>{t('tour.privateTours')}</h2>
           </FadeUp>
           <FadeUp>
             <div className="tours-grid">
-              {tours.map((tour) => {
+              {tours.filter((tour) => tour.type === 'private').map((tour) => {
                 const tt = tourTranslations?.[tour.slug]
                 return (
                   <div className="tour-tile" key={tour.slug}>
