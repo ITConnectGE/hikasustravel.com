@@ -2,10 +2,12 @@ import { useState, useMemo, useRef } from 'react'
 import FadeUp from '../shared/FadeUp'
 import { startLocations, getStopsForStart, getStartsForStop, filterRoutes } from '../../data/shuttleData'
 import asset from '../../utils/basePath'
+import useT from '../../i18n/useT'
 
 export default function ShuttleServicePage() {
   const [selectedStart, setSelectedStart] = useState('')
   const [selectedStop, setSelectedStop] = useState('')
+  const t = useT()
 
   const availableStops = useMemo(() => getStopsForStart(selectedStart), [selectedStart])
   const availableStarts = useMemo(() => {
@@ -52,27 +54,27 @@ export default function ShuttleServicePage() {
       <section className="taxi-items">
         <div>
           <FadeUp>
-            <h2>Shuttle Service</h2>
+            <h2>{t('shuttle.title')}</h2>
           </FadeUp>
-          <p>Hikasus Travel offers private transfers from any city of Georgia, providing safe and convenient transportation in sedans, minivans, minibuses, and larger vehicles. Whether you're traveling from Tbilisi to Batumi, Yerevan (Armenia), Kutaisi, Kazbegi, or any other destination – or simply return – our professional drivers ensure a smooth and hassle-free journey. Ideal for solo travelers, families, and groups, our transfer services are comfortable, punctual, and competitively priced. Book your transfer today and explore Georgia with ease!</p>
+          <p>{t('shuttle.description')}</p>
         </div>
       </section>
 
       <section className="taxi-items">
         <FadeUp>
-          <h2>Calculate your trip</h2>
+          <h2>{t('shuttle.calculate')}</h2>
         </FadeUp>
         <div className="taxi-trip-selector">
           <FadeUp>
             <div className="filter-container">
               <select value={selectedStart} onChange={handleStartChange}>
-                <option value="">From:</option>
+                <option value="">{t('shuttle.from')}</option>
                 {availableStarts.map((loc) => (
                   <option key={loc} value={loc}>{loc}</option>
                 ))}
               </select>
               <select value={selectedStop} onChange={handleStopChange}>
-                <option value="">To:</option>
+                <option value="">{t('shuttle.to')}</option>
                 {availableStops.map((loc) => (
                   <option key={loc} value={loc}>{loc}</option>
                 ))}
@@ -84,12 +86,12 @@ export default function ShuttleServicePage() {
         <FadeUp>
           <div className="taxi-list">
             <div className="taxi-list-row" style={{ display: 'contents' }}>
-              <div className="taxi-list-row-from">From</div>
-              <div className="taxi-list-row-to">To</div>
-              <div className="taxi-list-row-duration">Duration</div>
-              <div className="taxi-list-row-sedan">Sedan<span className="no-mobile"> (1-3 p, 3 bags)</span></div>
-              <div className="taxi-list-row-minivan">Minivan<span className="no-mobile"> (4-6 p, 8 bags)</span></div>
-              <div className="taxi-list-row-minibus">Minibus<span className="no-mobile"> (7-15 p, 17 bags)</span></div>
+              <div className="taxi-list-row-from">{t('shuttle.fromHeader')}</div>
+              <div className="taxi-list-row-to">{t('shuttle.toHeader')}</div>
+              <div className="taxi-list-row-duration">{t('shuttle.duration')}</div>
+              <div className="taxi-list-row-sedan">{t('shuttle.sedan')}<span className="no-mobile"> {t('shuttle.sedanDetails')}</span></div>
+              <div className="taxi-list-row-minivan">{t('shuttle.minivan')}<span className="no-mobile"> {t('shuttle.minivanDetails')}</span></div>
+              <div className="taxi-list-row-minibus">{t('shuttle.minibus')}<span className="no-mobile"> {t('shuttle.minibusDetails')}</span></div>
             </div>
 
             {filteredRoutes.map((route, i) => (
@@ -109,7 +111,7 @@ export default function ShuttleServicePage() {
             {filteredRoutes.length === 0 && (selectedStart || selectedStop) && (
               <div className="taxi-list-row active">
                 <div className="taxi-list-row-from" style={{ gridColumn: '1 / -1', textAlign: 'center', padding: '20px' }}>
-                  No routes found for the selected combination.
+                  {t('shuttle.noRoutes')}
                 </div>
               </div>
             )}

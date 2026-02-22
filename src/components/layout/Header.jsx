@@ -1,13 +1,19 @@
 import { useState, useEffect, useRef } from 'react'
-import { Link, useLocation } from 'react-router-dom'
+import { useLocation } from 'react-router-dom'
 import { navLinks } from '../../data/siteData'
 import asset from '../../utils/basePath'
+import useT from '../../i18n/useT'
+import useLang from '../../i18n/useLang'
+import LocaleLink from '../../i18n/LocaleLink'
+import LanguageSwitcher from './LanguageSwitcher'
 
 export default function Header({ variant = 'default' }) {
   const [menuOpen, setMenuOpen] = useState(false)
   const [isSticky, setIsSticky] = useState(false)
   const menuRef = useRef(null)
   const location = useLocation()
+  const t = useT()
+  const { lang } = useLang()
 
   // Close mobile menu on navigation - this is a legitimate sync with router state
   useEffect(() => {
@@ -39,10 +45,12 @@ export default function Header({ variant = 'default' }) {
   return (
     <header className={isTaxi ? 'taxi-header' : ''} id="top">
       <div className="logo">
-        <Link to="/" title="Home">
+        <LocaleLink to="/" title="Home">
           <img src={asset('/img/hikasustravel.svg')} alt="Hikasus travel" />
-        </Link>
+        </LocaleLink>
       </div>
+
+      <LanguageSwitcher />
 
       <button
         className={`hamburger${menuOpen ? ' active' : ''}`}
@@ -56,13 +64,13 @@ export default function Header({ variant = 'default' }) {
       <nav className={menuClass} id="mainMenu" ref={menuRef}>
         {navLinks.map((link) => (
           <span key={link.to}>
-            <Link
+            <LocaleLink
               to={link.to}
-              title={link.title}
-              className={location.pathname === link.to ? 'active' : ''}
+              title={t(link.labelKey)}
+              className={location.pathname === `/${lang}${link.to}` ? 'active' : ''}
             >
-              {link.label}
-            </Link>
+              {t(link.labelKey)}
+            </LocaleLink>
           </span>
         ))}
       </nav>

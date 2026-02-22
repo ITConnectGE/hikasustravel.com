@@ -7,7 +7,8 @@ import WhatsAppButton from './WhatsAppButton'
 
 export default function Layout() {
   const location = useLocation()
-  const isTaxiPage = location.pathname === '/taxi-service' || location.pathname === '/shuttle-service'
+  // Match /:lang/taxi-service or /:lang/shuttle-service
+  const isTaxiPage = /^\/[a-z]{2}\/(taxi-service|shuttle-service)$/.test(location.pathname)
 
   return (
     <>

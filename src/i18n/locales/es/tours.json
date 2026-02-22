@@ -1,0 +1,979 @@
+{
+  "georgia-group-tour": {
+    "title": "Tour Grupal por Georgia",
+    "description": "Viva la esencia de Georgia en este inmersivo viaje de 14 días a través de sus diversos paisajes, su rico patrimonio cultural y sus reconocidas regiones vinícolas.",
+    "listingDescription": "Viva la esencia de Georgia en este inmersivo viaje de 14 días a través de sus diversos paisajes, su rico patrimonio cultural y sus reconocidas regiones vinícolas.",
+    "itinerary": [
+      {
+        "title": "Día 1: Llegada a Tiflis",
+        "content": "<p>Llegada a Tiflis. Encuentro con su conductor y traslado al hotel para el registro.</p><ul><li>Recogida en el aeropuerto y traslado al hotel.</li></ul>"
+      },
+      {
+        "title": "Día 2: Tour por la ciudad de Tiflis",
+        "content": "<p>Déjese cautivar por el encanto del casco antiguo de Tiflis, un escenario de cuento de hadas con calles empedradas y arquitectura histórica. Imagínese sumergiéndose en los terapéuticos baños de azufre, mientras los secretos ancestrales de la ciudad le rodean. Explore la vibrante Avenida Rustaveli, el corazón del Tiflis moderno, y admire el esplendor arquitectónico de la Plaza de la Libertad y el Puente de la Paz. Concluya su día con una deliciosa cena, saboreando los auténticos sabores de la cocina georgiana.</p><ul><li>Explorar el casco antiguo, la Fortaleza de Narikala y los baños de azufre;</li><li>Visitar la Avenida Rustaveli, la Plaza de la Libertad y el Puente de la Paz;</li><li>Cena en un restaurante georgiano tradicional;</li><li>Alojamiento en Tiflis.</li></ul><p><br><i><strong>Duración del tour:</strong> 4-5 horas</i><br><i><strong>Duración del trayecto:</strong> 30 minutos</i></p>"
+      },
+      {
+        "title": "Día 3: Tiflis – Jvari – Mtskheta – Ananuri – Kazbegi",
+        "content": "<p>Retroceda en el tiempo hasta Mtskheta, Patrimonio de la Humanidad de la UNESCO, luego maravíllese con la impresionante fortaleza de Ananuri antes de llegar a la espectacular Kazbegi, enclavada entre majestuosos picos. ¡Prepárese para quedarse sin aliento!</p><ul><li>Salida del hotel en Tiflis;</li><li>Visita al Monasterio de Jvari y la Catedral de Svetitskhoveli en Mtskheta;</li><li>Complejo Arquitectónico de Ananuri;</li><li>Embalse de Zhinvali;</li><li>Almuerzo en un restaurante georgiano;</li><li>Monumento a la Amistad de Gudauri (Panorama de Gudauri);</li><li>Alojamiento en Kazbegi.</li><li><strong>Duración del tour:</strong> 9-10 horas</li><li><strong>Duración del trayecto:</strong> 3,5 horas</li></ul>"
+      },
+      {
+        "title": "Día 4: Kazbegi",
+        "content": "<p>Conquiste los senderos que conducen a la icónica Iglesia de la Trinidad de Gergeti, una obra maestra encaramada en lo alto de las montañas, con vistas panorámicas que le dejarán sin aliento. Sienta el poder puro de la naturaleza en las cascadas de Gveleti y el espectacular Desfiladero de Dariali.</p><ul><li>Visita a la Iglesia de la Trinidad de Gergeti;</li><li>Cascadas de Gveleti;</li><li>Desfiladero de Dariali.</li><li><strong>Duración del tour:</strong> 6-7 horas</li><li><strong>Duración del trayecto:</strong> 1 hora</li></ul>"
+      },
+      {
+        "title": "Día 5: Kazbegi – Museo de Stalin en Gori – Uplistsikhe – Tiflis",
+        "content": "<p>Un día de contrastes: del legado de Stalin a las maravillas antiguas. Viva una fascinante yuxtaposición de la historia hoy, comenzando con una visita al Museo de Stalin en Gori. Reflexione sobre el complejo legado de esta controvertida figura, antes de emprender un viaje al mundo completamente diferente de Uplistsikhe, una antigua ciudad cueva esculpida en el paisaje. Este extraordinario lugar ofrece un contraste impresionante con el museo, revelando el espíritu perdurable del pasado de Georgia. Concluya su día de vuelta en la bulliciosa capital, Tiflis, donde los ecos antiguos se mezclan armoniosamente con la vida moderna.</p><ul><li>Salida del hotel en Kazbegi;</li><li>Visita al Museo de Stalin en Gori;</li><li>Ciudad cueva de Uplistsikhe;</li><li>Alojamiento en Tiflis.</li><li><strong>Duración del tour:</strong> 9-10 horas</li><li><strong>Duración del trayecto:</strong> 5 horas</li></ul>"
+      },
+      {
+        "title": "Día 6: Tiflis – Chiatura – Almuerzo en casa de Lia – Pilar de Katskhi – Kutaisi",
+        "content": "<p>Georgia singular: de los teleféricos a los pilares ancestrales. El viaje de hoy le lleva a Chiatura, donde disfrutará de un singular recorrido en teleférico con vistas impresionantes. Saboree un memorable almuerzo familiar en casa de Lia, degustando los sabores de Georgia antes de contemplar el asombroso Pilar de Katskhi, una formación rocosa solitaria que se alza imponente a través de los siglos. Finalmente, llegada a Kutaisi, prepárese para una tarde relajante.</p><ul><li>Trayecto a Chiatura;</li><li>Almuerzo en familia georgiana;</li><li>Visita al Pilar de Katskhi;</li><li>Alojamiento en Kutaisi.</li><li><strong>Duración del tour:</strong> 8-9 horas</li><li><strong>Duración del trayecto:</strong> 3,5 horas</li></ul>"
+      },
+      {
+        "title": "Día 7: Kutaisi – Cueva de Prometeo – Cañón de Martvili – Kutaisi",
+        "content": "<p>La aventura de hoy le lleva a dos de las maravillas naturales más impresionantes de Georgia. Comience descendiendo a la fascinante Cueva de Prometeo, un mundo subterráneo de estalactitas y estalagmitas, donde la tierra revela su arte oculto. Después, diríjase al Cañón de Martvili, donde recorrerá senderos bien mantenidos, disfrutando de las impresionantes vistas de este frondoso desfiladero. Contemple los imponentes acantilados, respire el aire fresco de la montaña y deje que la serenidad del cañón le envuelva. Regreso a Kutaisi.</p><ul><li>Visita a la Cueva de Prometeo, Monumento Natural;</li><li>Cañón de Martvili, paseo en barco;</li><li>Tarde libre; Alojamiento en Kutaisi.</li><li><strong>Duración del tour:</strong> 8-9 horas</li><li><strong>Duración del trayecto:</strong> 2,5 horas</li></ul>"
+      },
+      {
+        "title": "Día 8: Kutaisi – Bodega de Baia – Batumi",
+        "content": "<p>Un viaje relajante hacia la costa. Disfrute de un comienzo de día relajado con una visita a una bodega familiar local. Saboree los vinos georgianos antes de emprender un pintoresco viaje hacia la impresionante ciudad costera de Batumi. Prepárese para explorar las atracciones de Batumi. Alojamiento en Batumi.</p><ul><li>Salida del hotel en Kutaisi;</li><li>Almuerzo y cata de vinos en la Bodega de Baia;</li><li>Tarde libre; Alojamiento en Batumi.</li><li><strong>Duración del tour:</strong> 7-8 horas</li><li><strong>Duración del trayecto:</strong> 3,5 horas</li></ul>"
+      },
+      {
+        "title": "Día 9: Tour por Batumi – Jardín Botánico de Batumi, tarde libre",
+        "content": "<p>Explore el cautivador centro de Batumi, admirando los aspectos arquitectónicos destacados de la Plaza de Europa, la Plaza Piazza y la icónica Estatua de Ali y Nino. Realice un memorable recorrido en teleférico con vistas panorámicas y explore la exuberante belleza del Jardín Botánico de Batumi. Disfrute de su tiempo libre empapándose de la atmósfera de Batumi.</p><ul><li>Visita a la Plaza de Europa;</li><li>Plaza Piazza;</li><li>Estatua de Ali y Nino;</li><li>Paseo en teleférico;</li><li>Jardín Botánico de Batumi;</li><li>Tarde libre en Batumi.</li><li><strong>Duración del tour:</strong> 5-6 horas</li><li><strong>Duración del trayecto:</strong> 1 hora</li></ul>"
+      },
+      {
+        "title": "Día 10: Batumi – Tiflis (tren)",
+        "content": "<p>Disfrute de una mañana relajante en Batumi antes de hacer el check-out y tomar el tren nocturno a Tiflis. Disfrute de un viaje panorámico a través del diverso paisaje de Georgia.</p><ul><li>Salida del hotel antes del mediodía;</li><li>A las 16:00, traslado a la estación de tren. El tren sale a las 16:55 y llega a Tiflis a las 22:15. Alojamiento en Tiflis.</li><li><strong>Tren Batumi-Tiflis:</strong> 5 horas</li></ul>"
+      },
+      {
+        "title": "Día 11: Tiflis – Telavi – Tsinandali – Almuerzo y cata de vinos en la bodega – Telavi",
+        "content": "<p>Emprenda un viaje al corazón de la región vinícola de Georgia, Kakheti. Explore la encantadora ciudad de Telavi, visite la histórica Finca Tsinandali y deléitese con un exquisito almuerzo y cata de vinos en una bodega local.</p><ul><li>Trayecto a Telavi por el Paso de Gombori;</li><li>Visita a la Finca Tsinandali;</li><li>Almuerzo y cata de vinos en la bodega;</li><li>Cena y alojamiento en Telavi.</li><li><strong>Duración del tour:</strong> 8-9 horas</li><li><strong>Duración del trayecto:</strong> 2,5 horas</li></ul>"
+      },
+      {
+        "title": "Día 12: Telavi – Bodbe – Sighnaghi – Cena y cata de vinos en una bodega – Tiflis",
+        "content": "<p>Explore más tesoros de Kakheti hoy, incluyendo el Monasterio de Bodbe y la pintoresca ciudad de Sighnaghi, conocida como la \"Ciudad del Amor\". Disfrute de una última cena y cata de vinos antes de regresar a Tiflis.</p><ul><li>Salida del hotel en Telavi;</li><li>Explorar Telavi, incluyendo una visita al monumento de Erekle II y una excursión al Museo Histórico de Telavi (Batonistsikhe);</li><li>Visita a Bodbe y exploración de Sighnaghi, la ciudad del amor;</li><li>Cena y cata de vinos en una bodega;</li><li>Trayecto a Tiflis para alojamiento.</li><li><strong>Duración del tour:</strong> 9-10 horas</li><li><strong>Duración del trayecto:</strong> 4,5 horas</li></ul>"
+      },
+      {
+        "title": "Día 13: Día libre en Tiflis",
+        "content": "<p>Disfrute de un día relajado para explorar Tiflis a su propio ritmo. Vuelva a visitar sus lugares favoritos, descubra joyas ocultas o simplemente relájese y empápese de la atmósfera única de la ciudad.</p><ul><li>Disfrute de un día libre de ocio en Tiflis.</li></ul>"
+      },
+      {
+        "title": "Día 14: Salida – Despedida de Georgia",
+        "content": "<p>Después de un último desayuno georgiano, es hora de partir desde el Aeropuerto Internacional de Tiflis, llevándose consigo recuerdos inolvidables de su aventura georgiana.</p><ul><li>Salida del hotel antes del mediodía. Traslado al Aeropuerto Internacional de Tiflis.</li></ul>"
+      }
+    ],
+    "included": [
+      "Alojamiento en habitaciones dobles o twin, con desayuno incluido;",
+      "Traslados según itinerario en vehículo cómodo y climatizado durante todo el tour;",
+      "Servicio de guía;",
+      "Entradas según itinerario;",
+      "13 desayunos, 4 almuerzos, 3 cenas y 4 catas de vinos;",
+      "Billetes de tren Batumi-Tiflis;",
+      "Agua mineral sin gas."
+    ],
+    "notIncluded": [
+      "Billetes de avión;",
+      "Pensión completa;",
+      "Gastos adicionales de hotel;",
+      "Seguro de viaje."
+    ],
+    "groupSummary": [
+      {
+        "label": "Duración",
+        "value": "14 días / 13 noches"
+      },
+      {
+        "label": "Tamaño del grupo",
+        "value": "Máximo 16 viajeros"
+      },
+      {
+        "label": "Fechas disponibles",
+        "values": [
+          "23 mayo – 5 junio 2026",
+          "5 sep – 18 sep 2026",
+          "17 oct – 30 oct 2026"
+        ]
+      },
+      {
+        "label": "Precio",
+        "value": "Desde 2.450 € por persona"
+      }
+    ]
+  },
+  "experience-georgias-rich-culture-coastal-beauty-5-day-tour-from-tbilisi-to-batumi": {
+    "title": "Descubra la Rica Cultura y Belleza Costera de Georgia: Tour de 5 Días de Tiflis a Batumi",
+    "description": "Embárquese en un cautivador viaje de 5 días por Georgia, comenzando y terminando en Tiflis, la vibrante capital del país.",
+    "listingDescription": "Embárquese en un cautivador viaje de 5 días por Georgia, comenzando y terminando en Tiflis, la vibrante capital del país.",
+    "itinerary": [
+      {
+        "title": "Día 1: Tiflis – Jvari – Uplistsikhe – Gori – Kutaisi",
+        "content": "<p>Comience su aventura georgiana con una salida desde Tiflis hacia los monumentos ancestrales del país. Visite el icónico Monasterio de Jvari con vistas a la confluencia de dos ríos, explore la fascinante ciudad cueva antigua de Uplistsikhe esculpida en acantilados rocosos, y descubra Gori con su famoso Museo de Stalin. Concluya su día en Kutaisi, una de las ciudades más antiguas de Georgia.</p><ul><li>Salida desde Tiflis;</li><li>Visita al Monasterio de Jvari (Patrimonio de la Humanidad de la UNESCO);</li><li>Explorar la antigua ciudad cueva de Uplistsikhe;</li><li>Visita al Museo de Stalin en Gori;</li><li>Llegada a Kutaisi y registro en el hotel;</li><li>Alojamiento en Kutaisi.</li><li><strong>Duración del tour:</strong> 8-9 horas</li><li><strong>Duración del trayecto:</strong> 4 horas</li></ul>"
+      },
+      {
+        "title": "Día 2: Kutaisi – Motsameta – Gelati – Kutaisi",
+        "content": "<p>Descubra los tesoros espirituales y culturales de los alrededores de Kutaisi hoy. Visite el místico Monasterio de Motsameta, encaramado de forma espectacular sobre el río Tskhaltsitela, y explore el magnífico Monasterio de Gelati, Patrimonio de la Humanidad de la UNESCO que representa la edad de oro de la cultura medieval georgiana. Viva la vibrante atmósfera del Bazar Verde de Kutaisi.</p><ul><li>Visita al Monasterio de Motsameta;</li><li>Explorar el Monasterio de Gelati (Patrimonio de la Humanidad de la UNESCO);</li><li>Paseo por el Bazar Verde de Kutaisi;</li><li>Tiempo libre para explorar el centro de Kutaisi;</li><li>Alojamiento en Kutaisi.</li><li><strong>Duración del tour:</strong> 6-7 horas</li><li><strong>Duración del trayecto:</strong> 1,5 horas</li></ul>"
+      },
+      {
+        "title": "Día 3: Kutaisi – Cueva de Prometeo – Parque de los Músicos – Batumi",
+        "content": "<p>Diríjase hoy hacia la costa del Mar Negro, pero primero maravíllese con una de las maravillas naturales de Georgia. Explore la impresionante Cueva de Prometeo con sus espectaculares estalactitas, estalagmitas y ríos subterráneos. Continúe a través de pintorescos paisajes hasta llegar a Batumi, con una parada en el Parque de los Músicos en el camino. Llegada a la vibrante ciudad costera para su aventura junto al mar.</p><ul><li>Salida del hotel en Kutaisi;</li><li>Visita a la Cueva de Prometeo, Monumento Natural;</li><li>Parada en el Parque de los Músicos;</li><li>Trayecto panorámico hacia el Mar Negro;</li><li>Llegada a Batumi y registro en el hotel;</li><li>Tarde libre en Batumi.</li><li><strong>Duración del tour:</strong> 7-8 horas</li><li><strong>Duración del trayecto:</strong> 3 horas</li></ul>"
+      },
+      {
+        "title": "Día 4: Explorar Batumi y sus alrededores",
+        "content": "<p>Sumérjase en el encanto singular de Batumi hoy. Explore el hermoso Jardín Botánico de Batumi con sus diversas colecciones de plantas, admire los aspectos arquitectónicos destacados de la Plaza de Europa, descubra la romántica Plaza Piazza y contemple la conmovedora Estatua de Ali y Nino. Disfrute de la exuberante atmósfera costera y las modernas atracciones de esta vibrante ciudad del Mar Negro.</p><ul><li>Visita al Jardín Botánico de Batumi;</li><li>Explorar la Plaza de Europa;</li><li>Paseo por la Plaza Piazza;</li><li>Ver la Estatua de Ali y Nino;</li><li>Tiempo libre para relajarse junto al mar;</li><li>Paseo opcional en teleférico con vistas panorámicas;</li><li>Alojamiento en Batumi.</li><li><strong>Duración del tour:</strong> 6-7 horas</li><li><strong>Duración del trayecto:</strong> 1 hora</li></ul>"
+      },
+      {
+        "title": "Día 5: Batumi – Tiflis",
+        "content": "<p>Disfrute de su última mañana en Batumi, quizás dando un último paseo por la costa del Mar Negro o revisitando sus lugares favoritos. Salida del hotel y comienzo del pintoresco viaje de regreso a Tiflis, la capital de Georgia. Llegada a Tiflis donde concluye su memorable aventura georgiana de 5 días.</p><ul><li>Última mañana en Batumi;</li><li>Salida del hotel;</li><li>Trayecto panorámico de regreso a Tiflis;</li><li>Llegada a Tiflis;</li><li>El tour concluye en Tiflis.</li><li><strong>Duración del tour:</strong> 6-7 horas</li><li><strong>Duración del trayecto:</strong> 5 horas</li></ul>"
+      }
+    ],
+    "included": [
+      "Alojamiento en habitaciones dobles o twin, con desayuno incluido;",
+      "Traslados según itinerario en vehículo cómodo y climatizado, con conductor-guía de habla inglesa;",
+      "Entradas;",
+      "Agua mineral sin gas."
+    ],
+    "notIncluded": [
+      "Pensión completa;",
+      "Gastos adicionales de hotel;",
+      "Seguro de viaje."
+    ]
+  },
+  "sulfur-baths-and-sipping-wine-5-days-of-georgian-delights": {
+    "title": "Baños de Azufre y Degustación de Vinos: 5 Días de Delicias Georgianas",
+    "description": "Adéntrese en el corazón del rico patrimonio de Georgia en este tour de 5 días, combinando monumentos históricos, paisajes impresionantes y la célebre hospitalidad del país.",
+    "listingDescription": "Adéntrese en el corazón del rico patrimonio de Georgia en este tour de 5 días, combinando monumentos históricos, paisajes impresionantes y la célebre hospitalidad del país.",
+    "itinerary": [
+      {
+        "title": "Día 1: Llegada y tour por la ciudad de Tiflis",
+        "content": "<p>Comience su aventura georgiana con la llegada a Tiflis y sumérjase en el encanto de la capital. Explore el atmosférico casco antiguo con sus estrechas calles empedradas, visite la antigua Fortaleza de Narikala que domina la ciudad y descubra el icónico Puente de la Paz. Relájese en los famosos baños de azufre de Tiflis, una tradición de siglos, y viva la vibrante mezcla de modernidad y patrimonio histórico que define esta cautivadora ciudad.</p><ul><li>Llegada a Tiflis y registro en el hotel;</li><li>Explorar el casco antiguo de Tiflis;</li><li>Visita a la Fortaleza de Narikala;</li><li>Paseo por el Puente de la Paz;</li><li>Relajarse en los históricos baños de azufre;</li><li>Alojamiento en Tiflis.</li><li><strong>Duración del tour:</strong> 4-5 horas</li><li><strong>Duración del trayecto:</strong> 30 minutos</li></ul>"
+      },
+      {
+        "title": "Día 2: Tiflis – Jvari – Mtskheta – Ananuri – Stepantsminda (Kazbegi)",
+        "content": "<p>Recorra la famosa Carretera Militar Georgiana en dirección a las montañas. Visite los sitios Patrimonio de la Humanidad de la UNESCO del Monasterio de Jvari y la Catedral de Svetitskhoveli en Mtskheta, el corazón espiritual de Georgia. Haga una parada en la pintoresca Fortaleza de Ananuri junto al impresionante Embalse de Jinvali, y continúe hasta Stepantsminda (Kazbegi), una serena ciudad de montaña al pie del Monte Kazbek, rodeada de impresionantes picos del Cáucaso.</p><ul><li>Visita al Monasterio de Jvari (Patrimonio de la Humanidad de la UNESCO);</li><li>Explorar Mtskheta y la Catedral de Svetitskhoveli;</li><li>Parada en el Complejo Arquitectónico de Ananuri;</li><li>Disfrutar de las vistas del Embalse de Jinvali;</li><li>Llegada a Stepantsminda (Kazbegi);</li><li>Alojamiento en Kazbegi.</li><li><strong>Duración del tour:</strong> 8-9 horas</li><li><strong>Duración del trayecto:</strong> 3,5 horas</li></ul>"
+      },
+      {
+        "title": "Día 3: Kazbegi – Tsinandali – Telavi",
+        "content": "<p>Comience el día con una visita a la icónica Iglesia de la Trinidad de Gergeti, que ofrece impresionantes vistas panorámicas de las montañas del Cáucaso y el Monte Kazbek. Después, diríjase a la región vinícola de Georgia, comenzando por la histórica Finca Tsinandali, conocida por sus hermosos jardines y sus conocimientos sobre las tradiciones vinícolas georgianas. Continúe hasta Telavi, el centro de la región vinícola de Kakheti, donde disfrutará de la cocina local y explorará la rica herencia vinícola.</p><ul><li>Visita a la Iglesia de la Trinidad de Gergeti con vistas a las montañas;</li><li>Salida de Kazbegi hacia la región vinícola;</li><li>Explorar la Finca Tsinandali y sus jardines;</li><li>Experiencia de cata de vinos;</li><li>Llegada a Telavi;</li><li>Alojamiento en Telavi.</li><li><strong>Duración del tour:</strong> 8-9 horas</li><li><strong>Duración del trayecto:</strong> 4 horas</li></ul>"
+      },
+      {
+        "title": "Día 4: Telavi – Bodega Khareba – Sighnaghi – Bodbe – Tiflis",
+        "content": "<p>Viva lo mejor de la región vinícola de Kakheti hoy. Visite la singular Bodega Khareba, famosa por su bodega construida en cuevas naturales, y disfrute de una cata de vinos en este entorno extraordinario. Continúe hasta Sighnaghi, la encantadora \"Ciudad del Amor\" con calles empedradas e impresionantes vistas del Valle de Alazani. Visite el pacífico Monasterio de Bodbe con su profundo significado religioso, antes de regresar a Tiflis para su última noche.</p><ul><li>Visita a la Bodega Khareba (bodega en cueva);</li><li>Experiencia de cata de vinos;</li><li>Explorar Sighnaghi, la \"Ciudad del Amor\";</li><li>Visita al Monasterio de Bodbe;</li><li>Trayecto panorámico de regreso a Tiflis;</li><li>Alojamiento en Tiflis.</li><li><strong>Duración del tour:</strong> 9-10 horas</li><li><strong>Duración del trayecto:</strong> 3,5 horas</li></ul>"
+      },
+      {
+        "title": "Día 5: Salida desde Tiflis",
+        "content": "<p>Disfrute de su última mañana en Tiflis con tiempo libre para explorar los últimos lugares de interés, hacer compras de última hora o simplemente relajarse y reflexionar sobre su aventura georgiana. Salida del hotel y traslado al Aeropuerto Internacional de Tiflis para su partida, llevándose consigo recuerdos inolvidables del rico patrimonio, los impresionantes paisajes y la cálida hospitalidad de Georgia.</p><ul><li>Última mañana en Tiflis;</li><li>Tiempo libre para exploración de última hora;</li><li>Salida del hotel;</li><li>Traslado al Aeropuerto Internacional de Tiflis;</li><li>Salida de Georgia.</li><li><strong>Duración:</strong> Según horario de vuelo</li></ul>"
+      }
+    ],
+    "included": [
+      "Alojamiento en habitaciones dobles o twin, con desayuno incluido;",
+      "Traslados según itinerario en vehículo cómodo y climatizado, con conductor-guía de habla inglesa;",
+      "Entradas según itinerario;",
+      "Agua mineral sin gas;",
+      "Cata de vinos en la Bodega Khareba."
+    ],
+    "notIncluded": [
+      "Pensión completa;",
+      "Gastos adicionales de hotel;",
+      "Seguro de viaje."
+    ]
+  },
+  "tbilisi-to-treasures-a-6-day-journey-through-georgias-icons-and-hidden-gems": {
+    "title": "De Tiflis a los Tesoros: Un Viaje de 6 Días por los Iconos y Joyas Ocultas de Georgia",
+    "description": "La rica cultura, historia y belleza natural de Georgia le esperan en este tour de 6 días que comienza y termina en la vibrante ciudad de Tiflis.",
+    "listingDescription": "La rica cultura, historia y belleza natural de Georgia le esperan en este tour de 6 días que comienza y termina en la vibrante ciudad de Tiflis.",
+    "itinerary": [
+      {
+        "title": "Día 1: Llegada y tour por la ciudad de Tiflis",
+        "content": "<p>Comience su búsqueda de tesoros georgianos con la llegada a Tiflis, la vibrante capital donde la historia antigua se encuentra con la vida moderna. Explore las encantadoras calles empedradas del casco antiguo, visite la icónica Fortaleza de Narikala con vistas panorámicas de la ciudad, cruce el moderno Puente de la Paz y descubra la magnífica Catedral de la Santísima Trinidad. Termine su primer día con una cena de bienvenida con cocina tradicional georgiana y vinos locales.</p><ul><li>Llegada a Tiflis y registro en el hotel;</li><li>Explorar el casco antiguo de Tiflis;</li><li>Visita a la Fortaleza de Narikala;</li><li>Paseo por el Puente de la Paz;</li><li>Ver la Catedral de la Santísima Trinidad;</li><li>Cena de bienvenida en Tiflis;</li><li>Alojamiento en Tiflis.</li><li><strong>Duración del tour:</strong> 4-5 horas</li><li><strong>Duración del trayecto:</strong> 30 minutos</li></ul>"
+      },
+      {
+        "title": "Día 2: Tiflis – Uplistsikhe – Gori – Borjomi",
+        "content": "<p>Adéntrese en el pasado ancestral de Georgia hoy con una visita a Uplistsikhe, la fascinante ciudad excavada en la roca que sirvió como importante centro comercial en la temprana Edad del Hierro. Explore sus notables viviendas rupestres y túneles tallados en los acantilados rocosos. Continúe hasta Gori para visitar el Museo de Stalin, y después viaje a Borjomi, famosa por sus aguas minerales naturales y su hermoso Parque Central rodeado de naturaleza virgen.</p><ul><li>Visita a la antigua ciudad rupestre de Uplistsikhe;</li><li>Explorar viviendas y túneles rupestres;</li><li>Visita al Museo de Stalin en Gori;</li><li>Viaje a Borjomi;</li><li>Paseo por el Parque Central de Borjomi;</li><li>Degustación del famoso agua mineral de Borjomi;</li><li>Alojamiento en Borjomi.</li><li><strong>Duración del tour:</strong> 8-9 horas</li><li><strong>Duración del trayecto:</strong> 3,5 horas</li></ul>"
+      },
+      {
+        "title": "Día 3: Borjomi – Vardzia – Akhaltsikhe",
+        "content": "<p>Hoy descubra uno de los sitios arqueológicos más espectaculares de Georgia. Visite Vardzia, el impresionante complejo monástico rupestre tallado en los acantilados de la montaña Erusheti durante el reinado de la Reina Tamar en el siglo XII. Este notable lugar es un monumento a la historia medieval y la vida religiosa de Georgia. Continúe hasta Akhaltsikhe para explorar el histórico Castillo de Rabati, símbolo de la diversa herencia cultural de la región.</p><ul><li>Visita al complejo monástico rupestre de Vardzia;</li><li>Explorar viviendas e iglesias medievales rupestres;</li><li>Conocer el legado de la Reina Tamar;</li><li>Viaje a Akhaltsikhe;</li><li>Explorar la fortaleza del Castillo de Rabati;</li><li>Descubrir la diversa herencia cultural;</li><li>Alojamiento en Akhaltsikhe.</li><li><strong>Duración del tour:</strong> 8-9 horas</li><li><strong>Duración del trayecto:</strong> 3 horas</li></ul>"
+      },
+      {
+        "title": "Día 4: Akhaltsikhe – Kutaisi",
+        "content": "<p>Viaje a Kutaisi, la antigua ciudad occidental de Georgia con más de 3.000 años de historia. A su llegada, explore los sitios Patrimonio de la Humanidad de la UNESCO que hacen especial a esta ciudad: visite la magnífica Catedral de Bagrati con su imponente posición en la colina y el impresionante Monasterio de Gelati, que representa la edad de oro de la cultura y la arquitectura medieval georgiana. Viva la mezcla de patrimonio ancestral y vida georgiana moderna.</p><ul><li>Trayecto panorámico a Kutaisi;</li><li>Visita a la Catedral de Bagrati (Patrimonio de la Humanidad de la UNESCO);</li><li>Explorar el complejo del Monasterio de Gelati;</li><li>Descubrir la arquitectura medieval georgiana;</li><li>Paseo por el centro de Kutaisi;</li><li>Alojamiento en Kutaisi.</li><li><strong>Duración del tour:</strong> 7-8 horas</li><li><strong>Duración del trayecto:</strong> 3,5 horas</li></ul>"
+      },
+      {
+        "title": "Día 5: Kutaisi – Cañón de Martvili – Tiflis",
+        "content": "<p>Descubra una de las joyas ocultas de Georgia hoy con una visita al impresionante Cañón de Martvili. Realice un paseo en barco por sus aguas color esmeralda y explore el estrecho desfiladero rodeado de exuberante vegetación. Esta maravilla natural ofrece paisajes espectaculares y un escape tranquilo a la naturaleza. Después, regreso a Tiflis para su última noche, reflexionando sobre el increíble viaje a través de los iconos y tesoros ocultos de Georgia.</p><ul><li>Visita al Cañón de Martvili (joya oculta);</li><li>Paseo en barco por aguas esmeralda;</li><li>Explorar el estrecho desfiladero con exuberante vegetación;</li><li>Disfrutar del espectacular paisaje natural;</li><li>Trayecto panorámico de regreso a Tiflis;</li><li>Tarde libre en Tiflis;</li><li>Alojamiento en Tiflis.</li><li><strong>Duración del tour:</strong> 8-9 horas</li><li><strong>Duración del trayecto:</strong> 4 horas</li></ul>"
+      },
+      {
+        "title": "Día 6: Salida desde Tiflis",
+        "content": "<p>Disfrute de su última mañana en Tiflis con tiempo libre para explorar los últimos lugares de interés, comprar recuerdos o simplemente relajarse y saborear su último desayuno georgiano. Salida del hotel y traslado al Aeropuerto Internacional de Tiflis para su partida, llevándose consigo recuerdos inolvidables de los monumentos más emblemáticos y los tesoros ocultos de Georgia.</p><ul><li>Última mañana en Tiflis;</li><li>Tiempo libre para exploración de última hora;</li><li>Salida del hotel;</li><li>Traslado al Aeropuerto Internacional de Tiflis;</li><li>Salida de Georgia.</li><li><strong>Duración:</strong> Según horario de vuelo</li></ul>"
+      }
+    ],
+    "included": [
+      "Alojamiento en habitaciones dobles o twin, con desayuno incluido;",
+      "Traslados según itinerario en vehículo cómodo y climatizado, con conductor-guía de habla inglesa;",
+      "Entradas según itinerario;",
+      "Agua mineral sin gas;",
+      "Cena en Tiflis el día 1."
+    ],
+    "notIncluded": [
+      "Pensión completa;",
+      "Gastos adicionales de hotel;",
+      "Seguro de viaje."
+    ]
+  },
+  "georgias-cultural-wonders-7-day-adventure-from-kutaisi-to-tbilisi-and-beyond": {
+    "title": "Maravillas Culturales de Georgia: Aventura de 7 Días de Kutaisi a Tiflis y Más Allá",
+    "description": "Sumérjase en el cautivador encanto de Georgia en este viaje cultural de 7 días, comenzando en la histórica ciudad de Kutaisi.",
+    "listingDescription": "Sumérjase en el cautivador encanto de Georgia en este viaje cultural de 7 días, comenzando en la histórica ciudad de Kutaisi.",
+    "itinerary": [
+      {
+        "title": "Día 1: Llegada a Kutaisi",
+        "content": "<p>Comience su cautivador viaje cultural de 7 días en la histórica ciudad de Kutaisi, antigua capital occidental de Georgia con más de 3.000 años de rica historia. Llegada al Aeropuerto Internacional de Kutaisi y traslado a su alojamiento, donde comenzará a explorar esta encantadora ciudad conocida por sus sitios Patrimonio de la Humanidad de la UNESCO y su atmósfera apacible.</p><ul><li>Llegada al Aeropuerto Internacional de Kutaisi;</li><li>Traslado al alojamiento en la histórica Kutaisi;</li><li>Introducción a la antigua capital occidental de Georgia;</li><li>Más de 3.000 años de rico patrimonio cultural;</li><li>Exploración de sitios Patrimonio de la Humanidad de la UNESCO;</li><li>Encantadora ciudad con atmósfera apacible;</li><li>Registro y alojamiento en Kutaisi.</li><li><strong>Duración:</strong> Según horario de llegada</li></ul>"
+      },
+      {
+        "title": "Día 2: Tour por Kutaisi – Monasterio de Gelati – Monasterio de Motsameta",
+        "content": "<p>Explore el rico patrimonio cultural de Kutaisi comenzando con el magnífico Monasterio de Gelati, Patrimonio de la Humanidad de la UNESCO que representa la edad de oro de la cultura y la arquitectura medieval georgiana. Continúe hasta el sereno Monasterio de Motsameta, encaramado de forma espectacular sobre un cañón fluvial, ofreciendo impresionantes vistas y una apacible atmósfera espiritual. Disfrute de una cena en Kutaisi experimentando la auténtica hospitalidad georgiana.</p><ul><li>Tour completo por la ciudad de Kutaisi;</li><li>Visita al magnífico Monasterio de Gelati;</li><li>Exploración del Patrimonio de la Humanidad de la UNESCO;</li><li>Cultura y arquitectura medieval georgiana;</li><li>Visita al sereno Monasterio de Motsameta;</li><li>Impresionantes vistas del cañón y su atmósfera;</li><li>Cena en Kutaisi con hospitalidad georgiana.</li><li><strong>Duración del tour:</strong> 7-8 horas</li></ul>"
+      },
+      {
+        "title": "Día 3: Kutaisi – Cueva de Prometeo – Tiflis",
+        "content": "<p>Viva la espectacular Cueva de Prometeo, una maravilla natural con impresionantes estalactitas y estalagmitas ubicada cerca de Kutaisi. Explore las cámaras subterráneas y las formaciones geológicas que abarcan 11 kilómetros, convirtiéndola en una visita imprescindible para los amantes de la naturaleza. Después de la visita a la cueva, viaje a la vibrante capital de Georgia, Tiflis, para la siguiente parte de su aventura cultural.</p><ul><li>Espectacular exploración de la Cueva de Prometeo;</li><li>Impresionantes estalactitas y estalagmitas;</li><li>Cámaras y formaciones subterráneas;</li><li>Maravilla geológica de 11 kilómetros;</li><li>Atracción natural imprescindible;</li><li>Viaje a la vibrante capital Tiflis;</li><li>Registro y alojamiento en Tiflis.</li><li><strong>Duración del tour:</strong> 8-9 horas</li><li><strong>Duración del trayecto:</strong> 4,5 horas</li></ul>"
+      },
+      {
+        "title": "Día 4: Tour por Tiflis – Fortaleza de Narikala – Casco Antiguo",
+        "content": "<p>Descubra la vibrante capital de Georgia, Tiflis, repleta de monumentos históricos como la icónica Fortaleza de Narikala y el encantador casco antiguo con sus estrechas calles empedradas. Explore la dinámica cultura de la ciudad, visite los famosos baños de azufre y pasee por la Avenida Rustaveli. Viva la perfecta combinación de historia antigua y vibrante modernidad. Disfrute de una cena en Tiflis celebrando la cocina y hospitalidad georgiana.</p><ul><li>Exploración completa de la ciudad de Tiflis;</li><li>Visita a la icónica Fortaleza de Narikala;</li><li>Encantador casco antiguo con calles empedradas;</li><li>Cultura dinámica y monumentos históricos;</li><li>Experiencia en los famosos baños de azufre;</li><li>Paseo por la Avenida Rustaveli;</li><li>Cena celebrando la cocina georgiana.</li><li><strong>Duración del tour:</strong> 7-8 horas</li></ul>"
+      },
+      {
+        "title": "Día 5: Tiflis – Fortaleza de Ananuri – Kazbegi – Iglesia de la Trinidad de Gergeti – Tiflis",
+        "content": "<p>Viva la belleza atemporal de las montañas de Kazbegi a lo largo de la pintoresca Carretera Militar Georgiana. Deténgase en la histórica Fortaleza de Ananuri con vistas al Embalse de Zhinvali, que ofrece una visión del pasado medieval de Georgia. Continúe hasta Kazbegi (Stepantsminda), famosa por sus dramáticos paisajes montañosos y la icónica Iglesia de la Trinidad de Gergeti, encaramada en una colina con vistas panorámicas del Monte Kazbek. Regreso a Tiflis por la noche.</p><ul><li>Trayecto panorámico por la Carretera Militar Georgiana;</li><li>Exploración de la histórica Fortaleza de Ananuri;</li><li>Vistas panorámicas del Embalse de Zhinvali;</li><li>Descubrimiento del pasado medieval de Georgia;</li><li>Dramáticos paisajes montañosos de Kazbegi;</li><li>Visita a la icónica Iglesia de la Trinidad de Gergeti;</li><li>Regreso a Tiflis por la noche.</li><li><strong>Duración del tour:</strong> 10-11 horas</li><li><strong>Duración del trayecto:</strong> 7 horas en total</li></ul>"
+      },
+      {
+        "title": "Día 6: Tiflis – Ciudad Cueva de Uplistsikhe – Museo de Stalin en Gori – Kutaisi",
+        "content": "<p>Explore la fascinante ciudad cueva de Uplistsikhe, una antigua ciudad rupestre que muestra el patrimonio arqueológico de Georgia con notables viviendas rupestres y estructuras históricas de la antigua Ruta de la Seda de Georgia. Continúe hasta Gori para visitar el Museo de Stalin, que ofrece una visión de la vida de una de las figuras más controvertidas de la historia, Iósif Stalin, nacido aquí. Regreso a Kutaisi para su última noche.</p><ul><li>Fascinante exploración de la ciudad cueva de Uplistsikhe;</li><li>Antiguo patrimonio arqueológico rupestre;</li><li>Notables viviendas y estructuras rupestres;</li><li>Patrimonio de la antigua Ruta de la Seda de Georgia;</li><li>Visita al Museo de Stalin en Gori;</li><li>Perspectivas de una controvertida figura histórica;</li><li>Regreso a Kutaisi para la última noche.</li><li><strong>Duración del tour:</strong> 9-10 horas</li><li><strong>Duración del trayecto:</strong> 6 horas en total</li></ul>"
+      },
+      {
+        "title": "Día 7: Salida desde Kutaisi",
+        "content": "<p>Concluya su cautivador viaje cultural de 7 días por Georgia con la salida desde el Aeropuerto Internacional de Kutaisi. Llévese consigo recuerdos inolvidables de las maravillas culturales de Georgia, desde antiguos monasterios de la UNESCO y ciudades rupestres hasta vibrantes calles capitalinas y dramáticos paisajes montañosos. Esta aventura cuidadosamente seleccionada ha capturado la esencia de la cultura, la historia y el esplendor natural de Georgia, prometiendo recuerdos de un destino extraordinario.</p><ul><li>Salida final del viaje cultural;</li><li>Traslado al Aeropuerto Internacional de Kutaisi;</li><li>Recuerdos de las maravillas culturales de Georgia;</li><li>Monasterios de la UNESCO y ciudades rupestres;</li><li>Vibrante capital y paisajes montañosos;</li><li>Esencia de cultura, historia y naturaleza;</li><li>Fin de la extraordinaria aventura de 7 días.</li><li><strong>Duración:</strong> Según horario de vuelo</li></ul>"
+      }
+    ],
+    "included": [
+      "Alojamiento en habitaciones dobles o twin, con desayuno incluido;",
+      "Traslados según itinerario en vehículo cómodo y climatizado, con conductor-guía de habla inglesa;",
+      "Entradas según itinerario;",
+      "Agua mineral sin gas;",
+      "Cena en Kutaisi el día 2 y en Tiflis el día 4."
+    ],
+    "notIncluded": [
+      "Pensión completa;",
+      "Gastos adicionales de hotel;",
+      "Seguro de viaje."
+    ]
+  },
+  "experience-the-heart-of-georgia-8-day-journey-of-culture-nature-wine-tastings": {
+    "title": "Viva el Corazón de Georgia: Viaje de 8 Días de Cultura, Naturaleza y Catas de Vinos",
+    "description": "Sumérjase en lo mejor del patrimonio cultural, los impresionantes paisajes y las célebres tradiciones vinícolas de Georgia en este tour de 8 días.",
+    "listingDescription": "Sumérjase en lo mejor del patrimonio cultural, los impresionantes paisajes y las célebres tradiciones vinícolas de Georgia en este tour de 8 días.",
+    "itinerary": [
+      {
+        "title": "Día 1: Llegada y tour por la ciudad de Tiflis",
+        "content": "<p>Comience su aventura georgiana con la llegada a Tiflis, la vibrante capital que combina magistralmente la historia antigua con la vida moderna. Explore el histórico casco antiguo con sus estrechas calles empedradas, visite la icónica Catedral de la Santísima Trinidad y admire la antigua Fortaleza de Narikala que domina la ciudad. Descubra la belleza arquitectónica del Puente de la Paz y sumérjase en la atmósfera única de esta cautivadora capital del Cáucaso.</p><ul><li>Llegada a Tiflis y registro en el hotel;</li><li>Explorar el casco antiguo de Tiflis;</li><li>Visita a la Catedral de la Santísima Trinidad;</li><li>Ver la Fortaleza de Narikala;</li><li>Paseo por el Puente de la Paz;</li><li>Descubrir la cultura y cocina local;</li><li>Alojamiento en Tiflis.</li><li><strong>Duración del tour:</strong> 4-5 horas</li><li><strong>Duración del trayecto:</strong> 30 minutos</li></ul>"
+      },
+      {
+        "title": "Día 2: Tiflis – Jvari – Mtskheta – Ananuri – Kazbegi",
+        "content": "<p>Recorra la famosa Carretera Militar Georgiana hacia las majestuosas montañas del Cáucaso. Visite los sitios Patrimonio de la Humanidad de la UNESCO del Monasterio de Jvari y la Catedral de Svetitskhoveli en Mtskheta, el corazón espiritual de Georgia. Deténgase en la pintoresca Fortaleza de Ananuri junto al impresionante Embalse de Jinvali, y continúe hasta Stepantsminda (Kazbegi), donde le esperan dramáticos paisajes montañosos.</p><ul><li>Visita al Monasterio de Jvari (Patrimonio de la Humanidad de la UNESCO);</li><li>Explorar Mtskheta y la Catedral de Svetitskhoveli;</li><li>Parada en el Complejo Arquitectónico de Ananuri;</li><li>Disfrutar de las vistas del Embalse de Jinvali;</li><li>Llegada a Stepantsminda (Kazbegi);</li><li>Alojamiento en Kazbegi.</li><li><strong>Duración del tour:</strong> 8-9 horas</li><li><strong>Duración del trayecto:</strong> 3,5 horas</li></ul>"
+      },
+      {
+        "title": "Día 3: Kazbegi – Iglesia de la Trinidad de Gergeti – Cascada de Gveleti – Kazbegi",
+        "content": "<p>Viva las maravillas naturales de las montañas del Cáucaso hoy. Visite la icónica Iglesia de la Trinidad de Gergeti, uno de los monumentos más fotografiados de Georgia, que ofrece impresionantes vistas panorámicas del Monte Kazbek y los picos circundantes. Continúe hasta la espectacular Cascada de Gveleti, donde podrá disfrutar de la prístina naturaleza montañosa y las cristalinas aguas que descienden en cascada desde las alturas.</p><ul><li>Visita a la Iglesia de la Trinidad de Gergeti;</li><li>Disfrutar de vistas panorámicas del Monte Kazbek;</li><li>Senderismo hasta la Cascada de Gveleti;</li><li>Experiencia en la prístina naturaleza montañosa;</li><li>Oportunidades fotográficas;</li><li>Regreso a Kazbegi;</li><li>Alojamiento en Kazbegi.</li><li><strong>Duración del tour:</strong> 6-7 horas</li><li><strong>Duración del trayecto:</strong> 1 hora</li></ul>"
+      },
+      {
+        "title": "Día 4: Kazbegi – Uplistsikhe – Gori – Tiflis",
+        "content": "<p>Regrese hacia Tiflis, deteniéndose para explorar el fascinante patrimonio arqueológico de Georgia. Visite Uplistsikhe, la antigua ciudad rupestre que muestra la civilización georgiana temprana con sus notables viviendas y túneles rupestres tallados en los acantilados rocosos. Continúe hasta Gori para visitar el Museo de Stalin, conociendo a esta controvertida figura histórica, antes de regresar a Tiflis.</p><ul><li>Salida de Kazbegi;</li><li>Explorar la antigua ciudad cueva de Uplistsikhe;</li><li>Visita al Museo de Stalin en Gori;</li><li>Conocer el patrimonio arqueológico georgiano;</li><li>Regreso a Tiflis;</li><li>Alojamiento en Tiflis.</li><li><strong>Duración del tour:</strong> 9-10 horas</li><li><strong>Duración del trayecto:</strong> 5 horas</li></ul>"
+      },
+      {
+        "title": "Día 5: Tiflis – Telavi – Almuerzo y cata de vinos en la bodega – Tsinandali – Telavi",
+        "content": "<p>Adéntrese hoy en la reconocida región vinícola de Georgia al viajar al corazón de la región de Kakheti. Llegue a Telavi y disfrute de un almuerzo con cata de vinos en una bodega local, experimentando las técnicas tradicionales de vinificación georgiana. Visite la histórica Finca Tsinandali con sus hermosos jardines y conozca la antigua cultura vinícola de Georgia, que se remonta a 8.000 años.</p><ul><li>Viaje a la región vinícola de Kakheti;</li><li>Llegada a Telavi;</li><li>Almuerzo y cata de vinos en bodega local;</li><li>Visita a la Finca Tsinandali y sus jardines;</li><li>Conocer las tradiciones vinícolas georgianas;</li><li>Alojamiento en Telavi.</li><li><strong>Duración del tour:</strong> 8-9 horas</li><li><strong>Duración del trayecto:</strong> 2,5 horas</li></ul>"
+      },
+      {
+        "title": "Día 6: Telavi – Sighnaghi – Bodbe – Cena y cata de vinos en la bodega – Tiflis",
+        "content": "<p>Explore más joyas de la región de Kakheti hoy. Visite Sighnaghi, la encantadora \"Ciudad del Amor\" con sus calles empedradas e impresionantes vistas sobre el Valle de Alazani. Continúe hasta el Monasterio de Bodbe, un lugar venerado en el cristianismo ortodoxo georgiano y último lugar de descanso de Santa Nino. Termine su exploración de la región vinícola con una cena y cata de vinos en una bodega local antes de regresar a Tiflis.</p><ul><li>Visita a Sighnaghi, la \"Ciudad del Amor\";</li><li>Explorar el Monasterio de Bodbe;</li><li>Conocer el legado de Santa Nino;</li><li>Disfrutar de cena y cata de vinos;</li><li>Experimentar las tradiciones vinícolas de Kakheti;</li><li>Regreso a Tiflis;</li><li>Alojamiento en Tiflis.</li><li><strong>Duración del tour:</strong> 9-10 horas</li><li><strong>Duración del trayecto:</strong> 3,5 horas</li></ul>"
+      },
+      {
+        "title": "Día 7: Día libre en Tiflis",
+        "content": "<p>Disfrute de un relajado día libre para explorar Tiflis a su propio ritmo. Vuelva a visitar sus lugares favoritos del primer día, descubra joyas ocultas en los diversos barrios de la ciudad, relájese en los famosos baños de azufre, explore los mercados locales o simplemente descanse y reflexione sobre su increíble viaje georgiano. Este es su momento para vivir Tiflis como un local.</p><ul><li>Día libre para exploración personal;</li><li>Experiencia opcional en baños de azufre;</li><li>Explorar mercados y barrios locales;</li><li>Visitar museos o galerías adicionales;</li><li>Comprar recuerdos georgianos;</li><li>Disfrutar de cafés y restaurantes locales;</li><li>Alojamiento en Tiflis.</li></ul>"
+      },
+      {
+        "title": "Día 8: Tiflis – Salida",
+        "content": "<p>Disfrute de su último desayuno georgiano y tómese unos momentos finales para absorber la atmósfera de Tiflis. Salida del hotel y traslado al Aeropuerto Internacional de Tiflis para su partida, llevándose consigo recuerdos inolvidables del patrimonio cultural de Georgia, sus impresionantes paisajes, aventuras de montaña y excepcionales tradiciones vinícolas.</p><ul><li>Último desayuno georgiano;</li><li>Salida del hotel;</li><li>Traslado al Aeropuerto Internacional de Tiflis;</li><li>Salida de Georgia;</li><li>Fin del memorable viaje de 8 días.</li><li><strong>Duración:</strong> Según horario de vuelo</li></ul>"
+      }
+    ],
+    "included": [
+      "Alojamiento en habitaciones dobles o twin, con desayuno incluido;",
+      "Traslados según itinerario en vehículo cómodo y climatizado, con conductor-guía de habla inglesa;",
+      "Entradas según itinerario;",
+      "Agua mineral sin gas;",
+      "1 almuerzo, 2 cenas y 2 catas de vinos."
+    ],
+    "notIncluded": [
+      "Pensión completa;",
+      "Gastos adicionales de hotel;",
+      "Seguro de viaje."
+    ]
+  },
+  "immerse-yourself-in-georgia-8-day-cultural-and-adventure-journey-through-the-caucasus": {
+    "title": "Sumérjase en Georgia: Viaje Cultural y de Aventura de 8 Días por el Cáucaso",
+    "description": "Sumérjase en las maravillas de Georgia en esta aventura de 8 días, combinando descubrimiento cultural, monumentos históricos y emocionantes actividades al aire libre.",
+    "listingDescription": "Sumérjase en las maravillas de Georgia en esta aventura de 8 días, combinando descubrimiento cultural, monumentos históricos y emocionantes actividades al aire libre.",
+    "itinerary": [
+      {
+        "title": "Día 1: Llegada y tour por la ciudad de Tiflis",
+        "content": "<p>Comience su viaje cultural y de aventura de 8 días con la llegada a Tiflis, la vibrante capital de Georgia. Explore el histórico casco antiguo con sus estrechas calles empedradas, visite la antigua Fortaleza de Narikala que domina la ciudad y descubra la singular mezcla arquitectónica de monumentos tradicionales y modernos. Viva la cautivadora atmósfera de esta joya del Cáucaso que fusiona magistralmente la historia antigua con la vida contemporánea.</p><ul><li>Llegada a Tiflis y registro en el hotel;</li><li>Explorar el casco antiguo de Tiflis;</li><li>Visita a la Fortaleza de Narikala;</li><li>Paseo por los barrios históricos;</li><li>Descubrir la cultura y cocina local;</li><li>Alojamiento en Tiflis.</li><li><strong>Duración del tour:</strong> 4-5 horas</li><li><strong>Duración del trayecto:</strong> 30 minutos</li></ul>"
+      },
+      {
+        "title": "Día 2: Tiflis – Bodbe – Sighnaghi – Lagodekhi",
+        "content": "<p>Viaje a la región de Kakheti, conocida por su herencia vinícola y sus sitios espirituales. Visite el apacible Monasterio de Bodbe, vinculado a Santa Nino y a la historia cristiana de Georgia. Continúe hasta Sighnaghi, la encantadora \"Ciudad del Amor\" con calles empedradas e impresionantes vistas del Valle de Alazani. Termine el día en Lagodekhi, puerta de entrada al impresionante parque nacional que le espera en la aventura de mañana.</p><ul><li>Salida de Tiflis hacia la región de Kakheti;</li><li>Visita al Monasterio de Bodbe;</li><li>Explorar Sighnaghi, la \"Ciudad del Amor\";</li><li>Disfrutar de las vistas del Valle de Alazani;</li><li>Llegada a Lagodekhi;</li><li>Alojamiento en cabaña o casa de huéspedes local.</li><li><strong>Duración del tour:</strong> 7-8 horas</li><li><strong>Duración del trayecto:</strong> 3 horas</li></ul>"
+      },
+      {
+        "title": "Día 3: Lagodekhi – Senderismo en el Parque Nacional de Lagodekhi – Telavi",
+        "content": "<p>Sumérjase en la prístina belleza natural del Parque Nacional de Lagodekhi. Recorra senderos escénicos que conducen a espectaculares cascadas, respire el aire fresco de la montaña y descubra la diversa flora y fauna del parque en esta naturaleza virgen. Después de su aventura en la naturaleza, continúe hasta Telavi, el corazón de la región vinícola de Georgia, rodeada de viñedos ondulantes.</p><ul><li>Explorar el Parque Nacional de Lagodekhi;</li><li>Senderos panorámicos hasta cascadas;</li><li>Experimentar el entorno natural prístino;</li><li>Oportunidades de observación de fauna;</li><li>Viaje a la región vinícola de Telavi;</li><li>Registro y alojamiento en Telavi.</li><li><strong>Duración del tour:</strong> 7-8 horas</li><li><strong>Duración del senderismo:</strong> 4-5 horas</li><li><strong>Duración del trayecto:</strong> 1,5 horas</li></ul>"
+      },
+      {
+        "title": "Día 4: Telavi – Vardisubani – Clases magistrales de cocina – Tiflis",
+        "content": "<p>Sumérjase en las tradiciones culinarias georgianas hoy con clases prácticas de cocina. Visite el pueblo de Vardisubani y aprenda a preparar auténticos platos georgianos usando métodos tradicionales e ingredientes locales. Domine el arte de preparar khachapuri, khinkali y otras apreciadas especialidades georgianas. Esta experiencia cultural inmersiva ofrece una visión de las tradiciones familiares y la hospitalidad georgiana antes de regresar a Tiflis.</p><ul><li>Visita al pueblo de Vardisubani;</li><li>Participar en clases magistrales de cocina;</li><li>Aprender cocina tradicional georgiana;</li><li>Preparar khachapuri y khinkali;</li><li>Experimentar la hospitalidad local;</li><li>Regreso a Tiflis;</li><li>Alojamiento en Tiflis.</li><li><strong>Duración del tour:</strong> 8-9 horas</li><li><strong>Duración de las clases de cocina:</strong> 4-5 horas</li><li><strong>Duración del trayecto:</strong> 3 horas</li></ul>"
+      },
+      {
+        "title": "Día 5: Tiflis – Jvari – Mtskheta – Uplistsikhe – Cena en la bodega – Tiflis",
+        "content": "<p>Explore el rico patrimonio histórico y espiritual de Georgia hoy. Visite los sitios Patrimonio de la Humanidad de la UNESCO del Monasterio de Jvari y la Catedral de Svetitskhoveli en Mtskheta, la antigua capital y corazón religioso de Georgia. Continúe hasta Uplistsikhe, la notable antigua ciudad rupestre que muestra la civilización georgiana temprana. Concluya su día con una cena y cata de vinos en una bodega local, celebrando las antiguas tradiciones vinícolas de Georgia.</p><ul><li>Visita al Monasterio de Jvari (Patrimonio de la Humanidad de la UNESCO);</li><li>Explorar Mtskheta y la Catedral de Svetitskhoveli;</li><li>Descubrir la antigua ciudad cueva de Uplistsikhe;</li><li>Conocer el patrimonio arqueológico georgiano;</li><li>Cena y cata de vinos en la bodega;</li><li>Regreso a Tiflis;</li><li>Alojamiento en Tiflis.</li><li><strong>Duración del tour:</strong> 9-10 horas</li><li><strong>Duración del trayecto:</strong> 3,5 horas</li></ul>"
+      },
+      {
+        "title": "Día 6: Tiflis – Rafting – Ananuri – Kazbegi",
+        "content": "<p>Viva la emoción de la aventura hoy con rafting en el río Pshavi Aragvi, sintiendo la adrenalina de los rápidos de aguas bravas rodeado de impresionantes paisajes montañosos. Después de su aventura de rafting, visite la pintoresca Fortaleza de Ananuri, un impresionante complejo arquitectónico con vistas al río Aragvi. Continúe hasta Kazbegi, enclavada en las dramáticas montañas del Cáucaso, para disfrutar de impresionantes paisajes alpinos.</p><ul><li>Salida de Tiflis para actividades de aventura;</li><li>Rafting en el río Pshavi Aragvi;</li><li>Experimentar los rápidos de aguas bravas;</li><li>Visita al Complejo Arquitectónico de Ananuri;</li><li>Trayecto panorámico por las montañas del Cáucaso;</li><li>Llegada a Kazbegi;</li><li>Alojamiento en Kazbegi.</li><li><strong>Duración del tour:</strong> 8-9 horas</li><li><strong>Duración del rafting:</strong> 3-4 horas</li><li><strong>Duración del trayecto:</strong> 4 horas</li></ul>"
+      },
+      {
+        "title": "Día 7: Kazbegi – Iglesia de la Trinidad de Gergeti – Museo de Stalin en Gori – Tiflis",
+        "content": "<p>Maravíllese con uno de los monumentos más icónicos de Georgia hoy. Visite la impresionante Iglesia de la Trinidad de Gergeti, encaramada de forma espectacular con el impresionante telón de fondo del Monte Kazbek y las montañas del Cáucaso circundantes. Este sitio espiritual ofrece vistas panorámicas inigualables y oportunidades fotográficas. Continúe hasta Gori para explorar el Museo de Stalin, conociendo a esta controvertida figura histórica antes de regresar a Tiflis.</p><ul><li>Visita a la icónica Iglesia de la Trinidad de Gergeti;</li><li>Disfrutar de vistas panorámicas del Monte Kazbek;</li><li>Experimentar los paisajes montañosos del Cáucaso;</li><li>Viaje a Gori;</li><li>Explorar el Museo de Stalin;</li><li>Conocer la historia soviética georgiana;</li><li>Regreso a Tiflis;</li><li>Alojamiento en Tiflis.</li><li><strong>Duración del tour:</strong> 9-10 horas</li><li><strong>Duración del trayecto:</strong> 5,5 horas</li></ul>"
+      },
+      {
+        "title": "Día 8: Salida desde Tiflis",
+        "content": "<p>Disfrute de su última mañana en Tiflis, reflexionando sobre su increíble viaje cultural y de aventura de 8 días por Georgia. Tómese unos últimos momentos para explorar la ciudad, quizás comprar recuerdos o disfrutar de un último desayuno georgiano. Salida del hotel y traslado al Aeropuerto Internacional de Tiflis para su partida, llevándose consigo recuerdos inolvidables de los diversos paisajes, la rica cultura, las actividades de aventura y la cálida hospitalidad de Georgia.</p><ul><li>Última mañana en Tiflis;</li><li>Tiempo libre para exploración de última hora;</li><li>Salida del hotel;</li><li>Traslado al Aeropuerto Internacional de Tiflis;</li><li>Salida de Georgia;</li><li>Fin de la memorable aventura de 8 días.</li><li><strong>Duración:</strong> Según horario de vuelo</li></ul>"
+      }
+    ],
+    "included": [
+      "Alojamiento en habitaciones dobles o twin, con desayuno incluido;",
+      "Traslados según itinerario en vehículo cómodo y climatizado, con conductor-guía de habla inglesa;",
+      "Entradas según itinerario;",
+      "Agua mineral sin gas;",
+      "Clases magistrales de cocina el día 4;",
+      "1 almuerzo, 4 cenas y 4 catas de vinos;",
+      "Rafting el día 6."
+    ],
+    "notIncluded": [
+      "Pensión completa;",
+      "Gastos adicionales de hotel;",
+      "Seguro de viaje."
+    ]
+  },
+  "ultimate-georgia-exploration-9-day-tour-from-kutaisi-to-tbilisi-and-hidden-gems": {
+    "title": "Exploración Definitiva de Georgia: Tour de 9 Días desde Kutaisi a Tiflis y Joyas Ocultas",
+    "description": "Comience su viaje por Georgia en Kutaisi, una ciudad impregnada de historia, donde le esperan los serenos monasterios de Gelati y Motsameta.",
+    "listingDescription": "Comience su viaje por Georgia en Kutaisi, una ciudad impregnada de historia, donde le esperan los serenos monasterios de Gelati y Motsameta.",
+    "itinerary": [
+      {
+        "title": "Día 1: Llegada a Kutaisi",
+        "content": "<p>Comience su exploración definitiva de Georgia de 9 días en Kutaisi, una de las ciudades más antiguas del país con más de 3.000 años de historia. Llegada al Aeropuerto Internacional de Kutaisi y traslado a su alojamiento en esta encantadora ciudad histórica. Tómese un tiempo para instalarse y prepararse para su completo viaje a través de los monumentos más cautivadores y las joyas ocultas de Georgia.</p><ul><li>Llegada al Aeropuerto Internacional de Kutaisi;</li><li>Traslado al alojamiento;</li><li>Introducción a los 3.000 años de historia de Kutaisi;</li><li>Instalación en la encantadora ciudad histórica;</li><li>Preparación para la exploración completa;</li><li>Descanso y preparación para la aventura;</li><li>Registro y alojamiento en Kutaisi.</li><li><strong>Duración:</strong> Según horario de llegada</li></ul>"
+      },
+      {
+        "title": "Día 2: Tour por Kutaisi – Monasterio de Gelati – Monasterio de Motsameta",
+        "content": "<p>Sumérjase en el patrimonio espiritual de Kutaisi con visitas a dos magníficos monasterios. Explore el Monasterio de Gelati, Patrimonio de la Humanidad de la UNESCO, una obra maestra de la arquitectura medieval georgiana que representa la edad de oro de la cultura georgiana. Continúe hasta el sereno Monasterio de Motsameta, encaramado de forma espectacular sobre el río Tskhaltsitela, ofreciendo tanto significado espiritual como una impresionante belleza natural.</p><ul><li>Exploración completa de la ciudad de Kutaisi;</li><li>Monasterio de Gelati, Patrimonio de la Humanidad de la UNESCO;</li><li>Obra maestra de la arquitectura medieval georgiana;</li><li>Descubrimiento de la edad de oro de la cultura georgiana;</li><li>Visita al sereno Monasterio de Motsameta;</li><li>Dramático emplazamiento sobre el cañón fluvial;</li><li>Alojamiento en Kutaisi.</li><li><strong>Duración del tour:</strong> 7-8 horas</li><li><strong>Duración del trayecto:</strong> 1,5 horas</li></ul>"
+      },
+      {
+        "title": "Día 3: Kutaisi – Cueva de Prometeo – Tiflis",
+        "content": "<p>Viva una de las maravillas naturales más espectaculares de Georgia en la Cueva de Prometeo, con impresionantes estalactitas, estalagmitas y ríos subterráneos a lo largo de 11 kilómetros de cámaras accesibles. Esta maravilla geológica ofrece un fascinante viaje subterráneo antes de continuar hasta Tiflis, la vibrante capital de Georgia, donde la historia antigua se fusiona con la energía moderna.</p><ul><li>Espectacular exploración de la Cueva de Prometeo;</li><li>Impresionantes estalactitas y estalagmitas;</li><li>Ríos y cámaras subterráneas;</li><li>Maravilla geológica de 11 kilómetros;</li><li>Fascinante viaje subterráneo;</li><li>Viaje a la vibrante capital Tiflis;</li><li>Registro y alojamiento en Tiflis.</li><li><strong>Duración del tour:</strong> 8-9 horas</li><li><strong>Duración del trayecto:</strong> 4,5 horas</li></ul>"
+      },
+      {
+        "title": "Día 4: Tour por la ciudad de Tiflis",
+        "content": "<p>Descubra el alma dinámica de Tiflis con un completo tour por la ciudad. Explore el histórico casco antiguo con sus estrechas calles empedradas, visite la antigua Fortaleza de Narikala que domina la ciudad, descubra el famoso barrio de los baños de azufre y pasee por la Avenida Rustaveli. Viva la vibrante mezcla de historia antigua, herencia soviética y vida georgiana moderna que hace de Tiflis una ciudad tan cautivadora.</p><ul><li>Descubrimiento completo de la ciudad de Tiflis;</li><li>Exploración del histórico casco antiguo;</li><li>Visita a la antigua Fortaleza de Narikala;</li><li>Famoso barrio de los baños de azufre;</li><li>Paseo por la Avenida Rustaveli;</li><li>Vibrante mezcla de lo antiguo y lo moderno;</li><li>Alojamiento en Tiflis.</li><li><strong>Duración del tour:</strong> 6-7 horas</li><li><strong>Duración del trayecto:</strong> 1 hora</li></ul>"
+      },
+      {
+        "title": "Día 5: Tiflis – Mtskheta – Ananuri – Kazbegi",
+        "content": "<p>Viaje por el corazón espiritual de Georgia en Mtskheta, la antigua capital y sitio Patrimonio de la Humanidad de la UNESCO. Visite el Monasterio de Jvari y la Catedral de Svetitskhoveli antes de continuar hasta la pintoresca Fortaleza de Ananuri junto al Embalse de Jinvali. Recorra la pintoresca Carretera Militar Georgiana para llegar a Kazbegi, donde las dramáticas montañas del Cáucaso y el Monte Kazbek crean algunos de los paisajes más espectaculares de Georgia.</p><ul><li>Visita al corazón espiritual de Mtskheta;</li><li>Exploración del Patrimonio de la Humanidad de la UNESCO;</li><li>Monasterio de Jvari y Catedral de Svetitskhoveli;</li><li>Pintoresca Fortaleza de Ananuri;</li><li>Pintoresca Carretera Militar Georgiana;</li><li>Dramática llegada a las montañas de Kazbegi;</li><li>Registro y alojamiento en Kazbegi.</li><li><strong>Duración del tour:</strong> 8-9 horas</li><li><strong>Duración del trayecto:</strong> 4 horas</li></ul>"
+      },
+      {
+        "title": "Día 6: Kazbegi – Iglesia de la Trinidad de Gergeti – Tiflis",
+        "content": "<p>Viva la icónica Iglesia de la Trinidad de Gergeti, el monumento más fotografiado de Georgia, encaramada de forma espectacular a 2.170 metros con impresionantes vistas panorámicas del Monte Kazbek y los picos circundantes del Cáucaso. Este sitio espiritual ofrece vistas montañosas inigualables y representa la perfecta armonía entre la fe ortodoxa georgiana y la belleza natural. Regreso a Tiflis por la noche.</p><ul><li>Visita a la icónica Iglesia de la Trinidad de Gergeti;</li><li>Monumento más fotografiado de Georgia;</li><li>Impresionante panorama del Monte Kazbek;</li><li>Sitio espiritual a 2.170 metros de altitud;</li><li>Vistas de los picos circundantes del Cáucaso;</li><li>Perfecta armonía entre fe y naturaleza;</li><li>Regreso a Tiflis por la noche.</li><li><strong>Duración del tour:</strong> 10-11 horas</li><li><strong>Duración del trayecto:</strong> 7 horas en total</li></ul>"
+      },
+      {
+        "title": "Día 7: Tiflis – Uplistsikhe – Museo de Stalin en Gori – Kutaisi",
+        "content": "<p>Explore las fascinantes capas históricas de Georgia con una visita a Uplistsikhe, la antigua ciudad rupestre que representa la civilización georgiana temprana. Estas notables viviendas y túneles rupestres tallados en acantilados rocosos muestran el antiguo patrimonio de la Ruta de la Seda de Georgia. Continúe hasta Gori para visitar el Museo de Stalin, que ofrece una visión del complejo legado de esta controvertida figura histórica, antes de llegar a Kutaisi.</p><ul><li>Antigua ciudad rupestre de Uplistsikhe;</li><li>Muestra de la civilización georgiana temprana;</li><li>Notables viviendas y túneles rupestres;</li><li>Patrimonio de la antigua Ruta de la Seda;</li><li>Visita al Museo de Stalin en Gori;</li><li>Complejo legado histórico controvertido;</li><li>Llegada a la histórica Kutaisi.</li><li><strong>Duración del tour:</strong> 9-10 horas</li><li><strong>Duración del trayecto:</strong> 6 horas en total</li></ul>"
+      },
+      {
+        "title": "Día 8: Día de joyas ocultas – Tiflis – Nokalakevi – Cañón de Martvili – Kutaisi",
+        "content": "<p>Descubra los tesoros arqueológicos y naturales ocultos de Georgia en este día especial. Explore el antiguo yacimiento arqueológico de Nokalakevi, a menudo llamado la \"Troya georgiana\", con fascinantes ruinas de una importante ciudad fortaleza antigua. Continúe hasta el impresionante Cañón de Martvili, donde aguas esmeralda fluyen a través de dramáticos desfiladeros de piedra caliza, ofreciendo paseos en barco y senderos por una prístina belleza natural. Este día muestra las joyas menos conocidas de Georgia.</p><ul><li>Exploración especial de tesoros ocultos;</li><li>Antiguo yacimiento arqueológico de Nokalakevi;</li><li>Troya georgiana con ruinas de ciudad fortaleza;</li><li>Importante significado de la fortaleza antigua;</li><li>Impresionante descubrimiento del Cañón de Martvili;</li><li>Aguas esmeralda y desfiladeros de caliza;</li><li>Regreso a Kutaisi para alojamiento.</li><li><strong>Duración del tour:</strong> 10-11 horas</li><li><strong>Duración del trayecto:</strong> 8 horas en total</li></ul>"
+      },
+      {
+        "title": "Día 9: Salida desde Kutaisi",
+        "content": "<p>Concluya su exploración definitiva de Georgia de 9 días con la salida desde el Aeropuerto Internacional de Kutaisi. Llévese consigo recuerdos inolvidables de los monumentos más emblemáticos de Georgia combinados con joyas ocultas como Nokalakevi y el Cañón de Martvili. Este viaje cuidadosamente diseñado ha proporcionado una experiencia completa de la cultura, la historia, las maravillas naturales y los tesoros arquitectónicos de Georgia, desde monasterios ancestrales hasta impresionantes vistas montañosas y prístinos cañones.</p><ul><li>Salida final de la exploración georgiana;</li><li>Traslado al Aeropuerto Internacional de Kutaisi;</li><li>Recuerdos de monumentos icónicos y joyas ocultas;</li><li>Tesoros de Nokalakevi y el Cañón de Martvili;</li><li>Experiencia completa de cultura e historia;</li><li>Maravillas naturales y tesoros arquitectónicos;</li><li>Fin de la aventura definitiva de 9 días por Georgia.</li><li><strong>Duración:</strong> Según horario de vuelo</li></ul>"
+      }
+    ],
+    "included": [
+      "Alojamiento en habitaciones dobles o twin, con desayuno incluido;",
+      "Traslados según itinerario en vehículo cómodo y climatizado, con conductor-guía de habla inglesa;",
+      "Entradas según itinerario;",
+      "Agua mineral sin gas;",
+      "1 almuerzo y 2 cenas."
+    ],
+    "notIncluded": [
+      "Pensión completa;",
+      "Gastos adicionales de hotel;",
+      "Seguro de viaje."
+    ]
+  },
+  "wander-wonder-and-wine-9-days-of-georgias-best": {
+    "title": "Pasear, Maravillarse y Degustar Vinos: 9 Días de lo Mejor de Georgia",
+    "description": "Descubra las ricas capas de la historia, la cultura y la belleza natural de Georgia en esta aventura de 9 días.",
+    "listingDescription": "Descubra las ricas capas de la historia, la cultura y la belleza natural de Georgia en esta aventura de 9 días.",
+    "itinerary": [
+      {
+        "title": "Día 1: Llegada a Tiflis",
+        "content": "<p>Comience su aventura georgiana de 9 días con la llegada a Tiflis, la vibrante capital que combina magistralmente la historia antigua con la vida moderna. Traslado desde el aeropuerto al hotel para registro y descanso. Explore los alrededores si el tiempo lo permite, obteniendo una primera impresión de la hospitalidad y cultura georgianas. Prepárese para el increíble viaje que le espera a través de los monumentos más emblemáticos y los tesoros ocultos de Georgia.</p><ul><li>Llegada a Tiflis;</li><li>Recogida en el aeropuerto y traslado al hotel;</li><li>Registro en el hotel y descanso;</li><li>Paseo vespertino opcional por los alrededores;</li><li>Briefing de bienvenida sobre el tour;</li><li>Alojamiento en Tiflis.</li><li><strong>Duración:</strong> Según horario de llegada</li></ul>"
+      },
+      {
+        "title": "Día 2: Tour por la ciudad de Tiflis",
+        "content": "<p>Descubra las dinámicas calles y la rica historia de Tiflis en un completo tour por la ciudad. Explore el encantador casco antiguo con sus estrechas calles empedradas, visite la antigua Fortaleza de Narikala que domina la ciudad y admire la magnífica Catedral de la Santísima Trinidad. Recorra los barrios históricos y viva la vibrante mezcla de arquitectura tradicional georgiana con monumentos modernos que define esta cautivadora capital.</p><ul><li>Explorar el casco antiguo de Tiflis;</li><li>Visita a la antigua Fortaleza de Narikala;</li><li>Ver la Catedral de la Santísima Trinidad;</li><li>Paseo por los barrios históricos;</li><li>Descubrir la arquitectura tradicional y moderna;</li><li>Conocer la rica historia de Tiflis;</li><li>Alojamiento en Tiflis.</li><li><strong>Duración del tour:</strong> 4-5 horas</li><li><strong>Duración del trayecto:</strong> 30 minutos</li></ul>"
+      },
+      {
+        "title": "Día 3: Tiflis – Mtskheta – Uplistsikhe – Gori – Kutaisi",
+        "content": "<p>Recorra hoy el patrimonio espiritual y arqueológico de Georgia. Camine por los senderos espirituales de Mtskheta, la antigua capital de Georgia y Patrimonio de la Humanidad de la UNESCO, visitando el Monasterio de Jvari y la Catedral de Svetitskhoveli. Explore la notable maravilla rupestre de Uplistsikhe, uno de los sitios arqueológicos más significativos de Georgia. Visite Gori con su famoso Museo de Stalin antes de llegar a Kutaisi, una de las ciudades más antiguas de Georgia con más de 3.000 años de historia.</p><ul><li>Visita a Mtskheta (Patrimonio de la Humanidad de la UNESCO);</li><li>Explorar el Monasterio de Jvari y la Catedral de Svetitskhoveli;</li><li>Descubrir la antigua ciudad rupestre de Uplistsikhe;</li><li>Visita al Museo de Stalin en Gori;</li><li>Llegada a la histórica Kutaisi;</li><li>Registro y alojamiento en Kutaisi.</li><li><strong>Duración del tour:</strong> 8-9 horas</li><li><strong>Duración del trayecto:</strong> 4,5 horas</li></ul>"
+      },
+      {
+        "title": "Día 4: Kutaisi – Monasterio de Gelati – Cueva de Prometeo – Kutaisi",
+        "content": "<p>Explore los tesoros culturales y naturales de los alrededores de Kutaisi hoy. Admire el Monasterio de Gelati, declarado Patrimonio de la Humanidad por la UNESCO, que representa la edad de oro de la cultura y la arquitectura medieval georgiana fundado en 1106. Continúe hasta la encantadora Cueva de Prometeo, un impresionante sistema de cuevas de piedra caliza natural con espectaculares estalactitas, estalagmitas y ríos subterráneos. Esta perfecta combinación de patrimonio espiritual y maravilla natural muestra la diversa belleza de Georgia.</p><ul><li>Visita al Monasterio de Gelati, Patrimonio de la UNESCO;</li><li>Explorar la arquitectura medieval georgiana;</li><li>Recorrido por la encantadora Cueva de Prometeo;</li><li>Maravillarse con estalactitas y estalagmitas;</li><li>Experimentar los ríos subterráneos;</li><li>Regreso a Kutaisi;</li><li>Alojamiento en Kutaisi.</li><li><strong>Duración del tour:</strong> 6-7 horas</li><li><strong>Duración del trayecto:</strong> 1,5 horas</li></ul>"
+      },
+      {
+        "title": "Día 5: Kutaisi – Cueva de Vardzia – Akhaltsikhe",
+        "content": "<p>Descubra hoy uno de los sitios arqueológicos y religiosos más espectaculares de Georgia. Visite la dramática ciudad cueva de Vardzia, un fascinante complejo monástico rupestre tallado en los acantilados de la montaña Erusheti durante el reinado de la Reina Tamar en el siglo XII. Este notable lugar muestra el ingenio de la ingeniería medieval georgiana y la profunda devoción religiosa de sus constructores. Continúe hasta Akhaltsikhe, una ciudad histórica con diversas influencias culturales.</p><ul><li>Visita al espectacular monasterio rupestre de Vardzia;</li><li>Explorar las viviendas rupestres del siglo XII;</li><li>Conocer el legado de la Reina Tamar;</li><li>Maravillarse con la ingeniería medieval georgiana;</li><li>Viaje a la histórica Akhaltsikhe;</li><li>Registro y alojamiento en Akhaltsikhe.</li><li><strong>Duración del tour:</strong> 7-8 horas</li><li><strong>Duración del trayecto:</strong> 4 horas</li></ul>"
+      },
+      {
+        "title": "Día 6: Akhaltsikhe – Fortaleza de Rabati – Borjomi – Batumi",
+        "content": "<p>Quédese boquiabierto ante la imponente Fortaleza de Rabati en Akhaltsikhe, un magnífico complejo medieval restaurado que muestra las diversas influencias arquitectónicas de las culturas georgiana, otomana y europea. Continúe hasta Borjomi, famosa por sus manantiales minerales naturales y sus aguas curativas. Termine la jornada en la vibrante ciudad costera de Batumi junto al Mar Negro, donde la arquitectura moderna se encuentra con la hospitalidad tradicional georgiana.</p><ul><li>Explorar la imponente Fortaleza de Rabati;</li><li>Descubrir las diversas influencias arquitectónicas;</li><li>Visita a los manantiales minerales de Borjomi;</li><li>Degustación del famoso agua mineral de Borjomi;</li><li>Trayecto panorámico a la costa del Mar Negro;</li><li>Llegada a la vibrante Batumi;</li><li>Registro y alojamiento en Batumi.</li><li><strong>Duración del tour:</strong> 7-8 horas</li><li><strong>Duración del trayecto:</strong> 4,5 horas</li></ul>"
+      },
+      {
+        "title": "Día 7: Tour por la ciudad de Batumi",
+        "content": "<p>Relájese entre la exuberante belleza y el encanto costero de Batumi hoy. Explore el famoso Jardín Botánico de Batumi con sus diversas colecciones de plantas de todo el mundo, pasee por la elegante Plaza de Europa, descubra la romántica Plaza Piazza y contemple la conmovedora estatua de Ali y Nino. Disfrute de las impresionantes vistas al mar a lo largo del Bulevar de Batumi y viva la perfecta combinación de belleza natural y atracciones de una ciudad moderna.</p><ul><li>Explorar el reconocido Jardín Botánico de Batumi;</li><li>Paseo por la Plaza de Europa;</li><li>Descubrir la romántica Plaza Piazza;</li><li>Ver la conmovedora estatua de Ali y Nino;</li><li>Pasear por el Bulevar de Batumi;</li><li>Disfrutar de las impresionantes vistas al Mar Negro;</li><li>Paseo opcional en teleférico;</li><li>Alojamiento en Batumi.</li><li><strong>Duración del tour:</strong> 5-6 horas</li><li><strong>Duración del trayecto:</strong> 1 hora</li></ul>"
+      },
+      {
+        "title": "Día 8: Batumi – Tiflis",
+        "content": "<p>Disfrute de una última mañana junto al Mar Negro, absorbiendo la serena atmósfera costera de Batumi. Salida del hotel y comienzo del pintoresco viaje de regreso a Tiflis a través de los diversos paisajes de Georgia. Llegada a la capital donde comenzó su aventura georgiana, reflexionando sobre la increíble variedad de experiencias, desde monasterios ancestrales y ciudades rupestres hasta la belleza costera y las vistas montañosas.</p><ul><li>Última mañana en Batumi;</li><li>Paseo marítimo opcional;</li><li>Salida del hotel;</li><li>Trayecto panorámico de regreso a Tiflis;</li><li>Viaje a través de diversos paisajes;</li><li>Llegada a Tiflis;</li><li>Registro y alojamiento en Tiflis.</li><li><strong>Duración del tour:</strong> 6-7 horas</li><li><strong>Duración del trayecto:</strong> 5 horas</li></ul>"
+      },
+      {
+        "title": "Día 9: Salida desde Tiflis",
+        "content": "<p>Complete su inolvidable viaje de 9 días por lo mejor de Georgia. Disfrute de un último desayuno georgiano y tómese los últimos momentos para explorar Tiflis si el tiempo lo permite. Salida del hotel y traslado al Aeropuerto Internacional de Tiflis para su partida, llevándose consigo recuerdos de las ricas capas de historia, cultura, belleza natural y la cálida hospitalidad que hacen de este país un lugar tan especial.</p><ul><li>Último desayuno georgiano;</li><li>Exploración opcional de última hora;</li><li>Salida del hotel;</li><li>Traslado al Aeropuerto Internacional de Tiflis;</li><li>Salida de Georgia;</li><li>Fin de la memorable aventura de 9 días.</li><li><strong>Duración:</strong> Según horario de vuelo</li></ul>"
+      }
+    ],
+    "included": [
+      "Alojamiento en habitaciones dobles o twin, con desayuno incluido;",
+      "Traslados según itinerario en vehículo cómodo y climatizado, con conductor-guía de habla inglesa;",
+      "Entradas según itinerario;",
+      "Agua mineral sin gas."
+    ],
+    "notIncluded": [
+      "Pensión completa;",
+      "Gastos adicionales de hotel;",
+      "Seguro de viaje."
+    ]
+  },
+  "wine-wonders-and-the-caucasus-a-9-day-adventure-in-georgia": {
+    "title": "Vinos, Maravillas y el Cáucaso: Una Aventura de 9 Días en Georgia",
+    "description": "Descubra la esencia de Georgia en este tour de 9 días repleto de experiencias inolvidables.",
+    "listingDescription": "Descubra la esencia de Georgia en este tour de 9 días repleto de experiencias inolvidables.",
+    "itinerary": [
+      {
+        "title": "Día 1: Llegada a Tiflis",
+        "content": "<p>Comience su aventura de 9 días de vinos, maravillas y el Cáucaso con la llegada a Tiflis, la vibrante capital y corazón cultural de Georgia. Traslado desde el aeropuerto al hotel para registro y descanso. Si el tiempo lo permite, dé un paseo vespertino opcional por los alrededores para obtener una primera impresión de la cultura y hospitalidad georgianas. Prepárese para un increíble viaje a través de los paisajes más cautivadores y los tesoros culturales de Georgia.</p><ul><li>Llegada a Tiflis;</li><li>Recogida en el aeropuerto y traslado al hotel;</li><li>Registro en el hotel y descanso;</li><li>Exploración vespertina opcional;</li><li>Briefing de bienvenida sobre el tour;</li><li>Alojamiento en Tiflis.</li><li><strong>Duración:</strong> Según horario de llegada</li></ul>"
+      },
+      {
+        "title": "Día 2: Tour por la ciudad de Tiflis",
+        "content": "<p>Explore el casco antiguo de Tiflis y descubra el rico patrimonio de la capital de Georgia. Visite monumentos icónicos como la antigua Fortaleza de Narikala que domina la ciudad, la histórica Iglesia de Metekhi con su dramática ubicación en lo alto de un acantilado, y pasee por las encantadoras calles empedradas que cuentan la historia de las diversas influencias culturales de Georgia. Viva la singular mezcla de arquitectura tradicional georgiana con elementos modernos que hacen de Tiflis una ciudad tan cautivadora.</p><ul><li>Explorar el casco antiguo de Tiflis;</li><li>Visita a la antigua Fortaleza de Narikala;</li><li>Ver la histórica Iglesia de Metekhi;</li><li>Paseo por las calles empedradas;</li><li>Descubrir los monumentos culturales;</li><li>Conocer la rica historia de Tiflis;</li><li>Alojamiento en Tiflis.</li><li><strong>Duración del tour:</strong> 4-5 horas</li><li><strong>Duración del trayecto:</strong> 30 minutos</li></ul>"
+      },
+      {
+        "title": "Día 3: Mtskheta y Ananuri",
+        "content": "<p>Viaje a Mtskheta, la antigua capital y corazón espiritual de Georgia. Explore este sitio Patrimonio de la Humanidad de la UNESCO, hogar de tesoros como la Catedral de Svetitskhoveli y el Monasterio de Jvari. Continúe hasta la pintoresca Fortaleza de Ananuri, un impresionante complejo arquitectónico medieval junto al río Aragvi con impresionantes telones de fondo montañosos. Este día muestra el rico patrimonio religioso y la artesanía medieval de Georgia.</p><ul><li>Visita a Mtskheta, la antigua capital;</li><li>Explorar los tesoros Patrimonio de la Humanidad de la UNESCO;</li><li>Ver la Catedral de Svetitskhoveli;</li><li>Visita al Monasterio de Jvari;</li><li>Descubrir la Fortaleza de Ananuri;</li><li>Disfrutar del paisaje de montaña y río;</li><li>Regreso a Tiflis;</li><li>Alojamiento en Tiflis.</li><li><strong>Duración del tour:</strong> 7-8 horas</li><li><strong>Duración del trayecto:</strong> 3 horas</li></ul>"
+      },
+      {
+        "title": "Día 4: Exploración de Kazbegi",
+        "content": "<p>Contemple las impresionantes vistas de las montañas del Cáucaso mientras viaja a Kazbegi. Visite la icónica Iglesia de la Trinidad de Gergeti, encaramada de forma espectacular a 2.170 metros de altitud con vistas inigualables del Monte Kazbek y los picos circundantes. Este sitio espiritual ofrece algunos de los paisajes montañosos más espectaculares de Georgia y es una perfecta introducción al majestuoso paisaje del Cáucaso.</p><ul><li>Viaje a la pintoresca Kazbegi;</li><li>Visita a la icónica Iglesia de la Trinidad de Gergeti;</li><li>Contemplar las impresionantes vistas del Cáucaso;</li><li>Experimentar el paisaje del Monte Kazbek;</li><li>Oportunidades fotográficas;</li><li>Explorar los paisajes montañosos;</li><li>Registro y alojamiento en Kazbegi.</li><li><strong>Duración del tour:</strong> 6-7 horas</li><li><strong>Duración del trayecto:</strong> 3 horas</li></ul>"
+      },
+      {
+        "title": "Día 5: Gudauri y Stepantsminda",
+        "content": "<p>Explore la serena belleza del alto Cáucaso hoy. Visite Gudauri, una estación de esquí que ofrece vistas panorámicas de las montañas y aire fresco alpino. Continúe explorando Stepantsminda y descubra el tranquilo Valle de Truso con su prístino entorno natural. Viva la apacible atmósfera montañosa y los dramáticos paisajes que hacen del Cáucaso georgiano un lugar tan memorable.</p><ul><li>Visita a la estación de esquí de Gudauri;</li><li>Disfrutar de vistas panorámicas de las montañas;</li><li>Explorar la zona de Stepantsminda;</li><li>Descubrir el sereno Valle de Truso;</li><li>Experimentar el prístino entorno natural;</li><li>Fotografía de paisajes alpinos;</li><li>Alojamiento en Kazbegi.</li><li><strong>Duración del tour:</strong> 6-7 horas</li><li><strong>Duración del trayecto:</strong> 2 horas</li></ul>"
+      },
+      {
+        "title": "Día 6: Región vinícola de Kakheti",
+        "content": "<p>Sumérjase en las ricas tradiciones de la vinicultura georgiana en la reconocida región de Kakheti. Disfrute de catas en bodegas locales y descubra los 8.000 años de herencia vinícola de Georgia. Visite la encantadora Sighnaghi, conocida como la \"Ciudad del Amor\", con sus calles empedradas e impresionantes vistas sobre el Valle de Alazani. Este día celebra la exportación cultural más famosa de Georgia: sus excepcionales vinos.</p><ul><li>Viaje a la reconocida región vinícola de Kakheti;</li><li>Experiencia de catas en bodegas locales;</li><li>Conocer los 8.000 años de herencia vinícola;</li><li>Visita a la encantadora Sighnaghi, \"Ciudad del Amor\";</li><li>Explorar las calles empedradas;</li><li>Disfrutar de las vistas sobre el Valle de Alazani;</li><li>Alojamiento en Kazbegi.</li><li><strong>Duración del tour:</strong> 8-9 horas</li><li><strong>Duración del trayecto:</strong> 4 horas</li></ul>"
+      },
+      {
+        "title": "Día 7: Telavi y Monasterio de Alaverdi",
+        "content": "<p>Explore Telavi, el centro administrativo de la región de Kakheti, conocido por sus sitios históricos y su conexión con la cultura vinícola georgiana. Visite el magnífico Monasterio de Alaverdi, una de las catedrales más altas de Georgia y un importante centro del cristianismo ortodoxo georgiano. Este día combina exploración cultural con patrimonio espiritual en el corazón de la región vinícola de Georgia.</p><ul><li>Explorar Telavi, centro de la región de Kakheti;</li><li>Visitar sitios y monumentos históricos;</li><li>Ver el magnífico Monasterio de Alaverdi;</li><li>Conocer el patrimonio ortodoxo georgiano;</li><li>Experimentar una de las catedrales más altas de Georgia;</li><li>Descubrir la cultura de la región vinícola;</li><li>Registro y alojamiento en Telavi.</li><li><strong>Duración del tour:</strong> 6-7 horas</li><li><strong>Duración del trayecto:</strong> 1,5 horas</li></ul>"
+      },
+      {
+        "title": "Día 8: Día libre en Tiflis",
+        "content": "<p>Regrese a Tiflis para un merecido día libre, perfecto para ir de compras, saborear la cocina local o simplemente relajarse. Explore la ciudad a su propio ritmo, quizás volviendo a visitar sus lugares favoritos o descubriendo nuevas zonas que aún no haya explorado. Este día flexible le permite disfrutar de la vibrante atmósfera de Tiflis, visitar mercados locales o darse un capricho con un festín georgiano tradicional.</p><ul><li>Viaje de regreso a Tiflis;</li><li>Día libre para exploración personal;</li><li>Compras opcionales y búsqueda de recuerdos;</li><li>Saborear la cocina local en restaurantes;</li><li>Visitar mercados y cafés locales;</li><li>Relajarse y reflexionar sobre su viaje;</li><li>Alojamiento en Tiflis.</li><li><strong>Duración del tour:</strong> Día libre</li><li><strong>Duración del trayecto:</strong> 2,5 horas (regreso a Tiflis)</li></ul>"
+      },
+      {
+        "title": "Día 9: Salida",
+        "content": "<p>Concluya su enriquecedora y memorable experiencia de viaje de 9 días en el corazón del Cáucaso. Disfrute de un último desayuno georgiano y tómese los últimos momentos para absorber la atmósfera de Tiflis. Salida del hotel y traslado al Aeropuerto Internacional de Tiflis para su partida, llevándose consigo recuerdos inolvidables de los impresionantes paisajes, los monumentos históricos, las tradiciones vinícolas y las delicias culinarias de Georgia.</p><ul><li>Último desayuno georgiano;</li><li>Últimos momentos en Tiflis;</li><li>Salida del hotel;</li><li>Traslado al Aeropuerto Internacional de Tiflis;</li><li>Salida de Georgia;</li><li>Fin de la aventura de 9 días por el Cáucaso.</li><li><strong>Duración:</strong> Según horario de vuelo</li></ul>"
+      }
+    ],
+    "included": [
+      "Alojamiento en habitaciones dobles o twin, con desayuno incluido;",
+      "Traslados según itinerario en vehículo cómodo y climatizado, con conductor-guía de habla inglesa;",
+      "Entradas según itinerario;",
+      "Agua mineral sin gas;",
+      "1 almuerzo, 2 cenas y 2 catas de vinos."
+    ],
+    "notIncluded": [
+      "Pensión completa;",
+      "Gastos adicionales de hotel;",
+      "Seguro de viaje."
+    ]
+  },
+  "georgia-in-10-days-where-every-corner-has-a-story-and-every-meal-is-a-celebration": {
+    "title": "Georgia en 10 Días: Donde Cada Rincón Tiene una Historia y Cada Comida es una Celebración",
+    "description": "Este itinerario cuidadosamente elaborado le invita a explorar los monumentos más emblemáticos de Georgia junto con sus secretos mejor guardados.",
+    "listingDescription": "Este itinerario cuidadosamente elaborado le invita a explorar los monumentos más emblemáticos de Georgia junto con sus secretos mejor guardados.",
+    "itinerary": [
+      {
+        "title": "Día 1: Llegada y tour por la ciudad de Tiflis",
+        "content": "<p>Comience su completa aventura georgiana con una cálida bienvenida y un tour por la ciudad de Tiflis. Explore la rica historia y cultura de la vibrante capital, incluyendo visitas a sitios icónicos como la Fortaleza de Narikala, los baños de azufre y la Plaza de la Libertad. Pasee por las encantadoras calles y familiarícese con la hospitalidad georgiana en este día introductorio que prepara el escenario para su viaje de 10 días por este cautivador país.</p><ul><li>Llegada a Tiflis y traslado desde el aeropuerto;</li><li>Tour completo por la ciudad capital;</li><li>Visita a la Fortaleza de Narikala y el casco antiguo;</li><li>Explorar la zona de los baños de azufre tradicionales;</li><li>Ver la Plaza de la Libertad y los monumentos centrales;</li><li>Introducción a la cultura e historia georgiana;</li><li>Registro y alojamiento en Tiflis.</li><li><strong>Duración del tour:</strong> 4-5 horas</li></ul>"
+      },
+      {
+        "title": "Día 2: Tiflis – Ananuri – Kazbegi",
+        "content": "<p>Viaje desde Tiflis a través de impresionantes paisajes montañosos para llegar a la espectacular región de Kazbegi. Deténgase en el magnífico complejo de la Fortaleza de Ananuri junto al río Aragvi, con su dramático telón de fondo montañoso. Continúe por el pintoresco paso de montaña de Gudauri, disfrutando de vistas panorámicas desde el Monumento a la Amistad de Gudauri antes de llegar a la ciudad montañosa de Kazbegi para disfrutar de espectaculares vistas del Cáucaso.</p><ul><li>Salida de Tiflis hacia las regiones montañosas;</li><li>Visita al impresionante complejo de la Fortaleza de Ananuri;</li><li>Trayecto panorámico por el valle del río Aragvi;</li><li>Parada en el Monumento a la Amistad de Gudauri;</li><li>Disfrutar de vistas panorámicas de las montañas;</li><li>Llegada a la espectacular Kazbegi;</li><li>Registro y alojamiento en Kazbegi.</li><li><strong>Duración del tour:</strong> 6-7 horas</li><li><strong>Duración del trayecto:</strong> 3 horas</li></ul>"
+      },
+      {
+        "title": "Día 3: Kazbegi",
+        "content": "<p>Sumérjase plenamente en el espectacular paisaje montañoso de Kazbegi. Visite la icónica Iglesia de la Trinidad de Gergeti, encaramada de forma espectacular a 2.170 metros con vistas inigualables del Monte Kazbek y los picos circundantes del Cáucaso. Explore las hermosas cascadas de Gveleti y descubra los dramáticos paisajes del Desfiladero de Dariali, experimentando la pura belleza natural de este paraíso montañoso.</p><ul><li>Día completo explorando la región de Kazbegi;</li><li>Visita a la icónica Iglesia de la Trinidad de Gergeti;</li><li>Experimentar las impresionantes vistas del Cáucaso;</li><li>Explorar las hermosas cascadas de Gveleti;</li><li>Descubrir el dramático Desfiladero de Dariali;</li><li>Oportunidades fotográficas en paisajes impresionantes;</li><li>Alojamiento en Kazbegi.</li><li><strong>Duración del tour:</strong> 8-9 horas</li></ul>"
+      },
+      {
+        "title": "Día 4: Kazbegi – Museo de Stalin en Gori – Uplistsikhe – Tiflis",
+        "content": "<p>Viaje desde las montañas para explorar la fascinante historia de Georgia. Visite Gori, conocida por el Museo de Stalin, y después explore la notable antigua ciudad rupestre de Uplistsikhe, uno de los sitios arqueológicos más importantes de Georgia. Este día combina historia reciente con patrimonio ancestral, mostrando las diversas capas culturales que hacen de Georgia un lugar tan cautivador, antes de regresar a Tiflis.</p><ul><li>Salida de la región montañosa de Kazbegi;</li><li>Visita al Museo de Stalin en Gori;</li><li>Explorar la notable ciudad cueva de Uplistsikhe;</li><li>Descubrir la antigua arquitectura rupestre;</li><li>Conocer su significado arqueológico;</li><li>Viaje de regreso a Tiflis;</li><li>Registro y alojamiento en Tiflis.</li><li><strong>Duración del tour:</strong> 8-9 horas</li><li><strong>Duración del trayecto:</strong> 4 horas en total</li></ul>"
+      },
+      {
+        "title": "Día 5: Tiflis – Gelati – Motsameta – Kutaisi",
+        "content": "<p>Viaje al oeste de Georgia para explorar una de las ciudades más antiguas del país, Kutaisi. Visite el magnífico Monasterio de Gelati, declarado Patrimonio de la Humanidad por la UNESCO, una obra maestra de la arquitectura medieval georgiana, y el sereno Monasterio de Motsameta. Estos históricos sitios religiosos muestran el rico patrimonio espiritual y los logros arquitectónicos de Georgia, representando siglos de tradición ortodoxa georgiana en hermosos entornos.</p><ul><li>Viaje a la histórica Kutaisi en el oeste de Georgia;</li><li>Visita al Monasterio de Gelati, Patrimonio de la UNESCO;</li><li>Explorar la magnífica arquitectura medieval;</li><li>Ver el sereno Monasterio de Motsameta;</li><li>Conocer el patrimonio ortodoxo georgiano;</li><li>Descubrir el significado espiritual y cultural;</li><li>Registro y alojamiento en Kutaisi.</li><li><strong>Duración del tour:</strong> 7-8 horas</li><li><strong>Duración del trayecto:</strong> 4,5 horas</li></ul>"
+      },
+      {
+        "title": "Día 6: Kutaisi – Gelati – Cueva de Prometeo – Cañón de Martvili – Kutaisi",
+        "content": "<p>Viva las maravillas naturales del oeste de Georgia con visitas a impresionantes atracciones subterráneas y en superficie. Explore la magnífica Cueva de Prometeo con sus espectaculares estalactitas y cámaras subterráneas. Después disfrute de la pintoresca belleza del Cañón de Martvili, donde puede realizar un paseo en barco por aguas turquesas rodeadas de dramáticas paredes de cañón, creando recuerdos inolvidables del esplendor natural de Georgia.</p><ul><li>Nueva visita al Monasterio de Gelati;</li><li>Explorar la magnífica Cueva de Prometeo;</li><li>Descubrir espectaculares cámaras subterráneas;</li><li>Experiencia de paseo en barco en el Cañón de Martvili;</li><li>Disfrutar de aguas turquesas y vistas del cañón;</li><li>Fotografía en impresionantes entornos naturales;</li><li>Regreso a Kutaisi para alojamiento.</li><li><strong>Duración del tour:</strong> 8-9 horas</li><li><strong>Duración del trayecto:</strong> 3 horas</li></ul>"
+      },
+      {
+        "title": "Día 7: Kutaisi – Jardín Botánico de Batumi – Bodega local – Batumi",
+        "content": "<p>Viaje a la impresionante costa del Mar Negro de Georgia y la vibrante ciudad de Batumi. Comience con una visita al mundialmente reconocido Jardín Botánico de Batumi, con diversas colecciones de plantas de todo el mundo en espectaculares entornos costeros. Disfrute de una visita a una bodega y cata de vinos en una bodega local, celebrando la famosa herencia vinícola de Georgia mientras disfruta de la refrescante brisa marina y la atmósfera costera.</p><ul><li>Viaje a la costa del Mar Negro y Batumi;</li><li>Visita al mundialmente reconocido Jardín Botánico de Batumi;</li><li>Explorar diversas colecciones internacionales de plantas;</li><li>Visita a bodega y cata de vinos en bodega local;</li><li>Celebrar la herencia vinícola georgiana;</li><li>Disfrutar de la atmósfera costera y las vistas al mar;</li><li>Registro y alojamiento en Batumi.</li><li><strong>Duración del tour:</strong> 7-8 horas</li><li><strong>Duración del trayecto:</strong> 2,5 horas</li></ul>"
+      },
+      {
+        "title": "Día 8: Tour por Batumi, tarde libre",
+        "content": "<p>Descubra el encanto y las atracciones de la costera Batumi con un completo tour por la ciudad. Visite la Plaza de Europa, vea la icónica Estatua de Ali y Nino, y explore la singular mezcla de arquitectura moderna y elementos tradicionales georgianos. Disfrute de una tarde libre para relajarse en la playa, pasear por el bulevar marítimo o vivir la vibrante vida nocturna y la escena gastronómica de Batumi a su propio ritmo.</p><ul><li>Tour completo por la ciudad de Batumi;</li><li>Visita a la elegante Plaza de Europa;</li><li>Ver la icónica estatua móvil de Ali y Nino;</li><li>Explorar la arquitectura moderna y tradicional;</li><li>Tarde libre para exploración personal;</li><li>Relajación opcional en la playa y paseos marítimos;</li><li>Alojamiento en Batumi.</li><li><strong>Duración del tour:</strong> 4-5 horas, luego tiempo libre</li></ul>"
+      },
+      {
+        "title": "Día 9: Batumi – Tiflis (tren)",
+        "content": "<p>Viva un pintoresco y cómodo viaje en tren desde la costa del Mar Negro de regreso a la capital de Georgia. El trayecto en tren ofrece hermosas vistas de los paisajes georgianos mientras viaja desde la región costera a través de un terreno diverso de regreso a Tiflis. Este relajante viaje proporciona tiempo para reflexionar sobre sus aventuras georgianas mientras disfruta del cambiante paisaje desde la comodidad del tren.</p><ul><li>Pintoresco viaje en tren de Batumi a Tiflis;</li><li>Cómoda experiencia de viaje en tren;</li><li>Hermosas vistas de los paisajes georgianos;</li><li>Relajante viaje a través de terreno diverso;</li><li>Tiempo para reflexionar sobre sus aventuras;</li><li>Llegada de vuelta a Tiflis;</li><li>Registro y último alojamiento en Tiflis.</li><li><strong>Duración:</strong> Viaje en tren de día completo</li></ul>"
+      },
+      {
+        "title": "Día 10: Salida desde Tiflis",
+        "content": "<p>Concluya su completo viaje de 10 días por Georgia con los últimos momentos en Tiflis. Disfrute de un desayuno tranquilo y tómese tiempo para compras o exploración de última hora. Traslado al Aeropuerto Internacional de Tiflis para su partida, llevándose consigo recuerdos inolvidables de los diversos paisajes, la rica cultura, el antiguo patrimonio, la deliciosa cocina y la calidez de la hospitalidad georgiana de esta completa exploración del país.</p><ul><li>Último desayuno tranquilo en Tiflis;</li><li>Compras o exploración de última hora;</li><li>Salida del hotel y traslado al aeropuerto;</li><li>Salida desde el Aeropuerto Internacional de Tiflis;</li><li>Fin de la completa aventura georgiana de 10 días;</li><li>Recuerdos de diversos paisajes y rica cultura.</li><li><strong>Duración:</strong> Según horario de vuelo</li></ul>"
+      }
+    ],
+    "included": [
+      "Alojamiento en habitaciones dobles o twin, con desayuno incluido;",
+      "Traslados según itinerario en vehículo cómodo y climatizado, con conductor-guía de habla inglesa;",
+      "Entradas según itinerario;",
+      "Agua mineral sin gas;",
+      "Visita a bodega y cata de vinos el día 7;",
+      "Billetes de tren Batumi-Tiflis."
+    ],
+    "notIncluded": [
+      "Pensión completa;",
+      "Gastos adicionales de hotel;",
+      "Seguro de viaje."
+    ]
+  },
+  "georgias-wonders-11-day-grand-tour-from-kutaisi-to-kazbegi-and-batumi": {
+    "title": "Maravillas de Georgia: Gran Tour de 11 Días desde Kutaisi a Kazbegi y Batumi",
+    "description": "Comience su aventura georgiana en la vibrante ciudad de Kutaisi, donde la historia y las maravillas naturales se encuentran.",
+    "listingDescription": "Comience su aventura georgiana en la vibrante ciudad de Kutaisi, donde la historia y las maravillas naturales se encuentran.",
+    "itinerary": [
+      {
+        "title": "Día 1: Llegada a Kutaisi",
+        "content": "<p>Comience su completo gran tour georgiano de 11 días en la histórica ciudad de Kutaisi, una de las ciudades más antiguas de Georgia con más de 3.000 años de rico patrimonio cultural. Llegada al Aeropuerto Internacional de Kutaisi y traslado a su alojamiento en esta encantadora antigua capital del oeste de Georgia. Instálese y disfrute de una cena de bienvenida con auténtica cocina georgiana, preparándose para su extensa exploración de los destinos más espectaculares del país.</p><ul><li>Llegada al Aeropuerto Internacional de Kutaisi;</li><li>Traslado al alojamiento en la histórica Kutaisi;</li><li>Introducción a los 3.000 años de patrimonio georgiano;</li><li>Descubrimiento de la antigua capital del oeste de Georgia;</li><li>Cena de bienvenida con cocina auténtica;</li><li>Preparación para la extensa exploración del país;</li><li>Registro y alojamiento en Kutaisi.</li><li><strong>Duración:</strong> Según horario de llegada</li></ul>"
+      },
+      {
+        "title": "Día 2: Tour por Kutaisi – Monasterio de Gelati – Monasterio de Motsameta",
+        "content": "<p>Explore el magnífico patrimonio espiritual de Kutaisi con un completo tour por la ciudad y visitas a monasterios. Descubra el Monasterio de Gelati, Patrimonio de la Humanidad de la UNESCO, una obra maestra de la arquitectura medieval georgiana que representa la edad de oro de la cultura y el aprendizaje georgianos. Continúe hasta el sereno Monasterio de Motsameta, situado de forma espectacular sobre el cañón del río Tskhaltsitela, ofreciendo tanto significado espiritual como impresionante belleza natural en un entorno apacible.</p><ul><li>Exploración completa de la ciudad de Kutaisi;</li><li>Monasterio de Gelati, Patrimonio de la Humanidad de la UNESCO;</li><li>Obra maestra de la arquitectura medieval georgiana;</li><li>Edad de oro de la cultura y el aprendizaje;</li><li>Visita al sereno Monasterio de Motsameta;</li><li>Espectacular ubicación sobre el cañón fluvial;</li><li>Alojamiento en Kutaisi.</li><li><strong>Duración del tour:</strong> 7-8 horas</li><li><strong>Duración del trayecto:</strong> 1,5 horas</li></ul>"
+      },
+      {
+        "title": "Día 3: Kutaisi – Cueva de Prometeo – Cañón de Martvili – Kutaisi",
+        "content": "<p>Viva hoy dos de las maravillas naturales más espectaculares de Georgia. Comience con la magnífica Cueva de Prometeo, con impresionantes estalactitas, estalagmitas y ríos subterráneos a lo largo de 11 kilómetros de cámaras accesibles. Continúe hasta el pintoresco Cañón de Martvili, donde disfrutará de serenos paseos en barco entre exuberante vegetación y dramáticas paredes de cañón de piedra caliza, experimentando la perfecta combinación de maravillas geológicas y belleza natural.</p><ul><li>Magnífica exploración de la Cueva de Prometeo;</li><li>Impresionantes estalactitas y estalagmitas;</li><li>Sistema de ríos subterráneos de 11 kilómetros;</li><li>Descubrimiento del pintoresco Cañón de Martvili;</li><li>Serenos paseos en barco entre exuberante vegetación;</li><li>Dramáticas paredes de cañón de piedra caliza;</li><li>Regreso a Kutaisi para alojamiento.</li><li><strong>Duración del tour:</strong> 8-9 horas</li><li><strong>Duración del trayecto:</strong> 3 horas</li></ul>"
+      },
+      {
+        "title": "Día 4: Kutaisi – Batumi",
+        "content": "<p>Viaje desde la histórica ciudad interior de Kutaisi hasta la impresionante costa del Mar Negro de Georgia y la vibrante ciudad de Batumi. Recorra los diversos paisajes georgianos, experimentando la notable variedad geográfica del país, desde ciudades antiguas hasta modernos centros turísticos costeros. Llegada a Batumi, la joya costera de Georgia que ofrece una perfecta combinación de naturaleza, cultura y encanto marinero con su singular fusión arquitectónica y animada atmósfera.</p><ul><li>Viaje desde la histórica Kutaisi a la costa;</li><li>Trayecto hasta la impresionante Batumi junto al Mar Negro;</li><li>Experiencia de los diversos paisajes georgianos;</li><li>Descubrimiento de una notable variedad geográfica;</li><li>Contraste entre ciudades antiguas y costa moderna;</li><li>Joya costera de Georgia con fusión natural;</li><li>Registro y alojamiento en Batumi.</li><li><strong>Duración del tour:</strong> 4-5 horas</li><li><strong>Duración del trayecto:</strong> 2,5 horas</li></ul>"
+      },
+      {
+        "title": "Día 5: Tour por Batumi y Jardín Botánico",
+        "content": "<p>Explore el cautivador encanto costero de Batumi con un completo tour por la ciudad y visita al jardín botánico. Descubra la Plaza Piazza con su arquitectura de inspiración italiana, pasee por el famoso Bulevar de Batumi junto al mar y contemple la conmovedora estatua de Ali y Nino que representa el amor eterno. Visite el mundialmente reconocido Jardín Botánico de Batumi con sus diversas colecciones de plantas de todo el mundo, situado en un espectacular entorno costero con vistas al Mar Negro.</p><ul><li>Exploración costera completa de Batumi;</li><li>Plaza Piazza con arquitectura de inspiración italiana;</li><li>Famoso Bulevar de Batumi junto al mar;</li><li>Conmovedora estatua de Ali y Nino del amor eterno;</li><li>Visita al mundialmente reconocido Jardín Botánico;</li><li>Diversas colecciones de plantas de todo el mundo;</li><li>Alojamiento en Batumi.</li><li><strong>Duración del tour:</strong> 6-7 horas</li><li><strong>Duración del trayecto:</strong> 1 hora</li></ul>"
+      },
+      {
+        "title": "Día 6: Batumi – Tiflis (tren)",
+        "content": "<p>Viva un pintoresco y cómodo viaje en tren desde la costa del Mar Negro hasta la vibrante capital de Georgia. El relajante viaje en tren ofrece hermosas vistas de los paisajes georgianos mientras recorre la región costera a través de un terreno diverso en dirección a Tiflis. Este cómodo trayecto le brinda tiempo para reflexionar sobre sus experiencias costeras mientras anticipa los tesoros históricos que le esperan en la capital.</p><ul><li>Pintoresco viaje en tren de la costa a la capital;</li><li>Cómoda experiencia de viaje en tren;</li><li>Hermosas vistas de los paisajes georgianos;</li><li>Transición de la costa a terreno diverso;</li><li>Tiempo para reflexionar sobre las experiencias costeras;</li><li>Anticipación de los tesoros históricos de la capital;</li><li>Llegada y alojamiento en Tiflis.</li><li><strong>Duración:</strong> Viaje en tren de día completo</li></ul>"
+      },
+      {
+        "title": "Día 7: Tour por la ciudad de Tiflis",
+        "content": "<p>Descubra la vibrante capital de Georgia con una completa exploración de los ricos monumentos históricos y las atracciones modernas de Tiflis. Explore el histórico casco antiguo con sus estrechas calles empedradas, visite la antigua Fortaleza de Narikala que domina la ciudad y descubra el famoso barrio de los baños de azufre. Pasee por la prestigiosa Avenida Rustaveli y viva la dinámica cultura que fusiona magistralmente la historia antigua con la vida georgiana contemporánea. Disfrute de una cena celebrando su descubrimiento de Tiflis.</p><ul><li>Exploración completa de la capital, Tiflis;</li><li>Calles empedradas del histórico casco antiguo;</li><li>Antigua Fortaleza de Narikala dominando la ciudad;</li><li>Descubrimiento del famoso barrio de los baños de azufre;</li><li>Paseo por la prestigiosa Avenida Rustaveli;</li><li>Dinámica fusión de lo antiguo y lo contemporáneo;</li><li>Cena celebrando el descubrimiento de Tiflis.</li><li><strong>Duración del tour:</strong> 7-8 horas</li><li><strong>Duración del trayecto:</strong> 1 hora</li></ul>"
+      },
+      {
+        "title": "Día 8: Tiflis – Mtskheta – Ananuri – Kazbegi",
+        "content": "<p>Viaje a través del corazón espiritual de Georgia y paisajes montañosos pintorescos hacia las dramáticas cumbres del Cáucaso. Visite Mtskheta, la antigua capital y Patrimonio de la Humanidad de la UNESCO, explorando el Monasterio de Jvari y la Catedral de Svetitskhoveli. Deténgase en la histórica Fortaleza de Ananuri con vistas al Embalse de Zhinvali, que ofrece una visión del pasado medieval de Georgia, antes de continuar por la pintoresca Carretera Militar Georgiana hasta Kazbegi con sus impresionantes vistas montañosas.</p><ul><li>Viaje a través del corazón espiritual de Mtskheta;</li><li>Antigua capital Patrimonio de la Humanidad de la UNESCO;</li><li>Monasterio de Jvari y Catedral de Svetitskhoveli;</li><li>Histórica Fortaleza de Ananuri junto al embalse;</li><li>Visión del pasado medieval de Georgia;</li><li>Pintoresca Carretera Militar Georgiana;</li><li>Registro y alojamiento en Kazbegi.</li><li><strong>Duración del tour:</strong> 8-9 horas</li><li><strong>Duración del trayecto:</strong> 4 horas</li></ul>"
+      },
+      {
+        "title": "Día 9: Kazbegi",
+        "content": "<p>Sumérjase en la espectacular belleza montañosa de Kazbegi con una exploración de día completo. Visite la icónica Iglesia de la Trinidad de Gergeti, encaramada de forma espectacular a 2.170 metros con impresionantes vistas panorámicas del Monte Kazbek y los picos circundantes del Cáucaso. Experimente la belleza natural pura de este santuario de alta montaña donde la espiritualidad ortodoxa georgiana se encuentra con el majestuoso poder de las montañas, creando una de las experiencias más inolvidables de Georgia.</p><ul><li>Exploración espectacular de Kazbegi de día completo;</li><li>Visita a la icónica Iglesia de la Trinidad de Gergeti;</li><li>Espectacular emplazamiento a 2.170 metros de altitud;</li><li>Impresionante panorama del Monte Kazbek;</li><li>Vistas de los picos circundantes del Cáucaso;</li><li>La espiritualidad ortodoxa se encuentra con la majestuosidad de la montaña;</li><li>Alojamiento en Kazbegi.</li><li><strong>Duración del tour:</strong> 8-9 horas</li></ul>"
+      },
+      {
+        "title": "Día 10: Kazbegi – Gori – Uplistsikhe – Kutaisi",
+        "content": "<p>Viaje desde las dramáticas montañas para explorar las fascinantes capas históricas y el patrimonio arqueológico de Georgia. Visite Gori y el Museo de Stalin, que ofrece una visión del complejo legado de esta controvertida figura histórica que nació aquí. Continúe hasta la antigua ciudad rupestre de Uplistsikhe, que muestra el notable patrimonio arqueológico de Georgia con fascinantes viviendas rupestres y estructuras históricas que representan las antiguas conexiones de Georgia con la Ruta de la Seda.</p><ul><li>Viaje de las dramáticas montañas a la historia;</li><li>Complejo legado del Museo de Stalin en Gori;</li><li>Visión de una controvertida figura histórica;</li><li>Antigua ciudad rupestre de Uplistsikhe;</li><li>Notable patrimonio arqueológico;</li><li>Fascinantes viviendas rupestres y estructuras;</li><li>Regreso a Kutaisi para la última noche.</li><li><strong>Duración del tour:</strong> 9-10 horas</li><li><strong>Duración del trayecto:</strong> 6 horas en total</li></ul>"
+      },
+      {
+        "title": "Día 11: Salida desde Kutaisi",
+        "content": "<p>Concluya su completo gran tour georgiano de 11 días con la salida desde el Aeropuerto Internacional de Kutaisi. Llévese consigo recuerdos inolvidables del espectro completo de maravillas de Georgia: desde monasterios Patrimonio de la Humanidad de la UNESCO y dramáticos paisajes montañosos hasta el encanto costero y antiguos sitios arqueológicos. Este extenso viaje le ha brindado la experiencia definitiva de la belleza natural, la rica historia y el patrimonio cultural de Georgia, representando lo mejor que este extraordinario país tiene que ofrecer.</p><ul><li>Salida final de la aventura del gran tour;</li><li>Traslado al Aeropuerto Internacional de Kutaisi;</li><li>Recuerdos del espectro completo de Georgia;</li><li>Desde sitios UNESCO hasta dramáticas montañas;</li><li>Encanto costero y maravillas arqueológicas;</li><li>Experiencia definitiva natural y cultural de Georgia;</li><li>Fin del extraordinario gran tour de 11 días.</li><li><strong>Duración:</strong> Según horario de vuelo</li></ul>"
+      }
+    ],
+    "included": [
+      "Alojamiento en habitaciones dobles o twin, con desayuno incluido;",
+      "Traslados según itinerario en vehículo cómodo y climatizado, con conductor-guía de habla inglesa;",
+      "Entradas según itinerario;",
+      "Agua mineral sin gas;",
+      "Cena en Kutaisi el día 1;",
+      "Cena en Tiflis el día 7."
+    ],
+    "notIncluded": [
+      "Pensión completa;",
+      "Gastos adicionales de hotel;",
+      "Seguro de viaje."
+    ]
+  },
+  "12-day-ultimate-georgia-adventure-tour-tbilisi-kazbegi-mestia-kutaisi-batumi": {
+    "title": "Tour Definitivo de Aventura por Georgia de 12 Días: Tiflis, Kazbegi, Mestia, Kutaisi, Batumi",
+    "description": "Embárquese en la aventura georgiana definitiva con este completo viaje de 12 días a través de monumentos históricos, paisajes impresionantes y vibrantes ciudades.",
+    "listingDescription": "Embárquese en la aventura georgiana definitiva con este completo viaje de 12 días a través de monumentos históricos, paisajes impresionantes y vibrantes ciudades.",
+    "itinerary": [
+      {
+        "title": "Día 1: Llegada y tour por la ciudad de Tiflis",
+        "content": "<p>Comience su aventura georgiana definitiva de 12 días con una cálida bienvenida y un completo tour por la ciudad de Tiflis. Explore el histórico casco antiguo de la vibrante capital, visite la icónica Fortaleza de Narikala y pasee por encantadoras calles cargadas de historia. Este día introductorio prepara el escenario perfecto para su extenso viaje a través de las regiones más cautivadoras de Georgia, desde cumbres montañosas hasta la belleza costera.</p><ul><li>Llegada a Tiflis y traslado desde el aeropuerto;</li><li>Tour completo por el histórico casco antiguo;</li><li>Visita a la icónica Fortaleza de Narikala;</li><li>Explorar encantadoras calles históricas;</li><li>Introducción a la cultura y el patrimonio georgianos;</li><li>Primer contacto con la hospitalidad georgiana;</li><li>Registro y alojamiento en Tiflis.</li><li><strong>Duración del tour:</strong> 4-5 horas</li></ul>"
+      },
+      {
+        "title": "Día 2: Tiflis – Ananuri – Kazbegi",
+        "content": "<p>Viaje desde Tiflis a través de impresionantes paisajes montañosos para llegar a la espectacular región de Kazbegi. Visite el magnífico Complejo de Ananuri, una obra maestra de la arquitectura medieval junto al río Aragvi. Este pintoresco recorrido por las montañas del Cáucaso ofrece vistas espectaculares y le introduce en la dramática belleza de las tierras altas de Georgia.</p><ul><li>Salida de Tiflis hacia las regiones montañosas;</li><li>Visita al magnífico Complejo de Ananuri;</li><li>Experiencia de una obra maestra de la arquitectura medieval;</li><li>Pintoresco recorrido por las montañas del Cáucaso;</li><li>Espectaculares vistas y paisajes montañosos;</li><li>Llegada a la impresionante región de Kazbegi;</li><li>Registro y alojamiento en Kazbegi.</li><li><strong>Duración del tour:</strong> 6-7 horas</li><li><strong>Duración del trayecto:</strong> 3 horas</li></ul>"
+      },
+      {
+        "title": "Día 3: Kazbegi",
+        "content": "<p>Sumérjase plenamente en las impresionantes vistas de las montañas del Cáucaso en Kazbegi. Visite la famosa Iglesia de la Trinidad de Gergeti y experimente los espectaculares paisajes de las tierras altas que hacen de esta región uno de los destinos más impresionantes de Georgia. Este día ofrece vistas montañosas inigualables y experiencias espirituales en uno de los entornos más dramáticos del país.</p><ul><li>Día completo explorando la magnífica región de Kazbegi;</li><li>Visita a la famosa Iglesia de la Trinidad de Gergeti;</li><li>Experiencia de las impresionantes vistas del Cáucaso;</li><li>Exploración de espectaculares paisajes de las tierras altas;</li><li>Oportunidades fotográficas en dramáticos paisajes;</li><li>Experiencias espirituales en entornos de montaña;</li><li>Alojamiento en Kazbegi.</li><li><strong>Duración del tour:</strong> 8-9 horas</li></ul>"
+      },
+      {
+        "title": "Día 4: Kazbegi – Museo de Stalin en Gori – Uplistsikhe – Tiflis",
+        "content": "<p>Viaje desde las montañas para explorar las fascinantes capas históricas de Georgia. Visite el Museo de Stalin en Gori para conocer a esta importante figura de la historia mundial, y después explore la notable antigua ciudad rupestre de Uplistsikhe, uno de los sitios arqueológicos más importantes de Georgia. Este día muestra el diverso patrimonio cultural que define la historia georgiana.</p><ul><li>Salida de la región montañosa de Kazbegi;</li><li>Visita al Museo de Stalin en la histórica Gori;</li><li>Conocer una importante historia mundial;</li><li>Explorar la notable ciudad cueva de Uplistsikhe;</li><li>Descubrir un importante patrimonio arqueológico;</li><li>Experimentar las diversas capas culturales georgianas;</li><li>Regreso a Tiflis y alojamiento.</li><li><strong>Duración del tour:</strong> 8-9 horas</li><li><strong>Duración del trayecto:</strong> 4 horas en total</li></ul>"
+      },
+      {
+        "title": "Día 5: Tiflis – Gelati – Motsameta – Kutaisi",
+        "content": "<p>Viaje al oeste de Georgia para explorar una de las regiones más históricas del país. Visite el Monasterio de Gelati, declarado Patrimonio de la Humanidad por la UNESCO, que muestra la belleza de la arquitectura medieval georgiana, y el sereno Monasterio de Motsameta. Estos magníficos sitios religiosos representan siglos de patrimonio espiritual y logros arquitectónicos georgianos en impresionantes entornos naturales.</p><ul><li>Viaje al oeste de Georgia y la histórica Kutaisi;</li><li>Visita al Monasterio de Gelati, Patrimonio de la UNESCO;</li><li>Experiencia de la belleza de la arquitectura medieval;</li><li>Explorar el sereno Monasterio de Motsameta;</li><li>Descubrir el patrimonio espiritual georgiano;</li><li>Conocer los logros arquitectónicos;</li><li>Registro y alojamiento en Kutaisi.</li><li><strong>Duración del tour:</strong> 7-8 horas</li><li><strong>Duración del trayecto:</strong> 4,5 horas</li></ul>"
+      },
+      {
+        "title": "Día 6: Kutaisi – Cueva de Prometeo – Cañón de Martvili – Kutaisi",
+        "content": "<p>Descubra las mágicas maravillas naturales del oeste de Georgia con visitas a impresionantes atracciones subterráneas y en superficie. Explore la magnífica Cueva de Prometeo con sus espectaculares formaciones, y después experimente la belleza del Cañón de Martvili con sus aguas turquesas y dramáticos paisajes. Estas maravillas naturales muestran los diversos tesoros geológicos de Georgia.</p><ul><li>Explorar la magnífica Cueva de Prometeo;</li><li>Descubrir espectaculares formaciones subterráneas;</li><li>Experimentar mágicas cámaras subterráneas;</li><li>Visitar el hermoso Cañón de Martvili;</li><li>Disfrutar de aguas turquesas y vistas del cañón;</li><li>Descubrir diversos tesoros geológicos;</li><li>Regreso a Kutaisi para alojamiento.</li><li><strong>Duración del tour:</strong> 8-9 horas</li><li><strong>Duración del trayecto:</strong> 3 horas</li></ul>"
+      },
+      {
+        "title": "Día 7: Kutaisi – Mestia",
+        "content": "<p>Viaje a Svaneti, una tierra de torres ancestrales e impresionantes cumbres, donde le espera una singular cultura de las tierras altas. Viaje a Mestia, una localidad de montaña famosa por sus distintivas torres svanas y sus paisajes montañosos. Este pintoresco recorrido le lleva a una de las regiones más remotas y culturalmente singulares de Georgia, donde las tradiciones ancestrales se conservan a la perfección.</p><ul><li>Viaje a la región montañosa de Svaneti;</li><li>Trayecto a la histórica localidad de Mestia;</li><li>Experiencia de una tierra de torres ancestrales;</li><li>Descubrir impresionantes cumbres montañosas;</li><li>Entrada en una singular región cultural de las tierras altas;</li><li>Ver las distintivas torres svanas;</li><li>Registro y alojamiento en Mestia.</li><li><strong>Duración del tour:</strong> 6-7 horas</li><li><strong>Duración del trayecto:</strong> 5 horas</li></ul>"
+      },
+      {
+        "title": "Día 8: Mestia – Ushguli – Mestia",
+        "content": "<p>Explore los singulares pueblos de Mestia y el sitio Patrimonio de la Humanidad de la UNESCO de Ushguli, uno de los asentamientos permanentemente habitados más altos de Europa. Viva la distintiva cultura svana, visite el Museo de Svaneti y maravíllese con las antiguas torres defensivas que salpican este extraordinario paisaje de las tierras altas. Este día ofrece una inmersión profunda en la cultura montañesa más preservada de Georgia.</p><ul><li>Visita a Ushguli, Patrimonio de la Humanidad de la UNESCO;</li><li>Explorar el asentamiento habitado más alto de Europa;</li><li>Experiencia de la distintiva cultura svana;</li><li>Visita al informativo Museo de Svaneti;</li><li>Maravillarse con las antiguas torres defensivas;</li><li>Profunda experiencia de inmersión cultural;</li><li>Regreso a Mestia para alojamiento.</li><li><strong>Duración del tour:</strong> 8-9 horas</li><li><strong>Duración del trayecto:</strong> 3 horas ida y vuelta</li></ul>"
+      },
+      {
+        "title": "Día 9: Mestia – Jardín Botánico de Batumi – Batumi",
+        "content": "<p>Viaje desde las tierras altas hasta la impresionante costa del Mar Negro de Georgia y la vibrante ciudad costera de Batumi. Visite el mundialmente reconocido Jardín Botánico de Batumi con sus diversas colecciones de plantas en espectaculares entornos costeros. Este viaje de las montañas al mar muestra la increíble diversidad geográfica y climática de Georgia.</p><ul><li>Viaje desde las tierras altas a la costa del Mar Negro;</li><li>Trayecto a la vibrante ciudad costera de Batumi;</li><li>Visita al mundialmente reconocido Jardín Botánico de Batumi;</li><li>Explorar diversas colecciones de plantas;</li><li>Experimentar espectaculares entornos costeros;</li><li>Descubrir la diversidad geográfica y climática;</li><li>Registro y alojamiento en Batumi.</li><li><strong>Duración del tour:</strong> 7-8 horas</li><li><strong>Duración del trayecto:</strong> 5 horas</li></ul>"
+      },
+      {
+        "title": "Día 10: Tour por Batumi, tarde libre",
+        "content": "<p>Descubra el encanto y las atracciones de la costera Batumi con un completo tour por la ciudad. Explore las vibrantes plazas de la ciudad, viva la singular mezcla de arquitectura moderna y tradicional, y disfrute de la tranquila atmósfera de la costa del Mar Negro. Una tarde libre le permite relajarse y explorar a su propio ritmo, ya sea paseando por el paseo marítimo o disfrutando de la vida nocturna local.</p><ul><li>Tour completo por la ciudad de Batumi;</li><li>Explorar vibrantes plazas de la ciudad;</li><li>Experiencia de una singular mezcla arquitectónica;</li><li>Descubrir elementos modernos y tradicionales;</li><li>Disfrutar de la tranquila costa del Mar Negro;</li><li>Tarde libre para exploración personal;</li><li>Alojamiento en Batumi.</li><li><strong>Duración del tour:</strong> 4-5 horas, luego tiempo libre</li></ul>"
+      },
+      {
+        "title": "Día 11: Batumi – Tiflis (tren)",
+        "content": "<p>Viva un pintoresco y cómodo viaje en tren desde la costa del Mar Negro de regreso a la capital de Georgia. El relajante trayecto en tren ofrece hermosas vistas de los paisajes georgianos mientras viaja a través de un terreno diverso. Este cómodo viaje le brinda tiempo para reflexionar sobre su completa aventura georgiana mientras disfruta del cambiante paisaje.</p><ul><li>Pintoresco viaje en tren de la costa a la capital;</li><li>Cómodo y relajante viaje en tren;</li><li>Hermosas vistas de los paisajes georgianos;</li><li>Trayecto a través de terreno diverso;</li><li>Tiempo para reflexionar sobre las aventuras;</li><li>Llegada de vuelta a Tiflis;</li><li>Último alojamiento en Tiflis.</li><li><strong>Duración:</strong> Viaje en tren de día completo</li></ul>"
+      },
+      {
+        "title": "Día 12: Salida desde Tiflis",
+        "content": "<p>Concluya su aventura georgiana definitiva de 12 días con los últimos momentos en Tiflis. Disfrute de un desayuno tranquilo y tómese tiempo para compras o exploración de última hora. Traslado al Aeropuerto Internacional de Tiflis para su partida, llevándose consigo recuerdos inolvidables de los monumentos históricos de Georgia, sus impresionantes paisajes, sus vibrantes ciudades, su antigua cultura y el perfecto final de su completo viaje por el corazón del Cáucaso.</p><ul><li>Último desayuno tranquilo en Tiflis;</li><li>Compras o exploración de última hora;</li><li>Salida del hotel y traslado al aeropuerto;</li><li>Salida desde el Aeropuerto Internacional de Tiflis;</li><li>Fin de la aventura georgiana definitiva de 12 días;</li><li>Recuerdos de un completo viaje por el Cáucaso.</li><li><strong>Duración:</strong> Según horario de vuelo</li></ul>"
+      }
+    ],
+    "included": [
+      "Alojamiento en habitaciones dobles o twin, con desayuno incluido;",
+      "Traslados según itinerario en vehículo cómodo y climatizado, con conductor-guía de habla inglesa;",
+      "Entradas según itinerario;",
+      "Agua mineral sin gas;",
+      "Visita a bodega y cata de vinos el día 7;",
+      "Billetes de tren Batumi-Tiflis."
+    ],
+    "notIncluded": [
+      "Pensión completa;",
+      "Gastos adicionales de hotel;",
+      "Seguro de viaje."
+    ]
+  },
+  "grand-georgia-adventure-13-day-cultural-and-scenic-journey": {
+    "title": "Gran Aventura por Georgia: Viaje Cultural y Paisajístico de 13 Días",
+    "description": "Recorra los senderos de la rica historia y los impresionantes paisajes de Georgia, comenzando desde la histórica ciudad de Kutaisi.",
+    "listingDescription": "Recorra los senderos de la rica historia y los impresionantes paisajes de Georgia, comenzando desde la histórica ciudad de Kutaisi.",
+    "itinerary": [
+      {
+        "title": "Día 1: Llegada a Kutaisi",
+        "content": "<p>Comience su gran aventura cultural y paisajística de 13 días por Georgia en la histórica ciudad de Kutaisi, una de las ciudades más antiguas de Georgia con más de 3.000 años de rico patrimonio. Llegada al Aeropuerto Internacional de Kutaisi y traslado a su alojamiento en esta encantadora antigua capital del oeste de Georgia. Instálese y prepárese para una extensa exploración que le llevará a través de los destinos más espectaculares de Georgia, desde monasterios ancestrales hasta pueblos de alta montaña.</p><ul><li>Llegada al Aeropuerto Internacional de Kutaisi;</li><li>Traslado al alojamiento en la histórica Kutaisi;</li><li>Introducción a los 3.000 años de patrimonio georgiano;</li><li>Descubrimiento de la antigua capital del oeste de Georgia;</li><li>Preparación para la extensa exploración;</li><li>Anticipación de los espectaculares destinos por delante;</li><li>Registro y alojamiento en Kutaisi.</li><li><strong>Duración:</strong> Según horario de llegada</li></ul>"
+      },
+      {
+        "title": "Día 2: Tour por Kutaisi – Monasterio de Gelati – Monasterio de Motsameta",
+        "content": "<p>Explore el magnífico patrimonio espiritual y cultural de Kutaisi con un completo tour por la ciudad y visitas a dos de los monasterios más importantes de Georgia. Descubra el Monasterio de Gelati, Patrimonio de la Humanidad de la UNESCO, una obra maestra de la arquitectura medieval georgiana que representa la edad de oro de la cultura y el aprendizaje georgianos. Continúe hasta el sereno Monasterio de Motsameta, situado de forma espectacular sobre el río Tskhaltsitela, ofreciendo tanto significado espiritual como impresionante belleza natural en un entorno apacible.</p><ul><li>Exploración completa de la ciudad de Kutaisi;</li><li>Monasterio de Gelati, Patrimonio de la Humanidad de la UNESCO;</li><li>Obra maestra de la arquitectura medieval georgiana;</li><li>Edad de oro de la cultura y el aprendizaje;</li><li>Visita al sereno Monasterio de Motsameta;</li><li>Espectacular ubicación sobre el cañón fluvial;</li><li>Alojamiento en Kutaisi.</li><li><strong>Duración del tour:</strong> 7-8 horas</li><li><strong>Duración del trayecto:</strong> 1,5 horas</li></ul>"
+      },
+      {
+        "title": "Día 3: Kutaisi – Cueva de Prometeo – Mestia",
+        "content": "<p>Viva las espectaculares maravillas naturales de Georgia antes de viajar a las remotas tierras altas de Svaneti. Explore la magnífica Cueva de Prometeo con sus impresionantes estalactitas, estalagmitas y ríos subterráneos a lo largo de 11 kilómetros de cámaras accesibles. Continúe su viaje a Mestia, el corazón de la región de Svaneti, rodeada de impresionantes vistas montañosas y conocida por sus torres svanas medievales. Adéntrese en un mundo intacto por el tiempo donde florecen singulares tradiciones alpinas.</p><ul><li>Magnífica exploración de la Cueva de Prometeo;</li><li>Impresionantes estalactitas y ríos subterráneos;</li><li>Maravilla natural de 11 kilómetros;</li><li>Viaje a las remotas tierras altas de Svaneti;</li><li>Descubrimiento de Mestia, corazón de Svaneti;</li><li>Introducción a las torres svanas medievales;</li><li>Registro y alojamiento en Mestia.</li><li><strong>Duración del tour:</strong> 8-9 horas</li><li><strong>Duración del trayecto:</strong> 6 horas</li></ul>"
+      },
+      {
+        "title": "Día 4: Mestia – Ushguli – Mestia",
+        "content": "<p>Descubra uno de los asentamientos más notables de Europa con una excursión de un día a Ushguli, uno de los pueblos habitados más altos de Europa y Patrimonio de la Humanidad de la UNESCO. Este antiguo pueblo ofrece una ventana a la prístina cultura y tradiciones montañesas de Georgia, con torres svanas medievales e impresionantes paisajes alpinos. Viva el encanto atemporal de esta remota comunidad de las tierras altas donde las antiguas costumbres svanas se conservan a la perfección entre impresionantes vistas montañosas.</p><ul><li>Excursión al notable pueblo de Ushguli;</li><li>Asentamiento habitado más alto de Europa;</li><li>Exploración del Patrimonio de la Humanidad de la UNESCO;</li><li>Prístina cultura montañesa georgiana;</li><li>Torres svanas medievales y paisajes;</li><li>Antiguas costumbres perfectamente conservadas;</li><li>Regreso a Mestia para alojamiento.</li><li><strong>Duración del tour:</strong> 8-9 horas</li><li><strong>Duración del trayecto:</strong> 3 horas ida y vuelta</li></ul>"
+      },
+      {
+        "title": "Día 5: Mestia – Cañón de Martvili – Batumi",
+        "content": "<p>Viaje desde las altas montañas de Svaneti hasta la impresionante costa del Mar Negro, deteniéndose para experimentar una de las maravillas naturales más hermosas del oeste de Georgia. Visite el pintoresco Cañón de Martvili, con serenos paseos en barco entre exuberante vegetación y dramáticas paredes de cañón de piedra caliza. Experimente la notable diversidad geográfica al viajar desde picos alpinos hasta llanuras costeras, llegando a Batumi, la vibrante joya costera de Georgia con su singular mezcla de naturaleza y cultura.</p><ul><li>Viaje de las montañas de Svaneti a la costa;</li><li>Visita al pintoresco Cañón de Martvili;</li><li>Serenos paseos en barco entre exuberante vegetación;</li><li>Dramáticas paredes de cañón de piedra caliza;</li><li>Notable experiencia de diversidad geográfica;</li><li>Llegada a la vibrante Batumi costera;</li><li>Registro y alojamiento en Batumi.</li><li><strong>Duración del tour:</strong> 8-9 horas</li><li><strong>Duración del trayecto:</strong> 6 horas</li></ul>"
+      },
+      {
+        "title": "Día 6: Tour por Batumi y Jardín Botánico",
+        "content": "<p>Explore el cautivador encanto costero y las atracciones modernas de Batumi con un completo tour por la ciudad y visita al jardín botánico. Descubra la elegante Plaza Piazza con su arquitectura de inspiración italiana, pasee por el famoso Bulevar de Batumi junto al mar y contemple la conmovedora estatua de Ali y Nino que representa el amor eterno. Visite el mundialmente reconocido Jardín Botánico de Batumi con sus diversas colecciones de plantas de todo el mundo, situado en un espectacular entorno costero con vistas al Mar Negro.</p><ul><li>Exploración costera completa de Batumi;</li><li>Elegante Plaza Piazza con arquitectura italiana;</li><li>Famoso Bulevar de Batumi junto al mar;</li><li>Conmovedora estatua de Ali y Nino del amor eterno;</li><li>Mundialmente reconocido Jardín Botánico;</li><li>Diversas colecciones de plantas de todo el mundo;</li><li>Alojamiento en Batumi.</li><li><strong>Duración del tour:</strong> 6-7 horas</li><li><strong>Duración del trayecto:</strong> 1 hora</li></ul>"
+      },
+      {
+        "title": "Día 7: Batumi – Tiflis (tren)",
+        "content": "<p>Viva un pintoresco y cómodo viaje en tren desde la costa del Mar Negro hasta la vibrante capital de Georgia. El relajante viaje en tren ofrece hermosas vistas de los paisajes georgianos mientras recorre la región costera a través de un terreno diverso en dirección a Tiflis. Este cómodo trayecto le brinda tiempo para reflexionar sobre sus experiencias montañosas y costeras mientras anticipa los tesoros históricos y culturales que le esperan en la dinámica capital de Georgia.</p><ul><li>Pintoresco viaje en tren de la costa a la capital;</li><li>Cómoda experiencia de viaje en tren;</li><li>Hermosas vistas de los paisajes georgianos;</li><li>Transición de la costa a terreno diverso;</li><li>Reflexión sobre experiencias montañosas y costeras;</li><li>Anticipación de los tesoros de la capital;</li><li>Llegada y alojamiento en Tiflis.</li><li><strong>Duración:</strong> Viaje en tren de día completo</li></ul>"
+      },
+      {
+        "title": "Día 8: Tour por la ciudad de Tiflis",
+        "content": "<p>Descubra la vibrante capital de Georgia con una completa exploración de los ricos monumentos históricos y las atracciones modernas de Tiflis. Explore el histórico casco antiguo con sus estrechas calles empedradas, visite la antigua Fortaleza de Narikala que domina la ciudad y descubra el famoso barrio de los baños de azufre. Pasee por la prestigiosa Avenida Rustaveli y cruce el moderno Puente de la Paz, viviendo la dinámica cultura que fusiona magistralmente un patrimonio centenario con la vida georgiana contemporánea.</p><ul><li>Exploración completa de la capital, Tiflis;</li><li>Calles empedradas del histórico casco antiguo;</li><li>Vista desde la antigua Fortaleza de Narikala;</li><li>Descubrimiento del famoso barrio de los baños de azufre;</li><li>Prestigiosa Avenida Rustaveli y Puente de la Paz;</li><li>Fusión de patrimonio y vida contemporánea;</li><li>Alojamiento en Tiflis.</li><li><strong>Duración del tour:</strong> 7-8 horas</li><li><strong>Duración del trayecto:</strong> 1 hora</li></ul>"
+      },
+      {
+        "title": "Día 9: Día libre en Tiflis",
+        "content": "<p>Disfrute de un relajado día libre para explorar Tiflis a su propio ritmo y descubrir las joyas ocultas de la ciudad. Vuelva a visitar sus lugares favoritos del tour de ayer, explore mercados y barrios locales, relájese en los famosos baños de azufre, visite museos o galerías adicionales, o simplemente descanse en cafés y restaurantes locales. Este día flexible le permite vivir Tiflis como un local y disfrutar de la vibrante atmósfera de la ciudad a su propio ritmo.</p><ul><li>Día libre relajado para exploración personal;</li><li>Descubrir las joyas ocultas de la ciudad;</li><li>Revisitar lugares favoritos o explorar nuevas zonas;</li><li>Exploración de mercados y barrios locales;</li><li>Baños de azufre o museos opcionales;</li><li>Vivir Tiflis como un local;</li><li>Alojamiento en Tiflis.</li><li><strong>Duración:</strong> Día libre para actividades personales</li></ul>"
+      },
+      {
+        "title": "Día 10: Tiflis – Mtskheta – Ananuri – Kazbegi",
+        "content": "<p>Viaje a través del corazón espiritual de Georgia y paisajes montañosos pintorescos hacia las dramáticas cumbres del Cáucaso. Visite Mtskheta, una de las ciudades más antiguas de Georgia y Patrimonio de la Humanidad de la UNESCO, explorando el sagrado Monasterio de Jvari y la Catedral de Svetitskhoveli. Deténgase en la histórica Fortaleza de Ananuri con vistas al Embalse de Zhinvali, que muestra la arquitectura medieval a lo largo de la pintoresca Carretera Militar Georgiana, antes de llegar a Kazbegi con sus impresionantes vistas montañosas.</p><ul><li>Viaje a través del corazón espiritual de Mtskheta;</li><li>Ciudad más antigua, Patrimonio de la Humanidad de la UNESCO;</li><li>Sagrado Monasterio de Jvari y Catedral;</li><li>Histórica Fortaleza de Ananuri junto al embalse;</li><li>Arquitectura medieval en la Carretera Militar;</li><li>Llegada a la impresionante Kazbegi;</li><li>Registro y alojamiento en Kazbegi.</li><li><strong>Duración del tour:</strong> 8-9 horas</li><li><strong>Duración del trayecto:</strong> 4 horas</li></ul>"
+      },
+      {
+        "title": "Día 11: Kazbegi",
+        "content": "<p>Sumérjase en la espectacular belleza montañosa de Kazbegi con una exploración de día completo de sus dramáticos paisajes e icónicos monumentos. Visite la renombrada Iglesia de la Trinidad de Gergeti, encaramada de forma espectacular a 2.170 metros con impresionantes vistas panorámicas del Monte Kazbek y los picos circundantes del Cáucaso. Explore atracciones adicionales como las Cascadas de Gveleti y el Desfiladero de Dariali, experimentando la fuerza natural pura y el significado espiritual de este santuario de alta montaña.</p><ul><li>Exploración espectacular de Kazbegi de día completo;</li><li>Visita a la renombrada Iglesia de la Trinidad de Gergeti;</li><li>Espectacular emplazamiento a 2.170 metros de altitud;</li><li>Panorama del Monte Kazbek y el Cáucaso;</li><li>Cascadas de Gveleti y Desfiladero de Dariali;</li><li>Fuerza natural pura y significado espiritual;</li><li>Alojamiento en Kazbegi.</li><li><strong>Duración del tour:</strong> 8-9 horas</li></ul>"
+      },
+      {
+        "title": "Día 12: Kazbegi – Gori – Uplistsikhe – Kutaisi",
+        "content": "<p>Viaje desde las dramáticas montañas para explorar las fascinantes capas históricas y el patrimonio arqueológico de Georgia. Visite Gori y el Museo de Stalin, que ofrece una visión del complejo legado de esta controvertida figura histórica que nació aquí. Continúe hasta la antigua ciudad rupestre de Uplistsikhe, que muestra el notable patrimonio arqueológico de Georgia con fascinantes viviendas rupestres y estructuras históricas que reflejan las antiguas conexiones de Georgia con las rutas comerciales de la Ruta de la Seda.</p><ul><li>Viaje de las dramáticas montañas a la historia;</li><li>Complejo legado del Museo de Stalin en Gori;</li><li>Visión de una controvertida figura histórica;</li><li>Antigua ciudad rupestre de Uplistsikhe;</li><li>Notable patrimonio arqueológico;</li><li>Antiguas conexiones con la Ruta de la Seda;</li><li>Regreso a Kutaisi para la última noche.</li><li><strong>Duración del tour:</strong> 9-10 horas</li><li><strong>Duración del trayecto:</strong> 6 horas en total</li></ul>"
+      },
+      {
+        "title": "Día 13: Salida desde Kutaisi",
+        "content": "<p>Concluya su extraordinaria Gran Aventura por Georgia de 13 días con la salida desde el Aeropuerto Internacional de Kutaisi. Llévese consigo recuerdos inolvidables del completo espectro cultural y paisajístico de Georgia: desde los monasterios Patrimonio de la Humanidad de la UNESCO y las remotas tierras altas de Svaneti hasta el encanto costero y los dramáticos paisajes montañosos. Este completo viaje ha mostrado la esencia de Georgia con experiencias únicas en cada recodo, desde las torres svanas medievales hasta las antiguas ciudades rupestres, representando la aventura cultural y paisajística definitiva por Georgia.</p><ul><li>Salida final de la extraordinaria aventura;</li><li>Traslado al Aeropuerto Internacional de Kutaisi;</li><li>Recuerdos del completo espectro cultural;</li><li>Desde sitios UNESCO hasta remotas tierras altas;</li><li>Del encanto costero a las dramáticas montañas;</li><li>Aventura cultural definitiva por Georgia;</li><li>Fin del excepcional viaje de 13 días.</li><li><strong>Duración:</strong> Según horario de vuelo</li></ul>"
+      }
+    ],
+    "included": [
+      "Alojamiento en habitaciones dobles o twin, con desayuno incluido;",
+      "Traslados según itinerario en vehículo cómodo y climatizado, con conductor-guía de habla inglesa;",
+      "Entradas según itinerario;",
+      "Agua mineral sin gas;",
+      "1 almuerzo y 2 cenas."
+    ],
+    "notIncluded": [
+      "Pensión completa;",
+      "Gastos adicionales de hotel;",
+      "Seguro de viaje."
+    ]
+  },
+  "ultimate-15-day-georgia-tour-from-tbilisi-to-svaneti--wine-culture-and-natural-beauty": {
+    "title": "Tour Definitivo de 15 Días por Georgia: De Tiflis a Svaneti – Vinos, Cultura y Belleza Natural",
+    "description": "Embárquese en una aventura de 15 días por Georgia, una tierra donde la historia antigua, los impresionantes paisajes y las ricas tradiciones se unen.",
+    "listingDescription": "Embárquese en una aventura de 15 días por Georgia, una tierra donde la historia antigua, los impresionantes paisajes y las ricas tradiciones se unen.",
+    "itinerary": [
+      {
+        "title": "Día 1: Llegada y tour por la ciudad de Tiflis",
+        "content": "<p>Comience su aventura georgiana definitiva de 15 días con la llegada y un completo tour por la ciudad de Tiflis. Explore el histórico casco antiguo, visite la icónica Fortaleza de Narikala, descubra los baños de azufre y vea monumentos modernos como la Avenida Rustaveli y el Puente de la Paz. Esta extensa introducción sienta las bases perfectas para su viaje a través de la historia antigua, los impresionantes paisajes y las ricas tradiciones de Georgia.</p><ul><li>Llegada a Tiflis y traslado desde el aeropuerto;</li><li>Exploración completa del histórico casco antiguo;</li><li>Visita a la icónica Fortaleza de Narikala;</li><li>Descubrimiento de los tradicionales baños de azufre;</li><li>Ver monumentos modernos y el Puente de la Paz;</li><li>Introducción a la historia y cultura georgianas;</li><li>Registro y alojamiento en Tiflis.</li><li><strong>Duración del tour:</strong> 4-5 horas</li></ul>"
+      },
+      {
+        "title": "Día 2: Tiflis – Bodbe – Sighnaghi – Bodega Khareba – Telavi",
+        "content": "<p>Viaje a la encantadora \"Ciudad del Amor\", Sighnaghi, con sus calles empedradas con vistas al Valle de Alazani. Visite el Monasterio de Bodbe y viva la reconocida Bodega Khareba para una excepcional cata de vinos. Continúe hasta Telavi, el corazón de la región vinícola de Kakheti, comenzando su inmersión en la cultura y tradiciones vinícolas de clase mundial de Georgia.</p><ul><li>Viaje a la región vinícola de Kakheti;</li><li>Visita al histórico Monasterio de Bodbe;</li><li>Explorar la encantadora Sighnaghi, \"Ciudad del Amor\";</li><li>Experiencia en la reconocida Bodega Khareba;</li><li>Excepcional sesión de cata de vinos;</li><li>Continuar hasta Telavi, capital del vino;</li><li>Registro y alojamiento en Telavi.</li><li><strong>Duración del tour:</strong> 8-9 horas</li><li><strong>Duración del trayecto:</strong> 3 horas</li></ul>"
+      },
+      {
+        "title": "Día 3: Telavi – Tsinandali – Bodega local – Vardisubani – Telavi",
+        "content": "<p>Explore la famosa Finca Tsinandali y participe en una excursión tradicional de elaboración de vino en Qvevri. Visite bodegas locales y descubra el histórico complejo del castillo de Batonistsikhe. Viva la cultura vinícola de Vardisubani y profundice en su comprensión de las tradiciones vinícolas de Georgia, con 8.000 años de antigüedad, en el corazón de la región de Kakheti.</p><ul><li>Visita a la famosa Finca Tsinandali;</li><li>Participación en la elaboración tradicional de vino en Qvevri;</li><li>Experiencia con técnicas ancestrales de vinificación;</li><li>Visita a bodegas locales para catas;</li><li>Explorar el histórico castillo de Batonistsikhe;</li><li>Descubrir la cultura vinícola de Vardisubani;</li><li>Regreso a Telavi para alojamiento.</li><li><strong>Duración del tour:</strong> 8-9 horas</li><li><strong>Duración del trayecto:</strong> 2 horas</li></ul>"
+      },
+      {
+        "title": "Día 4: Telavi – Tiflis, tarde libre",
+        "content": "<p>Regreso a Tiflis tras su exploración de la región vinícola y disfrute de una tarde libre en la capital. Tómese un tiempo para reflexionar sobre sus experiencias vinícolas, explore la ciudad a su propio ritmo o relájese y prepárese para las aventuras de montaña que le esperan. Este tiempo libre le permite saborear los recuerdos de los excepcionales vinos y la hospitalidad de Kakheti.</p><ul><li>Viaje de regreso a la capital, Tiflis;</li><li>Tarde libre para exploración personal;</li><li>Tiempo para reflexionar sobre las experiencias vinícolas;</li><li>Explorar la ciudad a su propio ritmo;</li><li>Compras o cenas opcionales;</li><li>Preparación para las aventuras de montaña;</li><li>Registro y alojamiento en Tiflis.</li><li><strong>Duración del tour:</strong> Tarde libre</li><li><strong>Duración del trayecto:</strong> 2 horas</li></ul>"
+      },
+      {
+        "title": "Día 5: Tiflis – Jvari – Mtskheta – Ananuri – Kazbegi",
+        "content": "<p>Viaje a los impresionantes paisajes de Kazbegi, visitando la antigua capital Mtskheta con sus sitios Patrimonio de la Humanidad de la UNESCO, incluyendo el Monasterio de Jvari. Deténgase en el magnífico complejo de la Fortaleza de Ananuri y continúe por los pasos de montaña para llegar a la impresionante región montañosa del Cáucaso en Kazbegi con vistas al Monte Kazbek.</p><ul><li>Visita al Monasterio de Jvari, sitio UNESCO;</li><li>Explorar la antigua capital Mtskheta;</li><li>Descubrir importantes monumentos religiosos;</li><li>Parada en la magnífica Fortaleza de Ananuri;</li><li>Trayecto por los pasos de montaña del Cáucaso;</li><li>Llegada a la impresionante región de Kazbegi;</li><li>Registro y alojamiento en Kazbegi.</li><li><strong>Duración del tour:</strong> 7-8 horas</li><li><strong>Duración del trayecto:</strong> 3,5 horas</li></ul>"
+      },
+      {
+        "title": "Día 6: Kazbegi",
+        "content": "<p>Sumérjase en los impresionantes paisajes de Kazbegi con un día completo de exploración montañosa. Visite la icónica Iglesia de la Trinidad de Gergeti, encaramada de forma espectacular con el telón de fondo del Monte Kazbek. Experimente la belleza pura de las montañas del Cáucaso y empápese de los magníficos paisajes de las tierras altas que hacen de esta región uno de los destinos más espectaculares de Georgia.</p><ul><li>Día completo explorando la impresionante Kazbegi;</li><li>Visita a la icónica Iglesia de la Trinidad de Gergeti;</li><li>Experiencia de las dramáticas vistas del Monte Kazbek;</li><li>Inmersión en la belleza montañosa del Cáucaso;</li><li>Fotografía en magníficos paisajes de las tierras altas;</li><li>Explorar paisajes montañosos vírgenes;</li><li>Alojamiento en Kazbegi.</li><li><strong>Duración del tour:</strong> 8-9 horas</li></ul>"
+      },
+      {
+        "title": "Día 7: Kazbegi – Museo de Stalin en Gori – Uplistsikhe – Tiflis",
+        "content": "<p>Viaje desde las montañas para explorar las fascinantes capas históricas de Georgia. Visite el Museo de Stalin en Gori para conocer la historia soviética, y después recorra las antiguas calles rupestres de Uplistsikhe, que se remontan a la temprana Edad del Hierro. Este día muestra los diversos periodos históricos que han dado forma a la cultura y el patrimonio georgianos.</p><ul><li>Salida de la magnífica región de Kazbegi;</li><li>Visita al Museo de Stalin en la histórica Gori;</li><li>Conocer la historia de la era soviética;</li><li>Recorrer las antiguas cuevas de Uplistsikhe;</li><li>Descubrir el patrimonio de la Edad del Hierro;</li><li>Experimentar diversos periodos históricos;</li><li>Regreso a Tiflis y alojamiento.</li><li><strong>Duración del tour:</strong> 8-9 horas</li><li><strong>Duración del trayecto:</strong> 4 horas en total</li></ul>"
+      },
+      {
+        "title": "Día 8: Tiflis – Gelati – Motsameta – Kutaisi",
+        "content": "<p>Viaje al oeste de Georgia para explorar sitios patrimoniales protegidos por la UNESCO. Visite el magnífico Monasterio de Gelati, Patrimonio de la Humanidad de la UNESCO que muestra la arquitectura medieval georgiana, y el sereno Monasterio de Motsameta. Estos centros espirituales representan siglos de tradición ortodoxa georgiana y logros arquitectónicos en hermosos entornos naturales.</p><ul><li>Viaje a la región del oeste de Georgia;</li><li>Visita al Monasterio de Gelati protegido por la UNESCO;</li><li>Admirar la magnífica arquitectura medieval;</li><li>Explorar el sereno Monasterio de Motsameta;</li><li>Descubrir las tradiciones ortodoxas georgianas;</li><li>Experimentar los logros arquitectónicos;</li><li>Registro y alojamiento en Kutaisi.</li><li><strong>Duración del tour:</strong> 7-8 horas</li><li><strong>Duración del trayecto:</strong> 4,5 horas</li></ul>"
+      },
+      {
+        "title": "Día 9: Kutaisi – Cueva de Prometeo – Cañón de Martvili – Kutaisi",
+        "content": "<p>Déjese fascinar por las surrealistas formaciones de la Cueva de Prometeo con sus espectaculares cámaras subterráneas y maravillas geológicas. Continúe hasta el pintoresco Cañón de Martvili para paseos en barco por pintorescas aguas azules rodeadas de dramáticas paredes de cañón. Estas atracciones naturales muestran los diversos tesoros geológicos y los impresionantes paisajes de Georgia.</p><ul><li>Explorar la fascinante Cueva de Prometeo;</li><li>Descubrir surrealistas formaciones subterráneas;</li><li>Experimentar espectaculares maravillas geológicas;</li><li>Visitar el pintoresco Cañón de Martvili;</li><li>Disfrutar de paseos en barco por aguas azules;</li><li>Maravillarse con los dramáticos paisajes del cañón;</li><li>Regreso a Kutaisi para alojamiento.</li><li><strong>Duración del tour:</strong> 8-9 horas</li><li><strong>Duración del trayecto:</strong> 3 horas</li></ul>"
+      },
+      {
+        "title": "Día 10: Kutaisi – Mestia",
+        "content": "<p>Viaje a la remota región montañosa de Svaneti, donde le esperan pueblos atemporales y tradiciones ancestrales. Viaje a Mestia, una localidad de montaña con las tradicionales torres svanas y que sirve como puerta de entrada a una de las culturas de montaña más singulares de Europa. Este pintoresco trayecto le lleva a la región montañosa más preservada de Georgia.</p><ul><li>Viaje a la remota región montañosa de Svaneti;</li><li>Trayecto a la localidad de montaña de Mestia;</li><li>Descubrir pueblos atemporales y tradiciones;</li><li>Ver las tradicionales torres svanas;</li><li>Entrada en una singular región de cultura montañesa;</li><li>Experimentar las tierras altas preservadas de Georgia;</li><li>Registro y alojamiento en Mestia.</li><li><strong>Duración del tour:</strong> 6-7 horas</li><li><strong>Duración del trayecto:</strong> 5 horas</li></ul>"
+      },
+      {
+        "title": "Día 11: Mestia – Ushguli – Mestia",
+        "content": "<p>Explore los atemporales pueblos de Mestia y visite Ushguli, uno de los pueblos habitados más altos de Europa. Viva la distintiva cultura svana, visite el Museo de Svaneti y maravíllese con las antiguas torres que definen este notable paisaje de las tierras altas. Este día ofrece una inmersión profunda en el patrimonio montañés más singular de Georgia.</p><ul><li>Explorar el atemporal pueblo de Mestia;</li><li>Visitar Ushguli, el pueblo más alto de Europa;</li><li>Experiencia de la distintiva cultura svana;</li><li>Visita al informativo Museo de Svaneti;</li><li>Maravillarse con las antiguas torres defensivas;</li><li>Profunda inmersión en el patrimonio montañés;</li><li>Regreso a Mestia para alojamiento.</li><li><strong>Duración del tour:</strong> 8-9 horas</li><li><strong>Duración del trayecto:</strong> 3 horas ida y vuelta</li></ul>"
+      },
+      {
+        "title": "Día 12: Mestia – Jardín Botánico de Batumi – Batumi",
+        "content": "<p>Viaje desde las tierras altas hasta la serena costa del Mar Negro y la vibrante ciudad costera de Batumi. Visite el mundialmente reconocido Jardín Botánico de Batumi con sus diversas colecciones de plantas en espectaculares entornos costeros. Este dramático viaje de las montañas al mar muestra la increíble diversidad geográfica y la belleza natural de Georgia.</p><ul><li>Viaje desde las tierras altas a la costa del Mar Negro;</li><li>Trayecto a la vibrante Batumi costera;</li><li>Visita al mundialmente reconocido Jardín Botánico;</li><li>Explorar diversas colecciones de plantas;</li><li>Experimentar espectaculares entornos costeros;</li><li>Descubrir una increíble diversidad geográfica;</li><li>Registro y alojamiento en Batumi.</li><li><strong>Duración del tour:</strong> 7-8 horas</li><li><strong>Duración del trayecto:</strong> 5 horas</li></ul>"
+      },
+      {
+        "title": "Día 13: Batumi – Animadas plazas y relax en la costa del Mar Negro",
+        "content": "<p>Concluya su aventura en Batumi explorando las animadas plazas, incluyendo la Plaza de Europa, y contemplando la famosa estatua de Ali y Nino. Disfrute de un momento de relax junto a la serena costa del Mar Negro, el entorno perfecto para reflexionar sobre su completo viaje georgiano a través de la historia antigua, los impresionantes paisajes y las ricas tradiciones culturales.</p><ul><li>Explorar las animadas plazas de Batumi;</li><li>Visitar la elegante Plaza de Europa;</li><li>Ver la famosa estatua de Ali y Nino;</li><li>Relajarse junto a la serena costa del Mar Negro;</li><li>Entorno perfecto para reflexionar sobre el viaje;</li><li>Experimentar la atmósfera costera;</li><li>Alojamiento en Batumi.</li><li><strong>Duración del tour:</strong> 4-5 horas, luego tiempo libre</li></ul>"
+      },
+      {
+        "title": "Día 14: Batumi – Tiflis (tren)",
+        "content": "<p>Concluya su aventura con un pintoresco viaje en tren de regreso a Tiflis, absorbiendo las últimas vistas de los diversos paisajes de Georgia. El cómodo trayecto en tren ofrece hermosas vistas mientras viaja desde la región costera a través de un terreno diverso de vuelta a la capital, brindándole tiempo para reflexionar sobre su extraordinaria experiencia georgiana de 15 días.</p><ul><li>Pintoresco viaje en tren a la capital;</li><li>Absorber las últimas vistas de los paisajes;</li><li>Cómodo trayecto con hermosas vistas;</li><li>Viaje desde la costa a través de terreno diverso;</li><li>Tiempo para reflexionar sobre el extraordinario viaje;</li><li>Llegada de vuelta a Tiflis;</li><li>Último alojamiento en Tiflis.</li><li><strong>Duración:</strong> Viaje en tren de día completo</li></ul>"
+      },
+      {
+        "title": "Día 15: Salida desde Tiflis",
+        "content": "<p>Concluya su aventura georgiana definitiva de 15 días con los últimos momentos en Tiflis. Disfrute de un desayuno tranquilo y tómese tiempo para compras o exploración de última hora. Traslado al Aeropuerto Internacional de Tiflis para su partida, llevándose consigo recuerdos inolvidables del patrimonio cultural de Georgia, sus vinos de clase mundial, sus maravillas naturales y arquitectónicas, y la completa exploración de esta cautivadora tierra donde la historia antigua, los impresionantes paisajes y las ricas tradiciones se unen.</p><ul><li>Último desayuno tranquilo en Tiflis;</li><li>Compras o exploración de última hora;</li><li>Salida del hotel y traslado al aeropuerto;</li><li>Salida desde el Aeropuerto Internacional de Tiflis;</li><li>Fin de la aventura georgiana definitiva de 15 días;</li><li>Recuerdos de una completa exploración cultural.</li><li><strong>Duración:</strong> Según horario de vuelo</li></ul>"
+      }
+    ],
+    "included": [
+      "Alojamiento en habitaciones dobles o twin, con desayuno incluido;",
+      "Traslados según itinerario en vehículo cómodo y climatizado, con conductor-guía de habla inglesa;",
+      "Entradas según itinerario;",
+      "Agua mineral sin gas;",
+      "1 almuerzo, 1 cena y 2 catas de vinos;",
+      "Billetes de tren Batumi-Tiflis."
+    ],
+    "notIncluded": [
+      "Pensión completa;",
+      "Gastos adicionales de hotel;",
+      "Seguro de viaje."
+    ]
+  },
+  "georgia-on-my-mind-20-days-of-tasting-trekking-and-total-relaxation": {
+    "title": "Georgia en mi Mente: 20 Días de Degustación, Senderismo y Relax Total",
+    "description": "Aventúrese por Georgia en una aventura de 20 días repleta de patrimonio cultural, paisajes pintorescos y delicias culinarias.",
+    "listingDescription": "Aventúrese por Georgia en una aventura de 20 días repleta de patrimonio cultural, paisajes pintorescos y delicias culinarias.",
+    "itinerary": [
+      {
+        "title": "Día 1: Llegada a Tiflis",
+        "content": "<p>Comience su completa aventura georgiana de 20 días con la llegada a Tiflis, la vibrante capital donde la historia antigua se encuentra con la energía moderna. Comience a explorar el histórico casco antiguo con sus estrechas calles empedradas, descubra la icónica Fortaleza de Narikala y visite la impresionante Catedral de Sameba. Viva el singular encanto del barrio de baños de azufre de Abanotubani y obtenga su primer contacto con la hospitalidad y cultura georgianas.</p><ul><li>Llegada a Tiflis y traslado desde el aeropuerto;</li><li>Introducción a la vibrante capital de Georgia;</li><li>Explorar el encanto del histórico casco antiguo;</li><li>Visita a la icónica Fortaleza de Narikala;</li><li>Descubrir la impresionante Catedral de Sameba;</li><li>Experimentar el singular barrio de los baños de azufre;</li><li>Registro y alojamiento en Tiflis.</li><li><strong>Duración del tour:</strong> 4-5 horas</li></ul>"
+      },
+      {
+        "title": "Día 2: Tour culinario y del patrimonio soviético de Tiflis",
+        "content": "<p>Día dedicado a la gastronomía, descubriendo la cocina georgiana y los monumentos de la era soviética en Tiflis. Explore mercados locales, pruebe platos tradicionales y conozca las tradiciones culinarias georgianas. Visite monumentos y arquitectura de la era soviética mientras experimenta cómo este fascinante patrimonio se fusiona con la vida moderna de Tiflis y su vibrante cultura gastronómica.</p><ul><li>Exploración culinaria georgiana dedicada;</li><li>Visita a vibrantes mercados locales;</li><li>Degustación de auténticos platos tradicionales;</li><li>Conocer las tradiciones culinarias georgianas;</li><li>Explorar monumentos de la era soviética;</li><li>Experimentar la fusión de patrimonio y vida moderna;</li><li>Alojamiento en Tiflis.</li><li><strong>Duración del tour:</strong> 8-9 horas</li></ul>"
+      },
+      {
+        "title": "Día 3: Tiflis – Sighnaghi – Región vinícola de Telavi",
+        "content": "<p>Viaje a la pintoresca \"Ciudad del Amor\", Sighnaghi, con impresionantes vistas sobre el Valle de Alazani y encantadoras calles empedradas. Continúe hasta Telavi, en el corazón de la región vinícola de Kakheti, para vivir auténticas experiencias vinícolas, visitando mercados locales y reconocidas bodegas para tradicionales catas de vinos georgianos.</p><ul><li>Viaje a la encantadora Sighnaghi, \"Ciudad del Amor\";</li><li>Impresionantes vistas del Valle de Alazani;</li><li>Explorar calles empedradas y su encanto;</li><li>Continuar hasta Telavi, capital del vino;</li><li>Visitar auténticos mercados locales;</li><li>Experiencia de catas en reconocidas bodegas;</li><li>Registro y alojamiento en Telavi.</li><li><strong>Duración del tour:</strong> 8-9 horas</li><li><strong>Duración del trayecto:</strong> 3,5 horas</li></ul>"
+      },
+      {
+        "title": "Día 4: Telavi – Finca Tsinandali – Castillo de Batonistsikhe",
+        "content": "<p>Explore la famosa Finca Tsinandali para vivir auténticas experiencias vinícolas y visite el histórico complejo del Castillo de Batonistsikhe en el corazón de Kakheti. Viva las tradicionales tradiciones vinícolas georgianas y descubra el rico patrimonio de esta reconocida región vinícola con su cultura vitivinícola centenaria.</p><ul><li>Visita a la famosa Finca Tsinandali;</li><li>Auténticas experiencias y catas de vinos;</li><li>Explorar el histórico Castillo de Batonistsikhe;</li><li>Descubrimiento de la vinificación tradicional georgiana;</li><li>Exploración del rico patrimonio de la región vinícola;</li><li>Cultura vitivinícola centenaria;</li><li>Alojamiento en Telavi.</li><li><strong>Duración del tour:</strong> 8-9 horas</li><li><strong>Duración del trayecto:</strong> 2 horas</li></ul>"
+      },
+      {
+        "title": "Día 5: Telavi – Monasterio de David Gareja – Tiflis",
+        "content": "<p>Explore el antiguo complejo del Monasterio de David Gareja enclavado en singulares paisajes semidesérticos, ofreciendo un lugar distintivo para la reflexión y la exploración espiritual. Este notable monasterio representa el patrimonio cristiano temprano de Georgia en un dramático entorno natural antes de regresar a Tiflis.</p><ul><li>Explorar el antiguo Monasterio de David Gareja;</li><li>Singular paisaje semidesértico;</li><li>Lugar distintivo para la reflexión;</li><li>Experiencia de exploración espiritual;</li><li>Descubrimiento del patrimonio cristiano temprano;</li><li>Apreciación del dramático entorno natural;</li><li>Regreso a Tiflis y alojamiento.</li><li><strong>Duración del tour:</strong> 8-9 horas</li><li><strong>Duración del trayecto:</strong> 4 horas en total</li></ul>"
+      },
+      {
+        "title": "Día 6: Tiflis – Ananuri – Kazbegi (Stepantsminda)",
+        "content": "<p>Recorra la espectacular Carretera Militar Georgiana, deteniéndose en el magnífico complejo de la Fortaleza de Ananuri, y continúe hasta Kazbegi (Stepantsminda) con impresionantes vistas del Monte Kazbek. Experimente la belleza pura de las montañas del Cáucaso y los icónicos paisajes de las tierras altas que definen esta notable región.</p><ul><li>Recorrer la espectacular Carretera Militar Georgiana;</li><li>Parada en la magnífica Fortaleza de Ananuri;</li><li>Continuar hasta la impresionante región de Kazbegi;</li><li>Espectaculares vistas del Monte Kazbek;</li><li>Experimentar la belleza pura del Cáucaso;</li><li>Exploración de icónicos paisajes de las tierras altas;</li><li>Registro y alojamiento en Kazbegi.</li><li><strong>Duración del tour:</strong> 7-8 horas</li><li><strong>Duración del trayecto:</strong> 3,5 horas</li></ul>"
+      },
+      {
+        "title": "Día 7: Kazbegi – Iglesia de la Trinidad de Gergeti",
+        "content": "<p>Visite la impresionante Iglesia de la Trinidad de Gergeti, encaramada de forma espectacular en lo alto de una cresta con vistas espectaculares del Monte Kazbek y los picos circundantes del Cáucaso. Viva uno de los monumentos más icónicos y fotografiados de Georgia en su impresionante entorno montañoso.</p><ul><li>Visita a la impresionante Iglesia de la Trinidad de Gergeti;</li><li>Espectacular ubicación en lo alto de la cresta;</li><li>Espectaculares vistas del Monte Kazbek;</li><li>Panorama de los picos circundantes del Cáucaso;</li><li>Experiencia de un icónico monumento georgiano;</li><li>Impresionante entorno montañoso;</li><li>Alojamiento en Kazbegi.</li><li><strong>Duración del tour:</strong> 6-7 horas</li></ul>"
+      },
+      {
+        "title": "Día 8: Kazbegi – Senderismo en el pueblo de Juta",
+        "content": "<p>Viva el hermoso pueblo de Juta, ideal para senderismo de montaña con alojamiento en una casa de huéspedes local. Disfrute de prístinos paisajes montañosos, oportunidades de senderismo y la auténtica atmósfera de un pueblo de las tierras altas en una de las localizaciones montañosas más pintorescas de Georgia.</p><ul><li>Visita al hermoso pueblo de Juta;</li><li>Ideales oportunidades de senderismo de montaña;</li><li>Alojamiento en auténtica casa de huéspedes local;</li><li>Exploración de prístinos paisajes montañosos;</li><li>Auténtica atmósfera de pueblo de las tierras altas;</li><li>Localización montañosa más pintoresca de Georgia;</li><li>Alojamiento en casa de huéspedes del pueblo de Juta.</li><li><strong>Duración del tour:</strong> Día completo de senderismo</li></ul>"
+      },
+      {
+        "title": "Día 9: Pueblo de Juta – Kazbegi – Tiflis",
+        "content": "<p>Última mañana de montaña en el pueblo de Juta antes de regresar a través de Kazbegi y viajar de vuelta a Tiflis. Disfrute de las últimas vistas de los espectaculares paisajes del Cáucaso y reflexione sobre las increíbles experiencias de montaña durante el cómodo viaje de regreso a la capital.</p><ul><li>Última mañana en el prístino pueblo de Juta;</li><li>Viaje de regreso a través de Kazbegi;</li><li>Trayecto de vuelta a la vibrante Tiflis;</li><li>Últimas vistas de los paisajes del Cáucaso;</li><li>Reflexionar sobre las increíbles experiencias de montaña;</li><li>Cómodo viaje a la capital;</li><li>Registro y alojamiento en Tiflis.</li><li><strong>Duración del tour:</strong> 6-7 horas</li><li><strong>Duración del trayecto:</strong> 4 horas</li></ul>"
+      },
+      {
+        "title": "Día 10: Tiflis – Kutaisi – Catedral de Bagrati",
+        "content": "<p>Descubra la histórica Kutaisi visitando sitios UNESCO como la Catedral de Bagrati. Esta histórica ciudad del oeste de Georgia ofrece más de 3.000 años de patrimonio y sirve como puerta de entrada a las maravillas naturales y culturales del oeste de Georgia.</p><ul><li>Viaje a la histórica ciudad del oeste de Georgia;</li><li>Visita a la Catedral de Bagrati, Patrimonio de la UNESCO;</li><li>Descubrir más de 3.000 años de patrimonio;</li><li>Puerta de entrada a la exploración del oeste de Georgia;</li><li>Experimentar la arquitectura histórica;</li><li>Introducción a las maravillas culturales;</li><li>Registro y alojamiento en Kutaisi.</li><li><strong>Duración del tour:</strong> 7-8 horas</li><li><strong>Duración del trayecto:</strong> 4,5 horas</li></ul>"
+      },
+      {
+        "title": "Día 11: Kutaisi – Monasterio de Gelati – Cueva de Prometeo",
+        "content": "<p>Visite el magnífico Monasterio de Gelati, declarado Patrimonio de la Humanidad por la UNESCO, que representa los logros de la arquitectura medieval georgiana, y después explore la impresionante Cueva de Prometeo con sus espectaculares cámaras subterráneas y formaciones geológicas que se extienden a lo largo de 11 kilómetros.</p><ul><li>Visita al magnífico Monasterio de Gelati;</li><li>Arquitectura medieval Patrimonio de la UNESCO;</li><li>Explorar la impresionante Cueva de Prometeo;</li><li>Espectaculares cámaras subterráneas;</li><li>Formaciones geológicas de 11 km;</li><li>Maravillas medievales y naturales combinadas;</li><li>Alojamiento en Kutaisi.</li><li><strong>Duración del tour:</strong> 8-9 horas</li><li><strong>Duración del trayecto:</strong> 2 horas</li></ul>"
+      },
+      {
+        "title": "Día 12: Kutaisi – Cañón de Okatse – Cañón de Martvili",
+        "content": "<p>Explore el pintoresco Cañón de Okatse para un día aventurero de exploración natural, y después continúe hasta el Cañón de Martvili que ofrece paseos en barco por aguas turquesas e impresionantes paisajes naturales rodeados de dramáticas paredes de cañón y exuberante vegetación.</p><ul><li>Explorar el pintoresco Cañón de Okatse;</li><li>Día aventurero de exploración natural;</li><li>Continuar hasta el hermoso Cañón de Martvili;</li><li>Paseos en barco por aguas turquesas;</li><li>Impresionantes paisajes naturales;</li><li>Dramáticas paredes de cañón y vegetación;</li><li>Regreso a Kutaisi para alojamiento.</li><li><strong>Duración del tour:</strong> 8-9 horas</li><li><strong>Duración del trayecto:</strong> 3 horas</li></ul>"
+      },
+      {
+        "title": "Día 13: Kutaisi – Zugdidi – Palacio Dadiani",
+        "content": "<p>Visite el histórico Palacio Dadiani en Zugdidi antes de continuar hacia la montañosa región de Svaneti. Este palacio muestra el patrimonio de la nobleza georgiana y sirve como puerta de entrada a una de las culturas montañesas más singulares y preservadas de Europa.</p><ul><li>Visita al histórico Palacio Dadiani;</li><li>Descubrimiento del patrimonio de la nobleza georgiana;</li><li>Puerta de entrada a la montañosa región de Svaneti;</li><li>Cultura montañesa más singular de Europa;</li><li>Tradiciones preservadas de las tierras altas;</li><li>Camino hacia aventuras de montaña;</li><li>Alojamiento en Zugdidi.</li><li><strong>Duración del tour:</strong> 6-7 horas</li><li><strong>Duración del trayecto:</strong> 2,5 horas</li></ul>"
+      },
+      {
+        "title": "Día 14: Zugdidi – Mestia",
+        "content": "<p>Viaje a Mestia, una localidad de montaña conocida por sus distintivas torres svanas y hogar del Museo de Historia y Etnografía de Svaneti. Adéntrese en la región de patrimonio montañés más preservada y singular de Georgia con su antigua arquitectura defensiva.</p><ul><li>Viaje a la localidad de montaña de Mestia;</li><li>Famosa por sus distintivas torres svanas;</li><li>Hogar del Museo de Historia de Svaneti;</li><li>Etnografía y patrimonio cultural;</li><li>Región montañesa más preservada de Georgia;</li><li>Antigua arquitectura defensiva;</li><li>Registro y alojamiento en Mestia.</li><li><strong>Duración del tour:</strong> 5-6 horas</li><li><strong>Duración del trayecto:</strong> 4 horas</li></ul>"
+      },
+      {
+        "title": "Día 15: Mestia – Ushguli",
+        "content": "<p>Visite Ushguli, uno de los pueblos habitados más altos de Europa, con antiguas torres vigía, cultura svana tradicional e impresionantes paisajes montañosos. Viva el encanto atemporal de este sitio Patrimonio de la Humanidad de la UNESCO con su arquitectura medieval perfectamente conservada.</p><ul><li>Visita al pueblo habitado más alto de Europa;</li><li>Antiguas torres vigía y arquitectura;</li><li>Experiencia de la cultura svana tradicional;</li><li>Impresionantes paisajes montañosos;</li><li>Sitio Patrimonio de la Humanidad de la UNESCO;</li><li>Encanto medieval perfectamente conservado;</li><li>Regreso a Mestia para alojamiento.</li><li><strong>Duración del tour:</strong> 8-9 horas</li><li><strong>Duración del trayecto:</strong> 3 horas ida y vuelta</li></ul>"
+      },
+      {
+        "title": "Día 16: Mestia – Museo de Svaneti – Mestia",
+        "content": "<p>Explore el completo Museo de Historia y Etnografía de Svaneti y descubra más sobre la singular cultura montañesa de Mestia. Conozca las tradiciones svanas centenarias, contemple antiguos artefactos y sumérjase en el distintivo patrimonio montañés de esta notable región.</p><ul><li>Explorar el completo Museo de Svaneti;</li><li>Descubrimiento de historia y etnografía;</li><li>Inmersión en la singular cultura de las tierras altas;</li><li>Tradiciones svanas centenarias;</li><li>Contemplar antiguos artefactos y patrimonio;</li><li>Experiencia de la distintiva cultura montañesa;</li><li>Último alojamiento en Mestia.</li><li><strong>Duración del tour:</strong> 6-7 horas</li></ul>"
+      },
+      {
+        "title": "Día 17: Mestia – Batumi",
+        "content": "<p>Viaje desde las tierras altas hasta la costa del Mar Negro y la vibrante ciudad de Batumi. Viva la dramática diversidad geográfica al pasar de las cumbres montañosas al paseo marítimo, descubriendo las increíbles transiciones paisajísticas y el encanto costero de Georgia.</p><ul><li>Viaje de las tierras altas al Mar Negro;</li><li>Trayecto a la vibrante Batumi costera;</li><li>Experimentar la dramática diversidad geográfica;</li><li>Transición de cumbres montañosas al mar;</li><li>Increíble variedad paisajística de Georgia;</li><li>Descubrir el encanto y la atmósfera costera;</li><li>Registro y alojamiento en Batumi.</li><li><strong>Duración del tour:</strong> 7-8 horas</li><li><strong>Duración del trayecto:</strong> 6 horas</li></ul>"
+      },
+      {
+        "title": "Día 18: Batumi – Jardín Botánico – Estatua de Ali y Nino",
+        "content": "<p>Explore el Bulevar de Batumi, visite el mundialmente reconocido Jardín Botánico de Batumi con sus diversas colecciones de plantas en espectaculares entornos costeros y contemple la famosa estatua de Ali y Nino. Viva las animadas plazas y la singular fusión de arquitectura moderna y encanto tradicional.</p><ul><li>Explorar el vibrante Bulevar de Batumi;</li><li>Visita al mundialmente reconocido Jardín Botánico;</li><li>Diversas colecciones de plantas en entorno costero;</li><li>Ver la famosa estatua de Ali y Nino;</li><li>Experimentar las animadas plazas de la ciudad;</li><li>Arquitectura moderna y encanto tradicional;</li><li>Alojamiento en Batumi.</li><li><strong>Duración del tour:</strong> 6-7 horas</li></ul>"
+      },
+      {
+        "title": "Día 19: Batumi – Clase de cocina de la gastronomía adjara",
+        "content": "<p>Disfrute de una clase de cocina dedicada a la gastronomía adjara, aprendiendo a preparar especialidades regionales y platos tradicionales de la costa del Mar Negro. Viva una educación culinaria práctica mientras se relaja junto al sereno Mar Negro y reflexiona sobre su completo viaje georgiano de 20 días.</p><ul><li>Clase de cocina dedicada a la gastronomía adjara;</li><li>Aprender a preparar especialidades regionales;</li><li>Platos tradicionales de la costa del Mar Negro;</li><li>Educación culinaria práctica;</li><li>Relajarse junto al sereno Mar Negro;</li><li>Reflexionar sobre el viaje georgiano de 20 días;</li><li>Último alojamiento en Batumi.</li><li><strong>Duración del tour:</strong> 6-7 horas de clase de cocina</li></ul>"
+      },
+      {
+        "title": "Día 20: Salida desde Tiflis",
+        "content": "<p>Concluya su aventura georgiana definitiva de 20 días con el traslado desde Batumi al Aeropuerto Internacional de Tiflis para su partida. Llévese consigo recuerdos inolvidables del patrimonio cultural de Georgia, sus paisajes pintorescos, delicias culinarias, tradiciones vinícolas, aventuras de senderismo de montaña y el perfecto equilibrio entre historia, naturaleza y relax total que define esta extraordinaria tierra de diversas regiones y cálida hospitalidad.</p><ul><li>Traslado de Batumi al Aeropuerto de Tiflis;</li><li>Salida final de la aventura georgiana;</li><li>Recuerdos de la exploración del patrimonio cultural;</li><li>Paisajes pintorescos y delicias culinarias;</li><li>Tradiciones vinícolas y senderismo de montaña;</li><li>Perfecto equilibrio entre historia y naturaleza;</li><li>Fin del completo viaje de 20 días.</li><li><strong>Duración:</strong> Según horario de vuelo</li><li><strong>Duración del trayecto:</strong> 5,5 horas hasta el aeropuerto</li></ul>"
+      }
+    ],
+    "included": [
+      "Alojamiento en habitaciones dobles o twin, con desayuno incluido;",
+      "Traslados según itinerario en vehículo cómodo y climatizado, con conductor-guía de habla inglesa;",
+      "Entradas según itinerario;",
+      "Agua mineral sin gas;",
+      "2 almuerzos, 2 cenas y 3 catas de vinos."
+    ],
+    "notIncluded": [
+      "Pensión completa;",
+      "Gastos adicionales de hotel;",
+      "Seguro de viaje."
+    ]
+  }
+}

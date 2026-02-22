@@ -1,27 +1,36 @@
-import { Link } from 'react-router-dom'
+import { useContext } from 'react'
 import HeroSection from '../shared/HeroSection'
 import FadeUp from '../shared/FadeUp'
 import BlurUpBackground from '../shared/BlurUpBackground'
 import MapboxMap from '../shared/MapboxMap'
 import { tours } from '../../data/tours'
+import useT from '../../i18n/useT'
+import LocaleLink from '../../i18n/LocaleLink'
+import { I18nContext } from '../../i18n/I18nProvider'
 
 export default function HomePage() {
+  const t = useT()
+  const { tourTranslations, loadTourTranslations } = useContext(I18nContext)
+
+  // Eagerly load tour translations for homepage tiles
+  if (!tourTranslations) loadTourTranslations()
+
   return (
     <>
       <HeroSection
         image="/images/files/georgia-home.jpg"
-        title="Start planning your adventure in Georgia with us!"
+        title={t('home.heroTitle')}
       />
 
       <section className="home-items">
         <div className="home-items">
           <FadeUp>
-            <h2>Explore the beauty of Georgia with Us!</h2>
+            <h2>{t('home.exploreTitle')}</h2>
           </FadeUp>
-          <p>Join us for unforgettable adventures and discover the hidden gems of Georgia.</p>
+          <p>{t('home.exploreText')}</p>
           <FadeUp>
             <div className="button">
-              <p><Link to="/private-tours">Start your journey!</Link></p>
+              <p><LocaleLink to="/private-tours">{t('home.startJourney')}</LocaleLink></p>
             </div>
           </FadeUp>
         </div>
@@ -30,27 +39,30 @@ export default function HomePage() {
       <section className="home-items">
         <div className="tours-grid-container">
           <FadeUp>
-            <h2>Our Tours</h2>
+            <h2>{t('home.ourTours')}</h2>
           </FadeUp>
           <FadeUp>
             <div className="tours-grid">
-              {tours.map((tour) => (
-                <div className="tour-tile" key={tour.slug}>
-                  <Link
-                    to={`/${tour.type === 'group' ? 'group-tours' : 'private-tours'}/${tour.slug}`}
-                    className="tour-tile-link"
-                  >
-                    <BlurUpBackground
-                      src={tour.tileImage || tour.heroImage}
-                      className="tour-tile-image"
-                    />
-                    <div className="tour-tile-overlay">
-                      <h3>{tour.title}</h3>
-                      <p>{tour.days} days</p>
-                    </div>
-                  </Link>
-                </div>
-              ))}
+              {tours.map((tour) => {
+                const tt = tourTranslations?.[tour.slug]
+                return (
+                  <div className="tour-tile" key={tour.slug}>
+                    <LocaleLink
+                      to={`/${tour.type === 'group' ? 'group-tours' : 'private-tours'}/${tour.slug}`}
+                      className="tour-tile-link"
+                    >
+                      <BlurUpBackground
+                        src={tour.tileImage || tour.heroImage}
+                        className="tour-tile-image"
+                      />
+                      <div className="tour-tile-overlay">
+                        <h3>{tt?.title || tour.title}</h3>
+                        <p>{tour.days} {t('tour.days')}</p>
+                      </div>
+                    </LocaleLink>
+                  </div>
+                )
+              })}
             </div>
           </FadeUp>
         </div>
@@ -59,12 +71,12 @@ export default function HomePage() {
       <section className="home-items">
         <div className="home-items">
           <FadeUp>
-            <h2>Shuttle-Service</h2>
+            <h2>{t('home.shuttleTitle')}</h2>
           </FadeUp>
-          <p>We have an extensive network of shuttle services to get you where you need to go.</p>
+          <p>{t('home.shuttleText')}</p>
           <FadeUp>
             <div className="button">
-              <p><Link to="/shuttle-service">Shuttle-Service</Link></p>
+              <p><LocaleLink to="/shuttle-service">{t('home.shuttleLink')}</LocaleLink></p>
             </div>
           </FadeUp>
         </div>

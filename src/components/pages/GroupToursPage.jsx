@@ -1,61 +1,73 @@
-import { Link } from 'react-router-dom'
+import { useContext, useEffect } from 'react'
 import HeroSection from '../shared/HeroSection'
 import FadeUp from '../shared/FadeUp'
 import BlurUpBackground from '../shared/BlurUpBackground'
 import { tours } from '../../data/tours'
+import useT from '../../i18n/useT'
+import LocaleLink from '../../i18n/LocaleLink'
+import { I18nContext } from '../../i18n/I18nProvider'
 
 export default function GroupToursPage() {
   const groupTours = tours.filter((t) => t.type === 'group')
+  const t = useT()
+  const { tourTranslations, loadTourTranslations } = useContext(I18nContext)
+
+  useEffect(() => {
+    if (!tourTranslations) loadTourTranslations()
+  }, [tourTranslations, loadTourTranslations])
 
   return (
     <>
       <HeroSection
         image="/images/files/Gergeti-Church.jpg"
-        title="Group Tours"
+        title={t('tour.groupTours')}
       />
 
-      {groupTours.map((tour) => (
-        <section key={tour.slug} className="page-items" style={{ padding: 0 }}>
-          <FadeUp>
-            <div className="tour-item">
-              <BlurUpBackground
-                src={tour.listingImage || tour.heroImage}
-                className="tour-image"
-              />
-              <div className="tour-info">
-                <h2>
-                  <Link to={`/group-tours/${tour.slug}`}>{tour.title}</Link>
-                </h2>
-                <h3>{tour.days} days</h3>
-                <p>{tour.listingDescription || tour.description}</p>
-                <div className="more">
-                  <Link to={`/group-tours/${tour.slug}`}>More info</Link>
+      {groupTours.map((tour) => {
+        const tt = tourTranslations?.[tour.slug]
+        return (
+          <section key={tour.slug} className="page-items" style={{ padding: 0 }}>
+            <FadeUp>
+              <div className="tour-item">
+                <BlurUpBackground
+                  src={tour.listingImage || tour.heroImage}
+                  className="tour-image"
+                />
+                <div className="tour-info">
+                  <h2>
+                    <LocaleLink to={`/group-tours/${tour.slug}`}>{tt?.title || tour.title}</LocaleLink>
+                  </h2>
+                  <h3>{tour.days} {t('tour.days')}</h3>
+                  <p>{tt?.listingDescription || tt?.description || tour.listingDescription || tour.description}</p>
+                  <div className="more">
+                    <LocaleLink to={`/group-tours/${tour.slug}`}>{t('tour.moreInfo')}</LocaleLink>
+                  </div>
+                </div>
+                <div className="tour-data">
+                  {tour.groupDates && (
+                    <>
+                      <div className="available">{t('tour.availableDates')}</div>
+                      <div className="date-chips">
+                        {tour.groupDates.map((d, i) => (
+                          <div key={i} className="date-chip">
+                            <span className="date-range">{d.start} – {d.end}</span>
+                            <span className="date-year">{d.year}</span>
+                          </div>
+                        ))}
+                      </div>
+                    </>
+                  )}
+                  {tour.pricePerPerson && (
+                    <div style={{ marginTop: '1.6em' }}>
+                      <strong>{t('tour.fromPP', { price: tour.pricePerPerson })}</strong>
+                    </div>
+                  )}
                 </div>
               </div>
-              <div className="tour-data">
-                {tour.groupDates && (
-                  <>
-                    <div className="available">Available Dates</div>
-                    <div className="date-chips">
-                      {tour.groupDates.map((d, i) => (
-                        <div key={i} className="date-chip">
-                          <span className="date-range">{d.start} – {d.end}</span>
-                          <span className="date-year">{d.year}</span>
-                        </div>
-                      ))}
-                    </div>
-                  </>
-                )}
-                {tour.pricePerPerson && (
-                  <div style={{ marginTop: '1.6em' }}>
-                    <strong>From €{tour.pricePerPerson} p.p.</strong>
-                  </div>
-                )}
-              </div>
-            </div>
-          </FadeUp>
-        </section>
-      ))}
+            </FadeUp>
+          </section>
+        )
+      })}
     </>
   )
 }

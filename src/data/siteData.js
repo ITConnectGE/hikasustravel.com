@@ -1,22 +1,22 @@
 export const navLinks = [
-  { to: '/about-us', title: 'About Us', label: 'About Us' },
-  { to: '/group-tours', title: 'Group Tours', label: 'Group Tours' },
-  { to: '/private-tours', title: 'Private Tours', label: 'Private Tours' },
-  { to: '/about-georgia', title: 'About Georgia', label: 'About Georgia' },
-  { to: '/shuttle-service', title: 'Shuttle-Service', label: 'Shuttle-Service' },
-  { to: '/contact', title: 'Contact Us', label: 'Contact Us' },
+  { to: '/about-us', labelKey: 'nav.aboutUs' },
+  { to: '/group-tours', labelKey: 'nav.groupTours' },
+  { to: '/private-tours', labelKey: 'nav.privateTours' },
+  { to: '/about-georgia', labelKey: 'nav.aboutGeorgia' },
+  { to: '/shuttle-service', labelKey: 'nav.shuttleService' },
+  { to: '/contact', labelKey: 'nav.contactUs' },
 ]
 
 export const footerLinks = [
-  { to: '/about-us', title: 'About', label: 'About' },
-  { to: '/about-georgia', title: 'About Georgia', label: 'About Georgia' },
-  { to: '/group-tours', title: 'Group Tours', label: 'Group Tours' },
-  { to: '/private-tours', title: 'Private Tours', label: 'Private Tours' },
-  { to: '/faq', title: 'FAQ', label: 'FAQ' },
-  { to: '/taxi-service', title: 'Taxi-Service', label: 'Taxi-Service' },
-  { to: '/privacy-policy', title: 'Privacy Policy', label: 'Privacy Policy' },
-  { to: '/terms-and-conditions', title: 'Terms & Conditions', label: 'Terms & Conditions' },
-  { to: '/contact', title: 'Contact', label: 'Contact' },
+  { to: '/about-us', labelKey: 'footer.about' },
+  { to: '/about-georgia', labelKey: 'footer.aboutGeorgia' },
+  { to: '/group-tours', labelKey: 'footer.groupTours' },
+  { to: '/private-tours', labelKey: 'footer.privateTours' },
+  { to: '/faq', labelKey: 'footer.faq' },
+  { to: '/taxi-service', labelKey: 'footer.taxiService' },
+  { to: '/privacy-policy', labelKey: 'footer.privacyPolicy' },
+  { to: '/terms-and-conditions', labelKey: 'footer.termsConditions' },
+  { to: '/contact', labelKey: 'footer.contact' },
 ]
 
 export const contactInfo = {

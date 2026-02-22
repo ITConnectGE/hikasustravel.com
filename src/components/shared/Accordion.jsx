@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import useT from '../../i18n/useT'
 
 export function AccordionItem({ title, children, isOpen, onToggle }) {
   return (
@@ -14,9 +15,10 @@ export function AccordionItem({ title, children, isOpen, onToggle }) {
   )
 }
 
-export default function Accordion({ items, renderContent }) {
+export default function Accordion({ items, renderContent, headingKey }) {
   const [openItems, setOpenItems] = useState({})
   const [allOpen, setAllOpen] = useState(false)
+  const t = useT()
 
   const toggleItem = (index) => {
     setOpenItems((prev) => ({ ...prev, [index]: !prev[index] }))
@@ -30,10 +32,12 @@ export default function Accordion({ items, renderContent }) {
     setOpenItems(newItems)
   }
 
+  const heading = headingKey ? t(headingKey) : t('tour.itinerary')
+
   return (
     <div className="itinerary-grid">
       <div className="itinerary-title" onClick={toggleAll} style={{ cursor: 'pointer' }}>
-        <h2 style={{ paddingBottom: 0 }}>Itinerary</h2>
+        <h2 style={{ paddingBottom: 0 }}>{heading}</h2>
         <span className="toggle-btn">{allOpen ? '[-]' : '[+]'}</span>
       </div>
       {items.map((item, index) => (

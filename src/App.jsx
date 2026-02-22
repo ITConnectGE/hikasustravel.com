@@ -1,4 +1,5 @@
-import { HashRouter, Routes, Route } from 'react-router-dom'
+import { HashRouter, Routes, Route, Navigate } from 'react-router-dom'
+import I18nProvider from './i18n/I18nProvider'
 import Layout from './components/layout/Layout'
 import HomePage from './components/pages/HomePage'
 import AboutUsPage from './components/pages/AboutUsPage'
@@ -18,7 +19,8 @@ export default function App() {
   return (
     <HashRouter>
       <Routes>
-        <Route element={<Layout />}>
+        <Route path="/" element={<Navigate to="/en" replace />} />
+        <Route path="/:lang" element={<I18nProvider><Layout /></I18nProvider>}>
           <Route index element={<HomePage />} />
           <Route path="about-us" element={<AboutUsPage />} />
           <Route path="about-georgia" element={<AboutGeorgiaPage />} />

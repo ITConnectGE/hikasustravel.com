@@ -1,13 +1,16 @@
+import useT from '../../i18n/useT'
+
 export function AccommodationsTable({ accommodations }) {
+  const t = useT()
   if (!accommodations || accommodations.length === 0) return null
 
   return (
     <div className="pricing-grid">
       <div className="pricing-grid-header">
-        <div>City</div>
-        <div className="pricing-luxury">Luxury</div>
-        <div>Mid-Range</div>
-        <div>Economy</div>
+        <div>{t('pricing.city')}</div>
+        <div className="pricing-luxury">{t('pricing.luxury')}</div>
+        <div>{t('pricing.midRange')}</div>
+        <div>{t('pricing.economy')}</div>
       </div>
       {accommodations.map((row, i) => (
         <div key={i} className="pricing-grid-row pricing-hotels-row">
@@ -22,15 +25,16 @@ export function AccommodationsTable({ accommodations }) {
 }
 
 export function TravelerPricingTable({ pricing }) {
+  const t = useT()
   if (!pricing || pricing.length === 0) return null
 
   return (
     <div className="pricing-grid pricing-grid-travelers">
       <div className="pricing-grid-header">
-        <div>Travelers</div>
-        <div className="pricing-luxury">Luxury</div>
-        <div>Mid-Range</div>
-        <div>Economy</div>
+        <div>{t('pricing.travelers')}</div>
+        <div className="pricing-luxury">{t('pricing.luxury')}</div>
+        <div>{t('pricing.midRange')}</div>
+        <div>{t('pricing.economy')}</div>
       </div>
       {pricing.map((row, i) => (
         <div key={i} className="pricing-grid-row">
@@ -44,15 +48,17 @@ export function TravelerPricingTable({ pricing }) {
   )
 }
 
-export default function PricingGrid({ accommodations, pricing, title = 'Pricing' }) {
+export default function PricingGrid({ accommodations, pricing }) {
+  const t = useT()
+
   return (
     <section id="pricing" className="page-items">
       <div className="tour-pricing-table">
-        <h4>{title}</h4>
+        <h4>{t('pricing.title')}</h4>
         {accommodations && accommodations.length > 0 && (
           <>
             <h3 style={{ textAlign: 'center', marginBottom: 'calc(var(--indent) * 1)' }}>
-              Accommodations
+              {t('pricing.accommodations')}
             </h3>
             <AccommodationsTable accommodations={accommodations} />
           </>
@@ -60,7 +66,7 @@ export default function PricingGrid({ accommodations, pricing, title = 'Pricing'
         {pricing && pricing.length > 0 && (
           <>
             <h3 style={{ textAlign: 'center', marginTop: 'calc(var(--indent) * 1.5)', marginBottom: 'calc(var(--indent) * 1)' }}>
-              Price per Person
+              {t('pricing.pricePerPerson')}
             </h3>
             <TravelerPricingTable pricing={pricing} />
           </>
