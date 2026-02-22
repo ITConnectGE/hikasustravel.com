@@ -50,6 +50,8 @@ export default function Header({ variant = 'default' }) {
         </LocaleLink>
       </div>
 
+      <LanguageSwitcher />
+
       <button
         className={`hamburger${menuOpen ? ' active' : ''}`}
         onClick={() => setMenuOpen(!menuOpen)}
@@ -71,7 +73,6 @@ export default function Header({ variant = 'default' }) {
             </LocaleLink>
           </span>
         ))}
-        <LanguageSwitcher />
       </nav>
     </header>
   )
