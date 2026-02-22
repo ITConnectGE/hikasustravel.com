@@ -5,6 +5,7 @@ export const languages = [
   { code: 'de', label: 'German', nativeLabel: 'Deutsch' },
   { code: 'pl', label: 'Polish', nativeLabel: 'Polski' },
   { code: 'cs', label: 'Czech', nativeLabel: 'Čeština' },
+  { code: 'nl', label: 'Dutch', nativeLabel: 'Nederlands' },
 ]
 
 export const defaultLang = 'en'
