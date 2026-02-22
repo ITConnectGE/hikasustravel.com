@@ -23,12 +23,12 @@ export default function GroupToursPage() {
         title={t('tour.groupTours')}
       />
 
-      {groupTours.map((tour) => {
-        const tt = tourTranslations?.[tour.slug]
-        return (
-          <section key={tour.slug} className="page-items" style={{ padding: 0 }}>
-            <FadeUp>
-              <div className="tour-item">
+      <div className="tour-listing">
+        {groupTours.map((tour) => {
+          const tt = tourTranslations?.[tour.slug]
+          return (
+            <FadeUp key={tour.slug}>
+              <div className="tour-item tour-item-card">
                 <BlurUpBackground
                   src={tour.listingImage || tour.heroImage}
                   className="tour-image"
@@ -65,9 +65,9 @@ export default function GroupToursPage() {
                 </div>
               </div>
             </FadeUp>
-          </section>
-        )
-      })}
+          )
+        })}
+      </div>
     </>
   )
 }

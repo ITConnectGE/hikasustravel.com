@@ -1,9 +1,11 @@
-import { useContext, useEffect } from 'react'
+import { useContext, useEffect, useMemo } from 'react'
 import { useParams } from 'react-router-dom'
-import HeroSection from '../shared/HeroSection'
+import TourDetailHero from '../shared/TourDetailHero'
+import TourSectionNav from '../shared/TourSectionNav'
+import TourSidebarBooking from '../shared/TourSidebarBooking'
 import FadeUp from '../shared/FadeUp'
 import Accordion from '../shared/Accordion'
-import PricingGrid from '../shared/PricingGrid'
+import PricingGrid, { getStartingPrice } from '../shared/PricingGrid'
 import IncludedNotIncluded from '../shared/IncludedNotIncluded'
 import TourInquiryForm from '../shared/TourInquiryForm'
 import Gallery from '../shared/Gallery'
@@ -11,29 +13,6 @@ import MapboxMap from '../shared/MapboxMap'
 import { tours } from '../../data/tours'
 import useT from '../../i18n/useT'
 import { I18nContext } from '../../i18n/I18nProvider'
-
-function Submenu({ t }) {
-  const handleClick = (e, id) => {
-    e.preventDefault()
-    const el = document.getElementById(id)
-    if (el) el.scrollIntoView({ behavior: 'smooth' })
-  }
-
-  return (
-    <div className="submenu">
-      <nav>
-        <ul>
-          <li><a href="#overview" onClick={(e) => handleClick(e, 'overview')}>{t('tour.overview')}</a></li>
-          <li><a href="#itinerary" onClick={(e) => handleClick(e, 'itinerary')}>{t('tour.itinerary')}</a></li>
-          <li><a href="#pricing" onClick={(e) => handleClick(e, 'pricing')}>{t('tour.pricing')}</a></li>
-          <li><a href="#gallery" onClick={(e) => handleClick(e, 'gallery')}>{t('tour.gallery')}</a></li>
-          <li><a href="#book" onClick={(e) => handleClick(e, 'book')}>{t('tour.book')}</a></li>
-          <li><a href="#tour-map" onClick={(e) => handleClick(e, 'tour-map')}>{t('tour.map')}</a></li>
-        </ul>
-      </nav>
-    </div>
-  )
-}
 
 export default function TourDetailPage() {
   const { slug } = useParams()
@@ -46,9 +25,24 @@ export default function TourDetailPage() {
 
   const tour = tours.find((t) => t.slug === slug)
 
+  const navSections = useMemo(() => {
+    if (!tour) return []
+    const sections = [
+      { id: 'overview', labelKey: 'tour.overview' },
+    ]
+    const tt = tourTranslations?.[tour.slug]
+    const itinerary = tt?.itinerary || tour.itinerary
+    if (itinerary?.length > 0) sections.push({ id: 'itinerary', labelKey: 'tour.itinerary' })
+    if (tour.accommodations || tour.pricing) sections.push({ id: 'pricing', labelKey: 'tour.pricing' })
+    if (tour.gallery?.length > 0) sections.push({ id: 'gallery', labelKey: 'tour.gallery' })
+    sections.push({ id: 'book', labelKey: 'tour.book' })
+    if (tour.map?.center) sections.push({ id: 'tour-map', labelKey: 'tour.map' })
+    return sections
+  }, [tour, tourTranslations])
+
   if (!tour) {
     return (
-      <section className="page-items" style={{ textAlign: 'center', minHeight: '50vh', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+      <section className="td-not-found">
         <div>
           <h2>{t('tour.notFound')}</h2>
           <p>{t('tour.notFoundText')}</p>
@@ -63,92 +57,139 @@ export default function TourDetailPage() {
   const includedItems = tt?.included || tour.included
   const notIncludedItems = tt?.notIncluded || tour.notIncluded
 
+  // Extract starting price
+  const startingPrice = isGroup
+    ? (tour.pricePerPerson ? parseFloat(tour.pricePerPerson.replace(/[^0-9.]/g, '')) : null)
+    : getStartingPrice(tour.pricing)
+
+  // First 4 included items for overview highlights
+  const highlightItems = includedItems ? includedItems.slice(0, 4) : []
+
   return (
     <>
-      <HeroSection image={tour.heroImage} title={tt?.title || tour.title} />
-      <Submenu t={t} />
+      <TourDetailHero
+        tour={tour}
+        translatedTitle={tt?.title}
+        isGroup={isGroup}
+        startingPrice={startingPrice}
+      />
 
-      {/* Overview */}
-      <section id="overview" className="page-items">
-        <FadeUp>
-          <h2 style={{ textAlign: 'center' }}>{t('tour.overview')}</h2>
-          <p>{tt?.description || tour.description}</p>
-        </FadeUp>
-      </section>
+      <TourSectionNav sections={navSections} />
 
-      {/* Group Tour Summary */}
-      {isGroup && (tt?.groupSummary || tour.groupSummary) && (
-        <section className="page-items">
-          <FadeUp>
-            <div className="tour-group-summary">
-              {(tt?.groupSummary || tour.groupSummary).map((item, i) => (
-                <div key={i} className="summary-item">
-                  <strong>{item.label}</strong>
-                  {item.type === 'dates' ? (
-                    <div className="dates-list">
-                      {item.values.map((v, j) => (
-                        <div key={j} className="date-range">{v}</div>
-                      ))}
+      <div className="td-layout">
+        <main className="td-main">
+          {/* Overview */}
+          <section id="overview" className="td-section">
+            <FadeUp>
+              <h2 className="td-section__title">{t('tour.overview')}</h2>
+              <p className="td-overview__text">{tt?.description || tour.description}</p>
+
+              {highlightItems.length > 0 && (
+                <div className="td-overview__highlights">
+                  {highlightItems.map((item, i) => (
+                    <div key={i} className="td-overview__highlight">
+                      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#4caf50" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+                        <polyline points="20 6 9 17 4 12"/>
+                      </svg>
+                      <span>{item.replace(/;$/, '')}</span>
                     </div>
-                  ) : (
-                    <div>{item.value}</div>
-                  )}
+                  ))}
                 </div>
-              ))}
-            </div>
-          </FadeUp>
-        </section>
-      )}
+              )}
+            </FadeUp>
+          </section>
 
-      {/* Itinerary */}
-      {itineraryItems && itineraryItems.length > 0 && (
-        <section id="itinerary" className="page-items">
-          <Accordion items={itineraryItems} />
-        </section>
-      )}
+          {/* Group Tour Summary */}
+          {isGroup && (tt?.groupSummary || tour.groupSummary) && (
+            <section className="td-section">
+              <FadeUp>
+                <div className="tour-group-summary">
+                  {(tt?.groupSummary || tour.groupSummary).map((item, i) => (
+                    <div key={i} className="summary-item">
+                      <strong>{item.label}</strong>
+                      {item.type === 'dates' ? (
+                        <div className="dates-list">
+                          {item.values.map((v, j) => (
+                            <div key={j} className="date-range">{v}</div>
+                          ))}
+                        </div>
+                      ) : (
+                        <div>{item.value}</div>
+                      )}
+                    </div>
+                  ))}
+                </div>
+              </FadeUp>
+            </section>
+          )}
 
-      {/* Pricing */}
-      {(tour.accommodations || tour.pricing) && (
-        <PricingGrid
-          accommodations={tour.accommodations}
-          pricing={tour.pricing}
-        />
-      )}
+          {/* Included / Not Included */}
+          {(includedItems || notIncludedItems) && (
+            <section className="td-section">
+              <FadeUp>
+                <IncludedNotIncluded
+                  included={includedItems}
+                  notIncluded={notIncludedItems}
+                />
+              </FadeUp>
+            </section>
+          )}
 
-      {/* Included / Not Included */}
-      {(includedItems || notIncludedItems) && (
-        <section className="page-items">
-          <FadeUp>
-            <IncludedNotIncluded
-              included={includedItems}
-              notIncluded={notIncludedItems}
+          {/* Itinerary */}
+          {itineraryItems && itineraryItems.length > 0 && (
+            <section id="itinerary" className="td-section">
+              <FadeUp>
+                <Accordion items={itineraryItems} itinerary />
+              </FadeUp>
+            </section>
+          )}
+
+          {/* Pricing */}
+          {(tour.accommodations || tour.pricing) && (
+            <PricingGrid
+              accommodations={tour.accommodations}
+              pricing={tour.pricing}
             />
-          </FadeUp>
-        </section>
-      )}
+          )}
 
-      {/* Booking Form */}
-      <section id="book" className="page-items" style={{ backgroundColor: 'var(--color-h2)', color: 'var(--color-bg)' }}>
-        <FadeUp>
-          <h2 style={{ textAlign: 'center', color: 'var(--color-h3)' }}>{t('tour.bookThisTour')}</h2>
-          <TourInquiryForm tourTitle={tour.tourFormTitle || tour.title} isGroupTour={isGroup} />
-        </FadeUp>
-      </section>
+          {/* Gallery */}
+          {tour.gallery && tour.gallery.length > 0 && (
+            <section id="gallery" className="td-section">
+              <Gallery images={tour.gallery} />
+            </section>
+          )}
 
-      {/* Gallery */}
-      {tour.gallery && tour.gallery.length > 0 && (
-        <Gallery images={tour.gallery} />
-      )}
+          {/* Booking Form */}
+          <section id="book" className="td-section td-book-inline">
+            <FadeUp>
+              <h2 className="td-section__title">{t('tour.bookThisTour')}</h2>
+              <TourInquiryForm tourTitle={tour.tourFormTitle || tour.title} isGroupTour={isGroup} />
+            </FadeUp>
+          </section>
+        </main>
+
+        <TourSidebarBooking
+          tour={tour}
+          startingPrice={startingPrice}
+          isGroup={isGroup}
+        />
+      </div>
 
       {/* Map */}
       {tour.map && tour.map.center && (
-        <MapboxMap
-          id="tour-map"
-          center={tour.map.center}
-          zoom={tour.map.zoom || 8}
-          markers={tour.map.markers || []}
-          routeCoordinates={tour.map.routeCoordinates || []}
-        />
+        <section id="tour-map" className="td-map-section">
+          <div className="td-map-card">
+            <h2 className="td-section__title">{t('tour.routeMap')}</h2>
+            <MapboxMap
+              id="tour-map-canvas"
+              center={tour.map.center}
+              zoom={tour.map.zoom || 8}
+              markers={tour.map.markers || []}
+              routeCoordinates={tour.map.routeCoordinates || []}
+              className="td-map"
+            />
+          </div>
+        </section>
       )}
     </>
   )
