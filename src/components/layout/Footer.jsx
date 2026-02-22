@@ -1,5 +1,4 @@
 import { contactInfo } from '../../data/siteData'
-import { tours } from '../../data/tours'
 import useT from '../../i18n/useT'
 import LocaleLink from '../../i18n/LocaleLink'
 import LanguageSwitcher from './LanguageSwitcher'
@@ -8,9 +7,6 @@ import asset from '../../utils/basePath'
 export default function Footer({ variant = 'default' }) {
   const isTaxi = variant === 'taxi'
   const t = useT()
-
-  const groupTours = tours.filter((tour) => tour.type === 'group')
-  const privateTours = tours.filter((tour) => tour.type === 'private')
 
   return (
     <footer className={isTaxi ? 'taxi-footer' : ''}>
@@ -46,31 +42,16 @@ export default function Footer({ variant = 'default' }) {
           </ul>
         </div>
 
-        {/* Group Tours column */}
+        {/* Tours column */}
         <div className="footer-col">
           <h4 className="footer-col__title">{t('footer.groupTours')}</h4>
           <ul className="footer-col__list">
             <li><LocaleLink to="/group-tours">{t('footer.allGroupTours')}</LocaleLink></li>
-            {groupTours.map((tour) => (
-              <li key={tour.slug}>
-                <LocaleLink to={`/group-tours/${tour.slug}`}>{tour.title}</LocaleLink>
-              </li>
-            ))}
           </ul>
-        </div>
 
-        {/* Private Tours column */}
-        <div className="footer-col">
-          <h4 className="footer-col__title">{t('footer.privateTours')}</h4>
+          <h4 className="footer-col__title footer-col__title--mt">{t('footer.privateTours')}</h4>
           <ul className="footer-col__list">
             <li><LocaleLink to="/private-tours">{t('footer.allPrivateTours')}</LocaleLink></li>
-            {privateTours.map((tour) => (
-              <li key={tour.slug}>
-                <LocaleLink to={`/private-tours/${tour.slug}`}>
-                  {tour.days} {t('tour.days')} — {tour.title}
-                </LocaleLink>
-              </li>
-            ))}
           </ul>
         </div>
 
