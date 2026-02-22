@@ -42,6 +42,56 @@ export default function HomePage() {
         </div>
       </section>
 
+      {(() => {
+        const groupTour = tours.find((tour) => tour.type === 'group')
+        if (!groupTour) return null
+        const tt = tourTranslations?.[groupTour.slug]
+        return (
+          <section className="home-items">
+            <div className="tour-listing">
+              <FadeUp>
+                <div className="tour-item tour-item-card">
+                  <BlurUpBackground
+                    src={groupTour.listingImage || groupTour.heroImage}
+                    className="tour-image"
+                  />
+                  <div className="tour-info">
+                    <h2>
+                      <LocaleLink to={`/group-tours/${groupTour.slug}`}>{tt?.title || groupTour.title}</LocaleLink>
+                    </h2>
+                    <h3>{groupTour.days} {t('tour.days')}</h3>
+                    <p>{tt?.listingDescription || tt?.description || groupTour.listingDescription || groupTour.description}</p>
+                    <div className="more">
+                      <LocaleLink to={`/group-tours/${groupTour.slug}`}>{t('tour.moreInfo')}</LocaleLink>
+                    </div>
+                  </div>
+                  <div className="tour-data">
+                    {groupTour.groupDates && (
+                      <>
+                        <div className="available">{t('tour.availableDates')}</div>
+                        <div className="date-chips">
+                          {groupTour.groupDates.map((d, i) => (
+                            <div key={i} className="date-chip">
+                              <span className="date-range">{d.start} – {d.end}</span>
+                              <span className="date-year">{d.year}</span>
+                            </div>
+                          ))}
+                        </div>
+                      </>
+                    )}
+                    {groupTour.pricePerPerson && (
+                      <div style={{ marginTop: '1.6em' }}>
+                        <strong>{t('tour.fromPP', { price: groupTour.pricePerPerson })}</strong>
+                      </div>
+                    )}
+                  </div>
+                </div>
+              </FadeUp>
+            </div>
+          </section>
+        )
+      })()}
+
       <section className="home-items">
         <div className="tours-grid-container">
           <FadeUp>
