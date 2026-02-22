@@ -1453,6 +1453,24 @@ tour-info h2 a,
 .incl__icon--no {
   color: #e53935;
 }
+.incl__context-icon {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  border-radius: 6px;
+  margin-top: 1px;
+}
+.incl__context-icon--yes {
+  background: rgba(76, 175, 80, 0.1);
+  color: #4caf50;
+}
+.incl__context-icon--no {
+  background: rgba(229, 57, 53, 0.1);
+  color: #e53935;
+}
 
 /* Inline Booking Section */
 .td-book-inline {
@@ -3705,8 +3723,8 @@ select option:checked {
 @media (max-width: 900px) {
   .lang-switcher {
     right: 70px;
-    top: 50%;
-    transform: translateY(-50%);
+    top: 20px;
+    transform: none;
   }
   .hamburger {
     top: 50%;
