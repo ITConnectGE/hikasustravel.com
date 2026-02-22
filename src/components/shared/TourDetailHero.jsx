@@ -60,10 +60,6 @@ export default function TourDetailHero({ tour, translatedTitle, isGroup, startin
           </span>
         </div>
 
-        {priceDisplay && (
-          <div className="td-hero__price">{priceDisplay}</div>
-        )}
-
         <div className="td-hero__actions">
           <a href="#book" onClick={scrollToBook} className="td-hero__cta">
             {t('tour.bookThisTour')}

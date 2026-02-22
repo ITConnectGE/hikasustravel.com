@@ -2605,6 +2605,19 @@ select option:checked {
   border-bottom: 2px solid var(--color-h3);
 }
 
+/* Taxi Service */
+.taxi-service > div {
+  max-width: 800px;
+  margin: 0 auto;
+}
+.taxi-service p {
+  max-width: none;
+  width: auto;
+  font-size: calc(var(--font-size) * 1.05);
+  line-height: 1.8;
+  text-align: center;
+}
+
 /* About Georgia */
 .about-georgia > div {
   max-width: 800px;
