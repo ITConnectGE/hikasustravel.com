@@ -2,7 +2,6 @@ import { useContext, useEffect, useMemo } from 'react'
 import { useParams } from 'react-router-dom'
 import TourDetailHero from '../shared/TourDetailHero'
 import TourSectionNav from '../shared/TourSectionNav'
-import TourSidebarBooking from '../shared/TourSidebarBooking'
 import FadeUp from '../shared/FadeUp'
 import Accordion from '../shared/Accordion'
 import PricingGrid, { getStartingPrice } from '../shared/PricingGrid'
@@ -205,12 +204,6 @@ export default function TourDetailPage() {
             </FadeUp>
           </section>
         </main>
-
-        <TourSidebarBooking
-          tour={tour}
-          startingPrice={startingPrice}
-          isGroup={isGroup}
-        />
       </div>
 
       {/* Map */}

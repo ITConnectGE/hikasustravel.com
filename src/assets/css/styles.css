@@ -1107,16 +1107,9 @@ tour-info h2 a,
 
 /* Layout */
 .td-layout {
-  max-width: 1200px;
+  max-width: 900px;
   margin: 0 auto;
   padding: 0 var(--indent);
-  display: grid;
-  grid-template-columns: 1fr 380px;
-  gap: calc(var(--indent) * 1.5);
-  align-items: start;
-}
-.td-main {
-  min-width: 0;
 }
 
 /* Sections */
@@ -1715,141 +1708,6 @@ tour-info h2 a,
   margin-top: 3px;
 }
 
-/* Sidebar Booking Card */
-.td-sidebar {
-  position: sticky;
-  top: 120px;
-  align-self: start;
-}
-.td-sidebar__card {
-  background: #fff;
-  border-radius: 16px;
-  padding: calc(var(--indent) * 1.2);
-  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.08);
-  border: 1px solid rgba(43, 78, 71, 0.08);
-}
-.td-sidebar__price-block {
-  text-align: center;
-  margin-bottom: 20px;
-  padding-bottom: 20px;
-  border-bottom: 1px solid rgba(43, 78, 71, 0.1);
-}
-.td-sidebar__price-label {
-  display: block;
-  font-size: 13px;
-  color: #888;
-  margin-bottom: 4px;
-}
-.td-sidebar__price {
-  font-family: "rockwell";
-  font-size: 2rem;
-  font-weight: 700;
-  color: var(--color-h2);
-  letter-spacing: -0.5px;
-}
-.td-sidebar__price-pp {
-  font-size: 14px;
-  color: #888;
-  margin-left: 4px;
-}
-.td-sidebar__badges {
-  display: flex;
-  gap: 8px;
-  flex-wrap: wrap;
-  margin-bottom: 20px;
-}
-.td-sidebar__badge {
-  display: inline-flex;
-  align-items: center;
-  gap: 5px;
-  background: rgba(43, 78, 71, 0.06);
-  color: var(--color-h2);
-  padding: 5px 12px;
-  border-radius: 16px;
-  font-size: 12px;
-  font-family: "rockwell";
-}
-.td-sidebar__submit {
-  display: block;
-  width: 100%;
-  padding: 14px;
-  background: var(--color-h3);
-  color: var(--color-h2);
-  border: none;
-  border-radius: 10px;
-  font-family: "rockwell";
-  font-size: 16px;
-  font-weight: 700;
-  cursor: pointer;
-  text-align: center;
-  text-decoration: none;
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
-  box-sizing: border-box;
-}
-.td-sidebar__submit:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 6px 20px rgba(252, 192, 19, 0.3);
-}
-.td-sidebar__trust {
-  font-size: 12px;
-  color: #888;
-  text-align: center;
-  margin-top: 12px;
-  font-style: italic;
-}
-
-/* Mobile Bottom Bar */
-.td-mobile-bar {
-  display: none;
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  z-index: 900;
-  background: #fff;
-  border-top: 1px solid rgba(43, 78, 71, 0.1);
-  box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.08);
-  padding: 12px 20px;
-  align-items: center;
-  justify-content: space-between;
-  gap: 16px;
-}
-.td-mobile-bar__price {
-  display: flex;
-  flex-direction: column;
-}
-.td-mobile-bar__price-label {
-  font-size: 11px;
-  color: #888;
-}
-.td-mobile-bar__price-value {
-  font-family: "rockwell";
-  font-size: 1.2rem;
-  font-weight: 700;
-  color: var(--color-h2);
-}
-.td-mobile-bar__price-value small {
-  font-size: 12px;
-  font-weight: 400;
-  color: #888;
-}
-.td-mobile-bar__cta {
-  display: inline-block;
-  background: var(--color-h3);
-  color: var(--color-h2);
-  padding: 12px 28px;
-  border-radius: 10px;
-  text-decoration: none;
-  font-family: "rockwell";
-  font-size: 15px;
-  font-weight: 700;
-  white-space: nowrap;
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
-}
-.td-mobile-bar__cta:hover {
-  transform: translateY(-1px);
-  box-shadow: 0 4px 14px rgba(252, 192, 19, 0.3);
-}
 
 /* Pricing Cards */
 .td-price-cards {
@@ -2665,20 +2523,8 @@ select option:checked {
   text-align: right;
 }
 
-/* Responsive <=900px - Sidebar/Layout */
+/* Responsive <=900px */
 @media (max-width: 900px) {
-  .td-layout {
-    display: block;
-  }
-  .td-sidebar {
-    display: none;
-  }
-  .td-mobile-bar {
-    display: flex;
-  }
-  body {
-    padding-bottom: 72px;
-  }
   .td-hero__actions {
     flex-direction: column;
     align-items: center;
