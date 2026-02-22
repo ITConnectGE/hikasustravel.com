@@ -1,6 +1,7 @@
 import { contactInfo, footerLinks } from '../../data/siteData'
 import useT from '../../i18n/useT'
 import LocaleLink from '../../i18n/LocaleLink'
+import LanguageSwitcher from './LanguageSwitcher'
 
 export default function Footer({ variant = 'default' }) {
   const isTaxi = variant === 'taxi'
@@ -35,6 +36,8 @@ export default function Footer({ variant = 'default' }) {
           </LocaleLink>
         ))}
       </nav>
+
+      <LanguageSwitcher />
     </footer>
   )
 }
