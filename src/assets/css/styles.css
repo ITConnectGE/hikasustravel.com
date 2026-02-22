@@ -3224,7 +3224,7 @@ select option:checked {
   bottom: 0;
   left: 0;
   right: 0;
-  background: linear-gradient(to top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0));
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0));
   color: white;
   padding: calc(var(--indent) / 1.5);
   display: flex;
@@ -3242,7 +3242,7 @@ select option:checked {
   margin: 0 0 4px 0;
   font-size: calc(var(--font-size) * 0.9);
   padding-bottom: 0;
-  opacity: 0;
+  opacity: 1;
   transition: opacity 0.3s ease;
 }
 
@@ -3254,7 +3254,7 @@ select option:checked {
   margin: 0;
   font-size: calc(var(--font-size) * 0.8);
   color: #ddd;
-  opacity: 0;
+  opacity: 1;
   transition: opacity 0.3s ease;
 }
 
