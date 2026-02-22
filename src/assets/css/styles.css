@@ -2620,6 +2620,10 @@ select option:checked {
 }
 
 /* Contact */
+.contact > div {
+  max-width: 800px;
+  margin: 0 auto;
+}
 .contact-flag {
   font-size: calc(var(--font-size) * 1.2);
   margin-right: 4px;
