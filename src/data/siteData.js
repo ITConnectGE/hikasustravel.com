@@ -25,5 +25,5 @@ export const contactInfo = {
   phoneGeorgia: '+995 551 098 077',
   email: 'info@hikasustravel.com',
   instagramUrl: 'https://www.instagram.com/hikasus_travel',
-  instagramHandle: '@hikasus_travel',
+  instagramHandle: 'hikasus_travel',
 }

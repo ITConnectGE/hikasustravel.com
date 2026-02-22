@@ -749,6 +749,9 @@ footer {
   color: var(--color-h2);
   border-bottom: 1px solid var(--color-h2);
 }
+.taxi-footer .footer-contacts a.instagram {
+  border-bottom: none;
+}
 
 .footer-menu {
   display: flex;
