@@ -45,7 +45,9 @@ export default function TourDetailPage() {
         name: 'Hikasus Travel',
         url: 'https://www.hikasustravel.com',
       },
-      ...(tour.heroImage && { image: `https://www.hikasustravel.com${tour.heroImage}` }),
+      ...(tour.gallery?.length > 0
+        ? { image: tour.gallery.map(img => `https://www.hikasustravel.com${img}`) }
+        : tour.heroImage && { image: `https://www.hikasustravel.com${tour.heroImage}` }),
       ...(tour.days && { itinerary: {
         '@type': 'ItemList',
         numberOfItems: tour.days,
