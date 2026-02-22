@@ -48,7 +48,7 @@ export default function HomePage() {
         const tt = tourTranslations?.[groupTour.slug]
         return (
           <section className="home-items">
-            <div className="tour-listing" style={{ background: 'none' }}>
+            <div className="tour-listing" style={{ background: 'none', maxWidth: '1600px' }}>
               <FadeUp>
                 <div className="tour-item tour-item-card">
                   <BlurUpBackground
