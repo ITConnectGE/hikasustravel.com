@@ -12,11 +12,14 @@ import Testimonials from '../shared/Testimonials'
 import MapboxMap from '../shared/MapboxMap'
 import { tours } from '../../data/tours'
 import useT from '../../i18n/useT'
+import useLang from '../../i18n/useLang'
 import { I18nContext } from '../../i18n/I18nProvider'
+import useSEO from '../../hooks/useSEO'
 
 export default function TourDetailPage() {
   const { slug } = useParams()
   const t = useT()
+  const { lang } = useLang()
   const { tourTranslations, loadTourTranslations } = useContext(I18nContext)
 
   useEffect(() => {
@@ -24,6 +27,38 @@ export default function TourDetailPage() {
   }, [tourTranslations, loadTourTranslations])
 
   const tour = tours.find((t) => t.slug === slug)
+  const tt = tourTranslations?.[slug]
+
+  const tourSeo = useMemo(() => {
+    if (!tour) return {}
+    const title = `${tt?.title || tour.title} | Hikasus Travel`
+    const description = (tt?.description || tour.description || '').slice(0, 160)
+    const prefix = tour.type === 'group' ? 'group-tours' : 'private-tours'
+    const jsonLd = {
+      '@context': 'https://schema.org',
+      '@type': 'TouristTrip',
+      name: tt?.title || tour.title,
+      description: tt?.description || tour.description,
+      touristType: tour.type === 'group' ? 'Group' : 'Private',
+      provider: {
+        '@type': 'TravelAgency',
+        name: 'Hikasus Travel',
+        url: 'https://www.hikasustravel.com',
+      },
+      ...(tour.heroImage && { image: `https://www.hikasustravel.com${tour.heroImage}` }),
+      ...(tour.days && { itinerary: {
+        '@type': 'ItemList',
+        numberOfItems: tour.days,
+        itemListElement: (tour.itinerary || []).map((day, i) => ({
+          '@type': 'ListItem',
+          position: i + 1,
+          name: day.title,
+        })),
+      }}),
+    }
+    return { title, description, path: `${prefix}/${slug}`, image: tour.heroImage, jsonLd }
+  }, [tour, tt, slug])
+  useSEO({ ...tourSeo, lang })
 
   const navSections = useMemo(() => {
     if (!tour) return []
@@ -51,7 +86,6 @@ export default function TourDetailPage() {
     )
   }
 
-  const tt = tourTranslations?.[tour.slug]
   const isGroup = tour.type === 'group'
   const itineraryItems = tt?.itinerary || tour.itinerary
   const includedItems = tt?.included || tour.included

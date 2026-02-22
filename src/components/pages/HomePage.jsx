@@ -5,12 +5,18 @@ import BlurUpBackground from '../shared/BlurUpBackground'
 import MapboxMap from '../shared/MapboxMap'
 import { tours } from '../../data/tours'
 import useT from '../../i18n/useT'
+import useLang from '../../i18n/useLang'
 import LocaleLink from '../../i18n/LocaleLink'
 import { I18nContext } from '../../i18n/I18nProvider'
+import useSEO from '../../hooks/useSEO'
+import { getSEO } from '../../data/seoData'
 
 export default function HomePage() {
   const t = useT()
+  const { lang } = useLang()
   const { tourTranslations, loadTourTranslations } = useContext(I18nContext)
+  const seo = getSEO('home', lang)
+  useSEO({ ...seo, lang, image: '/images/files/georgia-home.jpg' })
 
   // Eagerly load tour translations for homepage tiles
   if (!tourTranslations) loadTourTranslations()

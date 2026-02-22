@@ -3,11 +3,17 @@ import FadeUp from '../shared/FadeUp'
 import { startLocations, getStopsForStart, getStartsForStop, filterRoutes } from '../../data/shuttleData'
 import asset from '../../utils/basePath'
 import useT from '../../i18n/useT'
+import useLang from '../../i18n/useLang'
+import useSEO from '../../hooks/useSEO'
+import { getSEO } from '../../data/seoData'
 
 export default function ShuttleServicePage() {
   const [selectedStart, setSelectedStart] = useState('')
   const [selectedStop, setSelectedStop] = useState('')
   const t = useT()
+  const { lang } = useLang()
+  const seo = getSEO('shuttle', lang)
+  useSEO({ ...seo, lang, path: 'shuttle-service', image: '/images/files/taxi-service.jpg' })
 
   const availableStops = useMemo(() => getStopsForStart(selectedStart), [selectedStart])
   const availableStarts = useMemo(() => {

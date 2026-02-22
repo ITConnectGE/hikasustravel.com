@@ -3,14 +3,20 @@ import ToursHero from '../shared/ToursHero'
 import TourCard from '../shared/TourCard'
 import { tours } from '../../data/tours'
 import useT from '../../i18n/useT'
+import useLang from '../../i18n/useLang'
 import { I18nContext } from '../../i18n/I18nProvider'
+import useSEO from '../../hooks/useSEO'
+import { getSEO } from '../../data/seoData'
 
 export default function PrivateToursPage() {
   const privateTours = tours.filter((t) => t.type === 'private')
   const t = useT()
+  const { lang } = useLang()
   const { tourTranslations, loadTourTranslations } = useContext(I18nContext)
   const [search, setSearch] = useState('')
   const [sort, setSort] = useState('')
+  const seo = getSEO('privateTours', lang)
+  useSEO({ ...seo, lang, path: 'private-tours', image: '/images/files/georgia-tour-01.jpg' })
 
   useEffect(() => {
     if (!tourTranslations) loadTourTranslations()

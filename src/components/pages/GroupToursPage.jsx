@@ -4,13 +4,19 @@ import FadeUp from '../shared/FadeUp'
 import BlurUpBackground from '../shared/BlurUpBackground'
 import { tours } from '../../data/tours'
 import useT from '../../i18n/useT'
+import useLang from '../../i18n/useLang'
 import LocaleLink from '../../i18n/LocaleLink'
 import { I18nContext } from '../../i18n/I18nProvider'
+import useSEO from '../../hooks/useSEO'
+import { getSEO } from '../../data/seoData'
 
 export default function GroupToursPage() {
   const groupTours = tours.filter((t) => t.type === 'group')
   const t = useT()
+  const { lang } = useLang()
   const { tourTranslations, loadTourTranslations } = useContext(I18nContext)
+  const seo = getSEO('groupTours', lang)
+  useSEO({ ...seo, lang, path: 'group-tours', image: '/images/files/Gergeti-Church.jpg' })
 
   useEffect(() => {
     if (!tourTranslations) loadTourTranslations()
