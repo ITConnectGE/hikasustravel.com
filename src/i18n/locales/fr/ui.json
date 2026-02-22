@@ -30,6 +30,7 @@
   "tour.pricing": "Tarifs",
   "tour.gallery": "Galerie",
   "tour.gallerySubtitle": "Les lieux phares de ce circuit",
+  "tour.showMore": "Afficher {count} photos de plus",
   "tour.book": "Reserver",
   "tour.map": "Carte",
   "tour.bookThisTour": "Reserver ce tour",

@@ -30,6 +30,7 @@
   "tour.pricing": "Pricing",
   "tour.gallery": "Gallery",
   "tour.gallerySubtitle": "Location highlights from this tour",
+  "tour.showMore": "Show {count} more photos",
   "tour.book": "Book",
   "tour.map": "Map",
   "tour.bookThisTour": "Book This Tour",
