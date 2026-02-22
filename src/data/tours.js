@@ -119,66 +119,21 @@ export const tours = [
       "Travel insurance."
     ],
     "gallery": [
-      {
-        "src": "/images/files/georgia-tour-01.jpg",
-        "caption": "<p>Tbilisi</p>"
-      },
-      {
-        "src": "/images/files/georgia-tour-02.jpg",
-        "caption": "<p>Holy Trinity Cathedral of Tbilisi</p>"
-      },
-      {
-        "src": "/images/files/georgia-tour-03.jpg",
-        "caption": "<p>Old Tbilisi</p>"
-      },
-      {
-        "src": "/images/files/georgia-tour-04.jpg",
-        "caption": "<p>Ananuri Fortress</p>"
-      },
-      {
-        "src": "/images/files/georgia-tour-05.jpg",
-        "caption": "<p>Gergeti Trinity Church</p>"
-      },
-      {
-        "src": "/images/files/georgia-tour-06.jpg",
-        "caption": "<p>Stalin Museum</p>"
-      },
-      {
-        "src": "/images/files/georgia-tour-07.jpg",
-        "caption": "<p>Katskhi Pillar</p>"
-      },
-      {
-        "src": "/images/files/georgia-tour-08.jpg",
-        "caption": "<p>Prometheus Cave</p>"
-      },
-      {
-        "src": "/images/files/georgia-tour-09.jpg",
-        "caption": "<p>Kutaisi Green Bazaar</p>"
-      },
-      {
-        "src": "/images/files/georgia-tour-10.jpg",
-        "caption": "<p>Batumi</p>"
-      },
-      {
-        "src": "/images/files/georgia-tour-11.jpg",
-        "caption": "<p>Sighnaghi</p>"
-      },
-      {
-        "src": "/images/files/georgia-tour-12.jpg",
-        "caption": "<p>Tsinandali Estate</p>"
-      },
-      {
-        "src": "/images/files/georgia-tour-13.jpg",
-        "caption": "<p>Statue of King Erekle II</p>"
-      },
-      {
-        "src": "/images/files/georgia-tour-14.jpg",
-        "caption": "<p>Qvevri</p>"
-      },
-      {
-        "src": "/images/files/georgia-tour-15.jpg",
-        "caption": "<p>Georgian Supra</p>"
-      }
+      { "src": "/images/files/georgia-tour-01.jpg", "caption": "<p>Tbilisi</p>", "day": "Day 2" },
+      { "src": "/images/files/georgia-tour-02.jpg", "caption": "<p>Holy Trinity Cathedral of Tbilisi</p>", "day": "Day 2" },
+      { "src": "/images/files/georgia-tour-03.jpg", "caption": "<p>Old Tbilisi</p>", "day": "Day 2" },
+      { "src": "/images/files/georgia-tour-04.jpg", "caption": "<p>Ananuri Fortress</p>", "day": "Day 3" },
+      { "src": "/images/files/georgia-tour-05.jpg", "caption": "<p>Gergeti Trinity Church</p>", "day": "Day 4" },
+      { "src": "/images/files/georgia-tour-06.jpg", "caption": "<p>Stalin Museum</p>", "day": "Day 5" },
+      { "src": "/images/files/georgia-tour-07.jpg", "caption": "<p>Katskhi Pillar</p>", "day": "Day 6" },
+      { "src": "/images/files/georgia-tour-08.jpg", "caption": "<p>Prometheus Cave</p>", "day": "Day 7" },
+      { "src": "/images/files/georgia-tour-09.jpg", "caption": "<p>Kutaisi Green Bazaar</p>", "day": "Day 7" },
+      { "src": "/images/files/georgia-tour-10.jpg", "caption": "<p>Batumi</p>", "day": "Day 9" },
+      { "src": "/images/files/georgia-tour-11.jpg", "caption": "<p>Sighnaghi</p>", "day": "Day 12" },
+      { "src": "/images/files/georgia-tour-12.jpg", "caption": "<p>Tsinandali Estate</p>", "day": "Day 11" },
+      { "src": "/images/files/georgia-tour-13.jpg", "caption": "<p>Statue of King Erekle II</p>", "day": "Day 12" },
+      { "src": "/images/files/georgia-tour-14.jpg", "caption": "<p>Qvevri</p>", "day": "Day 11" },
+      { "src": "/images/files/georgia-tour-15.jpg", "caption": "<p>Georgian Supra</p>", "day": "Day 13" }
     ],
     "map": {
       "center": [
@@ -509,9 +464,9 @@ export const tours = [
       "Travel insurance."
     ],
     "gallery": [
-      { "src": "/images/files/georgia-tour-12.jpg", "caption": "Tsinandali Estate", "description": "Historic estate and birthplace of Georgian winemaking" },
-      { "src": "/images/files/georgia-tour-13.jpg", "caption": "Telavi", "description": "Capital of the Kakheti wine region" },
-      { "src": "/images/files/Gveleti-Waterfall.jpg", "caption": "Gveleti Waterfall", "description": "Beautiful waterfall near Stepantsminda" }
+      { "src": "/images/files/georgia-tour-12.jpg", "caption": "Tsinandali Estate", "description": "Historic estate and birthplace of Georgian winemaking", "day": "Day 1" },
+      { "src": "/images/files/georgia-tour-13.jpg", "caption": "Telavi", "description": "Capital of the Kakheti wine region", "day": "Day 3" },
+      { "src": "/images/files/Gveleti-Waterfall.jpg", "caption": "Gveleti Waterfall", "description": "Beautiful waterfall near Stepantsminda", "day": "Day 5" }
     ],
     "map": {
       "center": [
@@ -723,12 +678,12 @@ export const tours = [
       "Travel insurance."
     ],
     "gallery": [
-      { "src": "/images/files/sulfur-baths-wine-tour.jpg", "caption": "Tbilisi Sulfur Baths", "description": "Historic bathhouse district in Old Tbilisi" },
-      { "src": "/images/files/georgia-tour-01.jpg", "caption": "Tbilisi", "description": "Georgia's vibrant capital city" },
-      { "src": "/images/files/georgia-tour-03.jpg", "caption": "Old Tbilisi", "description": "Charming cobblestone streets and balconied houses" },
-      { "src": "/images/files/Gergeti-Church.jpg", "caption": "Gergeti Trinity Church", "description": "Iconic church with stunning Caucasus mountain views" },
-      { "src": "/images/files/georgia-tour-05.jpg", "caption": "Gergeti Trinity Church", "description": "Iconic church beneath Mount Kazbek" },
-      { "src": "/images/files/Kachka.jpg", "caption": "Caucasus Mountains", "description": "Breathtaking peaks of the Greater Caucasus" }
+      { "src": "/images/files/sulfur-baths-wine-tour.jpg", "caption": "Tbilisi Sulfur Baths", "description": "Historic bathhouse district in Old Tbilisi", "day": "Day 1" },
+      { "src": "/images/files/georgia-tour-01.jpg", "caption": "Tbilisi", "description": "Georgia's vibrant capital city", "day": "Day 1" },
+      { "src": "/images/files/georgia-tour-03.jpg", "caption": "Old Tbilisi", "description": "Charming cobblestone streets and balconied houses", "day": "Day 1" },
+      { "src": "/images/files/Gergeti-Church.jpg", "caption": "Gergeti Trinity Church", "description": "Iconic church with stunning Caucasus mountain views", "day": "Day 3" },
+      { "src": "/images/files/georgia-tour-05.jpg", "caption": "Gergeti Trinity Church", "description": "Iconic church beneath Mount Kazbek", "day": "Day 3" },
+      { "src": "/images/files/Kachka.jpg", "caption": "Caucasus Mountains", "description": "Breathtaking peaks of the Greater Caucasus", "day": "Day 2" }
     ],
     "map": {
       "center": [
@@ -974,12 +929,12 @@ export const tours = [
       "Travel insurance."
     ],
     "gallery": [
-      { "src": "/images/files/georgia-tour-02.jpg", "caption": "Holy Trinity Cathedral", "description": "The largest cathedral in Georgia, Tbilisi" },
-      { "src": "/images/files/georgia-tour-04.jpg", "caption": "Ananuri Fortress", "description": "Medieval fortress on the Aragvi River" },
-      { "src": "/images/files/georgia-tour-06.jpg", "caption": "Stalin Museum", "description": "Historic museum in Gori, Georgia" },
-      { "src": "/images/files/Gveleti-Waterfall.jpg", "caption": "Gveleti Waterfall", "description": "Beautiful waterfall near Stepantsminda" },
-      { "src": "/images/files/georgia-tour-08.jpg", "caption": "Prometheus Cave", "description": "Stunning underground cave with stalactites" },
-      { "src": "/images/files/georgia-tour-10.jpg", "caption": "Batumi", "description": "Black Sea coastal city with modern architecture" }
+      { "src": "/images/files/georgia-tour-02.jpg", "caption": "Holy Trinity Cathedral", "description": "The largest cathedral in Georgia, Tbilisi", "day": "Day 1" },
+      { "src": "/images/files/georgia-tour-04.jpg", "caption": "Ananuri Fortress", "description": "Medieval fortress on the Aragvi River", "day": "Day 2" },
+      { "src": "/images/files/georgia-tour-06.jpg", "caption": "Stalin Museum", "description": "Historic museum in Gori, Georgia", "day": "Day 2" },
+      { "src": "/images/files/Gveleti-Waterfall.jpg", "caption": "Gveleti Waterfall", "description": "Beautiful waterfall near Stepantsminda", "day": "Day 3" },
+      { "src": "/images/files/georgia-tour-08.jpg", "caption": "Prometheus Cave", "description": "Stunning underground cave with stalactites", "day": "Day 4" },
+      { "src": "/images/files/georgia-tour-10.jpg", "caption": "Batumi", "description": "Black Sea coastal city with modern architecture", "day": "Day 5" }
     ],
     "map": {
       "center": [
@@ -1193,12 +1148,12 @@ export const tours = [
       "Travel insurance."
     ],
     "gallery": [
-      { "src": "/images/files/cultural-wonders-kutaisi.jpg", "caption": "Kutaisi", "description": "Gateway to western Georgia's cultural treasures" },
-      { "src": "/images/files/georgia-tour-02.jpg", "caption": "Holy Trinity Cathedral", "description": "The largest cathedral in Georgia, Tbilisi" },
-      { "src": "/images/files/georgia-tour-07.jpg", "caption": "Katskhi Pillar", "description": "Ancient limestone monolith with a chapel on top" },
-      { "src": "/images/files/georgia-tour-09.jpg", "caption": "Kutaisi", "description": "Georgia's second-largest city and cultural hub" },
-      { "src": "/images/files/Gergeti-Church.jpg", "caption": "Gergeti Trinity Church", "description": "Iconic church with stunning Caucasus mountain views" },
-      { "src": "/images/files/georgia-tour-11.jpg", "caption": "Sighnaghi", "description": "The charming 'City of Love' in Kakheti" }
+      { "src": "/images/files/cultural-wonders-kutaisi.jpg", "caption": "Kutaisi", "description": "Gateway to western Georgia's cultural treasures", "day": "Day 1" },
+      { "src": "/images/files/georgia-tour-02.jpg", "caption": "Holy Trinity Cathedral", "description": "The largest cathedral in Georgia, Tbilisi", "day": "Day 4" },
+      { "src": "/images/files/georgia-tour-07.jpg", "caption": "Katskhi Pillar", "description": "Ancient limestone monolith with a chapel on top", "day": "Day 3" },
+      { "src": "/images/files/georgia-tour-09.jpg", "caption": "Kutaisi", "description": "Georgia's second-largest city and cultural hub", "day": "Day 2" },
+      { "src": "/images/files/Gergeti-Church.jpg", "caption": "Gergeti Trinity Church", "description": "Iconic church with stunning Caucasus mountain views", "day": "Day 5" },
+      { "src": "/images/files/georgia-tour-11.jpg", "caption": "Sighnaghi", "description": "The charming 'City of Love' in Kakheti", "day": "Day 6" }
     ],
     "map": {
       "center": [
@@ -1518,12 +1473,12 @@ export const tours = [
       "Travel insurance."
     ],
     "gallery": [
-      { "src": "/images/files/culture-nature-wine-tour.jpg", "caption": "Georgian Vineyard", "description": "Lush vineyards in the heart of Kakheti" },
-      { "src": "/images/files/georgia-tour-03.jpg", "caption": "Old Tbilisi", "description": "Charming cobblestone streets and balconied houses" },
-      { "src": "/images/files/georgia-tour-05.jpg", "caption": "Gergeti Trinity Church", "description": "Iconic church beneath Mount Kazbek" },
-      { "src": "/images/files/Kachka.jpg", "caption": "Caucasus Mountains", "description": "Breathtaking peaks of the Greater Caucasus" },
-      { "src": "/images/files/georgia-tour-12.jpg", "caption": "Tsinandali Estate", "description": "Historic estate and birthplace of Georgian winemaking" },
-      { "src": "/images/files/Gveleti-Waterfall.jpg", "caption": "Gveleti Waterfall", "description": "Beautiful waterfall near Stepantsminda" }
+      { "src": "/images/files/culture-nature-wine-tour.jpg", "caption": "Georgian Vineyard", "description": "Lush vineyards in the heart of Kakheti", "day": "Day 5" },
+      { "src": "/images/files/georgia-tour-03.jpg", "caption": "Old Tbilisi", "description": "Charming cobblestone streets and balconied houses", "day": "Day 1" },
+      { "src": "/images/files/georgia-tour-05.jpg", "caption": "Gergeti Trinity Church", "description": "Iconic church beneath Mount Kazbek", "day": "Day 3" },
+      { "src": "/images/files/Kachka.jpg", "caption": "Caucasus Mountains", "description": "Breathtaking peaks of the Greater Caucasus", "day": "Day 2" },
+      { "src": "/images/files/georgia-tour-12.jpg", "caption": "Tsinandali Estate", "description": "Historic estate and birthplace of Georgian winemaking", "day": "Day 5" },
+      { "src": "/images/files/Gveleti-Waterfall.jpg", "caption": "Gveleti Waterfall", "description": "Beautiful waterfall near Stepantsminda", "day": "Day 3" }
     ],
     "map": {
       "center": [
@@ -1803,12 +1758,12 @@ export const tours = [
       "Travel insurance."
     ],
     "gallery": [
-      { "src": "/images/files/cultural-adventure-caucasus.jpg", "caption": "Caucasus Adventure", "description": "Dramatic landscapes of the Georgian highlands" },
-      { "src": "/images/files/georgia-tour-01.jpg", "caption": "Tbilisi", "description": "Georgia's vibrant capital city" },
-      { "src": "/images/files/georgia-tour-06.jpg", "caption": "Stalin Museum", "description": "Historic museum in Gori, Georgia" },
-      { "src": "/images/files/georgia-tour-10.jpg", "caption": "Batumi", "description": "Black Sea coastal city with modern architecture" },
-      { "src": "/images/files/georgia-tour-14.jpg", "caption": "Qvevri Winemaking", "description": "Traditional Georgian clay vessel winemaking" },
-      { "src": "/images/files/Gergeti-Church.jpg", "caption": "Gergeti Trinity Church", "description": "Iconic church with stunning Caucasus mountain views" }
+      { "src": "/images/files/cultural-adventure-caucasus.jpg", "caption": "Caucasus Adventure", "description": "Dramatic landscapes of the Georgian highlands", "day": "Day 6" },
+      { "src": "/images/files/georgia-tour-01.jpg", "caption": "Tbilisi", "description": "Georgia's vibrant capital city", "day": "Day 1" },
+      { "src": "/images/files/georgia-tour-06.jpg", "caption": "Stalin Museum", "description": "Historic museum in Gori, Georgia", "day": "Day 7" },
+      { "src": "/images/files/georgia-tour-10.jpg", "caption": "Batumi", "description": "Black Sea coastal city with modern architecture", "day": "Day 4" },
+      { "src": "/images/files/georgia-tour-14.jpg", "caption": "Qvevri Winemaking", "description": "Traditional Georgian clay vessel winemaking", "day": "Day 5" },
+      { "src": "/images/files/Gergeti-Church.jpg", "caption": "Gergeti Trinity Church", "description": "Iconic church with stunning Caucasus mountain views", "day": "Day 7" }
     ],
     "map": {
       "center": [
@@ -2120,12 +2075,12 @@ export const tours = [
       "Travel insurance."
     ],
     "gallery": [
-      { "src": "/images/files/ultimate-exploration-kutaisi.jpg", "caption": "Gelati Monastery", "description": "UNESCO World Heritage Site near Kutaisi" },
-      { "src": "/images/files/georgia-tour-04.jpg", "caption": "Ananuri Fortress", "description": "Medieval fortress on the Aragvi River" },
-      { "src": "/images/files/georgia-tour-08.jpg", "caption": "Prometheus Cave", "description": "Stunning underground cave with stalactites" },
-      { "src": "/images/files/georgia-tour-11.jpg", "caption": "Sighnaghi", "description": "The charming 'City of Love' in Kakheti" },
-      { "src": "/images/files/Kachka.jpg", "caption": "Caucasus Mountains", "description": "Breathtaking peaks of the Greater Caucasus" },
-      { "src": "/images/files/georgia-tour-15.jpg", "caption": "Georgian Supra", "description": "Traditional feast celebrating Georgian hospitality" }
+      { "src": "/images/files/ultimate-exploration-kutaisi.jpg", "caption": "Gelati Monastery", "description": "UNESCO World Heritage Site near Kutaisi", "day": "Day 2" },
+      { "src": "/images/files/georgia-tour-04.jpg", "caption": "Ananuri Fortress", "description": "Medieval fortress on the Aragvi River", "day": "Day 5" },
+      { "src": "/images/files/georgia-tour-08.jpg", "caption": "Prometheus Cave", "description": "Stunning underground cave with stalactites", "day": "Day 3" },
+      { "src": "/images/files/georgia-tour-11.jpg", "caption": "Sighnaghi", "description": "The charming 'City of Love' in Kakheti", "day": "Day 6" },
+      { "src": "/images/files/Kachka.jpg", "caption": "Caucasus Mountains", "description": "Breathtaking peaks of the Greater Caucasus", "day": "Day 5" },
+      { "src": "/images/files/georgia-tour-15.jpg", "caption": "Georgian Supra", "description": "Traditional feast celebrating Georgian hospitality", "day": "Day 8" }
     ],
     "map": {
       "center": [
@@ -2256,12 +2211,12 @@ export const tours = [
       "Travel insurance."
     ],
     "gallery": [
-      { "src": "/images/files/wander-wonder-wine-tour.jpg", "caption": "Wine Country", "description": "Rolling hills and vineyards of eastern Georgia" },
-      { "src": "/images/files/georgia-tour-02.jpg", "caption": "Holy Trinity Cathedral", "description": "The largest cathedral in Georgia, Tbilisi" },
-      { "src": "/images/files/georgia-tour-09.jpg", "caption": "Kutaisi", "description": "Georgia's second-largest city and cultural hub" },
-      { "src": "/images/files/georgia-tour-13.jpg", "caption": "Telavi", "description": "Capital of the Kakheti wine region" },
-      { "src": "/images/files/Gveleti-Waterfall.jpg", "caption": "Gveleti Waterfall", "description": "Beautiful waterfall near Stepantsminda" },
-      { "src": "/images/files/georgia-tour-07.jpg", "caption": "Katskhi Pillar", "description": "Ancient limestone monolith with a chapel on top" }
+      { "src": "/images/files/wander-wonder-wine-tour.jpg", "caption": "Wine Country", "description": "Rolling hills and vineyards of eastern Georgia", "day": "Day 1" },
+      { "src": "/images/files/georgia-tour-02.jpg", "caption": "Holy Trinity Cathedral", "description": "The largest cathedral in Georgia, Tbilisi", "day": "Day 2" },
+      { "src": "/images/files/georgia-tour-09.jpg", "caption": "Kutaisi", "description": "Georgia's second-largest city and cultural hub", "day": "Day 4" },
+      { "src": "/images/files/georgia-tour-13.jpg", "caption": "Telavi", "description": "Capital of the Kakheti wine region", "day": "Day 5" },
+      { "src": "/images/files/Gveleti-Waterfall.jpg", "caption": "Gveleti Waterfall", "description": "Beautiful waterfall near Stepantsminda", "day": "Day 6" },
+      { "src": "/images/files/georgia-tour-07.jpg", "caption": "Katskhi Pillar", "description": "Ancient limestone monolith with a chapel on top", "day": "Day 8" }
     ],
     "map": {
       "center": [
@@ -2621,12 +2576,12 @@ export const tours = [
       "Travel insurance."
     ],
     "gallery": [
-      { "src": "/images/files/wine-caucasus-adventure.jpg", "caption": "Kakheti Wine Region", "description": "The cradle of winemaking with 8,000 years of history" },
-      { "src": "/images/files/georgia-tour-03.jpg", "caption": "Old Tbilisi", "description": "Charming cobblestone streets and balconied houses" },
-      { "src": "/images/files/georgia-tour-06.jpg", "caption": "Stalin Museum", "description": "Historic museum in Gori, Georgia" },
-      { "src": "/images/files/georgia-tour-12.jpg", "caption": "Tsinandali Estate", "description": "Historic estate and birthplace of Georgian winemaking" },
-      { "src": "/images/files/Gergeti-Church.jpg", "caption": "Gergeti Trinity Church", "description": "Iconic church with stunning Caucasus mountain views" },
-      { "src": "/images/files/georgia-tour-01.jpg", "caption": "Tbilisi", "description": "Georgia's vibrant capital city" }
+      { "src": "/images/files/wine-caucasus-adventure.jpg", "caption": "Kakheti Wine Region", "description": "The cradle of winemaking with 8,000 years of history", "day": "Day 6" },
+      { "src": "/images/files/georgia-tour-03.jpg", "caption": "Old Tbilisi", "description": "Charming cobblestone streets and balconied houses", "day": "Day 2" },
+      { "src": "/images/files/georgia-tour-06.jpg", "caption": "Stalin Museum", "description": "Historic museum in Gori, Georgia", "day": "Day 3" },
+      { "src": "/images/files/georgia-tour-12.jpg", "caption": "Tsinandali Estate", "description": "Historic estate and birthplace of Georgian winemaking", "day": "Day 7" },
+      { "src": "/images/files/Gergeti-Church.jpg", "caption": "Gergeti Trinity Church", "description": "Iconic church with stunning Caucasus mountain views", "day": "Day 4" },
+      { "src": "/images/files/georgia-tour-01.jpg", "caption": "Tbilisi", "description": "Georgia's vibrant capital city", "day": "Day 8" }
     ],
     "map": {
       "center": [
@@ -2949,12 +2904,12 @@ export const tours = [
       "Travel insurance."
     ],
     "gallery": [
-      { "src": "/images/files/georgia-10-days-celebration.jpg", "caption": "Georgian Feast", "description": "Celebrate with traditional food and wine" },
-      { "src": "/images/files/georgia-tour-05.jpg", "caption": "Gergeti Trinity Church", "description": "Iconic church beneath Mount Kazbek" },
-      { "src": "/images/files/georgia-tour-08.jpg", "caption": "Prometheus Cave", "description": "Stunning underground cave with stalactites" },
-      { "src": "/images/files/georgia-tour-14.jpg", "caption": "Qvevri Winemaking", "description": "Traditional Georgian clay vessel winemaking" },
-      { "src": "/images/files/Kachka.jpg", "caption": "Caucasus Mountains", "description": "Breathtaking peaks of the Greater Caucasus" },
-      { "src": "/images/files/georgia-tour-04.jpg", "caption": "Ananuri Fortress", "description": "Medieval fortress on the Aragvi River" }
+      { "src": "/images/files/georgia-10-days-celebration.jpg", "caption": "Georgian Feast", "description": "Celebrate with traditional food and wine", "day": "Day 1" },
+      { "src": "/images/files/georgia-tour-05.jpg", "caption": "Gergeti Trinity Church", "description": "Iconic church beneath Mount Kazbek", "day": "Day 3" },
+      { "src": "/images/files/georgia-tour-08.jpg", "caption": "Prometheus Cave", "description": "Stunning underground cave with stalactites", "day": "Day 6" },
+      { "src": "/images/files/georgia-tour-14.jpg", "caption": "Qvevri Winemaking", "description": "Traditional Georgian clay vessel winemaking", "day": "Day 7" },
+      { "src": "/images/files/Kachka.jpg", "caption": "Caucasus Mountains", "description": "Breathtaking peaks of the Greater Caucasus", "day": "Day 2" },
+      { "src": "/images/files/georgia-tour-04.jpg", "caption": "Ananuri Fortress", "description": "Medieval fortress on the Aragvi River", "day": "Day 2" }
     ],
     "map": {
       "center": [
@@ -3341,12 +3296,12 @@ export const tours = [
       "Travel insurance."
     ],
     "gallery": [
-      { "src": "/images/files/georgia-wonders-grand-tour.jpg", "caption": "Svaneti Towers", "description": "Medieval defensive towers in the mountains" },
-      { "src": "/images/files/georgia-tour-02.jpg", "caption": "Holy Trinity Cathedral", "description": "The largest cathedral in Georgia, Tbilisi" },
-      { "src": "/images/files/georgia-tour-10.jpg", "caption": "Batumi", "description": "Black Sea coastal city with modern architecture" },
-      { "src": "/images/files/georgia-tour-15.jpg", "caption": "Georgian Supra", "description": "Traditional feast celebrating Georgian hospitality" },
-      { "src": "/images/files/Gveleti-Waterfall.jpg", "caption": "Gveleti Waterfall", "description": "Beautiful waterfall near Stepantsminda" },
-      { "src": "/images/files/georgia-tour-06.jpg", "caption": "Stalin Museum", "description": "Historic museum in Gori, Georgia" }
+      { "src": "/images/files/georgia-wonders-grand-tour.jpg", "caption": "Svaneti Towers", "description": "Medieval defensive towers in the mountains", "day": "Day 1" },
+      { "src": "/images/files/georgia-tour-02.jpg", "caption": "Holy Trinity Cathedral", "description": "The largest cathedral in Georgia, Tbilisi", "day": "Day 7" },
+      { "src": "/images/files/georgia-tour-10.jpg", "caption": "Batumi", "description": "Black Sea coastal city with modern architecture", "day": "Day 5" },
+      { "src": "/images/files/georgia-tour-15.jpg", "caption": "Georgian Supra", "description": "Traditional feast celebrating Georgian hospitality", "day": "Day 4" },
+      { "src": "/images/files/Gveleti-Waterfall.jpg", "caption": "Gveleti Waterfall", "description": "Beautiful waterfall near Stepantsminda", "day": "Day 9" },
+      { "src": "/images/files/georgia-tour-06.jpg", "caption": "Stalin Museum", "description": "Historic museum in Gori, Georgia", "day": "Day 10" }
     ],
     "map": {
       "center": [
@@ -3497,12 +3452,12 @@ export const tours = [
       "Travel insurance."
     ],
     "gallery": [
-      { "src": "/images/files/ultimate-georgia-adventure.jpg", "caption": "Mestia", "description": "Gateway to Svaneti and the high Caucasus" },
-      { "src": "/images/files/georgia-tour-01.jpg", "caption": "Tbilisi", "description": "Georgia's vibrant capital city" },
-      { "src": "/images/files/georgia-tour-07.jpg", "caption": "Katskhi Pillar", "description": "Ancient limestone monolith with a chapel on top" },
-      { "src": "/images/files/georgia-tour-11.jpg", "caption": "Sighnaghi", "description": "The charming 'City of Love' in Kakheti" },
-      { "src": "/images/files/Gergeti-Church.jpg", "caption": "Gergeti Trinity Church", "description": "Iconic church with stunning Caucasus mountain views" },
-      { "src": "/images/files/georgia-tour-09.jpg", "caption": "Kutaisi", "description": "Georgia's second-largest city and cultural hub" }
+      { "src": "/images/files/ultimate-georgia-adventure.jpg", "caption": "Mestia", "description": "Gateway to Svaneti and the high Caucasus", "day": "Day 7" },
+      { "src": "/images/files/georgia-tour-01.jpg", "caption": "Tbilisi", "description": "Georgia's vibrant capital city", "day": "Day 1" },
+      { "src": "/images/files/georgia-tour-07.jpg", "caption": "Katskhi Pillar", "description": "Ancient limestone monolith with a chapel on top", "day": "Day 5" },
+      { "src": "/images/files/georgia-tour-11.jpg", "caption": "Sighnaghi", "description": "The charming 'City of Love' in Kakheti", "day": "Day 4" },
+      { "src": "/images/files/Gergeti-Church.jpg", "caption": "Gergeti Trinity Church", "description": "Iconic church with stunning Caucasus mountain views", "day": "Day 3" },
+      { "src": "/images/files/georgia-tour-09.jpg", "caption": "Kutaisi", "description": "Georgia's second-largest city and cultural hub", "day": "Day 6" }
     ],
     "map": {
       "center": [
@@ -3866,12 +3821,12 @@ export const tours = [
       "Travel insurance."
     ],
     "gallery": [
-      { "src": "/images/files/grand-georgia-cultural-journey.jpg", "caption": "Georgian Culture", "description": "Rich traditions spanning thousands of years" },
-      { "src": "/images/files/georgia-tour-03.jpg", "caption": "Old Tbilisi", "description": "Charming cobblestone streets and balconied houses" },
-      { "src": "/images/files/georgia-tour-05.jpg", "caption": "Gergeti Trinity Church", "description": "Iconic church beneath Mount Kazbek" },
-      { "src": "/images/files/georgia-tour-13.jpg", "caption": "Telavi", "description": "Capital of the Kakheti wine region" },
-      { "src": "/images/files/Kachka.jpg", "caption": "Caucasus Mountains", "description": "Breathtaking peaks of the Greater Caucasus" },
-      { "src": "/images/files/georgia-tour-08.jpg", "caption": "Prometheus Cave", "description": "Stunning underground cave with stalactites" }
+      { "src": "/images/files/grand-georgia-cultural-journey.jpg", "caption": "Georgian Culture", "description": "Rich traditions spanning thousands of years", "day": "Day 1" },
+      { "src": "/images/files/georgia-tour-03.jpg", "caption": "Old Tbilisi", "description": "Charming cobblestone streets and balconied houses", "day": "Day 8" },
+      { "src": "/images/files/georgia-tour-05.jpg", "caption": "Gergeti Trinity Church", "description": "Iconic church beneath Mount Kazbek", "day": "Day 11" },
+      { "src": "/images/files/georgia-tour-13.jpg", "caption": "Telavi", "description": "Capital of the Kakheti wine region", "day": "Day 5" },
+      { "src": "/images/files/Kachka.jpg", "caption": "Caucasus Mountains", "description": "Breathtaking peaks of the Greater Caucasus", "day": "Day 10" },
+      { "src": "/images/files/georgia-tour-08.jpg", "caption": "Prometheus Cave", "description": "Stunning underground cave with stalactites", "day": "Day 3" }
     ],
     "map": {
       "center": [
@@ -4040,12 +3995,12 @@ export const tours = [
       "Travel insurance."
     ],
     "gallery": [
-      { "src": "/images/files/svaneti-wine-culture-tour.jpg", "caption": "Upper Svaneti", "description": "UNESCO-listed mountain region with ancient towers" },
-      { "src": "/images/files/georgia-tour-04.jpg", "caption": "Ananuri Fortress", "description": "Medieval fortress on the Aragvi River" },
-      { "src": "/images/files/georgia-tour-10.jpg", "caption": "Batumi", "description": "Black Sea coastal city with modern architecture" },
-      { "src": "/images/files/georgia-tour-14.jpg", "caption": "Qvevri Winemaking", "description": "Traditional Georgian clay vessel winemaking" },
-      { "src": "/images/files/Gveleti-Waterfall.jpg", "caption": "Gveleti Waterfall", "description": "Beautiful waterfall near Stepantsminda" },
-      { "src": "/images/files/georgia-tour-02.jpg", "caption": "Holy Trinity Cathedral", "description": "The largest cathedral in Georgia, Tbilisi" }
+      { "src": "/images/files/svaneti-wine-culture-tour.jpg", "caption": "Upper Svaneti", "description": "UNESCO-listed mountain region with ancient towers", "day": "Day 10" },
+      { "src": "/images/files/georgia-tour-04.jpg", "caption": "Ananuri Fortress", "description": "Medieval fortress on the Aragvi River", "day": "Day 5" },
+      { "src": "/images/files/georgia-tour-10.jpg", "caption": "Batumi", "description": "Black Sea coastal city with modern architecture", "day": "Day 13" },
+      { "src": "/images/files/georgia-tour-14.jpg", "caption": "Qvevri Winemaking", "description": "Traditional Georgian clay vessel winemaking", "day": "Day 3" },
+      { "src": "/images/files/Gveleti-Waterfall.jpg", "caption": "Gveleti Waterfall", "description": "Beautiful waterfall near Stepantsminda", "day": "Day 6" },
+      { "src": "/images/files/georgia-tour-02.jpg", "caption": "Holy Trinity Cathedral", "description": "The largest cathedral in Georgia, Tbilisi", "day": "Day 1" }
     ],
     "map": {
       "center": [
@@ -4563,12 +4518,12 @@ export const tours = [
       "Travel insurance."
     ],
     "gallery": [
-      { "src": "/images/files/georgia-20-days-relaxation.jpg", "caption": "Black Sea Coast", "description": "Sun-kissed beaches and subtropical gardens" },
-      { "src": "/images/files/georgia-tour-06.jpg", "caption": "Stalin Museum", "description": "Historic museum in Gori, Georgia" },
-      { "src": "/images/files/georgia-tour-12.jpg", "caption": "Tsinandali Estate", "description": "Historic estate and birthplace of Georgian winemaking" },
-      { "src": "/images/files/georgia-tour-15.jpg", "caption": "Georgian Supra", "description": "Traditional feast celebrating Georgian hospitality" },
-      { "src": "/images/files/Gergeti-Church.jpg", "caption": "Gergeti Trinity Church", "description": "Iconic church with stunning Caucasus mountain views" },
-      { "src": "/images/files/georgia-tour-03.jpg", "caption": "Old Tbilisi", "description": "Charming cobblestone streets and balconied houses" }
+      { "src": "/images/files/georgia-20-days-relaxation.jpg", "caption": "Black Sea Coast", "description": "Sun-kissed beaches and subtropical gardens", "day": "Day 18" },
+      { "src": "/images/files/georgia-tour-06.jpg", "caption": "Stalin Museum", "description": "Historic museum in Gori, Georgia", "day": "Day 5" },
+      { "src": "/images/files/georgia-tour-12.jpg", "caption": "Tsinandali Estate", "description": "Historic estate and birthplace of Georgian winemaking", "day": "Day 4" },
+      { "src": "/images/files/georgia-tour-15.jpg", "caption": "Georgian Supra", "description": "Traditional feast celebrating Georgian hospitality", "day": "Day 2" },
+      { "src": "/images/files/Gergeti-Church.jpg", "caption": "Gergeti Trinity Church", "description": "Iconic church with stunning Caucasus mountain views", "day": "Day 7" },
+      { "src": "/images/files/georgia-tour-03.jpg", "caption": "Old Tbilisi", "description": "Charming cobblestone streets and balconied houses", "day": "Day 1" }
     ],
     "map": {
       "center": [

@@ -228,6 +228,10 @@ export default function TourDetailPage() {
           {/* Gallery */}
           {tour.gallery && tour.gallery.length > 0 && (
             <section id="gallery" className="td-section">
+              <FadeUp>
+                <h2 className="td-section__title">{t('tour.gallery')}</h2>
+                <p className="td-section__subtitle">{t('tour.gallerySubtitle')}</p>
+              </FadeUp>
               <Gallery images={tour.gallery} />
             </section>
           )}

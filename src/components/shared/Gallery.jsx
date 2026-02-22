@@ -9,10 +9,14 @@ export default function Gallery({ images }) {
       {images.map((img, index) => {
         const caption = img.caption ? img.caption.replace(/<[^>]*>/g, '') : ''
         const description = img.description || ''
+        const day = img.day || ''
         return (
           <FadeUp key={index}>
             <div className="gallery-card">
-              <BlurUpBackground src={img.src} className="gallery-card__img" />
+              <div className="gallery-card__img-wrap">
+                <BlurUpBackground src={img.src} className="gallery-card__img" />
+                {day && <span className="gallery-card__day">{day}</span>}
+              </div>
               {(caption || description) && (
                 <div className="gallery-card__info">
                   {caption && <h4 className="gallery-card__location">{caption}</h4>}

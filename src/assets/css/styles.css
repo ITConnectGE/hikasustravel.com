@@ -1935,6 +1935,13 @@ ul {
 .tour-map-container.map-interactive::after {
   display: none;
 }
+.td-section__subtitle {
+  font-size: calc(var(--font-size) * 0.9);
+  color: var(--color-text);
+  opacity: 0.7;
+  margin: -8px 0 24px;
+}
+
 /* Gallery Card Grid */
 .gallery-grid {
   display: grid;
@@ -1955,11 +1962,27 @@ ul {
   transform: translateY(-4px);
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.14);
 }
+.gallery-card__img-wrap {
+  position: relative;
+}
 .gallery-card__img {
   width: 100%;
   aspect-ratio: 4 / 3;
   background-size: cover;
   background-position: center;
+}
+.gallery-card__day {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background: var(--color-h2);
+  color: var(--color-bg);
+  font-size: 12px;
+  font-weight: 600;
+  padding: 4px 10px;
+  border-radius: 4px;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
 }
 .gallery-card__info {
   padding: 14px 16px;
