@@ -3427,6 +3427,16 @@ select option:checked {
 @media (max-width: 900px) {
   .lang-switcher {
     right: 70px;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  .hamburger {
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  .hamburger.active {
+    top: 50%;
+    transform: translateY(-50%);
   }
 }
 
