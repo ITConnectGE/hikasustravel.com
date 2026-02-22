@@ -2940,11 +2940,11 @@ select option:checked {
   .footer-top {
     grid-template-columns: 1fr 1fr;
     gap: calc(var(--indent) * 1.2);
+    text-align: center;
   }
   .footer-col--brand {
     grid-column: 1 / -1;
     padding-right: 0;
-    text-align: center;
   }
   .td-hero__actions {
     flex-direction: column;
