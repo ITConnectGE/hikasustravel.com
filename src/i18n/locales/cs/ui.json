@@ -105,5 +105,14 @@
   "tour.bookNow": "Rezervovat nyni",
   "pricing.mostPopular": "Nejoblibenejsi",
   "sidebar.startingFrom": "Od",
-  "pricing.perPerson": "za osobu"
+  "pricing.perPerson": "za osobu",
+  "benefits.title": "Proc cestovat s nami",
+  "benefits.prices": "Zaruka nejlepsi ceny",
+  "benefits.pricesText": "Spolupracujeme primo s mistnimi partnery bez prostedniku — ziskate premiove zazitky za lepsi ceny.",
+  "benefits.planned": "Vse naplanujeme za vas",
+  "benefits.plannedText": "Od vyzvednnuti na letisti po kazdy hotel, jidlo a aktivitu — cela vase cesta je organizovana do posledniho detailu.",
+  "benefits.relax": "My ridime, vy si uzivate",
+  "benefits.relaxText": "Zadne starosti s rezervacemi a logistikou. Nas tym se o vse postara na miste, abyste si mohli uzit Gruzii.",
+  "benefits.local": "Mistni odbornici, skryte poklady",
+  "benefits.localText": "Nasi pruvodci se v Gruzii narodili a vyrostli. Zavedou vas za hranice turistickych tras na autenticka mista."
 }

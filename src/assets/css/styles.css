@@ -1562,6 +1562,48 @@ tour-info h2 a,
   text-shadow: 0 1px 4px rgba(0, 0, 0, 0.3);
 }
 
+/* Benefits Section */
+.td-benefits__grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+.td-benefits__card {
+  background: #fff;
+  border-radius: 14px;
+  padding: calc(var(--indent) * 1.1);
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.04);
+  border: 1px solid rgba(43, 78, 71, 0.06);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.td-benefits__card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 24px rgba(0, 0, 0, 0.08);
+}
+.td-benefits__icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  border-radius: 12px;
+  background: rgba(252, 192, 19, 0.12);
+  color: var(--color-h3);
+  margin-bottom: 14px;
+}
+.td-benefits__card-title {
+  font-size: calc(var(--font-size) * 1.05);
+  color: var(--color-h2);
+  margin: 0;
+  padding-bottom: 8px;
+}
+.td-benefits__card-text {
+  font-size: 0.9em;
+  line-height: 1.65;
+  color: #666;
+  margin: 0;
+}
+
 /* Hero Secondary CTA */
 .td-hero__cta--secondary {
   background: transparent !important;
@@ -2566,6 +2608,9 @@ select option:checked {
     align-items: center;
   }
   .td-overview__highlights {
+    grid-template-columns: 1fr;
+  }
+  .td-benefits__grid {
     grid-template-columns: 1fr;
   }
   .td-price-cards {

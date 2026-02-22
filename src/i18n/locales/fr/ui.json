@@ -105,5 +105,14 @@
   "tour.bookNow": "Reserver maintenant",
   "pricing.mostPopular": "Le plus populaire",
   "sidebar.startingFrom": "A partir de",
-  "pricing.perPerson": "par personne"
+  "pricing.perPerson": "par personne",
+  "benefits.title": "Pourquoi voyager avec nous",
+  "benefits.prices": "Meilleurs prix garantis",
+  "benefits.pricesText": "Nous travaillons directement avec des partenaires locaux, sans intermediaires — vous beneficiez d'experiences premium a des prix plus avantageux.",
+  "benefits.planned": "Tout est organise pour vous",
+  "benefits.plannedText": "Du transfert aeroport a chaque hotel, repas et activite — votre voyage est planifie dans les moindres details avant votre arrivee.",
+  "benefits.relax": "Nous gerons, vous profitez",
+  "benefits.relaxText": "Plus besoin de jongler entre les reservations. Notre equipe gere tout sur place pour que vous puissiez profiter pleinement de la Georgie.",
+  "benefits.local": "Experts locaux, tresors caches",
+  "benefits.localText": "Nos guides sont nes et ont grandi en Georgie. Ils vous emmeneront au-dela des sentiers touristiques vers des lieux authentiques."
 }

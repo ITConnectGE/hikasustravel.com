@@ -105,5 +105,14 @@
   "tour.bookNow": "Book Now",
   "pricing.mostPopular": "Most Popular",
   "sidebar.startingFrom": "Starting from",
-  "pricing.perPerson": "per person"
+  "pricing.perPerson": "per person",
+  "benefits.title": "Why Travel With Us",
+  "benefits.prices": "Best Price Guarantee",
+  "benefits.pricesText": "We work directly with local partners, cutting out the middlemen — so you get premium experiences at better prices than booking separately.",
+  "benefits.planned": "Everything Planned For You",
+  "benefits.plannedText": "From airport pickup to every hotel, meal, and activity — your entire trip is organized down to the last detail before you arrive.",
+  "benefits.relax": "We Manage, You Relax",
+  "benefits.relaxText": "No juggling bookings or worrying about logistics. Our team handles everything on the ground so you can focus on enjoying Georgia.",
+  "benefits.local": "Local Experts, Hidden Gems",
+  "benefits.localText": "Our guides are born and raised in Georgia. They'll take you beyond the tourist trails to authentic places most visitors never discover."
 }
