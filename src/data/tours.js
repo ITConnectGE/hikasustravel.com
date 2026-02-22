@@ -731,7 +731,14 @@ export const tours = [
       "Additional hotel expenses;",
       "Travel insurance."
     ],
-    "gallery": [],
+    "gallery": [
+      "/images/files/sulfur-baths-wine-tour.jpg",
+      "/images/files/georgia-tour-01.jpg",
+      "/images/files/georgia-tour-03.jpg",
+      "/images/files/Gergeti-Church.jpg",
+      "/images/files/georgia-tour-05.jpg",
+      "/images/files/Kachka.jpg"
+    ],
     "map": {
       "center": [
         44.8271,
@@ -975,7 +982,14 @@ export const tours = [
       "Additional hotel expenses;",
       "Travel insurance."
     ],
-    "gallery": [],
+    "gallery": [
+      "/images/files/georgia-tour-02.jpg",
+      "/images/files/georgia-tour-04.jpg",
+      "/images/files/georgia-tour-06.jpg",
+      "/images/files/Gveleti-Waterfall.jpg",
+      "/images/files/georgia-tour-08.jpg",
+      "/images/files/georgia-tour-10.jpg"
+    ],
     "map": {
       "center": [
         44.8271,
@@ -1187,7 +1201,14 @@ export const tours = [
       "Additional hotel expenses;",
       "Travel insurance."
     ],
-    "gallery": [],
+    "gallery": [
+      "/images/files/cultural-wonders-kutaisi.jpg",
+      "/images/files/georgia-tour-02.jpg",
+      "/images/files/georgia-tour-07.jpg",
+      "/images/files/georgia-tour-09.jpg",
+      "/images/files/Gergeti-Church.jpg",
+      "/images/files/georgia-tour-11.jpg"
+    ],
     "map": {
       "center": [
         42.696,
@@ -1505,7 +1526,14 @@ export const tours = [
       "Additional hotel expenses;",
       "Travel insurance."
     ],
-    "gallery": [],
+    "gallery": [
+      "/images/files/culture-nature-wine-tour.jpg",
+      "/images/files/georgia-tour-03.jpg",
+      "/images/files/georgia-tour-05.jpg",
+      "/images/files/Kachka.jpg",
+      "/images/files/georgia-tour-12.jpg",
+      "/images/files/Gveleti-Waterfall.jpg"
+    ],
     "map": {
       "center": [
         44.8271,
@@ -1783,7 +1811,14 @@ export const tours = [
       "Additional hotel expenses;",
       "Travel insurance."
     ],
-    "gallery": [],
+    "gallery": [
+      "/images/files/cultural-adventure-caucasus.jpg",
+      "/images/files/georgia-tour-01.jpg",
+      "/images/files/georgia-tour-06.jpg",
+      "/images/files/georgia-tour-10.jpg",
+      "/images/files/georgia-tour-14.jpg",
+      "/images/files/Gergeti-Church.jpg"
+    ],
     "map": {
       "center": [
         44.8271,
@@ -2093,7 +2128,14 @@ export const tours = [
       "Additional hotel expenses;",
       "Travel insurance."
     ],
-    "gallery": [],
+    "gallery": [
+      "/images/files/ultimate-exploration-kutaisi.jpg",
+      "/images/files/georgia-tour-04.jpg",
+      "/images/files/georgia-tour-08.jpg",
+      "/images/files/georgia-tour-11.jpg",
+      "/images/files/Kachka.jpg",
+      "/images/files/georgia-tour-15.jpg"
+    ],
     "map": {
       "center": [
         42.696,
@@ -2222,7 +2264,14 @@ export const tours = [
       "Additional hotel expenses;",
       "Travel insurance."
     ],
-    "gallery": [],
+    "gallery": [
+      "/images/files/wander-wonder-wine-tour.jpg",
+      "/images/files/georgia-tour-02.jpg",
+      "/images/files/georgia-tour-09.jpg",
+      "/images/files/georgia-tour-13.jpg",
+      "/images/files/Gveleti-Waterfall.jpg",
+      "/images/files/georgia-tour-07.jpg"
+    ],
     "map": {
       "center": [
         44.8271,
@@ -2580,7 +2629,14 @@ export const tours = [
       "Additional hotel expenses;",
       "Travel insurance."
     ],
-    "gallery": [],
+    "gallery": [
+      "/images/files/wine-caucasus-adventure.jpg",
+      "/images/files/georgia-tour-03.jpg",
+      "/images/files/georgia-tour-06.jpg",
+      "/images/files/georgia-tour-12.jpg",
+      "/images/files/Gergeti-Church.jpg",
+      "/images/files/georgia-tour-01.jpg"
+    ],
     "map": {
       "center": [
         44.8271,
@@ -2901,7 +2957,14 @@ export const tours = [
       "Additional hotel expenses;",
       "Travel insurance."
     ],
-    "gallery": [],
+    "gallery": [
+      "/images/files/georgia-10-days-celebration.jpg",
+      "/images/files/georgia-tour-05.jpg",
+      "/images/files/georgia-tour-08.jpg",
+      "/images/files/georgia-tour-14.jpg",
+      "/images/files/Kachka.jpg",
+      "/images/files/georgia-tour-04.jpg"
+    ],
     "map": {
       "center": [
         44.8271,
@@ -3286,7 +3349,14 @@ export const tours = [
       "Additional hotel expenses;",
       "Travel insurance."
     ],
-    "gallery": [],
+    "gallery": [
+      "/images/files/georgia-wonders-grand-tour.jpg",
+      "/images/files/georgia-tour-02.jpg",
+      "/images/files/georgia-tour-10.jpg",
+      "/images/files/georgia-tour-15.jpg",
+      "/images/files/Gveleti-Waterfall.jpg",
+      "/images/files/georgia-tour-06.jpg"
+    ],
     "map": {
       "center": [
         42.696,
@@ -3435,7 +3505,14 @@ export const tours = [
       "Additional hotel expenses;",
       "Travel insurance."
     ],
-    "gallery": [],
+    "gallery": [
+      "/images/files/ultimate-georgia-adventure.jpg",
+      "/images/files/georgia-tour-01.jpg",
+      "/images/files/georgia-tour-07.jpg",
+      "/images/files/georgia-tour-11.jpg",
+      "/images/files/Gergeti-Church.jpg",
+      "/images/files/georgia-tour-09.jpg"
+    ],
     "map": {
       "center": [
         44.8271,
@@ -3797,7 +3874,14 @@ export const tours = [
       "Additional hotel expenses;",
       "Travel insurance."
     ],
-    "gallery": [],
+    "gallery": [
+      "/images/files/grand-georgia-cultural-journey.jpg",
+      "/images/files/georgia-tour-03.jpg",
+      "/images/files/georgia-tour-05.jpg",
+      "/images/files/georgia-tour-13.jpg",
+      "/images/files/Kachka.jpg",
+      "/images/files/georgia-tour-08.jpg"
+    ],
     "map": {
       "center": [
         42.696,
@@ -3964,7 +4048,14 @@ export const tours = [
       "Additional hotel expenses;",
       "Travel insurance."
     ],
-    "gallery": [],
+    "gallery": [
+      "/images/files/svaneti-wine-culture-tour.jpg",
+      "/images/files/georgia-tour-04.jpg",
+      "/images/files/georgia-tour-10.jpg",
+      "/images/files/georgia-tour-14.jpg",
+      "/images/files/Gveleti-Waterfall.jpg",
+      "/images/files/georgia-tour-02.jpg"
+    ],
     "map": {
       "center": [
         44.8271,
@@ -4480,7 +4571,14 @@ export const tours = [
       "Additional hotel expenses;",
       "Travel insurance."
     ],
-    "gallery": [],
+    "gallery": [
+      "/images/files/georgia-20-days-relaxation.jpg",
+      "/images/files/georgia-tour-06.jpg",
+      "/images/files/georgia-tour-12.jpg",
+      "/images/files/georgia-tour-15.jpg",
+      "/images/files/Gergeti-Church.jpg",
+      "/images/files/georgia-tour-03.jpg"
+    ],
     "map": {
       "center": [
         44.8271,
