@@ -63,6 +63,9 @@ export default function GroupToursPage() {
                       </div>
                     </>
                   )}
+                  {tour.pricePerPerson && (
+                    <div className="tour-data-price">€{tour.pricePerPerson}</div>
+                  )}
                 </div>
               </div>
             </FadeUp>

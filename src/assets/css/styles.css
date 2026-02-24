@@ -595,6 +595,13 @@ tour-info h2 a,
   opacity: 0.7;
   font-size: 11px;
 }
+.tour-data-price {
+  margin-top: 12px;
+  font-family: "rockwell";
+  font-size: 20px;
+  font-weight: bold;
+  text-align: center;
+}
 .more {
   padding-top: calc(1 * 1.6em);
 }

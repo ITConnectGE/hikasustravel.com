@@ -79,6 +79,9 @@ export default function HomePage() {
                         </div>
                       </>
                     )}
+                    {groupTour.pricePerPerson && (
+                      <div className="tour-data-price">€{groupTour.pricePerPerson}</div>
+                    )}
                   </div>
                 </div>
               </FadeUp>
