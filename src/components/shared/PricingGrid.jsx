@@ -93,11 +93,6 @@ function getTierPrice(pricing, tier) {
   return prices.length > 0 ? Math.min(...prices) : null
 }
 
-function getHotelNames(accommodations, tier) {
-  if (!accommodations || accommodations.length === 0) return []
-  return accommodations.map((row) => row[tier]).filter(Boolean).slice(0, 3)
-}
-
 function scrollToBook(e) {
   e.preventDefault()
   const el = document.getElementById('book')
@@ -110,9 +105,8 @@ function formatEuro(raw) {
   return `€${num.toLocaleString('en-US')}`
 }
 
-function PricingCards({ pricing, accommodations }) {
+function PricingCards({ pricing }) {
   const t = useT()
-  const [selectedHotel, setSelectedHotel] = useState(null)
   const tiers = [
     { key: 'economy', label: t('pricing.economy') },
     { key: 'midRange', label: t('pricing.midRange'), featured: true },
@@ -136,11 +130,9 @@ function PricingCards({ pricing, accommodations }) {
   }
 
   return (
-    <>
     <div className="td-price-cards">
       {tiers.map((tier) => {
         const startPrice = getTierPrice(pricing, tier.key)
-        const hotels = getHotelNames(accommodations, tier.key)
 
         return (
           <div
@@ -157,13 +149,6 @@ function PricingCards({ pricing, accommodations }) {
                 <span className="td-price-card__price-value">€{startPrice.toLocaleString('en-US')}</span>
                 <span className="td-price-card__price-pp">{t('pricing.perPerson')}</span>
               </div>
-            )}
-            {hotels.length > 0 && (
-              <ul className="td-price-card__hotels">
-                {hotels.map((h, i) => (
-                  <li key={i}><HotelName name={h} onSelect={setSelectedHotel} /></li>
-                ))}
-              </ul>
             )}
             {numericRows.length > 0 && (
               <div className="td-price-card__breakdown">
@@ -190,7 +175,33 @@ function PricingCards({ pricing, accommodations }) {
         )
       })}
     </div>
-    {selectedHotel && <HotelModal hotel={selectedHotel} onClose={() => setSelectedHotel(null)} />}
+  )
+}
+
+function PrivateAccommodationsTable({ accommodations }) {
+  const t = useT()
+  const [selectedHotel, setSelectedHotel] = useState(null)
+  if (!accommodations || accommodations.length === 0) return null
+
+  return (
+    <>
+      <div className="pricing-grid pricing-grid--private">
+        <div className="pricing-grid-header">
+          <div>{t('pricing.city')}</div>
+          <div className="pricing-luxury">{t('pricing.luxury')}</div>
+          <div>{t('pricing.midRange')}</div>
+          <div>{t('pricing.economy')}</div>
+        </div>
+        {accommodations.map((row, i) => (
+          <div key={i} className="pricing-grid-row">
+            <div>{row.city}</div>
+            <div><HotelName name={row.luxury} onSelect={setSelectedHotel} /></div>
+            <div><HotelName name={row.midRange} onSelect={setSelectedHotel} /></div>
+            <div><HotelName name={row.economy} onSelect={setSelectedHotel} /></div>
+          </div>
+        ))}
+      </div>
+      {selectedHotel && <HotelModal hotel={selectedHotel} onClose={() => setSelectedHotel(null)} />}
     </>
   )
 }
@@ -209,7 +220,13 @@ export default function PricingGrid({ accommodations, pricing }) {
 
           {hasPricing && (
             <div className="td-pricing__block">
-              <PricingCards pricing={pricing} accommodations={accommodations} />
+              <PricingCards pricing={pricing} />
+              {accommodations && accommodations.length > 0 && (
+                <>
+                  <h3 className="td-pricing__subtitle">{t('pricing.accommodations')}</h3>
+                  <PrivateAccommodationsTable accommodations={accommodations} />
+                </>
+              )}
             </div>
           )}
 

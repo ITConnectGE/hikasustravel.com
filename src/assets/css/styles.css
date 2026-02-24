@@ -2966,6 +2966,26 @@ select option:checked {
   justify-content: flex-start;
 }
 
+.pricing-grid--private {
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: calc(var(--indent) * 0.5);
+}
+
+.pricing-grid--private .pricing-grid-header {
+  grid-template-columns: 1.2fr 1fr 1fr 1fr;
+}
+
+.pricing-grid--private .pricing-grid-row {
+  grid-template-columns: 1.2fr 1fr 1fr 1fr;
+  background-color: #fff;
+}
+
+.pricing-grid--private .pricing-grid-row > div {
+  font-size: 13px;
+}
+
 /* Hotel link button (inside accommodations table) */
 .hotel-link {
   all: unset;
@@ -3594,6 +3614,13 @@ select option:checked {
   .pricing-grid--accommodations .pricing-grid-row {
     grid-template-columns: 1fr 2fr;
   }
+  .pricing-grid--private .pricing-grid-header,
+  .pricing-grid--private .pricing-grid-row {
+    grid-template-columns: 1.2fr 1fr 1fr 1fr;
+  }
+  .pricing-grid--private .pricing-grid-row > div {
+    font-size: 11px;
+  }
   .pricing-grid-header > div,
   .pricing-grid-row > div {
     padding: calc(var(--indent) * 0.4) calc(var(--indent) * 0.3);
@@ -3642,6 +3669,13 @@ select option:checked {
   .pricing-grid--accommodations .pricing-grid-header,
   .pricing-grid--accommodations .pricing-grid-row {
     grid-template-columns: 1fr 2fr;
+  }
+  .pricing-grid--private .pricing-grid-header,
+  .pricing-grid--private .pricing-grid-row {
+    grid-template-columns: 1.2fr 1fr 1fr 1fr;
+  }
+  .pricing-grid--private .pricing-grid-row > div {
+    font-size: 11px;
   }
   .pricing-grid-header > div,
   .pricing-grid-row > div {
