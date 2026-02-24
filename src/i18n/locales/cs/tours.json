@@ -87,6 +87,7 @@
       },
       {
         "label": "Dostupné termíny",
+        "type": "dates",
         "values": [
           "23. května – 5. června 2026",
           "5. září – 18. září 2026",
@@ -95,7 +96,7 @@
       },
       {
         "label": "Cena",
-        "value": "Od 2 590 € na osobu"
+        "value": "2 590 € na osobu"
       }
     ]
   },

@@ -354,13 +354,13 @@ export const tours = [
         "type": "dates",
         "values": [
           "23 May – 5 June 2026",
-          "5 Sep – 18 Sep 2026",
-          "17 Oct – 30 Oct 2026"
+          "5 September – 18 September 2026",
+          "17 October – 30 October 2026"
         ]
       },
       {
         "label": "Price",
-        "value": "From €2,590 per person"
+        "value": "€2,590 per person"
       }
     ]
   },

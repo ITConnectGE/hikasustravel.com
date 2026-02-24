@@ -87,15 +87,16 @@
       },
       {
         "label": "Beschikbare data",
+        "type": "dates",
         "values": [
           "23 mei – 5 juni 2026",
-          "5 sep – 18 sep 2026",
-          "17 okt – 30 okt 2026"
+          "5 september – 18 september 2026",
+          "17 oktober – 30 oktober 2026"
         ]
       },
       {
         "label": "Prijs",
-        "value": "Vanaf €2.590 per persoon"
+        "value": "€2.590 per persoon"
       }
     ]
   },

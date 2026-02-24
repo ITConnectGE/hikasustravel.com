@@ -2949,6 +2949,11 @@ select option:checked {
   grid-template-columns: 1fr 2fr;
 }
 
+.pricing-grid--accommodations .pricing-grid-row {
+  background-color: #fff;
+}
+
+.pricing-grid--accommodations .pricing-grid-header > div:last-child,
 .pricing-grid--accommodations .pricing-grid-row > div:last-child {
   text-align: left;
   justify-content: flex-start;
