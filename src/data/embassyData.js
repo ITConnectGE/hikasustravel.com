@@ -15,7 +15,7 @@ export const embassies = [
     website: 'https://ge.usembassy.gov',
     workingHours: 'Mon-Fri 9:00-17:30',
     googleMapsUrl: 'https://maps.google.com/?q=Embassy+of+the+United+States+Tbilisi',
-    coordinates: [44.7293, 41.7464],
+    coordinates: [44.800155, 41.696544],
   },
   {
     id: 'gb',
@@ -29,7 +29,7 @@ export const embassies = [
     website: 'https://www.gov.uk/world/organisations/british-embassy-tbilisi',
     workingHours: 'Mon-Fri 9:00-17:00',
     googleMapsUrl: 'https://maps.google.com/?q=British+Embassy+Tbilisi',
-    coordinates: [44.7975, 41.6916],
+    coordinates: [44.801487, 41.694735],
   },
   {
     id: 'de',
@@ -43,7 +43,7 @@ export const embassies = [
     website: 'https://tiflis.diplo.de',
     workingHours: 'Mon-Fri 9:00-12:00',
     googleMapsUrl: 'https://maps.google.com/?q=German+Embassy+Tbilisi',
-    coordinates: [44.7879, 41.7094],
+    coordinates: [44.784432, 41.709876],
   },
   {
     id: 'fr',
@@ -57,7 +57,7 @@ export const embassies = [
     website: 'https://ge.ambafrance.org',
     workingHours: 'Mon-Fri 9:00-12:30, 14:00-17:00',
     googleMapsUrl: 'https://maps.google.com/?q=French+Embassy+Tbilisi',
-    coordinates: [44.7666, 41.7125],
+    coordinates: [44.805081, 41.690186],
   },
   {
     id: 'it',
@@ -71,7 +71,7 @@ export const embassies = [
     website: 'https://ambtbilisi.esteri.it',
     workingHours: 'Mon-Fri 9:00-12:00, 14:00-16:00',
     googleMapsUrl: 'https://maps.google.com/?q=Italian+Embassy+Tbilisi',
-    coordinates: [44.8008, 41.6953],
+    coordinates: [44.800583, 41.696981],
   },
   {
     id: 'es',
@@ -99,7 +99,7 @@ export const embassies = [
     website: 'https://www.netherlandsandyou.nl/your-country-and-the-netherlands/georgia',
     workingHours: 'Mon-Fri 8:30-17:00',
     googleMapsUrl: 'https://maps.google.com/?q=Netherlands+Embassy+Tbilisi',
-    coordinates: [44.7665, 41.7090],
+    coordinates: [44.762475, 41.708941],
   },
   {
     id: 'pl',
@@ -113,7 +113,7 @@ export const embassies = [
     website: 'https://www.gov.pl/web/georgia',
     workingHours: 'Mon-Fri 8:30-16:30',
     googleMapsUrl: 'https://maps.google.com/?q=Polish+Embassy+Tbilisi',
-    coordinates: [44.7889, 41.7105],
+    coordinates: [44.794756, 41.700682],
   },
   {
     id: 'cz',
@@ -127,7 +127,7 @@ export const embassies = [
     website: 'https://www.mzv.cz/tbilisi',
     workingHours: 'Mon-Fri 8:00-16:30',
     googleMapsUrl: 'https://maps.google.com/?q=Czech+Embassy+Tbilisi',
-    coordinates: [44.7750, 41.7130],
+    coordinates: [44.761622, 41.708474],
   },
   {
     id: 'at',
@@ -169,7 +169,7 @@ export const embassies = [
     website: 'https://www.eda.admin.ch/tbilisi',
     workingHours: 'Mon-Fri 9:00-12:00',
     googleMapsUrl: 'https://maps.google.com/?q=Swiss+Embassy+Tbilisi',
-    coordinates: [44.7700, 41.7165],
+    coordinates: [44.802434, 41.689922],
   },
   {
     id: 'tr',
@@ -183,7 +183,7 @@ export const embassies = [
     website: 'https://tbilisi.be.mfa.gov.tr',
     workingHours: 'Mon-Fri 9:00-12:30, 14:00-17:00',
     googleMapsUrl: 'https://maps.google.com/?q=Turkish+Embassy+Tbilisi',
-    coordinates: [44.7740, 41.7140],
+    coordinates: [44.754902, 41.709326],
   },
   {
     id: 'il',
@@ -197,7 +197,7 @@ export const embassies = [
     website: 'https://embassies.gov.il/tbilisi',
     workingHours: 'Mon-Fri 9:00-13:00',
     googleMapsUrl: 'https://maps.google.com/?q=Israeli+Embassy+Tbilisi',
-    coordinates: [44.7970, 41.7063],
+    coordinates: [44.798778, 41.715504],
   },
   {
     id: 'ir',
@@ -225,7 +225,7 @@ export const embassies = [
     website: 'https://www.ge.emb-japan.go.jp',
     workingHours: 'Mon-Fri 9:00-12:30, 13:30-17:15',
     googleMapsUrl: 'https://maps.google.com/?q=Japanese+Embassy+Tbilisi',
-    coordinates: [44.7920, 41.6930],
+    coordinates: [44.805661, 41.688873],
   },
   {
     id: 'cn',
@@ -239,7 +239,7 @@ export const embassies = [
     website: 'https://www.mfa.gov.cn/ce/cege',
     workingHours: 'Mon-Fri 9:00-12:00',
     googleMapsUrl: 'https://maps.google.com/?q=Chinese+Embassy+Tbilisi',
-    coordinates: [44.7750, 41.7250],
+    coordinates: [44.774395, 41.708631],
   },
   {
     id: 'in',
@@ -267,7 +267,7 @@ export const embassies = [
     website: 'https://georgia.mfa.gov.ua',
     workingHours: 'Mon-Fri 9:00-13:00, 14:00-18:00',
     googleMapsUrl: 'https://maps.google.com/?q=Ukrainian+Embassy+Tbilisi',
-    coordinates: [44.7610, 41.7133],
+    coordinates: [44.763921, 41.723482],
   },
   {
     id: 'az',
@@ -393,7 +393,7 @@ export const embassies = [
     website: 'https://www.swedenabroad.se/tbilisi',
     workingHours: 'Mon-Fri 9:00-12:00, 13:00-16:00',
     googleMapsUrl: 'https://maps.google.com/?q=Swedish+Embassy+Tbilisi',
-    coordinates: [44.7802, 41.7183],
+    coordinates: [44.767412, 41.705257],
   },
   {
     id: 'ie',
