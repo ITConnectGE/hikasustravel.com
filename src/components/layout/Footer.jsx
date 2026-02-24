@@ -37,6 +37,8 @@ export default function Footer({ variant = 'default' }) {
             <li><LocaleLink to="/">{t('footer.home')}</LocaleLink></li>
             <li><LocaleLink to="/about-us">{t('footer.about')}</LocaleLink></li>
             <li><LocaleLink to="/about-georgia">{t('footer.aboutGeorgia')}</LocaleLink></li>
+            <li><LocaleLink to="/embassies">{t('footer.embassies')}</LocaleLink></li>
+            <li><LocaleLink to="/blog">{t('footer.blog')}</LocaleLink></li>
             <li><LocaleLink to="/faq">{t('footer.faq')}</LocaleLink></li>
             <li><LocaleLink to="/contact">{t('footer.contact')}</LocaleLink></li>
           </ul>

@@ -53,48 +53,50 @@ export default function DishModal({ dish, lang, onClose }) {
   return createPortal(
     <div className="hotel-modal-backdrop" onClick={onClose}>
       <div className="dish-modal" onClick={(e) => e.stopPropagation()} role="dialog" aria-modal="true" aria-label={name}>
-        <div className="dish-modal__hero">
-          <img src={dish.image} alt={name} className="dish-modal__img" />
-          <button className="hotel-modal__close" onClick={onClose} aria-label="Close">
-            <CloseIcon />
-          </button>
-        </div>
-
-        <div className="dish-modal__body">
-          <h3 className="dish-modal__name">{name}</h3>
-          <div className="dish-modal__origin">
-            <OriginIcon />
-            <span>{origin}</span>
+        <button className="dish-modal__close" onClick={onClose} aria-label="Close">
+          <CloseIcon />
+        </button>
+        <div className="dish-modal__layout">
+          <div className="dish-modal__hero">
+            <img src={dish.image} alt={name} className="dish-modal__img" />
           </div>
 
-          <div className="dish-modal__story">
-            {story.split('\n\n').map((p, i) => (
-              <p key={i}>{p}</p>
-            ))}
-          </div>
+          <div className="dish-modal__body">
+            <h3 className="dish-modal__name">{name}</h3>
+            <div className="dish-modal__origin">
+              <OriginIcon />
+              <span>{origin}</span>
+            </div>
 
-          <div className="dish-modal__section">
-            <h4 className="dish-modal__section-title">{
-              { en: 'Fun Facts', es: 'Datos curiosos', fr: 'Anecdotes', de: 'Wissenswertes', pl: 'Ciekawostki', cs: 'Zajímavosti', nl: 'Weetjes' }[lang] || 'Fun Facts'
-            }</h4>
-            <ul className="dish-modal__facts">
-              {funFacts.map((fact, i) => (
-                <li key={i}>
-                  <BulletIcon />
-                  <span>{fact}</span>
-                </li>
+            <div className="dish-modal__story">
+              {story.split('\n\n').map((p, i) => (
+                <p key={i}>{p}</p>
               ))}
-            </ul>
-          </div>
+            </div>
 
-          <div className="dish-modal__section">
-            <h4 className="dish-modal__section-title">{
-              { en: 'Key Ingredients', es: 'Ingredientes clave', fr: 'Ingrédients clés', de: 'Hauptzutaten', pl: 'Kluczowe składniki', cs: 'Klíčové ingredience', nl: 'Belangrijkste ingrediënten' }[lang] || 'Key Ingredients'
-            }</h4>
-            <div className="dish-modal__ingredients">
-              {ingredients.map((item, i) => (
-                <span key={i} className="dish-modal__ingredient">{item}</span>
-              ))}
+            <div className="dish-modal__section">
+              <h4 className="dish-modal__section-title">{
+                { en: 'Fun Facts', es: 'Datos curiosos', fr: 'Anecdotes', de: 'Wissenswertes', pl: 'Ciekawostki', cs: 'Zajímavosti', nl: 'Weetjes' }[lang] || 'Fun Facts'
+              }</h4>
+              <ul className="dish-modal__facts">
+                {funFacts.map((fact, i) => (
+                  <li key={i}>
+                    <BulletIcon />
+                    <span>{fact}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+
+            <div className="dish-modal__section">
+              <h4 className="dish-modal__section-title">{
+                { en: 'Key Ingredients', es: 'Ingredientes clave', fr: 'Ingrédients clés', de: 'Hauptzutaten', pl: 'Kluczowe składniki', cs: 'Klíčové ingredience', nl: 'Belangrijkste ingrediënten' }[lang] || 'Key Ingredients'
+              }</h4>
+              <div className="dish-modal__ingredients">
+                {ingredients.map((item, i) => (
+                  <span key={i} className="dish-modal__ingredient">{item}</span>
+                ))}
+              </div>
             </div>
           </div>
         </div>
