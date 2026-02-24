@@ -3,6 +3,14 @@ import FadeUp from './FadeUp'
 import LocaleLink from '../../i18n/LocaleLink'
 import useT from '../../i18n/useT'
 
+function getClassicPrice(pricing) {
+  if (!pricing || pricing.length === 0) return null
+  const row = pricing.find((r) => r.travelers === '4')
+  if (!row || !row.economy) return null
+  const num = parseFloat(row.economy.replace(/[^0-9.]/g, ''))
+  return isNaN(num) || num <= 0 ? null : num
+}
+
 export default function TourCard({ tour, translation, index = 0, basePath = '/private-tours' }) {
   const t = useT()
   const tt = translation
@@ -11,6 +19,7 @@ export default function TourCard({ tour, translation, index = 0, basePath = '/pr
   const title = tt?.title || tour.title
   const description = tt?.listingDescription || tt?.description || tour.listingDescription || tour.description
   const tourUrl = `${basePath}/${tour.slug}`
+  const classicPrice = getClassicPrice(tour.pricing)
 
   return (
     <FadeUp>
@@ -22,7 +31,10 @@ export default function TourCard({ tour, translation, index = 0, basePath = '/pr
           >
             <div className="tc__img-overlay" />
             {tour.days && (
-              <span className="tc__badge">{tour.days} {t('tour.days')}</span>
+              <span className="tc__badge">
+                {tour.days} {t('tour.days')}
+                {classicPrice && <> / {t('sidebar.startingFrom')} €{classicPrice.toLocaleString('en-US')}</>}
+              </span>
             )}
           </BlurUpBackground>
         </LocaleLink>

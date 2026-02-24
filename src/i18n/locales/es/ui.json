@@ -139,5 +139,8 @@
   "footer.allGroupTours": "Todos los tours en grupo",
   "footer.allPrivateTours": "Todos los tours privados",
   "footer.description": "Su socio de viaje de confianza para aventuras inolvidables por Georgia. Desde cimas montanosas hasta antiguas regiones vinicolas — le ofrecemos lo mejor del Caucaso.",
-  "footer.rights": "Todos los derechos reservados."
+  "footer.rights": "Todos los derechos reservados.",
+  "hotel.amenities": "Servicios",
+  "hotel.location": "Destacados de la ubicacion",
+  "hotel.close": "Cerrar"
 }

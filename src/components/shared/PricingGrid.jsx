@@ -1,23 +1,50 @@
+import { useState } from 'react'
 import useT from '../../i18n/useT'
 import FadeUp from './FadeUp'
+import hotelData from '../../data/hotelData'
+import HotelModal from './HotelModal'
+
+function HotelName({ name, onSelect }) {
+  const data = hotelData[name]
+  if (!data) return <>{name}</>
+  return (
+    <button type="button" className="hotel-link" onClick={() => onSelect({ name, ...data })}>
+      {name}
+    </button>
+  )
+}
 
 export function AccommodationsTable({ accommodations }) {
   const t = useT()
+  const [selectedHotel, setSelectedHotel] = useState(null)
   if (!accommodations || accommodations.length === 0) return null
 
   return (
-    <div className="pricing-grid pricing-grid--accommodations">
-      <div className="pricing-grid-header">
-        <div>{t('pricing.city')}</div>
-        <div>{t('pricing.hotels')}</div>
-      </div>
-      {accommodations.map((row, i) => (
-        <div key={i} className="pricing-grid-row pricing-hotels-row">
-          <div>{row.city}</div>
-          <div>{row.hotel || [row.luxury, row.midRange, row.economy].filter(Boolean).join(', ')}</div>
+    <>
+      <div className="pricing-grid pricing-grid--accommodations">
+        <div className="pricing-grid-header">
+          <div>{t('pricing.city')}</div>
+          <div>{t('pricing.hotels')}</div>
         </div>
-      ))}
-    </div>
+        {accommodations.map((row, i) => {
+          const hotelNames = row.hotel ? [row.hotel] : [row.luxury, row.midRange, row.economy].filter(Boolean)
+          return (
+            <div key={i} className="pricing-grid-row pricing-hotels-row">
+              <div>{row.city}</div>
+              <div>
+                {hotelNames.map((name, j) => (
+                  <span key={j}>
+                    {j > 0 && ', '}
+                    <HotelName name={name} onSelect={setSelectedHotel} />
+                  </span>
+                ))}
+              </div>
+            </div>
+          )
+        })}
+      </div>
+      {selectedHotel && <HotelModal hotel={selectedHotel} onClose={() => setSelectedHotel(null)} />}
+    </>
   )
 }
 
@@ -85,6 +112,7 @@ function formatEuro(raw) {
 
 function PricingCards({ pricing, accommodations }) {
   const t = useT()
+  const [selectedHotel, setSelectedHotel] = useState(null)
   const tiers = [
     { key: 'economy', label: t('pricing.economy') },
     { key: 'midRange', label: t('pricing.midRange'), featured: true },
@@ -108,6 +136,7 @@ function PricingCards({ pricing, accommodations }) {
   }
 
   return (
+    <>
     <div className="td-price-cards">
       {tiers.map((tier) => {
         const startPrice = getTierPrice(pricing, tier.key)
@@ -132,7 +161,7 @@ function PricingCards({ pricing, accommodations }) {
             {hotels.length > 0 && (
               <ul className="td-price-card__hotels">
                 {hotels.map((h, i) => (
-                  <li key={i}>{h}</li>
+                  <li key={i}><HotelName name={h} onSelect={setSelectedHotel} /></li>
                 ))}
               </ul>
             )}
@@ -161,6 +190,8 @@ function PricingCards({ pricing, accommodations }) {
         )
       })}
     </div>
+    {selectedHotel && <HotelModal hotel={selectedHotel} onClose={() => setSelectedHotel(null)} />}
+    </>
   )
 }
 

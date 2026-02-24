@@ -83,7 +83,7 @@
   "form.errors.sendFailed": "Échec de l'envoi. Veuillez réessayer.",
   "form.sending": "Envoi en cours...",
   "shuttle.title": "Service navette",
-  "shuttle.description": "Hikasus Travel propose des transferts prives depuis n'importe quelle ville de Georgie, offrant un transport sur et pratique en berlines, monospaces, minibus et vehicules plus grands. Que vous voyagiez de Tbilissi a Batoumi, Erevan (Armenie), Koutaissi, Kazbegi ou toute autre destination - ou simplement un retour - nos chauffeurs professionnels assurent un trajet fluide et sans souci. Ideal pour les voyageurs seuls, les familles et les groupes, nos services de transfert sont confortables, ponctuels et a des prix competitifs. Reservez votre transfert aujourd'hui et explorez la Georgie en toute serenite !",
+  "shuttle.description": "Hikasus Travel propose des transferts prives depuis n'importe quelle ville de Georgie, offrant un transport sur et pratique en berlines, monospaces, minibus et vehicules plus grands. Que vous voyagiez de Tbilissi a Batumi, Erevan (Armenie), Koutaissi, Kazbegi ou toute autre destination - ou simplement un retour - nos chauffeurs professionnels assurent un trajet fluide et sans souci. Ideal pour les voyageurs seuls, les familles et les groupes, nos services de transfert sont confortables, ponctuels et a des prix competitifs. Reservez votre transfert aujourd'hui et explorez la Georgie en toute serenite !",
   "shuttle.calculate": "Calculez votre trajet",
   "shuttle.from": "De :",
   "shuttle.to": "A :",
@@ -139,5 +139,8 @@
   "footer.allGroupTours": "Tous les tours en groupe",
   "footer.allPrivateTours": "Tous les tours prives",
   "footer.description": "Votre partenaire de voyage de confiance pour des aventures inoubliables a travers la Georgie. Des sommets montagneux aux regions viticoles anciennes — nous vous offrons le meilleur du Caucase.",
-  "footer.rights": "Tous droits reserves."
+  "footer.rights": "Tous droits reserves.",
+  "hotel.amenities": "Equipements",
+  "hotel.location": "Points forts de l'emplacement",
+  "hotel.close": "Fermer"
 }
