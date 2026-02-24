@@ -4,7 +4,7 @@ import TourDetailHero from '../shared/TourDetailHero'
 import TourSectionNav from '../shared/TourSectionNav'
 import FadeUp from '../shared/FadeUp'
 import Accordion from '../shared/Accordion'
-import PricingGrid, { getStartingPrice } from '../shared/PricingGrid'
+import PricingGrid, { AccommodationsTable, getStartingPrice } from '../shared/PricingGrid'
 import IncludedNotIncluded from '../shared/IncludedNotIncluded'
 import TourInquiryForm from '../shared/TourInquiryForm'
 import Gallery from '../shared/Gallery'
@@ -196,6 +196,16 @@ export default function TourDetailPage() {
             </section>
           )}
 
+          {/* Accommodations Table (group tours) */}
+          {isGroup && tour.accommodations && tour.accommodations.length > 0 && (
+            <section id="pricing" className="td-section">
+              <FadeUp>
+                <h3 className="td-pricing__subtitle">{t('pricing.accommodations')}</h3>
+                <AccommodationsTable accommodations={tour.accommodations} />
+              </FadeUp>
+            </section>
+          )}
+
           {/* Included / Not Included */}
           {(includedItems || notIncludedItems) && (
             <section className="td-section">
@@ -218,7 +228,7 @@ export default function TourDetailPage() {
           )}
 
           {/* Pricing */}
-          {(tour.accommodations || tour.pricing) && (
+          {(tour.pricing?.length > 0 || (!isGroup && tour.accommodations)) && (
             <PricingGrid
               accommodations={tour.accommodations}
               pricing={tour.pricing}

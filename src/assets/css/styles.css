@@ -2935,6 +2935,25 @@ select option:checked {
   text-align: right;
 }
 
+.pricing-grid--accommodations {
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.pricing-grid--accommodations .pricing-grid-header {
+  grid-template-columns: 1fr 2fr;
+}
+
+.pricing-grid--accommodations .pricing-grid-row {
+  grid-template-columns: 1fr 2fr;
+}
+
+.pricing-grid--accommodations .pricing-grid-row > div:last-child {
+  text-align: left;
+  justify-content: flex-start;
+}
+
 /* Responsive <=900px */
 @media (max-width: 900px) {
   .footer-top {
@@ -3261,6 +3280,10 @@ select option:checked {
   .pricing-grid-row {
     grid-template-columns: 1.2fr 1fr 1fr 1fr;
   }
+  .pricing-grid--accommodations .pricing-grid-header,
+  .pricing-grid--accommodations .pricing-grid-row {
+    grid-template-columns: 1fr 2fr;
+  }
   .pricing-grid-header > div,
   .pricing-grid-row > div {
     padding: calc(var(--indent) * 0.4) calc(var(--indent) * 0.3);
@@ -3305,6 +3328,10 @@ select option:checked {
   .pricing-grid-header,
   .pricing-grid-row {
     grid-template-columns: 1.2fr 1fr 1fr 1fr;
+  }
+  .pricing-grid--accommodations .pricing-grid-header,
+  .pricing-grid--accommodations .pricing-grid-row {
+    grid-template-columns: 1fr 2fr;
   }
   .pricing-grid-header > div,
   .pricing-grid-row > div {

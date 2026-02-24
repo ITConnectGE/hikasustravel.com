@@ -73,33 +73,23 @@ export const tours = [
     "accommodations": [
       {
         "city": "Tbilisi (6 nights)",
-        "luxury": "Rooms Hotel Tbilisi",
-        "midRange": "Ibis Styles Tbilisi Center",
-        "economy": "Ginger Hotel"
+        "hotel": "Sandali Metekhi By Old Hospitality"
       },
       {
         "city": "Kazbegi (2 nights)",
-        "luxury": "Rooms Hotel Kazbegi",
-        "midRange": "Northgate Hotel",
-        "economy": "Hotel Horizon"
+        "hotel": "Best View Kazbegi"
       },
       {
         "city": "Kutaisi (2 nights)",
-        "luxury": "Newport Hotel Kutaisi",
-        "midRange": "Boutique Hotel Argo",
-        "economy": "Hotel West Way"
+        "hotel": "Hotel West Way"
       },
       {
         "city": "Batumi (2 nights)",
-        "luxury": "Rooms Hotel",
-        "midRange": "Hotel Monarch",
-        "economy": "Hotel Phaliashvili"
+        "hotel": "Hotel Phaliashvili"
       },
       {
-        "city": "Telavi (1 nights)",
-        "luxury": "Tsinandali Estate, A Radisson Collection Hotel",
-        "midRange": "Park Hotel Tsinandali",
-        "economy": "Hotel & Wine Cellar ARGE"
+        "city": "Telavi (1 night)",
+        "hotel": "Hotel & Wine Cellar ARGE"
       }
     ],
     "pricing": [],
@@ -348,7 +338,7 @@ export const tours = [
       { "start": "5 September", "end": "18 September", "year": "2026" },
       { "start": "17 October", "end": "30 October", "year": "2026" }
     ],
-    "pricePerPerson": "2,450",
+    "pricePerPerson": "2,590",
     "singleSupplement": "450",
     "groupSummary": [
       {
@@ -370,7 +360,7 @@ export const tours = [
       },
       {
         "label": "Price",
-        "value": "From €2,450 per person"
+        "value": "From €2,590 per person"
       }
     ]
   },
@@ -627,7 +617,7 @@ export const tours = [
         "economy": "Hotel Horizon"
       },
       {
-        "city": "Telavi (1 nights)",
+        "city": "Telavi (1 night)",
         "luxury": "Tsinandali Estate, A Radisson Collection Hotel",
         "midRange": "Park Hotel Tsinandali",
         "economy": "Hotel & Wine Cellar ARGE"
@@ -1422,7 +1412,7 @@ export const tours = [
         "economy": "Hotel Horizon"
       },
       {
-        "city": "Telavi (1 nights)",
+        "city": "Telavi (1 night)",
         "luxury": "Tsinandali Estate, A Radisson Collection Hotel",
         "midRange": "Park Hotel Tsinandali",
         "economy": "Hotel & Wine Cellar ARGE"
@@ -1699,7 +1689,7 @@ export const tours = [
         "economy": "Local Cottage or Guesthouse"
       },
       {
-        "city": "Telavi (1 nights)",
+        "city": "Telavi (1 night)",
         "luxury": "Tsinandali Estate, A Radisson Collection Hotel",
         "midRange": "Park Hotel Tsinandali",
         "economy": "Hotel & Wine Cellar ARGE"
@@ -2525,7 +2515,7 @@ export const tours = [
         "economy": "Hotel Horizon"
       },
       {
-        "city": "Telavi (1 nights)",
+        "city": "Telavi (1 night)",
         "luxury": "Tsinandali Estate, A Radisson Collection Hotel",
         "midRange": "Park Hotel Tsinandali",
         "economy": "Hotel & Wine Cellar ARGE"
@@ -3919,7 +3909,7 @@ export const tours = [
         "economy": "Ginger Hotel"
       },
       {
-        "city": "Telavi (1 nights)",
+        "city": "Telavi (1 night)",
         "luxury": "Tsinandali Estate, A Radisson Collection Hotel",
         "midRange": "Park Hotel Tsinandali",
         "economy": "Hotel & Wine Cellar ARGE"

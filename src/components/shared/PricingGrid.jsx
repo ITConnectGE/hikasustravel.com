@@ -6,19 +6,15 @@ export function AccommodationsTable({ accommodations }) {
   if (!accommodations || accommodations.length === 0) return null
 
   return (
-    <div className="pricing-grid">
+    <div className="pricing-grid pricing-grid--accommodations">
       <div className="pricing-grid-header">
         <div>{t('pricing.city')}</div>
-        <div className="pricing-luxury">{t('pricing.luxury')}</div>
-        <div>{t('pricing.midRange')}</div>
-        <div>{t('pricing.economy')}</div>
+        <div>{t('pricing.hotels')}</div>
       </div>
       {accommodations.map((row, i) => (
         <div key={i} className="pricing-grid-row pricing-hotels-row">
           <div>{row.city}</div>
-          <div>{row.luxury}</div>
-          <div>{row.midRange}</div>
-          <div>{row.economy}</div>
+          <div>{row.hotel || [row.luxury, row.midRange, row.economy].filter(Boolean).join(', ')}</div>
         </div>
       ))}
     </div>
