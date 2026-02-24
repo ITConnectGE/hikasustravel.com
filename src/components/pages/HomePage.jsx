@@ -3,6 +3,7 @@ import HeroSection from '../shared/HeroSection'
 import FadeUp from '../shared/FadeUp'
 import BlurUpBackground from '../shared/BlurUpBackground'
 import MapboxMap from '../shared/MapboxMap'
+import Testimonials from '../shared/Testimonials'
 import { tours } from '../../data/tours'
 import useT from '../../i18n/useT'
 import useLang from '../../i18n/useLang'
@@ -151,6 +152,14 @@ export default function HomePage() {
         }]}
         isHomePage
       />
+
+      {/* Testimonials */}
+      <section className="td-testimonials-section">
+        <FadeUp>
+          <h2 className="td-section__title">{t('testimonials.title')}</h2>
+          <Testimonials />
+        </FadeUp>
+      </section>
     </>
   )
 }

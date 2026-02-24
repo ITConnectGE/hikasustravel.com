@@ -1406,6 +1406,7 @@ tour-info h2 a,
 }
 .td-pricing__subtitle {
   text-align: center;
+  margin-top: calc(var(--indent) * 2);
   margin-bottom: calc(var(--indent) * 0.8);
   font-size: calc(var(--font-size) * 1.1);
 }

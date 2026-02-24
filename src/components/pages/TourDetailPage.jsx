@@ -8,7 +8,6 @@ import PricingGrid, { AccommodationsTable, getStartingPrice } from '../shared/Pr
 import IncludedNotIncluded from '../shared/IncludedNotIncluded'
 import TourInquiryForm from '../shared/TourInquiryForm'
 import Gallery from '../shared/Gallery'
-import Testimonials from '../shared/Testimonials'
 import MapboxMap from '../shared/MapboxMap'
 import { tours } from '../../data/tours'
 import useT from '../../i18n/useT'
@@ -273,13 +272,6 @@ export default function TourDetailPage() {
         </section>
       )}
 
-      {/* Testimonials */}
-      <section className="td-testimonials-section">
-        <FadeUp>
-          <h2 className="td-section__title">{t('testimonials.title')}</h2>
-          <Testimonials />
-        </FadeUp>
-      </section>
     </>
   )
 }
