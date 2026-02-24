@@ -110,7 +110,6 @@ export const tours = [
     ],
     "gallery": [
       { "src": "/images/files/georgia-tour-01.jpg", "caption": "<p>Tbilisi</p>", "day": "Day 2" },
-      { "src": "/images/files/georgia-tour-02.jpg", "caption": "<p>Holy Trinity Cathedral of Tbilisi</p>", "day": "Day 2" },
       { "src": "/images/files/georgia-tour-03.jpg", "caption": "<p>Old Tbilisi</p>", "day": "Day 2" },
       { "src": "/images/files/georgia-tour-04.jpg", "caption": "<p>Ananuri Fortress</p>", "day": "Day 3" },
       { "src": "/images/files/georgia-tour-05.jpg", "caption": "<p>Gergeti Trinity Church</p>", "day": "Day 4" },
