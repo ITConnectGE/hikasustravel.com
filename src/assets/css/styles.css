@@ -2681,6 +2681,27 @@ select option:checked {
   line-height: 1.6;
   border-left: 3px solid var(--color-h3);
 }
+.about-georgia li:has(img) {
+  padding: 0;
+  border-left: none;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s, box-shadow 0.2s;
+  cursor: pointer;
+}
+.about-georgia li:has(img):hover {
+  transform: translateY(-3px);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+}
+.about-georgia li img {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+  display: block;
+}
+.about-georgia .dish-text {
+  padding: 10px 14px 12px;
+}
 .about-georgia li strong {
   color: var(--color-h3);
   display: block;
@@ -2688,6 +2709,14 @@ select option:checked {
   text-transform: uppercase;
   letter-spacing: 0.5px;
   margin-bottom: 2px;
+}
+.about-georgia .wine-img {
+  width: 100%;
+  max-height: 350px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin: calc(var(--indent) * 0.5) 0;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.12);
 }
 
 /* Contact */
@@ -3279,6 +3308,145 @@ select option:checked {
   }
   .hotel-modal__amenities {
     grid-template-columns: 1fr;
+  }
+}
+
+/* Dish Modal */
+.dish-modal {
+  position: relative;
+  width: 92%;
+  max-width: 800px;
+  background: #fff;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+  animation: hotelSlideUp 0.3s ease;
+}
+
+.dish-modal__hero {
+  position: relative;
+  width: 100%;
+}
+
+.dish-modal__img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  display: block;
+}
+
+.dish-modal__body {
+  padding: 24px;
+}
+
+.dish-modal__name {
+  font-family: "rockwell";
+  font-size: 1.25rem;
+  color: #1a1a1a;
+  margin: 0 0 8px;
+}
+
+.dish-modal__origin {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  color: #c8860a;
+  font-size: 0.9rem;
+  margin-bottom: 16px;
+}
+
+.dish-modal__story {
+  margin-bottom: 20px;
+}
+.dish-modal__story p {
+  color: #444;
+  line-height: 1.65;
+  margin: 0 0 12px;
+  font-size: 0.95rem;
+}
+.dish-modal__story p:last-child {
+  margin-bottom: 0;
+}
+
+.dish-modal__section {
+  margin-bottom: 20px;
+}
+.dish-modal__section:last-child {
+  margin-bottom: 0;
+}
+
+.dish-modal__section-title {
+  font-family: "rockwell";
+  font-size: 0.95rem;
+  color: #2b4e47;
+  margin: 0 0 10px;
+  padding-bottom: 6px;
+  border-bottom: 1px solid rgba(43, 78, 71, 0.12);
+}
+
+.dish-modal__facts {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.dish-modal__facts li {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  color: #333;
+  font-size: 0.92rem;
+  line-height: 1.5;
+  margin-bottom: 8px;
+}
+.dish-modal__facts li:last-child {
+  margin-bottom: 0;
+}
+.dish-modal__facts svg {
+  color: #2b4e47;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.dish-modal__ingredients {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.dish-modal__ingredient {
+  background: rgba(43, 78, 71, 0.08);
+  color: #2b4e47;
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: 500;
+}
+
+/* Dish modal mobile */
+@media (max-width: 600px) {
+  .dish-modal {
+    width: 100%;
+    max-width: 100%;
+    border-radius: 16px 16px 0 0;
+    max-height: 90dvh;
+    overflow-y: auto;
+    animation: dishSlideUp 0.3s ease;
+  }
+  @keyframes dishSlideUp {
+    from { opacity: 0; transform: translateY(100%); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  .dish-modal__img {
+    height: 200px;
+  }
+  .dish-modal__body {
+    padding: 20px 16px;
+  }
+  .dish-modal__name {
+    font-size: 1.15rem;
+  }
+  .dish-modal__story p {
+    font-size: 0.92rem;
   }
 }
 
