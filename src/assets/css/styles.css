@@ -3046,6 +3046,33 @@ select option:checked {
   scroll-snap-align: start;
 }
 
+.hotel-modal__arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  border: none;
+  background: rgba(0, 0, 0, 0.45);
+  color: #fff;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1;
+  transition: background 0.2s;
+}
+.hotel-modal__arrow:hover {
+  background: rgba(0, 0, 0, 0.7);
+}
+.hotel-modal__arrow--prev {
+  left: 8px;
+}
+.hotel-modal__arrow--next {
+  right: 8px;
+}
+
 .hotel-modal__dots {
   position: absolute;
   bottom: 10px;
@@ -3060,8 +3087,13 @@ select option:checked {
   width: 7px;
   height: 7px;
   border-radius: 50%;
-  background: rgba(255, 255, 255, 0.55);
+  background: rgba(255, 255, 255, 0.45);
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+  transition: background 0.2s;
+}
+.hotel-modal__dot--active {
+  background: #fff;
 }
 
 .hotel-modal__close {
@@ -3404,6 +3436,9 @@ select option:checked {
   }
   .footer-col--brand {
     padding-right: 0;
+  }
+  .footer-col__title {
+    text-align: left;
   }
   .footer-bottom {
     flex-direction: column;

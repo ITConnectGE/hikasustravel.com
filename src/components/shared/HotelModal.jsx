@@ -1,4 +1,4 @@
-import { useEffect } from 'react'
+import { useEffect, useRef, useState, useCallback } from 'react'
 import { createPortal } from 'react-dom'
 import useT from '../../i18n/useT'
 
@@ -65,12 +65,32 @@ export default function HotelModal({ hotel, onClose }) {
   if (!hotel) return null
 
   const images = hotel.images || (hotel.image ? [{ src: hotel.image, alt: hotel.name }] : [])
+  const galleryRef = useRef(null)
+  const [activeSlide, setActiveSlide] = useState(0)
+
+  const scrollTo = useCallback((index) => {
+    const el = galleryRef.current
+    if (!el) return
+    const target = Math.max(0, Math.min(index, images.length - 1))
+    el.scrollTo({ left: target * el.offsetWidth, behavior: 'smooth' })
+  }, [images.length])
+
+  useEffect(() => {
+    const el = galleryRef.current
+    if (!el || images.length <= 1) return
+    function onScroll() {
+      const idx = Math.round(el.scrollLeft / el.offsetWidth)
+      setActiveSlide(idx)
+    }
+    el.addEventListener('scroll', onScroll, { passive: true })
+    return () => el.removeEventListener('scroll', onScroll)
+  }, [images.length])
 
   return createPortal(
     <div className="hotel-modal-backdrop" onClick={onClose}>
       <div className="hotel-modal" onClick={(e) => e.stopPropagation()} role="dialog" aria-modal="true" aria-label={hotel.name}>
         <div className="hotel-modal__hero">
-          <div className="hotel-modal__gallery">
+          <div className="hotel-modal__gallery" ref={galleryRef}>
             {images.map((img, i) => (
               <img
                 key={i}
@@ -83,11 +103,19 @@ export default function HotelModal({ hotel, onClose }) {
             ))}
           </div>
           {images.length > 1 && (
-            <div className="hotel-modal__dots">
-              {images.map((_, i) => (
-                <span key={i} className="hotel-modal__dot" />
-              ))}
-            </div>
+            <>
+              <button className="hotel-modal__arrow hotel-modal__arrow--prev" onClick={() => scrollTo(activeSlide - 1)} aria-label="Previous photo" style={{ display: activeSlide === 0 ? 'none' : undefined }}>
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><polyline points="15 18 9 12 15 6"/></svg>
+              </button>
+              <button className="hotel-modal__arrow hotel-modal__arrow--next" onClick={() => scrollTo(activeSlide + 1)} aria-label="Next photo" style={{ display: activeSlide === images.length - 1 ? 'none' : undefined }}>
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
+              </button>
+              <div className="hotel-modal__dots">
+                {images.map((_, i) => (
+                  <span key={i} className={`hotel-modal__dot${i === activeSlide ? ' hotel-modal__dot--active' : ''}`} onClick={() => scrollTo(i)} />
+                ))}
+              </div>
+            </>
           )}
           <button className="hotel-modal__close" onClick={onClose} aria-label={t('hotel.close')}>
             <CloseIcon />
