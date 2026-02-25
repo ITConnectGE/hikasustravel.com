@@ -4519,6 +4519,7 @@ select option:checked {
   gap: 2px;
   font-size: calc(var(--font-size) * 0.9);
   word-break: break-word;
+  color: #333;
 }
 
 .embassy-card__row a {
@@ -4535,7 +4536,7 @@ select option:checked {
   font-size: calc(var(--font-size) * 0.8);
   text-transform: uppercase;
   letter-spacing: 0.3px;
-  color: #888;
+  color: #555;
 }
 
 .embassy-card__map-btn {
