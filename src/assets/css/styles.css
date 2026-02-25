@@ -3636,7 +3636,7 @@ select option:checked {
     margin-top: 80px;
   }
   .fullscreen {
-    height: calc(100dvh - 80px);
+    height: calc(100svh - 80px);
   }
 
   .page-items {
@@ -3698,7 +3698,7 @@ select option:checked {
 
   /* Tours hero mobile */
   .th {
-    height: 100dvh;
+    height: 100svh;
     min-height: 500px;
     padding-top: 100px;
     padding-bottom: 60px;
@@ -3765,7 +3765,7 @@ select option:checked {
 
   /* Tour detail mobile */
   .td-hero {
-    height: 100dvh;
+    height: 100svh;
     padding-top: 100px;
     padding-bottom: 60px;
   }
