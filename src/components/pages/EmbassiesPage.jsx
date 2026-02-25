@@ -1,17 +1,14 @@
-import { useState, useMemo, useEffect, useRef, useCallback } from 'react'
-import mapboxgl from 'mapbox-gl'
+import { useState, useMemo, useEffect, useRef } from 'react'
 import HeroSection from '../shared/HeroSection'
 import useT from '../../i18n/useT'
 import useLang from '../../i18n/useLang'
 import useSEO from '../../hooks/useSEO'
 import { getSEO } from '../../data/seoData'
 import { embassies, emergencyNumbers, filterEmbassies } from '../../data/embassyData'
-import { initializeMap } from '../../utils/mapUtils'
 
-function countryCodeToFlag(code) {
-  return String.fromCodePoint(
-    ...code.toUpperCase().split('').map(c => 0x1F1E6 + c.charCodeAt(0) - 65)
-  )
+function FlagImg({ code, size = 32 }) {
+  const src = `https://flagcdn.com/w80/${code.toLowerCase()}.png`
+  return <img src={src} alt={code} width={size} height={Math.round(size * 0.75)} style={{ objectFit: 'cover', borderRadius: 3 }} />
 }
 
 function getUserCountryCode() {
@@ -28,8 +25,6 @@ export default function EmbassiesPage() {
   const { lang } = useLang()
   const seo = getSEO('embassies', lang)
   const [query, setQuery] = useState('')
-  const mapRef = useRef(null)
-  const markersRef = useRef({})
   const highlightedRef = useRef(null)
 
   const filtered = useMemo(() => filterEmbassies(query), [query])
@@ -58,48 +53,6 @@ export default function EmbassiesPage() {
 
   useSEO({ ...seo, lang, path: 'embassies', image: '/images/files/georgia-tour-03.jpg', jsonLd })
 
-  // Initialize map
-  useEffect(() => {
-    const map = initializeMap('embassies-map', [44.7930, 41.7151], 12)
-    mapRef.current = map
-
-    embassies.forEach(e => {
-      const popup = new mapboxgl.Popup({ offset: 25, maxWidth: '280px' }).setHTML(`
-        <div style="font-family: inherit;">
-          <h3 style="margin: 0 0 6px; padding: 0; font-size: 15px; font-weight: bold; line-height: 1.2;">
-            ${countryCodeToFlag(e.countryCode)} ${e.countryName}
-          </h3>
-          <p style="margin: 0 0 4px; padding: 0; font-size: 13px; line-height: 1.4;">${e.address}</p>
-          <p style="margin: 0; padding: 0; font-size: 13px;">
-            <a href="tel:${e.phone.replace(/\s/g, '')}" style="color: #2b4e47;">${e.phone}</a>
-          </p>
-        </div>
-      `)
-
-      const marker = new mapboxgl.Marker({ color: '#2b4e47' })
-        .setLngLat(e.coordinates)
-        .setPopup(popup)
-        .addTo(map)
-
-      markersRef.current[e.id] = marker
-    })
-
-    return () => {
-      Object.values(markersRef.current).forEach(m => m.remove())
-      markersRef.current = {}
-      map.remove()
-    }
-  }, [])
-
-  // Filter markers when search changes
-  useEffect(() => {
-    const filteredIds = new Set(filtered.map(e => e.id))
-    Object.entries(markersRef.current).forEach(([id, marker]) => {
-      const el = marker.getElement()
-      if (el) el.style.display = filteredIds.has(id) ? '' : 'none'
-    })
-  }, [filtered])
-
   // Auto-highlight user's embassy on mount
   useEffect(() => {
     const code = getUserCountryCode()
@@ -113,14 +66,6 @@ export default function EmbassiesPage() {
         })
       }
     }
-  }, [])
-
-  const flyToEmbassy = useCallback((e) => {
-    const map = mapRef.current
-    if (!map) return
-    map.flyTo({ center: e.coordinates, zoom: 15, duration: 1000 })
-    const marker = markersRef.current[e.id]
-    if (marker) marker.togglePopup()
   }, [])
 
   return (
@@ -138,7 +83,7 @@ export default function EmbassiesPage() {
           </div>
       </section>
 
-      {/* Search & Map */}
+      {/* Search */}
       <section className="page-items">
           <h2 className="embassy-section-title">{t('embassies.findYourEmbassy')}</h2>
           <div className="embassy-search-wrap">
@@ -149,10 +94,6 @@ export default function EmbassiesPage() {
               value={query}
               onChange={e => setQuery(e.target.value)}
             />
-          </div>
-
-          <div className="embassy-map-container">
-            <div id="embassies-map" className="embassy-map" />
           </div>
       </section>
 
@@ -174,7 +115,7 @@ export default function EmbassiesPage() {
                 className={`embassy-card${highlightedRef.current === e.id ? ' embassy-card--highlighted' : ''}`}
               >
                 <div className="embassy-card__header">
-                  <span className="embassy-card__flag">{countryCodeToFlag(e.countryCode)}</span>
+                  <span className="embassy-card__flag"><FlagImg code={e.countryCode} size={32} /></span>
                   <div>
                     <h3 className="embassy-card__country">{e.countryName}</h3>
                     <p className="embassy-card__name">{e.embassyName}</p>
@@ -209,13 +150,6 @@ export default function EmbassiesPage() {
                     <span>{e.workingHours}</span>
                   </div>
                 </div>
-
-                <button
-                  className="embassy-card__map-btn"
-                  onClick={() => flyToEmbassy(e)}
-                >
-                  {t('embassies.viewOnMap')}
-                </button>
               </div>
             ))}
           </div>
