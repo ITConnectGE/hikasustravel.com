@@ -33,13 +33,16 @@ function setLink(rel, href, attrs = {}) {
   el.setAttribute('href', href)
 }
 
-export default function useSEO({ title, description, lang = 'en', path = '', image, jsonLd } = {}) {
+export default function useSEO({ title, description, keywords, lang = 'en', path = '', image, jsonLd } = {}) {
   useEffect(() => {
     // Title
     if (title) document.title = title
 
     // Meta description
     setMeta('description', description)
+
+    // Meta keywords
+    setMeta('keywords', keywords)
 
     // Canonical
     const canonical = `${SITE_URL}/#/${lang}${path ? `/${path}` : ''}`
@@ -84,5 +87,5 @@ export default function useSEO({ title, description, lang = 'en', path = '', ima
       // Clean up JSON-LD on unmount
       document.querySelector('script[data-seo-jsonld]')?.remove()
     }
-  }, [title, description, lang, path, image, jsonLd])
+  }, [title, description, keywords, lang, path, image, jsonLd])
 }
