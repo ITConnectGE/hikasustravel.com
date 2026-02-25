@@ -15,6 +15,7 @@ export default function PrivateToursPage() {
   const { tourTranslations, loadTourTranslations } = useContext(I18nContext)
   const [search, setSearch] = useState('')
   const [sort, setSort] = useState('')
+  const [origin, setOrigin] = useState('')
   const seo = getSEO('privateTours', lang)
   useSEO({ ...seo, lang, path: 'private-tours', image: '/images/files/georgia-tour-01.jpg' })
 
@@ -22,8 +23,18 @@ export default function PrivateToursPage() {
     if (!tourTranslations) loadTourTranslations()
   }, [tourTranslations, loadTourTranslations])
 
+  const kutaisiSlugs = [
+    'georgias-cultural-wonders-7-day-adventure-from-kutaisi-to-tbilisi-and-beyond',
+    'ultimate-georgia-exploration-9-day-tour-from-kutaisi-to-tbilisi-and-hidden-gems',
+    'georgias-wonders-11-day-grand-tour-from-kutaisi-to-kazbegi-and-batumi',
+    'grand-georgia-adventure-13-day-cultural-and-scenic-journey',
+  ]
+
   const filtered = useMemo(() => {
     let list = privateTours
+
+    if (origin === 'kutaisi') list = list.filter((tour) => kutaisiSlugs.includes(tour.slug))
+    else if (origin === 'tbilisi') list = list.filter((tour) => !kutaisiSlugs.includes(tour.slug))
 
     if (search.trim()) {
       const q = search.toLowerCase()
@@ -45,7 +56,7 @@ export default function PrivateToursPage() {
     })
 
     return list
-  }, [privateTours, tourTranslations, search, sort])
+  }, [privateTours, tourTranslations, search, sort, origin])
 
   return (
     <>
@@ -58,6 +69,8 @@ export default function PrivateToursPage() {
         onSearchChange={setSearch}
         sortValue={sort}
         onSortChange={setSort}
+        originValue={origin}
+        onOriginChange={setOrigin}
       />
 
       <section className="tour-listing" aria-label={t('tour.privateTours')}>

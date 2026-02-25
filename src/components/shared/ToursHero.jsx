@@ -11,6 +11,8 @@ export default function ToursHero({
   onSearchChange,
   sortValue = '',
   onSortChange,
+  originValue = '',
+  onOriginChange,
 }) {
   const sectionRef = useRef(null)
   const t = useT()
@@ -35,7 +37,7 @@ export default function ToursHero({
           <p className="th__subtitle">{subtitle}</p>
         )}
 
-        {(onSearchChange || onSortChange) && (
+        {(onSearchChange || onSortChange || onOriginChange) && (
           <div className="th__actions">
             {onSearchChange && (
               <div className="th__search-wrap">
@@ -65,6 +67,20 @@ export default function ToursHero({
                   <option value="days-asc">{t('tour.sortDuration')} ↑</option>
                   <option value="days-desc">{t('tour.sortDuration')} ↓</option>
                   <option value="name">{t('tour.sortName')}</option>
+                </select>
+              </div>
+            )}
+            {onOriginChange && (
+              <div className="th__sort-wrap">
+                <select
+                  className="th__sort"
+                  value={originValue}
+                  onChange={(e) => onOriginChange(e.target.value)}
+                  aria-label="Tours from"
+                >
+                  <option value="">Tours from</option>
+                  <option value="tbilisi">Tbilisi</option>
+                  <option value="kutaisi">Kutaisi</option>
                 </select>
               </div>
             )}
