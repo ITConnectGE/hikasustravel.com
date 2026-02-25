@@ -4199,6 +4199,14 @@ select option:checked {
   transform: translateY(0);
 }
 
+@media (max-width: 900px) {
+  .fade-up {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+}
+
 /* Active taxi-list-row when filtered */
 .taxi-list-row.active {
   display: contents;
