@@ -13,6 +13,9 @@ import ShuttleServicePage from './components/pages/ShuttleServicePage'
 import TaxiServicePage from './components/pages/TaxiServicePage'
 import PrivacyPolicyPage from './components/pages/PrivacyPolicyPage'
 import TermsPage from './components/pages/TermsPage'
+import EmbassiesPage from './components/pages/EmbassiesPage'
+import BlogPage from './components/pages/BlogPage'
+import BlogArticlePage from './components/pages/BlogArticlePage'
 import NotFoundPage from './components/pages/NotFoundPage'
 
 export default function App() {
@@ -30,6 +33,9 @@ export default function App() {
           <Route path="group-tours/:slug" element={<TourDetailPage />} />
           <Route path="shuttle-service" element={<ShuttleServicePage />} />
           <Route path="taxi-service" element={<TaxiServicePage />} />
+          <Route path="embassies" element={<EmbassiesPage />} />
+          <Route path="blog" element={<BlogPage />} />
+          <Route path="blog/:slug" element={<BlogArticlePage />} />
           <Route path="faq" element={<FaqPage />} />
           <Route path="contact" element={<ContactPage />} />
           <Route path="privacy-policy" element={<PrivacyPolicyPage />} />

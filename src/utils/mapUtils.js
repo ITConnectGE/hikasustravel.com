@@ -5,30 +5,34 @@ mapboxgl.accessToken = import.meta.env.VITE_MAPBOX_TOKEN
 const MAP_STYLE = 'mapbox://styles/matthekim/cm9u0hfgr001001s941ym33e3'
 
 export function initializeMap(containerId, coordinates, zoom) {
+  const isTouchDevice = 'ontouchstart' in window || navigator.maxTouchPoints > 0
   const map = new mapboxgl.Map({
     container: containerId,
     style: MAP_STYLE,
     center: coordinates,
     zoom: zoom,
+    dragPan: !isTouchDevice,
+    cooperativeGestures: isTouchDevice,
   })
   map.addControl(new mapboxgl.NavigationControl())
   map.touchZoomRotate.disable()
   map.scrollZoom.disable()
-  map.dragPan.enable()
   return map
 }
 
 export function initializeTourMap(containerId, lat, lng, zoom) {
+  const isTouchDevice = 'ontouchstart' in window || navigator.maxTouchPoints > 0
   const map = new mapboxgl.Map({
     container: containerId,
     style: MAP_STYLE,
     center: [lng, lat],
     zoom: zoom,
     scrollZoom: false,
-    dragPan: true,
+    dragPan: !isTouchDevice,
     dragRotate: false,
     doubleClickZoom: false,
     touchZoomRotate: false,
+    cooperativeGestures: isTouchDevice,
   })
   map.addControl(new mapboxgl.NavigationControl())
   return map

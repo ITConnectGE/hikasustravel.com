@@ -11,6 +11,8 @@ export default function Header({ variant = 'default' }) {
   const [menuOpen, setMenuOpen] = useState(false)
   const [isSticky, setIsSticky] = useState(false)
   const menuRef = useRef(null)
+  const stickyThreshold = useRef(0)
+  const menuHeight = useRef(0)
   const location = useLocation()
   const t = useT()
   const { lang } = useLang()
@@ -22,14 +24,20 @@ export default function Header({ variant = 'default' }) {
   }, [location])
 
   useEffect(() => {
+    // On mobile the header is already position:fixed via CSS, so skip sticky logic
+    if (window.innerWidth <= 900) return
+
     let ticking = false
+    // Capture the initial offset once before any sticky toggle
+    const menuEl = menuRef.current
+    if (menuEl) {
+      stickyThreshold.current = menuEl.offsetTop
+      menuHeight.current = menuEl.offsetHeight
+    }
     const handleScroll = () => {
       if (!ticking) {
         window.requestAnimationFrame(() => {
-          const menuEl = menuRef.current
-          if (menuEl) {
-            setIsSticky(window.scrollY >= menuEl.offsetTop || window.scrollY > 300)
-          }
+          setIsSticky(window.scrollY >= stickyThreshold.current || window.scrollY > 300)
           ticking = false
         })
         ticking = true
@@ -74,6 +82,7 @@ export default function Header({ variant = 'default' }) {
           </span>
         ))}
       </nav>
+      {isSticky && <div style={{ height: menuHeight.current }} />}
     </header>
   )
 }

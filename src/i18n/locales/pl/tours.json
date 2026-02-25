@@ -87,15 +87,16 @@
       },
       {
         "label": "Dostepne terminy",
+        "type": "dates",
         "values": [
           "23 maja – 5 czerwca 2026",
-          "5 wrz – 18 wrz 2026",
-          "17 paź – 30 paź 2026"
+          "5 września – 18 września 2026",
+          "17 października – 30 października 2026"
         ]
       },
       {
         "label": "Cena",
-        "value": "Od 2 450 EUR za osobe"
+        "value": "2 590 EUR za osobe"
       }
     ]
   },

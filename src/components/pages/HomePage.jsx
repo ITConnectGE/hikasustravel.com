@@ -3,14 +3,21 @@ import HeroSection from '../shared/HeroSection'
 import FadeUp from '../shared/FadeUp'
 import BlurUpBackground from '../shared/BlurUpBackground'
 import MapboxMap from '../shared/MapboxMap'
+import Testimonials from '../shared/Testimonials'
 import { tours } from '../../data/tours'
 import useT from '../../i18n/useT'
+import useLang from '../../i18n/useLang'
 import LocaleLink from '../../i18n/LocaleLink'
 import { I18nContext } from '../../i18n/I18nProvider'
+import useSEO from '../../hooks/useSEO'
+import { getSEO } from '../../data/seoData'
 
 export default function HomePage() {
   const t = useT()
+  const { lang } = useLang()
   const { tourTranslations, loadTourTranslations } = useContext(I18nContext)
+  const seo = getSEO('home', lang)
+  useSEO({ ...seo, lang, image: '/images/files/georgia-home.jpg' })
 
   // Eagerly load tour translations for homepage tiles
   if (!tourTranslations) loadTourTranslations()
@@ -36,14 +43,62 @@ export default function HomePage() {
         </div>
       </section>
 
+      {(() => {
+        const groupTour = tours.find((tour) => tour.type === 'group')
+        if (!groupTour) return null
+        const tt = tourTranslations?.[groupTour.slug]
+        return (
+          <section className="home-items">
+            <div className="tour-listing" style={{ background: 'none', maxWidth: '1600px' }}>
+              <FadeUp>
+                <div className="tour-item tour-item-card">
+                  <BlurUpBackground
+                    src={groupTour.listingImage || groupTour.heroImage}
+                    className="tour-image"
+                  />
+                  <div className="tour-info">
+                    <h2>
+                      <LocaleLink to={`/group-tours/${groupTour.slug}`}>{tt?.title || groupTour.title}</LocaleLink>
+                    </h2>
+                    <h3>{groupTour.days} {t('tour.days')}</h3>
+                    <p>{tt?.listingDescription || tt?.description || groupTour.listingDescription || groupTour.description}</p>
+                    <div className="more">
+                      <LocaleLink to={`/group-tours/${groupTour.slug}`}>{t('tour.moreInfo')}</LocaleLink>
+                    </div>
+                  </div>
+                  <div className="tour-data">
+                    {groupTour.groupDates && (
+                      <>
+                        <div className="available">{t('tour.availableDates')}</div>
+                        <div className="date-chips">
+                          {groupTour.groupDates.map((d, i) => (
+                            <div key={i} className="date-chip">
+                              <span className="date-range">{d.start} – {d.end}</span>
+                              <span className="date-year">{d.year}</span>
+                            </div>
+                          ))}
+                        </div>
+                      </>
+                    )}
+                    {groupTour.pricePerPerson && (
+                      <div className="tour-data-price">€{groupTour.pricePerPerson}</div>
+                    )}
+                  </div>
+                </div>
+              </FadeUp>
+            </div>
+          </section>
+        )
+      })()}
+
       <section className="home-items">
         <div className="tours-grid-container">
           <FadeUp>
-            <h2>{t('home.ourTours')}</h2>
+            <h2>{t('tour.privateTours')}</h2>
           </FadeUp>
           <FadeUp>
             <div className="tours-grid">
-              {tours.map((tour) => {
+              {tours.filter((tour) => tour.type === 'private').map((tour) => {
                 const tt = tourTranslations?.[tour.slug]
                 return (
                   <div className="tour-tile" key={tour.slug}>
@@ -97,6 +152,14 @@ export default function HomePage() {
         }]}
         isHomePage
       />
+
+      {/* Testimonials */}
+      <section className="td-testimonials-section">
+        <FadeUp>
+          <h2 className="td-section__title">{t('testimonials.title')}</h2>
+          <Testimonials />
+        </FadeUp>
+      </section>
     </>
   )
 }

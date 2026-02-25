@@ -1,9 +1,15 @@
 import asset from '../../utils/basePath'
 import useT from '../../i18n/useT'
+import useLang from '../../i18n/useLang'
 import LocaleLink from '../../i18n/LocaleLink'
+import useSEO from '../../hooks/useSEO'
+import { getSEO } from '../../data/seoData'
 
 export default function NotFoundPage() {
   const t = useT()
+  const { lang } = useLang()
+  const seo = getSEO('notFound', lang)
+  useSEO({ ...seo, lang })
 
   return (
     <>

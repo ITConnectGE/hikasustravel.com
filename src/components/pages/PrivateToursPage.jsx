@@ -1,63 +1,95 @@
-import { useContext, useEffect } from 'react'
-import HeroSection from '../shared/HeroSection'
-import FadeUp from '../shared/FadeUp'
-import BlurUpBackground from '../shared/BlurUpBackground'
+import { useContext, useEffect, useState, useMemo } from 'react'
+import ToursHero from '../shared/ToursHero'
+import TourCard from '../shared/TourCard'
 import { tours } from '../../data/tours'
 import useT from '../../i18n/useT'
-import LocaleLink from '../../i18n/LocaleLink'
+import useLang from '../../i18n/useLang'
 import { I18nContext } from '../../i18n/I18nProvider'
+import useSEO from '../../hooks/useSEO'
+import { getSEO } from '../../data/seoData'
 
 export default function PrivateToursPage() {
   const privateTours = tours.filter((t) => t.type === 'private')
   const t = useT()
+  const { lang } = useLang()
   const { tourTranslations, loadTourTranslations } = useContext(I18nContext)
+  const [search, setSearch] = useState('')
+  const [sort, setSort] = useState('')
+  const [origin, setOrigin] = useState('')
+  const seo = getSEO('privateTours', lang)
+  useSEO({ ...seo, lang, path: 'private-tours', image: '/images/files/georgia-tour-01.jpg' })
 
   useEffect(() => {
     if (!tourTranslations) loadTourTranslations()
   }, [tourTranslations, loadTourTranslations])
 
+  const kutaisiSlugs = [
+    'georgias-cultural-wonders-7-day-adventure-from-kutaisi-to-tbilisi-and-beyond',
+    'ultimate-georgia-exploration-9-day-tour-from-kutaisi-to-tbilisi-and-hidden-gems',
+    'georgias-wonders-11-day-grand-tour-from-kutaisi-to-kazbegi-and-batumi',
+    'grand-georgia-adventure-13-day-cultural-and-scenic-journey',
+  ]
+
+  const filtered = useMemo(() => {
+    let list = privateTours
+
+    if (origin === 'kutaisi') list = list.filter((tour) => kutaisiSlugs.includes(tour.slug))
+    else if (origin === 'tbilisi') list = list.filter((tour) => !kutaisiSlugs.includes(tour.slug))
+
+    if (search.trim()) {
+      const q = search.toLowerCase()
+      list = list.filter((tour) => {
+        const tt = tourTranslations?.[tour.slug]
+        const title = (tt?.title || tour.title).toLowerCase()
+        const desc = (tt?.listingDescription || tt?.description || tour.listingDescription || tour.description || '').toLowerCase()
+        const dests = (tour.map?.markers?.map((m) => m.title) || []).join(' ').toLowerCase()
+        return title.includes(q) || desc.includes(q) || dests.includes(q)
+      })
+    }
+
+    if (sort === 'days-asc') list = [...list].sort((a, b) => a.days - b.days)
+    else if (sort === 'days-desc') list = [...list].sort((a, b) => b.days - a.days)
+    else if (sort === 'name') list = [...list].sort((a, b) => {
+      const aName = tourTranslations?.[a.slug]?.title || a.title
+      const bName = tourTranslations?.[b.slug]?.title || b.title
+      return aName.localeCompare(bName)
+    })
+
+    return list
+  }, [privateTours, tourTranslations, search, sort, origin])
+
   return (
     <>
-      <HeroSection
+      <ToursHero
         image="/images/files/georgia-tour-01.jpg"
         title={t('tour.privateTours')}
+        subtitle={t('tour.privateToursSubtitle')}
+        tourCount={filtered.length}
+        searchValue={search}
+        onSearchChange={setSearch}
+        sortValue={sort}
+        onSortChange={setSort}
+        originValue={origin}
+        onOriginChange={setOrigin}
       />
 
-      {privateTours.map((tour) => {
-        const tt = tourTranslations?.[tour.slug]
-        return (
-          <section key={tour.slug} className="page-items" style={{ padding: 0 }}>
-            <FadeUp>
-              <div className="tour-item">
-                <BlurUpBackground
-                  src={tour.listingImage || tour.heroImage}
-                  className="tour-image"
-                />
-                <div className="tour-info">
-                  <h2>
-                    <LocaleLink to={`/private-tours/${tour.slug}`}>{tt?.title || tour.title}</LocaleLink>
-                  </h2>
-                  <h3>{tour.days} {t('tour.days')}</h3>
-                  <p>{tt?.listingDescription || tt?.description || tour.listingDescription || tour.description}</p>
-                  <div className="more">
-                    <LocaleLink to={`/private-tours/${tour.slug}`}>{t('tour.moreInfo')}</LocaleLink>
-                  </div>
-                </div>
-                <div className={`tour-data${tour.availableDates ? '' : ' no-dates'}`}>
-                  {tour.availableDates && (
-                    <>
-                      <div className="available">{t('tour.availableDates')}</div>
-                      {tour.availableDates.map((d, i) => (
-                        <div key={i}>{d}</div>
-                      ))}
-                    </>
-                  )}
-                </div>
-              </div>
-            </FadeUp>
-          </section>
-        )
-      })}
+      <section className="tour-listing" aria-label={t('tour.privateTours')}>
+        {filtered.length > 0 ? (
+          filtered.map((tour, index) => (
+            <TourCard
+              key={tour.slug}
+              tour={tour}
+              translation={tourTranslations?.[tour.slug]}
+              index={index}
+              basePath="/private-tours"
+            />
+          ))
+        ) : (
+          <div className="tour-listing__empty">
+            <p>{t('tour.noResults')}</p>
+          </div>
+        )}
+      </section>
     </>
   )
 }
