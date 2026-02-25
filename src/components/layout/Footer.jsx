@@ -85,7 +85,7 @@ export default function Footer({ variant = 'default' }) {
       {/* Bottom bar */}
       <div className="footer-bottom">
         <div className="footer-bottom__left">
-          <span>&copy; {new Date().getFullYear()} Hikasus Travel. {t('footer.rights')}</span>
+          <span>&copy; 2024&ndash;{new Date().getFullYear()} Hikasus Travel. {t('footer.rights')}</span>
         </div>
         <div className="footer-bottom__right">
           <LocaleLink to="/privacy-policy">{t('footer.privacyPolicy')}</LocaleLink>
