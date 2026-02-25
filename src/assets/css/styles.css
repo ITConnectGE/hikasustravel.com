@@ -4501,8 +4501,9 @@ select option:checked {
 
 .embassy-card__name {
   font-size: calc(var(--font-size) * 0.85);
-  color: #666;
+  color: #444;
   margin: 2px 0 0;
+  word-break: break-word;
 }
 
 .embassy-card__details {
@@ -4536,7 +4537,7 @@ select option:checked {
   font-size: calc(var(--font-size) * 0.8);
   text-transform: uppercase;
   letter-spacing: 0.3px;
-  color: #555;
+  color: #444;
 }
 
 .embassy-card__map-btn {
