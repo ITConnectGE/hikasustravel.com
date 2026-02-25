@@ -24,6 +24,9 @@ export default function Header({ variant = 'default' }) {
   }, [location])
 
   useEffect(() => {
+    // On mobile the header is already position:fixed via CSS, so skip sticky logic
+    if (window.innerWidth <= 900) return
+
     let ticking = false
     // Capture the initial offset once before any sticky toggle
     const menuEl = menuRef.current
