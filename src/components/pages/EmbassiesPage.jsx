@@ -1,7 +1,6 @@
 import { useState, useMemo, useEffect, useRef, useCallback } from 'react'
 import mapboxgl from 'mapbox-gl'
 import HeroSection from '../shared/HeroSection'
-import FadeUp from '../shared/FadeUp'
 import useT from '../../i18n/useT'
 import useLang from '../../i18n/useLang'
 import useSEO from '../../hooks/useSEO'
@@ -130,7 +129,6 @@ export default function EmbassiesPage() {
 
       {/* Emergency Numbers */}
       <section className="page-items">
-        <FadeUp>
           <h2 className="embassy-section-title">{t('embassies.emergencyTitle')}</h2>
           <div className="emergency-cards">
             <a href="tel:112" className="emergency-card">
@@ -138,12 +136,10 @@ export default function EmbassiesPage() {
               <span className="emergency-card__label">{t('embassies.emergencyUniversal')}</span>
             </a>
           </div>
-        </FadeUp>
       </section>
 
       {/* Search & Map */}
       <section className="page-items">
-        <FadeUp>
           <h2 className="embassy-section-title">{t('embassies.findYourEmbassy')}</h2>
           <div className="embassy-search-wrap">
             <input
@@ -158,12 +154,10 @@ export default function EmbassiesPage() {
           <div className="embassy-map-container">
             <div id="embassies-map" className="embassy-map" />
           </div>
-        </FadeUp>
       </section>
 
       {/* Embassy Cards */}
       <section className="page-items">
-        <FadeUp>
           <p className="embassy-count">
             {t('embassies.embassiesCount').replace('{count}', filtered.length)}
           </p>
@@ -225,7 +219,6 @@ export default function EmbassiesPage() {
               </div>
             ))}
           </div>
-        </FadeUp>
       </section>
     </>
   )
