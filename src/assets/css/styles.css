@@ -4491,6 +4491,10 @@ select option:checked {
   flex-shrink: 0;
 }
 
+.embassy-card__header > div {
+  min-width: 0;
+}
+
 .embassy-card__country {
   font-family: "rockwell";
   font-size: calc(var(--font-size) * 1.1);

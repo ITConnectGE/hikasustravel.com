@@ -57,7 +57,20 @@ export default function TourDetailPage() {
         })),
       }}),
     }
-    return { title, description, path: `${prefix}/${slug}`, image: tour.heroImage, jsonLd }
+    const locations = (tour.itinerary || [])
+      .map(day => day.title)
+      .filter(Boolean)
+    const typeLabel = tour.type === 'group' ? 'group tour' : 'private tour'
+    const daysLabel = tour.days ? `${tour.days}-day Georgia tour` : 'Georgia tour'
+    const keywords = [
+      `book ${typeLabel} Georgia`,
+      daysLabel,
+      ...locations.map(loc => `${loc} tour`),
+      `Georgia ${typeLabel} itinerary`,
+      'book Georgia adventure',
+    ].join(', ')
+
+    return { title, description, keywords, path: `${prefix}/${slug}`, image: tour.heroImage, jsonLd }
   }, [tour, tt, slug])
   useSEO({ ...tourSeo, lang })
 
