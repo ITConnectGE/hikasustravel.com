@@ -50,9 +50,18 @@ export default function BlogArticlePage() {
     },
   } : null, [article])
 
+  const articleKeywords = useMemo(() => {
+    if (!article?.tags?.length) return undefined
+    const tagKeywords = article.tags.map(tag =>
+      `Georgia ${tag.replace(/-/g, ' ')}`
+    )
+    return [...tagKeywords, 'travel tips Georgia'].join(', ')
+  }, [article])
+
   useSEO(article ? {
     title: `${article.title} | Hikasus Travel Blog`,
     description: article.excerpt,
+    keywords: articleKeywords,
     lang,
     path: `blog/${slug}`,
     image: article.heroImage,

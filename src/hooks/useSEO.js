@@ -45,7 +45,7 @@ export default function useSEO({ title, description, keywords, lang = 'en', path
     setMeta('keywords', keywords)
 
     // Canonical
-    const canonical = `${SITE_URL}/#/${lang}${path ? `/${path}` : ''}`
+    const canonical = `${SITE_URL}/${lang}${path ? `/${path}` : ''}`
     setLink('canonical', canonical)
 
     // Open Graph
