@@ -87,6 +87,7 @@
   </head>
   <body>
     <div id="root"></div>
+    <script>if(location.hash.startsWith('#/'))location.replace(location.hash.slice(1))</script>
     <script type="module" src="/src/main.jsx"></script>
   </body>
 </html>
