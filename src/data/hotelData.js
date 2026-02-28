@@ -1,9 +1,10 @@
 const hotelData = {
   'Sandali Metekhi By Old Hospitality': {
     images: [
-      { src: '/images/hotels/sandali-metekhi.jpg', alt: 'Sandali Metekhi By Old Hospitality hotel building facade in Tbilisi Old Town, Georgia' },
-      { src: '/images/hotels/sandali-metekhi-2.jpg', alt: 'Sandali Metekhi hotel rooftop terrace with views of Narikala Fortress, Tbilisi' },
-      { src: '/images/hotels/sandali-metekhi-3.jpg', alt: 'Sandali Metekhi hotel lobby and Art Deco interior design, Tbilisi' },
+      { src: '/images/hotels/sandali-metekhi.jpg', alt: 'Sandali Metekhi By Old Hospitality hotel building exterior in Tbilisi Old Town, Georgia' },
+      { src: '/images/hotels/sandali-metekhi-2.jpg', alt: 'Sandali Metekhi hotel lobby and reception area with Art Deco interior design, Tbilisi' },
+      { src: '/images/hotels/sandali-metekhi-3.jpg', alt: 'Sandali Metekhi hotel guest room with elegant furnishings, Tbilisi' },
+      { src: '/images/hotels/sandali-metekhi-4.jpg', alt: 'Sandali Metekhi hotel bathroom with bathtub and modern amenities, Tbilisi' },
     ],
     stars: 4,
     description: 'An Art Deco boutique hotel nestled in Tbilisi\'s historic Metekhi district. With a stunning rooftop bar offering panoramic views of Narikala Fortress and the Old Town, Sandali Metekhi blends Georgian charm with modern luxury for an unforgettable stay.',
@@ -23,8 +24,9 @@ const hotelData = {
   'Best View Kazbegi': {
     images: [
       { src: '/images/hotels/best-view-kazbegi.jpg', alt: 'Best View Kazbegi hotel building exterior in Stepantsminda with Caucasus mountain backdrop' },
-      { src: '/images/hotels/best-view-kazbegi-2.jpg', alt: 'Best View Kazbegi hotel panoramic terrace with view of Mount Kazbek and Gergeti Trinity Church' },
-      { src: '/images/hotels/best-view-kazbegi-3.jpg', alt: 'Best View Kazbegi hotel room with mountain views in Stepantsminda, Georgia' },
+      { src: '/images/hotels/best-view-kazbegi-2.jpg', alt: 'Best View Kazbegi hotel lobby and common area with comfortable seating, Stepantsminda' },
+      { src: '/images/hotels/best-view-kazbegi-3.jpg', alt: 'Best View Kazbegi hotel guest room with mountain views in Stepantsminda, Georgia' },
+      { src: '/images/hotels/best-view-kazbegi-4.jpg', alt: 'Best View Kazbegi hotel bathroom with shower in Stepantsminda, Georgia' },
     ],
     stars: 4,
     description: 'Perched high in the Greater Caucasus mountains with a 9.7 guest rating, Best View Kazbegi lives up to its name. Wake up to jaw-dropping panoramas of Mount Kazbek and the iconic Gergeti Trinity Church, all from the comfort of your cozy mountain retreat.',
@@ -43,9 +45,10 @@ const hotelData = {
   },
   'Hotel West Way': {
     images: [
-      { src: '/images/hotels/hotel-west-way.jpg', alt: 'Hotel West Way building exterior at night with illuminated sign in Kutaisi, Georgia' },
-      { src: '/images/hotels/hotel-west-way-2.jpg', alt: 'Hotel West Way garden and outdoor BBQ area in Kutaisi' },
-      { src: '/images/hotels/hotel-west-way-3.jpg', alt: 'Hotel West Way restaurant and dining area in Kutaisi, Georgia' },
+      { src: '/images/hotels/hotel-west-way.jpg', alt: 'Hotel West Way building exterior in Kutaisi, Georgia' },
+      { src: '/images/hotels/hotel-west-way-2.jpg', alt: 'Hotel West Way lobby and reception area in Kutaisi, Georgia' },
+      { src: '/images/hotels/hotel-west-way-3.jpg', alt: 'Hotel West Way comfortable guest room in Kutaisi, Georgia' },
+      { src: '/images/hotels/hotel-west-way-4.jpg', alt: 'Hotel West Way bathroom with shower in Kutaisi, Georgia' },
     ],
     stars: 4,
     description: 'A welcoming hotel in the heart of Kutaisi featuring lush gardens and a BBQ area perfect for relaxing evenings. Hotel West Way serves as the ideal base for exploring the magnificent Prometheus Cave, Sataplia Nature Reserve, and the ancient Gelati Monastery.',
@@ -64,9 +67,10 @@ const hotelData = {
   },
   'Hotel Phaliashvili': {
     images: [
-      { src: '/images/hotels/hotel-phaliashvili.jpg', alt: 'Hotel Phaliashvili building facade with balconies in Batumi, Georgia' },
-      { src: '/images/hotels/hotel-phaliashvili-2.jpg', alt: 'Hotel Phaliashvili rooftop terrace with Black Sea views in Batumi' },
+      { src: '/images/hotels/hotel-phaliashvili.jpg', alt: 'Hotel Phaliashvili building exterior with balconies in Batumi, Georgia' },
+      { src: '/images/hotels/hotel-phaliashvili-2.jpg', alt: 'Hotel Phaliashvili lobby and interior staircase with ornate railings, Batumi' },
       { src: '/images/hotels/hotel-phaliashvili-3.jpg', alt: 'Hotel Phaliashvili comfortable guest room near Batumi Boulevard' },
+      { src: '/images/hotels/hotel-phaliashvili-4.jpg', alt: 'Hotel Phaliashvili bathroom with shower and modern fixtures, Batumi' },
     ],
     stars: 3,
     description: 'A charming seaside hotel in Batumi with a 9.2 guest rating, Hotel Phaliashvili offers a fantastic rooftop terrace with Black Sea views. Located steps from the famous Batumi Boulevard, it\'s the perfect home base for exploring Georgia\'s vibrant coastal city.',
@@ -86,8 +90,9 @@ const hotelData = {
   'Hotel & Wine Cellar ARGE': {
     images: [
       { src: '/images/hotels/hotel-arge.jpg', alt: 'Hotel and Wine Cellar ARGE building exterior with garden in Telavi, Kakheti wine region, Georgia' },
-      { src: '/images/hotels/hotel-arge-2.jpg', alt: 'Hotel ARGE private vineyards with Caucasus mountain views in Kakheti, Georgia' },
-      { src: '/images/hotels/hotel-arge-3.jpg', alt: 'Hotel ARGE wine cellar and tasting room in Telavi, Georgia' },
+      { src: '/images/hotels/hotel-arge-2.jpg', alt: 'Hotel ARGE lobby and lounge area in Telavi, Georgia' },
+      { src: '/images/hotels/hotel-arge-3.jpg', alt: 'Hotel ARGE guest room with vineyard views in Kakheti, Georgia' },
+      { src: '/images/hotels/hotel-arge-4.jpg', alt: 'Hotel ARGE bathroom with modern amenities in Telavi, Georgia' },
     ],
     stars: null,
     description: 'A one-of-a-kind wine hotel in the Kakheti wine region, surrounded by private vineyards with breathtaking Caucasus mountain views. Hotel ARGE offers an authentic Georgian experience with its own wine cellar for tastings, a swimming pool, and a tranquil atmosphere that captures the soul of Georgian winemaking.',
@@ -106,9 +111,10 @@ const hotelData = {
   },
   'Rooms Hotel Tbilisi': {
     images: [
-      { src: '/images/hotels/rooms-hotel-tbilisi.jpg', alt: 'Rooms Hotel Tbilisi industrial-chic exterior on the banks of the Mtkvari River, Georgia' },
-      { src: '/images/hotels/rooms-hotel-tbilisi-2.jpg', alt: 'Rooms Hotel Tbilisi stylish lounge with exposed brick walls and designer furniture' },
+      { src: '/images/hotels/rooms-hotel-tbilisi.jpg', alt: 'Rooms Hotel Tbilisi building exterior on the banks of the Mtkvari River, Georgia' },
+      { src: '/images/hotels/rooms-hotel-tbilisi-2.jpg', alt: 'Rooms Hotel Tbilisi stylish lobby and lounge with designer furniture' },
       { src: '/images/hotels/rooms-hotel-tbilisi-3.jpg', alt: 'Rooms Hotel Tbilisi guest room with contemporary design and city views' },
+      { src: '/images/hotels/rooms-hotel-tbilisi-4.jpg', alt: 'Rooms Hotel Tbilisi bathroom with modern fixtures, Tbilisi' },
     ],
     stars: 4,
     description: 'A design-forward boutique hotel housed in a converted Soviet-era publishing house on the banks of the Mtkvari River. Rooms Hotel Tbilisi is a cultural landmark in its own right, blending industrial-chic aesthetics with warm Georgian hospitality, a vibrant lobby bar, and a celebrated restaurant.',
@@ -128,8 +134,9 @@ const hotelData = {
   'Ibis Styles Tbilisi Center': {
     images: [
       { src: '/images/hotels/ibis-styles-tbilisi.jpg', alt: 'Ibis Styles Tbilisi Center modern hotel building on Rustaveli Avenue, Georgia' },
-      { src: '/images/hotels/ibis-styles-tbilisi-2.jpg', alt: 'Ibis Styles Tbilisi Center colorful lobby and reception area' },
+      { src: '/images/hotels/ibis-styles-tbilisi-2.jpg', alt: 'Ibis Styles Tbilisi Center lobby and reception area' },
       { src: '/images/hotels/ibis-styles-tbilisi-3.jpg', alt: 'Ibis Styles Tbilisi Center bright guest room with modern furnishings' },
+      { src: '/images/hotels/ibis-styles-tbilisi-4.jpg', alt: 'Ibis Styles Tbilisi Center bathroom with contemporary design' },
     ],
     stars: 4,
     description: 'A colorful and contemporary hotel right on Tbilisi\'s main Rustaveli Avenue. Ibis Styles Tbilisi Center offers reliable international-standard comfort with a playful design, complimentary breakfast, and an unbeatable central location for exploring the capital.',
@@ -148,9 +155,10 @@ const hotelData = {
   },
   'Ginger Hotel': {
     images: [
-      { src: '/images/hotels/ginger-hotel.jpg', alt: 'Ginger Hotel cozy exterior in Tbilisi Old Town, Georgia' },
-      { src: '/images/hotels/ginger-hotel-2.jpg', alt: 'Ginger Hotel breakfast area with traditional Georgian décor' },
+      { src: '/images/hotels/ginger-hotel.jpg', alt: 'Ginger Hotel building exterior in Tbilisi Old Town, Georgia' },
+      { src: '/images/hotels/ginger-hotel-2.jpg', alt: 'Ginger Hotel lobby and common area in Tbilisi' },
       { src: '/images/hotels/ginger-hotel-3.jpg', alt: 'Ginger Hotel clean and comfortable guest room in Tbilisi' },
+      { src: '/images/hotels/ginger-hotel-4.jpg', alt: 'Ginger Hotel bathroom with modern amenities in Tbilisi' },
     ],
     stars: 3,
     description: 'A cheerful budget-friendly hotel tucked into the winding streets of Tbilisi\'s Old Town. Ginger Hotel offers clean, comfortable rooms with a warm atmosphere and friendly staff, making it a great-value base for travelers who want to be in the heart of the action.',
@@ -170,8 +178,9 @@ const hotelData = {
   'Rooms Hotel Kazbegi': {
     images: [
       { src: '/images/hotels/rooms-hotel-kazbegi.jpg', alt: 'Rooms Hotel Kazbegi striking modern building against the Greater Caucasus mountains, Stepantsminda' },
-      { src: '/images/hotels/rooms-hotel-kazbegi-2.jpg', alt: 'Rooms Hotel Kazbegi panoramic lounge with floor-to-ceiling mountain views' },
+      { src: '/images/hotels/rooms-hotel-kazbegi-2.jpg', alt: 'Rooms Hotel Kazbegi lobby and reception with mountain views' },
       { src: '/images/hotels/rooms-hotel-kazbegi-3.jpg', alt: 'Rooms Hotel Kazbegi luxurious guest room with Mount Kazbek views' },
+      { src: '/images/hotels/rooms-hotel-kazbegi-4.jpg', alt: 'Rooms Hotel Kazbegi bathroom with modern fixtures, Stepantsminda' },
     ],
     stars: 4,
     description: 'A design masterpiece set against the dramatic backdrop of Mount Kazbek. Rooms Hotel Kazbegi is one of Georgia\'s most iconic luxury retreats, offering floor-to-ceiling mountain views, a crackling fireplace lounge, an indoor pool, and a spa — the ultimate mountain escape.',
@@ -190,9 +199,10 @@ const hotelData = {
   },
   'Northgate Hotel': {
     images: [
-      { src: '/images/hotels/northgate-hotel.jpg', alt: 'Northgate Hotel welcoming facade in Stepantsminda, Kazbegi region, Georgia' },
-      { src: '/images/hotels/northgate-hotel-2.jpg', alt: 'Northgate Hotel dining area with mountain views in Kazbegi' },
-      { src: '/images/hotels/northgate-hotel-3.jpg', alt: 'Northgate Hotel comfortable guest room in Stepantsminda' },
+      { src: '/images/hotels/northgate-hotel.jpg', alt: 'Northgate Hotel building exterior in Stepantsminda, Kazbegi region, Georgia' },
+      { src: '/images/hotels/northgate-hotel-2.jpg', alt: 'Northgate Hotel lobby and rest area with mountain views in Kazbegi' },
+      { src: '/images/hotels/northgate-hotel-3.jpg', alt: 'Northgate Hotel comfortable guest room with balcony in Stepantsminda' },
+      { src: '/images/hotels/northgate-hotel-4.jpg', alt: 'Northgate Hotel bathroom with modern amenities in Stepantsminda' },
     ],
     stars: 3,
     description: 'A comfortable mid-range hotel in the heart of Stepantsminda with warm hospitality and mountain views. Northgate Hotel provides a cozy retreat after a day of Caucasus adventures, with a welcoming restaurant serving hearty Georgian cuisine and well-appointed rooms.',
@@ -212,8 +222,9 @@ const hotelData = {
   'Hotel Horizon': {
     images: [
       { src: '/images/hotels/hotel-horizon.jpg', alt: 'Hotel Horizon building exterior in Stepantsminda with mountain scenery, Kazbegi' },
-      { src: '/images/hotels/hotel-horizon-2.jpg', alt: 'Hotel Horizon cozy common area with traditional décor in Kazbegi' },
-      { src: '/images/hotels/hotel-horizon-3.jpg', alt: 'Hotel Horizon neat guest room with views in Stepantsminda, Georgia' },
+      { src: '/images/hotels/hotel-horizon-2.jpg', alt: 'Hotel Horizon lobby and common area in Kazbegi' },
+      { src: '/images/hotels/hotel-horizon-3.jpg', alt: 'Hotel Horizon guest room with views in Stepantsminda, Georgia' },
+      { src: '/images/hotels/hotel-horizon-4.jpg', alt: 'Hotel Horizon bathroom with shower in Stepantsminda, Georgia' },
     ],
     stars: 3,
     description: 'A budget-friendly guesthouse-style hotel in Stepantsminda offering simple, clean rooms and genuine Georgian warmth. Hotel Horizon is perfect for travelers who want to explore the Kazbegi region without breaking the bank, with home-cooked meals and a friendly atmosphere.',
@@ -233,8 +244,9 @@ const hotelData = {
   'Newport Hotel Kutaisi': {
     images: [
       { src: '/images/hotels/newport-hotel-kutaisi.jpg', alt: 'Newport Hotel Kutaisi elegant building exterior in the center of Kutaisi, Georgia' },
-      { src: '/images/hotels/newport-hotel-kutaisi-2.jpg', alt: 'Newport Hotel Kutaisi modern lobby and lounge area' },
+      { src: '/images/hotels/newport-hotel-kutaisi-2.jpg', alt: 'Newport Hotel Kutaisi lobby and reception area' },
       { src: '/images/hotels/newport-hotel-kutaisi-3.jpg', alt: 'Newport Hotel Kutaisi spacious guest room with contemporary design' },
+      { src: '/images/hotels/newport-hotel-kutaisi-4.jpg', alt: 'Newport Hotel Kutaisi bathroom with modern fixtures' },
     ],
     stars: 4,
     description: 'A stylish and modern hotel in the center of Kutaisi, Georgia\'s second-largest city. Newport Hotel offers spacious rooms with contemporary interiors, an excellent restaurant, and a prime location for exploring the region\'s UNESCO World Heritage sites and natural wonders.',
@@ -253,9 +265,10 @@ const hotelData = {
   },
   'Boutique Hotel Argo': {
     images: [
-      { src: '/images/hotels/boutique-hotel-argo.jpg', alt: 'Boutique Hotel Argo charming facade in central Kutaisi, Georgia' },
-      { src: '/images/hotels/boutique-hotel-argo-2.jpg', alt: 'Boutique Hotel Argo cozy breakfast room with Georgian hospitality' },
+      { src: '/images/hotels/boutique-hotel-argo.jpg', alt: 'Boutique Hotel Argo building exterior in central Kutaisi, Georgia' },
+      { src: '/images/hotels/boutique-hotel-argo-2.jpg', alt: 'Boutique Hotel Argo reception and lobby area in Kutaisi' },
       { src: '/images/hotels/boutique-hotel-argo-3.jpg', alt: 'Boutique Hotel Argo well-appointed guest room in Kutaisi' },
+      { src: '/images/hotels/boutique-hotel-argo-4.jpg', alt: 'Boutique Hotel Argo bathroom with modern amenities in Kutaisi' },
     ],
     stars: 3,
     description: 'A charming boutique hotel in central Kutaisi named after the legendary Argonauts who sailed to ancient Colchis. Boutique Hotel Argo offers comfortable rooms, warm service, and a great location for discovering Kutaisi\'s rich history and the stunning natural attractions of Imereti.',
@@ -275,8 +288,9 @@ const hotelData = {
   'Rooms Hotel': {
     images: [
       { src: '/images/hotels/rooms-hotel-batumi.jpg', alt: 'Rooms Hotel Batumi striking exterior on the Black Sea waterfront, Georgia' },
-      { src: '/images/hotels/rooms-hotel-batumi-2.jpg', alt: 'Rooms Hotel Batumi rooftop pool with panoramic Black Sea views' },
+      { src: '/images/hotels/rooms-hotel-batumi-2.jpg', alt: 'Rooms Hotel Batumi lobby lounge with stylish interior design' },
       { src: '/images/hotels/rooms-hotel-batumi-3.jpg', alt: 'Rooms Hotel Batumi elegant guest suite with sea views' },
+      { src: '/images/hotels/rooms-hotel-batumi-4.jpg', alt: 'Rooms Hotel Batumi bathroom with premium fixtures and amenities' },
     ],
     stars: 5,
     description: 'The crown jewel of Batumi\'s waterfront, Rooms Hotel Batumi is a luxury design hotel with a stunning rooftop pool overlooking the Black Sea. With world-class dining, impeccable service, and interiors that blend industrial chic with coastal elegance, it\'s the finest address on Georgia\'s coast.',
@@ -295,9 +309,10 @@ const hotelData = {
   },
   'Hotel Monarch': {
     images: [
-      { src: '/images/hotels/hotel-monarch.jpg', alt: 'Hotel Monarch modern building facade in Batumi, Georgia' },
-      { src: '/images/hotels/hotel-monarch-2.jpg', alt: 'Hotel Monarch stylish lobby and reception in Batumi' },
+      { src: '/images/hotels/hotel-monarch.jpg', alt: 'Hotel Monarch modern building exterior in Batumi, Georgia' },
+      { src: '/images/hotels/hotel-monarch-2.jpg', alt: 'Hotel Monarch lobby and reception area in Batumi' },
       { src: '/images/hotels/hotel-monarch-3.jpg', alt: 'Hotel Monarch comfortable guest room with balcony views in Batumi' },
+      { src: '/images/hotels/hotel-monarch-4.jpg', alt: 'Hotel Monarch bathroom with modern amenities in Batumi' },
     ],
     stars: 4,
     description: 'A polished mid-range hotel in the heart of Batumi offering modern rooms, many with balconies and sea views. Hotel Monarch combines comfort and value with a convenient location near Batumi Boulevard, making it an excellent choice for exploring Georgia\'s sunny Black Sea coast.',
@@ -316,9 +331,10 @@ const hotelData = {
   },
   'Boutique Hotel 32': {
     images: [
-      { src: '/images/hotels/boutique-hotel-32.jpg', alt: 'Boutique Hotel 32 charming exterior in Batumi Old Town, Georgia' },
-      { src: '/images/hotels/boutique-hotel-32-2.jpg', alt: 'Boutique Hotel 32 cozy interior with local artwork in Batumi' },
+      { src: '/images/hotels/boutique-hotel-32.jpg', alt: 'Boutique Hotel 32 building exterior in Batumi, Georgia' },
+      { src: '/images/hotels/boutique-hotel-32-2.jpg', alt: 'Boutique Hotel 32 entrance and reception area in Batumi' },
       { src: '/images/hotels/boutique-hotel-32-3.jpg', alt: 'Boutique Hotel 32 guest room with warm décor in Batumi' },
+      { src: '/images/hotels/boutique-hotel-32-4.jpg', alt: 'Boutique Hotel 32 bathroom with modern fixtures in Batumi' },
     ],
     stars: 3,
     description: 'A cozy and affordable boutique hotel tucked into a quiet street in Batumi. Boutique Hotel 32 offers a personal touch with tastefully decorated rooms, friendly staff, and a location that puts you just minutes from the seaside promenade and Old Town attractions.',
@@ -337,9 +353,10 @@ const hotelData = {
   },
   'Tsinandali Estate, A Radisson Collection Hotel': {
     images: [
-      { src: '/images/hotels/tsinandali-estate.jpg', alt: 'Tsinandali Estate Radisson Collection Hotel grand entrance surrounded by historic gardens, Telavi' },
-      { src: '/images/hotels/tsinandali-estate-2.jpg', alt: 'Tsinandali Estate vineyard views and historic palace grounds in Kakheti, Georgia' },
+      { src: '/images/hotels/tsinandali-estate.jpg', alt: 'Tsinandali Estate Radisson Collection Hotel grand exterior surrounded by historic gardens, Telavi' },
+      { src: '/images/hotels/tsinandali-estate-2.jpg', alt: 'Tsinandali Estate hotel lobby and lounge with elegant interior design' },
       { src: '/images/hotels/tsinandali-estate-3.jpg', alt: 'Tsinandali Estate luxurious guest room with elegant Georgian décor' },
+      { src: '/images/hotels/tsinandali-estate-4.jpg', alt: 'Tsinandali Estate hotel bathroom with premium amenities and marble finishes' },
     ],
     stars: 5,
     description: 'Set within the legendary 19th-century Tsinandali Estate, this Radisson Collection property is the pinnacle of luxury in Georgia\'s wine country. Surrounded by historic gardens, a renowned wine cellar, and the Caucasus foothills, it offers an unforgettable blend of heritage, wine culture, and world-class hospitality.',
@@ -358,9 +375,10 @@ const hotelData = {
   },
   'Park Hotel Tsinandali': {
     images: [
-      { src: '/images/hotels/park-hotel-tsinandali.jpg', alt: 'Park Hotel Tsinandali modern building surrounded by greenery in Kakheti, Georgia' },
-      { src: '/images/hotels/park-hotel-tsinandali-2.jpg', alt: 'Park Hotel Tsinandali outdoor terrace and garden with vineyard views' },
+      { src: '/images/hotels/park-hotel-tsinandali.jpg', alt: 'Park Hotel Tsinandali building exterior surrounded by greenery in Kakheti, Georgia' },
+      { src: '/images/hotels/park-hotel-tsinandali-2.jpg', alt: 'Park Hotel Tsinandali lobby and interior common area' },
       { src: '/images/hotels/park-hotel-tsinandali-3.jpg', alt: 'Park Hotel Tsinandali comfortable guest room with contemporary furnishings' },
+      { src: '/images/hotels/park-hotel-tsinandali-4.jpg', alt: 'Park Hotel Tsinandali bathroom with modern amenities' },
     ],
     stars: 4,
     description: 'A modern and comfortable hotel set amid the lush greenery of the Tsinandali area in Kakheti. Park Hotel Tsinandali offers a peaceful retreat with well-appointed rooms, a lovely garden terrace, and easy access to the region\'s famous wineries and historic estates.',
@@ -379,9 +397,10 @@ const hotelData = {
   },
   'Akhaltsikhe Inn (Junior Suite Room)': {
     images: [
-      { src: '/images/hotels/akhaltsikhe-inn.jpg', alt: 'Akhaltsikhe Inn elegant exterior near Rabati Castle, Akhaltsikhe, Georgia' },
-      { src: '/images/hotels/akhaltsikhe-inn-2.jpg', alt: 'Akhaltsikhe Inn spacious Junior Suite with luxurious furnishings' },
-      { src: '/images/hotels/akhaltsikhe-inn-3.jpg', alt: 'Akhaltsikhe Inn terrace with views of Rabati Castle and the surrounding valley' },
+      { src: '/images/hotels/akhaltsikhe-inn.jpg', alt: 'Akhaltsikhe Inn building exterior near Rabati Castle, Akhaltsikhe, Georgia' },
+      { src: '/images/hotels/akhaltsikhe-inn-2.jpg', alt: 'Akhaltsikhe Inn lobby and reception area in Akhaltsikhe' },
+      { src: '/images/hotels/akhaltsikhe-inn-3.jpg', alt: 'Akhaltsikhe Inn spacious Junior Suite guest room with luxurious furnishings' },
+      { src: '/images/hotels/akhaltsikhe-inn-4.jpg', alt: 'Akhaltsikhe Inn bathroom with modern amenities' },
     ],
     stars: 5,
     description: 'A premium boutique inn offering luxurious Junior Suite rooms just steps from the magnificent Rabati Castle. Akhaltsikhe Inn combines elegant interiors with stunning views of the historic fortress and surrounding valley, providing the finest accommodation in this ancient southern Georgian town.',
@@ -400,9 +419,10 @@ const hotelData = {
   },
   'Hotel Gino Wellness Rabati': {
     images: [
-      { src: '/images/hotels/hotel-gino-wellness-rabati.jpg', alt: 'Hotel Gino Wellness Rabati modern facade near Rabati Castle, Akhaltsikhe, Georgia' },
-      { src: '/images/hotels/hotel-gino-wellness-rabati-2.jpg', alt: 'Hotel Gino Wellness Rabati indoor pool and wellness center' },
-      { src: '/images/hotels/hotel-gino-wellness-rabati-3.jpg', alt: 'Hotel Gino Wellness Rabati guest room with castle views in Akhaltsikhe' },
+      { src: '/images/hotels/hotel-gino-wellness-rabati.jpg', alt: 'Hotel Gino Wellness Rabati building exterior near Rabati Castle, Akhaltsikhe, Georgia' },
+      { src: '/images/hotels/hotel-gino-wellness-rabati-2.jpg', alt: 'Hotel Gino Wellness Rabati lobby and reception area in Akhaltsikhe' },
+      { src: '/images/hotels/hotel-gino-wellness-rabati-3.jpg', alt: 'Hotel Gino Wellness Rabati comfortable guest room in Akhaltsikhe' },
+      { src: '/images/hotels/hotel-gino-wellness-rabati-4.jpg', alt: 'Hotel Gino Wellness Rabati bathroom with modern amenities' },
     ],
     stars: 4,
     description: 'A modern wellness hotel right beside the historic Rabati Castle in Akhaltsikhe. Hotel Gino features an indoor pool, sauna, and full wellness center, making it ideal for relaxation after exploring the Vardzia cave monastery and the dramatic landscapes of southern Georgia.',
@@ -421,9 +441,10 @@ const hotelData = {
   },
   'Hotel Beni': {
     images: [
-      { src: '/images/hotels/hotel-beni.jpg', alt: 'Hotel Beni welcoming exterior in Akhaltsikhe, southern Georgia' },
-      { src: '/images/hotels/hotel-beni-2.jpg', alt: 'Hotel Beni cozy dining area with traditional Georgian touches' },
+      { src: '/images/hotels/hotel-beni.jpg', alt: 'Hotel Beni building exterior in Akhaltsikhe, southern Georgia' },
+      { src: '/images/hotels/hotel-beni-2.jpg', alt: 'Hotel Beni lobby and interior common area in Akhaltsikhe' },
       { src: '/images/hotels/hotel-beni-3.jpg', alt: 'Hotel Beni clean and comfortable guest room in Akhaltsikhe' },
+      { src: '/images/hotels/hotel-beni-4.jpg', alt: 'Hotel Beni bathroom with modern amenities in Akhaltsikhe' },
     ],
     stars: 3,
     description: 'A friendly and affordable hotel in Akhaltsikhe offering clean, comfortable rooms and genuine southern Georgian hospitality. Hotel Beni is a great-value base for exploring Rabati Castle, the Vardzia cave city, and the scenic Samtskhe-Javakheti region.',
@@ -443,8 +464,9 @@ const hotelData = {
   'Crowne Plaza Borjomi': {
     images: [
       { src: '/images/hotels/crowne-plaza-borjomi.jpg', alt: 'Crowne Plaza Borjomi grand resort hotel surrounded by forested mountains, Georgia' },
-      { src: '/images/hotels/crowne-plaza-borjomi-2.jpg', alt: 'Crowne Plaza Borjomi indoor pool and spa with mineral water treatments' },
-      { src: '/images/hotels/crowne-plaza-borjomi-3.jpg', alt: 'Crowne Plaza Borjomi elegant guest room with views of Borjomi-Kharagauli National Park' },
+      { src: '/images/hotels/crowne-plaza-borjomi-2.jpg', alt: 'Crowne Plaza Borjomi lobby and reception with elegant interior design' },
+      { src: '/images/hotels/crowne-plaza-borjomi-3.jpg', alt: 'Crowne Plaza Borjomi guest room with views of Borjomi-Kharagauli National Park' },
+      { src: '/images/hotels/crowne-plaza-borjomi-4.jpg', alt: 'Crowne Plaza Borjomi bathroom with premium fixtures and amenities' },
     ],
     stars: 5,
     description: 'A world-class resort hotel in the legendary spa town of Borjomi, surrounded by pristine forested mountains. Crowne Plaza Borjomi offers mineral water spa treatments, an indoor pool, multiple restaurants, and luxurious rooms — the ultimate wellness retreat in the heart of the Caucasus.',
@@ -463,9 +485,10 @@ const hotelData = {
   },
   'Bridge Hotel': {
     images: [
-      { src: '/images/hotels/bridge-hotel.jpg', alt: 'Bridge Hotel charming building along the river in Borjomi, Georgia' },
-      { src: '/images/hotels/bridge-hotel-2.jpg', alt: 'Bridge Hotel cozy restaurant with mountain and river views in Borjomi' },
+      { src: '/images/hotels/bridge-hotel.jpg', alt: 'Bridge Hotel building exterior along the river in Borjomi, Georgia' },
+      { src: '/images/hotels/bridge-hotel-2.jpg', alt: 'Bridge Hotel lobby and reception area in Borjomi' },
       { src: '/images/hotels/bridge-hotel-3.jpg', alt: 'Bridge Hotel comfortable guest room in the heart of Borjomi' },
+      { src: '/images/hotels/bridge-hotel-4.jpg', alt: 'Bridge Hotel bathroom with shower and modern fixtures in Borjomi' },
     ],
     stars: 4,
     description: 'A well-appointed hotel in the center of Borjomi, nestled along the river with lovely mountain views. Bridge Hotel offers comfortable rooms, a welcoming restaurant, and a perfect location for strolling to the famous mineral water park and exploring the surrounding national park.',
@@ -484,9 +507,10 @@ const hotelData = {
   },
   'Boutique Hotel Borjomi Verde': {
     images: [
-      { src: '/images/hotels/borjomi-verde.jpg', alt: 'Boutique Hotel Borjomi Verde cozy exterior surrounded by greenery, Borjomi, Georgia' },
-      { src: '/images/hotels/borjomi-verde-2.jpg', alt: 'Boutique Hotel Borjomi Verde garden terrace and outdoor seating area' },
+      { src: '/images/hotels/borjomi-verde.jpg', alt: 'Boutique Hotel Borjomi Verde building exterior surrounded by greenery, Borjomi, Georgia' },
+      { src: '/images/hotels/borjomi-verde-2.jpg', alt: 'Boutique Hotel Borjomi Verde terrace and outdoor common area' },
       { src: '/images/hotels/borjomi-verde-3.jpg', alt: 'Boutique Hotel Borjomi Verde clean and inviting guest room' },
+      { src: '/images/hotels/borjomi-verde-4.jpg', alt: 'Boutique Hotel Borjomi Verde bathroom with modern amenities' },
     ],
     stars: 3,
     description: 'A charming budget-friendly boutique hotel in Borjomi surrounded by lush greenery. Borjomi Verde offers a peaceful garden setting, clean and comfortable rooms, and a warm atmosphere that captures the relaxing spirit of this famous Georgian spa town.',
@@ -505,9 +529,10 @@ const hotelData = {
   },
   'Hotel Posta': {
     images: [
-      { src: '/images/hotels/hotel-posta.jpg', alt: 'Hotel Posta traditional stone building in the heart of Mestia, Svaneti, Georgia' },
-      { src: '/images/hotels/hotel-posta-2.jpg', alt: 'Hotel Posta restaurant with views of medieval Svan towers in Mestia' },
-      { src: '/images/hotels/hotel-posta-3.jpg', alt: 'Hotel Posta spacious guest room with mountain views in Mestia' },
+      { src: '/images/hotels/hotel-posta.jpg', alt: 'Hotel Posta building exterior in the heart of Mestia, Svaneti, Georgia' },
+      { src: '/images/hotels/hotel-posta-2.jpg', alt: 'Hotel Posta reception and lobby area in Mestia' },
+      { src: '/images/hotels/hotel-posta-3.jpg', alt: 'Hotel Posta guest room with mountain views in Mestia' },
+      { src: '/images/hotels/hotel-posta-4.jpg', alt: 'Hotel Posta bathroom with modern amenities in Mestia' },
     ],
     stars: 4,
     description: 'The premier hotel in Mestia, the capital of the legendary Svaneti region. Hotel Posta offers refined mountain hospitality with panoramic views of medieval Svan towers and snow-capped Caucasus peaks, a superb restaurant, and a warm fireplace lounge perfect after a day of alpine adventure.',
@@ -526,9 +551,10 @@ const hotelData = {
   },
   'Mestia Inn': {
     images: [
-      { src: '/images/hotels/mestia-inn.jpg', alt: 'Mestia Inn welcoming guesthouse-style building in Mestia, Svaneti, Georgia' },
-      { src: '/images/hotels/mestia-inn-2.jpg', alt: 'Mestia Inn dining room with hearty Svan cuisine and mountain views' },
-      { src: '/images/hotels/mestia-inn-3.jpg', alt: 'Mestia Inn cozy guest room with wooden interiors in Mestia' },
+      { src: '/images/hotels/mestia-inn.jpg', alt: 'Mestia Inn building exterior in Mestia, Svaneti, Georgia' },
+      { src: '/images/hotels/mestia-inn-2.jpg', alt: 'Mestia Inn lobby and common area with mountain views' },
+      { src: '/images/hotels/mestia-inn-3.jpg', alt: 'Mestia Inn comfortable guest room with wooden interiors in Mestia' },
+      { src: '/images/hotels/mestia-inn-4.jpg', alt: 'Mestia Inn bathroom with modern amenities in Mestia' },
     ],
     stars: 3,
     description: 'A welcoming mid-range inn in Mestia offering comfortable rooms with traditional wooden interiors and mountain views. Mestia Inn serves hearty Svan cuisine and provides a warm, family-run atmosphere that embodies the legendary hospitality of the Svaneti highlands.',
@@ -547,9 +573,10 @@ const hotelData = {
   },
   'Lileo Inn': {
     images: [
-      { src: '/images/hotels/lileo-inn.jpg', alt: 'Lileo Inn traditional Svan guesthouse exterior in Mestia, Svaneti, Georgia' },
-      { src: '/images/hotels/lileo-inn-2.jpg', alt: 'Lileo Inn family-style dining table with homemade Svan food' },
-      { src: '/images/hotels/lileo-inn-3.jpg', alt: 'Lileo Inn simple and clean guest room in Mestia' },
+      { src: '/images/hotels/lileo-inn.jpg', alt: 'Lileo Inn building exterior in Mestia, Svaneti, Georgia' },
+      { src: '/images/hotels/lileo-inn-2.jpg', alt: 'Lileo Inn lobby and common area in Mestia' },
+      { src: '/images/hotels/lileo-inn-3.jpg', alt: 'Lileo Inn guest room with traditional Svan décor in Mestia' },
+      { src: '/images/hotels/lileo-inn-4.jpg', alt: 'Lileo Inn bathroom with modern amenities in Mestia' },
     ],
     stars: 3,
     description: 'An authentic Svan family guesthouse in Mestia offering a genuine highland experience. Lileo Inn serves delicious home-cooked Svan meals, provides simple but clean rooms, and gives guests a taste of the warm family hospitality that Svaneti is famous for.',
