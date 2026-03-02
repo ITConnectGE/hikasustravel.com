@@ -3,7 +3,7 @@
         xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://www.hikasustravel.com/en</loc>
-    <lastmod>2026-02-28</lastmod>
+    <lastmod>2026-03-02</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
       <xhtml:link rel="alternate" hreflang="en" href="https://www.hikasustravel.com/en" />
@@ -17,7 +17,7 @@
   </url>
   <url>
     <loc>https://www.hikasustravel.com/en/about-us</loc>
-    <lastmod>2026-02-28</lastmod>
+    <lastmod>2026-03-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
       <xhtml:link rel="alternate" hreflang="en" href="https://www.hikasustravel.com/en/about-us" />
@@ -31,7 +31,7 @@
   </url>
   <url>
     <loc>https://www.hikasustravel.com/en/about-georgia</loc>
-    <lastmod>2026-02-28</lastmod>
+    <lastmod>2026-03-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
       <xhtml:link rel="alternate" hreflang="en" href="https://www.hikasustravel.com/en/about-georgia" />
@@ -45,7 +45,7 @@
   </url>
   <url>
     <loc>https://www.hikasustravel.com/en/private-tours</loc>
-    <lastmod>2026-02-28</lastmod>
+    <lastmod>2026-03-02</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
       <xhtml:link rel="alternate" hreflang="en" href="https://www.hikasustravel.com/en/private-tours" />
@@ -59,7 +59,7 @@
   </url>
   <url>
     <loc>https://www.hikasustravel.com/en/group-tours</loc>
-    <lastmod>2026-02-28</lastmod>
+    <lastmod>2026-03-02</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
       <xhtml:link rel="alternate" hreflang="en" href="https://www.hikasustravel.com/en/group-tours" />
@@ -73,7 +73,7 @@
   </url>
   <url>
     <loc>https://www.hikasustravel.com/en/shuttle-service</loc>
-    <lastmod>2026-02-28</lastmod>
+    <lastmod>2026-03-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
       <xhtml:link rel="alternate" hreflang="en" href="https://www.hikasustravel.com/en/shuttle-service" />
@@ -86,22 +86,8 @@
       <xhtml:link rel="alternate" hreflang="x-default" href="https://www.hikasustravel.com/en/shuttle-service" />
   </url>
   <url>
-    <loc>https://www.hikasustravel.com/en/taxi-service</loc>
-    <lastmod>2026-02-28</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-      <xhtml:link rel="alternate" hreflang="en" href="https://www.hikasustravel.com/en/taxi-service" />
-      <xhtml:link rel="alternate" hreflang="es" href="https://www.hikasustravel.com/es/taxi-service" />
-      <xhtml:link rel="alternate" hreflang="fr" href="https://www.hikasustravel.com/fr/taxi-service" />
-      <xhtml:link rel="alternate" hreflang="de" href="https://www.hikasustravel.com/de/taxi-service" />
-      <xhtml:link rel="alternate" hreflang="pl" href="https://www.hikasustravel.com/pl/taxi-service" />
-      <xhtml:link rel="alternate" hreflang="cs" href="https://www.hikasustravel.com/cs/taxi-service" />
-      <xhtml:link rel="alternate" hreflang="nl" href="https://www.hikasustravel.com/nl/taxi-service" />
-      <xhtml:link rel="alternate" hreflang="x-default" href="https://www.hikasustravel.com/en/taxi-service" />
-  </url>
-  <url>
     <loc>https://www.hikasustravel.com/en/embassies</loc>
-    <lastmod>2026-02-28</lastmod>
+    <lastmod>2026-03-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
       <xhtml:link rel="alternate" hreflang="en" href="https://www.hikasustravel.com/en/embassies" />
@@ -115,7 +101,7 @@
   </url>
   <url>
     <loc>https://www.hikasustravel.com/en/blog</loc>
-    <lastmod>2026-02-28</lastmod>
+    <lastmod>2026-03-02</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
       <xhtml:link rel="alternate" hreflang="en" href="https://www.hikasustravel.com/en/blog" />
@@ -129,7 +115,7 @@
   </url>
   <url>
     <loc>https://www.hikasustravel.com/en/blog/ultimate-guide-to-traveling-to-georgia</loc>
-    <lastmod>2026-02-28</lastmod>
+    <lastmod>2026-03-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
       <xhtml:link rel="alternate" hreflang="en" href="https://www.hikasustravel.com/en/blog/ultimate-guide-to-traveling-to-georgia" />
@@ -143,7 +129,7 @@
   </url>
   <url>
     <loc>https://www.hikasustravel.com/en/faq</loc>
-    <lastmod>2026-02-28</lastmod>
+    <lastmod>2026-03-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
       <xhtml:link rel="alternate" hreflang="en" href="https://www.hikasustravel.com/en/faq" />
@@ -157,7 +143,7 @@
   </url>
   <url>
     <loc>https://www.hikasustravel.com/en/contact</loc>
-    <lastmod>2026-02-28</lastmod>
+    <lastmod>2026-03-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
       <xhtml:link rel="alternate" hreflang="en" href="https://www.hikasustravel.com/en/contact" />
@@ -171,7 +157,7 @@
   </url>
   <url>
     <loc>https://www.hikasustravel.com/en/privacy-policy</loc>
-    <lastmod>2026-02-28</lastmod>
+    <lastmod>2026-03-02</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.2</priority>
       <xhtml:link rel="alternate" hreflang="en" href="https://www.hikasustravel.com/en/privacy-policy" />
@@ -185,7 +171,7 @@
   </url>
   <url>
     <loc>https://www.hikasustravel.com/en/terms-and-conditions</loc>
-    <lastmod>2026-02-28</lastmod>
+    <lastmod>2026-03-02</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.2</priority>
       <xhtml:link rel="alternate" hreflang="en" href="https://www.hikasustravel.com/en/terms-and-conditions" />
@@ -199,7 +185,7 @@
   </url>
   <url>
     <loc>https://www.hikasustravel.com/en/group-tours/georgia-group-tour</loc>
-    <lastmod>2026-02-28</lastmod>
+    <lastmod>2026-03-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
       <xhtml:link rel="alternate" hreflang="en" href="https://www.hikasustravel.com/en/group-tours/georgia-group-tour" />
@@ -213,7 +199,7 @@
   </url>
   <url>
     <loc>https://www.hikasustravel.com/en/private-tours/experience-georgias-rich-culture-coastal-beauty-5-day-tour-from-tbilisi-to-batumi</loc>
-    <lastmod>2026-02-28</lastmod>
+    <lastmod>2026-03-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
       <xhtml:link rel="alternate" hreflang="en" href="https://www.hikasustravel.com/en/private-tours/experience-georgias-rich-culture-coastal-beauty-5-day-tour-from-tbilisi-to-batumi" />
@@ -227,7 +213,7 @@
   </url>
   <url>
     <loc>https://www.hikasustravel.com/en/private-tours/sulfur-baths-and-sipping-wine-5-days-of-georgian-delights</loc>
-    <lastmod>2026-02-28</lastmod>
+    <lastmod>2026-03-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
       <xhtml:link rel="alternate" hreflang="en" href="https://www.hikasustravel.com/en/private-tours/sulfur-baths-and-sipping-wine-5-days-of-georgian-delights" />
@@ -241,7 +227,7 @@
   </url>
   <url>
     <loc>https://www.hikasustravel.com/en/private-tours/tbilisi-to-treasures-a-6-day-journey-through-georgias-icons-and-hidden-gems</loc>
-    <lastmod>2026-02-28</lastmod>
+    <lastmod>2026-03-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
       <xhtml:link rel="alternate" hreflang="en" href="https://www.hikasustravel.com/en/private-tours/tbilisi-to-treasures-a-6-day-journey-through-georgias-icons-and-hidden-gems" />
@@ -255,7 +241,7 @@
   </url>
   <url>
     <loc>https://www.hikasustravel.com/en/private-tours/georgias-cultural-wonders-7-day-adventure-from-kutaisi-to-tbilisi-and-beyond</loc>
-    <lastmod>2026-02-28</lastmod>
+    <lastmod>2026-03-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
       <xhtml:link rel="alternate" hreflang="en" href="https://www.hikasustravel.com/en/private-tours/georgias-cultural-wonders-7-day-adventure-from-kutaisi-to-tbilisi-and-beyond" />
@@ -269,7 +255,7 @@
   </url>
   <url>
     <loc>https://www.hikasustravel.com/en/private-tours/experience-the-heart-of-georgia-8-day-journey-of-culture-nature-wine-tastings</loc>
-    <lastmod>2026-02-28</lastmod>
+    <lastmod>2026-03-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
       <xhtml:link rel="alternate" hreflang="en" href="https://www.hikasustravel.com/en/private-tours/experience-the-heart-of-georgia-8-day-journey-of-culture-nature-wine-tastings" />
@@ -283,7 +269,7 @@
   </url>
   <url>
     <loc>https://www.hikasustravel.com/en/private-tours/immerse-yourself-in-georgia-8-day-cultural-and-adventure-journey-through-the-caucasus</loc>
-    <lastmod>2026-02-28</lastmod>
+    <lastmod>2026-03-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
       <xhtml:link rel="alternate" hreflang="en" href="https://www.hikasustravel.com/en/private-tours/immerse-yourself-in-georgia-8-day-cultural-and-adventure-journey-through-the-caucasus" />
@@ -297,7 +283,7 @@
   </url>
   <url>
     <loc>https://www.hikasustravel.com/en/private-tours/ultimate-georgia-exploration-9-day-tour-from-kutaisi-to-tbilisi-and-hidden-gems</loc>
-    <lastmod>2026-02-28</lastmod>
+    <lastmod>2026-03-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
       <xhtml:link rel="alternate" hreflang="en" href="https://www.hikasustravel.com/en/private-tours/ultimate-georgia-exploration-9-day-tour-from-kutaisi-to-tbilisi-and-hidden-gems" />
@@ -311,7 +297,7 @@
   </url>
   <url>
     <loc>https://www.hikasustravel.com/en/private-tours/wander-wonder-and-wine-9-days-of-georgias-best</loc>
-    <lastmod>2026-02-28</lastmod>
+    <lastmod>2026-03-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
       <xhtml:link rel="alternate" hreflang="en" href="https://www.hikasustravel.com/en/private-tours/wander-wonder-and-wine-9-days-of-georgias-best" />
@@ -325,7 +311,7 @@
   </url>
   <url>
     <loc>https://www.hikasustravel.com/en/private-tours/wine-wonders-and-the-caucasus-a-9-day-adventure-in-georgia</loc>
-    <lastmod>2026-02-28</lastmod>
+    <lastmod>2026-03-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
       <xhtml:link rel="alternate" hreflang="en" href="https://www.hikasustravel.com/en/private-tours/wine-wonders-and-the-caucasus-a-9-day-adventure-in-georgia" />
@@ -339,7 +325,7 @@
   </url>
   <url>
     <loc>https://www.hikasustravel.com/en/private-tours/georgia-in-10-days-where-every-corner-has-a-story-and-every-meal-is-a-celebration</loc>
-    <lastmod>2026-02-28</lastmod>
+    <lastmod>2026-03-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
       <xhtml:link rel="alternate" hreflang="en" href="https://www.hikasustravel.com/en/private-tours/georgia-in-10-days-where-every-corner-has-a-story-and-every-meal-is-a-celebration" />
@@ -353,7 +339,7 @@
   </url>
   <url>
     <loc>https://www.hikasustravel.com/en/private-tours/georgias-wonders-11-day-grand-tour-from-kutaisi-to-kazbegi-and-batumi</loc>
-    <lastmod>2026-02-28</lastmod>
+    <lastmod>2026-03-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
       <xhtml:link rel="alternate" hreflang="en" href="https://www.hikasustravel.com/en/private-tours/georgias-wonders-11-day-grand-tour-from-kutaisi-to-kazbegi-and-batumi" />
@@ -367,7 +353,7 @@
   </url>
   <url>
     <loc>https://www.hikasustravel.com/en/private-tours/12-day-ultimate-georgia-adventure-tour-tbilisi-kazbegi-mestia-kutaisi-batumi</loc>
-    <lastmod>2026-02-28</lastmod>
+    <lastmod>2026-03-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
       <xhtml:link rel="alternate" hreflang="en" href="https://www.hikasustravel.com/en/private-tours/12-day-ultimate-georgia-adventure-tour-tbilisi-kazbegi-mestia-kutaisi-batumi" />
@@ -381,7 +367,7 @@
   </url>
   <url>
     <loc>https://www.hikasustravel.com/en/private-tours/grand-georgia-adventure-13-day-cultural-and-scenic-journey</loc>
-    <lastmod>2026-02-28</lastmod>
+    <lastmod>2026-03-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
       <xhtml:link rel="alternate" hreflang="en" href="https://www.hikasustravel.com/en/private-tours/grand-georgia-adventure-13-day-cultural-and-scenic-journey" />
@@ -395,7 +381,7 @@
   </url>
   <url>
     <loc>https://www.hikasustravel.com/en/private-tours/ultimate-15-day-georgia-tour-from-tbilisi-to-svaneti--wine-culture-and-natural-beauty</loc>
-    <lastmod>2026-02-28</lastmod>
+    <lastmod>2026-03-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
       <xhtml:link rel="alternate" hreflang="en" href="https://www.hikasustravel.com/en/private-tours/ultimate-15-day-georgia-tour-from-tbilisi-to-svaneti--wine-culture-and-natural-beauty" />
@@ -409,7 +395,7 @@
   </url>
   <url>
     <loc>https://www.hikasustravel.com/en/private-tours/georgia-on-my-mind-20-days-of-tasting-trekking-and-total-relaxation</loc>
-    <lastmod>2026-02-28</lastmod>
+    <lastmod>2026-03-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
       <xhtml:link rel="alternate" hreflang="en" href="https://www.hikasustravel.com/en/private-tours/georgia-on-my-mind-20-days-of-tasting-trekking-and-total-relaxation" />
@@ -423,7 +409,7 @@
   </url>
   <url>
     <loc>https://www.hikasustravel.com/es</loc>
-    <lastmod>2026-02-28</lastmod>
+    <lastmod>2026-03-02</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
       <xhtml:link rel="alternate" hreflang="en" href="https://www.hikasustravel.com/en" />
@@ -437,7 +423,7 @@
   </url>
   <url>
     <loc>https://www.hikasustravel.com/es/about-us</loc>
-    <lastmod>2026-02-28</lastmod>
+    <lastmod>2026-03-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
       <xhtml:link rel="alternate" hreflang="en" href="https://www.hikasustravel.com/en/about-us" />
@@ -451,7 +437,7 @@
   </url>
   <url>
     <loc>https://www.hikasustravel.com/es/about-georgia</loc>
-    <lastmod>2026-02-28</lastmod>
+    <lastmod>2026-03-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
       <xhtml:link rel="alternate" hreflang="en" href="https://www.hikasustravel.com/en/about-georgia" />
@@ -465,7 +451,7 @@
   </url>
   <url>
     <loc>https://www.hikasustravel.com/es/private-tours</loc>
-    <lastmod>2026-02-28</lastmod>
+    <lastmod>2026-03-02</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
       <xhtml:link rel="alternate" hreflang="en" href="https://www.hikasustravel.com/en/private-tours" />
@@ -479,7 +465,7 @@
   </url>
   <url>
     <loc>https://www.hikasustravel.com/es/group-tours</loc>
-    <lastmod>2026-02-28</lastmod>
+    <lastmod>2026-03-02</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
       <xhtml:link rel="alternate" hreflang="en" href="https://www.hikasustravel.com/en/group-tours" />
@@ -493,7 +479,7 @@
   </url>
   <url>
     <loc>https://www.hikasustravel.com/es/shuttle-service</loc>
-    <lastmod>2026-02-28</lastmod>
+    <lastmod>2026-03-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
       <xhtml:link rel="alternate" hreflang="en" href="https://www.hikasustravel.com/en/shuttle-service" />
@@ -506,22 +492,8 @@
       <xhtml:link rel="alternate" hreflang="x-default" href="https://www.hikasustravel.com/en/shuttle-service" />
   </url>
   <url>
-    <loc>https://www.hikasustravel.com/es/taxi-service</loc>
-    <lastmod>2026-02-28</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-      <xhtml:link rel="alternate" hreflang="en" href="https://www.hikasustravel.com/en/taxi-service" />
-      <xhtml:link rel="alternate" hreflang="es" href="https://www.hikasustravel.com/es/taxi-service" />
-      <xhtml:link rel="alternate" hreflang="fr" href="https://www.hikasustravel.com/fr/taxi-service" />
-      <xhtml:link rel="alternate" hreflang="de" href="https://www.hikasustravel.com/de/taxi-service" />
-      <xhtml:link rel="alternate" hreflang="pl" href="https://www.hikasustravel.com/pl/taxi-service" />
-      <xhtml:link rel="alternate" hreflang="cs" href="https://www.hikasustravel.com/cs/taxi-service" />
-      <xhtml:link rel="alternate" hreflang="nl" href="https://www.hikasustravel.com/nl/taxi-service" />
-      <xhtml:link rel="alternate" hreflang="x-default" href="https://www.hikasustravel.com/en/taxi-service" />
-  </url>
-  <url>
     <loc>https://www.hikasustravel.com/es/embassies</loc>
-    <lastmod>2026-02-28</lastmod>
+    <lastmod>2026-03-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
       <xhtml:link rel="alternate" hreflang="en" href="https://www.hikasustravel.com/en/embassies" />
@@ -535,7 +507,7 @@
   </url>
   <url>
     <loc>https://www.hikasustravel.com/es/blog</loc>
-    <lastmod>2026-02-28</lastmod>
+    <lastmod>2026-03-02</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
       <xhtml:link rel="alternate" hreflang="en" href="https://www.hikasustravel.com/en/blog" />
@@ -549,7 +521,7 @@
   </url>
   <url>
     <loc>https://www.hikasustravel.com/es/blog/ultimate-guide-to-traveling-to-georgia</loc>
-    <lastmod>2026-02-28</lastmod>
+    <lastmod>2026-03-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
       <xhtml:link rel="alternate" hreflang="en" href="https://www.hikasustravel.com/en/blog/ultimate-guide-to-traveling-to-georgia" />
@@ -563,7 +535,7 @@
   </url>
   <url>
     <loc>https://www.hikasustravel.com/es/faq</loc>
-    <lastmod>2026-02-28</lastmod>
+    <lastmod>2026-03-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
       <xhtml:link rel="alternate" hreflang="en" href="https://www.hikasustravel.com/en/faq" />
@@ -577,7 +549,7 @@
   </url>
   <url>
     <loc>https://www.hikasustravel.com/es/contact</loc>
-    <lastmod>2026-02-28</lastmod>
+    <lastmod>2026-03-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
       <xhtml:link rel="alternate" hreflang="en" href="https://www.hikasustravel.com/en/contact" />
@@ -591,7 +563,7 @@
   </url>
   <url>
     <loc>https://www.hikasustravel.com/es/privacy-policy</loc>
-    <lastmod>2026-02-28</lastmod>
+    <lastmod>2026-03-02</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.2</priority>
       <xhtml:link rel="alternate" hreflang="en" href="https://www.hikasustravel.com/en/privacy-policy" />
@@ -605,7 +577,7 @@
   </url>
   <url>
     <loc>https://www.hikasustravel.com/es/terms-and-conditions</loc>
-    <lastmod>2026-02-28</lastmod>
+    <lastmod>2026-03-02</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.2</priority>
       <xhtml:link rel="alternate" hreflang="en" href="https://www.hikasustravel.com/en/terms-and-conditions" />
@@ -619,7 +591,7 @@
   </url>
   <url>
     <loc>https://www.hikasustravel.com/es/group-tours/georgia-group-tour</loc>
-    <lastmod>2026-02-28</lastmod>
+    <lastmod>2026-03-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
       <xhtml:link rel="alternate" hreflang="en" href="https://www.hikasustravel.com/en/group-tours/georgia-group-tour" />
@@ -633,7 +605,7 @@
   </url>
   <url>
     <loc>https://www.hikasustravel.com/es/private-tours/experience-georgias-rich-culture-coastal-beauty-5-day-tour-from-tbilisi-to-batumi</loc>
-    <lastmod>2026-02-28</lastmod>
+    <lastmod>2026-03-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
       <xhtml:link rel="alternate" hreflang="en" href="https://www.hikasustravel.com/en/private-tours/experience-georgias-rich-culture-coastal-beauty-5-day-tour-from-tbilisi-to-batumi" />
@@ -647,7 +619,7 @@
   </url>
   <url>
     <loc>https://www.hikasustravel.com/es/private-tours/sulfur-baths-and-sipping-wine-5-days-of-georgian-delights</loc>
-    <lastmod>2026-02-28</lastmod>
+    <lastmod>2026-03-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
       <xhtml:link rel="alternate" hreflang="en" href="https://www.hikasustravel.com/en/private-tours/sulfur-baths-and-sipping-wine-5-days-of-georgian-delights" />
@@ -661,7 +633,7 @@
   </url>
   <url>
     <loc>https://www.hikasustravel.com/es/private-tours/tbilisi-to-treasures-a-6-day-journey-through-georgias-icons-and-hidden-gems</loc>
-    <lastmod>2026-02-28</lastmod>
+    <lastmod>2026-03-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
       <xhtml:link rel="alternate" hreflang="en" href="https://www.hikasustravel.com/en/private-tours/tbilisi-to-treasures-a-6-day-journey-through-georgias-icons-and-hidden-gems" />
@@ -675,7 +647,7 @@
   </url>
   <url>
     <loc>https://www.hikasustravel.com/es/private-tours/georgias-cultural-wonders-7-day-adventure-from-kutaisi-to-tbilisi-and-beyond</loc>
-    <lastmod>2026-02-28</lastmod>
+    <lastmod>2026-03-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
       <xhtml:link rel="alternate" hreflang="en" href="https://www.hikasustravel.com/en/private-tours/georgias-cultural-wonders-7-day-adventure-from-kutaisi-to-tbilisi-and-beyond" />
@@ -689,7 +661,7 @@
   </url>
   <url>
     <loc>https://www.hikasustravel.com/es/private-tours/experience-the-heart-of-georgia-8-day-journey-of-culture-nature-wine-tastings</loc>
-    <lastmod>2026-02-28</lastmod>
+    <lastmod>2026-03-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
       <xhtml:link rel="alternate" hreflang="en" href="https://www.hikasustravel.com/en/private-tours/experience-the-heart-of-georgia-8-day-journey-of-culture-nature-wine-tastings" />
@@ -703,7 +675,7 @@
   </url>
   <url>
     <loc>https://www.hikasustravel.com/es/private-tours/immerse-yourself-in-georgia-8-day-cultural-and-adventure-journey-through-the-caucasus</loc>
-    <lastmod>2026-02-28</lastmod>
+    <lastmod>2026-03-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
       <xhtml:link rel="alternate" hreflang="en" href="https://www.hikasustravel.com/en/private-tours/immerse-yourself-in-georgia-8-day-cultural-and-adventure-journey-through-the-caucasus" />
@@ -717,7 +689,7 @@
   </url>
   <url>
     <loc>https://www.hikasustravel.com/es/private-tours/ultimate-georgia-exploration-9-day-tour-from-kutaisi-to-tbilisi-and-hidden-gems</loc>
-    <lastmod>2026-02-28</lastmod>
+    <lastmod>2026-03-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
       <xhtml:link rel="alternate" hreflang="en" href="https://www.hikasustravel.com/en/private-tours/ultimate-georgia-exploration-9-day-tour-from-kutaisi-to-tbilisi-and-hidden-gems" />
@@ -731,7 +703,7 @@
   </url>
   <url>
     <loc>https://www.hikasustravel.com/es/private-tours/wander-wonder-and-wine-9-days-of-georgias-best</loc>
-    <lastmod>2026-02-28</lastmod>
+    <lastmod>2026-03-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
       <xhtml:link rel="alternate" hreflang="en" href="https://www.hikasustravel.com/en/private-tours/wander-wonder-and-wine-9-days-of-georgias-best" />
@@ -745,7 +717,7 @@
   </url>
   <url>
     <loc>https://www.hikasustravel.com/es/private-tours/wine-wonders-and-the-caucasus-a-9-day-adventure-in-georgia</loc>
-    <lastmod>2026-02-28</lastmod>
+    <lastmod>2026-03-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
       <xhtml:link rel="alternate" hreflang="en" href="https://www.hikasustravel.com/en/private-tours/wine-wonders-and-the-caucasus-a-9-day-adventure-in-georgia" />
@@ -759,7 +731,7 @@
   </url>
   <url>
     <loc>https://www.hikasustravel.com/es/private-tours/georgia-in-10-days-where-every-corner-has-a-story-and-every-meal-is-a-celebration</loc>
-    <lastmod>2026-02-28</lastmod>
+    <lastmod>2026-03-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
       <xhtml:link rel="alternate" hreflang="en" href="https://www.hikasustravel.com/en/private-tours/georgia-in-10-days-where-every-corner-has-a-story-and-every-meal-is-a-celebration" />
@@ -773,7 +745,7 @@
   </url>
   <url>
     <loc>https://www.hikasustravel.com/es/private-tours/georgias-wonders-11-day-grand-tour-from-kutaisi-to-kazbegi-and-batumi</loc>
-    <lastmod>2026-02-28</lastmod>
+    <lastmod>2026-03-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
       <xhtml:link rel="alternate" hreflang="en" href="https://www.hikasustravel.com/en/private-tours/georgias-wonders-11-day-grand-tour-from-kutaisi-to-kazbegi-and-batumi" />
@@ -787,7 +759,7 @@
   </url>
   <url>
     <loc>https://www.hikasustravel.com/es/private-tours/12-day-ultimate-georgia-adventure-tour-tbilisi-kazbegi-mestia-kutaisi-batumi</loc>
-    <lastmod>2026-02-28</lastmod>
+    <lastmod>2026-03-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
       <xhtml:link rel="alternate" hreflang="en" href="https://www.hikasustravel.com/en/private-tours/12-day-ultimate-georgia-adventure-tour-tbilisi-kazbegi-mestia-kutaisi-batumi" />
@@ -801,7 +773,7 @@
   </url>
   <url>
     <loc>https://www.hikasustravel.com/es/private-tours/grand-georgia-adventure-13-day-cultural-and-scenic-journey</loc>
-    <lastmod>2026-02-28</lastmod>
+    <lastmod>2026-03-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
       <xhtml:link rel="alternate" hreflang="en" href="https://www.hikasustravel.com/en/private-tours/grand-georgia-adventure-13-day-cultural-and-scenic-journey" />
@@ -815,7 +787,7 @@
   </url>
   <url>
     <loc>https://www.hikasustravel.com/es/private-tours/ultimate-15-day-georgia-tour-from-tbilisi-to-svaneti--wine-culture-and-natural-beauty</loc>
-    <lastmod>2026-02-28</lastmod>
+    <lastmod>2026-03-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
       <xhtml:link rel="alternate" hreflang="en" href="https://www.hikasustravel.com/en/private-tours/ultimate-15-day-georgia-tour-from-tbilisi-to-svaneti--wine-culture-and-natural-beauty" />
@@ -829,7 +801,7 @@
   </url>
   <url>
     <loc>https://www.hikasustravel.com/es/private-tours/georgia-on-my-mind-20-days-of-tasting-trekking-and-total-relaxation</loc>
-    <lastmod>2026-02-28</lastmod>
+    <lastmod>2026-03-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
       <xhtml:link rel="alternate" hreflang="en" href="https://www.hikasustravel.com/en/private-tours/georgia-on-my-mind-20-days-of-tasting-trekking-and-total-relaxation" />
@@ -843,7 +815,7 @@
   </url>
   <url>
     <loc>https://www.hikasustravel.com/fr</loc>
-    <lastmod>2026-02-28</lastmod>
+    <lastmod>2026-03-02</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
       <xhtml:link rel="alternate" hreflang="en" href="https://www.hikasustravel.com/en" />
@@ -857,7 +829,7 @@
   </url>
   <url>
     <loc>https://www.hikasustravel.com/fr/about-us</loc>
-    <lastmod>2026-02-28</lastmod>
+    <lastmod>2026-03-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
       <xhtml:link rel="alternate" hreflang="en" href="https://www.hikasustravel.com/en/about-us" />
@@ -871,7 +843,7 @@
   </url>
   <url>
     <loc>https://www.hikasustravel.com/fr/about-georgia</loc>
-    <lastmod>2026-02-28</lastmod>
+    <lastmod>2026-03-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
       <xhtml:link rel="alternate" hreflang="en" href="https://www.hikasustravel.com/en/about-georgia" />
@@ -885,7 +857,7 @@
   </url>
   <url>
     <loc>https://www.hikasustravel.com/fr/private-tours</loc>
-    <lastmod>2026-02-28</lastmod>
+    <lastmod>2026-03-02</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
       <xhtml:link rel="alternate" hreflang="en" href="https://www.hikasustravel.com/en/private-tours" />
@@ -899,7 +871,7 @@
   </url>
   <url>
     <loc>https://www.hikasustravel.com/fr/group-tours</loc>
-    <lastmod>2026-02-28</lastmod>
+    <lastmod>2026-03-02</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
       <xhtml:link rel="alternate" hreflang="en" href="https://www.hikasustravel.com/en/group-tours" />
@@ -913,7 +885,7 @@
   </url>
   <url>
     <loc>https://www.hikasustravel.com/fr/shuttle-service</loc>
-    <lastmod>2026-02-28</lastmod>
+    <lastmod>2026-03-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
       <xhtml:link rel="alternate" hreflang="en" href="https://www.hikasustravel.com/en/shuttle-service" />
@@ -926,22 +898,8 @@
       <xhtml:link rel="alternate" hreflang="x-default" href="https://www.hikasustravel.com/en/shuttle-service" />
   </url>
   <url>
-    <loc>https://www.hikasustravel.com/fr/taxi-service</loc>
-    <lastmod>2026-02-28</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-      <xhtml:link rel="alternate" hreflang="en" href="https://www.hikasustravel.com/en/taxi-service" />
-      <xhtml:link rel="alternate" hreflang="es" href="https://www.hikasustravel.com/es/taxi-service" />
-      <xhtml:link rel="alternate" hreflang="fr" href="https://www.hikasustravel.com/fr/taxi-service" />
-      <xhtml:link rel="alternate" hreflang="de" href="https://www.hikasustravel.com/de/taxi-service" />
-      <xhtml:link rel="alternate" hreflang="pl" href="https://www.hikasustravel.com/pl/taxi-service" />
-      <xhtml:link rel="alternate" hreflang="cs" href="https://www.hikasustravel.com/cs/taxi-service" />
-      <xhtml:link rel="alternate" hreflang="nl" href="https://www.hikasustravel.com/nl/taxi-service" />
-      <xhtml:link rel="alternate" hreflang="x-default" href="https://www.hikasustravel.com/en/taxi-service" />
-  </url>
-  <url>
     <loc>https://www.hikasustravel.com/fr/embassies</loc>
-    <lastmod>2026-02-28</lastmod>
+    <lastmod>2026-03-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
       <xhtml:link rel="alternate" hreflang="en" href="https://www.hikasustravel.com/en/embassies" />
@@ -955,7 +913,7 @@
   </url>
   <url>
     <loc>https://www.hikasustravel.com/fr/blog</loc>
-    <lastmod>2026-02-28</lastmod>
+    <lastmod>2026-03-02</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
       <xhtml:link rel="alternate" hreflang="en" href="https://www.hikasustravel.com/en/blog" />
@@ -969,7 +927,7 @@
   </url>
   <url>
     <loc>https://www.hikasustravel.com/fr/blog/ultimate-guide-to-traveling-to-georgia</loc>
-    <lastmod>2026-02-28</lastmod>
+    <lastmod>2026-03-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
       <xhtml:link rel="alternate" hreflang="en" href="https://www.hikasustravel.com/en/blog/ultimate-guide-to-traveling-to-georgia" />
@@ -983,7 +941,7 @@
   </url>
   <url>
     <loc>https://www.hikasustravel.com/fr/faq</loc>
-    <lastmod>2026-02-28</lastmod>
+    <lastmod>2026-03-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
       <xhtml:link rel="alternate" hreflang="en" href="https://www.hikasustravel.com/en/faq" />
@@ -997,7 +955,7 @@
   </url>
   <url>
     <loc>https://www.hikasustravel.com/fr/contact</loc>
-    <lastmod>2026-02-28</lastmod>
+    <lastmod>2026-03-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
       <xhtml:link rel="alternate" hreflang="en" href="https://www.hikasustravel.com/en/contact" />
@@ -1011,7 +969,7 @@
   </url>
   <url>
     <loc>https://www.hikasustravel.com/fr/privacy-policy</loc>
-    <lastmod>2026-02-28</lastmod>
+    <lastmod>2026-03-02</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.2</priority>
       <xhtml:link rel="alternate" hreflang="en" href="https://www.hikasustravel.com/en/privacy-policy" />
@@ -1025,7 +983,7 @@
   </url>
   <url>
     <loc>https://www.hikasustravel.com/fr/terms-and-conditions</loc>
-    <lastmod>2026-02-28</lastmod>
+    <lastmod>2026-03-02</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.2</priority>
       <xhtml:link rel="alternate" hreflang="en" href="https://www.hikasustravel.com/en/terms-and-conditions" />
@@ -1039,7 +997,7 @@
   </url>
   <url>
     <loc>https://www.hikasustravel.com/fr/group-tours/georgia-group-tour</loc>
-    <lastmod>2026-02-28</lastmod>
+    <lastmod>2026-03-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
       <xhtml:link rel="alternate" hreflang="en" href="https://www.hikasustravel.com/en/group-tours/georgia-group-tour" />
@@ -1053,7 +1011,7 @@
   </url>
   <url>
     <loc>https://www.hikasustravel.com/fr/private-tours/experience-georgias-rich-culture-coastal-beauty-5-day-tour-from-tbilisi-to-batumi</loc>
-    <lastmod>2026-02-28</lastmod>
+    <lastmod>2026-03-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
       <xhtml:link rel="alternate" hreflang="en" href="https://www.hikasustravel.com/en/private-tours/experience-georgias-rich-culture-coastal-beauty-5-day-tour-from-tbilisi-to-batumi" />
@@ -1067,7 +1025,7 @@
   </url>
   <url>
     <loc>https://www.hikasustravel.com/fr/private-tours/sulfur-baths-and-sipping-wine-5-days-of-georgian-delights</loc>
-    <lastmod>2026-02-28</lastmod>
+    <lastmod>2026-03-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
       <xhtml:link rel="alternate" hreflang="en" href="https://www.hikasustravel.com/en/private-tours/sulfur-baths-and-sipping-wine-5-days-of-georgian-delights" />
@@ -1081,7 +1039,7 @@
   </url>
   <url>
     <loc>https://www.hikasustravel.com/fr/private-tours/tbilisi-to-treasures-a-6-day-journey-through-georgias-icons-and-hidden-gems</loc>
-    <lastmod>2026-02-28</lastmod>
+    <lastmod>2026-03-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
       <xhtml:link rel="alternate" hreflang="en" href="https://www.hikasustravel.com/en/private-tours/tbilisi-to-treasures-a-6-day-journey-through-georgias-icons-and-hidden-gems" />
@@ -1095,7 +1053,7 @@
   </url>
   <url>
     <loc>https://www.hikasustravel.com/fr/private-tours/georgias-cultural-wonders-7-day-adventure-from-kutaisi-to-tbilisi-and-beyond</loc>
-    <lastmod>2026-02-28</lastmod>
+    <lastmod>2026-03-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
       <xhtml:link rel="alternate" hreflang="en" href="https://www.hikasustravel.com/en/private-tours/georgias-cultural-wonders-7-day-adventure-from-kutaisi-to-tbilisi-and-beyond" />
@@ -1109,7 +1067,7 @@
   </url>
   <url>
     <loc>https://www.hikasustravel.com/fr/private-tours/experience-the-heart-of-georgia-8-day-journey-of-culture-nature-wine-tastings</loc>
-    <lastmod>2026-02-28</lastmod>
+    <lastmod>2026-03-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
       <xhtml:link rel="alternate" hreflang="en" href="https://www.hikasustravel.com/en/private-tours/experience-the-heart-of-georgia-8-day-journey-of-culture-nature-wine-tastings" />
@@ -1123,7 +1081,7 @@
   </url>
   <url>
     <loc>https://www.hikasustravel.com/fr/private-tours/immerse-yourself-in-georgia-8-day-cultural-and-adventure-journey-through-the-caucasus</loc>
-    <lastmod>2026-02-28</lastmod>
+    <lastmod>2026-03-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
       <xhtml:link rel="alternate" hreflang="en" href="https://www.hikasustravel.com/en/private-tours/immerse-yourself-in-georgia-8-day-cultural-and-adventure-journey-through-the-caucasus" />
@@ -1137,7 +1095,7 @@
   </url>
   <url>
     <loc>https://www.hikasustravel.com/fr/private-tours/ultimate-georgia-exploration-9-day-tour-from-kutaisi-to-tbilisi-and-hidden-gems</loc>
-    <lastmod>2026-02-28</lastmod>
+    <lastmod>2026-03-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
       <xhtml:link rel="alternate" hreflang="en" href="https://www.hikasustravel.com/en/private-tours/ultimate-georgia-exploration-9-day-tour-from-kutaisi-to-tbilisi-and-hidden-gems" />
@@ -1151,7 +1109,7 @@
   </url>
   <url>
     <loc>https://www.hikasustravel.com/fr/private-tours/wander-wonder-and-wine-9-days-of-georgias-best</loc>
-    <lastmod>2026-02-28</lastmod>
+    <lastmod>2026-03-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
       <xhtml:link rel="alternate" hreflang="en" href="https://www.hikasustravel.com/en/private-tours/wander-wonder-and-wine-9-days-of-georgias-best" />
@@ -1165,7 +1123,7 @@
   </url>
   <url>
     <loc>https://www.hikasustravel.com/fr/private-tours/wine-wonders-and-the-caucasus-a-9-day-adventure-in-georgia</loc>
-    <lastmod>2026-02-28</lastmod>
+    <lastmod>2026-03-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
       <xhtml:link rel="alternate" hreflang="en" href="https://www.hikasustravel.com/en/private-tours/wine-wonders-and-the-caucasus-a-9-day-adventure-in-georgia" />
@@ -1179,7 +1137,7 @@
   </url>
   <url>
     <loc>https://www.hikasustravel.com/fr/private-tours/georgia-in-10-days-where-every-corner-has-a-story-and-every-meal-is-a-celebration</loc>
-    <lastmod>2026-02-28</lastmod>
+    <lastmod>2026-03-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
       <xhtml:link rel="alternate" hreflang="en" href="https://www.hikasustravel.com/en/private-tours/georgia-in-10-days-where-every-corner-has-a-story-and-every-meal-is-a-celebration" />
@@ -1193,7 +1151,7 @@
   </url>
   <url>
     <loc>https://www.hikasustravel.com/fr/private-tours/georgias-wonders-11-day-grand-tour-from-kutaisi-to-kazbegi-and-batumi</loc>
-    <lastmod>2026-02-28</lastmod>
+    <lastmod>2026-03-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
       <xhtml:link rel="alternate" hreflang="en" href="https://www.hikasustravel.com/en/private-tours/georgias-wonders-11-day-grand-tour-from-kutaisi-to-kazbegi-and-batumi" />
@@ -1207,7 +1165,7 @@
   </url>
   <url>
     <loc>https://www.hikasustravel.com/fr/private-tours/12-day-ultimate-georgia-adventure-tour-tbilisi-kazbegi-mestia-kutaisi-batumi</loc>
-    <lastmod>2026-02-28</lastmod>
+    <lastmod>2026-03-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
       <xhtml:link rel="alternate" hreflang="en" href="https://www.hikasustravel.com/en/private-tours/12-day-ultimate-georgia-adventure-tour-tbilisi-kazbegi-mestia-kutaisi-batumi" />
@@ -1221,7 +1179,7 @@
   </url>
   <url>
     <loc>https://www.hikasustravel.com/fr/private-tours/grand-georgia-adventure-13-day-cultural-and-scenic-journey</loc>
-    <lastmod>2026-02-28</lastmod>
+    <lastmod>2026-03-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
       <xhtml:link rel="alternate" hreflang="en" href="https://www.hikasustravel.com/en/private-tours/grand-georgia-adventure-13-day-cultural-and-scenic-journey" />
@@ -1235,7 +1193,7 @@
   </url>
   <url>
     <loc>https://www.hikasustravel.com/fr/private-tours/ultimate-15-day-georgia-tour-from-tbilisi-to-svaneti--wine-culture-and-natural-beauty</loc>
-    <lastmod>2026-02-28</lastmod>
+    <lastmod>2026-03-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
       <xhtml:link rel="alternate" hreflang="en" href="https://www.hikasustravel.com/en/private-tours/ultimate-15-day-georgia-tour-from-tbilisi-to-svaneti--wine-culture-and-natural-beauty" />
@@ -1249,7 +1207,7 @@
   </url>
   <url>
     <loc>https://www.hikasustravel.com/fr/private-tours/georgia-on-my-mind-20-days-of-tasting-trekking-and-total-relaxation</loc>
-    <lastmod>2026-02-28</lastmod>
+    <lastmod>2026-03-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
       <xhtml:link rel="alternate" hreflang="en" href="https://www.hikasustravel.com/en/private-tours/georgia-on-my-mind-20-days-of-tasting-trekking-and-total-relaxation" />
@@ -1263,7 +1221,7 @@
   </url>
   <url>
     <loc>https://www.hikasustravel.com/de</loc>
-    <lastmod>2026-02-28</lastmod>
+    <lastmod>2026-03-02</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
       <xhtml:link rel="alternate" hreflang="en" href="https://www.hikasustravel.com/en" />
@@ -1277,7 +1235,7 @@
   </url>
   <url>
     <loc>https://www.hikasustravel.com/de/about-us</loc>
-    <lastmod>2026-02-28</lastmod>
+    <lastmod>2026-03-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
       <xhtml:link rel="alternate" hreflang="en" href="https://www.hikasustravel.com/en/about-us" />
@@ -1291,7 +1249,7 @@
   </url>
   <url>
     <loc>https://www.hikasustravel.com/de/about-georgia</loc>
-    <lastmod>2026-02-28</lastmod>
+    <lastmod>2026-03-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
       <xhtml:link rel="alternate" hreflang="en" href="https://www.hikasustravel.com/en/about-georgia" />
@@ -1305,7 +1263,7 @@
   </url>
   <url>
     <loc>https://www.hikasustravel.com/de/private-tours</loc>
-    <lastmod>2026-02-28</lastmod>
+    <lastmod>2026-03-02</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
       <xhtml:link rel="alternate" hreflang="en" href="https://www.hikasustravel.com/en/private-tours" />
@@ -1319,7 +1277,7 @@
   </url>
   <url>
     <loc>https://www.hikasustravel.com/de/group-tours</loc>
-    <lastmod>2026-02-28</lastmod>
+    <lastmod>2026-03-02</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
       <xhtml:link rel="alternate" hreflang="en" href="https://www.hikasustravel.com/en/group-tours" />
@@ -1333,7 +1291,7 @@
   </url>
   <url>
     <loc>https://www.hikasustravel.com/de/shuttle-service</loc>
-    <lastmod>2026-02-28</lastmod>
+    <lastmod>2026-03-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
       <xhtml:link rel="alternate" hreflang="en" href="https://www.hikasustravel.com/en/shuttle-service" />
@@ -1346,22 +1304,8 @@
       <xhtml:link rel="alternate" hreflang="x-default" href="https://www.hikasustravel.com/en/shuttle-service" />
   </url>
   <url>
-    <loc>https://www.hikasustravel.com/de/taxi-service</loc>
-    <lastmod>2026-02-28</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-      <xhtml:link rel="alternate" hreflang="en" href="https://www.hikasustravel.com/en/taxi-service" />
-      <xhtml:link rel="alternate" hreflang="es" href="https://www.hikasustravel.com/es/taxi-service" />
-      <xhtml:link rel="alternate" hreflang="fr" href="https://www.hikasustravel.com/fr/taxi-service" />
-      <xhtml:link rel="alternate" hreflang="de" href="https://www.hikasustravel.com/de/taxi-service" />
-      <xhtml:link rel="alternate" hreflang="pl" href="https://www.hikasustravel.com/pl/taxi-service" />
-      <xhtml:link rel="alternate" hreflang="cs" href="https://www.hikasustravel.com/cs/taxi-service" />
-      <xhtml:link rel="alternate" hreflang="nl" href="https://www.hikasustravel.com/nl/taxi-service" />
-      <xhtml:link rel="alternate" hreflang="x-default" href="https://www.hikasustravel.com/en/taxi-service" />
-  </url>
-  <url>
     <loc>https://www.hikasustravel.com/de/embassies</loc>
-    <lastmod>2026-02-28</lastmod>
+    <lastmod>2026-03-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
       <xhtml:link rel="alternate" hreflang="en" href="https://www.hikasustravel.com/en/embassies" />
@@ -1375,7 +1319,7 @@
   </url>
   <url>
     <loc>https://www.hikasustravel.com/de/blog</loc>
-    <lastmod>2026-02-28</lastmod>
+    <lastmod>2026-03-02</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
       <xhtml:link rel="alternate" hreflang="en" href="https://www.hikasustravel.com/en/blog" />
@@ -1389,7 +1333,7 @@
   </url>
   <url>
     <loc>https://www.hikasustravel.com/de/blog/ultimate-guide-to-traveling-to-georgia</loc>
-    <lastmod>2026-02-28</lastmod>
+    <lastmod>2026-03-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
       <xhtml:link rel="alternate" hreflang="en" href="https://www.hikasustravel.com/en/blog/ultimate-guide-to-traveling-to-georgia" />
@@ -1403,7 +1347,7 @@
   </url>
   <url>
     <loc>https://www.hikasustravel.com/de/faq</loc>
-    <lastmod>2026-02-28</lastmod>
+    <lastmod>2026-03-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
       <xhtml:link rel="alternate" hreflang="en" href="https://www.hikasustravel.com/en/faq" />
@@ -1417,7 +1361,7 @@
   </url>
   <url>
     <loc>https://www.hikasustravel.com/de/contact</loc>
-    <lastmod>2026-02-28</lastmod>
+    <lastmod>2026-03-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
       <xhtml:link rel="alternate" hreflang="en" href="https://www.hikasustravel.com/en/contact" />
@@ -1431,7 +1375,7 @@
   </url>
   <url>
     <loc>https://www.hikasustravel.com/de/privacy-policy</loc>
-    <lastmod>2026-02-28</lastmod>
+    <lastmod>2026-03-02</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.2</priority>
       <xhtml:link rel="alternate" hreflang="en" href="https://www.hikasustravel.com/en/privacy-policy" />
@@ -1445,7 +1389,7 @@
   </url>
   <url>
     <loc>https://www.hikasustravel.com/de/terms-and-conditions</loc>
-    <lastmod>2026-02-28</lastmod>
+    <lastmod>2026-03-02</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.2</priority>
       <xhtml:link rel="alternate" hreflang="en" href="https://www.hikasustravel.com/en/terms-and-conditions" />
@@ -1459,7 +1403,7 @@
   </url>
   <url>
     <loc>https://www.hikasustravel.com/de/group-tours/georgia-group-tour</loc>
-    <lastmod>2026-02-28</lastmod>
+    <lastmod>2026-03-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
       <xhtml:link rel="alternate" hreflang="en" href="https://www.hikasustravel.com/en/group-tours/georgia-group-tour" />
@@ -1473,7 +1417,7 @@
   </url>
   <url>
     <loc>https://www.hikasustravel.com/de/private-tours/experience-georgias-rich-culture-coastal-beauty-5-day-tour-from-tbilisi-to-batumi</loc>
-    <lastmod>2026-02-28</lastmod>
+    <lastmod>2026-03-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
       <xhtml:link rel="alternate" hreflang="en" href="https://www.hikasustravel.com/en/private-tours/experience-georgias-rich-culture-coastal-beauty-5-day-tour-from-tbilisi-to-batumi" />
@@ -1487,7 +1431,7 @@
   </url>
   <url>
     <loc>https://www.hikasustravel.com/de/private-tours/sulfur-baths-and-sipping-wine-5-days-of-georgian-delights</loc>
-    <lastmod>2026-02-28</lastmod>
+    <lastmod>2026-03-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
       <xhtml:link rel="alternate" hreflang="en" href="https://www.hikasustravel.com/en/private-tours/sulfur-baths-and-sipping-wine-5-days-of-georgian-delights" />
@@ -1501,7 +1445,7 @@
   </url>
   <url>
     <loc>https://www.hikasustravel.com/de/private-tours/tbilisi-to-treasures-a-6-day-journey-through-georgias-icons-and-hidden-gems</loc>
-    <lastmod>2026-02-28</lastmod>
+    <lastmod>2026-03-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
       <xhtml:link rel="alternate" hreflang="en" href="https://www.hikasustravel.com/en/private-tours/tbilisi-to-treasures-a-6-day-journey-through-georgias-icons-and-hidden-gems" />
@@ -1515,7 +1459,7 @@
   </url>
   <url>
     <loc>https://www.hikasustravel.com/de/private-tours/georgias-cultural-wonders-7-day-adventure-from-kutaisi-to-tbilisi-and-beyond</loc>
-    <lastmod>2026-02-28</lastmod>
+    <lastmod>2026-03-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
       <xhtml:link rel="alternate" hreflang="en" href="https://www.hikasustravel.com/en/private-tours/georgias-cultural-wonders-7-day-adventure-from-kutaisi-to-tbilisi-and-beyond" />
@@ -1529,7 +1473,7 @@
   </url>
   <url>
     <loc>https://www.hikasustravel.com/de/private-tours/experience-the-heart-of-georgia-8-day-journey-of-culture-nature-wine-tastings</loc>
-    <lastmod>2026-02-28</lastmod>
+    <lastmod>2026-03-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
       <xhtml:link rel="alternate" hreflang="en" href="https://www.hikasustravel.com/en/private-tours/experience-the-heart-of-georgia-8-day-journey-of-culture-nature-wine-tastings" />
@@ -1543,7 +1487,7 @@
   </url>
   <url>
     <loc>https://www.hikasustravel.com/de/private-tours/immerse-yourself-in-georgia-8-day-cultural-and-adventure-journey-through-the-caucasus</loc>
-    <lastmod>2026-02-28</lastmod>
+    <lastmod>2026-03-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
       <xhtml:link rel="alternate" hreflang="en" href="https://www.hikasustravel.com/en/private-tours/immerse-yourself-in-georgia-8-day-cultural-and-adventure-journey-through-the-caucasus" />
@@ -1557,7 +1501,7 @@
   </url>
   <url>
     <loc>https://www.hikasustravel.com/de/private-tours/ultimate-georgia-exploration-9-day-tour-from-kutaisi-to-tbilisi-and-hidden-gems</loc>
-    <lastmod>2026-02-28</lastmod>
+    <lastmod>2026-03-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
       <xhtml:link rel="alternate" hreflang="en" href="https://www.hikasustravel.com/en/private-tours/ultimate-georgia-exploration-9-day-tour-from-kutaisi-to-tbilisi-and-hidden-gems" />
@@ -1571,7 +1515,7 @@
   </url>
   <url>
     <loc>https://www.hikasustravel.com/de/private-tours/wander-wonder-and-wine-9-days-of-georgias-best</loc>
-    <lastmod>2026-02-28</lastmod>
+    <lastmod>2026-03-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
       <xhtml:link rel="alternate" hreflang="en" href="https://www.hikasustravel.com/en/private-tours/wander-wonder-and-wine-9-days-of-georgias-best" />
@@ -1585,7 +1529,7 @@
   </url>
   <url>
     <loc>https://www.hikasustravel.com/de/private-tours/wine-wonders-and-the-caucasus-a-9-day-adventure-in-georgia</loc>
-    <lastmod>2026-02-28</lastmod>
+    <lastmod>2026-03-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
       <xhtml:link rel="alternate" hreflang="en" href="https://www.hikasustravel.com/en/private-tours/wine-wonders-and-the-caucasus-a-9-day-adventure-in-georgia" />
@@ -1599,7 +1543,7 @@
   </url>
   <url>
     <loc>https://www.hikasustravel.com/de/private-tours/georgia-in-10-days-where-every-corner-has-a-story-and-every-meal-is-a-celebration</loc>
-    <lastmod>2026-02-28</lastmod>
+    <lastmod>2026-03-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
       <xhtml:link rel="alternate" hreflang="en" href="https://www.hikasustravel.com/en/private-tours/georgia-in-10-days-where-every-corner-has-a-story-and-every-meal-is-a-celebration" />
@@ -1613,7 +1557,7 @@
   </url>
   <url>
     <loc>https://www.hikasustravel.com/de/private-tours/georgias-wonders-11-day-grand-tour-from-kutaisi-to-kazbegi-and-batumi</loc>
-    <lastmod>2026-02-28</lastmod>
+    <lastmod>2026-03-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
       <xhtml:link rel="alternate" hreflang="en" href="https://www.hikasustravel.com/en/private-tours/georgias-wonders-11-day-grand-tour-from-kutaisi-to-kazbegi-and-batumi" />
@@ -1627,7 +1571,7 @@
   </url>
   <url>
     <loc>https://www.hikasustravel.com/de/private-tours/12-day-ultimate-georgia-adventure-tour-tbilisi-kazbegi-mestia-kutaisi-batumi</loc>
-    <lastmod>2026-02-28</lastmod>
+    <lastmod>2026-03-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
       <xhtml:link rel="alternate" hreflang="en" href="https://www.hikasustravel.com/en/private-tours/12-day-ultimate-georgia-adventure-tour-tbilisi-kazbegi-mestia-kutaisi-batumi" />
@@ -1641,7 +1585,7 @@
   </url>
   <url>
     <loc>https://www.hikasustravel.com/de/private-tours/grand-georgia-adventure-13-day-cultural-and-scenic-journey</loc>
-    <lastmod>2026-02-28</lastmod>
+    <lastmod>2026-03-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
       <xhtml:link rel="alternate" hreflang="en" href="https://www.hikasustravel.com/en/private-tours/grand-georgia-adventure-13-day-cultural-and-scenic-journey" />
@@ -1655,7 +1599,7 @@
   </url>
   <url>
     <loc>https://www.hikasustravel.com/de/private-tours/ultimate-15-day-georgia-tour-from-tbilisi-to-svaneti--wine-culture-and-natural-beauty</loc>
-    <lastmod>2026-02-28</lastmod>
+    <lastmod>2026-03-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
       <xhtml:link rel="alternate" hreflang="en" href="https://www.hikasustravel.com/en/private-tours/ultimate-15-day-georgia-tour-from-tbilisi-to-svaneti--wine-culture-and-natural-beauty" />
@@ -1669,7 +1613,7 @@
   </url>
   <url>
     <loc>https://www.hikasustravel.com/de/private-tours/georgia-on-my-mind-20-days-of-tasting-trekking-and-total-relaxation</loc>
-    <lastmod>2026-02-28</lastmod>
+    <lastmod>2026-03-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
       <xhtml:link rel="alternate" hreflang="en" href="https://www.hikasustravel.com/en/private-tours/georgia-on-my-mind-20-days-of-tasting-trekking-and-total-relaxation" />
@@ -1683,7 +1627,7 @@
   </url>
   <url>
     <loc>https://www.hikasustravel.com/pl</loc>
-    <lastmod>2026-02-28</lastmod>
+    <lastmod>2026-03-02</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
       <xhtml:link rel="alternate" hreflang="en" href="https://www.hikasustravel.com/en" />
@@ -1697,7 +1641,7 @@
   </url>
   <url>
     <loc>https://www.hikasustravel.com/pl/about-us</loc>
-    <lastmod>2026-02-28</lastmod>
+    <lastmod>2026-03-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
       <xhtml:link rel="alternate" hreflang="en" href="https://www.hikasustravel.com/en/about-us" />
@@ -1711,7 +1655,7 @@
   </url>
   <url>
     <loc>https://www.hikasustravel.com/pl/about-georgia</loc>
-    <lastmod>2026-02-28</lastmod>
+    <lastmod>2026-03-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
       <xhtml:link rel="alternate" hreflang="en" href="https://www.hikasustravel.com/en/about-georgia" />
@@ -1725,7 +1669,7 @@
   </url>
   <url>
     <loc>https://www.hikasustravel.com/pl/private-tours</loc>
-    <lastmod>2026-02-28</lastmod>
+    <lastmod>2026-03-02</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
       <xhtml:link rel="alternate" hreflang="en" href="https://www.hikasustravel.com/en/private-tours" />
@@ -1739,7 +1683,7 @@
   </url>
   <url>
     <loc>https://www.hikasustravel.com/pl/group-tours</loc>
-    <lastmod>2026-02-28</lastmod>
+    <lastmod>2026-03-02</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
       <xhtml:link rel="alternate" hreflang="en" href="https://www.hikasustravel.com/en/group-tours" />
@@ -1753,7 +1697,7 @@
   </url>
   <url>
     <loc>https://www.hikasustravel.com/pl/shuttle-service</loc>
-    <lastmod>2026-02-28</lastmod>
+    <lastmod>2026-03-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
       <xhtml:link rel="alternate" hreflang="en" href="https://www.hikasustravel.com/en/shuttle-service" />
@@ -1766,22 +1710,8 @@
       <xhtml:link rel="alternate" hreflang="x-default" href="https://www.hikasustravel.com/en/shuttle-service" />
   </url>
   <url>
-    <loc>https://www.hikasustravel.com/pl/taxi-service</loc>
-    <lastmod>2026-02-28</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-      <xhtml:link rel="alternate" hreflang="en" href="https://www.hikasustravel.com/en/taxi-service" />
-      <xhtml:link rel="alternate" hreflang="es" href="https://www.hikasustravel.com/es/taxi-service" />
-      <xhtml:link rel="alternate" hreflang="fr" href="https://www.hikasustravel.com/fr/taxi-service" />
-      <xhtml:link rel="alternate" hreflang="de" href="https://www.hikasustravel.com/de/taxi-service" />
-      <xhtml:link rel="alternate" hreflang="pl" href="https://www.hikasustravel.com/pl/taxi-service" />
-      <xhtml:link rel="alternate" hreflang="cs" href="https://www.hikasustravel.com/cs/taxi-service" />
-      <xhtml:link rel="alternate" hreflang="nl" href="https://www.hikasustravel.com/nl/taxi-service" />
-      <xhtml:link rel="alternate" hreflang="x-default" href="https://www.hikasustravel.com/en/taxi-service" />
-  </url>
-  <url>
     <loc>https://www.hikasustravel.com/pl/embassies</loc>
-    <lastmod>2026-02-28</lastmod>
+    <lastmod>2026-03-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
       <xhtml:link rel="alternate" hreflang="en" href="https://www.hikasustravel.com/en/embassies" />
@@ -1795,7 +1725,7 @@
   </url>
   <url>
     <loc>https://www.hikasustravel.com/pl/blog</loc>
-    <lastmod>2026-02-28</lastmod>
+    <lastmod>2026-03-02</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
       <xhtml:link rel="alternate" hreflang="en" href="https://www.hikasustravel.com/en/blog" />
@@ -1809,7 +1739,7 @@
   </url>
   <url>
     <loc>https://www.hikasustravel.com/pl/blog/ultimate-guide-to-traveling-to-georgia</loc>
-    <lastmod>2026-02-28</lastmod>
+    <lastmod>2026-03-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
       <xhtml:link rel="alternate" hreflang="en" href="https://www.hikasustravel.com/en/blog/ultimate-guide-to-traveling-to-georgia" />
@@ -1823,7 +1753,7 @@
   </url>
   <url>
     <loc>https://www.hikasustravel.com/pl/faq</loc>
-    <lastmod>2026-02-28</lastmod>
+    <lastmod>2026-03-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
       <xhtml:link rel="alternate" hreflang="en" href="https://www.hikasustravel.com/en/faq" />
@@ -1837,7 +1767,7 @@
   </url>
   <url>
     <loc>https://www.hikasustravel.com/pl/contact</loc>
-    <lastmod>2026-02-28</lastmod>
+    <lastmod>2026-03-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
       <xhtml:link rel="alternate" hreflang="en" href="https://www.hikasustravel.com/en/contact" />
@@ -1851,7 +1781,7 @@
   </url>
   <url>
     <loc>https://www.hikasustravel.com/pl/privacy-policy</loc>
-    <lastmod>2026-02-28</lastmod>
+    <lastmod>2026-03-02</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.2</priority>
       <xhtml:link rel="alternate" hreflang="en" href="https://www.hikasustravel.com/en/privacy-policy" />
@@ -1865,7 +1795,7 @@
   </url>
   <url>
     <loc>https://www.hikasustravel.com/pl/terms-and-conditions</loc>
-    <lastmod>2026-02-28</lastmod>
+    <lastmod>2026-03-02</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.2</priority>
       <xhtml:link rel="alternate" hreflang="en" href="https://www.hikasustravel.com/en/terms-and-conditions" />
@@ -1879,7 +1809,7 @@
   </url>
   <url>
     <loc>https://www.hikasustravel.com/pl/group-tours/georgia-group-tour</loc>
-    <lastmod>2026-02-28</lastmod>
+    <lastmod>2026-03-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
       <xhtml:link rel="alternate" hreflang="en" href="https://www.hikasustravel.com/en/group-tours/georgia-group-tour" />
@@ -1893,7 +1823,7 @@
   </url>
   <url>
     <loc>https://www.hikasustravel.com/pl/private-tours/experience-georgias-rich-culture-coastal-beauty-5-day-tour-from-tbilisi-to-batumi</loc>
-    <lastmod>2026-02-28</lastmod>
+    <lastmod>2026-03-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
       <xhtml:link rel="alternate" hreflang="en" href="https://www.hikasustravel.com/en/private-tours/experience-georgias-rich-culture-coastal-beauty-5-day-tour-from-tbilisi-to-batumi" />
@@ -1907,7 +1837,7 @@
   </url>
   <url>
     <loc>https://www.hikasustravel.com/pl/private-tours/sulfur-baths-and-sipping-wine-5-days-of-georgian-delights</loc>
-    <lastmod>2026-02-28</lastmod>
+    <lastmod>2026-03-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
       <xhtml:link rel="alternate" hreflang="en" href="https://www.hikasustravel.com/en/private-tours/sulfur-baths-and-sipping-wine-5-days-of-georgian-delights" />
@@ -1921,7 +1851,7 @@
   </url>
   <url>
     <loc>https://www.hikasustravel.com/pl/private-tours/tbilisi-to-treasures-a-6-day-journey-through-georgias-icons-and-hidden-gems</loc>
-    <lastmod>2026-02-28</lastmod>
+    <lastmod>2026-03-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
       <xhtml:link rel="alternate" hreflang="en" href="https://www.hikasustravel.com/en/private-tours/tbilisi-to-treasures-a-6-day-journey-through-georgias-icons-and-hidden-gems" />
@@ -1935,7 +1865,7 @@
   </url>
   <url>
     <loc>https://www.hikasustravel.com/pl/private-tours/georgias-cultural-wonders-7-day-adventure-from-kutaisi-to-tbilisi-and-beyond</loc>
-    <lastmod>2026-02-28</lastmod>
+    <lastmod>2026-03-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
       <xhtml:link rel="alternate" hreflang="en" href="https://www.hikasustravel.com/en/private-tours/georgias-cultural-wonders-7-day-adventure-from-kutaisi-to-tbilisi-and-beyond" />
@@ -1949,7 +1879,7 @@
   </url>
   <url>
     <loc>https://www.hikasustravel.com/pl/private-tours/experience-the-heart-of-georgia-8-day-journey-of-culture-nature-wine-tastings</loc>
-    <lastmod>2026-02-28</lastmod>
+    <lastmod>2026-03-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
       <xhtml:link rel="alternate" hreflang="en" href="https://www.hikasustravel.com/en/private-tours/experience-the-heart-of-georgia-8-day-journey-of-culture-nature-wine-tastings" />
@@ -1963,7 +1893,7 @@
   </url>
   <url>
     <loc>https://www.hikasustravel.com/pl/private-tours/immerse-yourself-in-georgia-8-day-cultural-and-adventure-journey-through-the-caucasus</loc>
-    <lastmod>2026-02-28</lastmod>
+    <lastmod>2026-03-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
       <xhtml:link rel="alternate" hreflang="en" href="https://www.hikasustravel.com/en/private-tours/immerse-yourself-in-georgia-8-day-cultural-and-adventure-journey-through-the-caucasus" />
@@ -1977,7 +1907,7 @@
   </url>
   <url>
     <loc>https://www.hikasustravel.com/pl/private-tours/ultimate-georgia-exploration-9-day-tour-from-kutaisi-to-tbilisi-and-hidden-gems</loc>
-    <lastmod>2026-02-28</lastmod>
+    <lastmod>2026-03-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
       <xhtml:link rel="alternate" hreflang="en" href="https://www.hikasustravel.com/en/private-tours/ultimate-georgia-exploration-9-day-tour-from-kutaisi-to-tbilisi-and-hidden-gems" />
@@ -1991,7 +1921,7 @@
   </url>
   <url>
     <loc>https://www.hikasustravel.com/pl/private-tours/wander-wonder-and-wine-9-days-of-georgias-best</loc>
-    <lastmod>2026-02-28</lastmod>
+    <lastmod>2026-03-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
       <xhtml:link rel="alternate" hreflang="en" href="https://www.hikasustravel.com/en/private-tours/wander-wonder-and-wine-9-days-of-georgias-best" />
@@ -2005,7 +1935,7 @@
   </url>
   <url>
     <loc>https://www.hikasustravel.com/pl/private-tours/wine-wonders-and-the-caucasus-a-9-day-adventure-in-georgia</loc>
-    <lastmod>2026-02-28</lastmod>
+    <lastmod>2026-03-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
       <xhtml:link rel="alternate" hreflang="en" href="https://www.hikasustravel.com/en/private-tours/wine-wonders-and-the-caucasus-a-9-day-adventure-in-georgia" />
@@ -2019,7 +1949,7 @@
   </url>
   <url>
     <loc>https://www.hikasustravel.com/pl/private-tours/georgia-in-10-days-where-every-corner-has-a-story-and-every-meal-is-a-celebration</loc>
-    <lastmod>2026-02-28</lastmod>
+    <lastmod>2026-03-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
       <xhtml:link rel="alternate" hreflang="en" href="https://www.hikasustravel.com/en/private-tours/georgia-in-10-days-where-every-corner-has-a-story-and-every-meal-is-a-celebration" />
@@ -2033,7 +1963,7 @@
   </url>
   <url>
     <loc>https://www.hikasustravel.com/pl/private-tours/georgias-wonders-11-day-grand-tour-from-kutaisi-to-kazbegi-and-batumi</loc>
-    <lastmod>2026-02-28</lastmod>
+    <lastmod>2026-03-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
       <xhtml:link rel="alternate" hreflang="en" href="https://www.hikasustravel.com/en/private-tours/georgias-wonders-11-day-grand-tour-from-kutaisi-to-kazbegi-and-batumi" />
@@ -2047,7 +1977,7 @@
   </url>
   <url>
     <loc>https://www.hikasustravel.com/pl/private-tours/12-day-ultimate-georgia-adventure-tour-tbilisi-kazbegi-mestia-kutaisi-batumi</loc>
-    <lastmod>2026-02-28</lastmod>
+    <lastmod>2026-03-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
       <xhtml:link rel="alternate" hreflang="en" href="https://www.hikasustravel.com/en/private-tours/12-day-ultimate-georgia-adventure-tour-tbilisi-kazbegi-mestia-kutaisi-batumi" />
@@ -2061,7 +1991,7 @@
   </url>
   <url>
     <loc>https://www.hikasustravel.com/pl/private-tours/grand-georgia-adventure-13-day-cultural-and-scenic-journey</loc>
-    <lastmod>2026-02-28</lastmod>
+    <lastmod>2026-03-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
       <xhtml:link rel="alternate" hreflang="en" href="https://www.hikasustravel.com/en/private-tours/grand-georgia-adventure-13-day-cultural-and-scenic-journey" />
@@ -2075,7 +2005,7 @@
   </url>
   <url>
     <loc>https://www.hikasustravel.com/pl/private-tours/ultimate-15-day-georgia-tour-from-tbilisi-to-svaneti--wine-culture-and-natural-beauty</loc>
-    <lastmod>2026-02-28</lastmod>
+    <lastmod>2026-03-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
       <xhtml:link rel="alternate" hreflang="en" href="https://www.hikasustravel.com/en/private-tours/ultimate-15-day-georgia-tour-from-tbilisi-to-svaneti--wine-culture-and-natural-beauty" />
@@ -2089,7 +2019,7 @@
   </url>
   <url>
     <loc>https://www.hikasustravel.com/pl/private-tours/georgia-on-my-mind-20-days-of-tasting-trekking-and-total-relaxation</loc>
-    <lastmod>2026-02-28</lastmod>
+    <lastmod>2026-03-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
       <xhtml:link rel="alternate" hreflang="en" href="https://www.hikasustravel.com/en/private-tours/georgia-on-my-mind-20-days-of-tasting-trekking-and-total-relaxation" />
@@ -2103,7 +2033,7 @@
   </url>
   <url>
     <loc>https://www.hikasustravel.com/cs</loc>
-    <lastmod>2026-02-28</lastmod>
+    <lastmod>2026-03-02</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
       <xhtml:link rel="alternate" hreflang="en" href="https://www.hikasustravel.com/en" />
@@ -2117,7 +2047,7 @@
   </url>
   <url>
     <loc>https://www.hikasustravel.com/cs/about-us</loc>
-    <lastmod>2026-02-28</lastmod>
+    <lastmod>2026-03-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
       <xhtml:link rel="alternate" hreflang="en" href="https://www.hikasustravel.com/en/about-us" />
@@ -2131,7 +2061,7 @@
   </url>
   <url>
     <loc>https://www.hikasustravel.com/cs/about-georgia</loc>
-    <lastmod>2026-02-28</lastmod>
+    <lastmod>2026-03-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
       <xhtml:link rel="alternate" hreflang="en" href="https://www.hikasustravel.com/en/about-georgia" />
@@ -2145,7 +2075,7 @@
   </url>
   <url>
     <loc>https://www.hikasustravel.com/cs/private-tours</loc>
-    <lastmod>2026-02-28</lastmod>
+    <lastmod>2026-03-02</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
       <xhtml:link rel="alternate" hreflang="en" href="https://www.hikasustravel.com/en/private-tours" />
@@ -2159,7 +2089,7 @@
   </url>
   <url>
     <loc>https://www.hikasustravel.com/cs/group-tours</loc>
-    <lastmod>2026-02-28</lastmod>
+    <lastmod>2026-03-02</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
       <xhtml:link rel="alternate" hreflang="en" href="https://www.hikasustravel.com/en/group-tours" />
@@ -2173,7 +2103,7 @@
   </url>
   <url>
     <loc>https://www.hikasustravel.com/cs/shuttle-service</loc>
-    <lastmod>2026-02-28</lastmod>
+    <lastmod>2026-03-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
       <xhtml:link rel="alternate" hreflang="en" href="https://www.hikasustravel.com/en/shuttle-service" />
@@ -2186,22 +2116,8 @@
       <xhtml:link rel="alternate" hreflang="x-default" href="https://www.hikasustravel.com/en/shuttle-service" />
   </url>
   <url>
-    <loc>https://www.hikasustravel.com/cs/taxi-service</loc>
-    <lastmod>2026-02-28</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-      <xhtml:link rel="alternate" hreflang="en" href="https://www.hikasustravel.com/en/taxi-service" />
-      <xhtml:link rel="alternate" hreflang="es" href="https://www.hikasustravel.com/es/taxi-service" />
-      <xhtml:link rel="alternate" hreflang="fr" href="https://www.hikasustravel.com/fr/taxi-service" />
-      <xhtml:link rel="alternate" hreflang="de" href="https://www.hikasustravel.com/de/taxi-service" />
-      <xhtml:link rel="alternate" hreflang="pl" href="https://www.hikasustravel.com/pl/taxi-service" />
-      <xhtml:link rel="alternate" hreflang="cs" href="https://www.hikasustravel.com/cs/taxi-service" />
-      <xhtml:link rel="alternate" hreflang="nl" href="https://www.hikasustravel.com/nl/taxi-service" />
-      <xhtml:link rel="alternate" hreflang="x-default" href="https://www.hikasustravel.com/en/taxi-service" />
-  </url>
-  <url>
     <loc>https://www.hikasustravel.com/cs/embassies</loc>
-    <lastmod>2026-02-28</lastmod>
+    <lastmod>2026-03-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
       <xhtml:link rel="alternate" hreflang="en" href="https://www.hikasustravel.com/en/embassies" />
@@ -2215,7 +2131,7 @@
   </url>
   <url>
     <loc>https://www.hikasustravel.com/cs/blog</loc>
-    <lastmod>2026-02-28</lastmod>
+    <lastmod>2026-03-02</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
       <xhtml:link rel="alternate" hreflang="en" href="https://www.hikasustravel.com/en/blog" />
@@ -2229,7 +2145,7 @@
   </url>
   <url>
     <loc>https://www.hikasustravel.com/cs/blog/ultimate-guide-to-traveling-to-georgia</loc>
-    <lastmod>2026-02-28</lastmod>
+    <lastmod>2026-03-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
       <xhtml:link rel="alternate" hreflang="en" href="https://www.hikasustravel.com/en/blog/ultimate-guide-to-traveling-to-georgia" />
@@ -2243,7 +2159,7 @@
   </url>
   <url>
     <loc>https://www.hikasustravel.com/cs/faq</loc>
-    <lastmod>2026-02-28</lastmod>
+    <lastmod>2026-03-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
       <xhtml:link rel="alternate" hreflang="en" href="https://www.hikasustravel.com/en/faq" />
@@ -2257,7 +2173,7 @@
   </url>
   <url>
     <loc>https://www.hikasustravel.com/cs/contact</loc>
-    <lastmod>2026-02-28</lastmod>
+    <lastmod>2026-03-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
       <xhtml:link rel="alternate" hreflang="en" href="https://www.hikasustravel.com/en/contact" />
@@ -2271,7 +2187,7 @@
   </url>
   <url>
     <loc>https://www.hikasustravel.com/cs/privacy-policy</loc>
-    <lastmod>2026-02-28</lastmod>
+    <lastmod>2026-03-02</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.2</priority>
       <xhtml:link rel="alternate" hreflang="en" href="https://www.hikasustravel.com/en/privacy-policy" />
@@ -2285,7 +2201,7 @@
   </url>
   <url>
     <loc>https://www.hikasustravel.com/cs/terms-and-conditions</loc>
-    <lastmod>2026-02-28</lastmod>
+    <lastmod>2026-03-02</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.2</priority>
       <xhtml:link rel="alternate" hreflang="en" href="https://www.hikasustravel.com/en/terms-and-conditions" />
@@ -2299,7 +2215,7 @@
   </url>
   <url>
     <loc>https://www.hikasustravel.com/cs/group-tours/georgia-group-tour</loc>
-    <lastmod>2026-02-28</lastmod>
+    <lastmod>2026-03-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
       <xhtml:link rel="alternate" hreflang="en" href="https://www.hikasustravel.com/en/group-tours/georgia-group-tour" />
@@ -2313,7 +2229,7 @@
   </url>
   <url>
     <loc>https://www.hikasustravel.com/cs/private-tours/experience-georgias-rich-culture-coastal-beauty-5-day-tour-from-tbilisi-to-batumi</loc>
-    <lastmod>2026-02-28</lastmod>
+    <lastmod>2026-03-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
       <xhtml:link rel="alternate" hreflang="en" href="https://www.hikasustravel.com/en/private-tours/experience-georgias-rich-culture-coastal-beauty-5-day-tour-from-tbilisi-to-batumi" />
@@ -2327,7 +2243,7 @@
   </url>
   <url>
     <loc>https://www.hikasustravel.com/cs/private-tours/sulfur-baths-and-sipping-wine-5-days-of-georgian-delights</loc>
-    <lastmod>2026-02-28</lastmod>
+    <lastmod>2026-03-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
       <xhtml:link rel="alternate" hreflang="en" href="https://www.hikasustravel.com/en/private-tours/sulfur-baths-and-sipping-wine-5-days-of-georgian-delights" />
@@ -2341,7 +2257,7 @@
   </url>
   <url>
     <loc>https://www.hikasustravel.com/cs/private-tours/tbilisi-to-treasures-a-6-day-journey-through-georgias-icons-and-hidden-gems</loc>
-    <lastmod>2026-02-28</lastmod>
+    <lastmod>2026-03-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
       <xhtml:link rel="alternate" hreflang="en" href="https://www.hikasustravel.com/en/private-tours/tbilisi-to-treasures-a-6-day-journey-through-georgias-icons-and-hidden-gems" />
@@ -2355,7 +2271,7 @@
   </url>
   <url>
     <loc>https://www.hikasustravel.com/cs/private-tours/georgias-cultural-wonders-7-day-adventure-from-kutaisi-to-tbilisi-and-beyond</loc>
-    <lastmod>2026-02-28</lastmod>
+    <lastmod>2026-03-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
       <xhtml:link rel="alternate" hreflang="en" href="https://www.hikasustravel.com/en/private-tours/georgias-cultural-wonders-7-day-adventure-from-kutaisi-to-tbilisi-and-beyond" />
@@ -2369,7 +2285,7 @@
   </url>
   <url>
     <loc>https://www.hikasustravel.com/cs/private-tours/experience-the-heart-of-georgia-8-day-journey-of-culture-nature-wine-tastings</loc>
-    <lastmod>2026-02-28</lastmod>
+    <lastmod>2026-03-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
       <xhtml:link rel="alternate" hreflang="en" href="https://www.hikasustravel.com/en/private-tours/experience-the-heart-of-georgia-8-day-journey-of-culture-nature-wine-tastings" />
@@ -2383,7 +2299,7 @@
   </url>
   <url>
     <loc>https://www.hikasustravel.com/cs/private-tours/immerse-yourself-in-georgia-8-day-cultural-and-adventure-journey-through-the-caucasus</loc>
-    <lastmod>2026-02-28</lastmod>
+    <lastmod>2026-03-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
       <xhtml:link rel="alternate" hreflang="en" href="https://www.hikasustravel.com/en/private-tours/immerse-yourself-in-georgia-8-day-cultural-and-adventure-journey-through-the-caucasus" />
@@ -2397,7 +2313,7 @@
   </url>
   <url>
     <loc>https://www.hikasustravel.com/cs/private-tours/ultimate-georgia-exploration-9-day-tour-from-kutaisi-to-tbilisi-and-hidden-gems</loc>
-    <lastmod>2026-02-28</lastmod>
+    <lastmod>2026-03-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
       <xhtml:link rel="alternate" hreflang="en" href="https://www.hikasustravel.com/en/private-tours/ultimate-georgia-exploration-9-day-tour-from-kutaisi-to-tbilisi-and-hidden-gems" />
@@ -2411,7 +2327,7 @@
   </url>
   <url>
     <loc>https://www.hikasustravel.com/cs/private-tours/wander-wonder-and-wine-9-days-of-georgias-best</loc>
-    <lastmod>2026-02-28</lastmod>
+    <lastmod>2026-03-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
       <xhtml:link rel="alternate" hreflang="en" href="https://www.hikasustravel.com/en/private-tours/wander-wonder-and-wine-9-days-of-georgias-best" />
@@ -2425,7 +2341,7 @@
   </url>
   <url>
     <loc>https://www.hikasustravel.com/cs/private-tours/wine-wonders-and-the-caucasus-a-9-day-adventure-in-georgia</loc>
-    <lastmod>2026-02-28</lastmod>
+    <lastmod>2026-03-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
       <xhtml:link rel="alternate" hreflang="en" href="https://www.hikasustravel.com/en/private-tours/wine-wonders-and-the-caucasus-a-9-day-adventure-in-georgia" />
@@ -2439,7 +2355,7 @@
   </url>
   <url>
     <loc>https://www.hikasustravel.com/cs/private-tours/georgia-in-10-days-where-every-corner-has-a-story-and-every-meal-is-a-celebration</loc>
-    <lastmod>2026-02-28</lastmod>
+    <lastmod>2026-03-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
       <xhtml:link rel="alternate" hreflang="en" href="https://www.hikasustravel.com/en/private-tours/georgia-in-10-days-where-every-corner-has-a-story-and-every-meal-is-a-celebration" />
@@ -2453,7 +2369,7 @@
   </url>
   <url>
     <loc>https://www.hikasustravel.com/cs/private-tours/georgias-wonders-11-day-grand-tour-from-kutaisi-to-kazbegi-and-batumi</loc>
-    <lastmod>2026-02-28</lastmod>
+    <lastmod>2026-03-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
       <xhtml:link rel="alternate" hreflang="en" href="https://www.hikasustravel.com/en/private-tours/georgias-wonders-11-day-grand-tour-from-kutaisi-to-kazbegi-and-batumi" />
@@ -2467,7 +2383,7 @@
   </url>
   <url>
     <loc>https://www.hikasustravel.com/cs/private-tours/12-day-ultimate-georgia-adventure-tour-tbilisi-kazbegi-mestia-kutaisi-batumi</loc>
-    <lastmod>2026-02-28</lastmod>
+    <lastmod>2026-03-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
       <xhtml:link rel="alternate" hreflang="en" href="https://www.hikasustravel.com/en/private-tours/12-day-ultimate-georgia-adventure-tour-tbilisi-kazbegi-mestia-kutaisi-batumi" />
@@ -2481,7 +2397,7 @@
   </url>
   <url>
     <loc>https://www.hikasustravel.com/cs/private-tours/grand-georgia-adventure-13-day-cultural-and-scenic-journey</loc>
-    <lastmod>2026-02-28</lastmod>
+    <lastmod>2026-03-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
       <xhtml:link rel="alternate" hreflang="en" href="https://www.hikasustravel.com/en/private-tours/grand-georgia-adventure-13-day-cultural-and-scenic-journey" />
@@ -2495,7 +2411,7 @@
   </url>
   <url>
     <loc>https://www.hikasustravel.com/cs/private-tours/ultimate-15-day-georgia-tour-from-tbilisi-to-svaneti--wine-culture-and-natural-beauty</loc>
-    <lastmod>2026-02-28</lastmod>
+    <lastmod>2026-03-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
       <xhtml:link rel="alternate" hreflang="en" href="https://www.hikasustravel.com/en/private-tours/ultimate-15-day-georgia-tour-from-tbilisi-to-svaneti--wine-culture-and-natural-beauty" />
@@ -2509,7 +2425,7 @@
   </url>
   <url>
     <loc>https://www.hikasustravel.com/cs/private-tours/georgia-on-my-mind-20-days-of-tasting-trekking-and-total-relaxation</loc>
-    <lastmod>2026-02-28</lastmod>
+    <lastmod>2026-03-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
       <xhtml:link rel="alternate" hreflang="en" href="https://www.hikasustravel.com/en/private-tours/georgia-on-my-mind-20-days-of-tasting-trekking-and-total-relaxation" />
@@ -2523,7 +2439,7 @@
   </url>
   <url>
     <loc>https://www.hikasustravel.com/nl</loc>
-    <lastmod>2026-02-28</lastmod>
+    <lastmod>2026-03-02</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
       <xhtml:link rel="alternate" hreflang="en" href="https://www.hikasustravel.com/en" />
@@ -2537,7 +2453,7 @@
   </url>
   <url>
     <loc>https://www.hikasustravel.com/nl/about-us</loc>
-    <lastmod>2026-02-28</lastmod>
+    <lastmod>2026-03-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
       <xhtml:link rel="alternate" hreflang="en" href="https://www.hikasustravel.com/en/about-us" />
@@ -2551,7 +2467,7 @@
   </url>
   <url>
     <loc>https://www.hikasustravel.com/nl/about-georgia</loc>
-    <lastmod>2026-02-28</lastmod>
+    <lastmod>2026-03-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
       <xhtml:link rel="alternate" hreflang="en" href="https://www.hikasustravel.com/en/about-georgia" />
@@ -2565,7 +2481,7 @@
   </url>
   <url>
     <loc>https://www.hikasustravel.com/nl/private-tours</loc>
-    <lastmod>2026-02-28</lastmod>
+    <lastmod>2026-03-02</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
       <xhtml:link rel="alternate" hreflang="en" href="https://www.hikasustravel.com/en/private-tours" />
@@ -2579,7 +2495,7 @@
   </url>
   <url>
     <loc>https://www.hikasustravel.com/nl/group-tours</loc>
-    <lastmod>2026-02-28</lastmod>
+    <lastmod>2026-03-02</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
       <xhtml:link rel="alternate" hreflang="en" href="https://www.hikasustravel.com/en/group-tours" />
@@ -2593,7 +2509,7 @@
   </url>
   <url>
     <loc>https://www.hikasustravel.com/nl/shuttle-service</loc>
-    <lastmod>2026-02-28</lastmod>
+    <lastmod>2026-03-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
       <xhtml:link rel="alternate" hreflang="en" href="https://www.hikasustravel.com/en/shuttle-service" />
@@ -2606,22 +2522,8 @@
       <xhtml:link rel="alternate" hreflang="x-default" href="https://www.hikasustravel.com/en/shuttle-service" />
   </url>
   <url>
-    <loc>https://www.hikasustravel.com/nl/taxi-service</loc>
-    <lastmod>2026-02-28</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-      <xhtml:link rel="alternate" hreflang="en" href="https://www.hikasustravel.com/en/taxi-service" />
-      <xhtml:link rel="alternate" hreflang="es" href="https://www.hikasustravel.com/es/taxi-service" />
-      <xhtml:link rel="alternate" hreflang="fr" href="https://www.hikasustravel.com/fr/taxi-service" />
-      <xhtml:link rel="alternate" hreflang="de" href="https://www.hikasustravel.com/de/taxi-service" />
-      <xhtml:link rel="alternate" hreflang="pl" href="https://www.hikasustravel.com/pl/taxi-service" />
-      <xhtml:link rel="alternate" hreflang="cs" href="https://www.hikasustravel.com/cs/taxi-service" />
-      <xhtml:link rel="alternate" hreflang="nl" href="https://www.hikasustravel.com/nl/taxi-service" />
-      <xhtml:link rel="alternate" hreflang="x-default" href="https://www.hikasustravel.com/en/taxi-service" />
-  </url>
-  <url>
     <loc>https://www.hikasustravel.com/nl/embassies</loc>
-    <lastmod>2026-02-28</lastmod>
+    <lastmod>2026-03-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
       <xhtml:link rel="alternate" hreflang="en" href="https://www.hikasustravel.com/en/embassies" />
@@ -2635,7 +2537,7 @@
   </url>
   <url>
     <loc>https://www.hikasustravel.com/nl/blog</loc>
-    <lastmod>2026-02-28</lastmod>
+    <lastmod>2026-03-02</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
       <xhtml:link rel="alternate" hreflang="en" href="https://www.hikasustravel.com/en/blog" />
@@ -2649,7 +2551,7 @@
   </url>
   <url>
     <loc>https://www.hikasustravel.com/nl/blog/ultimate-guide-to-traveling-to-georgia</loc>
-    <lastmod>2026-02-28</lastmod>
+    <lastmod>2026-03-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
       <xhtml:link rel="alternate" hreflang="en" href="https://www.hikasustravel.com/en/blog/ultimate-guide-to-traveling-to-georgia" />
@@ -2663,7 +2565,7 @@
   </url>
   <url>
     <loc>https://www.hikasustravel.com/nl/faq</loc>
-    <lastmod>2026-02-28</lastmod>
+    <lastmod>2026-03-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
       <xhtml:link rel="alternate" hreflang="en" href="https://www.hikasustravel.com/en/faq" />
@@ -2677,7 +2579,7 @@
   </url>
   <url>
     <loc>https://www.hikasustravel.com/nl/contact</loc>
-    <lastmod>2026-02-28</lastmod>
+    <lastmod>2026-03-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
       <xhtml:link rel="alternate" hreflang="en" href="https://www.hikasustravel.com/en/contact" />
@@ -2691,7 +2593,7 @@
   </url>
   <url>
     <loc>https://www.hikasustravel.com/nl/privacy-policy</loc>
-    <lastmod>2026-02-28</lastmod>
+    <lastmod>2026-03-02</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.2</priority>
       <xhtml:link rel="alternate" hreflang="en" href="https://www.hikasustravel.com/en/privacy-policy" />
@@ -2705,7 +2607,7 @@
   </url>
   <url>
     <loc>https://www.hikasustravel.com/nl/terms-and-conditions</loc>
-    <lastmod>2026-02-28</lastmod>
+    <lastmod>2026-03-02</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.2</priority>
       <xhtml:link rel="alternate" hreflang="en" href="https://www.hikasustravel.com/en/terms-and-conditions" />
@@ -2719,7 +2621,7 @@
   </url>
   <url>
     <loc>https://www.hikasustravel.com/nl/group-tours/georgia-group-tour</loc>
-    <lastmod>2026-02-28</lastmod>
+    <lastmod>2026-03-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
       <xhtml:link rel="alternate" hreflang="en" href="https://www.hikasustravel.com/en/group-tours/georgia-group-tour" />
@@ -2733,7 +2635,7 @@
   </url>
   <url>
     <loc>https://www.hikasustravel.com/nl/private-tours/experience-georgias-rich-culture-coastal-beauty-5-day-tour-from-tbilisi-to-batumi</loc>
-    <lastmod>2026-02-28</lastmod>
+    <lastmod>2026-03-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
       <xhtml:link rel="alternate" hreflang="en" href="https://www.hikasustravel.com/en/private-tours/experience-georgias-rich-culture-coastal-beauty-5-day-tour-from-tbilisi-to-batumi" />
@@ -2747,7 +2649,7 @@
   </url>
   <url>
     <loc>https://www.hikasustravel.com/nl/private-tours/sulfur-baths-and-sipping-wine-5-days-of-georgian-delights</loc>
-    <lastmod>2026-02-28</lastmod>
+    <lastmod>2026-03-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
       <xhtml:link rel="alternate" hreflang="en" href="https://www.hikasustravel.com/en/private-tours/sulfur-baths-and-sipping-wine-5-days-of-georgian-delights" />
@@ -2761,7 +2663,7 @@
   </url>
   <url>
     <loc>https://www.hikasustravel.com/nl/private-tours/tbilisi-to-treasures-a-6-day-journey-through-georgias-icons-and-hidden-gems</loc>
-    <lastmod>2026-02-28</lastmod>
+    <lastmod>2026-03-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
       <xhtml:link rel="alternate" hreflang="en" href="https://www.hikasustravel.com/en/private-tours/tbilisi-to-treasures-a-6-day-journey-through-georgias-icons-and-hidden-gems" />
@@ -2775,7 +2677,7 @@
   </url>
   <url>
     <loc>https://www.hikasustravel.com/nl/private-tours/georgias-cultural-wonders-7-day-adventure-from-kutaisi-to-tbilisi-and-beyond</loc>
-    <lastmod>2026-02-28</lastmod>
+    <lastmod>2026-03-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
       <xhtml:link rel="alternate" hreflang="en" href="https://www.hikasustravel.com/en/private-tours/georgias-cultural-wonders-7-day-adventure-from-kutaisi-to-tbilisi-and-beyond" />
@@ -2789,7 +2691,7 @@
   </url>
   <url>
     <loc>https://www.hikasustravel.com/nl/private-tours/experience-the-heart-of-georgia-8-day-journey-of-culture-nature-wine-tastings</loc>
-    <lastmod>2026-02-28</lastmod>
+    <lastmod>2026-03-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
       <xhtml:link rel="alternate" hreflang="en" href="https://www.hikasustravel.com/en/private-tours/experience-the-heart-of-georgia-8-day-journey-of-culture-nature-wine-tastings" />
@@ -2803,7 +2705,7 @@
   </url>
   <url>
     <loc>https://www.hikasustravel.com/nl/private-tours/immerse-yourself-in-georgia-8-day-cultural-and-adventure-journey-through-the-caucasus</loc>
-    <lastmod>2026-02-28</lastmod>
+    <lastmod>2026-03-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
       <xhtml:link rel="alternate" hreflang="en" href="https://www.hikasustravel.com/en/private-tours/immerse-yourself-in-georgia-8-day-cultural-and-adventure-journey-through-the-caucasus" />
@@ -2817,7 +2719,7 @@
   </url>
   <url>
     <loc>https://www.hikasustravel.com/nl/private-tours/ultimate-georgia-exploration-9-day-tour-from-kutaisi-to-tbilisi-and-hidden-gems</loc>
-    <lastmod>2026-02-28</lastmod>
+    <lastmod>2026-03-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
       <xhtml:link rel="alternate" hreflang="en" href="https://www.hikasustravel.com/en/private-tours/ultimate-georgia-exploration-9-day-tour-from-kutaisi-to-tbilisi-and-hidden-gems" />
@@ -2831,7 +2733,7 @@
   </url>
   <url>
     <loc>https://www.hikasustravel.com/nl/private-tours/wander-wonder-and-wine-9-days-of-georgias-best</loc>
-    <lastmod>2026-02-28</lastmod>
+    <lastmod>2026-03-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
       <xhtml:link rel="alternate" hreflang="en" href="https://www.hikasustravel.com/en/private-tours/wander-wonder-and-wine-9-days-of-georgias-best" />
@@ -2845,7 +2747,7 @@
   </url>
   <url>
     <loc>https://www.hikasustravel.com/nl/private-tours/wine-wonders-and-the-caucasus-a-9-day-adventure-in-georgia</loc>
-    <lastmod>2026-02-28</lastmod>
+    <lastmod>2026-03-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
       <xhtml:link rel="alternate" hreflang="en" href="https://www.hikasustravel.com/en/private-tours/wine-wonders-and-the-caucasus-a-9-day-adventure-in-georgia" />
@@ -2859,7 +2761,7 @@
   </url>
   <url>
     <loc>https://www.hikasustravel.com/nl/private-tours/georgia-in-10-days-where-every-corner-has-a-story-and-every-meal-is-a-celebration</loc>
-    <lastmod>2026-02-28</lastmod>
+    <lastmod>2026-03-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
       <xhtml:link rel="alternate" hreflang="en" href="https://www.hikasustravel.com/en/private-tours/georgia-in-10-days-where-every-corner-has-a-story-and-every-meal-is-a-celebration" />
@@ -2873,7 +2775,7 @@
   </url>
   <url>
     <loc>https://www.hikasustravel.com/nl/private-tours/georgias-wonders-11-day-grand-tour-from-kutaisi-to-kazbegi-and-batumi</loc>
-    <lastmod>2026-02-28</lastmod>
+    <lastmod>2026-03-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
       <xhtml:link rel="alternate" hreflang="en" href="https://www.hikasustravel.com/en/private-tours/georgias-wonders-11-day-grand-tour-from-kutaisi-to-kazbegi-and-batumi" />
@@ -2887,7 +2789,7 @@
   </url>
   <url>
     <loc>https://www.hikasustravel.com/nl/private-tours/12-day-ultimate-georgia-adventure-tour-tbilisi-kazbegi-mestia-kutaisi-batumi</loc>
-    <lastmod>2026-02-28</lastmod>
+    <lastmod>2026-03-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
       <xhtml:link rel="alternate" hreflang="en" href="https://www.hikasustravel.com/en/private-tours/12-day-ultimate-georgia-adventure-tour-tbilisi-kazbegi-mestia-kutaisi-batumi" />
@@ -2901,7 +2803,7 @@
   </url>
   <url>
     <loc>https://www.hikasustravel.com/nl/private-tours/grand-georgia-adventure-13-day-cultural-and-scenic-journey</loc>
-    <lastmod>2026-02-28</lastmod>
+    <lastmod>2026-03-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
       <xhtml:link rel="alternate" hreflang="en" href="https://www.hikasustravel.com/en/private-tours/grand-georgia-adventure-13-day-cultural-and-scenic-journey" />
@@ -2915,7 +2817,7 @@
   </url>
   <url>
     <loc>https://www.hikasustravel.com/nl/private-tours/ultimate-15-day-georgia-tour-from-tbilisi-to-svaneti--wine-culture-and-natural-beauty</loc>
-    <lastmod>2026-02-28</lastmod>
+    <lastmod>2026-03-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
       <xhtml:link rel="alternate" hreflang="en" href="https://www.hikasustravel.com/en/private-tours/ultimate-15-day-georgia-tour-from-tbilisi-to-svaneti--wine-culture-and-natural-beauty" />
@@ -2929,7 +2831,7 @@
   </url>
   <url>
     <loc>https://www.hikasustravel.com/nl/private-tours/georgia-on-my-mind-20-days-of-tasting-trekking-and-total-relaxation</loc>
-    <lastmod>2026-02-28</lastmod>
+    <lastmod>2026-03-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
       <xhtml:link rel="alternate" hreflang="en" href="https://www.hikasustravel.com/en/private-tours/georgia-on-my-mind-20-days-of-tasting-trekking-and-total-relaxation" />

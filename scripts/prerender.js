@@ -139,7 +139,6 @@ const seoPageMap = {
   'private-tours': 'privateTours',
   'group-tours': 'groupTours',
   'shuttle-service': 'shuttle',
-  'taxi-service': 'taxi',
   'embassies': 'embassies',
   'blog': 'blog',
   'faq': 'faq',

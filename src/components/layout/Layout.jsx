@@ -9,8 +9,8 @@ import WhatsAppButton from './WhatsAppButton'
 export default function Layout() {
   const location = useLocation()
   const { lang } = useParams()
-  // Match /:lang/taxi-service or /:lang/shuttle-service
-  const isTaxiPage = /^\/[a-z]{2}\/(taxi-service|shuttle-service)$/.test(location.pathname)
+  // Match /:lang/shuttle-service
+  const isTaxiPage = /^\/[a-z]{2}\/shuttle-service$/.test(location.pathname)
 
   useEffect(() => {
     if (lang) document.documentElement.lang = lang

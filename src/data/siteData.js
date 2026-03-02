@@ -13,7 +13,6 @@ export const footerLinks = [
   { to: '/group-tours', labelKey: 'footer.groupTours' },
   { to: '/private-tours', labelKey: 'footer.privateTours' },
   { to: '/faq', labelKey: 'footer.faq' },
-  { to: '/taxi-service', labelKey: 'footer.taxiService' },
   { to: '/privacy-policy', labelKey: 'footer.privacyPolicy' },
   { to: '/terms-and-conditions', labelKey: 'footer.termsConditions' },
   { to: '/contact', labelKey: 'footer.contact' },

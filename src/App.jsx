@@ -10,7 +10,6 @@ import TourDetailPage from './components/pages/TourDetailPage'
 import FaqPage from './components/pages/FaqPage'
 import ContactPage from './components/pages/ContactPage'
 import ShuttleServicePage from './components/pages/ShuttleServicePage'
-import TaxiServicePage from './components/pages/TaxiServicePage'
 import PrivacyPolicyPage from './components/pages/PrivacyPolicyPage'
 import TermsPage from './components/pages/TermsPage'
 import EmbassiesPage from './components/pages/EmbassiesPage'
@@ -32,7 +31,6 @@ export default function App() {
           <Route path="private-tours/:slug" element={<TourDetailPage />} />
           <Route path="group-tours/:slug" element={<TourDetailPage />} />
           <Route path="shuttle-service" element={<ShuttleServicePage />} />
-          <Route path="taxi-service" element={<TaxiServicePage />} />
           <Route path="embassies" element={<EmbassiesPage />} />
           <Route path="blog" element={<BlogPage />} />
           <Route path="blog/:slug" element={<BlogArticlePage />} />
