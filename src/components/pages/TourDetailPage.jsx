@@ -186,7 +186,7 @@ export default function TourDetailPage() {
 
           {/* Group Tour Summary */}
           {isGroup && (tt?.groupSummary || tour.groupSummary) && (
-            <section className="td-section">
+            <section id="pricing" className="td-section">
               <FadeUp>
                 <div className="tour-group-summary">
                   {(tt?.groupSummary || tour.groupSummary).map((item, i) => (
@@ -210,7 +210,7 @@ export default function TourDetailPage() {
 
           {/* Accommodations Table (group tours) */}
           {isGroup && tour.accommodations && tour.accommodations.length > 0 && (
-            <section id="pricing" className="td-section">
+            <section className="td-section">
               <FadeUp>
                 <h3 className="td-pricing__subtitle">{t('pricing.accommodations')}</h3>
                 <AccommodationsTable accommodations={tour.accommodations} />
