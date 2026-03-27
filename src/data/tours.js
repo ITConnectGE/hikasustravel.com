@@ -19,15 +19,21 @@ export const tours = [
       },
       {
         "title": "Day 2: Tbilisi city tour",
-        "content": "<p>Lose yourself in the captivating charm of Tbilisi's Old Town – a fairytale setting of cobblestone streets and historic architecture. Imagine yourself soaking in therapeutic sulfur baths, the ancient secrets of the city swirling around you. Explore the vibrant Rustaveli Avenue, the heart of modern Tbilisi, and admire the architectural splendor of Freedom Square and the Peace Bridge. Conclude your day with a delightful dinner, savoring the authentic flavors of Georgian cuisine.</p><ul><li>Explore Old Town, Narikala Fortress, and sulfur baths;</li><li>Visit Rustaveli Avenue, Freedom Square, and Peace Bridge;</li><li>Dinner at a traditional Georgian restaurant;</li><li>Overnight stay in Tbilisi.</li></ul><p><br><i><strong>Duration of the tour:</strong> 4-5 hours</i><br><i><strong>Driving duration:</strong> 30 minutes</i></p>"
+        "content": "<p>Lose yourself in the captivating charm of Tbilisi's Old Town – a fairytale setting of cobblestone streets and historic architecture. Imagine yourself soaking in therapeutic sulfur baths, the ancient secrets of the city swirling around you. Explore the vibrant Rustaveli Avenue, the heart of modern Tbilisi, and admire the architectural splendor of Freedom Square and the Peace Bridge. Conclude your day with a delightful dinner, savoring the authentic flavors of Georgian cuisine.</p><ul><li>Explore Old Town, Narikala Fortress, and sulfur baths;</li><li>Visit Rustaveli Avenue, Freedom Square, and Peace Bridge;</li><li>Dinner at a traditional Georgian restaurant;</li><li>Overnight stay in Tbilisi.</li></ul><p><br><i><strong>Duration of the tour:</strong> 4-5 hours</i><br><i><strong>Driving duration:</strong> 30 minutes</i></p>",
+        "image": "/images/itinerary/old-tbilisi-narikala-fortress.jpg",
+        "imageAlt": "Panoramic view of Old Tbilisi with Narikala Fortress and Peace Bridge, Georgia"
       },
       {
         "title": "Day 3: Tbilisi – Jvari – Mtskheta – Ananuri – Kazbegi",
-        "content": "<p>Step back in time to Mtskheta, a UNESCO World Heritage Site, then marvel at the stunning Ananuri fortress before arriving in breathtaking Kazbegi, nestled amidst majestic peaks. Prepare to be awestruck!</p><ul><li>Check out of the hotel in Tbilisi;</li><li>Visit Jvari Monastery and Svetitskhoveli Cathedral in Mtskheta;</li><li>Ananuri Architectural Complex;</li><li>Zhinvali Reservoir;</li><li>Lunch at a Georgian restaurant;</li><li>Gudauri Friendship Monument (Gudauri Panorama);</li><li>Overnight in Kazbegi.</li><li><strong>Duration of the tour:</strong> 9-10 hours</li><li><strong>Driving duration:</strong> 3.5 hours</li></ul>"
+        "content": "<p>Step back in time to Mtskheta, a UNESCO World Heritage Site, then marvel at the stunning Ananuri fortress before arriving in breathtaking Kazbegi, nestled amidst majestic peaks. Prepare to be awestruck!</p><ul><li>Check out of the hotel in Tbilisi;</li><li>Visit Jvari Monastery and Svetitskhoveli Cathedral in Mtskheta;</li><li>Ananuri Architectural Complex;</li><li>Zhinvali Reservoir;</li><li>Lunch at a Georgian restaurant;</li><li>Gudauri Friendship Monument (Gudauri Panorama);</li><li>Overnight in Kazbegi.</li><li><strong>Duration of the tour:</strong> 9-10 hours</li><li><strong>Driving duration:</strong> 3.5 hours</li></ul>",
+        "image": "/images/itinerary/ananuri-fortress-georgia.jpg",
+        "imageAlt": "Ananuri Fortress on the Zhinvali Reservoir, Georgia"
       },
       {
         "title": "Day 4: Kazbegi",
-        "content": "<p>Conquer the trails leading to the iconic Gergeti Trinity Church, a masterpiece perched high in the mountains, with panoramic views that will steal your breath away. Feel the raw power of nature in the Gveleti waterfalls and the dramatic Dariali Gorge.</p><ul><li>Visit Gergeti Trinity Church;</li><li>Gveleti waterfalls;</li><li>Dariali Gorge.</li><li><strong>Duration of the tour:</strong> 6-7 hours</li><li><strong>Driving duration:</strong> 1 hour</li></ul>"
+        "content": "<p>Conquer the trails leading to the iconic Gergeti Trinity Church, a masterpiece perched high in the mountains, with panoramic views that will steal your breath away. Feel the raw power of nature in the Gveleti waterfalls and the dramatic Dariali Gorge.</p><ul><li>Visit Gergeti Trinity Church;</li><li>Gveleti waterfalls;</li><li>Dariali Gorge.</li><li><strong>Duration of the tour:</strong> 6-7 hours</li><li><strong>Driving duration:</strong> 1 hour</li></ul>",
+        "image": "/images/itinerary/gergeti-trinity-church-kazbegi.jpg",
+        "imageAlt": "Gergeti Trinity Church with Mount Kazbek in Kazbegi, Georgia"
       },
       {
         "title": "Day 5: Kazbegi – Stalin Museum in Gori – Uplistsikhe - Tbilisi",
@@ -39,7 +45,9 @@ export const tours = [
       },
       {
         "title": "Day 7: Kutaisi – Prometheus cave – Martvili Canyon – Kutaisi",
-        "content": "<p>Today's adventure takes you to two of Georgia's most stunning natural wonders. Begin by descending into the mesmerizing Prometheus Cave, a subterranean world of stalactites and stalagmites, where the earth reveals its hidden artistry. Afterward, journey to Martvili Canyon, where you'll traverse well-maintained trails, taking in the breathtaking views of this verdant gorge. Gaze up at the towering cliffs, breathe in the fresh mountain air, and let the serenity of the canyon wash over you. Return to Kutaisi.</p><ul><li>Visit Prometheus Cave Natural Monument;</li><li>Martvili Canyon, boat trip;</li><li>Free evening; Overnight stay in Kutaisi.</li><li><strong>Duration of the tour:</strong> 8-9 hours</li><li><strong>Driving duration:</strong> 2.5 hours</li></ul>"
+        "content": "<p>Today's adventure takes you to two of Georgia's most stunning natural wonders. Begin by descending into the mesmerizing Prometheus Cave, a subterranean world of stalactites and stalagmites, where the earth reveals its hidden artistry. Afterward, journey to Martvili Canyon, where you'll traverse well-maintained trails, taking in the breathtaking views of this verdant gorge. Gaze up at the towering cliffs, breathe in the fresh mountain air, and let the serenity of the canyon wash over you. Return to Kutaisi.</p><ul><li>Visit Prometheus Cave Natural Monument;</li><li>Martvili Canyon, boat trip;</li><li>Free evening; Overnight stay in Kutaisi.</li><li><strong>Duration of the tour:</strong> 8-9 hours</li><li><strong>Driving duration:</strong> 2.5 hours</li></ul>",
+        "image": "/images/itinerary/martvili-canyon-georgia.jpg",
+        "imageAlt": "Martvili Canyon in western Georgia"
       },
       {
         "title": "Day 8: Kutaisi – Baia's Winery – Batumi",
@@ -47,7 +55,9 @@ export const tours = [
       },
       {
         "title": "Day 9: Batumi city tour - Batumi Botanical Garden, free evening",
-        "content": "<p>Explore Batumi's captivating city center, admiring the architectural highlights of Europe Square, Piazza Square, and the iconic Ali and Nino Statue. Take a memorable cable car ride offering panoramic views, and explore the lush beauty of the Batumi Botanical Garden. Enjoy your free time soaking in the Batumi atmosphere.</p><ul><li>Visit Europe Square;</li><li>Piazza Square;</li><li>Ali and Nino Statue;</li><li>Enjoy a cable car ride;</li><li>Batumi Botanical Garden;</li><li>Free evening in Batumi.</li><li><strong>Duration of the tour:</strong> 5-6 hours</li><li><strong>Driving duration:</strong> 1 hour</li></ul>"
+        "content": "<p>Explore Batumi's captivating city center, admiring the architectural highlights of Europe Square, Piazza Square, and the iconic Ali and Nino Statue. Take a memorable cable car ride offering panoramic views, and explore the lush beauty of the Batumi Botanical Garden. Enjoy your free time soaking in the Batumi atmosphere.</p><ul><li>Visit Europe Square;</li><li>Piazza Square;</li><li>Ali and Nino Statue;</li><li>Enjoy a cable car ride;</li><li>Batumi Botanical Garden;</li><li>Free evening in Batumi.</li><li><strong>Duration of the tour:</strong> 5-6 hours</li><li><strong>Driving duration:</strong> 1 hour</li></ul>",
+        "image": "/images/itinerary/batumi-black-sea-coast.jpg",
+        "imageAlt": "Aerial view of Batumi coastline on the Black Sea, Georgia"
       },
       {
         "title": "Day 10: Batumi – Tbilisi (train)",

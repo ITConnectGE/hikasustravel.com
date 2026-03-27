@@ -1290,7 +1290,7 @@ tour-info h2 a,
   transition: max-height 0.35s ease;
 }
 .acc__panel--open {
-  max-height: 2000px;
+  max-height: 2500px;
 }
 .acc__panel-inner {
   padding: 0 8px calc(var(--indent) * 1.2) 8px;
@@ -1364,6 +1364,15 @@ tour-info h2 a,
 }
 .acc__timeline .acc__panel-inner {
   margin-left: 50px;
+}
+
+/* Itinerary images */
+.acc__itinerary-image {
+  width: 100%;
+  max-height: 360px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: calc(var(--indent) * 0.8);
 }
 
 /* Duration/driving tags */

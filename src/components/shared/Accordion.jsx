@@ -147,7 +147,17 @@ export default function Accordion({ items, renderContent, headingKey, itinerary 
               tags={tags}
             >
               {renderContent ? renderContent(item) : (
-                <div dangerouslySetInnerHTML={{ __html: cleanedContent }} />
+                <>
+                  {item.image && (
+                    <img
+                      className="acc__itinerary-image"
+                      src={item.image}
+                      alt={item.imageAlt || ''}
+                      loading="lazy"
+                    />
+                  )}
+                  <div dangerouslySetInnerHTML={{ __html: cleanedContent }} />
+                </>
               )}
             </AccordionItem>
           )
