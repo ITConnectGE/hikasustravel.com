@@ -5128,3 +5128,110 @@ select option:checked {
     grid-template-columns: 1fr;
   }
 }
+
+/* ============================================================
+   Premium Group Tour Summary  (scoped to .tour-summary-premium)
+   Redesign of the tour details info bar (Duration, Group Size,
+   Available Dates, Price). Scoped so nothing leaks to other
+   sections. Overrides the base .summary-item rules via the extra
+   .tour-summary-premium parent (higher specificity).
+   ============================================================ */
+.tour-summary-premium {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  margin: 30px 0;
+}
+
+.tour-summary-premium .summary-item {
+  position: relative;
+  flex: 1 1 220px;
+  max-width: 300px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 6px;
+  background: linear-gradient(180deg, #ffffff 0%, #fbf8f1 100%);
+  border: 1px solid #ececec;
+  border-radius: 16px;
+  padding: 28px 24px 24px;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+/* Circular gold icon badge above each value */
+.tour-summary-premium .summary-item::before {
+  content: "";
+  width: 52px;
+  height: 52px;
+  margin-bottom: 10px;
+  border-radius: 50%;
+  background-color: var(--gold, #b8860b);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 24px 24px;
+  box-shadow: 0 4px 10px rgba(184, 134, 11, 0.3);
+}
+
+/* Per-item icons. Order matches the groupSummary data:
+   1 Duration, 2 Group Size, 3 Available Dates, 4 Price. */
+.tour-summary-premium .summary-item:nth-child(1)::before {
+  background-image: url("data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='24'%20height='24'%20viewBox='0%200%2024%2024'%20fill='none'%20stroke='white'%20stroke-width='2'%20stroke-linecap='round'%20stroke-linejoin='round'%3E%3Ccircle%20cx='12'%20cy='12'%20r='10'/%3E%3Cpolyline%20points='12%206%2012%2012%2016%2014'/%3E%3C/svg%3E");
+}
+.tour-summary-premium .summary-item:nth-child(2)::before {
+  background-image: url("data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='24'%20height='24'%20viewBox='0%200%2024%2024'%20fill='none'%20stroke='white'%20stroke-width='2'%20stroke-linecap='round'%20stroke-linejoin='round'%3E%3Cpath%20d='M17%2021v-2a4%204%200%200%200-4-4H5a4%204%200%200%200-4%204v2'/%3E%3Ccircle%20cx='9'%20cy='7'%20r='4'/%3E%3Cpath%20d='M23%2021v-2a4%204%200%200%200-3-3.87'/%3E%3Cpath%20d='M16%203.13a4%204%200%200%201%200%207.75'/%3E%3C/svg%3E");
+}
+.tour-summary-premium .summary-item:nth-child(3)::before {
+  background-image: url("data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='24'%20height='24'%20viewBox='0%200%2024%2024'%20fill='none'%20stroke='white'%20stroke-width='2'%20stroke-linecap='round'%20stroke-linejoin='round'%3E%3Crect%20x='3'%20y='4'%20width='18'%20height='18'%20rx='2'%20ry='2'/%3E%3Cline%20x1='16'%20y1='2'%20x2='16'%20y2='6'/%3E%3Cline%20x1='8'%20y1='2'%20x2='8'%20y2='6'/%3E%3Cline%20x1='3'%20y1='10'%20x2='21'%20y2='10'/%3E%3C/svg%3E");
+}
+.tour-summary-premium .summary-item:nth-child(4)::before {
+  background-image: url("data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='24'%20height='24'%20viewBox='0%200%2024%2024'%20fill='none'%20stroke='white'%20stroke-width='2'%20stroke-linecap='round'%20stroke-linejoin='round'%3E%3Cpath%20d='M20.59%2013.41l-7.17%207.17a2%202%200%200%201-2.83%200L2%2012V2h10l8.59%208.59a2%202%200%200%201%200%202.82z'/%3E%3Cline%20x1='7'%20y1='7'%20x2='7.01'%20y2='7'/%3E%3C/svg%3E");
+}
+
+.tour-summary-premium .summary-item strong {
+  display: block;
+  margin: 0;
+  color: #a98b4b;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  font-size: 0.72rem;
+  font-weight: 600;
+}
+
+.tour-summary-premium .summary-item > div {
+  font-family: 'Rockwell Nova', serif;
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: #1a1a1a;
+  line-height: 1.35;
+}
+
+.tour-summary-premium .summary-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 14px 32px rgba(0, 0, 0, 0.1);
+  border-color: var(--gold, #b8860b);
+}
+
+.tour-summary-premium .dates-list {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.tour-summary-premium .date-range {
+  font-family: 'Proza Libre', sans-serif;
+  font-size: 0.98rem;
+  font-weight: 600;
+  color: #333;
+}
+
+@media (max-width: 600px) {
+  .tour-summary-premium { gap: 14px; }
+  .tour-summary-premium .summary-item {
+    flex: 1 1 100%;
+    max-width: 100%;
+    padding: 22px 20px;
+  }
+}

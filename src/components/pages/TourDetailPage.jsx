@@ -188,7 +188,7 @@ export default function TourDetailPage() {
           {isGroup && (tt?.groupSummary || tour.groupSummary) && (
             <section className="td-section">
               <FadeUp>
-                <div className="tour-group-summary">
+                <div className="tour-group-summary tour-summary-premium">
                   {(tt?.groupSummary || tour.groupSummary).map((item, i) => (
                     <div key={i} className="summary-item">
                       <strong>{item.label}</strong>
