@@ -89,9 +89,9 @@
         "label": "Dostupné termíny",
         "type": "dates",
         "values": [
-          "23. května – 5. června 2026",
-          "5. září – 18. září 2026",
-          "17. října – 30. října 2026"
+          { "text": "23. května – 5. června 2026", "soldOut": true },
+          { "text": "5. září – 18. září 2026", "soldOut": false },
+          { "text": "17. října – 30. října 2026", "soldOut": false }
         ]
       },
       {

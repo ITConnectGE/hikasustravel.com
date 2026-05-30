@@ -194,9 +194,21 @@ export default function TourDetailPage() {
                       <strong>{item.label}</strong>
                       {item.type === 'dates' ? (
                         <div className="dates-list">
-                          {item.values.map((v, j) => (
-                            <div key={j} className="date-range">{v}</div>
-                          ))}
+                          {item.values.map((v, j) => {
+                            const dateText = typeof v === 'string' ? v : v.text
+                            const soldOut = typeof v === 'object' && v.soldOut
+                            return (
+                              <div
+                                key={j}
+                                className={`date-range ${soldOut ? 'date-range--sold-out' : 'date-range--available'}`}
+                              >
+                                <span className="date-range__text">{dateText}</span>
+                                <span className="date-range__status">
+                                  {soldOut ? t('tour.soldOut') : t('tour.available')}
+                                </span>
+                              </div>
+                            )
+                          })}
                         </div>
                       ) : (
                         <div>{item.value}</div>

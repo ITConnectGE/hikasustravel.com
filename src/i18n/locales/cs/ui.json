@@ -36,6 +36,8 @@
   "tour.days": "dni",
   "tour.moreInfo": "Vice informaci",
   "tour.availableDates": "Dostupne terminy",
+  "tour.available": "Dostupné",
+  "tour.soldOut": "Vyprodáno",
   "tour.fromPP": "Od {price} EUR za osobu",
   "tour.notFound": "Zajezd nenalezen",
   "tour.notFoundText": "Zajezd, ktery hledate, neexistuje.",

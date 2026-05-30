@@ -89,9 +89,9 @@
         "label": "Dates disponibles",
         "type": "dates",
         "values": [
-          "23 mai – 5 juin 2026",
-          "5 septembre – 18 septembre 2026",
-          "17 octobre – 30 octobre 2026"
+          { "text": "23 mai – 5 juin 2026", "soldOut": true },
+          { "text": "5 septembre – 18 septembre 2026", "soldOut": false },
+          { "text": "17 octobre – 30 octobre 2026", "soldOut": false }
         ]
       },
       {

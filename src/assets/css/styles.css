@@ -5132,9 +5132,8 @@ select option:checked {
 /* ============================================================
    Premium Group Tour Summary  (scoped to .tour-summary-premium)
    Redesign of the tour details info bar (Duration, Group Size,
-   Available Dates, Price). Scoped so nothing leaks to other
-   sections. Overrides the base .summary-item rules via the extra
-   .tour-summary-premium parent (higher specificity).
+   Available Dates, Price) plus per-date Available / Sold Out badges.
+   All rules scoped under .tour-summary-premium so nothing leaks.
    ============================================================ */
 .tour-summary-premium {
   display: flex;
@@ -5161,7 +5160,6 @@ select option:checked {
   transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
 }
 
-/* Circular gold icon badge above each value */
 .tour-summary-premium .summary-item::before {
   content: "";
   width: 52px;
@@ -5175,8 +5173,6 @@ select option:checked {
   box-shadow: 0 4px 10px rgba(184, 134, 11, 0.3);
 }
 
-/* Per-item icons. Order matches the groupSummary data:
-   1 Duration, 2 Group Size, 3 Available Dates, 4 Price. */
 .tour-summary-premium .summary-item:nth-child(1)::before {
   background-image: url("data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='24'%20height='24'%20viewBox='0%200%2024%2024'%20fill='none'%20stroke='white'%20stroke-width='2'%20stroke-linecap='round'%20stroke-linejoin='round'%3E%3Ccircle%20cx='12'%20cy='12'%20r='10'/%3E%3Cpolyline%20points='12%206%2012%2012%2016%2014'/%3E%3C/svg%3E");
 }
@@ -5192,7 +5188,7 @@ select option:checked {
 
 .tour-summary-premium .summary-item strong {
   display: block;
-  margin: 0;
+  margin: 0 0 2px;
   color: #a98b4b;
   text-transform: uppercase;
   letter-spacing: 1.5px;
@@ -5217,14 +5213,52 @@ select option:checked {
 .tour-summary-premium .dates-list {
   display: flex;
   flex-direction: column;
-  gap: 4px;
+  gap: 8px;
+  width: 100%;
 }
 
 .tour-summary-premium .date-range {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  padding: 8px 10px;
+  border-radius: 10px;
   font-family: 'Proza Libre', sans-serif;
-  font-size: 0.98rem;
+  font-size: 0.95rem;
   font-weight: 600;
-  color: #333;
+}
+
+.tour-summary-premium .date-range--available {
+  background: rgba(43, 78, 71, 0.06);
+  color: #2b4e47;
+}
+
+.tour-summary-premium .date-range--sold-out {
+  background: rgba(140, 60, 60, 0.07);
+}
+.tour-summary-premium .date-range--sold-out .date-range__text {
+  color: #9a9a9a;
+  text-decoration: line-through;
+}
+
+.tour-summary-premium .date-range__status {
+  font-family: 'Proza Libre', sans-serif;
+  font-size: 0.62rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+  padding: 3px 10px;
+  border-radius: 999px;
+  line-height: 1;
+}
+.tour-summary-premium .date-range--available .date-range__status {
+  background-color: #2b7a4b;
+  color: #ffffff;
+}
+.tour-summary-premium .date-range--sold-out .date-range__status {
+  background-color: #b23a3a;
+  color: #ffffff;
 }
 
 @media (max-width: 600px) {

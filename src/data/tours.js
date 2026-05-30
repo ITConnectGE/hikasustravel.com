@@ -352,9 +352,9 @@ export const tours = [
         "label": "Available Dates",
         "type": "dates",
         "values": [
-          "23 May – 5 June 2026",
-          "5 September – 18 September 2026",
-          "17 October – 30 October 2026"
+          { "text": "23 May – 5 June 2026", "soldOut": true },
+          { "text": "5 September – 18 September 2026", "soldOut": false },
+          { "text": "17 October – 30 October 2026", "soldOut": false }
         ]
       },
       {

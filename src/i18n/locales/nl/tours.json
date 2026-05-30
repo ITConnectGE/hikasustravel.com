@@ -89,9 +89,9 @@
         "label": "Beschikbare data",
         "type": "dates",
         "values": [
-          "23 mei – 5 juni 2026",
-          "5 september – 18 september 2026",
-          "17 oktober – 30 oktober 2026"
+          { "text": "23 mei – 5 juni 2026", "soldOut": true },
+          { "text": "5 september – 18 september 2026", "soldOut": false },
+          { "text": "17 oktober – 30 oktober 2026", "soldOut": false }
         ]
       },
       {

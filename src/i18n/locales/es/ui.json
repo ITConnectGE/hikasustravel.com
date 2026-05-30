@@ -36,6 +36,8 @@
   "tour.days": "dias",
   "tour.moreInfo": "Mas informacion",
   "tour.availableDates": "Fechas Disponibles",
+  "tour.available": "Disponible",
+  "tour.soldOut": "Agotado",
   "tour.fromPP": "Desde {price} EUR por persona",
   "tour.notFound": "Tour no encontrado",
   "tour.notFoundText": "El tour que buscas no existe.",

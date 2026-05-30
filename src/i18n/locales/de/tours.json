@@ -89,9 +89,9 @@
         "label": "Verfuegbare Termine",
         "type": "dates",
         "values": [
-          "23. Mai – 5. Juni 2026",
-          "5. September – 18. September 2026",
-          "17. Oktober – 30. Oktober 2026"
+          { "text": "23. Mai – 5. Juni 2026", "soldOut": true },
+          { "text": "5. September – 18. September 2026", "soldOut": false },
+          { "text": "17. Oktober – 30. Oktober 2026", "soldOut": false }
         ]
       },
       {
