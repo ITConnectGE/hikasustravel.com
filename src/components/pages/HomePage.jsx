@@ -102,6 +102,9 @@ export default function HomePage() {
             <div className="tours-grid">
               {tours.filter((tour) => tour.type === 'private').map((tour) => {
                 const tt = tourTranslations?.[tour.slug]
+                const classicRow = tour.pricing?.find((r) => r.travelers === '4')
+                const classicNum = classicRow ? parseFloat((classicRow.economy || '').replace(/[^0-9.]/g, '')) : NaN
+                const priceFrom = !isNaN(classicNum) && classicNum > 0 ? `€${classicNum.toLocaleString('en-US')}` : null
                 return (
                   <div className="tour-tile" key={tour.slug}>
                     <LocaleLink
@@ -115,6 +118,9 @@ export default function HomePage() {
                       <div className="tour-tile-overlay">
                         <h3>{tt?.title || tour.title}</h3>
                         <p>{tour.days} {t('tour.days')}</p>
+                        {priceFrom && (
+                          <p className="tour-tile-overlay__price">{t('tour.pricesFrom', { price: priceFrom })}</p>
+                        )}
                       </div>
                     </LocaleLink>
                   </div>

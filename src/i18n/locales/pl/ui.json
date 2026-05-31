@@ -37,6 +37,7 @@
   "tour.map": "Mapa",
   "tour.bookThisTour": "Zarezerwuj tę wycieczkę",
   "tour.days": "dni",
+  "tour.pricesFrom": "Ceny od {price}",
   "tour.moreInfo": "Więcej informacji",
   "tour.availableDates": "Dostępne terminy",
   "tour.available": "Dostępne",

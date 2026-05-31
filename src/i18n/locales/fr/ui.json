@@ -37,6 +37,7 @@
   "tour.map": "Carte",
   "tour.bookThisTour": "Reserver ce tour",
   "tour.days": "jours",
+  "tour.pricesFrom": "Prix à partir de {price}",
   "tour.moreInfo": "Plus d'infos",
   "tour.availableDates": "Dates disponibles",
   "tour.available": "Disponible",

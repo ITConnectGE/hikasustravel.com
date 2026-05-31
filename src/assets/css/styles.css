@@ -4250,6 +4250,13 @@ select option:checked {
   text-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
 }
 
+.tour-tile-overlay__price {
+  margin-top: 4px;
+  font-weight: 600;
+  letter-spacing: 0.01em;
+  color: var(--color-h3);
+}
+
 /* Responsive - Tablet (3 columns) */
 @media (max-width: 1024px) {
   .tours-grid {
