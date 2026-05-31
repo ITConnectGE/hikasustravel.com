@@ -2046,7 +2046,7 @@ export const tours = [
       },
       {
         "travelers": "Single Supplement",
-        "luxury": "€610",
+        "luxury": "€595",
         "midRange": "€245",
         "economy": "€195"
       }
@@ -2549,7 +2549,7 @@ export const tours = [
         "travelers": "Single Supplement",
         "luxury": "€690",
         "midRange": "€285",
-        "economy": "€210"
+        "economy": "€195"
       }
     ],
     "included": [
@@ -2874,7 +2874,7 @@ export const tours = [
       },
       {
         "travelers": "Single Supplement",
-        "luxury": "€710",
+        "luxury": "€695",
         "midRange": "€345",
         "economy": "€240"
       }
@@ -3422,7 +3422,7 @@ export const tours = [
       },
       {
         "travelers": "Single Supplement",
-        "luxury": "€820",
+        "luxury": "€795",
         "midRange": "€425",
         "economy": "€290"
       }
@@ -3965,9 +3965,9 @@ export const tours = [
       },
       {
         "travelers": "Single Supplement",
-        "luxury": "€1125",
+        "luxury": "€1095",
         "midRange": "€570",
-        "economy": "€195"
+        "economy": "€395"
       }
     ],
     "included": [

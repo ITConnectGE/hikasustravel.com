@@ -114,6 +114,7 @@ function PricingCards({ pricing }) {
   ]
 
   const numericRows = pricing.filter((r) => r.travelers !== 'Single Supplement')
+  const singleSupplement = pricing.find((r) => r.travelers === 'Single Supplement')
   // Find the row with the lowest price across all tiers (best value)
   let bestValueCount = null
   if (numericRows.length > 1) {
@@ -166,6 +167,12 @@ function PricingCards({ pricing }) {
                     <span>{formatEuro(row[tier.key])}</span>
                   </div>
                 ))}
+                {singleSupplement && (
+                  <div className="td-price-card__row">
+                    <span>{t('pricing.singleSupplement')}</span>
+                    <span>{formatEuro(singleSupplement[tier.key])}</span>
+                  </div>
+                )}
               </div>
             )}
             <a href="#book" onClick={scrollToBook} className="td-price-card__cta">
