@@ -453,9 +453,12 @@ export const tours = [
       "Travel insurance."
     ],
     "gallery": [
-      { "src": "/images/files/georgia-tour-12.jpg", "caption": "Tsinandali Estate", "description": "Historic estate and birthplace of Georgian winemaking", "day": "Day 1" },
-      { "src": "/images/files/georgia-tour-13.jpg", "caption": "Telavi", "description": "Capital of the Kakheti wine region", "day": "Day 3" },
-      { "src": "/images/files/Gveleti-Waterfall.jpg", "caption": "Gveleti Waterfall", "description": "Beautiful waterfall near Stepantsminda", "day": "Day 5" }
+      { "src": "/images/files/Jvari%20Monastery.jpg", "caption": "Jvari Monastery", "description": "6th-century UNESCO monastery overlooking Mtskheta", "day": "Day 1" },
+      { "src": "/images/files/Uplistsikhe%20Cave%20Town.jpg", "caption": "Uplistsikhe Cave Town", "description": "Ancient rock-hewn cave town carved into the cliffs", "day": "Day 1" },
+      { "src": "/images/files/Stalin%20Museum.jpg", "caption": "Stalin Museum", "description": "Museum in Gori, the birthplace of Joseph Stalin", "day": "Day 1" },
+      { "src": "/images/files/Bazaar%20in%20Kutaisi.jpg", "caption": "Bazaar in Kutaisi", "description": "Vibrant Green Bazaar in the heart of Kutaisi", "day": "Day 2" },
+      { "src": "/images/files/Prometheus%20Cave.jpg", "caption": "Prometheus Cave", "description": "Stunning cave of stalactites, stalagmites and underground rivers", "day": "Day 3" },
+      { "src": "/images/files/Batumi.jpg", "caption": "Batumi", "description": "Vibrant Black Sea coastal city", "day": "Day 4" }
     ],
     "map": {
       "center": [
