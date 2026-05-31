@@ -4243,11 +4243,17 @@ select option:checked {
   width: 48px;
 }
 
+/* Reset the .home-items p width:50vw/max-width that otherwise leaks onto the
+   tile overlay paragraphs and clips them inside the overflow-hidden tile. */
 .tour-tile-overlay p {
   margin: 8px 0 0 0;
   font-size: calc(var(--font-size) * 0.8);
   color: #e9e6d6;
   text-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
+  width: auto;
+  max-width: 100%;
+  white-space: normal;
+  overflow-wrap: break-word;
 }
 
 .tour-tile-overlay__price {
@@ -4255,11 +4261,6 @@ select option:checked {
   font-weight: 600;
   letter-spacing: 0.01em;
   color: var(--color-h3);
-  width: 100%;
-  max-width: 100%;
-  white-space: normal;
-  overflow-wrap: break-word;
-  overflow: visible;
 }
 
 /* Responsive - Tablet (3 columns) */
