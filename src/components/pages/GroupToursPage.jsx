@@ -54,7 +54,9 @@ export default function GroupToursPage() {
                     <>
                       <div className="available">{t('tour.availableDates')}</div>
                       <div className="date-chips">
-                        {tour.groupDates.map((d, i) => (
+                        {tour.groupDates
+                          .filter((d) => !(d.start === '23 May' && d.end === '5 June' && d.year === '2026'))
+                          .map((d, i) => (
                           <div key={i} className="date-chip">
                             <span className="date-range">{d.start} – {d.end}</span>
                             <span className="date-year">{d.year}</span>
