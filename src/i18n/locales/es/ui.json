@@ -30,6 +30,8 @@
   "tour.gallery": "Galeria",
   "tour.gallerySubtitle": "Lugares destacados de este tour",
   "tour.viewImage": "Ver imagen",
+  "tour.nextImage": "Imagen siguiente",
+  "tour.prevImage": "Imagen anterior",
   "tour.showMore": "Mostrar {count} fotos más",
   "tour.book": "Reservar",
   "tour.map": "Mapa",

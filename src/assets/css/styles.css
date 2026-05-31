@@ -2166,6 +2166,32 @@ ul {
 .gallery-lightbox__close:hover {
   background: rgba(0, 0, 0, 0.8);
 }
+.gallery-lightbox__nav {
+  position: fixed;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 2001;
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  border-radius: 50%;
+  background: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+.gallery-lightbox__nav:hover {
+  background: rgba(0, 0, 0, 0.8);
+}
+.gallery-lightbox__nav--prev {
+  left: 20px;
+}
+.gallery-lightbox__nav--next {
+  right: 20px;
+}
 @media (max-width: 768px) {
   .gallery-lightbox-backdrop {
     padding: 12px;
@@ -2176,6 +2202,16 @@ ul {
   .gallery-lightbox__close {
     top: 12px;
     right: 12px;
+  }
+  .gallery-lightbox__nav {
+    width: 40px;
+    height: 40px;
+  }
+  .gallery-lightbox__nav--prev {
+    left: 8px;
+  }
+  .gallery-lightbox__nav--next {
+    right: 8px;
   }
 }
 

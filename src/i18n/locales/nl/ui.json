@@ -30,6 +30,8 @@
   "tour.gallery": "Galerij",
   "tour.gallerySubtitle": "Locatiehoogtepunten van deze tour",
   "tour.viewImage": "Bekijk afbeelding",
+  "tour.nextImage": "Volgende afbeelding",
+  "tour.prevImage": "Vorige afbeelding",
   "tour.showMore": "Toon {count} meer foto's",
   "tour.book": "Boeken",
   "tour.map": "Kaart",

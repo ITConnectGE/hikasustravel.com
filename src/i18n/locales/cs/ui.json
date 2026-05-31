@@ -30,6 +30,8 @@
   "tour.gallery": "Galerie",
   "tour.gallerySubtitle": "Hlavní místa z tohoto zájezdu",
   "tour.viewImage": "Zobrazit obrázek",
+  "tour.nextImage": "Další obrázek",
+  "tour.prevImage": "Předchozí obrázek",
   "tour.showMore": "Zobrazit dalších {count} fotek",
   "tour.book": "Rezervace",
   "tour.map": "Mapa",

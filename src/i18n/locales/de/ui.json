@@ -30,6 +30,8 @@
   "tour.gallery": "Galerie",
   "tour.gallerySubtitle": "Highlights der Orte auf dieser Tour",
   "tour.viewImage": "Bild ansehen",
+  "tour.nextImage": "Nächstes Bild",
+  "tour.prevImage": "Vorheriges Bild",
   "tour.showMore": "Zeige {count} weitere Fotos",
   "tour.book": "Buchen",
   "tour.map": "Karte",

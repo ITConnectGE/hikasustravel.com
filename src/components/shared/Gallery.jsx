@@ -1,4 +1,4 @@
-import { useState, useRef, useEffect } from 'react'
+import { useState, useRef, useEffect, useCallback } from 'react'
 import { createPortal } from 'react-dom'
 import FadeUp from './FadeUp'
 import BlurUpBackground from './BlurUpBackground'
@@ -6,44 +6,89 @@ import asset from '../../utils/basePath'
 import useT from '../../i18n/useT'
 
 const INITIAL_COUNT = 8
+const SWIPE_THRESHOLD = 50
 
-function GalleryLightbox({ image, onClose }) {
+function GalleryLightbox({ images, startIndex, onClose }) {
   const t = useT()
+  const [index, setIndex] = useState(startIndex)
   const closeBtnRef = useRef(null)
+  const touchStartX = useRef(null)
+
+  const count = images.length
+  const goPrev = useCallback(() => setIndex((i) => (i - 1 + count) % count), [count])
+  const goNext = useCallback(() => setIndex((i) => (i + 1) % count), [count])
 
   useEffect(() => {
-    const prev = document.body.style.overflow
+    const prevOverflow = document.body.style.overflow
     document.body.style.overflow = 'hidden'
 
     function handleKey(e) {
       if (e.key === 'Escape') onClose()
+      else if (e.key === 'ArrowRight') goNext()
+      else if (e.key === 'ArrowLeft') goPrev()
     }
     document.addEventListener('keydown', handleKey)
     closeBtnRef.current?.focus()
 
     return () => {
-      document.body.style.overflow = prev
+      document.body.style.overflow = prevOverflow
       document.removeEventListener('keydown', handleKey)
     }
-  }, [onClose])
+  }, [onClose, goNext, goPrev])
 
+  const image = images[index]
   if (!image) return null
 
   const alt = image.caption ? image.caption.replace(/<[^>]*>/g, '') : (image.description || '')
 
+  const onTouchStart = (e) => { touchStartX.current = e.touches[0].clientX }
+  const onTouchEnd = (e) => {
+    if (touchStartX.current == null) return
+    const dx = e.changedTouches[0].clientX - touchStartX.current
+    if (Math.abs(dx) > SWIPE_THRESHOLD) {
+      if (dx < 0) goNext()
+      else goPrev()
+    }
+    touchStartX.current = null
+  }
+
   return createPortal(
-    <div className="gallery-lightbox-backdrop" onClick={onClose}>
+    <div className="gallery-lightbox-backdrop" onClick={onClose} role="dialog" aria-modal="true" aria-label={t('tour.gallery')}>
       <button ref={closeBtnRef} className="gallery-lightbox__close" onClick={onClose} aria-label={t('hotel.close')}>
         <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
           <line x1="18" y1="6" x2="6" y2="18" /><line x1="6" y1="6" x2="18" y2="18" />
         </svg>
       </button>
+      {count > 1 && (
+        <button
+          className="gallery-lightbox__nav gallery-lightbox__nav--prev"
+          onClick={(e) => { e.stopPropagation(); goPrev() }}
+          aria-label={t('tour.prevImage')}
+        >
+          <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+            <polyline points="15 18 9 12 15 6" />
+          </svg>
+        </button>
+      )}
       <img
         src={asset(image.src)}
         alt={alt}
         className="gallery-lightbox__img"
         onClick={(e) => e.stopPropagation()}
+        onTouchStart={onTouchStart}
+        onTouchEnd={onTouchEnd}
       />
+      {count > 1 && (
+        <button
+          className="gallery-lightbox__nav gallery-lightbox__nav--next"
+          onClick={(e) => { e.stopPropagation(); goNext() }}
+          aria-label={t('tour.nextImage')}
+        >
+          <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+            <polyline points="9 18 15 12 9 6" />
+          </svg>
+        </button>
+      )}
     </div>,
     document.body
   )
@@ -51,7 +96,7 @@ function GalleryLightbox({ image, onClose }) {
 
 export default function Gallery({ images }) {
   const [expanded, setExpanded] = useState(false)
-  const [lightbox, setLightbox] = useState(null)
+  const [lightboxIndex, setLightboxIndex] = useState(null)
   const lastFocused = useRef(null)
   const t = useT()
 
@@ -60,13 +105,13 @@ export default function Gallery({ images }) {
   const visible = expanded ? images : images.slice(0, INITIAL_COUNT)
   const hasMore = images.length > INITIAL_COUNT
 
-  const openLightbox = (img, el) => {
+  const openLightbox = (index, el) => {
     lastFocused.current = el
-    setLightbox(img)
+    setLightboxIndex(index)
   }
 
   const closeLightbox = () => {
-    setLightbox(null)
+    setLightboxIndex(null)
     lastFocused.current?.focus()
   }
 
@@ -85,11 +130,11 @@ export default function Gallery({ images }) {
                   role="button"
                   tabIndex={0}
                   aria-label={caption ? `${t('tour.viewImage')}: ${caption}` : t('tour.viewImage')}
-                  onClick={(e) => openLightbox(img, e.currentTarget)}
+                  onClick={(e) => openLightbox(index, e.currentTarget)}
                   onKeyDown={(e) => {
                     if (e.key === 'Enter' || e.key === ' ') {
                       e.preventDefault()
-                      openLightbox(img, e.currentTarget)
+                      openLightbox(index, e.currentTarget)
                     }
                   }}
                 >
@@ -114,7 +159,9 @@ export default function Gallery({ images }) {
           </button>
         </div>
       )}
-      {lightbox && <GalleryLightbox image={lightbox} onClose={closeLightbox} />}
+      {lightboxIndex !== null && (
+        <GalleryLightbox images={visible} startIndex={lightboxIndex} onClose={closeLightbox} />
+      )}
     </>
   )
 }
