@@ -4,6 +4,7 @@ import FadeUp from '../shared/FadeUp'
 import BlurUpBackground from '../shared/BlurUpBackground'
 import MapboxMap from '../shared/MapboxMap'
 import Testimonials from '../shared/Testimonials'
+import ContactForm from '../shared/ContactForm'
 import { tours } from '../../data/tours'
 import useT from '../../i18n/useT'
 import useLang from '../../i18n/useLang'
@@ -142,6 +143,15 @@ export default function HomePage() {
               <p><LocaleLink to="/shuttle-service">{t('home.shuttleLink')}</LocaleLink></p>
             </div>
           </FadeUp>
+        </div>
+      </section>
+
+      <section className="home-items">
+        <div className="home-items">
+          <FadeUp>
+            <h2>{t('home.contactTitle')}</h2>
+          </FadeUp>
+          <ContactForm />
         </div>
       </section>
 

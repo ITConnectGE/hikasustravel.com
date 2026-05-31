@@ -1,6 +1,7 @@
 import { useContext } from 'react'
 import HeroSection from '../shared/HeroSection'
 import FadeUp from '../shared/FadeUp'
+import ContactForm from '../shared/ContactForm'
 import { I18nContext } from '../../i18n/I18nProvider'
 import useT from '../../i18n/useT'
 import useLang from '../../i18n/useLang'
@@ -42,6 +43,11 @@ export default function ContactPage() {
               <span className="contact-card__label">{t('contact.georgiaOffice')}</span>
               <span className="contact-card__value">+995 551 098 077</span>
             </a>
+          </div>
+
+          <div className="td-book-inline">
+            <h2 className="td-section__title">{t('contact.formTitle')}</h2>
+            <ContactForm />
           </div>
 
           <p className="contact-reply">{t('contact.getBack')}</p>
