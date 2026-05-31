@@ -2777,7 +2777,7 @@ export const tours = [
     "type": "private",
     "title": "Georgia in 10 Days: Where Every Corner Has a Story and Every Meal is a Celebration",
     "heroImage": "/images/files/georgia-10-days-celebration.jpg",
-    "tileImage": "/images/files/Stalin%20Museum.jpg",
+    "tileImage": "/images/files/Qvevri%20%28Clay%20Vessels%29.jpg",
     "listingImage": "/images/files/georgia-10-days-celebration.jpg",
     "days": 10,
     "description": "This thoughtfully crafted itinerary invites you to explore Georgia's most iconic landmarks alongside its best-kept secrets.",
