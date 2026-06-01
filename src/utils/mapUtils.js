@@ -130,11 +130,22 @@ export function addSmoothCurve(map, coordinates) {
           features: [{ type: 'Feature', geometry: { type: 'LineString', coordinates: smoothPoints } }],
         },
       })
+      // Soft cream casing beneath the route so the line stays crisp and
+      // readable against any map background (premium, subtle halo).
+      map.addLayer({
+        id: 'smooth-curve-casing',
+        type: 'line',
+        source: 'smooth-curve',
+        layout: { 'line-cap': 'round', 'line-join': 'round' },
+        paint: { 'line-color': '#f7f0e6', 'line-width': 8, 'line-opacity': 0.9 },
+      })
+      // Main route line in the brand deep green for clear, elegant contrast.
       map.addLayer({
         id: 'smooth-curve-layer',
         type: 'line',
         source: 'smooth-curve',
-        paint: { 'line-color': '#f7f0e6', 'line-width': 4, 'line-opacity': 0.7 },
+        layout: { 'line-cap': 'round', 'line-join': 'round' },
+        paint: { 'line-color': '#2b4e47', 'line-width': 4.5, 'line-opacity': 0.95 },
       })
     }
   })
