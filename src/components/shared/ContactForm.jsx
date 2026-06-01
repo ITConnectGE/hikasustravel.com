@@ -1,6 +1,5 @@
 import { useState } from 'react'
 import useT from '../../i18n/useT'
-import LocaleLink from '../../i18n/LocaleLink'
 import useWeb3Form from '../../hooks/useWeb3Form'
 import { WEB3FORMS_KEY, CONTACT_EMAIL } from '../../config'
 import TurnstileWidget from './TurnstileWidget'
@@ -11,7 +10,7 @@ const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
 export default function ContactForm() {
   const t = useT()
   const { status, submit } = useWeb3Form()
-  const [form, setForm] = useState({ name: '', email: '', phone: '', message: '', consent: false, botcheck: '' })
+  const [form, setForm] = useState({ name: '', email: '', phone: '', message: '', botcheck: '' })
   const [errors, setErrors] = useState([])
 
   // Fallback when no key is configured yet — identical to the site's current behaviour.
@@ -31,7 +30,6 @@ export default function ContactForm() {
     if (!form.name.trim()) errs.push(t('form.errors.name'))
     if (!EMAIL_RE.test(form.email.trim())) errs.push(t('form.errors.email'))
     if (!form.message.trim()) errs.push(t('form.errors.message'))
-    if (!form.consent) errs.push(t('form.errors.consent'))
     return errs
   }
 
@@ -47,7 +45,6 @@ export default function ContactForm() {
       email: form.email.trim(),
       phone: form.phone.trim(),
       message: form.message.trim(),
-      consent: 'Yes',
       botcheck: '',
       'cf-turnstile-response': getTurnstileToken(),
     })
@@ -97,13 +94,6 @@ export default function ContactForm() {
 
       {/* Honeypot — hidden from real users */}
       <input type="text" name="botcheck" className="td-form__hp" tabIndex={-1} autoComplete="off" value={form.botcheck} onChange={set('botcheck')} aria-hidden="true" />
-
-      <div className="td-form__consent">
-        <input id="cf-consent" type="checkbox" checked={form.consent} onChange={set('consent')} aria-invalid={invalid(!form.consent)} />
-        <label htmlFor="cf-consent">
-          {t('form.consent')} <LocaleLink to="/privacy-policy">{t('footer.privacyPolicy')}</LocaleLink>
-        </label>
-      </div>
 
       <TurnstileWidget />
 

@@ -1,6 +1,5 @@
 import { useState } from 'react'
 import useT from '../../i18n/useT'
-import LocaleLink from '../../i18n/LocaleLink'
 import useWeb3Form from '../../hooks/useWeb3Form'
 import { WEB3FORMS_KEY, CONTACT_EMAIL } from '../../config'
 import TurnstileWidget from './TurnstileWidget'
@@ -14,7 +13,7 @@ export default function TourInquiryForm({ tourTitle }) {
   const [form, setForm] = useState({
     salutation: '', firstName: '', lastName: '', email: '', phone: '',
     travelers: '', startDate: '', endDate: '', accommodation: '', message: '',
-    consent: false, botcheck: '',
+    botcheck: '',
   })
   const [errors, setErrors] = useState([])
 
@@ -35,7 +34,6 @@ export default function TourInquiryForm({ tourTitle }) {
     if (!form.firstName.trim()) errs.push(t('form.errors.firstName'))
     if (!form.lastName.trim()) errs.push(t('form.errors.lastName'))
     if (!EMAIL_RE.test(form.email.trim())) errs.push(t('form.errors.email'))
-    if (!form.consent) errs.push(t('form.errors.consent'))
     return errs
   }
 
@@ -58,7 +56,6 @@ export default function TourInquiryForm({ tourTitle }) {
       end_date: form.endDate,
       accommodation: form.accommodation,
       message: form.message.trim(),
-      consent: 'Yes',
       botcheck: '',
       'cf-turnstile-response': getTurnstileToken(),
     })
@@ -156,13 +153,6 @@ export default function TourInquiryForm({ tourTitle }) {
 
       {/* Honeypot — hidden from real users */}
       <input type="text" name="botcheck" className="td-form__hp" tabIndex={-1} autoComplete="off" value={form.botcheck} onChange={set('botcheck')} aria-hidden="true" />
-
-      <div className="td-form__consent">
-        <input id="ti-consent" type="checkbox" checked={form.consent} onChange={set('consent')} aria-invalid={invalid(!form.consent)} />
-        <label htmlFor="ti-consent">
-          {t('form.consent')} <LocaleLink to="/privacy-policy">{t('footer.privacyPolicy')}</LocaleLink>
-        </label>
-      </div>
 
       <TurnstileWidget />
 
