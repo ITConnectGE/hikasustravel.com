@@ -28,13 +28,18 @@ export function initializeTourMap(containerId, lat, lng, zoom) {
     center: [lng, lat],
     zoom: zoom,
     scrollZoom: false,
-    dragPan: !isTouchDevice,
+    dragPan: true,
     dragRotate: false,
     doubleClickZoom: false,
-    touchZoomRotate: false,
+    touchZoomRotate: true,
+    touchPitch: false,
     cooperativeGestures: isTouchDevice,
   })
   map.addControl(new mapboxgl.NavigationControl())
+  // Enable two-finger pinch zoom on touch devices, but keep the map's
+  // fixed 2D orientation (no two-finger rotate). cooperativeGestures still
+  // lets a single finger scroll the page, so the page won't zoom on pinch.
+  map.touchZoomRotate.disableRotation()
   return map
 }
 
