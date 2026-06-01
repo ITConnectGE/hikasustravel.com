@@ -63,6 +63,55 @@ export function addCustomMarker(map, coordinates, svgUrl, width, height, offsetX
   return marker
 }
 
+// Adds always-visible destination name labels as a Mapbox symbol layer.
+// Symbol text has built-in collision detection, so labels automatically
+// de-clutter (a readable subset shows; more appear as you zoom in) and
+// never pile up on top of each other. Brand styling: deep-green text with
+// a soft cream halo. Only markers that have a title are labelled, so maps
+// without destination titles (e.g. the homepage) are unaffected.
+export function addDestinationLabels(map, markers) {
+  const labeled = (markers || []).filter((m) => m && m.title && m.coordinates)
+  if (labeled.length === 0) return
+
+  const data = {
+    type: 'FeatureCollection',
+    features: labeled.map((m) => ({
+      type: 'Feature',
+      geometry: { type: 'Point', coordinates: m.coordinates },
+      properties: { title: m.title },
+    })),
+  }
+
+  const addLabelLayer = () => {
+    if (map.getSource('destination-labels')) return
+    map.addSource('destination-labels', { type: 'geojson', data })
+    map.addLayer({
+      id: 'destination-labels-layer',
+      type: 'symbol',
+      source: 'destination-labels',
+      layout: {
+        'text-field': ['get', 'title'],
+        'text-font': ['Open Sans Semibold', 'Arial Unicode MS Bold'],
+        'text-size': ['interpolate', ['linear'], ['zoom'], 6, 11, 9, 13, 12, 15],
+        'text-anchor': 'top',
+        'text-offset': [0, 0.7],
+        'text-max-width': 9,
+        'text-allow-overlap': false,
+        'text-padding': 4,
+      },
+      paint: {
+        'text-color': '#2b4e47',
+        'text-halo-color': '#f7f0e6',
+        'text-halo-width': 1.6,
+        'text-halo-blur': 0.3,
+      },
+    })
+  }
+
+  if (map.isStyleLoaded()) addLabelLayer()
+  else map.on('load', addLabelLayer)
+}
+
 export function addCustomMarkerWithPopup(map, coordinates, svgUrl, width, height, offsetX, offsetY, popupTitle, popupText) {
   const markerElement = document.createElement('div')
   const img = document.createElement('img')

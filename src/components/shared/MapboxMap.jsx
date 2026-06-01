@@ -3,6 +3,7 @@ import {
   initializeTourMap,
   initializeMap,
   addCustomMarker,
+  addDestinationLabels,
   addSmoothCurve,
   addGeorgiaBorders,
 } from '../../utils/mapUtils'
@@ -43,8 +44,8 @@ export default function MapboxMap({
         map,
         m.coordinates,
         asset(m.svgUrl || '/img/pennant.svg'),
-        m.width || 30,
-        m.height || 36,
+        m.width || 34,
+        m.height || 41,
         m.offsetX || 0,
         m.offsetY || 0
       )
@@ -54,6 +55,9 @@ export default function MapboxMap({
     if (routeCoordinates.length > 1) {
       addSmoothCurve(map, routeCoordinates)
     }
+
+    // Add destination name labels (collision-managed so they don't overlap)
+    addDestinationLabels(map, markers)
 
     return () => {
       if (map) map.remove()
