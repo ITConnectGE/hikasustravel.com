@@ -1632,28 +1632,6 @@ tour-info h2 a,
   transform: none;
   box-shadow: none;
 }
-.td-form__consent {
-  display: flex;
-  align-items: flex-start;
-  gap: 10px;
-  margin-bottom: 20px;
-  text-align: left;
-}
-.td-form__consent input[type="checkbox"] {
-  width: auto;
-  margin: 3px 0 0 0;
-  flex-shrink: 0;
-  accent-color: var(--color-h3);
-}
-.td-form__consent label {
-  margin: 0;
-  font-weight: 400;
-  font-size: 13px;
-  line-height: 1.5;
-}
-.td-form__consent a {
-  color: var(--color-h3);
-}
 .td-form__turnstile {
   margin-bottom: 20px;
 }
