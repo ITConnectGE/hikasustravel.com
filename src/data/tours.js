@@ -8,7 +8,7 @@ export const tours = [
     "title": "Georgia Group Tour",
     "heroImage": "/images/files/Gergeti-Church.jpg",
     "tileImage": "/images/files/Gergeti-Church.jpg",
-    "listingImage": "/images/files/Gergeti-Church.jpg",
+    "listingImage": "/images/files/Ananuri%20Fortress%20and%20Zhinvali%20Reservoir.jpg",
     "days": 14,
     "description": "Experience the essence of Georgia on this immersive 14-day journey through its diverse landscapes, rich cultural heritage, and renowned wine regions.",
     "listingDescription": "Experience the essence of Georgia on this immersive 14-day journey through its diverse landscapes, rich cultural heritage, and renowned wine regions.",

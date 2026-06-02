@@ -978,37 +978,181 @@ tour-info h2 a,
   outline-offset: 2px;
 }
 
-/* ── Group-tour card enhancement ── */
+/* ── Group-tour card enhancement (Georgia Group Tour card only) ── */
 .tour-item-card {
-  border-radius: 12px;
-  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+  grid-template-columns: 1.1fr 1.45fr 0.85fr;
+  border-radius: 16px;
   overflow: hidden;
-  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  background-color: #fff;
+  border: 1px solid rgba(43, 78, 71, 0.08);
+  box-shadow: 0 10px 30px rgba(43, 78, 71, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 .tour-item-card:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 8px 28px rgba(0, 0, 0, 0.14);
+  transform: translateY(-5px);
+  box-shadow: 0 18px 44px rgba(43, 78, 71, 0.18);
+}
+
+/* Hero image */
+.tour-item-card .tour-image-link {
+  position: relative;
+  display: block;
+  height: 100%;
+  min-height: 360px;
+  overflow: hidden;
+}
+.tour-item-card .tour-image {
+  position: absolute !important;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+}
+.tour-item-card .tour-image-scrim {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(43, 78, 71, 0) 38%, rgba(43, 78, 71, 0.58) 100%);
+  pointer-events: none;
+}
+.tour-item-card .tour-image-badge {
+  position: absolute;
+  left: 18px;
+  bottom: 18px;
+  z-index: 1;
+  display: inline-flex;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.94);
+  color: var(--color-h2);
+  font-family: "rockwell";
+  font-size: 12px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  padding: 7px 15px;
+  border-radius: 999px;
+  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.22);
+}
+
+/* Info column */
+.tour-item-card .tour-info {
+  display: flex;
+  flex-direction: column;
+  padding: calc(var(--indent) * 0.95);
+}
+.tour-item-card .tour-info h2 {
+  font-size: clamp(1.45rem, 2vw, 1.95rem);
+  line-height: 1.18;
+  margin-bottom: 8px;
+}
+.tour-item-card .tour-info h2 a {
+  color: var(--color-h2);
+  transition: color 0.2s ease;
+}
+.tour-item-card .tour-info h2 a:hover {
+  color: var(--color-h3);
+}
+.tour-item-card .tour-info h3 {
+  font-family: "rockwell";
+  font-size: 12px;
+  font-weight: normal;
+  text-transform: uppercase;
+  letter-spacing: 0.09em;
+  color: #8c8c70;
+  margin-bottom: 14px;
+}
+.tour-item-card .tour-info p {
+  color: #5b5b4d;
+  line-height: 1.65;
+  margin: 0;
+}
+.tour-item-card .more {
+  margin-top: auto;
+  padding-top: calc(var(--indent) * 0.7);
 }
 .tour-item-card .more a {
-  display: inline-block;
+  display: inline-flex;
+  align-items: center;
   background-color: var(--color-h2);
   color: #fff;
-  padding: 10px 24px;
-  border-radius: 8px;
+  padding: 11px 26px;
+  border-radius: 999px;
   text-decoration: none;
   font-family: "rockwell";
   font-size: 14px;
-  transition: background-color 0.2s ease;
+  letter-spacing: 0.02em;
+  transition: background-color 0.2s ease, transform 0.2s ease;
 }
 .tour-item-card .more a::after {
   filter: brightness(0) invert(1);
+  transition: filter 0.2s ease;
 }
 .tour-item-card .more a:hover {
   background-color: var(--color-h3);
   color: var(--color-h2);
+  transform: translateX(2px);
 }
 .tour-item-card .more a:hover::after {
   filter: none;
+}
+
+/* Data / dates / price column */
+.tour-item-card .tour-data {
+  display: flex;
+  flex-direction: column;
+  background: linear-gradient(170deg, #fdf6e0 0%, #f8ead0 100%);
+  padding: var(--indent);
+}
+.tour-item-card .available {
+  border-bottom: 2px solid var(--color-h3);
+  padding-bottom: 6px;
+  margin-bottom: 14px;
+  font-size: 13px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  font-family: "rockwell";
+  color: var(--color-h2);
+}
+.tour-item-card .date-chips {
+  gap: 8px;
+}
+.tour-item-card .date-chip {
+  background-color: var(--color-h2);
+  color: #fff;
+  border-radius: 8px;
+  padding: 9px 13px;
+  box-shadow: 0 2px 8px rgba(43, 78, 71, 0.18);
+}
+.tour-item-card .date-chip .date-range {
+  font-weight: 600;
+  font-size: 12.5px;
+}
+.tour-item-card .date-chip .date-year {
+  color: var(--color-h3);
+  opacity: 1;
+  font-weight: 600;
+}
+.tour-item-card .tour-data-price {
+  margin-top: auto;
+  padding-top: 16px;
+  border-top: 1px solid rgba(43, 78, 71, 0.2);
+  font-family: "rockwell";
+  font-size: 17px;
+  font-weight: bold;
+  color: var(--color-h2);
+  text-align: center;
+}
+
+/* Group card — tablet: stack into a single column */
+@media (max-width: 900px) {
+  .tour-item-card {
+    grid-template-columns: 1fr;
+  }
+  .tour-item-card .tour-image-link {
+    min-height: 300px;
+  }
+}
+@media (max-width: 600px) {
+  .tour-item-card .tour-image-link {
+    min-height: 230px;
+  }
 }
 
 /* ══════════════════════════════════════

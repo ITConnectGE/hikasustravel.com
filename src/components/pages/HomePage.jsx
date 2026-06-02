@@ -53,10 +53,19 @@ export default function HomePage() {
             <div className="tour-listing" style={{ background: 'none', maxWidth: '1600px' }}>
               <FadeUp>
                 <div className="tour-item tour-item-card">
-                  <BlurUpBackground
-                    src={groupTour.listingImage || groupTour.heroImage}
-                    className="tour-image"
-                  />
+                  <LocaleLink
+                    to={`/group-tours/${groupTour.slug}`}
+                    className="tour-image-link"
+                    aria-label={tt?.title || groupTour.title}
+                  >
+                    <BlurUpBackground
+                      src={groupTour.listingImage || groupTour.heroImage}
+                      className="tour-image"
+                    >
+                      <div className="tour-image-scrim" aria-hidden="true" />
+                      <span className="tour-image-badge">{t('tour.groupTours')}</span>
+                    </BlurUpBackground>
+                  </LocaleLink>
                   <div className="tour-info">
                     <h2>
                       <LocaleLink to={`/group-tours/${groupTour.slug}`}>{tt?.title || groupTour.title}</LocaleLink>
@@ -84,7 +93,7 @@ export default function HomePage() {
                       </>
                     )}
                     {groupTour.pricePerPerson && (
-                      <div className="tour-data-price">€{groupTour.pricePerPerson}</div>
+                      <div className="tour-data-price">{t('tour.fromPP', { price: groupTour.pricePerPerson })}</div>
                     )}
                   </div>
                 </div>

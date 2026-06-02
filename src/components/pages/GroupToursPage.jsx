@@ -35,10 +35,19 @@ export default function GroupToursPage() {
           return (
             <FadeUp key={tour.slug}>
               <div className="tour-item tour-item-card">
-                <BlurUpBackground
-                  src={tour.listingImage || tour.heroImage}
-                  className="tour-image"
-                />
+                <LocaleLink
+                  to={`/group-tours/${tour.slug}`}
+                  className="tour-image-link"
+                  aria-label={tt?.title || tour.title}
+                >
+                  <BlurUpBackground
+                    src={tour.listingImage || tour.heroImage}
+                    className="tour-image"
+                  >
+                    <div className="tour-image-scrim" aria-hidden="true" />
+                    <span className="tour-image-badge">{t('tour.groupTours')}</span>
+                  </BlurUpBackground>
+                </LocaleLink>
                 <div className="tour-info">
                   <h2>
                     <LocaleLink to={`/group-tours/${tour.slug}`}>{tt?.title || tour.title}</LocaleLink>
@@ -66,7 +75,7 @@ export default function GroupToursPage() {
                     </>
                   )}
                   {tour.pricePerPerson && (
-                    <div className="tour-data-price">€{tour.pricePerPerson}</div>
+                    <div className="tour-data-price">{t('tour.fromPP', { price: tour.pricePerPerson })}</div>
                   )}
                 </div>
               </div>
