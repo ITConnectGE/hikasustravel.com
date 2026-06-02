@@ -243,7 +243,18 @@ export default function TourDetailPage() {
             </section>
           )}
 
-          {/* 4. What's included and not included */}
+          {/* 4. Accommodation */}
+          <AccommodationSection accommodations={tour.accommodations} isGroup={isGroup} />
+
+          {/* 5. Price */}
+          <PriceSection
+            isGroup={isGroup}
+            pricing={tour.pricing}
+            pricePerPerson={tour.pricePerPerson}
+            singleSupplement={tour.singleSupplement}
+          />
+
+          {/* 6. What's included and not included */}
           {(includedItems || notIncludedItems) && (
             <section className="td-section">
               <FadeUp>
@@ -254,17 +265,6 @@ export default function TourDetailPage() {
               </FadeUp>
             </section>
           )}
-
-          {/* 5. Accommodation */}
-          <AccommodationSection accommodations={tour.accommodations} isGroup={isGroup} />
-
-          {/* 6. Price */}
-          <PriceSection
-            isGroup={isGroup}
-            pricing={tour.pricing}
-            pricePerPerson={tour.pricePerPerson}
-            singleSupplement={tour.singleSupplement}
-          />
         </main>
       </div>
 
