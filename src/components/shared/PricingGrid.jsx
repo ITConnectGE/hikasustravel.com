@@ -213,9 +213,34 @@ function PrivateAccommodationsTable({ accommodations }) {
   )
 }
 
-export default function PricingGrid({ accommodations, pricing }) {
+// Accommodation section (id="accommodation"). Group tours use the single-hotel
+// table; private tours use the per-tier table. Same content as before, now in
+// its own section so the navbar can link to it directly.
+export function AccommodationSection({ accommodations, isGroup }) {
+  const t = useT()
+  if (!accommodations || accommodations.length === 0) return null
+
+  return (
+    <section id="accommodation" className="td-section">
+      <FadeUp>
+        <h2 className="td-section__title">{t('pricing.accommodations')}</h2>
+        {isGroup ? (
+          <AccommodationsTable accommodations={accommodations} />
+        ) : (
+          <PrivateAccommodationsTable accommodations={accommodations} />
+        )}
+      </FadeUp>
+    </section>
+  )
+}
+
+// Price section (id="pricing"). Private tours show the per-tier pricing cards;
+// group tours show their fixed per-person price (existing data, unchanged).
+export function PriceSection({ isGroup, pricing, pricePerPerson, singleSupplement }) {
   const t = useT()
   const hasPricing = pricing && pricing.length > 0
+  const hasGroupPrice = isGroup && pricePerPerson
+  if (!hasPricing && !hasGroupPrice) return null
 
   return (
     <section id="pricing" className="td-section">
@@ -225,24 +250,32 @@ export default function PricingGrid({ accommodations, pricing }) {
             <h2 className="td-section__title">{t('pricing.title')}</h2>
           </div>
 
-          {hasPricing && (
-            <div className="td-pricing__block">
+          <div className="td-pricing__block">
+            {hasPricing ? (
               <PricingCards pricing={pricing} />
-              {accommodations && accommodations.length > 0 && (
-                <>
-                  <h3 className="td-pricing__subtitle">{t('pricing.accommodations')}</h3>
-                  <PrivateAccommodationsTable accommodations={accommodations} />
-                </>
-              )}
-            </div>
-          )}
-
-          {!hasPricing && accommodations && accommodations.length > 0 && (
-            <div className="td-pricing__block">
-              <h3 className="td-pricing__subtitle">{t('pricing.accommodations')}</h3>
-              <AccommodationsTable accommodations={accommodations} />
-            </div>
-          )}
+            ) : (
+              <div className="td-price-cards td-price-cards--single">
+                <div className="td-price-card td-price-card--featured">
+                  <h3 className="td-price-card__tier">{t('pricing.pricePerPerson')}</h3>
+                  <div className="td-price-card__price">
+                    <span className="td-price-card__price-value">€{pricePerPerson}</span>
+                    <span className="td-price-card__price-pp">{t('pricing.perPerson')}</span>
+                  </div>
+                  {singleSupplement && (
+                    <div className="td-price-card__breakdown">
+                      <div className="td-price-card__row">
+                        <span>{t('pricing.singleSupplement')}</span>
+                        <span>€{singleSupplement}</span>
+                      </div>
+                    </div>
+                  )}
+                  <a href="#book" onClick={scrollToBook} className="td-price-card__cta">
+                    {t('tour.bookNow')}
+                  </a>
+                </div>
+              </div>
+            )}
+          </div>
         </div>
       </FadeUp>
     </section>

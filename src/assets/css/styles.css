@@ -1995,6 +1995,11 @@ tour-info h2 a,
   gap: 20px;
   margin-top: calc(var(--indent) * 0.5);
 }
+/* Single price card (group tours with one fixed per-person price) */
+.td-price-cards--single {
+  grid-template-columns: minmax(0, 380px);
+  justify-content: center;
+}
 .td-price-card {
   background: #fff;
   border-radius: 16px;

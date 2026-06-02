@@ -4,7 +4,7 @@ import TourDetailHero from '../shared/TourDetailHero'
 import TourSectionNav from '../shared/TourSectionNav'
 import FadeUp from '../shared/FadeUp'
 import Accordion from '../shared/Accordion'
-import PricingGrid, { AccommodationsTable, getStartingPrice } from '../shared/PricingGrid'
+import { AccommodationSection, PriceSection, getStartingPrice } from '../shared/PricingGrid'
 import IncludedNotIncluded from '../shared/IncludedNotIncluded'
 import TourInquiryForm from '../shared/TourInquiryForm'
 import Gallery from '../shared/Gallery'
@@ -76,16 +76,19 @@ export default function TourDetailPage() {
 
   const navSections = useMemo(() => {
     if (!tour) return []
-    const sections = [
-      { id: 'overview', labelKey: 'tour.overview' },
-    ]
-    const tt = tourTranslations?.[tour.slug]
-    const itinerary = tt?.itinerary || tour.itinerary
-    if (itinerary?.length > 0) sections.push({ id: 'itinerary', labelKey: 'tour.itinerary' })
-    if (tour.accommodations || tour.pricing) sections.push({ id: 'pricing', labelKey: 'tour.pricing' })
+    const ttLocal = tourTranslations?.[tour.slug]
+    const itinerary = ttLocal?.itinerary || tour.itinerary
+    const hasPrice = (tour.pricing?.length > 0) || (tour.type === 'group' && tour.pricePerPerson)
+
+    // Order must mirror the on-page section order:
+    // Overview → Gallery → Itinerary → Accommodation → Pricing → Map → Book
+    const sections = [{ id: 'overview', labelKey: 'tour.overview' }]
     if (tour.gallery?.length > 0) sections.push({ id: 'gallery', labelKey: 'tour.gallery' })
-    sections.push({ id: 'book', labelKey: 'tour.book' })
+    if (itinerary?.length > 0) sections.push({ id: 'itinerary', labelKey: 'tour.itinerary' })
+    if (tour.accommodations?.length > 0) sections.push({ id: 'accommodation', labelKey: 'pricing.accommodations' })
+    if (hasPrice) sections.push({ id: 'pricing', labelKey: 'tour.pricing' })
     if (tour.map?.center) sections.push({ id: 'tour-map', labelKey: 'tour.map' })
+    sections.push({ id: 'book', labelKey: 'tour.book' })
     return sections
   }, [tour, tourTranslations])
 
@@ -126,7 +129,7 @@ export default function TourDetailPage() {
 
       <div className="td-layout">
         <main className="td-main">
-          {/* Overview */}
+          {/* 1. Overview */}
           <section id="overview" className="td-section">
             <FadeUp>
               <h2 className="td-section__title">{t('tour.overview')}</h2>
@@ -220,17 +223,27 @@ export default function TourDetailPage() {
             </section>
           )}
 
-          {/* Accommodations Table (group tours) */}
-          {isGroup && tour.accommodations && tour.accommodations.length > 0 && (
-            <section id="pricing" className="td-section">
+          {/* 2. Gallery */}
+          {tour.gallery && tour.gallery.length > 0 && (
+            <section id="gallery" className="td-section">
               <FadeUp>
-                <h3 className="td-pricing__subtitle">{t('pricing.accommodations')}</h3>
-                <AccommodationsTable accommodations={tour.accommodations} />
+                <h2 className="td-section__title">{t('tour.gallery')}</h2>
+                <p className="td-section__subtitle">{t('tour.gallerySubtitle')}</p>
+              </FadeUp>
+              <Gallery images={tour.gallery} />
+            </section>
+          )}
+
+          {/* 3. Itinerary */}
+          {itineraryItems && itineraryItems.length > 0 && (
+            <section id="itinerary" className="td-section">
+              <FadeUp>
+                <Accordion items={itineraryItems} itinerary />
               </FadeUp>
             </section>
           )}
 
-          {/* Included / Not Included */}
+          {/* 4. What's included and not included */}
           {(includedItems || notIncludedItems) && (
             <section className="td-section">
               <FadeUp>
@@ -242,45 +255,20 @@ export default function TourDetailPage() {
             </section>
           )}
 
-          {/* Itinerary */}
-          {itineraryItems && itineraryItems.length > 0 && (
-            <section id="itinerary" className="td-section">
-              <FadeUp>
-                <Accordion items={itineraryItems} itinerary />
-              </FadeUp>
-            </section>
-          )}
+          {/* 5. Accommodation */}
+          <AccommodationSection accommodations={tour.accommodations} isGroup={isGroup} />
 
-          {/* Pricing */}
-          {(tour.pricing?.length > 0 || (!isGroup && tour.accommodations)) && (
-            <PricingGrid
-              accommodations={tour.accommodations}
-              pricing={tour.pricing}
-            />
-          )}
-
-          {/* Gallery */}
-          {tour.gallery && tour.gallery.length > 0 && (
-            <section id="gallery" className="td-section">
-              <FadeUp>
-                <h2 className="td-section__title">{t('tour.gallery')}</h2>
-                <p className="td-section__subtitle">{t('tour.gallerySubtitle')}</p>
-              </FadeUp>
-              <Gallery images={tour.gallery} />
-            </section>
-          )}
-
-          {/* Booking Form */}
-          <section id="book" className="td-section td-book-inline">
-            <FadeUp>
-              <h2 className="td-section__title">{t('tour.bookThisTour')}</h2>
-              <TourInquiryForm tourTitle={tour.tourFormTitle || tour.title} isGroupTour={isGroup} />
-            </FadeUp>
-          </section>
+          {/* 6. Price */}
+          <PriceSection
+            isGroup={isGroup}
+            pricing={tour.pricing}
+            pricePerPerson={tour.pricePerPerson}
+            singleSupplement={tour.singleSupplement}
+          />
         </main>
       </div>
 
-      {/* Map */}
+      {/* 7. Map */}
       {tour.map && tour.map.center && (
         <section id="tour-map" className="td-map-section">
           <div className="td-map-card">
@@ -297,6 +285,17 @@ export default function TourDetailPage() {
         </section>
       )}
 
+      {/* 8. Send inquiry */}
+      <div className="td-layout">
+        <main className="td-main">
+          <section id="book" className="td-section td-book-inline">
+            <FadeUp>
+              <h2 className="td-section__title">{t('tour.bookThisTour')}</h2>
+              <TourInquiryForm tourTitle={tour.tourFormTitle || tour.title} isGroupTour={isGroup} />
+            </FadeUp>
+          </section>
+        </main>
+      </div>
     </>
   )
 }
