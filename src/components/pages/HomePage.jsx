@@ -63,7 +63,6 @@ export default function HomePage() {
                       className="tour-image"
                     >
                       <div className="tour-image-scrim" aria-hidden="true" />
-                      <span className="tour-image-badge">{t('tour.groupTours')}</span>
                     </BlurUpBackground>
                   </LocaleLink>
                   <div className="tour-info">
