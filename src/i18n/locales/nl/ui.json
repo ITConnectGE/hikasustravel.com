@@ -43,6 +43,7 @@
   "tour.available": "Beschikbaar",
   "tour.soldOut": "Uitverkocht",
   "tour.fromPP": "Vanaf €{price} per persoon",
+  "tour.perPerson": "€{price} per persoon",
   "tour.notFound": "Reis niet gevonden",
   "tour.notFoundText": "De reis die je zoekt bestaat niet.",
   "tour.groupTours": "Groepsreizen",

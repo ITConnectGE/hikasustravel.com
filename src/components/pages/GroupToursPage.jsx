@@ -74,7 +74,7 @@ export default function GroupToursPage() {
                     </>
                   )}
                   {tour.pricePerPerson && (
-                    <div className="tour-data-price">{t('tour.fromPP', { price: tour.pricePerPerson })}</div>
+                    <div className="tour-data-price">{t('tour.perPerson', { price: tour.pricePerPerson })}</div>
                   )}
                 </div>
               </div>

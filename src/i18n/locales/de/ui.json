@@ -43,6 +43,7 @@
   "tour.available": "Verfugbar",
   "tour.soldOut": "Ausgebucht",
   "tour.fromPP": "Ab {price} EUR pro Person",
+  "tour.perPerson": "{price} EUR pro Person",
   "tour.notFound": "Tour nicht gefunden",
   "tour.notFoundText": "Die gesuchte Tour existiert nicht.",
   "tour.groupTours": "Gruppenreisen",

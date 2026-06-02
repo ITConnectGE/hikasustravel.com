@@ -92,7 +92,7 @@ export default function HomePage() {
                       </>
                     )}
                     {groupTour.pricePerPerson && (
-                      <div className="tour-data-price">{t('tour.fromPP', { price: groupTour.pricePerPerson })}</div>
+                      <div className="tour-data-price">{t('tour.perPerson', { price: groupTour.pricePerPerson })}</div>
                     )}
                   </div>
                 </div>

@@ -43,6 +43,7 @@
   "tour.available": "Dostupné",
   "tour.soldOut": "Vyprodáno",
   "tour.fromPP": "Od {price} EUR za osobu",
+  "tour.perPerson": "{price} EUR za osobu",
   "tour.notFound": "Zajezd nenalezen",
   "tour.notFoundText": "Zajezd, ktery hledate, neexistuje.",
   "tour.groupTours": "Skupinove zajezdy",
