@@ -8,6 +8,7 @@ import DestinationsPage from './components/pages/DestinationsPage'
 import TbilisiPage from './components/pages/TbilisiPage'
 import AkhaltsikhePage from './components/pages/AkhaltsikhePage'
 import ThingsToDoTbilisiPage from './components/pages/ThingsToDoTbilisiPage'
+import ThingsToDoAkhaltsikhePage from './components/pages/ThingsToDoAkhaltsikhePage'
 import PrivateToursPage from './components/pages/PrivateToursPage'
 import GroupToursPage from './components/pages/GroupToursPage'
 import TourDetailPage from './components/pages/TourDetailPage'
@@ -34,6 +35,7 @@ export default function App() {
           <Route path="destinations/tbilisi" element={<TbilisiPage />} />
           <Route path="destinations/akhaltsikhe" element={<AkhaltsikhePage />} />
           <Route path="things-to-do-in-tbilisi" element={<ThingsToDoTbilisiPage />} />
+          <Route path="things-to-do-in-akhaltsikhe" element={<ThingsToDoAkhaltsikhePage />} />
           <Route path="private-tours" element={<PrivateToursPage />} />
           <Route path="group-tours" element={<GroupToursPage />} />
           <Route path="private-tours/:slug" element={<TourDetailPage />} />
