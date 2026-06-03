@@ -302,15 +302,21 @@ header > * {
   .nav-dropdown:hover .nav-dropdown__toggle {
     border-bottom: 2px solid var(--color-bg);
   }
-  /* Invisible bridge across the gap so the menu stays open while
-     the cursor travels from the toggle down to the items. */
-  .nav-dropdown__menu::before {
+  /* Invisible bridge across the toggle->menu gap. Placed on the
+     container (the menu itself has overflow:hidden, which would clip
+     it) so hover is kept continuous while the cursor moves onto the
+     items. Only active on hover so it adds no phantom hover area. */
+  .nav-dropdown::after {
     content: '';
     position: absolute;
-    top: -10px;
-    left: 0;
-    right: 0;
-    height: 10px;
+    top: 100%;
+    left: -30px;
+    right: -30px;
+    height: 16px;
+    display: none;
+  }
+  .nav-dropdown:hover::after {
+    display: block;
   }
 }
 
