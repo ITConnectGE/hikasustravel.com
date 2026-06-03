@@ -139,6 +139,7 @@ const seoPageMap = {
   'destinations': 'destinations',
   'destinations/tbilisi': 'tbilisi',
   'destinations/akhaltsikhe': 'akhaltsikhe',
+  'destinations/ambrolauri': 'ambrolauri',
   'things-to-do-in-tbilisi': 'thingsToDoTbilisi',
   'things-to-do-in-akhaltsikhe': 'thingsToDoAkhaltsikhe',
   'private-tours': 'privateTours',

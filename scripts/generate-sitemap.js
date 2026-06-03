@@ -24,6 +24,7 @@ const staticPages = [
   { path: 'destinations', changefreq: 'monthly', priority: '0.7' },
   { path: 'destinations/tbilisi', changefreq: 'monthly', priority: '0.7' },
   { path: 'destinations/akhaltsikhe', changefreq: 'monthly', priority: '0.7' },
+  { path: 'destinations/ambrolauri', changefreq: 'monthly', priority: '0.7' },
   { path: 'things-to-do-in-tbilisi', changefreq: 'monthly', priority: '0.7' },
   { path: 'things-to-do-in-akhaltsikhe', changefreq: 'monthly', priority: '0.7' },
   { path: 'private-tours', changefreq: 'weekly', priority: '0.9' },
