@@ -467,14 +467,15 @@ export const tours = [
       "Travel insurance."
     ],
     "gallery": [
-      { "src": "/images/files/Jvari%20Monastery.jpg", "caption": "Jvari Monastery", "description": "6th-century UNESCO-listed monastery above the confluence of the Aragvi and Mtkvari rivers near Mtskheta", "day": "Day 1" },
+      { "src": "/images/files/Tour%20Route%20Map%20Tbilisi%20to%20Batumi.jpg", "caption": "Tour Route Map: Tbilisi to Batumi", "description": "Illustrated route of the 5-day journey from Tbilisi to Batumi via Mtskheta, Gori, Kutaisi and Prometheus Cave" },
+      { "src": "/images/files/Jvari%20Monastery.jpg", "caption": "Jvari Monastery near Mtskheta", "description": "6th-century UNESCO-listed monastery above the confluence of the Aragvi and Mtkvari rivers", "day": "Day 1" },
       { "src": "/images/files/Uplistsikhe%20Cave%20Town.jpg", "caption": "Uplistsikhe Cave Town", "description": "Ancient rock-hewn cave town carved into the cliffs above the Mtkvari River", "day": "Day 1" },
-      { "src": "/images/files/Stalin%20Museum.jpg", "caption": "Stalin Museum in Gori", "description": "Museum in Gori dedicated to the early life of Joseph Stalin", "day": "Day 1" },
-      { "src": "/images/files/Bazaar%20in%20Kutaisi.jpg", "caption": "Kutaisi Green Bazaar", "description": "The lively Green Bazaar in the heart of Kutaisi", "day": "Day 2" },
-      { "src": "/images/files/Prometheus%20Cave.jpg", "caption": "Prometheus Cave", "description": "Vast limestone cave near Kutaisi with stalactites, stalagmites and an underground river", "day": "Day 3" },
-      { "src": "/images/files/Batumi.jpg", "caption": "Batumi", "description": "Lively Black Sea resort city of modern towers and a seaside boulevard", "day": "Day 4" },
-      { "src": "/images/files/Ali%20and%20Nino%20Statue.jpg", "caption": "Ali & Nino Statue, Batumi", "description": "The moving Ali and Nino sculpture on the Batumi waterfront", "day": "Day 4" },
-      { "src": "/images/files/Batumi%20Beach.jpg", "caption": "Batumi Black Sea Coast", "description": "Pebbled Black Sea shoreline along the Batumi coast", "day": "Day 5" }
+      { "src": "/images/files/Stalins%20Train%20Gori.jpg", "caption": "Stalin Museum, Gori", "description": "Joseph Stalin's personal railway carriage at the Stalin Museum in Gori", "day": "Day 1" },
+      { "src": "/images/files/Kutaisi%20Green%20Bazaar.jpg", "caption": "Kutaisi Green Bazaar", "description": "The lively Green Bazaar in the heart of Kutaisi, full of local produce and daily life", "day": "Day 2" },
+      { "src": "/images/files/Prometheus%20Cave%20Interior.jpg", "caption": "Prometheus Cave near Kutaisi", "description": "Vast limestone cave with floodlit stalactites, stalagmites and an underground river", "day": "Day 3" },
+      { "src": "/images/files/Ali%20and%20Nino%20Statue%20Sunset.jpg", "caption": "Ali and Nino Statue, Batumi", "description": "The moving Ali and Nino sculpture on the Batumi seafront at sunset", "day": "Day 4" },
+      { "src": "/images/files/Batumi%20Botanical%20Garden.jpg", "caption": "Batumi Botanical Garden", "description": "Lush hillside gardens overlooking the Black Sea just north of Batumi", "day": "Day 4" },
+      { "src": "/images/files/Batumi%20Black%20Sea%20Coast.jpg", "caption": "Black Sea Coast near Batumi", "description": "The green Adjara coastline meeting the turquoise Black Sea", "day": "Day 5" }
     ],
     "map": {
       "center": [
