@@ -13,10 +13,9 @@ import enPages from '../../i18n/locales/en/pages.json'
 const HERO_IMAGE = '/images/files/tbilisi.jpg'
 const SITE_URL = 'https://www.hikasustravel.com'
 
-// Destination guides surfaced on the hub. Add more cities here over time.
+// Cities surfaced on the hub. Add more cities here over time.
 const DESTINATIONS = [
   { to: '/destinations/tbilisi', image: '/images/files/tbilisi.jpg', labelKey: 'nav.tbilisi' },
-  { to: '/things-to-do-in-tbilisi', image: '/images/files/old-tbilisi.jpg', labelKey: 'nav.thingsToDoTbilisi' },
 ]
 
 export default function DestinationsPage() {
