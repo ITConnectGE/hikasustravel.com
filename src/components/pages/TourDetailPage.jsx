@@ -113,8 +113,10 @@ export default function TourDetailPage() {
     ? (tour.pricePerPerson ? parseFloat(tour.pricePerPerson.replace(/[^0-9.]/g, '')) : null)
     : getStartingPrice(tour.pricing)
 
-  // First 4 included items for overview highlights
-  const highlightItems = includedItems ? includedItems.slice(0, 4) : []
+  // Tour highlights for the overview. Prefer an explicit `highlights` list
+  // (translated or base) when a tour provides one; otherwise fall back to the
+  // first 4 included items so tours without highlights are unchanged.
+  const highlightItems = tt?.highlights || tour.highlights || (includedItems ? includedItems.slice(0, 4) : [])
 
   return (
     <>

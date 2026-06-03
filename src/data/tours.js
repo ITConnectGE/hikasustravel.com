@@ -371,28 +371,42 @@ export const tours = [
     "tileImage": "/images/files/batumi-coastal-tour.jpg",
     "listingImage": "/images/files/batumi-coastal-tour.jpg",
     "days": 5,
-    "description": "Embark on a captivating 5-day journey through Georgia, starting and ending in Tbilisi, the country's vibrant capital.",
+    "description": "This five-day private journey traces Georgia from its historic heartland to the shores of the Black Sea. Setting out from Tbilisi, you visit the hilltop Jvari Monastery and the ancient capital of Mtskheta, walk through the rock-hewn cave town of Uplistsikhe, and stop in Gori on the way to Kutaisi in the country's lush west. From there the route continues to the underground wonder of Prometheus Cave and on to Batumi, the lively city where Georgia meets the sea. With a private guide-driver throughout, the pace stays relaxed and the plan flexible — a balanced introduction to Georgia's landmarks, cave cities, monasteries and Black Sea coast.",
     "listingDescription": "Embark on a captivating 5-day journey through Georgia, starting and ending in Tbilisi, the country's vibrant capital.",
+    "highlights": [
+      "Visit Jvari Monastery overlooking the confluence of the Aragvi and Mtkvari rivers",
+      "Explore Mtskheta and the UNESCO-listed Svetitskhoveli Cathedral",
+      "Discover Uplistsikhe, one of Georgia's oldest cave cities",
+      "Visit the Stalin Museum in Gori",
+      "Experience Kutaisi, including the medieval Gelati Monastery",
+      "Walk through the lively Kutaisi Green Bazaar",
+      "Explore the underground halls of Prometheus Cave",
+      "Travel from inland Georgia to the Black Sea coast",
+      "Relax in the seaside city of Batumi",
+      "Visit the Batumi Botanical Garden",
+      "See the Ali & Nino moving statue and Europe Square",
+      "Take in panoramic views over Batumi and the Black Sea by cable car"
+    ],
     "itinerary": [
       {
         "title": "Day 1: Tbilisi – Jvari – Uplistsikhe – Gori – Kutaisi",
-        "content": "<p>Begin your Georgian adventure with a departure from Tbilisi towards the ancient landmarks of the country. Visit the iconic Jvari Monastery overlooking the confluence of two rivers, explore the fascinating ancient cave town of Uplistsikhe carved into rocky cliffs, and discover Gori with its famous Stalin Museum. Conclude your day in Kutaisi, one of Georgia's oldest cities.</p><ul><li>Departure from Tbilisi;</li><li>Visit Jvari Monastery (UNESCO World Heritage Site);</li><li>Explore Uplistsikhe ancient cave town;</li><li>Visit Stalin Museum in Gori;</li><li>Arrive in Kutaisi and check-in to hotel;</li><li>Overnight stay in Kutaisi.</li><li><strong>Duration of the tour:</strong> 8-9 hours</li><li><strong>Driving duration:</strong> 4 hours</li></ul>"
+        "content": "<p>Your journey begins with a morning pick-up from your hotel in Tbilisi and a drive toward Georgia's ancient heartland. Stop first at the iconic Jvari Monastery, perched above the confluence of the Aragvi and Mtkvari rivers, then continue to Mtskheta to visit the UNESCO-listed Svetitskhoveli Cathedral. Carry on to Gori for the Stalin Museum, and explore Uplistsikhe, one of Georgia's oldest cave towns carved into the cliffs, before arriving in Kutaisi for the night.</p><ul><li>Morning pick-up from your hotel in Tbilisi;</li><li>Visit Jvari Monastery overlooking the Aragvi and Mtkvari rivers;</li><li>Explore Mtskheta and the UNESCO-listed Svetitskhoveli Cathedral;</li><li>Visit the Stalin Museum in Gori;</li><li>Discover the ancient Uplistsikhe cave town;</li><li>Arrive in Kutaisi for an overnight stay.</li><li><strong>Duration of the tour:</strong> 10-11 hours</li><li><strong>Driving duration:</strong> 5 hours</li></ul>"
       },
       {
         "title": "Day 2: Kutaisi – Motsameta – Gelati – Kutaisi",
-        "content": "<p>Discover the spiritual and cultural treasures around Kutaisi today. Visit the mystical Motsameta Monastery perched dramatically above the Tskhaltsitela River, and explore the magnificent Gelati Monastery, a UNESCO World Heritage Site representing the golden age of medieval Georgian culture. Experience the vibrant atmosphere of Kutaisi Green Bazaar.</p><ul><li>Visit Motsameta Monastery;</li><li>Explore Gelati Monastery (UNESCO World Heritage Site);</li><li>Walk through Kutaisi Green Bazaar;</li><li>Free time to explore Kutaisi city center;</li><li>Overnight stay in Kutaisi.</li><li><strong>Duration of the tour:</strong> 6-7 hours</li><li><strong>Driving duration:</strong> 1.5 hours</li></ul>"
+        "content": "<p>Discover the spiritual and cultural treasures around Kutaisi today. Visit the mystical Motsameta Monastery, perched dramatically above the Tskhaltsitela River, and explore the magnificent Gelati Monastery, a UNESCO World Heritage Site representing the golden age of medieval Georgian culture. Afterwards, soak up the colour and energy of the Kutaisi Green Bazaar, with free time to explore the city at your own pace.</p><ul><li>Visit Motsameta Monastery;</li><li>Explore Gelati Monastery (UNESCO World Heritage Site);</li><li>Walk through the Kutaisi Green Bazaar;</li><li>Free time in Kutaisi;</li><li>Overnight stay in Kutaisi.</li><li><strong>Duration of the tour:</strong> 4-5 hours</li><li><strong>Driving duration:</strong> 1 hour</li></ul>"
       },
       {
         "title": "Day 3: Kutaisi – Prometheus Cave – Musicians Park – Batumi",
-        "content": "<p>Journey towards the Black Sea coast today, but first marvel at one of Georgia's natural wonders. Explore the breathtaking Prometheus Cave with its stunning stalactites, stalagmites, and underground rivers. Continue through the scenic landscapes to reach Batumi, stopping at Musicians Park along the way. Arrive in the vibrant coastal city for your seaside adventure.</p><ul><li>Check out from hotel in Kutaisi;</li><li>Visit Prometheus Cave Natural Monument;</li><li>Stop at Musicians Park;</li><li>Scenic drive towards the Black Sea;</li><li>Arrive in Batumi and check-in to hotel;</li><li>Free evening in Batumi.</li><li><strong>Duration of the tour:</strong> 7-8 hours</li><li><strong>Driving duration:</strong> 3 hours</li></ul>"
+        "content": "<p>Today you travel from Kutaisi to the Black Sea coast, beginning with one of Georgia's great natural wonders. Explore the vast underground halls of Prometheus Cave, with its stalactites, stalagmites and underground river — including an optional boat ride when it is operating. Continue west and, if open, stop at the Musicians Park in Shekvetili before reaching Batumi, where the rest of the day is free to enjoy the beach or the seaside boulevard.</p><ul><li>Check out from your hotel in Kutaisi;</li><li>Explore Prometheus Cave and its underground formations, with an optional boat ride if operating;</li><li>Stop at Musicians Park if open (closed on Mondays and Thursdays);</li><li>Scenic drive toward the Black Sea;</li><li>Arrive in Batumi and check in to your hotel;</li><li>Free time by the beach or along the boulevard;</li><li>Overnight stay in Batumi.</li><li><strong>Duration of the tour:</strong> 8-9 hours</li><li><strong>Driving duration:</strong> 3.5 hours</li></ul>"
       },
       {
         "title": "Day 4: Explore Batumi and its vicinities",
-        "content": "<p>Immerse yourself in the unique charm of Batumi today. Explore the beautiful Batumi Botanical Garden with its diverse plant collections, admire the architectural highlights of Europe Square, discover the romantic Piazza Square, and witness the moving Ali and Nino Statue. Enjoy the lush coastal atmosphere and modern attractions of this vibrant Black Sea city.</p><ul><li>Visit Batumi Botanical Garden;</li><li>Explore Europe Square;</li><li>Walk through Piazza Square;</li><li>See the Ali and Nino Statue;</li><li>Free time for seaside relaxation;</li><li>Optional cable car ride for panoramic views;</li><li>Overnight stay in Batumi.</li><li><strong>Duration of the tour:</strong> 6-7 hours</li><li><strong>Driving duration:</strong> 1 hour</li></ul>"
+        "content": "<p>Spend a full day discovering Batumi and its surroundings. Wander the lush Batumi Botanical Garden set above the sea, see the ever-moving Ali and Nino statue on the waterfront, and stroll through Europe Square at the heart of the city. Ride the Argo cable car for sweeping panoramic views over Batumi and the Black Sea, then enjoy a free evening in this vibrant coastal resort.</p><ul><li>Visit the Batumi Botanical Garden;</li><li>See the moving Ali and Nino statue;</li><li>Explore Europe Square;</li><li>Ride the Argo cable car for panoramic views over Batumi and the Black Sea;</li><li>Free evening in Batumi;</li><li>Overnight stay in Batumi.</li><li><strong>Duration of the tour:</strong> 5-6 hours</li><li><strong>Driving duration:</strong> 1 hour</li></ul>"
       },
       {
         "title": "Day 5: Batumi – Tbilisi",
-        "content": "<p>Enjoy your final morning in Batumi, perhaps taking a last stroll along the Black Sea coast or revisiting your favorite spots. Check out from your hotel and begin the scenic journey back to Tbilisi, Georgia's capital. Arrive in Tbilisi where your memorable 5-day Georgian adventure concludes.</p><ul><li>Final morning in Batumi;</li><li>Check out from hotel;</li><li>Scenic drive back to Tbilisi;</li><li>Arrive in Tbilisi;</li><li>Tour concludes in Tbilisi.</li><li><strong>Duration of the tour:</strong> 6-7 hours</li><li><strong>Driving duration:</strong> 5 hours</li></ul>"
+        "content": "<p>After breakfast, check out from your hotel in Batumi and begin the scenic drive back to Tbilisi, with breaks along the way as needed. You arrive in the capital in the late afternoon or evening, where your five-day Georgian journey comes to an end.</p><ul><li>Check out from your hotel in Batumi;</li><li>Scenic drive back to Tbilisi with breaks along the way;</li><li>Arrive in Tbilisi;</li><li>End of the tour.</li><li><strong>Driving duration:</strong> 5 hours</li></ul>"
       }
     ],
     "accommodations": [
@@ -442,10 +456,10 @@ export const tours = [
       }
     ],
     "included": [
-      "Accommodation in double or twin rooms, with breakfast included;",
-      "Transfers as per the itinerary in a comfortable, air-conditioned vehicle, with an English-speaking guide driver;",
-      "Entrance tickets;",
-      "Still water."
+      "Accommodation based on double/twin room sharing, with breakfast included;",
+      "Transfers as per the itinerary;",
+      "All activities and entrance fees as per the itinerary;",
+      "Guide service."
     ],
     "notIncluded": [
       "Full board;",
@@ -453,12 +467,14 @@ export const tours = [
       "Travel insurance."
     ],
     "gallery": [
-      { "src": "/images/files/Jvari%20Monastery.jpg", "caption": "Jvari Monastery", "description": "6th-century UNESCO monastery overlooking Mtskheta", "day": "Day 1" },
-      { "src": "/images/files/Uplistsikhe%20Cave%20Town.jpg", "caption": "Uplistsikhe Cave Town", "description": "Ancient rock-hewn cave town carved into the cliffs", "day": "Day 1" },
-      { "src": "/images/files/Stalin%20Museum.jpg", "caption": "Stalin Museum", "description": "Museum in Gori, the birthplace of Joseph Stalin", "day": "Day 1" },
-      { "src": "/images/files/Bazaar%20in%20Kutaisi.jpg", "caption": "Bazaar in Kutaisi", "description": "Vibrant Green Bazaar in the heart of Kutaisi", "day": "Day 2" },
-      { "src": "/images/files/Prometheus%20Cave.jpg", "caption": "Prometheus Cave", "description": "Stunning cave of stalactites, stalagmites and underground rivers", "day": "Day 3" },
-      { "src": "/images/files/Batumi.jpg", "caption": "Batumi", "description": "Vibrant Black Sea coastal city", "day": "Day 4" }
+      { "src": "/images/files/Jvari%20Monastery.jpg", "caption": "Jvari Monastery", "description": "6th-century UNESCO-listed monastery above the confluence of the Aragvi and Mtkvari rivers near Mtskheta", "day": "Day 1" },
+      { "src": "/images/files/Uplistsikhe%20Cave%20Town.jpg", "caption": "Uplistsikhe Cave Town", "description": "Ancient rock-hewn cave town carved into the cliffs above the Mtkvari River", "day": "Day 1" },
+      { "src": "/images/files/Stalin%20Museum.jpg", "caption": "Stalin Museum in Gori", "description": "Museum in Gori dedicated to the early life of Joseph Stalin", "day": "Day 1" },
+      { "src": "/images/files/Bazaar%20in%20Kutaisi.jpg", "caption": "Kutaisi Green Bazaar", "description": "The lively Green Bazaar in the heart of Kutaisi", "day": "Day 2" },
+      { "src": "/images/files/Prometheus%20Cave.jpg", "caption": "Prometheus Cave", "description": "Vast limestone cave near Kutaisi with stalactites, stalagmites and an underground river", "day": "Day 3" },
+      { "src": "/images/files/Batumi.jpg", "caption": "Batumi", "description": "Lively Black Sea resort city of modern towers and a seaside boulevard", "day": "Day 4" },
+      { "src": "/images/files/Ali%20and%20Nino%20Statue.jpg", "caption": "Ali & Nino Statue, Batumi", "description": "The moving Ali and Nino sculpture on the Batumi waterfront", "day": "Day 4" },
+      { "src": "/images/files/Batumi%20Beach.jpg", "caption": "Batumi Black Sea Coast", "description": "Pebbled Black Sea shoreline along the Batumi coast", "day": "Day 5" }
     ],
     "map": {
       "center": [
@@ -469,11 +485,27 @@ export const tours = [
       "markers": [
         {
           "coordinates": [
+            44.7925,
+            41.7099
+          ],
+          "title": "Tbilisi",
+          "description": "Georgia's vibrant capital and the start and end point of the tour."
+        },
+        {
+          "coordinates": [
             44.7336,
             41.8386
           ],
           "title": "Jvari Monastery",
-          "description": "Historic 6th-century monastery overlooking the confluence of Mtkvari and Aragvi rivers. UNESCO World Heritage Site."
+          "description": "Historic 6th-century monastery overlooking the confluence of the Aragvi and Mtkvari rivers. UNESCO World Heritage Site."
+        },
+        {
+          "coordinates": [
+            44.7194,
+            41.8458
+          ],
+          "title": "Mtskheta",
+          "description": "Georgia's ancient royal capital, home to the UNESCO-listed Svetitskhoveli Cathedral."
         },
         {
           "coordinates": [
@@ -497,7 +529,7 @@ export const tours = [
             42.2679
           ],
           "title": "Kutaisi",
-          "description": "Ancient capital of western Georgia with over 3,000 years of history, home to UNESCO-listed Bagrati Cathedral."
+          "description": "Ancient capital of western Georgia with over 3,000 years of history, home to UNESCO-listed monasteries."
         },
         {
           "coordinates": [
@@ -525,6 +557,14 @@ export const tours = [
         },
         {
           "coordinates": [
+            41.7721,
+            41.9388
+          ],
+          "title": "Musicians Park",
+          "description": "Park of interactive musician sculptures in Shekvetili, a scenic stop on the Black Sea coast en route to Batumi."
+        },
+        {
+          "coordinates": [
             41.6367,
             41.6168
           ],
@@ -534,8 +574,16 @@ export const tours = [
       ],
       "routeCoordinates": [
         [
+          44.7925,
+          41.7099
+        ],
+        [
           44.7336,
           41.8386
+        ],
+        [
+          44.7194,
+          41.8458
         ],
         [
           44.2059,
@@ -562,12 +610,16 @@ export const tours = [
           42.3733
         ],
         [
+          41.7721,
+          41.9388
+        ],
+        [
           41.6367,
           41.6168
         ],
         [
-          44.7336,
-          41.8386
+          44.7925,
+          41.7099
         ]
       ]
     },
