@@ -142,6 +142,7 @@ const seoPageMap = {
   'destinations/ambrolauri': 'ambrolauri',
   'things-to-do-in-tbilisi': 'thingsToDoTbilisi',
   'things-to-do-in-akhaltsikhe': 'thingsToDoAkhaltsikhe',
+  'things-to-do-in-ambrolauri': 'thingsToDoAmbrolauri',
   'private-tours': 'privateTours',
   'group-tours': 'groupTours',
   'shuttle-service': 'shuttle',
