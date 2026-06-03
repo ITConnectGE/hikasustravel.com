@@ -13,6 +13,7 @@ export const navLinks = [
       { to: '/destinations', labelKey: 'nav.allDestinations' },
       { to: '/destinations/tbilisi', labelKey: 'nav.tbilisi' },
       { to: '/destinations/akhaltsikhe', labelKey: 'nav.akhaltsikhe' },
+      { to: '/destinations/ambrolauri', labelKey: 'nav.ambrolauri' },
     ],
   },
   { to: '/about-georgia', labelKey: 'nav.aboutGeorgia' },

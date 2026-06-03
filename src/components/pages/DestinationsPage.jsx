@@ -17,6 +17,7 @@ const SITE_URL = 'https://www.hikasustravel.com'
 const DESTINATIONS = [
   { to: '/destinations/tbilisi', image: '/images/files/tbilisi.jpg', labelKey: 'nav.tbilisi' },
   { to: '/destinations/akhaltsikhe', image: '/images/files/georgia-home.jpg', labelKey: 'nav.akhaltsikhe' },
+  { to: '/destinations/ambrolauri', image: '/images/files/georgia-home.jpg', labelKey: 'nav.ambrolauri' },
 ]
 
 export default function DestinationsPage() {
