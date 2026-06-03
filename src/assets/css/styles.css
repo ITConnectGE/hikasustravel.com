@@ -295,11 +295,22 @@ header > * {
 }
 /* Desktop: open on hover as well as click */
 @media (min-width: 901px) {
-  .nav-dropdown:hover .nav-dropdown__menu {
+  .nav-dropdown:hover .nav-dropdown__menu,
+  .nav-dropdown:focus-within .nav-dropdown__menu {
     display: flex;
   }
   .nav-dropdown:hover .nav-dropdown__toggle {
     border-bottom: 2px solid var(--color-bg);
+  }
+  /* Invisible bridge across the gap so the menu stays open while
+     the cursor travels from the toggle down to the items. */
+  .nav-dropdown__menu::before {
+    content: '';
+    position: absolute;
+    top: -10px;
+    left: 0;
+    right: 0;
+    height: 10px;
   }
 }
 
