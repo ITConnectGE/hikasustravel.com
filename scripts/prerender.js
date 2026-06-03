@@ -137,6 +137,7 @@ const seoPageMap = {
   'about-us': 'aboutUs',
   'about-georgia': 'aboutGeorgia',
   'destinations/tbilisi': 'tbilisi',
+  'things-to-do-in-tbilisi': 'thingsToDoTbilisi',
   'private-tours': 'privateTours',
   'group-tours': 'groupTours',
   'shuttle-service': 'shuttle',

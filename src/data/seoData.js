@@ -29,6 +29,9 @@ const seo = {
   tbilisi: {
     en: { title: 'Tbilisi, Georgia: Things to Do, Tips & Day Trips', description: 'Tbilisi is the capital of Georgia in the South Caucasus. What to see, how many days you need, best time to visit, and easy day trips from the city.', keywords: 'Tbilisi, Tbilisi Georgia, things to do in Tbilisi, Tbilisi travel guide, visit Tbilisi, Old Town Tbilisi, Narikala Fortress, sulfur baths Tbilisi, day trips from Tbilisi, best time to visit Tbilisi, Tbilisi itinerary' },
   },
+  thingsToDoTbilisi: {
+    en: { title: 'Things to Do in Tbilisi, Georgia: A Local Guide', description: 'The best things to do in Tbilisi, capital of Georgia: the Old Town, sulfur baths, Narikala Fortress, museums, food and wine — with local tips and timing.', keywords: 'things to do in Tbilisi, what to do in Tbilisi, Tbilisi attractions, Tbilisi Old Town, Abanotubani sulfur baths, Narikala Fortress, Sameba Cathedral, Georgian National Museum, Tbilisi food, Tbilisi wine bars, Tbilisi sightseeing, Tbilisi itinerary' },
+  },
   privateTours: {
     en: { title: 'Private Tours in Georgia | Hikasus Travel', description: 'Browse our collection of private tours across Georgia. Customizable itineraries from 5 to 20 days covering Tbilisi, Kazbegi, Svaneti, Batumi and more.', keywords: 'private tours Georgia, custom tours Georgia, personalized itinerary Georgia, Tbilisi private tour, Kazbegi tour, Svaneti tour, Batumi tour, tailor-made tours Georgia, luxury tours Georgia' },
     es: { title: 'Tours Privados en Georgia | Hikasus Travel', description: 'Explore nuestra colección de tours privados por Georgia. Itinerarios personalizables de 5 a 20 días.', keywords: 'tours privados Georgia, tours personalizados Georgia, itinerario Georgia, tour Tbilisi, tour Kazbegi, tour Svaneti, tour Batumi' },

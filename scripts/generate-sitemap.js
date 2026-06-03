@@ -22,6 +22,7 @@ const staticPages = [
   { path: 'about-us', changefreq: 'monthly', priority: '0.7' },
   { path: 'about-georgia', changefreq: 'monthly', priority: '0.7' },
   { path: 'destinations/tbilisi', changefreq: 'monthly', priority: '0.7' },
+  { path: 'things-to-do-in-tbilisi', changefreq: 'monthly', priority: '0.7' },
   { path: 'private-tours', changefreq: 'weekly', priority: '0.9' },
   { path: 'group-tours', changefreq: 'weekly', priority: '0.9' },
   { path: 'shuttle-service', changefreq: 'monthly', priority: '0.8' },
