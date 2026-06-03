@@ -98,11 +98,13 @@
   "form.salutationMx": "Mx",
   "form.salutationNone": "—",
   "form.accommodation": "Tipo de alojamiento",
-  "form.whatsapp": "Teléfono / WhatsApp",  "form.contactSuccess": "¡Gracias por contactarnos!",
+  "form.whatsapp": "Teléfono / WhatsApp",
+  "form.contactSuccess": "¡Gracias por contactarnos!",
   "form.contactSuccessText": "Hemos recibido tu mensaje y te responderemos en breve.",
   "form.errors.message": "El mensaje es obligatorio",
   "form.errors.firstName": "El nombre es obligatorio",
-  "form.errors.lastName": "El apellido es obligatorio",  "contact.formTitle": "Envíanos un mensaje",
+  "form.errors.lastName": "El apellido es obligatorio",
+  "contact.formTitle": "Envíanos un mensaje",
   "home.contactTitle": "Ponte en contacto",
   "shuttle.title": "Servicio de Traslado",
   "shuttle.description": "Hikasus Travel ofrece traslados privados desde cualquier ciudad de Georgia, proporcionando transporte seguro y comodo en sedanes, minivans, minibuses y vehiculos mas grandes. Ya sea que viajes de Tiflis a Batumi, Erevan (Armenia), Kutaisi, Kazbegi o cualquier otro destino, o simplemente de regreso, nuestros conductores profesionales garantizan un viaje fluido y sin complicaciones. Ideal para viajeros solos, familias y grupos, nuestros servicios de traslado son comodos, puntuales y con precios competitivos. Reserva tu traslado hoy y explora Georgia con facilidad!",
@@ -191,5 +193,10 @@
   "blog.article1.title": "La Guia Definitiva para Viajar a Georgia",
   "hotel.amenities": "Servicios",
   "hotel.location": "Destacados de la ubicacion",
-  "hotel.close": "Cerrar"
+  "hotel.close": "Cerrar",
+  "nav.tours": "Tours",
+  "nav.destinations": "Destinos",
+  "nav.allDestinations": "Todos los Destinos",
+  "nav.tbilisi": "Tbilisi",
+  "nav.thingsToDoTbilisi": "Qué hacer en Tbilisi"
 }

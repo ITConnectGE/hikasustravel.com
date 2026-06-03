@@ -1,7 +1,20 @@
 export const navLinks = [
   { to: '/about-us', labelKey: 'nav.aboutUs' },
-  { to: '/group-tours', labelKey: 'nav.groupTours' },
-  { to: '/private-tours', labelKey: 'nav.privateTours' },
+  {
+    labelKey: 'nav.tours',
+    children: [
+      { to: '/group-tours', labelKey: 'nav.groupTours' },
+      { to: '/private-tours', labelKey: 'nav.privateTours' },
+    ],
+  },
+  {
+    labelKey: 'nav.destinations',
+    children: [
+      { to: '/destinations', labelKey: 'nav.allDestinations' },
+      { to: '/destinations/tbilisi', labelKey: 'nav.tbilisi' },
+      { to: '/things-to-do-in-tbilisi', labelKey: 'nav.thingsToDoTbilisi' },
+    ],
+  },
   { to: '/about-georgia', labelKey: 'nav.aboutGeorgia' },
   { to: '/shuttle-service', labelKey: 'nav.shuttleService' },
   { to: '/contact', labelKey: 'nav.contactUs' },

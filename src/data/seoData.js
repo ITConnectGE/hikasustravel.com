@@ -26,6 +26,9 @@ const seo = {
     cs: { title: 'O Gruzii – Kultura, Historie a Cestovní Informace | Hikasus Travel', description: 'Objevte Gruzii: zemi starověké historie, úchvatných krajin, prvotřídního vína a vřelé pohostinnosti.', keywords: 'Gruzie země, gruzínská kultura, historie Gruzie, navštívit Gruzii, gruzínská kuchyně, gruzínské víno, Kavkaz, Tbilisi, Batumi' },
     nl: { title: 'Over Georgië – Cultuur, Geschiedenis & Reisinformatie | Hikasus Travel', description: 'Ontdek Georgië: een land van oude geschiedenis, adembenemende landschappen, wereldklasse wijn en warme gastvrijheid.', keywords: 'Georgië land, Georgische cultuur, geschiedenis Georgië, Georgië bezoeken, Georgisch eten, Georgische wijn, Kaukasus gebergte, Tbilisi, Batumi' },
   },
+  destinations: {
+    en: { title: 'Destinations in Georgia | Hikasus Travel', description: 'Explore destinations across Georgia — city guides, things to do, and travel tips, starting with the capital, Tbilisi.', keywords: 'Georgia destinations, places to visit in Georgia, Georgia travel guides, Tbilisi, Georgia city guides, where to go in Georgia' },
+  },
   tbilisi: {
     en: { title: 'Tbilisi, Georgia: Things to Do, Tips & Day Trips', description: 'Tbilisi is the capital of Georgia in the South Caucasus. What to see, how many days you need, best time to visit, and easy day trips from the city.', keywords: 'Tbilisi, Tbilisi Georgia, things to do in Tbilisi, Tbilisi travel guide, visit Tbilisi, Old Town Tbilisi, Narikala Fortress, sulfur baths Tbilisi, day trips from Tbilisi, best time to visit Tbilisi, Tbilisi itinerary' },
   },

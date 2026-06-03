@@ -70,5 +70,9 @@
         "content": "<p>Spring (April–June) and autumn (September–October), when temperatures are around 15–25°C. Summers can exceed 35°C; winters are mild and quieter.</p>"
       }
     ]
+  },
+  "destinations": {
+    "heroTitle": "Destinations in Georgia",
+    "intro": "Georgia packs an enormous amount into a small country — a walkable capital, ancient wine regions, Black Sea beaches, and high Caucasus mountains. Our destination guides break it down city by city, with what to see, how long to stay, and honest local tips. We are starting with the capital, Tbilisi, and adding more over time."
   }
 }

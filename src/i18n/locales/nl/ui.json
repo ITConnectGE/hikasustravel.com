@@ -98,11 +98,13 @@
   "form.salutationMx": "Mx",
   "form.salutationNone": "—",
   "form.accommodation": "Type accommodatie",
-  "form.whatsapp": "Telefoon / WhatsApp",  "form.contactSuccess": "Bedankt voor je bericht!",
+  "form.whatsapp": "Telefoon / WhatsApp",
+  "form.contactSuccess": "Bedankt voor je bericht!",
   "form.contactSuccessText": "We hebben je bericht ontvangen en nemen spoedig contact op.",
   "form.errors.message": "Bericht is verplicht",
   "form.errors.firstName": "Voornaam is verplicht",
-  "form.errors.lastName": "Achternaam is verplicht",  "contact.formTitle": "Stuur ons een bericht",
+  "form.errors.lastName": "Achternaam is verplicht",
+  "contact.formTitle": "Stuur ons een bericht",
   "home.contactTitle": "Neem contact op",
   "shuttle.title": "Shuttledienst",
   "shuttle.description": "Hikasus Travel biedt privétransfers aan vanuit elke stad in Georgië, met veilig en comfortabel vervoer in sedans, minivans, minibussen en grotere voertuigen. Of je nu reist van Tbilisi naar Batumi, Jerevan (Armenië), Kutaisi, Kazbegi of een andere bestemming – of gewoon de terugweg – onze professionele chauffeurs zorgen voor een soepele en zorgeloze rit. Ideaal voor individuele reizigers, gezinnen en groepen, onze transferdiensten zijn comfortabel, stipt en scherp geprijsd. Boek vandaag nog je transfer en ontdek Georgië met gemak!",
@@ -191,5 +193,10 @@
   "blog.article1.title": "De Ultieme Reisgids voor Georgie",
   "hotel.amenities": "Voorzieningen",
   "hotel.location": "Locatiehoogtepunten",
-  "hotel.close": "Sluiten"
+  "hotel.close": "Sluiten",
+  "nav.tours": "Reizen",
+  "nav.destinations": "Bestemmingen",
+  "nav.allDestinations": "Alle bestemmingen",
+  "nav.tbilisi": "Tbilisi",
+  "nav.thingsToDoTbilisi": "Wat te doen in Tbilisi"
 }

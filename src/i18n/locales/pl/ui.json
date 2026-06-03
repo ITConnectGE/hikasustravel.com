@@ -98,11 +98,13 @@
   "form.salutationMx": "Mx",
   "form.salutationNone": "—",
   "form.accommodation": "Rodzaj zakwaterowania",
-  "form.whatsapp": "Telefon / WhatsApp",  "form.contactSuccess": "Dziękujemy za kontakt!",
+  "form.whatsapp": "Telefon / WhatsApp",
+  "form.contactSuccess": "Dziękujemy za kontakt!",
   "form.contactSuccessText": "Otrzymaliśmy Twoją wiadomość i wkrótce odpowiemy.",
   "form.errors.message": "Wiadomość jest wymagana",
   "form.errors.firstName": "Imię jest wymagane",
-  "form.errors.lastName": "Nazwisko jest wymagane",  "contact.formTitle": "Wyślij nam wiadomość",
+  "form.errors.lastName": "Nazwisko jest wymagane",
+  "contact.formTitle": "Wyślij nam wiadomość",
   "home.contactTitle": "Skontaktuj się z nami",
   "shuttle.title": "Shuttle Service",
   "shuttle.description": "Hikasus Travel oferuje prywatne transfery z dowolnego miasta w Gruzji, zapewniając bezpieczny i wygodny transport sedanami, minivanami, minibusami oraz większymi pojazdami. Niezależnie od tego, czy podróżujesz z Tbilisi do Batumi, Erywania (Armenia), Kutaisi, Kazbegi, czy do jakiegokolwiek innego celu – lub po prostu z powrotem – nasi profesjonalni kierowcy zapewnią Ci komfortową i bezproblemową podróż. Idealne rozwiązanie dla osób podróżujących samodzielnie, rodzin i grup – nasze usługi transferowe są wygodne, punktualne i konkurencyjne cenowo. Zarezerwuj swój transfer już dziś i odkrywaj Gruzję bez wysiłku!",
@@ -191,5 +193,10 @@
   "blog.article1.title": "Kompletny Przewodnik po Podrozy do Gruzji",
   "hotel.amenities": "Udogodnienia",
   "hotel.location": "Atuty lokalizacji",
-  "hotel.close": "Zamknij"
+  "hotel.close": "Zamknij",
+  "nav.tours": "Wycieczki",
+  "nav.destinations": "Kierunki",
+  "nav.allDestinations": "Wszystkie kierunki",
+  "nav.tbilisi": "Tbilisi",
+  "nav.thingsToDoTbilisi": "Co robić w Tbilisi"
 }
