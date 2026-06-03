@@ -39,8 +39,17 @@ function NavDropdown({ item, t, lang, pathname }) {
 
   const label = t(item.labelKey)
 
+  // Desktop: close when the cursor leaves the whole dropdown area. Also drop focus
+  // so :focus-within (kept open after a click) releases. mouseleave does not fire on
+  // touch, so mobile tap behaviour and keyboard tabbing are unaffected.
+  const handleMouseLeave = () => {
+    setOpen(false)
+    const el = ref.current
+    if (el && el.contains(document.activeElement)) document.activeElement.blur()
+  }
+
   return (
-    <span className={`nav-dropdown${open ? ' open' : ''}`} ref={ref}>
+    <span className={`nav-dropdown${open ? ' open' : ''}`} ref={ref} onMouseLeave={handleMouseLeave}>
       <button
         type="button"
         className="nav-dropdown__toggle"
