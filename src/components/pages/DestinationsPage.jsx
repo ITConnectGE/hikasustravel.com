@@ -16,6 +16,7 @@ const SITE_URL = 'https://www.hikasustravel.com'
 // Cities surfaced on the hub. Add more cities here over time.
 const DESTINATIONS = [
   { to: '/destinations/tbilisi', image: '/images/files/tbilisi.jpg', labelKey: 'nav.tbilisi' },
+  { to: '/destinations/akhaltsikhe', image: '/images/files/georgia-home.jpg', labelKey: 'nav.akhaltsikhe' },
 ]
 
 export default function DestinationsPage() {

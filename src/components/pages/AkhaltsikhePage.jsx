@@ -1,4 +1,5 @@
-import { useContext, useMemo } from 'react'
+import { useContext, useMemo, useRef, useEffect } from 'react'
+import { useNavigate } from 'react-router-dom'
 import HeroSection from '../shared/HeroSection'
 import FadeUp from '../shared/FadeUp'
 import Accordion from '../shared/Accordion'
@@ -15,10 +16,26 @@ const SITE_URL = 'https://www.hikasustravel.com'
 export default function AkhaltsikhePage() {
   const { pages } = useContext(I18nContext)
   const { lang } = useLang()
+  const navigate = useNavigate()
+  const contentRef = useRef(null)
   // Fall back to English content until per-language translations are added.
   const page = pages.akhaltsikhe || enPages.akhaltsikhe
   const seo = getSEO('akhaltsikhe', lang)
   const faqItems = useMemo(() => page.faq || [], [page])
+
+  // Intercept in-content internal links (data-internal) for same-tab SPA navigation.
+  useEffect(() => {
+    const el = contentRef.current
+    if (!el) return
+    const onClick = (e) => {
+      const link = e.target.closest('a[data-internal]')
+      if (!link || !el.contains(link)) return
+      e.preventDefault()
+      navigate(`/${lang}${link.getAttribute('data-internal')}`)
+    }
+    el.addEventListener('click', onClick)
+    return () => el.removeEventListener('click', onClick)
+  }, [lang, navigate])
 
   const jsonLd = useMemo(() => {
     const url = `${SITE_URL}/${lang}/destinations/akhaltsikhe`
@@ -79,7 +96,7 @@ export default function AkhaltsikhePage() {
       <HeroSection image={HERO_IMAGE} title={page.heroTitle} />
       <section className="page-items about-georgia">
         <FadeUp>
-          <div dangerouslySetInnerHTML={{ __html: page.content }} />
+          <div ref={contentRef} dangerouslySetInnerHTML={{ __html: page.content }} />
         </FadeUp>
       </section>
       {faqItems.length > 0 && (

@@ -12,6 +12,7 @@ export const navLinks = [
     children: [
       { to: '/destinations', labelKey: 'nav.allDestinations' },
       { to: '/destinations/tbilisi', labelKey: 'nav.tbilisi' },
+      { to: '/destinations/akhaltsikhe', labelKey: 'nav.akhaltsikhe' },
     ],
   },
   { to: '/about-georgia', labelKey: 'nav.aboutGeorgia' },
