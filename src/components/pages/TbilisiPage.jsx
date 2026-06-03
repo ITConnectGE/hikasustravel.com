@@ -8,7 +8,7 @@ import useSEO from '../../hooks/useSEO'
 import { getSEO } from '../../data/seoData'
 import enPages from '../../i18n/locales/en/pages.json'
 
-const HERO_IMAGE = '/images/files/sulfur-baths-wine-tour.jpg'
+const HERO_IMAGE = '/images/files/tbilisi.jpg'
 const SITE_URL = 'https://www.hikasustravel.com'
 
 export default function TbilisiPage() {
