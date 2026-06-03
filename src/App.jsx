@@ -6,6 +6,7 @@ import AboutUsPage from './components/pages/AboutUsPage'
 import AboutGeorgiaPage from './components/pages/AboutGeorgiaPage'
 import DestinationsPage from './components/pages/DestinationsPage'
 import TbilisiPage from './components/pages/TbilisiPage'
+import AkhaltsikhePage from './components/pages/AkhaltsikhePage'
 import ThingsToDoTbilisiPage from './components/pages/ThingsToDoTbilisiPage'
 import PrivateToursPage from './components/pages/PrivateToursPage'
 import GroupToursPage from './components/pages/GroupToursPage'
@@ -31,6 +32,7 @@ export default function App() {
           <Route path="about-georgia" element={<AboutGeorgiaPage />} />
           <Route path="destinations" element={<DestinationsPage />} />
           <Route path="destinations/tbilisi" element={<TbilisiPage />} />
+          <Route path="destinations/akhaltsikhe" element={<AkhaltsikhePage />} />
           <Route path="things-to-do-in-tbilisi" element={<ThingsToDoTbilisiPage />} />
           <Route path="private-tours" element={<PrivateToursPage />} />
           <Route path="group-tours" element={<GroupToursPage />} />
