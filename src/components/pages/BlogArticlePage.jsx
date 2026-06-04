@@ -1,6 +1,7 @@
 import { useMemo } from 'react'
 import { useParams } from 'react-router-dom'
 import HeroSection from '../shared/HeroSection'
+import Accordion from '../shared/Accordion'
 import LocaleLink from '../../i18n/LocaleLink'
 import useT from '../../i18n/useT'
 import useLang from '../../i18n/useLang'
@@ -35,20 +36,53 @@ export default function BlogArticlePage() {
   const heroTitle = tf(t, 'blog.heroTitle', 'Travel Blog')
   const readTimeTemplate = tf(t, 'blog.readTime', '{min} min read')
 
-  const jsonLd = useMemo(() => article ? {
-    '@context': 'https://schema.org',
-    '@type': 'BlogPosting',
-    headline: article.title,
-    description: article.excerpt,
-    author: { '@type': 'Organization', name: article.author },
-    datePublished: article.date,
-    image: `https://www.hikasustravel.com${article.heroImage}`,
-    publisher: {
-      '@type': 'Organization',
-      name: 'Hikasus Travel',
-      url: 'https://www.hikasustravel.com',
-    },
-  } : null, [article])
+  const jsonLd = useMemo(() => {
+    if (!article) return null
+    const url = `https://www.hikasustravel.com/${lang}/blog/${slug}`
+    const graph = [
+      {
+        '@type': 'BlogPosting',
+        headline: article.title,
+        description: article.excerpt,
+        author: { '@type': 'Organization', name: article.author },
+        datePublished: article.date,
+        image: `https://www.hikasustravel.com${article.heroImage}`,
+        mainEntityOfPage: url,
+        inLanguage: lang,
+        publisher: {
+          '@type': 'Organization',
+          name: 'Hikasus Travel',
+          url: 'https://www.hikasustravel.com',
+        },
+      },
+      {
+        '@type': 'BreadcrumbList',
+        itemListElement: [
+          { '@type': 'ListItem', position: 1, name: 'Home', item: `https://www.hikasustravel.com/${lang}` },
+          { '@type': 'ListItem', position: 2, name: 'Blog', item: `https://www.hikasustravel.com/${lang}/blog` },
+          { '@type': 'ListItem', position: 3, name: article.title, item: url },
+        ],
+      },
+    ]
+    if (article.phrases?.length > 0) {
+      graph.push({
+        '@type': 'ItemList',
+        name: article.title,
+        itemListElement: article.phrases.map((p, i) => ({ '@type': 'ListItem', position: i + 1, name: p })),
+      })
+    }
+    if (article.faq?.length > 0) {
+      graph.push({
+        '@type': 'FAQPage',
+        mainEntity: article.faq.map((f) => ({
+          '@type': 'Question',
+          name: f.title,
+          acceptedAnswer: { '@type': 'Answer', text: f.content },
+        })),
+      })
+    }
+    return { '@context': 'https://schema.org', '@graph': graph }
+  }, [article, lang, slug])
 
   const articleKeywords = useMemo(() => {
     if (!article?.tags?.length) return undefined
@@ -59,8 +93,8 @@ export default function BlogArticlePage() {
   }, [article])
 
   useSEO(article ? {
-    title: `${article.title} | Hikasus Travel Blog`,
-    description: article.excerpt,
+    title: article.seoTitle || `${article.title} | Hikasus Travel Blog`,
+    description: article.metaDescription || article.excerpt,
     keywords: articleKeywords,
     lang,
     path: `blog/${slug}`,
@@ -106,6 +140,12 @@ export default function BlogArticlePage() {
         </div>
 
         <div className="blog-article__content" dangerouslySetInnerHTML={{ __html: article.content }} />
+
+        {article.faq?.length > 0 && (
+          <div className="blog-article__faq">
+            <Accordion items={article.faq} headingKey="faq.heroTitle" />
+          </div>
+        )}
 
         <div className="blog-article__tags">
           {article.tags.map(tag => (

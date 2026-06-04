@@ -308,6 +308,74 @@ export const blogArticles = [
 <p><em>Need help planning your Georgia trip? We organize private and group tours, airport shuttles, and custom itineraries — everything designed by locals who know this country inside and out.</em></p>
 `,
   },
+  {
+    "slug": "essential-georgian-words-phrases",
+    "titleKey": "blog.article2.title",
+    "title": "25 Essential Georgian Words and Phrases for Travelers",
+    "seoTitle": "25 Essential Georgian Words & Phrases for Travelers",
+    "excerpt": "Learn 25 essential Georgian words and phrases — hello, thank you, cheers, and more — with simple pronunciation, for travelers to Georgia (the country).",
+    "metaDescription": "Learn 25 essential Georgian words and phrases — hello, thank you, cheers, and more — with simple pronunciation, for travelers to Georgia (the country).",
+    "author": "Hikasus Travel",
+    "date": "2026-06-04",
+    "readTime": 8,
+    "heroImage": "/images/files/sulfur-baths-wine-tour.jpg",
+    "thumbnail": "/images/files/about-georgia.jpg",
+    "tags": [
+      "language",
+      "culture",
+      "travel-tips"
+    ],
+    "phrases": [
+      "Gamarjoba",
+      "Madloba",
+      "Getakva",
+      "Ki / Ara",
+      "Nakhvamdis",
+      "Bodishi",
+      "Gaumarjos",
+      "Gvino",
+      "Gemrielia",
+      "Angarishi, tu sheidzleba",
+      "Tskali",
+      "Puri",
+      "Shemomechama",
+      "Sad aris…?",
+      "Tualeti",
+      "Ra girs?",
+      "Dzviria",
+      "Maghazia",
+      "Gacheret",
+      "Inglisuri itsit?",
+      "Ver mivkhvdi",
+      "Me mkvia…",
+      "Sasiamovnoa",
+      "Rogor khar?",
+      "Kargad"
+    ],
+    "faq": [
+      {
+        "title": "How do you say hello in Georgian?",
+        "content": "<p>\"Hello\" is gamarjoba (ga-mar-jo-ba), the standard greeting for almost any encounter. Its literal meaning is \"victory.\" It's the single most useful word to learn and is never wrong to use.</p>"
+      },
+      {
+        "title": "What are the most important Georgian phrases for tourists?",
+        "content": "<p>Start with gamarjoba (hello), madloba (thank you), ki / ara (yes / no), gaumarjos (cheers), and ra girs? (how much is it?). These cover greetings, courtesy, toasts, and shopping — the situations travelers meet most often.</p>"
+      },
+      {
+        "title": "How do you say cheers in Georgian?",
+        "content": "<p>Gaumarjos! (gau-mar-jos). It's used at every toast, from a casual dinner to a full traditional supra, and is the response everyone gives in unison with glasses raised. Using it marks you as a participant at the Georgian table rather than a bystander.</p>"
+      },
+      {
+        "title": "Is Georgian hard to learn for travelers?",
+        "content": "<p>The language is genuinely difficult — a unique alphabet, complex consonant clusters, and unfamiliar grammar — but you don't need fluency. A handful of words said with a reasonable approximation and goodwill is warmly received, so a small effort goes a long way.</p>"
+      },
+      {
+        "title": "Do people in Georgia speak English?",
+        "content": "<p>Increasingly yes, especially younger people and in tourist areas, but it isn't the default. Opening with inglisuri itsit? (\"do you speak English?\") is a more respectful start than assuming comprehension, and learning a few Georgian words is appreciated regardless of the answer.</p>"
+      }
+    ],
+    "content": "<p>In Georgia — the country in the South Caucasus — the effort to speak even a few words of the local language is met with a warmth out of all proportion to the linguistic achievement involved. Georgian isn't an easy language for speakers of European languages: the alphabet is unique, the consonant clusters are unlike anything in English, and the grammar runs on principles with no familiar equivalent. None of that matters for the traveler. A handful of words pronounced with reasonable approximation and goodwill will open doors, raise smiles, and turn interactions that might otherwise stay transactional into something more human. These 25 phrases cover the situations you'll actually encounter, from the first greeting at a guesthouse to the last toast at a supra.</p>\n\n<h2>What are the most useful Georgian phrases for travelers?</h2>\n<p>If you learn only a few, make them gamarjoba (hello), madloba (thank you), ki and ara (yes and no), and gaumarjos (cheers) — the words you'll use daily, at every shop, meal, and toast. The full list below adds dining, navigation, shopping, and social phrases. You don't need perfect pronunciation; an honest attempt is received far more warmly than silence.</p>\n\n<h3>The basics of politeness</h3>\n\n<h4>1. Gamarjoba (ga-mar-jo-ba) — Hello</h4>\n<p>The word you'll use more than any other — entering a shop, meeting your guide, passing a village elder on a mountain path. Its literal meaning is \"victory,\" a reminder that Georgian greetings carry a historical weight the casual English \"hi\" does not. Use it freely; it's never wrong.</p>\n\n<h4>2. Madloba (mad-lo-ba) — Thank you</h4>\n<p>The essential courtesy word, used after every transaction, meal, and act of help. For emphasis, didi madloba (dee-dee mad-lo-ba) means \"thank you very much,\" appropriate when someone has gone out of their way for you — which in Georgia happens regularly.</p>\n\n<h4>3. Getakva (ge-ta-kva) — Please</h4>\n<p>[NEEDS: confirm the word for \"please\" — \"getakva\" doesn't match entry #10, which uses \"tu sheidzleba\" for please; standard forms are usually gtkhovt (გთხოვთ) or tu sheidzleba (თუ შეიძლება). Please set the correct word and pronunciation.]</p>\n<p>The polite qualifier for requests. Combining it with any request — however broken the rest of your Georgian — signals respect and good manners that locals notice and appreciate.</p>\n\n<h4>4. Ki / Ara (kee / ah-rah) — Yes / No</h4>\n<p>Two of the most useful words to have memorized correctly. Georgian yes and no are short and distinct, but easy to mix up when you're nervous, with results ranging from comic to inconvenient, so the small investment in getting them right pays off constantly.</p>\n\n<h4>5. Nakhvamdis (na-kh-vam-dis) — Goodbye</h4>\n<p>The standard farewell. Its literal meaning — \"until we meet again\" — reflects the Georgian sense that hospitality, once offered, creates a connection that outlasts the moment. It's a warmer parting than a plain goodbye, and tends to be received accordingly at the end of a meal or a guesthouse stay.</p>\n\n<h4>6. Bodishi (bo-dee-shee) — Sorry / Excuse me</h4>\n<p>The all-purpose apology and attention-getter, useful for navigating crowded markets, stepping around a doorway, or starting a conversation with a stranger. In the busy lanes of Old Tbilisi or a packed market, bodishi gets you through both literally and socially.</p>\n\n<h3>Dining and the Georgian supra</h3>\n\n<h4>7. Gaumarjos! (gau-mar-jos) — Cheers!</h4>\n<p>The word most associated with Georgian social life, used at every toast from a casual dinner to a full traditional supra. The tamada — the toastmaster who leads the table through a sequence of formal toasts — delivers the full toast, and gaumarjos is the response everyone gives in unison, glasses raised. Using it correctly marks you out as a guest taking part rather than a passive observer.</p>\n\n<h4>8. Gvino (gvee-no) — Wine</h4>\n<p>In a country with around 8,000 years of winemaking history, this is less a vocabulary item than an act of cultural participation. The word is ancient and related to the Greek oinos and Latin vinum, and using it when ordering or admiring the contents of a qvevri signals real engagement with Georgian wine culture.</p>\n\n<h4>9. Gemrielia (gem-ri-e-lia) — It's delicious</h4>\n<p>The most powerful compliment at a Georgian table, and one that costs nothing. Georgian hospitality is expressed first through food, so telling a host or cook their food is delicious — in Georgian — reads as genuine appreciation rather than mere politeness. Use it after the first khinkali, after the khachapuri, after anything that earns it, which here is most things.</p>\n\n<h4>10. Angarishi, tu sheidzleba (an-ga-ri-shi, tu she-id-ze-le-ba) — The bill, please</h4>\n<p>The phrase that closes a restaurant meal, built from angarishi (bill) plus the polite request form. In smaller restaurants and family guesthouses it's sometimes unnecessary — the host brings the bill when the meal winds down — but having it ready saves the mime performance that wordless bill-asking otherwise involves [NEEDS: confirm pronunciation of \"tu sheidzleba\" and reconcile the \"please\" word with entry #3].</p>\n\n<h4>11. Tskali (ts-ka-li) — Water</h4>\n<p>A practical necessity at every meal and through the day in the warmer months. The word is also the root of place names across the country — Tskaltubo, the mineral-spa town, takes its name from it (combined with tbili, \"warm\") — which adds a layer of geographical usefulness.</p>\n\n<h4>12. Puri (pu-ri) — Bread</h4>\n<p>Georgian bread — especially the long, flame-blistered shotis puri baked in a tone oven — is one of the real pleasures of eating here, and knowing the word lets you seek it out at bakeries and markets. The tone bakeries in most towns turn out fresh bread through the morning, and buying puri straight from the baker, still warm, is one of the small daily rituals travelers can join with a single word.</p>\n\n<h4>13. Shemomechama (she-mo-me-cha-ma) — I accidentally ate the whole thing</h4>\n<p>This one deserves attention because it doesn't translate into any European language — it describes eating past your intention because the food was too good to stop, and the fact that Georgian has a single word for it says something about the culture's relationship with food and pleasure. Deploying it at the end of a very good meal reliably produces laughter and delight from Georgian hosts.</p>\n\n<h3>Navigating and shopping</h3>\n\n<h4>14. Sad aris…? (sad a-ris) — Where is…?</h4>\n<p>The foundational navigation phrase, from sad (where) plus the verb \"to be.\" Follow it with the Georgian word for your destination — or, realistically, the Georgian word plus an English word and a pointed finger — and most Georgians will understand and try to help, often with considerable extra guidance in Georgian that you may or may not follow.</p>\n\n<h4>15. Tualeti (tu-a-le-ti) — Toilet</h4>\n<p>Universally important and mercifully close to the European form, which makes it one of the easier words to remember and use under pressure. It's a relatively recent borrowing rather than a native word, which explains the recognizable shape.</p>\n\n<h4>16. Ra girs? (ra girs) — How much does it cost?</h4>\n<p>Essential for markets, souvenirs, and any transaction where the price isn't displayed. Georgian markets — the Tbilisi Dry Bridge market and the regional produce markets — run partly on displayed prices and partly on negotiated ones, and this question opens the commercial conversation appropriately.</p>\n\n<h4>17. Dzviria (dzvee-ree-ah) — It's expensive</h4>\n<p>The natural follow-up to ra girs when the answer surprises you, and a socially acceptable opening to a negotiation where one is expected. In formal shops and restaurants it's just an observation; in markets and informal deals it's the start of a back-and-forth both sides understand as normal.</p>\n\n<h4>18. Maghazia (ma-gha-zi-a) — Shop</h4>\n<p>Useful for directions — sad aris maghazia? — or for naming the kind of place you're looking for. It covers everything from a neighborhood corner store to a larger retail operation.</p>\n\n<h4>19. Gacheret (ga-che-ret) — Stop</h4>\n<p>The word called to the driver of a marshrutka — the shared minibus that is the main intercity and intracity transport across Georgia — when you want to get off. Marshrutkas don't have fixed stops like city buses; you call your stop to the driver, and gacheret is the word that does it. Practically essential for anyone using them, which in Georgia means almost everyone traveling between towns.</p>\n\n<h3>Socializing and connection</h3>\n\n<h4>20. Inglisuri itsit? (ing-li-su-ri i-tsit) — Do you speak English?</h4>\n<p>The bridge phrase for going beyond basic Georgian, and a more respectful opening than simply launching into English and assuming comprehension. The question acknowledges that English isn't the default here — a small gesture that's well received even when the answer is a regretful ara.</p>\n\n<h4>21. Ver mivkhvdi (ver miv-kh-vdi) — I don't understand</h4>\n<p>The honest admission that covers most extended Georgian conversations for most travelers. Georgian at natural speed is much harder to follow than the slower, simplified version locals use with foreigners, and this phrase heads off the polite nodding that leads to misunderstandings and the occasional unexpected commitment.</p>\n\n<h4>22. Me mkvia… (me m-kvee-ah) — My name is…</h4>\n<p>The opening of a personal introduction, combining me (I) with the Georgian verb of naming. The construction means something closer to \"my name calls itself\" than \"my name is,\" and using the real form rather than a direct translation shows engagement with how the language actually works.</p>\n\n<h4>23. Sasiamovnoa (sa-si-a-mov-no-a) — Nice to meet you</h4>\n<p>The pleasantry that follows an introduction, fine in both casual and more formal settings. Its length relative to the English makes it one of the more satisfying phrases to land correctly, and the effort tends to be recognized as real interest in the language.</p>\n\n<h4>24. Rogor khar? (ro-gor khar) — How are you?</h4>\n<p>The informal inquiry after someone's wellbeing, for use with guides, hosts, and anyone you've reached a basic familiarity with. The formal version — rogor brdzandebit — is for elders and formal contexts, but rogor khar covers most traveler interactions at the right register.</p>\n\n<h4>25. Kargad (kar-gad) — I'm good / Well</h4>\n<p>The standard positive reply to rogor khar, closing the greeting-and-inquiry exchange that opens most Georgian conversations. Kargad alone is enough; kargad, madloba — well, thank you — adds the courtesy that Georgian social exchange tends to value.</p>\n\n<h3>A final note on pronunciation</h3>\n<p>Georgian has several sounds that don't exist in English. The kh — as in nakhvamdis or mivkhvdi — is a guttural fricative at the back of the throat, like the ch in Scottish \"loch\" or German \"Bach.\" The gh is similar but voiced. The ejective consonants — produced with a simultaneous glottal stop — appear in words like gaumarjos and have no English equivalent at all. None of this should put you off. The goal is connection, not perfection: an approximation offered with goodwill goes a long way, and in Georgia that's remarkably easy to achieve.</p>"
+  },
 ]
 
 export function getBlogArticle(slug) {

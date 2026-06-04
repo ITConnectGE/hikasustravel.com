@@ -115,18 +115,29 @@ function loadTourTranslations(lang) {
 const blogArticles = [
   {
     slug: 'ultimate-guide-to-traveling-to-georgia',
+    titleKey: 'blog.article1.title',
     title: 'The Ultimate Guide to Traveling to Georgia: Everything You Need to Know Before You Go',
     excerpt: 'From visa requirements and the best time to visit, to must-try dishes, ancient wine traditions, and hidden gems most tourists never find — this is the only Georgia travel guide you will ever need.',
     heroImage: '/images/files/georgia-home.jpg',
     tags: ['travel-guide', 'visa', 'food', 'wine', 'culture'],
   },
+  {
+    slug: 'essential-georgian-words-phrases',
+    titleKey: 'blog.article2.title',
+    title: '25 Essential Georgian Words and Phrases for Travelers',
+    seoTitle: '25 Essential Georgian Words & Phrases for Travelers',
+    excerpt: 'Learn 25 essential Georgian words and phrases — hello, thank you, cheers, and more — with simple pronunciation, for travelers to Georgia (the country).',
+    metaDescription: 'Learn 25 essential Georgian words and phrases — hello, thank you, cheers, and more — with simple pronunciation, for travelers to Georgia (the country).',
+    heroImage: '/images/files/sulfur-baths-wine-tour.jpg',
+    tags: ['language', 'culture', 'travel-tips'],
+  },
 ]
 
-// Blog translations from ui.json files
-function loadBlogTitle(lang) {
+// Blog title translation for a given article key from ui.json
+function loadBlogTitle(lang, key) {
   try {
     const ui = JSON.parse(readFileSync(join(__dirname, `../src/i18n/locales/${lang}/ui.json`), 'utf-8'))
-    return ui['blog.article1.title'] || null
+    return ui[key] || null
   } catch {
     return null
   }
@@ -247,7 +258,6 @@ console.log('Pre-rendering SEO HTML files...')
 
 for (const lang of LANGS) {
   const tourTrans = loadTourTranslations(lang)
-  const blogTitle = loadBlogTitle(lang)
   const ogLocale = localeMap[lang]
 
   // --- Static pages ---
@@ -304,8 +314,9 @@ for (const lang of LANGS) {
 
   // --- Blog article pages ---
   for (const article of blogArticles) {
-    const translatedTitle = blogTitle || article.title
-    const title = `${translatedTitle} | Hikasus Travel Blog`
+    const translatedTitle = loadBlogTitle(lang, article.titleKey) || article.title
+    const title = article.seoTitle || `${translatedTitle} | Hikasus Travel Blog`
+    const description = article.metaDescription || article.excerpt
     const tagKeywords = article.tags.flatMap(tag => [
       `Georgia ${tag.replace(/-/g, ' ')}`,
     ])
@@ -316,7 +327,7 @@ for (const lang of LANGS) {
 
     writeHtml(filePath, lang, {
       title,
-      description: article.excerpt,
+      description,
       keywords,
       canonical,
       image: article.heroImage,
