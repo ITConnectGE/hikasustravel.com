@@ -111,8 +111,37 @@
   },
   "experience-georgias-rich-culture-coastal-beauty-5-day-tour-from-tbilisi-to-batumi": {
     "title": "Erleben Sie Georgiens reiche Kultur und Kuestenschoenheit: 5-Tage-Tour von Tiflis nach Batumi",
-    "description": "Diese fuenftaegige private Reise fuehrt durch Georgien – vom historischen Kernland bis an die Kueste des Schwarzen Meeres. Von Tiflis aus besuchen Sie das auf einem Huegel gelegene Dschvari-Kloster und die alte Hauptstadt Mzcheta, durchstreifen die in den Fels gehauene Hoehlenstadt Uplisziche und halten in Gori auf dem Weg nach Kutaissi im gruenen Westen des Landes. Von dort fuehrt die Route weiter zum unterirdischen Wunder der Prometheus-Hoehle und nach Batumi, der lebhaften Stadt, in der Georgien auf das Meer trifft. Mit einem privaten Fahrer-Guide waehrend der gesamten Reise bleibt das Tempo entspannt und das Programm flexibel – eine ausgewogene Einfuehrung in Georgiens Wahrzeichen, Hoehlenstaedte, Kloester und die Schwarzmeerkueste.",
-    "listingDescription": "Begeben Sie sich auf eine fesselnde 5-taegige Reise durch Georgien, die in Tiflis, der lebhaften Hauptstadt des Landes, beginnt und endet.",
+    "description": "Eine kompakte fuenftaegige Privatreise durch Westgeorgien, von Tiflis bis ans Schwarze Meer in Batumi. Sie passt gut zu Reisenden, die mehr als die Hauptstadt sehen moechten, aber keine Zeit fuer eine lange Tour haben. Unterwegs besuchen Sie das auf einem Huegel gelegene Jvari Monastery und das alte Mtskheta, die in den Fels gehauene Stadt Uplistsikhe und das Stalin-Museum in Gori, danach Kutaisi mit seinen Kloestern Gelati und Motsameta, die unterirdischen Hallen der Prometheus-Hoehle und Batumi an der Kueste – bevor es am letzten Tag zurueck nach Tiflis geht. Hikasus Travel kuemmert sich um Transport, Hotels, Fuehrung und die taegliche Organisation, und da die Tour privat ist, bleiben Route und Tempo flexibel.",
+    "listingDescription": "Eine private 5-Tage-Route von Tiflis nach Batumi mit Mtskheta, Uplistsikhe, Gori, Kutaisi, der Prometheus-Hoehle und der Schwarzmeerkueste – Hotels, Transport und Fahrer-Guide sind fuer Sie organisiert.",
+    "heroH1": "5-taegige Privattour von Tiflis nach Batumi",
+    "heroSubtitle": "Eine private Route mit Fahrer-Guide von Tiflis durch Georgiens historisches Kernland nach Kutaisi, zur Prometheus-Hoehle und nach Batumi am Schwarzen Meer – und zurueck nach Tiflis.",
+    "seoTitle": "5-taegige Privattour von Tiflis nach Batumi",
+    "metaDescription": "Private 5-Tage-Tour durch Georgien von Tiflis ueber Jvari, Mtskheta, Uplistsikhe, Gori, Kutaisi, die Prometheus-Hoehle und Batumi. Hotels, Transport und flexible Planung inklusive.",
+    "heroFacts": [
+      "5 Tage / 4 Naechte",
+      "Privattour",
+      "Beginnt in Tiflis",
+      "Besucht Kutaisi & Batumi",
+      "Zurueck nach Tiflis",
+      "Hotels inklusive",
+      "Ab €645 pro Person",
+      "Anpassbare Route"
+    ],
+    "rightForYou": [
+      "Paare, Familien und kleine private Gruppen",
+      "Reisende, die mehr von Georgien als nur Tiflis sehen moechten, ohne sich auf eine lange Reise festzulegen",
+      "Alle, die eine bequeme private Route von Tiflis nach Westgeorgien und Batumi bevorzugen",
+      "Reisende, die Hotels, Transport, regionale Organisation und Besichtigungen nicht selbst planen moechten"
+    ],
+    "faq": [
+      { "title": "Laesst sich diese Tour anpassen?", "content": "<p>Ja. Es ist eine Privattour, daher lassen sich Route, Tempo, Hotels und Stopps auf Sie abstimmen. Sagen Sie uns, was Sie sich vorstellen, und wir gestalten den Plan darum herum.</p>" },
+      { "title": "Ist das eine Privattour?", "content": "<p>Ja – sie laeuft privat fuer Ihre Gruppe mit Ihrem eigenen Fahrer-Guide. Sie teilen sie nicht mit anderen Reisenden.</p>" },
+      { "title": "Sind Hotels inklusive?", "content": "<p>Ja. Vier Hotelnaechte mit Fruehstueck sind enthalten – zwei in Kutaisi und zwei in Batumi – wahlweise in Klassisch, Mittelklasse oder Luxus.</p>" },
+      { "title": "Ist diese Tour fuer Familien geeignet?", "content": "<p>Ja. Das private Format und das flexible Tempo machen sie bequem fuer Familien, auch mit Kindern; wir koennen Fahrzeiten und Stopps anpassen.</p>" },
+      { "title": "Kann die Tour in Batumi enden statt nach Tiflis zurueckzukehren?", "content": "<p>Die Standardroute kehrt an Tag 5 nach Tiflis zurueck. Da die Tour privat ist, laesst sich ein Abschluss in Batumi oft stattdessen arrangieren – fragen Sie einfach, und wir bestaetigen, was fuer Ihre Reisedaten moeglich ist.</p>" },
+      { "title": "Wann ist die beste Zeit fuer diese Tour?", "content": "<p>Sie laeuft das ganze Jahr ueber. Mai bis Oktober ist fuer die Schwarzmeerkueste und den Botanischen Garten von Batumi am angenehmsten, und die Route eignet sich auch gut als Winterreise.</p>" },
+      { "title": "Koennen wir nach der Tour von Batumi aus weiterreisen?", "content": "<p>Ja. Viele Reisende reisen von Batumi aus weiter – wir helfen bei Anschlusstransfers oder zusaetzlichen Naechten. Sagen Sie uns einfach, was Sie moechten.</p>" }
+    ],
     "highlights": [
       "Besuch des Dschvari-Klosters mit Blick auf den Zusammenfluss von Aragvi und Mtkvari",
       "Erkundung von Mzcheta und der UNESCO-gelisteten Swetizchoweli-Kathedrale",

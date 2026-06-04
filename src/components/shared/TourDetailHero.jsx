@@ -3,10 +3,11 @@ import asset from '../../utils/basePath'
 import LocaleLink from '../../i18n/LocaleLink'
 import useT from '../../i18n/useT'
 
-export default function TourDetailHero({ tour, translatedTitle, isGroup, startingPrice }) {
+export default function TourDetailHero({ tour, translatedTitle, heroH1, heroSubtitle, heroFacts, isGroup }) {
   const sectionRef = useRef(null)
   const t = useT()
   const title = translatedTitle || tour.title
+  const h1 = heroH1 || title
 
   const scrollToNext = () => {
     const next = sectionRef.current?.nextElementSibling
@@ -19,18 +20,8 @@ export default function TourDetailHero({ tour, translatedTitle, isGroup, startin
     if (el) el.scrollIntoView({ behavior: 'smooth' })
   }
 
-  const scrollToItinerary = (e) => {
-    e.preventDefault()
-    const el = document.getElementById('itinerary')
-    if (el) el.scrollIntoView({ behavior: 'smooth' })
-  }
-
   const backPath = isGroup ? '/group-tours' : '/private-tours'
   const backLabel = isGroup ? t('tour.groupTours') : t('tour.privateTours')
-
-  const priceDisplay = startingPrice
-    ? t('tour.fromPP', { price: Number(startingPrice).toLocaleString('en-US') })
-    : null
 
   return (
     <section
@@ -45,27 +36,40 @@ export default function TourDetailHero({ tour, translatedTitle, isGroup, startin
           <span>{title}</span>
         </nav>
 
-        <h1 className="td-hero__title">{title}</h1>
+        <h1 className="td-hero__title">{h1}</h1>
 
-        <div className="td-hero__meta">
-          {tour.days && (
+        {heroSubtitle && <p className="td-hero__subtitle">{heroSubtitle}</p>}
+
+        {heroFacts?.length > 0 ? (
+          <ul className="td-hero__facts">
+            {heroFacts.map((fact, i) => (
+              <li key={i} className="td-hero__fact">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+                {fact}
+              </li>
+            ))}
+          </ul>
+        ) : (
+          <div className="td-hero__meta">
+            {tour.days && (
+              <span className="td-hero__badge">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg>
+                {tour.days} {t('tour.days')}
+              </span>
+            )}
             <span className="td-hero__badge">
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg>
-              {tour.days} {t('tour.days')}
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+              {isGroup ? t('tour.groupTours') : t('tour.privateTours')}
             </span>
-          )}
-          <span className="td-hero__badge">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
-            {isGroup ? t('tour.groupTours') : t('tour.privateTours')}
-          </span>
-        </div>
+          </div>
+        )}
 
         <div className="td-hero__actions">
           <a href="#book" onClick={scrollToBook} className="td-hero__cta">
-            {t('tour.bookThisTour')}
+            {t('tour.requestPrice')}
           </a>
-          <a href="#itinerary" onClick={scrollToItinerary} className="td-hero__cta td-hero__cta--secondary">
-            {t('tour.viewItinerary')}
+          <a href="#book" onClick={scrollToBook} className="td-hero__cta td-hero__cta--secondary">
+            {t('tour.askCustom')}
           </a>
         </div>
       </div>

@@ -371,8 +371,37 @@ export const tours = [
     "tileImage": "/images/files/batumi-coastal-tour.jpg",
     "listingImage": "/images/files/batumi-coastal-tour.jpg",
     "days": 5,
-    "description": "This five-day private journey traces Georgia from its historic heartland to the shores of the Black Sea. Setting out from Tbilisi, you visit the hilltop Jvari Monastery and the ancient capital of Mtskheta, walk through the rock-hewn cave town of Uplistsikhe, and stop in Gori on the way to Kutaisi in the country's lush west. From there the route continues to the underground wonder of Prometheus Cave and on to Batumi, the lively city where Georgia meets the sea. With a private guide-driver throughout, the pace stays relaxed and the plan flexible — a balanced introduction to Georgia's landmarks, cave cities, monasteries and Black Sea coast.",
-    "listingDescription": "Embark on a captivating 5-day journey through Georgia, starting and ending in Tbilisi, the country's vibrant capital.",
+    "description": "This is a compact five-day private tour across western Georgia, from Tbilisi to the Black Sea at Batumi. It works well for travelers who want to see more than the capital but don't have time for a long trip. Along the way you visit the hilltop Jvari Monastery and ancient Mtskheta, the rock-cut town of Uplistsikhe and the Stalin Museum in Gori, then Kutaisi with its Gelati and Motsameta monasteries, the underground halls of Prometheus Cave, and Batumi on the coast — before driving back to Tbilisi on the final day. Hikasus Travel handles the transport, hotels, guiding and day-to-day logistics, and because the tour is private the route and pace stay flexible.",
+    "listingDescription": "A private 5-day route from Tbilisi to Batumi taking in Mtskheta, Uplistsikhe, Gori, Kutaisi, Prometheus Cave and the Black Sea coast — hotels, transport and a guide-driver handled for you.",
+    "heroH1": "5-Day Private Tour from Tbilisi to Batumi",
+    "heroSubtitle": "A private, guide-driven route from Tbilisi through Georgia's historic heartland to Kutaisi, Prometheus Cave and Batumi on the Black Sea — then back to Tbilisi.",
+    "seoTitle": "5-Day Private Tour from Tbilisi to Batumi",
+    "metaDescription": "Private 5-day Georgia tour from Tbilisi through Jvari, Mtskheta, Uplistsikhe, Gori, Kutaisi, Prometheus Cave and Batumi. Hotels, transport and flexible planning included.",
+    "heroFacts": [
+      "5 days / 4 nights",
+      "Private tour",
+      "Starts in Tbilisi",
+      "Visits Kutaisi & Batumi",
+      "Returns to Tbilisi",
+      "Hotels included",
+      "From €645 per person",
+      "Customizable route"
+    ],
+    "rightForYou": [
+      "Couples, families and small private groups",
+      "Travelers who want to see more of Georgia than Tbilisi without committing to a long itinerary",
+      "Anyone who prefers a comfortable private route from Tbilisi to western Georgia and Batumi",
+      "Travelers who'd rather not arrange hotels, transport, regional logistics and sightseeing themselves"
+    ],
+    "faq": [
+      { "title": "Can this tour be customized?", "content": "<p>Yes. It's a private tour, so the route, pace, hotels and stops can be adjusted to suit you. Tell us what you have in mind and we'll shape the plan around it.</p>" },
+      { "title": "Is this a private tour?", "content": "<p>Yes — it runs privately for your group with your own guide-driver. You won't share it with other travelers.</p>" },
+      { "title": "Are hotels included?", "content": "<p>Yes. Four nights of hotels with breakfast are included — two in Kutaisi and two in Batumi — in your choice of Classic, Mid-Range or Luxury.</p>" },
+      { "title": "Is this tour suitable for families?", "content": "<p>Yes. The private format and flexible pace make it comfortable for families, including with children; we can adjust driving times and stops.</p>" },
+      { "title": "Can the tour end in Batumi instead of returning to Tbilisi?", "content": "<p>The standard route returns to Tbilisi on Day 5. Because it's private, finishing in Batumi can often be arranged instead — just ask and we'll confirm what works for your dates.</p>" },
+      { "title": "When is the best time to do this tour?", "content": "<p>It runs year-round. May to October is the most comfortable for the Black Sea coast and the Batumi Botanical Garden, and the route also works well as a winter trip.</p>" },
+      { "title": "Can we continue from Batumi after the tour?", "content": "<p>Yes. Many travelers carry on from Batumi — we can help with onward transfers or extra nights. Just let us know what you'd like.</p>" }
+    ],
     "highlights": [
       "Visit Jvari Monastery overlooking the confluence of the Aragvi and Mtkvari rivers",
       "Explore Mtskheta and the UNESCO-listed Svetitskhoveli Cathedral",

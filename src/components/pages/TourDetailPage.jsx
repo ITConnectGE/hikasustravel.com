@@ -30,8 +30,8 @@ export default function TourDetailPage() {
 
   const tourSeo = useMemo(() => {
     if (!tour) return {}
-    const title = `${tt?.title || tour.title} | Hikasus Travel`
-    const description = (tt?.description || tour.description || '').slice(0, 160)
+    const title = `${tt?.seoTitle || tour.seoTitle || tt?.title || tour.title} | Hikasus Travel`
+    const description = tt?.metaDescription || tour.metaDescription || (tt?.description || tour.description || '').slice(0, 160)
     const prefix = tour.type === 'group' ? 'group-tours' : 'private-tours'
     const jsonLd = {
       '@context': 'https://schema.org',
@@ -70,8 +70,41 @@ export default function TourDetailPage() {
       'book Georgia adventure',
     ].join(', ')
 
-    return { title, description, keywords, path: `${prefix}/${slug}`, image: tour.heroImage, jsonLd }
-  }, [tour, tt, slug])
+    // Offer price (lowest available) for richer product/trip schema.
+    const startPrice = tour.type === 'group'
+      ? (tour.pricePerPerson ? parseFloat(tour.pricePerPerson.replace(/[^0-9.]/g, '')) : null)
+      : getStartingPrice(tour.pricing)
+    if (startPrice) {
+      jsonLd.offers = {
+        '@type': 'Offer',
+        price: startPrice,
+        priceCurrency: 'EUR',
+        availability: 'https://schema.org/InStock',
+        url: `https://www.hikasustravel.com/${lang}/${prefix}/${slug}`,
+      }
+    }
+
+    // When the tour provides an FAQ, expose it as FAQPage alongside the trip.
+    const faqList = tt?.faq || tour.faq
+    const finalJsonLd = faqList?.length > 0
+      ? {
+          '@context': 'https://schema.org',
+          '@graph': [
+            jsonLd,
+            {
+              '@type': 'FAQPage',
+              mainEntity: faqList.map((f) => ({
+                '@type': 'Question',
+                name: f.title,
+                acceptedAnswer: { '@type': 'Answer', text: f.content },
+              })),
+            },
+          ],
+        }
+      : jsonLd
+
+    return { title, description, keywords, path: `${prefix}/${slug}`, image: tour.heroImage, jsonLd: finalJsonLd }
+  }, [tour, tt, slug, lang])
   useSEO({ ...tourSeo, lang })
 
   const navSections = useMemo(() => {
@@ -107,6 +140,8 @@ export default function TourDetailPage() {
   const itineraryItems = tt?.itinerary || tour.itinerary
   const includedItems = tt?.included || tour.included
   const notIncludedItems = tt?.notIncluded || tour.notIncluded
+  const rightForYouItems = tt?.rightForYou || tour.rightForYou
+  const faqList = tt?.faq || tour.faq
 
   // Extract starting price
   const startingPrice = isGroup
@@ -123,6 +158,9 @@ export default function TourDetailPage() {
       <TourDetailHero
         tour={tour}
         translatedTitle={tt?.title}
+        heroH1={tt?.heroH1 || tour.heroH1}
+        heroSubtitle={tt?.heroSubtitle || tour.heroSubtitle}
+        heroFacts={tt?.heroFacts || tour.heroFacts}
         isGroup={isGroup}
         startingPrice={startingPrice}
       />
@@ -267,6 +305,25 @@ export default function TourDetailPage() {
               </FadeUp>
             </section>
           )}
+
+          {/* Is this tour right for you? (only when the tour supplies the data) */}
+          {rightForYouItems?.length > 0 && (
+            <section className="td-section">
+              <FadeUp>
+                <h2 className="td-section__title">{t('tour.rightForYou')}</h2>
+                <div className="td-overview__highlights">
+                  {rightForYouItems.map((item, i) => (
+                    <div key={i} className="td-overview__highlight">
+                      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#4caf50" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+                        <polyline points="20 6 9 17 4 12"/>
+                      </svg>
+                      <span>{item}</span>
+                    </div>
+                  ))}
+                </div>
+              </FadeUp>
+            </section>
+          )}
         </main>
       </div>
 
@@ -285,6 +342,19 @@ export default function TourDetailPage() {
             />
           </div>
         </section>
+      )}
+
+      {/* FAQ (only when the tour supplies the data) */}
+      {faqList?.length > 0 && (
+        <div className="td-layout">
+          <main className="td-main">
+            <section id="faq" className="td-section">
+              <FadeUp>
+                <Accordion items={faqList} headingKey="faq.heroTitle" />
+              </FadeUp>
+            </section>
+          </main>
+        </div>
       )}
 
       {/* 8. Send inquiry */}

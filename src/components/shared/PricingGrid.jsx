@@ -176,7 +176,7 @@ function PricingCards({ pricing }) {
               </div>
             )}
             <a href="#book" onClick={scrollToBook} className="td-price-card__cta">
-              {t('tour.bookNow')}
+              {t('tour.getExactPrice')}
             </a>
           </div>
         )
@@ -270,12 +270,16 @@ export function PriceSection({ isGroup, pricing, pricePerPerson, singleSupplemen
                     </div>
                   )}
                   <a href="#book" onClick={scrollToBook} className="td-price-card__cta">
-                    {t('tour.bookNow')}
+                    {t('tour.getExactPrice')}
                   </a>
                 </div>
               </div>
             )}
           </div>
+
+          <p className="td-pricing__note">
+            <strong>{t('pricing.fromNote')}</strong> {t('pricing.note')}
+          </p>
         </div>
       </FadeUp>
     </section>

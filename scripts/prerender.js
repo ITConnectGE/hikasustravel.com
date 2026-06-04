@@ -76,6 +76,8 @@ function parseTours(source) {
     const descM = chunk.match(/"description":\s*"([^"]+)"/)
     const heroM = chunk.match(/"heroImage":\s*"([^"]+)"/)
     const daysM = chunk.match(/"days":\s*(\d+)/)
+    const seoTitleM = chunk.match(/"seoTitle":\s*"([^"]+)"/)
+    const metaDescM = chunk.match(/"metaDescription":\s*"([^"]+)"/)
 
     // Extract itinerary day titles for keywords
     const itineraryTitles = []
@@ -87,6 +89,8 @@ function parseTours(source) {
       type: typeM?.[1] || 'private',
       title: titleM?.[1] || slug,
       description: descM?.[1] || '',
+      seoTitle: seoTitleM?.[1] || '',
+      metaDescription: metaDescM?.[1] || '',
       heroImage: heroM?.[1] || '',
       days: daysM ? parseInt(daysM[1]) : 0,
       itineraryTitles,
@@ -270,8 +274,8 @@ for (const lang of LANGS) {
   for (const tour of tours) {
     const tt = tourTrans[tour.slug]
     const prefix = tour.type === 'group' ? 'group-tours' : 'private-tours'
-    const title = `${tt?.title || tour.title} | Hikasus Travel`
-    const description = (tt?.description || tour.description || '').slice(0, 160)
+    const title = `${tt?.seoTitle || tour.seoTitle || tt?.title || tour.title} | Hikasus Travel`
+    const description = tt?.metaDescription || tour.metaDescription || (tt?.description || tour.description || '').slice(0, 160)
 
     // Generate keywords matching the runtime logic
     const typeLabel = tour.type === 'group' ? 'group tour' : 'private tour'

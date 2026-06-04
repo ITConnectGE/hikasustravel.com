@@ -111,8 +111,37 @@
   },
   "experience-georgias-rich-culture-coastal-beauty-5-day-tour-from-tbilisi-to-batumi": {
     "title": "Poznejte bohatou kulturu a pobřežní krásy Gruzie: 5denní zájezd z Tbilisi do Batumi",
-    "description": "Tato pětidenní soukromá cesta vede napříč Gruzií – od historického srdce země až k pobřeží Černého moře. Z Tbilisi navštívíte klášter Džvari na návrší a starobylé hlavní město Mccheta, projdete se skalním městem Uplisciche vytesaným do skály a cestou do Kutaisi na zeleném západě země se zastavíte v Gori. Odtud trasa pokračuje k podzemnímu divu jeskyně Prometheus a dále do Batumi, živého města, kde se Gruzie setkává s mořem. Po celou cestu vás doprovází soukromý řidič-průvodce, takže tempo zůstává uvolněné a program flexibilní – vyvážené seznámení s památkami, skalními městy, kláštery a černomořským pobřežím Gruzie.",
-    "listingDescription": "Vydejte se na poutavou 5denní cestu Gruzií, která začíná i končí v Tbilisi, živém hlavním městě země.",
+    "description": "Jde o kompaktní pětidenní soukromý zájezd napříč západní Gruzií, z Tbilisi až k Černému moři v Batumi. Hodí se cestovatelům, kteří chtějí poznat víc než jen hlavní město, ale nemají čas na dlouhou cestu. Po cestě navštívíte klášter Džvari na návrší a starobylou Mcchetu, skalní město Uplisciche vytesané do útesu a Stalinovo muzeum v Gori, poté Kutaisi s kláštery Gelati a Mocameta, podzemní sály jeskyně Prometheus a Batumi na pobřeží – než se v poslední den vrátíte zpět do Tbilisi. Hikasus Travel zajišťuje dopravu, hotely, průvodce i každodenní organizaci, a protože je zájezd soukromý, trasa i tempo zůstávají flexibilní.",
+    "listingDescription": "Soukromá 5denní trasa z Tbilisi do Batumi přes Mcchetu, Uplisciche, Gori, Kutaisi, jeskyni Prometheus a pobřeží Černého moře – hotely, dopravu i řidiče-průvodce zařídíme za vás.",
+    "heroH1": "5denní soukromý zájezd z Tbilisi do Batumi",
+    "heroSubtitle": "Soukromá trasa s řidičem-průvodcem z Tbilisi přes historické srdce Gruzie do Kutaisi, k jeskyni Prometheus a do Batumi u Černého moře – a zpět do Tbilisi.",
+    "seoTitle": "5denní soukromý zájezd z Tbilisi do Batumi",
+    "metaDescription": "Soukromý 5denní zájezd Gruzií z Tbilisi přes Džvari, Mcchetu, Uplisciche, Gori, Kutaisi, jeskyni Prometheus a Batumi. Hotely, doprava i flexibilní program v ceně.",
+    "heroFacts": [
+      "5 dní / 4 noci",
+      "Soukromý zájezd",
+      "Začátek v Tbilisi",
+      "Návštěva Kutaisi a Batumi",
+      "Návrat do Tbilisi",
+      "Hotely v ceně",
+      "Od €645 za osobu",
+      "Trasa na míru"
+    ],
+    "rightForYou": [
+      "Páry, rodiny a malé soukromé skupiny",
+      "Cestovatele, kteří chtějí poznat víc Gruzie než jen Tbilisi, aniž by se zavázali k dlouhému programu",
+      "Každého, kdo dává přednost pohodlné soukromé trase z Tbilisi do západní Gruzie a Batumi",
+      "Cestovatele, kteří si raději nechtějí sami zařizovat hotely, dopravu, regionální logistiku a prohlídky"
+    ],
+    "faq": [
+      { "title": "Lze tento zájezd upravit na míru?", "content": "<p>Ano. Jde o soukromý zájezd, takže trasu, tempo, hotely i zastávky lze přizpůsobit vašim přáním. Řekněte nám, co máte v plánu, a program kolem toho sestavíme.</p>" },
+      { "title": "Je to soukromý zájezd?", "content": "<p>Ano – probíhá soukromě jen pro vaši skupinu s vlastním řidičem-průvodcem. Nebudete jej sdílet s dalšími cestovateli.</p>" },
+      { "title": "Jsou hotely v ceně?", "content": "<p>Ano. V ceně jsou čtyři noci v hotelech se snídaní – dvě v Kutaisi a dvě v Batumi – ve vámi zvolené kategorii Klasický, Stredni trida nebo Luxusni.</p>" },
+      { "title": "Je tento zájezd vhodný pro rodiny?", "content": "<p>Ano. Soukromý formát a flexibilní tempo jej činí pohodlným pro rodiny, včetně rodin s dětmi; doby jízdy i zastávky můžeme upravit.</p>" },
+      { "title": "Může zájezd skončit v Batumi místo návratu do Tbilisi?", "content": "<p>Standardní trasa se 5. den vrací do Tbilisi. Protože je zájezd soukromý, lze často zařídit i ukončení v Batumi – stačí se ozvat a potvrdíme, co je možné pro vaše termíny.</p>" },
+      { "title": "Kdy je nejlepší čas na tento zájezd?", "content": "<p>Probíhá po celý rok. Květen až říjen je nejpříjemnější pro pobřeží Černého moře a Batumskou botanickou zahradu, ale trasa funguje dobře i jako zimní výlet.</p>" },
+      { "title": "Můžeme po skončení zájezdu pokračovat z Batumi dál?", "content": "<p>Ano. Mnoho cestovatelů z Batumi pokračuje dál – pomůžeme s navazujícími transfery nebo dalšími nocemi. Stačí nám dát vědět, o co máte zájem.</p>" }
+    ],
     "highlights": [
       "Návštěva kláštera Džvari s výhledem na soutok řek Aragvi a Mtkvari",
       "Prohlídka Mcchety a katedrály Sveticchoveli zapsané na seznam UNESCO",
