@@ -152,6 +152,7 @@ const seoPageMap = {
   '': 'home',
   'about-us': 'aboutUs',
   'about-georgia': 'aboutGeorgia',
+  'georgian-lari-currency-guide': 'lariGuide',
   'destinations': 'destinations',
   'destinations/tbilisi': 'tbilisi',
   'destinations/akhaltsikhe': 'akhaltsikhe',

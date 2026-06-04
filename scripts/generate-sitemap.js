@@ -21,6 +21,7 @@ const staticPages = [
   { path: '', changefreq: 'weekly', priority: '1.0' },
   { path: 'about-us', changefreq: 'monthly', priority: '0.7' },
   { path: 'about-georgia', changefreq: 'monthly', priority: '0.7' },
+  { path: 'georgian-lari-currency-guide', changefreq: 'monthly', priority: '0.6' },
   { path: 'destinations', changefreq: 'monthly', priority: '0.7' },
   { path: 'destinations/tbilisi', changefreq: 'monthly', priority: '0.7' },
   { path: 'destinations/akhaltsikhe', changefreq: 'monthly', priority: '0.7' },
