@@ -154,6 +154,7 @@ const seoPageMap = {
   'about-georgia': 'aboutGeorgia',
   'georgian-lari-currency-guide': 'lariGuide',
   'georgia-visa-entry-requirements': 'visaGuide',
+  'languages-of-georgia': 'languagesGuide',
   'destinations': 'destinations',
   'destinations/tbilisi': 'tbilisi',
   'destinations/akhaltsikhe': 'akhaltsikhe',

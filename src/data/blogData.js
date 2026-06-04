@@ -544,6 +544,14 @@ export const blogGuides = [
     thumbnail: '/images/files/georgia-home.jpg',
     tags: ['money', 'currency', 'travel-tips'],
   },
+  {
+    path: '/languages-of-georgia',
+    seoKey: 'languagesGuide',
+    date: '2025-12-20',
+    readTime: 9,
+    thumbnail: '/images/files/about-georgia.jpg',
+    tags: ['language', 'culture', 'travel-tips'],
+  },
 ]
 
 export function getBlogArticle(slug) {

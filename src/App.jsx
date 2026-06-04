@@ -6,6 +6,7 @@ import AboutUsPage from './components/pages/AboutUsPage'
 import AboutGeorgiaPage from './components/pages/AboutGeorgiaPage'
 import CurrencyGuidePage from './components/pages/CurrencyGuidePage'
 import VisaPage from './components/pages/VisaPage'
+import LanguagesPage from './components/pages/LanguagesPage'
 import DestinationsPage from './components/pages/DestinationsPage'
 import TbilisiPage from './components/pages/TbilisiPage'
 import AkhaltsikhePage from './components/pages/AkhaltsikhePage'
@@ -37,6 +38,7 @@ export default function App() {
           <Route path="about-georgia" element={<AboutGeorgiaPage />} />
           <Route path="georgian-lari-currency-guide" element={<CurrencyGuidePage />} />
           <Route path="georgia-visa-entry-requirements" element={<VisaPage />} />
+          <Route path="languages-of-georgia" element={<LanguagesPage />} />
           <Route path="destinations" element={<DestinationsPage />} />
           <Route path="destinations/tbilisi" element={<TbilisiPage />} />
           <Route path="destinations/akhaltsikhe" element={<AkhaltsikhePage />} />
