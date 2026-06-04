@@ -5,7 +5,7 @@ import useT from '../../i18n/useT'
 import useLang from '../../i18n/useLang'
 import useSEO from '../../hooks/useSEO'
 import { getSEO } from '../../data/seoData'
-import { blogArticles } from '../../data/blogData'
+import { blogArticles, blogGuides } from '../../data/blogData'
 import asset from '../../utils/basePath'
 
 function formatDate(dateStr, lang) {
@@ -77,6 +77,43 @@ export default function BlogPage() {
                     <div className="blog-item__footer">
                       <div className="blog-item__tags">
                         {article.tags.map(tag => (
+                          <span key={tag} className="blog-item__tag">{tag}</span>
+                        ))}
+                      </div>
+                      <span className="blog-item__read-more">{readMore} →</span>
+                    </div>
+                  </div>
+                </LocaleLink>
+              )
+            })}
+
+            {blogGuides.map(guide => {
+              const gseo = getSEO(guide.seoKey, lang)
+              return (
+                <LocaleLink
+                  key={guide.path}
+                  to={guide.path}
+                  className="blog-item"
+                >
+                  <div className="blog-item__img-wrap">
+                    <img
+                      src={asset(guide.thumbnail)}
+                      alt={gseo.title}
+                      className="blog-item__img"
+                      loading="lazy"
+                    />
+                  </div>
+                  <div className="blog-item__body">
+                    <h3 className="blog-item__title">{gseo.title}</h3>
+                    <div className="blog-item__meta">
+                      <span>{formatDate(guide.date, lang)}</span>
+                      <span className="blog-item__meta-dot">·</span>
+                      <span>{readTimeTemplate.replace('{min}', guide.readTime)}</span>
+                    </div>
+                    <p className="blog-item__excerpt">{gseo.description}</p>
+                    <div className="blog-item__footer">
+                      <div className="blog-item__tags">
+                        {guide.tags.map(tag => (
                           <span key={tag} className="blog-item__tag">{tag}</span>
                         ))}
                       </div>

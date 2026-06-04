@@ -531,6 +531,21 @@ export const blogArticles = [
   },
 ]
 
+// Standalone guide pages surfaced as cards on the blog listing. These are NOT
+// /blog/:slug articles — each links to its own full page path. Title/excerpt come
+// from the page's existing translated SEO entry (seoKey), so no extra translation
+// is needed. They do not appear in getRelatedArticles.
+export const blogGuides = [
+  {
+    path: '/georgian-lari-currency-guide',
+    seoKey: 'lariGuide',
+    date: '2026-06-04',
+    readTime: 6,
+    thumbnail: '/images/files/georgia-home.jpg',
+    tags: ['money', 'currency', 'travel-tips'],
+  },
+]
+
 export function getBlogArticle(slug) {
   return blogArticles.find(a => a.slug === slug) || null
 }
