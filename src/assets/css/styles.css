@@ -3154,33 +3154,53 @@ select option:checked {
   text-align: left;
 }
 
-/* Country lists on reference pages (visa, etc.) — readable, set off from prose */
-.about-georgia .visa-list {
+/* Country lists on reference pages (visa, etc.) — multi-column vertical lists,
+   one country per line flowing into as many columns as fit. Overrides the
+   .about-georgia ul/li dish-grid styling. */
+.about-georgia ul.visa-list {
+  display: block;
+  list-style: none;
   width: auto;
   max-width: 100%;
-  text-align: left;
-  line-height: 1.9;
+  margin: var(--indent) 0;
+  padding: 14px 18px;
   background: rgba(43, 78, 71, 0.05);
   border-radius: 8px;
-  padding: 14px 18px;
-  margin: var(--indent) 0;
+  columns: 13em;
+  column-gap: 32px;
+  gap: 0;
+  grid-template-columns: none;
+}
+.about-georgia ul.visa-list li {
+  background: none;
+  border: none;
+  border-left: none;
+  border-radius: 0;
+  box-shadow: none;
+  padding: 3px 0;
+  margin: 0;
+  break-inside: avoid;
+  -webkit-column-break-inside: avoid;
+  line-height: 1.5;
+  font-size: calc(var(--font-size) * 0.92);
+  text-align: left;
 }
 /* The three e-Visa groups, visually distinct blocks */
 .about-georgia .visa-group {
   border-left: 3px solid var(--color-h3);
   background: rgba(43, 78, 71, 0.04);
   border-radius: 8px;
-  padding: 4px 18px 8px;
+  padding: 4px 18px 10px;
   margin: var(--indent) 0;
 }
 .about-georgia .visa-group h4 {
   color: var(--color-h3);
   margin: 14px 0 4px;
 }
-.about-georgia .visa-group .visa-list {
+.about-georgia .visa-group ul.visa-list {
   background: none;
   padding: 0;
-  margin: 6px 0 4px;
+  margin: 8px 0 4px;
 }
 
 /* Contact */
