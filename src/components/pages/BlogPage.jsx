@@ -36,6 +36,33 @@ export default function BlogPage() {
   const readMore = tf(t, 'blog.readMore', 'Read Article')
   const readTimeTemplate = tf(t, 'blog.readTime', '{min} min read')
 
+  // Combine articles + standalone guide cards into one list, sorted by date (newest first).
+  const items = [
+    ...blogArticles.map(a => ({
+      key: a.slug,
+      to: `/blog/${a.slug}`,
+      title: tf(t, a.titleKey, a.title),
+      excerpt: a.descKey ? tf(t, a.descKey, a.excerpt) : a.excerpt,
+      date: a.date,
+      readTime: a.readTime,
+      thumbnail: a.thumbnail,
+      tags: a.tags,
+    })),
+    ...blogGuides.map(g => {
+      const gseo = getSEO(g.seoKey, lang)
+      return {
+        key: g.path,
+        to: g.path,
+        title: gseo.title,
+        excerpt: gseo.description,
+        date: g.date,
+        readTime: g.readTime,
+        thumbnail: g.thumbnail,
+        tags: g.tags,
+      }
+    }),
+  ].sort((a, b) => (b.date || '').localeCompare(a.date || ''))
+
   return (
     <>
       <HeroSection image="/images/files/georgia-home.jpg" title={heroTitle} />
@@ -50,79 +77,39 @@ export default function BlogPage() {
           <p className="blog-intro">{intro}</p>
 
           <div className="blog-list">
-            {blogArticles.map(article => {
-              const title = tf(t, article.titleKey, article.title)
-              return (
-                <LocaleLink
-                  key={article.slug}
-                  to={`/blog/${article.slug}`}
-                  className="blog-item"
-                >
-                  <div className="blog-item__img-wrap">
-                    <img
-                      src={asset(article.thumbnail)}
-                      alt={title}
-                      className="blog-item__img"
-                      loading="lazy"
-                    />
+            {items.map(item => (
+              <LocaleLink
+                key={item.key}
+                to={item.to}
+                className="blog-item"
+              >
+                <div className="blog-item__img-wrap">
+                  <img
+                    src={asset(item.thumbnail)}
+                    alt={item.title}
+                    className="blog-item__img"
+                    loading="lazy"
+                  />
+                </div>
+                <div className="blog-item__body">
+                  <h3 className="blog-item__title">{item.title}</h3>
+                  <div className="blog-item__meta">
+                    <span>{formatDate(item.date, lang)}</span>
+                    <span className="blog-item__meta-dot">·</span>
+                    <span>{readTimeTemplate.replace('{min}', item.readTime)}</span>
                   </div>
-                  <div className="blog-item__body">
-                    <h3 className="blog-item__title">{title}</h3>
-                    <div className="blog-item__meta">
-                      <span>{formatDate(article.date, lang)}</span>
-                      <span className="blog-item__meta-dot">·</span>
-                      <span>{readTimeTemplate.replace('{min}', article.readTime)}</span>
+                  <p className="blog-item__excerpt">{item.excerpt}</p>
+                  <div className="blog-item__footer">
+                    <div className="blog-item__tags">
+                      {item.tags.map(tag => (
+                        <span key={tag} className="blog-item__tag">{tag}</span>
+                      ))}
                     </div>
-                    <p className="blog-item__excerpt">{article.descKey ? tf(t, article.descKey, article.excerpt) : article.excerpt}</p>
-                    <div className="blog-item__footer">
-                      <div className="blog-item__tags">
-                        {article.tags.map(tag => (
-                          <span key={tag} className="blog-item__tag">{tag}</span>
-                        ))}
-                      </div>
-                      <span className="blog-item__read-more">{readMore} →</span>
-                    </div>
+                    <span className="blog-item__read-more">{readMore} →</span>
                   </div>
-                </LocaleLink>
-              )
-            })}
-
-            {blogGuides.map(guide => {
-              const gseo = getSEO(guide.seoKey, lang)
-              return (
-                <LocaleLink
-                  key={guide.path}
-                  to={guide.path}
-                  className="blog-item"
-                >
-                  <div className="blog-item__img-wrap">
-                    <img
-                      src={asset(guide.thumbnail)}
-                      alt={gseo.title}
-                      className="blog-item__img"
-                      loading="lazy"
-                    />
-                  </div>
-                  <div className="blog-item__body">
-                    <h3 className="blog-item__title">{gseo.title}</h3>
-                    <div className="blog-item__meta">
-                      <span>{formatDate(guide.date, lang)}</span>
-                      <span className="blog-item__meta-dot">·</span>
-                      <span>{readTimeTemplate.replace('{min}', guide.readTime)}</span>
-                    </div>
-                    <p className="blog-item__excerpt">{gseo.description}</p>
-                    <div className="blog-item__footer">
-                      <div className="blog-item__tags">
-                        {guide.tags.map(tag => (
-                          <span key={tag} className="blog-item__tag">{tag}</span>
-                        ))}
-                      </div>
-                      <span className="blog-item__read-more">{readMore} →</span>
-                    </div>
-                  </div>
-                </LocaleLink>
-              )
-            })}
+                </div>
+              </LocaleLink>
+            ))}
           </div>
         </FadeUp>
       </section>
