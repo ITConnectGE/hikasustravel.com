@@ -124,6 +124,7 @@ const blogArticles = [
   {
     slug: 'essential-georgian-words-phrases',
     titleKey: 'blog.article2.title',
+    descKey: 'blog.article2.desc',
     title: '25 Essential Georgian Words and Phrases for Travelers',
     seoTitle: '25 Essential Georgian Words & Phrases for Travelers',
     excerpt: 'Learn 25 essential Georgian words and phrases — hello, thank you, cheers, and more — with simple pronunciation, for travelers to Georgia (the country).',
@@ -315,8 +316,10 @@ for (const lang of LANGS) {
   // --- Blog article pages ---
   for (const article of blogArticles) {
     const translatedTitle = loadBlogTitle(lang, article.titleKey) || article.title
-    const title = article.seoTitle || `${translatedTitle} | Hikasus Travel Blog`
-    const description = article.metaDescription || article.excerpt
+    const title = (lang === 'en' && article.seoTitle)
+      ? article.seoTitle
+      : `${translatedTitle} | Hikasus Travel Blog`
+    const description = (article.descKey && loadBlogTitle(lang, article.descKey)) || article.metaDescription || article.excerpt
     const tagKeywords = article.tags.flatMap(tag => [
       `Georgia ${tag.replace(/-/g, ' ')}`,
     ])

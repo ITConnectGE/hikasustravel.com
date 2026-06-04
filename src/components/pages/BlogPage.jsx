@@ -31,7 +31,7 @@ export default function BlogPage() {
   const seo = getSEO('blog', lang)
   useSEO({ ...seo, lang, path: 'blog', image: '/images/files/georgia-home.jpg' })
 
-  const heroTitle = tf(t, 'blog.heroTitle', 'Travel Blog')
+  const heroTitle = tf(t, 'blog.heroTitle', 'Travel Blogs')
   const intro = tf(t, 'blog.intro', 'Insider tips, practical guides, and inspiring stories to help you plan your perfect Georgia adventure.')
   const readMore = tf(t, 'blog.readMore', 'Read Article')
   const readTimeTemplate = tf(t, 'blog.readTime', '{min} min read')
@@ -73,7 +73,7 @@ export default function BlogPage() {
                       <span className="blog-item__meta-dot">·</span>
                       <span>{readTimeTemplate.replace('{min}', article.readTime)}</span>
                     </div>
-                    <p className="blog-item__excerpt">{article.excerpt}</p>
+                    <p className="blog-item__excerpt">{article.descKey ? tf(t, article.descKey, article.excerpt) : article.excerpt}</p>
                     <div className="blog-item__footer">
                       <div className="blog-item__tags">
                         {article.tags.map(tag => (

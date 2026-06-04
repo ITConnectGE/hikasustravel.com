@@ -33,7 +33,15 @@ export default function BlogArticlePage() {
   const article = getBlogArticle(slug)
   const related = useMemo(() => article ? getRelatedArticles(slug) : [], [slug, article])
 
-  const heroTitle = tf(t, 'blog.heroTitle', 'Travel Blog')
+  // Per-language article body/FAQ (falls back to the English base when no translation exists).
+  const tr = article && lang !== 'en' ? (article.translations?.[lang] || null) : null
+  const articleContent = tr?.content || article?.content
+  const articleFaq = tr?.faq || article?.faq
+  const localizedDesc = article
+    ? (article.descKey ? tf(t, article.descKey, article.metaDescription || article.excerpt) : (article.metaDescription || article.excerpt))
+    : ''
+
+  const heroTitle = tf(t, 'blog.heroTitle', 'Travel Blogs')
   const readTimeTemplate = tf(t, 'blog.readTime', '{min} min read')
 
   const jsonLd = useMemo(() => {
@@ -43,7 +51,7 @@ export default function BlogArticlePage() {
       {
         '@type': 'BlogPosting',
         headline: article.title,
-        description: article.excerpt,
+        description: localizedDesc,
         author: { '@type': 'Organization', name: article.author },
         datePublished: article.date,
         image: `https://www.hikasustravel.com${article.heroImage}`,
@@ -71,10 +79,10 @@ export default function BlogArticlePage() {
         itemListElement: article.phrases.map((p, i) => ({ '@type': 'ListItem', position: i + 1, name: p })),
       })
     }
-    if (article.faq?.length > 0) {
+    if (articleFaq?.length > 0) {
       graph.push({
         '@type': 'FAQPage',
-        mainEntity: article.faq.map((f) => ({
+        mainEntity: articleFaq.map((f) => ({
           '@type': 'Question',
           name: f.title,
           acceptedAnswer: { '@type': 'Answer', text: f.content },
@@ -82,7 +90,7 @@ export default function BlogArticlePage() {
       })
     }
     return { '@context': 'https://schema.org', '@graph': graph }
-  }, [article, lang, slug])
+  }, [article, lang, slug, articleFaq, localizedDesc])
 
   const articleKeywords = useMemo(() => {
     if (!article?.tags?.length) return undefined
@@ -93,8 +101,10 @@ export default function BlogArticlePage() {
   }, [article])
 
   useSEO(article ? {
-    title: article.seoTitle || `${article.title} | Hikasus Travel Blog`,
-    description: article.metaDescription || article.excerpt,
+    title: (lang === 'en' && article.seoTitle)
+      ? article.seoTitle
+      : `${tf(t, article.titleKey, article.title)} | Hikasus Travel Blog`,
+    description: localizedDesc,
     keywords: articleKeywords,
     lang,
     path: `blog/${slug}`,
@@ -139,11 +149,11 @@ export default function BlogArticlePage() {
           <span>{readTimeTemplate.replace('{min}', article.readTime)}</span>
         </div>
 
-        <div className="blog-article__content" dangerouslySetInnerHTML={{ __html: article.content }} />
+        <div className="blog-article__content" dangerouslySetInnerHTML={{ __html: articleContent }} />
 
-        {article.faq?.length > 0 && (
+        {articleFaq?.length > 0 && (
           <div className="blog-article__faq">
-            <Accordion items={article.faq} headingKey="faq.heroTitle" />
+            <Accordion items={articleFaq} headingKey="faq.heroTitle" />
           </div>
         )}
 
