@@ -3145,6 +3145,44 @@ select option:checked {
   box-shadow: 0 2px 12px rgba(0, 0, 0, 0.12);
 }
 
+/* Published date line (info/reference pages) */
+.about-georgia .page-published {
+  font-size: calc(var(--font-size) * 0.85);
+  color: var(--color-h3);
+  opacity: 0.85;
+  margin: 0 0 calc(var(--indent) * 0.75);
+  text-align: left;
+}
+
+/* Country lists on reference pages (visa, etc.) — readable, set off from prose */
+.about-georgia .visa-list {
+  width: auto;
+  max-width: 100%;
+  text-align: left;
+  line-height: 1.9;
+  background: rgba(43, 78, 71, 0.05);
+  border-radius: 8px;
+  padding: 14px 18px;
+  margin: var(--indent) 0;
+}
+/* The three e-Visa groups, visually distinct blocks */
+.about-georgia .visa-group {
+  border-left: 3px solid var(--color-h3);
+  background: rgba(43, 78, 71, 0.04);
+  border-radius: 8px;
+  padding: 4px 18px 8px;
+  margin: var(--indent) 0;
+}
+.about-georgia .visa-group h4 {
+  color: var(--color-h3);
+  margin: 14px 0 4px;
+}
+.about-georgia .visa-group .visa-list {
+  background: none;
+  padding: 0;
+  margin: 6px 0 4px;
+}
+
 /* Contact */
 .contact > div {
   max-width: 800px;
