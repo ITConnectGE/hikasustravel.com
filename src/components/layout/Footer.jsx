@@ -58,6 +58,7 @@ export default function Footer({ variant = 'default' }) {
           <h4 className="footer-col__title">{t('footer.services')}</h4>
           <ul className="footer-col__list">
             <li><LocaleLink to="/shuttle-service">{t('footer.shuttleService')}</LocaleLink></li>
+            <li><LocaleLink to="/georgia-visa-entry-requirements">{t('footer.visa')}</LocaleLink></li>
           </ul>
         </div>
 
