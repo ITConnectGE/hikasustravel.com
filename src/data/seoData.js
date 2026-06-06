@@ -1,4 +1,7 @@
 const seo = {
+  borjomi: {
+    en: { title: "Borjomi, Georgia: Mineral Water & National Park", description: "Borjomi is Georgia's mineral-water spa town and gateway to Borjomi-Kharagauli National Park. Springs, hiking, history, day trips, and the best time to visit.", keywords: "Borjomi, Borjomi Georgia, Borjomi mineral water, Borjomi-Kharagauli National Park, Borjomi Central Park, Likani palace, Bakuriani, Akhaltsikhe, Vardzia, Samtskhe-Javakheti, things to do in Borjomi, Borjomi hiking" },
+  },
   thingsToDoBolnisi: {
     en: { title: "Things to Do in Bolnisi, Georgia: Cathedral & More", description: "Things to do in Bolnisi, Georgia: the 5th-century Sioni Cathedral, German heritage of Katharinenfeld, the Dmanisi site, rural countryside, and local wine.", keywords: "things to do in Bolnisi, Bolnisi Georgia, Bolnisi Sioni Cathedral, Katharinenfeld, Dmanisi, Kvemo Kartli, German heritage Georgia, Bolnisi wine, rural Georgia, Bolnisi attractions" },
     es: { title: "Qué hacer en Bolnisi, Georgia: catedral y más", description: "Qué hacer en Bolnisi, Georgia: la catedral Sioni del siglo V, el patrimonio alemán de Katharinenfeld, el yacimiento de Dmanisi, el campo rural y el vino local.", keywords: "qué hacer en Bolnisi, Bolnisi Georgia, catedral de Bolnisi Sioni, Katharinenfeld, Dmanisi, Kvemo Kartli, patrimonio alemán Georgia, vino de Bolnisi, Georgia rural, atracciones de Bolnisi" },

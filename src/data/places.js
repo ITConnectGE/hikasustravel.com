@@ -56,7 +56,7 @@ export const cities = [
   { slug: 'mtskheta', name: 'Mtskheta', region: 'mtskheta-mtianeti', published: false },
   { slug: 'telavi', name: 'Telavi', region: 'kakheti', published: false },
   { slug: 'sighnaghi', name: 'Sighnaghi', region: 'kakheti', published: false },
-  { slug: 'borjomi', name: 'Borjomi', region: 'samtskhe-javakheti', published: false },
+  { slug: 'borjomi', name: 'Borjomi', region: 'samtskhe-javakheti', published: true, seoKey: 'borjomi', contentKey: 'borjomi', image: '/images/files/borjomi-town.jpg' },
   { slug: 'stepantsminda', name: 'Stepantsminda (Kazbegi)', region: 'mtskheta-mtianeti', published: false },
   { slug: 'bolnisi', name: 'Bolnisi', region: 'kvemo-kartli', published: true, seoKey: 'bolnisi', contentKey: 'bolnisi', image: '/images/files/georgia-home.jpg' },
 ]
