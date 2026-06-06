@@ -539,7 +539,7 @@ export const blogGuides = [
   {
     path: '/georgian-lari-currency-guide',
     seoKey: 'lariGuide',
-    date: '2026-06-04',
+    date: '2026-02-19',
     readTime: 6,
     thumbnail: '/images/files/georgia-home.jpg',
     tags: ['money', 'currency', 'travel-tips'],
