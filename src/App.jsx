@@ -16,6 +16,7 @@ import LegacyCityRedirect from './components/pages/LegacyCityRedirect'
 import ThingsToDoTbilisiPage from './components/pages/ThingsToDoTbilisiPage'
 import ThingsToDoAkhaltsikhePage from './components/pages/ThingsToDoAkhaltsikhePage'
 import ThingsToDoAmbrolauriPage from './components/pages/ThingsToDoAmbrolauriPage'
+import ThingsToDoBakurianiPage from './components/pages/ThingsToDoBakurianiPage'
 import PrivateToursPage from './components/pages/PrivateToursPage'
 import GroupToursPage from './components/pages/GroupToursPage'
 import TourDetailPage from './components/pages/TourDetailPage'
@@ -55,6 +56,7 @@ export default function App() {
           <Route path="things-to-do-in-tbilisi" element={<ThingsToDoTbilisiPage />} />
           <Route path="things-to-do-in-akhaltsikhe" element={<ThingsToDoAkhaltsikhePage />} />
           <Route path="things-to-do-in-ambrolauri" element={<ThingsToDoAmbrolauriPage />} />
+          <Route path="things-to-do-in-bakuriani" element={<ThingsToDoBakurianiPage />} />
           <Route path="private-tours" element={<PrivateToursPage />} />
           <Route path="group-tours" element={<GroupToursPage />} />
           <Route path="private-tours/:slug" element={<TourDetailPage />} />

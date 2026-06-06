@@ -168,6 +168,7 @@ const seoPageMap = {
   'things-to-do-in-tbilisi': 'thingsToDoTbilisi',
   'things-to-do-in-akhaltsikhe': 'thingsToDoAkhaltsikhe',
   'things-to-do-in-ambrolauri': 'thingsToDoAmbrolauri',
+  'things-to-do-in-bakuriani': 'thingsToDoBakuriani',
   'private-tours': 'privateTours',
   'group-tours': 'groupTours',
   'shuttle-service': 'shuttle',
