@@ -1,4 +1,7 @@
 const seo = {
+  thingsToDoBolnisi: {
+    en: { title: "Things to Do in Bolnisi, Georgia: Cathedral & More", description: "Things to do in Bolnisi, Georgia: the 5th-century Sioni Cathedral, German heritage of Katharinenfeld, the Dmanisi site, rural countryside, and local wine.", keywords: "things to do in Bolnisi, Bolnisi Georgia, Bolnisi Sioni Cathedral, Katharinenfeld, Dmanisi, Kvemo Kartli, German heritage Georgia, Bolnisi wine, rural Georgia, Bolnisi attractions" },
+  },
   bolnisi: {
     en: { title: "Bolnisi, Georgia: Ancient Cathedral & German History", description: "Bolnisi in southern Georgia has a 5th-century cathedral with the oldest Georgian inscriptions and a German colonial past. What to see, day trips, and timing.", keywords: "Bolnisi, Bolnisi Georgia, Bolnisi Sioni Cathedral, Katharinenfeld, Kvemo Kartli, oldest Georgian inscriptions, David Gareja, Dmanisi, German colony Georgia, things to do in Bolnisi" },
     es: { title: "Bolnisi, Georgia: catedral antigua e historia alemana", description: "Bolnisi, en el sur de Georgia, tiene una catedral del siglo V con las inscripciones georgianas más antiguas y un pasado colonial alemán. Qué ver, excursiones y cuándo ir.", keywords: "Bolnisi, Bolnisi Georgia, catedral de Bolnisi Sioni, Katharinenfeld, Kvemo Kartli, inscripciones georgianas más antiguas, David Gareja, Dmanisi, colonia alemana Georgia, qué ver en Bolnisi" },

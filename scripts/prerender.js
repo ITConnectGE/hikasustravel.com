@@ -170,6 +170,7 @@ const seoPageMap = {
   'things-to-do-in-ambrolauri': 'thingsToDoAmbrolauri',
   'things-to-do-in-bakuriani': 'thingsToDoBakuriani',
   'things-to-do-in-batumi': 'thingsToDoBatumi',
+  'things-to-do-in-bolnisi': 'thingsToDoBolnisi',
   'private-tours': 'privateTours',
   'group-tours': 'groupTours',
   'shuttle-service': 'shuttle',
