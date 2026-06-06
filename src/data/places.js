@@ -52,7 +52,7 @@ export const cities = [
   { slug: 'ambrolauri', name: 'Ambrolauri', region: 'racha-lechkhumi', published: true, seoKey: 'ambrolauri', contentKey: 'ambrolauri', image: '/images/files/georgia-home.jpg' },
   { slug: 'bakuriani', name: 'Bakuriani', region: 'samtskhe-javakheti', published: true, seoKey: 'bakuriani', contentKey: 'bakuriani', image: '/images/files/georgia-home.jpg' },
   { slug: 'kutaisi', name: 'Kutaisi', region: 'imereti', published: false },
-  { slug: 'batumi', name: 'Batumi', region: 'adjara', published: false },
+  { slug: 'batumi', name: 'Batumi', region: 'adjara', published: true, seoKey: 'batumi', contentKey: 'batumi', image: '/images/files/georgia-home.jpg' },
   { slug: 'mtskheta', name: 'Mtskheta', region: 'mtskheta-mtianeti', published: false },
   { slug: 'telavi', name: 'Telavi', region: 'kakheti', published: false },
   { slug: 'sighnaghi', name: 'Sighnaghi', region: 'kakheti', published: false },

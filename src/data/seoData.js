@@ -1,4 +1,7 @@
 const seo = {
+  batumi: {
+    en: { title: "Batumi, Georgia: Black Sea City & Adjara Guide", description: "Batumi is Georgia's Black Sea city: seafront boulevard, modern skyline, botanical garden, Adjarian food, and the mountains of Adjara. What to see and when.", keywords: "Batumi, Batumi Georgia, Batumi Black Sea, Batumi boulevard, Batumi botanical garden, Adjara, Adjarian khachapuri, Alphabetic Tower, Ali and Nino, Makhuntseti waterfall, things to do in Batumi, Batumi beach" },
+  },
   bakuriani: {
     en: { title: "Bakuriani, Georgia: Ski Resort & Summer Guide", description: "Bakuriani is Georgia's most accessible ski resort, best for beginners and families. Skiing at Didveli and Kokhta, summer hiking, the Kukushka train, and more.", keywords: "Bakuriani, Bakuriani Georgia, Bakuriani ski resort, skiing in Georgia, Didveli, Kokhta, Bakuriani skiing, beginner ski Georgia, Kukushka train, Borjomi, Trialeti, Bakuriani summer" },
     es: { title: "Bakuriani, Georgia: estación de esquí y guía de verano", description: "Bakuriani es la estación de esquí más accesible de Georgia, ideal para principiantes y familias. Esquí en Didveli y Kokhta, senderismo en verano, el tren Kukushka y más.", keywords: "Bakuriani, Bakuriani Georgia, estación de esquí Bakuriani, esquiar en Georgia, Didveli, Kokhta, esquí en Bakuriani, tren Kukushka, Borjomi, Trialeti, Bakuriani verano" },
