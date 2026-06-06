@@ -1417,9 +1417,10 @@ tour-info h2 a,
 }
 .td-nav--fixed {
   position: fixed;
-  /* Sit below the sticky site header bar (.main-menu.sticky, ~47px tall) so
-     the site nav never overlaps the tour section nav. 36px was too small. */
-  top: 56px;
+  /* Sit clearly below the sticky site header bar (.main-menu.sticky, ~51px
+     tall) so the site nav never overlaps the tour section nav, with margin
+     for font/render variance across browsers. 36px then 56px were too tight. */
+  top: 64px;
   left: 0;
   width: 100%;
   z-index: 100;
