@@ -73,7 +73,56 @@
   },
   "destinations": {
     "heroTitle": "Destinations in Georgia",
-    "intro": "Georgia packs an enormous amount into a small country — a walkable capital, ancient wine regions, Black Sea beaches, and high Caucasus mountains. Our destination guides break it down city by city, with what to see, how long to stay, and honest local tips. We are starting with the capital, Tbilisi, and adding more over time."
+    "intro": "Georgia packs an enormous amount into a small country — a walkable capital, ancient wine regions, Black Sea beaches, and high Caucasus mountains. Explore it by region, by city, or by the individual places worth planning a trip around. Our guides cover what to see, how long to stay, and honest local tips, with more added over time."
+  },
+  "destinationsRegions": {
+    "heroTitle": "Regions of Georgia",
+    "intro": "Georgia divides into distinct regions, each with its own landscape, food, and history — from the wine cellars of the east to the high Caucasus peaks and the Black Sea coast. Use this overview to find the region that fits your trip; detailed regional guides are being added over time.",
+    "items": {
+      "kakheti": { "name": "Kakheti", "description": "Georgia's eastern wine country — qvevri cellars, the hilltop town of Sighnaghi, and the Alazani Valley." },
+      "imereti": { "name": "Imereti", "description": "A green central region around Kutaisi, with Gelati Monastery and the Prometheus and Sataplia caves." },
+      "adjara": { "name": "Adjara", "description": "The Black Sea coast and subtropical hills around Batumi, from beaches to the Mtirala rainforest." },
+      "samtskhe-javakheti": { "name": "Samtskhe-Javakheti", "description": "Southern highlands holding Rabati Castle, the Vardzia cave city, and the spa town of Borjomi." },
+      "racha-lechkhumi": { "name": "Racha-Lechkhumi", "description": "A quiet mountain region in the northwest, home of Khvanchkara wine and Nikortsminda Cathedral." },
+      "mtskheta-mtianeti": { "name": "Mtskheta-Mtianeti", "description": "From the ancient capital Mtskheta to the high Caucasus at Kazbegi and the Gergeti Trinity Church." },
+      "samegrelo": { "name": "Samegrelo", "description": "Western lowlands with the Martvili and Okatse canyons and a distinct Mingrelian cuisine." },
+      "svaneti": { "name": "Svaneti", "description": "Remote high-Caucasus valleys famous for medieval stone tower-houses and trekking around Mestia and Ushguli." },
+      "guria": { "name": "Guria", "description": "A small, hilly region between the mountains and the Black Sea, known for its tea plantations." },
+      "shida-kartli": { "name": "Shida Kartli", "description": "Central Georgia around Gori, with the rock-hewn town of Uplistsikhe." },
+      "kvemo-kartli": { "name": "Kvemo Kartli", "description": "The region south of Tbilisi, with the David Gareja monastery complex and multi-ethnic villages." }
+    }
+  },
+  "destinationsCities": {
+    "heroTitle": "Cities of Georgia",
+    "intro": "Georgia's cities range from the lively, walkable capital to Black Sea resorts, ancient royal towns, and mountain gateways. Browse our city guides for what to see, how long to stay, and how to get there.",
+    "items": {
+      "tbilisi": { "name": "Tbilisi", "description": "The capital and largest city — Old Town sulphur baths, Narikala Fortress, and a famous food and wine scene." },
+      "akhaltsikhe": { "name": "Akhaltsikhe", "description": "Southern gateway town below Rabati Castle, and the base for Vardzia and Borjomi." },
+      "ambrolauri": { "name": "Ambrolauri", "description": "The small capital of Racha and the heart of Khvanchkara wine country." },
+      "kutaisi": { "name": "Kutaisi", "description": "Georgia's second city, a relaxed base for Imereti's monasteries and caves." },
+      "batumi": { "name": "Batumi", "description": "The Black Sea resort city, with a palm-lined seafront and bold modern architecture." },
+      "mtskheta": { "name": "Mtskheta", "description": "The ancient royal and spiritual capital, with Svetitskhoveli Cathedral and Jvari Monastery above it." },
+      "telavi": { "name": "Telavi", "description": "The main town of Kakheti's wine region, set above the Alazani Valley." },
+      "sighnaghi": { "name": "Sighnaghi", "description": "A walled hilltop town in Kakheti, known for its views, ramparts, and wineries." },
+      "borjomi": { "name": "Borjomi", "description": "A forested spa town famous for its mineral water and national park." },
+      "stepantsminda": { "name": "Stepantsminda (Kazbegi)", "description": "A mountain town below Mount Kazbek and the Gergeti Trinity Church." }
+    }
+  },
+  "destinationsPlaces": {
+    "heroTitle": "Places to Visit in Georgia",
+    "intro": "From cave cities and clifftop monasteries to canyons and seaside gardens, these are the landmarks worth planning a trip around. Each sits within a city or region — open its guide for visiting details, or ask us about tours that include it.",
+    "items": {
+      "narikala-fortress": { "name": "Narikala Fortress", "description": "The ancient fortress watching over Tbilisi's Old Town, reached on foot or by cable car." },
+      "jvari-monastery": { "name": "Jvari Monastery", "description": "A 6th-century hilltop church above Mtskheta, overlooking the meeting of two rivers." },
+      "uplistsikhe-cave-town": { "name": "Uplistsikhe Cave Town", "description": "A rock-hewn town carved into the cliffs near Gori, inhabited for thousands of years." },
+      "prometheus-cave": { "name": "Prometheus Cave", "description": "A large show cave of lit chambers and underground rivers near Kutaisi, in Imereti." },
+      "gelati-monastery": { "name": "Gelati Monastery", "description": "A UNESCO-listed medieval monastery and former academy near Kutaisi, rich in mosaics and frescoes." },
+      "vardzia": { "name": "Vardzia", "description": "A vast 12th-century cave monastery cut into a cliff face in southern Georgia." },
+      "gergeti-trinity-church": { "name": "Gergeti Trinity Church", "description": "A lone 14th-century church set beneath Mount Kazbek in the high Caucasus." },
+      "batumi-botanical-garden": { "name": "Batumi Botanical Garden", "description": "A sprawling seaside garden of plants from around the world, north of Batumi." },
+      "martvili-canyon": { "name": "Martvili Canyon", "description": "A lush river canyon in Samegrelo with turquoise water and short boat trips." },
+      "katskhi-pillar": { "name": "Katskhi Pillar", "description": "A small church perched on top of a natural limestone pillar in Imereti." }
+    }
   },
   "akhaltsikhe": {
     "heroTitle": "Akhaltsikhe, Georgia: Rabati Castle, Vardzia, and the Gateway to the South",

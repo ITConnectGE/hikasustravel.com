@@ -5824,3 +5824,90 @@ select option:checked {
     padding: 22px 20px;
   }
 }
+
+/* -------------------------------------------------------------------------
+   Destinations: breadcrumbs + sub-hub card grid (regions / cities / sites)
+   ------------------------------------------------------------------------- */
+.breadcrumbs {
+  max-width: 800px;
+  width: 50vw;
+  margin: 0 auto 18px;
+  font-size: 0.85rem;
+}
+.breadcrumbs ol {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  padding: 0;
+  margin: 0;
+}
+.breadcrumbs li {
+  display: flex;
+  align-items: center;
+}
+.breadcrumbs li:not(:last-child)::after {
+  content: "/";
+  margin-left: 6px;
+  opacity: 0.5;
+}
+.breadcrumbs a {
+  text-decoration: none;
+  opacity: 0.8;
+}
+.breadcrumbs a:hover { opacity: 1; text-decoration: underline; }
+.breadcrumbs [aria-current="page"] { font-weight: 600; }
+
+.dest-hub-grid {
+  list-style: none;
+  padding: 0;
+  margin: 30px auto 0;
+  max-width: 1100px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 20px;
+}
+.dest-hub-card {
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  overflow: hidden;
+  background: #fff;
+  transition: box-shadow 0.2s ease, transform 0.2s ease;
+}
+.dest-hub-card:hover { box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08); transform: translateY(-2px); }
+.dest-hub-card__link,
+.dest-hub-card__pending {
+  display: block;
+  padding: 22px 24px;
+  height: 100%;
+  text-decoration: none;
+  color: inherit;
+}
+.dest-hub-card h3 { margin: 0 0 8px; font-size: 1.15rem; }
+/* Reset the global `.home-items p { width:50vw }` leak inside cards. */
+.dest-hub-grid p {
+  width: auto;
+  max-width: none;
+  margin: 0;
+  font-size: 0.95rem;
+  line-height: 1.5;
+  opacity: 0.85;
+  text-align: left;
+}
+.dest-hub-card__soon {
+  display: inline-block;
+  margin-top: 12px;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  opacity: 0.6;
+}
+.dest-hub-card__pending { cursor: default; opacity: 0.85; }
+.dest-featured-title {
+  text-align: center;
+  margin: 50px 0 0;
+}
+
+@media (max-width: 900px) {
+  .breadcrumbs { width: 100%; max-width: 100%; }
+}

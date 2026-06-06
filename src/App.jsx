@@ -8,9 +8,11 @@ import CurrencyGuidePage from './components/pages/CurrencyGuidePage'
 import VisaPage from './components/pages/VisaPage'
 import LanguagesPage from './components/pages/LanguagesPage'
 import DestinationsPage from './components/pages/DestinationsPage'
-import TbilisiPage from './components/pages/TbilisiPage'
-import AkhaltsikhePage from './components/pages/AkhaltsikhePage'
-import AmbrolauriPage from './components/pages/AmbrolauriPage'
+import { RegionsHubPage, CitiesHubPage, PlacesToVisitHubPage } from './components/pages/DestinationHubs'
+import CityPage from './components/pages/CityPage'
+import RegionPage from './components/pages/RegionPage'
+import SitePage from './components/pages/SitePage'
+import LegacyCityRedirect from './components/pages/LegacyCityRedirect'
 import ThingsToDoTbilisiPage from './components/pages/ThingsToDoTbilisiPage'
 import ThingsToDoAkhaltsikhePage from './components/pages/ThingsToDoAkhaltsikhePage'
 import ThingsToDoAmbrolauriPage from './components/pages/ThingsToDoAmbrolauriPage'
@@ -40,9 +42,16 @@ export default function App() {
           <Route path="georgia-visa-entry-requirements" element={<VisaPage />} />
           <Route path="languages-of-georgia" element={<LanguagesPage />} />
           <Route path="destinations" element={<DestinationsPage />} />
-          <Route path="destinations/tbilisi" element={<TbilisiPage />} />
-          <Route path="destinations/akhaltsikhe" element={<AkhaltsikhePage />} />
-          <Route path="destinations/ambrolauri" element={<AmbrolauriPage />} />
+          <Route path="destinations/regions" element={<RegionsHubPage />} />
+          <Route path="destinations/cities" element={<CitiesHubPage />} />
+          <Route path="destinations/places-to-visit" element={<PlacesToVisitHubPage />} />
+          <Route path="destinations/cities/:citySlug" element={<CityPage />} />
+          <Route path="destinations/cities/:citySlug/places-to-visit/:siteSlug" element={<SitePage />} />
+          <Route path="destinations/regions/:regionSlug" element={<RegionPage />} />
+          <Route path="destinations/regions/:regionSlug/places-to-visit/:siteSlug" element={<SitePage />} />
+          {/* Legacy flat city URLs (e.g. /destinations/tbilisi) -> /destinations/cities/<city>.
+              Static segments above outrank this dynamic one, so the hubs still resolve. */}
+          <Route path="destinations/:legacyCitySlug" element={<LegacyCityRedirect />} />
           <Route path="things-to-do-in-tbilisi" element={<ThingsToDoTbilisiPage />} />
           <Route path="things-to-do-in-akhaltsikhe" element={<ThingsToDoAkhaltsikhePage />} />
           <Route path="things-to-do-in-ambrolauri" element={<ThingsToDoAmbrolauriPage />} />

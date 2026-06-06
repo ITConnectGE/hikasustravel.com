@@ -10,11 +10,17 @@
  */
 
 import { readFileSync, writeFileSync, mkdirSync, copyFileSync } from 'fs'
-import { fileURLToPath } from 'url'
+import { fileURLToPath, pathToFileURL } from 'url'
 import { dirname, join } from 'path'
 import { load } from 'cheerio'
 
 const __dirname = dirname(fileURLToPath(import.meta.url))
+
+// Destination registry (regions / cities / sites) — published detail pages and
+// the legacy flat-city URLs that must redirect to their new nested location.
+const { publishedDestinationPages, legacyCityRedirects } = await import(
+  pathToFileURL(join(__dirname, '../src/data/places.js')).href
+)
 const DIST = join(__dirname, '..', 'dist')
 const SITE_URL = 'https://www.hikasustravel.com'
 const LANGS = ['en', 'es', 'fr', 'de', 'pl', 'cs', 'nl']
@@ -156,9 +162,9 @@ const seoPageMap = {
   'georgia-visa-entry-requirements': 'visaGuide',
   'languages-of-georgia': 'languagesGuide',
   'destinations': 'destinations',
-  'destinations/tbilisi': 'tbilisi',
-  'destinations/akhaltsikhe': 'akhaltsikhe',
-  'destinations/ambrolauri': 'ambrolauri',
+  'destinations/regions': 'destinationsRegions',
+  'destinations/cities': 'destinationsCities',
+  'destinations/places-to-visit': 'destinationsPlaces',
   'things-to-do-in-tbilisi': 'thingsToDoTbilisi',
   'things-to-do-in-akhaltsikhe': 'thingsToDoAkhaltsikhe',
   'things-to-do-in-ambrolauri': 'thingsToDoAmbrolauri',
@@ -254,6 +260,20 @@ function escAttr(str) {
   return str.replace(/"/g, '&quot;').replace(/</g, '&lt;').replace(/>/g, '&gt;')
 }
 
+// Static redirect stub for an old URL -> its new canonical location. Crawlers
+// without JS follow the meta-refresh + canonical; the SPA router redirects
+// in-browser. Used for the legacy flat city URLs after the move under /cities.
+function writeRedirectStub(filePath, target) {
+  const $ = load(template)
+  $('head').prepend(`<meta http-equiv="refresh" content="0; url=${target}">`)
+  $('link[rel="canonical"]').attr('href', target)
+  $('meta[name="robots"]').remove()
+  $('head').append('<meta name="robots" content="noindex, follow">')
+  mkdirSync(dirname(filePath), { recursive: true })
+  writeFileSync(filePath, $.html(), 'utf-8')
+  fileCount++
+}
+
 // ---------------------------------------------------------------------------
 // 4. Generate all pages
 // ---------------------------------------------------------------------------
@@ -282,6 +302,27 @@ for (const lang of LANGS) {
       image: '/images/files/georgia-home.jpg',
       ogLocale,
     })
+  }
+
+  // --- Destination detail pages (regions / cities / sites) from the registry ---
+  for (const dest of publishedDestinationPages()) {
+    const data = getSEO(dest.seoKey, lang)
+    const canonical = `${SITE_URL}/${lang}/${dest.path}`
+    const filePath = join(DIST, lang, dest.path, 'index.html')
+    writeHtml(filePath, lang, {
+      title: data.title,
+      description: data.description,
+      keywords: data.keywords,
+      canonical,
+      image: dest.image || '/images/files/georgia-home.jpg',
+      ogLocale,
+    })
+  }
+
+  // --- Legacy flat city URLs -> redirect stubs to the new nested location ---
+  for (const { from, to } of legacyCityRedirects()) {
+    const filePath = join(DIST, lang, from, 'index.html')
+    writeRedirectStub(filePath, `${SITE_URL}/${lang}/${to}`)
   }
 
   // --- Tour detail pages ---

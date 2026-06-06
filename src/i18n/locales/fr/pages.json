@@ -73,7 +73,56 @@
   },
   "destinations": {
     "heroTitle": "Destinations en Georgie",
-    "intro": "La Georgie concentre une quantite enorme de choses dans un petit pays — une capitale facile a parcourir a pied, d'anciennes regions viticoles, des plages de la mer Noire et les hautes montagnes du Caucase. Nos guides de destinations decomposent tout cela ville par ville, avec ce qu'il faut voir, combien de temps rester et des conseils locaux honnetes. Nous commencons par la capitale, Tbilissi, et en ajouterons d'autres au fil du temps."
+    "intro": "La Georgie concentre une quantite enorme de choses dans un petit pays — une capitale facile a parcourir a pied, d'anciennes regions viticoles, des plages de la mer Noire et les hautes montagnes du Caucase. Explorez-la par region, par ville ou par les lieux qui meritent a eux seuls qu'on organise un voyage autour d'eux. Nos guides couvrent ce qu'il faut voir, combien de temps rester et des conseils locaux honnetes, et d'autres sont ajoutes au fil du temps."
+  },
+  "destinationsRegions": {
+    "heroTitle": "Regions de Georgie",
+    "intro": "La Georgie se divise en regions bien distinctes, chacune avec son propre paysage, sa cuisine et son histoire — des caves a vin de l'est aux hauts sommets du Caucase et a la cote de la mer Noire. Utilisez cet apercu pour trouver la region qui correspond a votre voyage ; des guides regionaux detailles sont ajoutes au fil du temps.",
+    "items": {
+      "kakheti": { "name": "Kakhétie", "description": "La region viticole de l'est de la Georgie — caves a qvevri, la ville perchee de Sighnaghi et la vallee de l'Alazani." },
+      "imereti": { "name": "Iméréthie", "description": "Une region centrale verdoyante autour de Koutaïssi, avec le monastere de Gelati et les grottes de Prométhée et de Sataplia." },
+      "adjara": { "name": "Adjarie", "description": "La cote de la mer Noire et les collines subtropicales autour de Batoumi, des plages a la foret pluviale de Mtirala." },
+      "samtskhe-javakheti": { "name": "Samtskhe-Javakheti", "description": "Les hautes terres du sud abritant le chateau de Rabati, la cite troglodyte de Vardzia et la ville thermale de Borjomi." },
+      "racha-lechkhumi": { "name": "Racha-Lechkhumi", "description": "Une region montagneuse paisible du nord-ouest, berceau du vin de Khvanchkara et de la cathedrale de Nikortsminda." },
+      "mtskheta-mtianeti": { "name": "Mtskheta-Mtianeti", "description": "De l'ancienne capitale Mtskheta au haut Caucase de Kazbegi et a l'eglise de la Trinité de Gergeti." },
+      "samegrelo": { "name": "Samegrelo", "description": "Les plaines de l'ouest avec les canyons de Martvili et d'Okatse et une cuisine mingrélienne bien particuliere." },
+      "svaneti": { "name": "Svanétie", "description": "Des vallees reculees du haut Caucase, celebres pour leurs maisons-tours medievales en pierre et la randonnee autour de Mestia et d'Ushguli." },
+      "guria": { "name": "Guria", "description": "Une petite region vallonnee entre les montagnes et la mer Noire, connue pour ses plantations de the." },
+      "shida-kartli": { "name": "Shida Kartli", "description": "Le centre de la Georgie autour de Gori, avec la ville troglodyte d'Uplistsikhe." },
+      "kvemo-kartli": { "name": "Kvemo Kartli", "description": "La region au sud de Tbilissi, avec le complexe monastique de David Gareja et des villages multiethniques." }
+    }
+  },
+  "destinationsCities": {
+    "heroTitle": "Villes de Georgie",
+    "intro": "Les villes de Georgie vont de la capitale animee et facile a parcourir a pied aux stations balneaires de la mer Noire, en passant par d'anciennes cites royales et des portes d'entree vers la montagne. Parcourez nos guides de villes pour savoir quoi voir, combien de temps rester et comment vous y rendre.",
+    "items": {
+      "tbilisi": { "name": "Tbilissi", "description": "La capitale et plus grande ville — les bains de soufre de la vieille ville, la forteresse de Narikala et une scene gastronomique et viticole renommee." },
+      "akhaltsikhe": { "name": "Akhaltsikhe", "description": "La ville-porte du sud au pied du chateau de Rabati, et la base pour Vardzia et Borjomi." },
+      "ambrolauri": { "name": "Ambrolauri", "description": "La petite capitale de la Racha et le coeur de la region viticole de Khvanchkara." },
+      "kutaisi": { "name": "Koutaïssi", "description": "La deuxieme ville de Georgie, une base detendue pour les monasteres et les grottes de l'Iméréthie." },
+      "batumi": { "name": "Batoumi", "description": "La ville balneaire de la mer Noire, avec son front de mer borde de palmiers et son architecture moderne audacieuse." },
+      "mtskheta": { "name": "Mtskheta", "description": "L'ancienne capitale royale et spirituelle, avec la cathedrale de Svetitskhoveli et le monastere de Jvari qui la domine." },
+      "telavi": { "name": "Telavi", "description": "La principale ville de la region viticole de Kakhétie, situee au-dessus de la vallee de l'Alazani." },
+      "sighnaghi": { "name": "Sighnaghi", "description": "Une ville fortifiee perchee de Kakhétie, connue pour ses vues, ses remparts et ses domaines viticoles." },
+      "borjomi": { "name": "Borjomi", "description": "Une ville thermale boisee, celebre pour son eau minerale et son parc national." },
+      "stepantsminda": { "name": "Stepantsminda (Kazbegi)", "description": "Une ville de montagne au pied du mont Kazbek et de l'eglise de la Trinité de Gergeti." }
+    }
+  },
+  "destinationsPlaces": {
+    "heroTitle": "Que visiter en Georgie",
+    "intro": "Des cites troglodytes et des monasteres perches aux canyons et aux jardins en bord de mer, voici les sites qui meritent qu'on organise un voyage autour d'eux. Chacun se trouve dans une ville ou une region — ouvrez son guide pour les details de visite, ou demandez-nous des tours qui l'incluent.",
+    "items": {
+      "narikala-fortress": { "name": "Forteresse de Narikala", "description": "L'ancienne forteresse qui veille sur la vieille ville de Tbilissi, accessible a pied ou par telepherique." },
+      "jvari-monastery": { "name": "Monastere de Jvari", "description": "Une eglise du VIe siecle perchee au-dessus de Mtskheta, surplombant la rencontre de deux rivieres." },
+      "uplistsikhe-cave-town": { "name": "Ville troglodyte d'Uplistsikhe", "description": "Une ville taillee dans les falaises pres de Gori, habitee depuis des milliers d'annees." },
+      "prometheus-cave": { "name": "Grotte de Prométhée", "description": "Une grande grotte amenagee aux salles illuminees et aux rivieres souterraines, pres de Koutaïssi, en Iméréthie." },
+      "gelati-monastery": { "name": "Monastere de Gelati", "description": "Un monastere medieval classe a l'UNESCO et ancienne academie pres de Koutaïssi, riche en mosaiques et en fresques." },
+      "vardzia": { "name": "Vardzia", "description": "Un vaste monastere troglodyte du XIIe siecle creuse dans une paroi rocheuse du sud de la Georgie." },
+      "gergeti-trinity-church": { "name": "Eglise de la Trinité de Gergeti", "description": "Une eglise solitaire du XIVe siecle dressee au pied du mont Kazbek, dans le haut Caucase." },
+      "batumi-botanical-garden": { "name": "Jardin botanique de Batoumi", "description": "Un vaste jardin en bord de mer rassemblant des plantes du monde entier, au nord de Batoumi." },
+      "martvili-canyon": { "name": "Canyon de Martvili", "description": "Un canyon fluvial luxuriant du Samegrelo aux eaux turquoise et aux courtes promenades en barque." },
+      "katskhi-pillar": { "name": "Pilier de Katskhi", "description": "Une petite eglise perchee au sommet d'un pilier de calcaire naturel, en Iméréthie." }
+    }
   },
   "akhaltsikhe": {
     "heroTitle": "Akhaltsikhe, Georgie : le chateau de Rabati, Vardzia et la porte du Sud",

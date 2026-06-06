@@ -73,7 +73,56 @@
   },
   "destinations": {
     "heroTitle": "Destinace v Gruzii",
-    "intro": "Gruzie nabizi obrovske mnozstvi v male zemi — hlavni mesto vhodne k prochazkam, starobyle vinarske oblasti, plaze Cerneho more a vysoke kavkazske hory. Nasi pruvodci po destinacich vse rozeberou mesto po meste, s tim, co videt, jak dlouho zustat a poctivymi mistnimi radami. Zaciname hlavnim mestem Tbilisi a postupem casu pridavame dalsi."
+    "intro": "Gruzie toho do malé země vměstná obrovské množství — hlavní město vhodné k procházkám, starobylé vinařské oblasti, pláže Černého moře a vysoké kavkazské hory. Prozkoumejte ji podle regionu, podle města nebo podle jednotlivých míst, kvůli kterým stojí za to naplánovat cestu. Naši průvodci popisují, co vidět, jak dlouho zůstat a přinášejí poctivé místní rady, přičemž jich postupem času přibývá."
+  },
+  "destinationsRegions": {
+    "heroTitle": "Regiony Gruzie",
+    "intro": "Gruzie se dělí na výrazně odlišné regiony, každý s vlastní krajinou, jídlem a historií — od vinných sklepů na východě po vysoké kavkazské vrcholky a pobřeží Černého moře. Použijte tento přehled k nalezení regionu, který se hodí pro vaši cestu; podrobní průvodci jednotlivými regiony postupem času přibývají.",
+    "items": {
+      "kakheti": { "name": "Kachetie", "description": "Východní vinařská oblast Gruzie — sklepy s kvevri, městečko Sighnaghi na kopci a Alazanské údolí." },
+      "imereti": { "name": "Imeretie", "description": "Zelený středogruzínský region kolem Kutaisi s klášterem Gelati a jeskyněmi Prométheova a Sataplia." },
+      "adjara": { "name": "Adžárie", "description": "Pobřeží Černého moře a subtropické kopce kolem Batumi, od pláží po deštný prales Mtirala." },
+      "samtskhe-javakheti": { "name": "Samcche-Džavachetie", "description": "Jižní vrchovina s hradem Rabati, jeskynním městem Vardzia a lázeňským městečkem Borjomi." },
+      "racha-lechkhumi": { "name": "Rača-Lečchumi", "description": "Tichý horský region na severozápadě, domov vína Khvanchkara a katedrály Nikortsminda." },
+      "mtskheta-mtianeti": { "name": "Mccheta-Mtianeti", "description": "Od starobylého hlavního města Mccheta po vysoký Kavkaz u Kazbegi a kostel Nejsvětější Trojice v Gergeti." },
+      "samegrelo": { "name": "Samegrelo", "description": "Západní nížiny s kaňony Martvili a Okatse a osobitou mingrelskou kuchyní." },
+      "svaneti": { "name": "Svanetie", "description": "Odlehlá vysokohorská kavkazská údolí proslulá středověkými kamennými obytnými věžemi a treky kolem Mestie a Ushguli." },
+      "guria": { "name": "Gurie", "description": "Malý kopcovitý region mezi horami a Černým mořem, známý svými čajovými plantážemi." },
+      "shida-kartli": { "name": "Šida Kartli", "description": "Střední Gruzie kolem Gori, se skalním městem Uplisciche." },
+      "kvemo-kartli": { "name": "Kvemo Kartli", "description": "Region jižně od Tbilisi, s klášterním komplexem David Gareja a národnostně smíšenými vesnicemi." }
+    }
+  },
+  "destinationsCities": {
+    "heroTitle": "Města Gruzie",
+    "intro": "Města Gruzie sahají od živého hlavního města vhodného k procházkám po černomořská letoviska, starobylá královská sídla a horské brány. Projděte si naše průvodce městy, abyste věděli, co vidět, jak dlouho zůstat a jak se tam dostat.",
+    "items": {
+      "tbilisi": { "name": "Tbilisi", "description": "Hlavní a největší město — sirné lázně Starého Města, pevnost Narikala a proslulá gastronomická a vinařská scéna." },
+      "akhaltsikhe": { "name": "Akhaltsikhe", "description": "Jižní brána pod hradem Rabati a základna pro Vardzia a Borjomi." },
+      "ambrolauri": { "name": "Ambrolauri", "description": "Malé hlavní město Rači a srdce vinařské oblasti Khvanchkara." },
+      "kutaisi": { "name": "Kutaisi", "description": "Druhé největší město Gruzie, klidná základna pro kláštery a jeskyně Imeretie." },
+      "batumi": { "name": "Batumi", "description": "Letovisko u Černého moře s pobřežím lemovaným palmami a odvážnou moderní architekturou." },
+      "mtskheta": { "name": "Mccheta", "description": "Starobylé královské a duchovní hlavní město s katedrálou Svetitskhoveli a klášterem Jvari nad ním." },
+      "telavi": { "name": "Telavi", "description": "Hlavní město kachetské vinařské oblasti, položené nad Alazanským údolím." },
+      "sighnaghi": { "name": "Sighnaghi", "description": "Opevněné městečko na kopci v Kachetii, známé svými výhledy, hradbami a vinařstvími." },
+      "borjomi": { "name": "Borjomi", "description": "Zalesněné lázeňské městečko proslulé minerální vodou a národním parkem." },
+      "stepantsminda": { "name": "Stepancminda (Kazbegi)", "description": "Horské městečko pod horou Kazbek a kostelem Nejsvětější Trojice v Gergeti." }
+    }
+  },
+  "destinationsPlaces": {
+    "heroTitle": "Místa, která navštívit v Gruzii",
+    "intro": "Od jeskynních měst a klášterů na útesech po kaňony a zahrady u moře — to jsou památky, kvůli kterým stojí za to naplánovat cestu. Každá leží v některém městě nebo regionu — otevřete si jejího průvodce s podrobnostmi o návštěvě, nebo se nás zeptejte na zájezdy, které ji zahrnují.",
+    "items": {
+      "narikala-fortress": { "name": "Pevnost Narikala", "description": "Starobylá pevnost střežící Staré Město Tbilisi, dostupná pěšky nebo lanovkou." },
+      "jvari-monastery": { "name": "Klášter Jvari", "description": "Kostel z 6. století na kopci nad Mcchetou, s výhledem na soutok dvou řek." },
+      "uplistsikhe-cave-town": { "name": "Skalní město Uplisciche", "description": "Skalní město vytesané do útesů u Gori, obývané po tisíce let." },
+      "prometheus-cave": { "name": "Prométheova jeskyně", "description": "Velká zpřístupněná jeskyně s nasvícenými síněmi a podzemními řekami u Kutaisi, v Imeretii." },
+      "gelati-monastery": { "name": "Klášter Gelati", "description": "Středověký klášter a bývalá akademie u Kutaisi zapsaná na seznam UNESCO, bohatá na mozaiky a fresky." },
+      "vardzia": { "name": "Vardzia", "description": "Rozlehlý jeskynní klášter z 12. století vytesaný do skalní stěny na jihu Gruzie." },
+      "gergeti-trinity-church": { "name": "Kostel Nejsvětější Trojice v Gergeti", "description": "Osamělý kostel ze 14. století pod horou Kazbek ve vysokém Kavkaze." },
+      "batumi-botanical-garden": { "name": "Batumská botanická zahrada", "description": "Rozlehlá přímořská zahrada s rostlinami z celého světa, severně od Batumi." },
+      "martvili-canyon": { "name": "Kaňon Martvili", "description": "Bujný říční kaňon v Samegrelu s tyrkysovou vodou a krátkými projížďkami na loďce." },
+      "katskhi-pillar": { "name": "Katskhi Pillar", "description": "Malý kostel na vrcholu přírodního vápencového pilíře v Imeretii." }
+    }
   },
   "akhaltsikhe": {
     "heroTitle": "Akhaltsikhe, Gruzie: hrad Rabati, Vardzia a brána na jih",

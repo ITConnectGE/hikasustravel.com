@@ -1,8 +1,13 @@
 import { readFileSync, writeFileSync } from 'fs'
-import { fileURLToPath } from 'url'
+import { fileURLToPath, pathToFileURL } from 'url'
 import { dirname, join } from 'path'
 
 const __dirname = dirname(fileURLToPath(import.meta.url))
+
+// Published destination detail pages (regions / cities / sites) from the registry.
+const { publishedDestinationPages } = await import(
+  pathToFileURL(join(__dirname, '../src/data/places.js')).href
+)
 
 // Parse tours data from the source file
 const toursFile = readFileSync(join(__dirname, '../src/data/tours.js'), 'utf-8')
@@ -25,9 +30,9 @@ const staticPages = [
   { path: 'georgia-visa-entry-requirements', changefreq: 'monthly', priority: '0.7' },
   { path: 'languages-of-georgia', changefreq: 'monthly', priority: '0.6' },
   { path: 'destinations', changefreq: 'monthly', priority: '0.7' },
-  { path: 'destinations/tbilisi', changefreq: 'monthly', priority: '0.7' },
-  { path: 'destinations/akhaltsikhe', changefreq: 'monthly', priority: '0.7' },
-  { path: 'destinations/ambrolauri', changefreq: 'monthly', priority: '0.7' },
+  { path: 'destinations/regions', changefreq: 'monthly', priority: '0.7' },
+  { path: 'destinations/cities', changefreq: 'monthly', priority: '0.7' },
+  { path: 'destinations/places-to-visit', changefreq: 'monthly', priority: '0.7' },
   { path: 'things-to-do-in-tbilisi', changefreq: 'monthly', priority: '0.7' },
   { path: 'things-to-do-in-akhaltsikhe', changefreq: 'monthly', priority: '0.7' },
   { path: 'things-to-do-in-ambrolauri', changefreq: 'monthly', priority: '0.7' },
@@ -54,6 +59,11 @@ for (const page of staticPages) {
 for (const tour of tours) {
   const prefix = tour.type === 'group' ? 'group-tours' : 'private-tours'
   allPaths.push({ path: `${prefix}/${tour.slug}`, changefreq: 'monthly', priority: '0.8' })
+}
+
+// Published destination detail pages (cities/regions/sites) at their nested URLs.
+for (const dest of publishedDestinationPages()) {
+  allPaths.push({ path: dest.path, changefreq: 'monthly', priority: '0.7' })
 }
 
 // Generate URL entries with hreflang alternates

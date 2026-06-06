@@ -73,7 +73,56 @@
   },
   "destinations": {
     "heroTitle": "Destinos en Georgia",
-    "intro": "Georgia concentra una enorme cantidad de cosas en un pais pequeno: una capital facil de recorrer a pie, antiguas regiones vinicolas, playas del Mar Negro y altas montanas del Caucaso. Nuestras guias de destinos lo desglosan ciudad por ciudad, con que ver, cuanto tiempo quedarse y consejos locales honestos. Empezamos por la capital, Tiflis, y vamos anadiendo mas con el tiempo."
+    "intro": "Georgia concentra una enorme cantidad de cosas en un pais pequeno: una capital facil de recorrer a pie, antiguas regiones vinicolas, playas del mar Negro y altas montanas del Caucaso. Explorala por region, por ciudad o por los lugares concretos que merecen un viaje. Nuestras guias cubren que ver, cuanto tiempo quedarse y consejos locales honestos, y vamos anadiendo mas con el tiempo."
+  },
+  "destinationsRegions": {
+    "heroTitle": "Regiones de Georgia",
+    "intro": "Georgia se divide en regiones bien diferenciadas, cada una con su propio paisaje, gastronomia e historia: desde las bodegas vinicolas del este hasta los altos picos del Caucaso y la costa del mar Negro. Usa esta vision general para encontrar la region que encaja con tu viaje; las guias regionales detalladas se van anadiendo con el tiempo.",
+    "items": {
+      "kakheti": { "name": "Kakheti", "description": "La region vinicola del este de Georgia: bodegas de qvevri, el pueblo en lo alto de Sighnaghi y el valle de Alazani." },
+      "imereti": { "name": "Imereti", "description": "Una region verde del centro en torno a Kutaisi, con el monasterio de Gelati y las cuevas de Prometeo y Sataplia." },
+      "adjara": { "name": "Adjara", "description": "La costa del mar Negro y las colinas subtropicales en torno a Batumi, desde las playas hasta la selva de Mtirala." },
+      "samtskhe-javakheti": { "name": "Samtskhe-Javakheti", "description": "Tierras altas del sur que albergan el castillo Rabati, la ciudad rupestre de Vardzia y la ciudad balneario de Borjomi." },
+      "racha-lechkhumi": { "name": "Racha-Lechkhumi", "description": "Una tranquila region de montana en el noroeste, cuna del vino Khvanchkara y de la catedral de Nikortsminda." },
+      "mtskheta-mtianeti": { "name": "Mtskheta-Mtianeti", "description": "Desde la antigua capital Mtskheta hasta el alto Caucaso en Kazbegi y la iglesia de la Trinidad de Gergeti." },
+      "samegrelo": { "name": "Samegrelo", "description": "Tierras bajas del oeste con los canones de Martvili y Okatse y una cocina mingreliana caracteristica." },
+      "svaneti": { "name": "Svaneti", "description": "Remotos valles del alto Caucaso famosos por sus casas-torre medievales de piedra y el trekking en torno a Mestia y Ushguli." },
+      "guria": { "name": "Guria", "description": "Una pequena region montanosa entre las montanas y el mar Negro, conocida por sus plantaciones de te." },
+      "shida-kartli": { "name": "Shida Kartli", "description": "El centro de Georgia en torno a Gori, con la ciudad excavada en la roca de Uplistsikhe." },
+      "kvemo-kartli": { "name": "Kvemo Kartli", "description": "La region al sur de Tiflis, con el complejo monastico de David Gareja y pueblos multietnicos." }
+    }
+  },
+  "destinationsCities": {
+    "heroTitle": "Ciudades de Georgia",
+    "intro": "Las ciudades de Georgia van desde la animada capital, facil de recorrer a pie, hasta los balnearios del mar Negro, antiguas ciudades reales y puertas de entrada a la montana. Explora nuestras guias de ciudades para saber que ver, cuanto tiempo quedarse y como llegar.",
+    "items": {
+      "tbilisi": { "name": "Tiflis", "description": "La capital y la ciudad mas grande: los banos de azufre del casco antiguo, la fortaleza Narikala y una famosa escena gastronomica y vinicola." },
+      "akhaltsikhe": { "name": "Akhaltsikhe", "description": "Ciudad meridional, puerta de entrada al pie del castillo Rabati y base para Vardzia y Borjomi." },
+      "ambrolauri": { "name": "Ambrolauri", "description": "La pequena capital de Racha y el corazon de la region vinicola de Khvanchkara." },
+      "kutaisi": { "name": "Kutaisi", "description": "La segunda ciudad de Georgia, una base relajada para los monasterios y las cuevas de Imereti." },
+      "batumi": { "name": "Batumi", "description": "La ciudad balneario del mar Negro, con un paseo maritimo bordeado de palmeras y una arquitectura moderna atrevida." },
+      "mtskheta": { "name": "Mtskheta", "description": "La antigua capital real y espiritual, con la catedral de Svetitskhoveli y el monasterio de Jvari sobre ella." },
+      "telavi": { "name": "Telavi", "description": "La ciudad principal de la region vinicola de Kakheti, situada sobre el valle de Alazani." },
+      "sighnaghi": { "name": "Sighnaghi", "description": "Una ciudad amurallada en lo alto de una colina en Kakheti, conocida por sus vistas, sus murallas y sus bodegas." },
+      "borjomi": { "name": "Borjomi", "description": "Una ciudad balneario rodeada de bosque, famosa por su agua mineral y su parque nacional." },
+      "stepantsminda": { "name": "Stepantsminda (Kazbegi)", "description": "Una ciudad de montana al pie del monte Kazbek y de la iglesia de la Trinidad de Gergeti." }
+    }
+  },
+  "destinationsPlaces": {
+    "heroTitle": "Que visitar en Georgia",
+    "intro": "Desde ciudades rupestres y monasterios en acantilados hasta canones y jardines junto al mar, estos son los lugares emblematicos que merecen un viaje. Cada uno se encuentra dentro de una ciudad o region: abre su guia para conocer los detalles de la visita, o preguntanos por tours que lo incluyan.",
+    "items": {
+      "narikala-fortress": { "name": "Fortaleza Narikala", "description": "La antigua fortaleza que vela sobre el casco antiguo de Tiflis, accesible a pie o en teleferico." },
+      "jvari-monastery": { "name": "Monasterio de Jvari", "description": "Una iglesia del siglo VI en lo alto de una colina sobre Mtskheta, con vistas a la confluencia de dos rios." },
+      "uplistsikhe-cave-town": { "name": "Ciudad rupestre de Uplistsikhe", "description": "Una ciudad excavada en los acantilados cerca de Gori, habitada durante miles de anos." },
+      "prometheus-cave": { "name": "Cueva de Prometeo", "description": "Una gran cueva turistica de salas iluminadas y rios subterraneos cerca de Kutaisi, en Imereti." },
+      "gelati-monastery": { "name": "Monasterio de Gelati", "description": "Un monasterio medieval y antigua academia declarado Patrimonio de la Humanidad por la UNESCO cerca de Kutaisi, rico en mosaicos y frescos." },
+      "vardzia": { "name": "Vardzia", "description": "Un vasto monasterio rupestre del siglo XII excavado en la pared de un acantilado en el sur de Georgia." },
+      "gergeti-trinity-church": { "name": "Iglesia de la Trinidad de Gergeti", "description": "Una iglesia solitaria del siglo XIV situada al pie del monte Kazbek en el alto Caucaso." },
+      "batumi-botanical-garden": { "name": "Jardin botanico de Batumi", "description": "Un extenso jardin junto al mar con plantas de todo el mundo, al norte de Batumi." },
+      "martvili-canyon": { "name": "Canon de Martvili", "description": "Un frondoso canon fluvial en Samegrelo con aguas turquesa y cortos paseos en barca." },
+      "katskhi-pillar": { "name": "Pilar de Katskhi", "description": "Una pequena iglesia encaramada en la cima de un pilar natural de piedra caliza en Imereti." }
+    }
   },
   "akhaltsikhe": {
     "heroTitle": "Akhaltsikhe, Georgia: el castillo Rabati, Vardzia y la puerta de entrada al sur",

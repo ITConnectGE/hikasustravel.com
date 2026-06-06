@@ -73,7 +73,56 @@
   },
   "destinations": {
     "heroTitle": "Reiseziele in Georgien",
-    "intro": "Georgien vereint auf engem Raum eine enorme Vielfalt - eine zu Fuss erkundbare Hauptstadt, uralte Weinregionen, Strande am Schwarzen Meer und die hohen Berge des Kaukasus. Unsere Reisezielfuhrer schlusseln das Stadt fur Stadt auf, mit dem, was es zu sehen gibt, wie lange man bleiben sollte, und ehrlichen lokalen Tipps. Wir beginnen mit der Hauptstadt Tiflis und erganzen mit der Zeit weitere."
+    "intro": "Georgien vereint auf engem Raum eine enorme Vielfalt - eine zu Fuss erkundbare Hauptstadt, uralte Weinregionen, Strande am Schwarzen Meer und die hohen Berge des Kaukasus. Erkunden Sie es nach Region, nach Stadt oder nach den einzelnen Orten, um die sich eine Reise planen lasst. Unsere Reisefuhrer behandeln, was es zu sehen gibt, wie lange man bleiben sollte, und geben ehrliche lokale Tipps, wobei mit der Zeit weitere hinzukommen."
+  },
+  "destinationsRegions": {
+    "heroTitle": "Regionen Georgiens",
+    "intro": "Georgien gliedert sich in deutlich unterschiedliche Regionen, jede mit ihrer eigenen Landschaft, Kuche und Geschichte - von den Weinkellern im Osten uber die hohen Kaukasusgipfel bis zur Schwarzmeerkuste. Nutzen Sie diesen Uberblick, um die Region zu finden, die zu Ihrer Reise passt; ausfuhrliche Regionalfuhrer kommen mit der Zeit hinzu.",
+    "items": {
+      "kakheti": { "name": "Kachetien", "description": "Georgiens ostliches Weinland - Kwewri-Keller, das auf einem Hugel gelegene Stadtchen Sighnaghi und das Alasani-Tal." },
+      "imereti": { "name": "Imeretien", "description": "Eine grune Region in Zentralgeorgien rund um Kutaissi, mit dem Kloster Gelati und den Hohlen von Prometheus und Sataplia." },
+      "adjara": { "name": "Adscharien", "description": "Die Schwarzmeerkuste und die subtropischen Hugel rund um Batumi, von Stranden bis zum Regenwald von Mtirala." },
+      "samtskhe-javakheti": { "name": "Samzche-Dschawachetien", "description": "Das sudliche Hochland mit der Festung Rabati, der Hohlenstadt Vardzia und dem Kurort Borjomi." },
+      "racha-lechkhumi": { "name": "Ratscha-Letschchumi", "description": "Eine ruhige Bergregion im Nordwesten, Heimat des Chwantschkara-Weins und der Kathedrale von Nikorzminda." },
+      "mtskheta-mtianeti": { "name": "Mzcheta-Mtianeti", "description": "Von der alten Hauptstadt Mzcheta bis zum Hohen Kaukasus bei Kasbegi und der Gergeti-Dreifaltigkeitskirche." },
+      "samegrelo": { "name": "Samegrelo", "description": "Das westliche Tiefland mit den Schluchten von Martwili und Okatse und einer eigenstandigen mingrelischen Kuche." },
+      "svaneti": { "name": "Swanetien", "description": "Abgelegene Hochtaler des Kaukasus, beruhmt fur mittelalterliche steinerne Wehrturme und Trekking rund um Mestia und Uschguli." },
+      "guria": { "name": "Gurien", "description": "Eine kleine, hugelige Region zwischen den Bergen und dem Schwarzen Meer, bekannt fur ihre Teeplantagen." },
+      "shida-kartli": { "name": "Schida Kartli", "description": "Zentralgeorgien rund um Gori, mit der in den Fels gehauenen Stadt Uplisziche." },
+      "kvemo-kartli": { "name": "Kwemo Kartli", "description": "Die Region sudlich von Tiflis, mit dem Klosterkomplex Dawit Garedscha und multiethnischen Dorfern." }
+    }
+  },
+  "destinationsCities": {
+    "heroTitle": "Stadte Georgiens",
+    "intro": "Georgiens Stadte reichen von der lebendigen, zu Fuss erkundbaren Hauptstadt uber Schwarzmeer-Badeorte und alte Konigsstadte bis zu Toren in die Berge. Stobern Sie in unseren Stadtfuhrern, was es zu sehen gibt, wie lange man bleiben sollte und wie man hinkommt.",
+    "items": {
+      "tbilisi": { "name": "Tiflis", "description": "Die Hauptstadt und grosste Stadt - Schwefelbader der Altstadt, die Festung Narikala und eine beruhmte Ess- und Weinszene." },
+      "akhaltsikhe": { "name": "Akhaltsikhe", "description": "Sudliche Torstadt unterhalb der Festung Rabati und Ausgangspunkt fur Vardzia und Borjomi." },
+      "ambrolauri": { "name": "Ambrolauri", "description": "Die kleine Hauptstadt von Ratscha und das Herz des Chwantschkara-Weinlands." },
+      "kutaisi": { "name": "Kutaissi", "description": "Georgiens zweitgrosste Stadt, ein entspannter Ausgangspunkt fur die Kloster und Hohlen Imeretiens." },
+      "batumi": { "name": "Batumi", "description": "Die Badestadt am Schwarzen Meer, mit einer von Palmen gesaumten Strandpromenade und kuhner moderner Architektur." },
+      "mtskheta": { "name": "Mzcheta", "description": "Die alte konigliche und geistliche Hauptstadt, mit der Swetizchoweli-Kathedrale und dem Dschwari-Kloster daruber." },
+      "telavi": { "name": "Telawi", "description": "Die wichtigste Stadt der Weinregion Kachetien, gelegen oberhalb des Alasani-Tals." },
+      "sighnaghi": { "name": "Sighnaghi", "description": "Eine von Mauern umgebene Stadt auf einem Hugel in Kachetien, bekannt fur ihre Ausblicke, Wehrmauern und Weinguter." },
+      "borjomi": { "name": "Borjomi", "description": "Ein bewaldeter Kurort, beruhmt fur sein Mineralwasser und seinen Nationalpark." },
+      "stepantsminda": { "name": "Stepanzminda (Kasbegi)", "description": "Eine Bergstadt unterhalb des Kasbek und der Gergeti-Dreifaltigkeitskirche." }
+    }
+  },
+  "destinationsPlaces": {
+    "heroTitle": "Sehenswurdigkeiten in Georgien",
+    "intro": "Von Hohlenstadten und Klostern auf Klippen bis zu Schluchten und Garten am Meer - dies sind die Wahrzeichen, um die sich eine Reise planen lasst. Jedes liegt in einer Stadt oder Region - offnen Sie den jeweiligen Fuhrer fur Besuchshinweise oder fragen Sie uns nach Touren, die es einschliessen.",
+    "items": {
+      "narikala-fortress": { "name": "Festung Narikala", "description": "Die alte Festung, die uber der Altstadt von Tiflis wacht, zu Fuss oder mit der Seilbahn erreichbar." },
+      "jvari-monastery": { "name": "Dschwari-Kloster", "description": "Eine Hugelkirche aus dem 6. Jahrhundert oberhalb von Mzcheta, mit Blick auf den Zusammenfluss zweier Flusse." },
+      "uplistsikhe-cave-town": { "name": "Hohlenstadt Uplisziche", "description": "Eine in die Klippen bei Gori gehauene Felsenstadt, die seit Tausenden von Jahren bewohnt ist." },
+      "prometheus-cave": { "name": "Prometheus-Hohle", "description": "Eine grosse Schauhohle mit beleuchteten Kammern und unterirdischen Flussen bei Kutaissi in Imeretien." },
+      "gelati-monastery": { "name": "Kloster Gelati", "description": "Ein mittelalterliches, von der UNESCO gelistetes Kloster und ehemalige Akademie bei Kutaissi, reich an Mosaiken und Fresken." },
+      "vardzia": { "name": "Vardzia", "description": "Ein weitlaufiges Hohlenkloster aus dem 12. Jahrhundert, in eine Felswand im Suden Georgiens gehauen." },
+      "gergeti-trinity-church": { "name": "Gergeti-Dreifaltigkeitskirche", "description": "Eine einsame Kirche aus dem 14. Jahrhundert unterhalb des Kasbek im Hohen Kaukasus." },
+      "batumi-botanical-garden": { "name": "Botanischer Garten Batumi", "description": "Ein weitlaufiger Garten am Meer mit Pflanzen aus aller Welt, nordlich von Batumi." },
+      "martvili-canyon": { "name": "Martwili-Schlucht", "description": "Eine uppige Flussschlucht in Samegrelo mit turkisfarbenem Wasser und kurzen Bootsfahrten." },
+      "katskhi-pillar": { "name": "Katschi-Saule", "description": "Eine kleine Kirche auf der Spitze einer naturlichen Kalksteinsaule in Imeretien." }
+    }
   },
   "akhaltsikhe": {
     "heroTitle": "Akhaltsikhe, Georgien: die Festung Rabati, Vardzia und das Tor zum Sueden",

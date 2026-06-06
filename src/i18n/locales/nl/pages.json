@@ -73,7 +73,56 @@
   },
   "destinations": {
     "heroTitle": "Bestemmingen in Georgië",
-    "intro": "Georgië propt een enorme hoeveelheid in een klein land — een wandelvriendelijke hoofdstad, oude wijnregio's, stranden aan de Zwarte Zee en hoge Kaukasusbergen. Onze bestemmingsgidsen splitsen het stad voor stad uit, met wat te zien, hoe lang te blijven en eerlijke lokale tips. We beginnen met de hoofdstad, Tbilisi, en voegen er na verloop van tijd meer toe."
+    "intro": "Georgië propt een enorme hoeveelheid in een klein land — een wandelvriendelijke hoofdstad, oude wijnregio's, stranden aan de Zwarte Zee en hoge Kaukasusbergen. Verken het per regio, per stad of via de afzonderlijke plekken die het waard zijn om een reis omheen te plannen. Onze gidsen behandelen wat te zien, hoe lang te blijven en eerlijke lokale tips, met na verloop van tijd steeds meer toevoegingen."
+  },
+  "destinationsRegions": {
+    "heroTitle": "Regio's van Georgië",
+    "intro": "Georgië is opgedeeld in afzonderlijke regio's, elk met een eigen landschap, keuken en geschiedenis — van de wijnkelders in het oosten tot de hoge Kaukasustoppen en de kust van de Zwarte Zee. Gebruik dit overzicht om de regio te vinden die bij je reis past; gedetailleerde regionale gidsen worden na verloop van tijd toegevoegd.",
+    "items": {
+      "kakheti": { "name": "Kachetië", "description": "Het oostelijke wijngebied van Georgië — qvevri-kelders, het heuveltopstadje Sighnaghi en de Alazani-vallei." },
+      "imereti": { "name": "Imeretië", "description": "Een groene centrale regio rond Kutaisi, met het Gelati-klooster en de Prometheus- en Sataplia-grotten." },
+      "adjara": { "name": "Adzjarië", "description": "De kust van de Zwarte Zee en de subtropische heuvels rond Batumi, van stranden tot het regenwoud van Mtirala." },
+      "samtskhe-javakheti": { "name": "Samtskhe-Javakheti", "description": "Zuidelijke hooglanden met het Rabati-kasteel, de grottenstad Vardzia en het kuuroordstadje Borjomi." },
+      "racha-lechkhumi": { "name": "Racha-Lechkhumi", "description": "Een rustige bergregio in het noordwesten, het thuisland van Khvanchkara-wijn en de Nikortsminda-kathedraal." },
+      "mtskheta-mtianeti": { "name": "Mtskheta-Mtianeti", "description": "Van de oude hoofdstad Mtskheta tot de hoge Kaukasus bij Kazbegi en de Drie-eenheidskerk van Gergeti." },
+      "samegrelo": { "name": "Samegrelo", "description": "Westelijke laaglanden met de Martvili- en Okatse-kloven en een kenmerkende Mingrelische keuken." },
+      "svaneti": { "name": "Svanetië", "description": "Afgelegen valleien in de hoge Kaukasus, beroemd om hun middeleeuwse stenen torenhuizen en het trekken rond Mestia en Ushguli." },
+      "guria": { "name": "Guria", "description": "Een kleine, heuvelachtige regio tussen de bergen en de Zwarte Zee, bekend om haar theeplantages." },
+      "shida-kartli": { "name": "Shida Kartli", "description": "Centraal-Georgië rond Gori, met het in de rotsen uitgehouwen stadje Uplistsikhe." },
+      "kvemo-kartli": { "name": "Kvemo Kartli", "description": "De regio ten zuiden van Tbilisi, met het kloostercomplex David Gareja en multi-etnische dorpen." }
+    }
+  },
+  "destinationsCities": {
+    "heroTitle": "Steden van Georgië",
+    "intro": "De steden van Georgië lopen uiteen van de levendige, wandelvriendelijke hoofdstad tot badplaatsen aan de Zwarte Zee, oude koningssteden en bergpoorten. Blader door onze stadsgidsen voor wat te zien, hoe lang te blijven en hoe er te komen.",
+    "items": {
+      "tbilisi": { "name": "Tbilisi", "description": "De hoofdstad en grootste stad — de zwavelbaden van de oude binnenstad, het fort Narikala en een beroemde eet- en wijnscene." },
+      "akhaltsikhe": { "name": "Akhaltsikhe", "description": "Zuidelijke poortstad onder het Rabati-kasteel, en de uitvalsbasis voor Vardzia en Borjomi." },
+      "ambrolauri": { "name": "Ambrolauri", "description": "De kleine hoofdstad van Racha en het hart van het Khvanchkara-wijngebied." },
+      "kutaisi": { "name": "Kutaisi", "description": "De tweede stad van Georgië, een ontspannen uitvalsbasis voor de kloosters en grotten van Imeretië." },
+      "batumi": { "name": "Batumi", "description": "De badplaats aan de Zwarte Zee, met een met palmen omzoomde boulevard en gedurfde moderne architectuur." },
+      "mtskheta": { "name": "Mtskheta", "description": "De oude koninklijke en spirituele hoofdstad, met de Svetitskhoveli-kathedraal en het Jvari-klooster erboven." },
+      "telavi": { "name": "Telavi", "description": "De belangrijkste stad van het wijngebied Kachetië, gelegen boven de Alazani-vallei." },
+      "sighnaghi": { "name": "Sighnaghi", "description": "Een ommuurd heuveltopstadje in Kachetië, bekend om zijn uitzichten, vestingmuren en wijnhuizen." },
+      "borjomi": { "name": "Borjomi", "description": "Een bebost kuuroordstadje, beroemd om zijn mineraalwater en nationaal park." },
+      "stepantsminda": { "name": "Stepantsminda (Kazbegi)", "description": "Een bergstadje onder de berg Kazbek en de Drie-eenheidskerk van Gergeti." }
+    }
+  },
+  "destinationsPlaces": {
+    "heroTitle": "Bezienswaardigheden in Georgië",
+    "intro": "Van grottensteden en kloosters op kliffen tot kloven en tuinen aan zee — dit zijn de bezienswaardigheden die het waard zijn om een reis omheen te plannen. Elk ligt binnen een stad of regio — open de gids ervoor voor bezoekdetails, of vraag ons naar tours die het bevatten.",
+    "items": {
+      "narikala-fortress": { "name": "Fort Narikala", "description": "Het oude fort dat over de oude binnenstad van Tbilisi waakt, te bereiken te voet of met de kabelbaan." },
+      "jvari-monastery": { "name": "Jvari-klooster", "description": "Een 6e-eeuwse kerk op een heuveltop boven Mtskheta, met uitzicht op de samenvloeiing van twee rivieren." },
+      "uplistsikhe-cave-town": { "name": "Grottenstad Uplistsikhe", "description": "Een in de rotsen uitgehouwen stadje bij Gori, al duizenden jaren bewoond." },
+      "prometheus-cave": { "name": "Prometheusgrot", "description": "Een grote toeristische grot met verlichte zalen en ondergrondse rivieren bij Kutaisi, in Imeretië." },
+      "gelati-monastery": { "name": "Gelati-klooster", "description": "Een op de UNESCO-lijst geplaatst middeleeuws klooster en voormalige academie bij Kutaisi, rijk aan mozaïeken en fresco's." },
+      "vardzia": { "name": "Vardzia", "description": "Een uitgestrekt 12e-eeuws grottenklooster, uitgehouwen in een rotswand in het zuiden van Georgië." },
+      "gergeti-trinity-church": { "name": "Drie-eenheidskerk van Gergeti", "description": "Een eenzame 14e-eeuwse kerk gelegen onder de berg Kazbek in de hoge Kaukasus." },
+      "batumi-botanical-garden": { "name": "Botanische tuin van Batumi", "description": "Een uitgestrekte tuin aan zee met planten van over de hele wereld, ten noorden van Batumi." },
+      "martvili-canyon": { "name": "Martvili-kloof", "description": "Een weelderige rivierkloof in Samegrelo met turkoois water en korte boottochten." },
+      "katskhi-pillar": { "name": "Katskhi-pilaar", "description": "Een kleine kerk gelegen boven op een natuurlijke kalkstenen pilaar in Imeretië." }
+    }
   },
   "akhaltsikhe": {
     "heroTitle": "Akhaltsikhe, Georgië: Rabati-kasteel, Vardzia en de poort naar het zuiden",

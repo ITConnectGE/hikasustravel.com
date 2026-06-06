@@ -73,7 +73,56 @@
   },
   "destinations": {
     "heroTitle": "Kierunki w Gruzji",
-    "intro": "Gruzja mieści ogromnie wiele w niewielkim kraju — przyjazną pieszym stolicę, starożytne regiony winiarskie, plaże nad Morzem Czarnym i wysokie góry Kaukazu. Nasze przewodniki po kierunkach rozkładają to miasto po mieście, z informacjami, co zobaczyć, ile czasu zostać i szczerymi lokalnymi wskazówkami. Zaczynamy od stolicy, Tbilisi, i z czasem dodajemy kolejne."
+    "intro": "Gruzja mieści ogromnie wiele w niewielkim kraju — przyjazną pieszym stolicę, starożytne regiony winiarskie, plaże nad Morzem Czarnym i wysokie góry Kaukazu. Odkrywaj ją według regionów, według miast lub według poszczególnych miejsc, wokół których warto zaplanować podróż. Nasze przewodniki opisują, co zobaczyć, ile czasu zostać oraz szczere lokalne wskazówki, a z czasem dodajemy kolejne."
+  },
+  "destinationsRegions": {
+    "heroTitle": "Regiony Gruzji",
+    "intro": "Gruzja dzieli się na wyraźnie odrębne regiony, z których każdy ma własny krajobraz, kuchnię i historię — od piwnic winiarskich na wschodzie po wysokie szczyty Kaukazu i wybrzeże Morza Czarnego. Skorzystaj z tego przeglądu, aby znaleźć region pasujący do Twojej podróży; szczegółowe przewodniki po regionach dodajemy z czasem.",
+    "items": {
+      "kakheti": { "name": "Kachetia", "description": "Wschodni kraj winiarski Gruzji — piwnice z kwewri, położone na wzgórzu miasteczko Sighnaghi i dolina Alazani." },
+      "imereti": { "name": "Imeretia", "description": "Zielony region centralny wokół Kutaisi, z klasztorem Gelati oraz jaskiniami Prometeusza i Sataplia." },
+      "adjara": { "name": "Adżaria", "description": "Wybrzeże Morza Czarnego i subtropikalne wzgórza wokół Batumi, od plaż po las deszczowy Mtirala." },
+      "samtskhe-javakheti": { "name": "Samcche-Dżawachetia", "description": "Południowe wyżyny, gdzie znajdują się zamek Rabati, miasto jaskiniowe Vardzia oraz uzdrowiskowe miasteczko Borjomi." },
+      "racha-lechkhumi": { "name": "Racza-Leczchumi", "description": "Cichy region górski na północnym zachodzie, ojczyzna wina Chwanczkara i katedry w Nikorcmindzie." },
+      "mtskheta-mtianeti": { "name": "Mccheta-Mtianeti", "description": "Od starożytnej stolicy Mcchety po wysoki Kaukaz w okolicach Kazbegi i cerkiew Trójcy Świętej w Gergeti." },
+      "samegrelo": { "name": "Samegrelo", "description": "Zachodnie niziny z kanionami Martwili i Okatse oraz wyraźnie odrębną kuchnią megrelską." },
+      "svaneti": { "name": "Swanetia", "description": "Odległe doliny wysokiego Kaukazu, słynące ze średniowiecznych kamiennych domów-wież i trekkingu wokół Mestii i Uszguli." },
+      "guria": { "name": "Guria", "description": "Niewielki, pagórkowaty region między górami a Morzem Czarnym, znany ze swoich plantacji herbaty." },
+      "shida-kartli": { "name": "Szida Kartli", "description": "Centralna Gruzja wokół Gori, z wykutym w skale miastem Uplisciche." },
+      "kvemo-kartli": { "name": "Kwemo Kartli", "description": "Region na południe od Tbilisi, z kompleksem klasztornym Dawid Garedża i wieloetnicznymi wioskami." }
+    }
+  },
+  "destinationsCities": {
+    "heroTitle": "Miasta Gruzji",
+    "intro": "Miasta Gruzji obejmują wszystko, od tętniącej życiem, przyjaznej pieszym stolicy po kurorty nad Morzem Czarnym, starożytne miasta królewskie i górskie bramy. Przeglądaj nasze przewodniki po miastach, aby dowiedzieć się, co zobaczyć, ile czasu zostać i jak tam dotrzeć.",
+    "items": {
+      "tbilisi": { "name": "Tbilisi", "description": "Stolica i największe miasto — łaźnie siarkowe na Starym Mieście, twierdza Narikala oraz słynna scena kulinarno-winiarska." },
+      "akhaltsikhe": { "name": "Akhaltsikhe", "description": "Południowe miasto-brama poniżej zamku Rabati, baza wypadowa do Vardzii i Borjomi." },
+      "ambrolauri": { "name": "Ambrolauri", "description": "Mała stolica Raczy i serce kraju winiarskiego Chwanczkary." },
+      "kutaisi": { "name": "Kutaisi", "description": "Drugie co do wielkości miasto Gruzji, spokojna baza do zwiedzania klasztorów i jaskiń Imeretii." },
+      "batumi": { "name": "Batumi", "description": "Kurort nad Morzem Czarnym, z obsadzoną palmami nadmorską promenadą i śmiałą nowoczesną architekturą." },
+      "mtskheta": { "name": "Mccheta", "description": "Starożytna stolica królewska i duchowa, z katedrą Sweticchoweli i klasztorem Jvari wznoszącym się nad miastem." },
+      "telavi": { "name": "Telawi", "description": "Główne miasto regionu winiarskiego Kachetii, położone nad doliną Alazani." },
+      "sighnaghi": { "name": "Sighnaghi", "description": "Otoczone murami miasteczko na wzgórzu w Kachetii, znane z widoków, fortyfikacji i winnic." },
+      "borjomi": { "name": "Borjomi", "description": "Zalesione miasteczko uzdrowiskowe słynące z wody mineralnej i parku narodowego." },
+      "stepantsminda": { "name": "Stepancminda (Kazbegi)", "description": "Górskie miasteczko poniżej szczytu Kazbek i cerkwi Trójcy Świętej w Gergeti." }
+    }
+  },
+  "destinationsPlaces": {
+    "heroTitle": "Miejsca do zwiedzania w Gruzji",
+    "intro": "Od miast jaskiniowych i klasztorów na klifach po kaniony i nadmorskie ogrody — to zabytki, wokół których warto zaplanować podróż. Każde z nich leży w obrębie miasta lub regionu — otwórz jego przewodnik, aby poznać szczegóły zwiedzania, albo zapytaj nas o wycieczki, które je obejmują.",
+    "items": {
+      "narikala-fortress": { "name": "Twierdza Narikala", "description": "Starożytna twierdza górująca nad Starym Miastem w Tbilisi, do której można dotrzeć pieszo lub kolejką linową." },
+      "jvari-monastery": { "name": "Klasztor Jvari", "description": "Pochodząca z VI wieku cerkiew na wzgórzu nad Mcchetą, z widokiem na zbieg dwóch rzek." },
+      "uplistsikhe-cave-town": { "name": "Miasto jaskiniowe Uplisciche", "description": "Wykute w skale miasto wydrążone w klifach niedaleko Gori, zamieszkane od tysięcy lat." },
+      "prometheus-cave": { "name": "Jaskinia Prometeusza", "description": "Duża udostępniona jaskinia z oświetlonymi komorami i podziemnymi rzekami niedaleko Kutaisi, w Imeretii." },
+      "gelati-monastery": { "name": "Klasztor Gelati", "description": "Wpisany na listę UNESCO średniowieczny klasztor i dawna akademia niedaleko Kutaisi, bogaty w mozaiki i freski." },
+      "vardzia": { "name": "Vardzia", "description": "Rozległy XII-wieczny klasztor jaskiniowy wykuty w ścianie klifu w południowej Gruzji." },
+      "gergeti-trinity-church": { "name": "Cerkiew Trójcy Świętej w Gergeti", "description": "Samotna XIV-wieczna cerkiew położona u podnóża szczytu Kazbek w wysokim Kaukazie." },
+      "batumi-botanical-garden": { "name": "Ogród Botaniczny w Batumi", "description": "Rozległy nadmorski ogród z roślinami z całego świata, na północ od Batumi." },
+      "martvili-canyon": { "name": "Kanion Martwili", "description": "Bujny rzeczny kanion w Samegrelo z turkusową wodą i krótkimi rejsami łodzią." },
+      "katskhi-pillar": { "name": "Filar Kacchi", "description": "Niewielka cerkiew na szczycie naturalnego wapiennego filaru w Imeretii." }
+    }
   },
   "akhaltsikhe": {
     "heroTitle": "Akhaltsikhe, Gruzja: zamek Rabati, Vardzia i brama na południe",
