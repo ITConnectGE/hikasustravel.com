@@ -1265,14 +1265,17 @@ tour-info h2 a,
 /* Hero */
 .td-hero {
   width: 100%;
-  height: 100vh;
-  padding-top: 280px;
+  min-height: 100vh;
+  /* The site header is position:absolute and ~300px tall (logo + nav) and sits
+     over the hero. Top-align the content and pad below the header so the
+     breadcrumb / H1 never sit under the navigation, at any viewport height. */
+  padding-top: 340px;
   padding-bottom: 80px;
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
   text-align: center;
   position: relative;
 }
@@ -4280,8 +4283,8 @@ select option:checked {
 
   /* Tour detail mobile */
   .td-hero {
-    height: 100svh;
-    padding-top: 100px;
+    min-height: 100svh;
+    padding-top: 110px;
     padding-bottom: 60px;
   }
   .td-hero__breadcrumb span:last-child {

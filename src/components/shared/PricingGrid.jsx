@@ -56,7 +56,7 @@ export function TravelerPricingTable({ pricing }) {
     <div className="pricing-grid pricing-grid-travelers">
       <div className="pricing-grid-header">
         <div>{t('pricing.travelers')}</div>
-        <div className="pricing-luxury">{t('pricing.luxury')}</div>
+        <div className="pricing-luxury">{t('pricing.premium')}</div>
         <div>{t('pricing.midRange')}</div>
         <div>{t('pricing.economy')}</div>
       </div>
@@ -110,7 +110,7 @@ function PricingCards({ pricing }) {
   const tiers = [
     { key: 'economy', label: t('pricing.economy') },
     { key: 'midRange', label: t('pricing.midRange'), featured: true },
-    { key: 'luxury', label: t('pricing.luxury') },
+    { key: 'luxury', label: t('pricing.premium') },
   ]
 
   const numericRows = pricing.filter((r) => r.travelers !== 'Single Supplement')
@@ -195,7 +195,7 @@ function PrivateAccommodationsTable({ accommodations }) {
       <div className="pricing-grid pricing-grid--private">
         <div className="pricing-grid-header">
           <div>{t('pricing.city')}</div>
-          <div className="pricing-luxury">{t('pricing.luxury')}</div>
+          <div className="pricing-luxury">{t('pricing.premium')}</div>
           <div>{t('pricing.midRange')}</div>
           <div>{t('pricing.economy')}</div>
         </div>

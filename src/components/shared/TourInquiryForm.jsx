@@ -7,7 +7,7 @@ import { getTurnstileToken } from '../../utils/turnstile'
 
 const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
 
-export default function TourInquiryForm({ tourTitle }) {
+export default function TourInquiryForm({ tourTitle, isGroupTour }) {
   const t = useT()
   const { status, submit } = useWeb3Form()
   const [form, setForm] = useState({
@@ -142,7 +142,8 @@ export default function TourInquiryForm({ tourTitle }) {
           <option value="">{t('form.salutationNone')}</option>
           <option value="Classic">{t('pricing.economy')}</option>
           <option value="Mid-Range">{t('pricing.midRange')}</option>
-          <option value="Luxury">{t('pricing.luxury')}</option>
+          {/* Private tours use the "Premium" tier label; group tours keep "Luxury". */}
+          <option value={isGroupTour ? 'Luxury' : 'Premium'}>{isGroupTour ? t('pricing.luxury') : t('pricing.premium')}</option>
         </select>
       </div>
 

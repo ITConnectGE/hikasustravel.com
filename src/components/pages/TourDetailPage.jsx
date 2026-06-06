@@ -326,6 +326,7 @@ export default function TourDetailPage() {
           <section id="book" className="td-section td-book-inline">
             <FadeUp>
               <h2 className="td-section__title">{t('tour.bookThisTour')}</h2>
+              {!isGroup && <p className="td-section__subtitle">{t('form.privateIntro')}</p>}
               <TourInquiryForm tourTitle={tour.tourFormTitle || tour.title} isGroupTour={isGroup} />
             </FadeUp>
           </section>

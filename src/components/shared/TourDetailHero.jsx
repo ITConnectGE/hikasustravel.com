@@ -66,10 +66,7 @@ export default function TourDetailHero({ tour, translatedTitle, heroH1, heroSubt
 
         <div className="td-hero__actions">
           <a href="#book" onClick={scrollToBook} className="td-hero__cta">
-            {t('tour.requestPrice')}
-          </a>
-          <a href="#book" onClick={scrollToBook} className="td-hero__cta td-hero__cta--secondary">
-            {t('tour.askCustom')}
+            {isGroup ? t('tour.requestTour') : t('tour.requestTourCustom')}
           </a>
         </div>
       </div>

@@ -366,7 +366,7 @@ export const tours = [
   {
     "slug": "experience-georgias-rich-culture-coastal-beauty-5-day-tour-from-tbilisi-to-batumi",
     "type": "private",
-    "title": "Experience Georgia's Rich Culture and Coastal Beauty: 5-Day Tour from Tbilisi to Batumi",
+    "title": "5-Day Private Tour from Tbilisi to Batumi",
     "heroImage": "/images/files/batumi-coastal-tour.jpg",
     "tileImage": "/images/files/batumi-coastal-tour.jpg",
     "listingImage": "/images/files/batumi-coastal-tour.jpg",
@@ -653,7 +653,7 @@ export const tours = [
         ]
       ]
     },
-    "tourFormTitle": "Experience Georgia's Rich Culture and Coastal Beauty: 5-Day Tour from Tbilisi to Batumi"
+    "tourFormTitle": "5-Day Private Tour from Tbilisi to Batumi"
   },
   {
     "slug": "sulfur-baths-and-sipping-wine-5-days-of-georgian-delights",
