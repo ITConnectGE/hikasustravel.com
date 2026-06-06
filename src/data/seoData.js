@@ -1,4 +1,7 @@
 const seo = {
+  bolnisi: {
+    en: { title: "Bolnisi, Georgia: Ancient Cathedral & German History", description: "Bolnisi in southern Georgia has a 5th-century cathedral with the oldest Georgian inscriptions and a German colonial past. What to see, day trips, and timing.", keywords: "Bolnisi, Bolnisi Georgia, Bolnisi Sioni Cathedral, Katharinenfeld, Kvemo Kartli, oldest Georgian inscriptions, David Gareja, Dmanisi, German colony Georgia, things to do in Bolnisi" },
+  },
   thingsToDoBatumi: {
     en: { title: "Things to Do in Batumi, Georgia: Coast & Adjara", description: "Things to do in Batumi, Georgia: the seafront boulevard, Ali and Nino, the botanical garden, Old Batumi, Gonio Fortress, the Argo cable car, and Adjara.", keywords: "things to do in Batumi, Batumi Georgia, Batumi Boulevard, Ali and Nino, Batumi Botanical Garden, Old Batumi, Gonio Fortress, Argo cable car, Makhuntseti waterfall, Adjara, Batumi beach" },
     es: { title: "Qué hacer en Batumi, Georgia: costa y Adjara", description: "Qué hacer en Batumi, Georgia: el paseo marítimo, Ali y Nino, el jardín botánico, el casco antiguo, la fortaleza de Gonio, el teleférico Argo y Adjara.", keywords: "qué hacer en Batumi, Batumi Georgia, bulevar de Batumi, Ali y Nino, jardín botánico de Batumi, casco antiguo de Batumi, fortaleza de Gonio, teleférico Argo, cascada de Makhuntseti, Adjara, playa de Batumi" },
