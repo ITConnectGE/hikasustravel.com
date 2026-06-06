@@ -104,7 +104,11 @@ export default function DestinationsPage() {
               <FadeUp>
                 <div className="tours-grid">
                   {FEATURED_CITIES.map((c) => {
-                    const title = t(`nav.${c.slug}`)
+                    // Use the localized nav label when one exists, otherwise the
+                    // registry's real display name — never the raw key.
+                    const navKey = `nav.${c.slug}`
+                    const navLabel = t(navKey)
+                    const title = navLabel === navKey ? c.name : navLabel
                     return (
                       <div className="tour-tile" key={c.slug}>
                         <LocaleLink to={cityPath(c.slug)} className="tour-tile-link" aria-label={title}>

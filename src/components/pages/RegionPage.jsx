@@ -101,11 +101,12 @@ export default function RegionPage() {
 
   return (
     <>
-      <HeroSection image={heroImage} title={page.heroTitle} />
+      {/* Small breadcrumb bar above the hero — the H1 is the region name. */}
+      <div className="dest-breadcrumbs">
+        <Breadcrumbs trail={trail} />
+      </div>
+      <HeroSection image={heroImage} title={region.name} />
       <section className="page-items about-georgia">
-        <FadeUp>
-          <Breadcrumbs trail={trail} />
-        </FadeUp>
         <FadeUp>
           <div ref={contentRef} dangerouslySetInnerHTML={{ __html: page.content }} />
         </FadeUp>

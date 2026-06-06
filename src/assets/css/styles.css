@@ -5834,6 +5834,22 @@ select option:checked {
   margin: 0 auto 18px;
   font-size: 0.85rem;
 }
+/* Slim breadcrumb bar shown ABOVE the hero on destination detail pages.
+   Kept small and subordinate so the hero H1 (the city/region/site name)
+   stays the dominant heading. */
+.dest-breadcrumbs {
+  padding: 12px var(--indent);
+  background: #fff;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+}
+.dest-breadcrumbs .breadcrumbs {
+  width: 100%;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+@media (max-width: 900px) {
+  .dest-breadcrumbs { padding: 10px var(--indent); }
+}
 .breadcrumbs ol {
   list-style: none;
   display: flex;
