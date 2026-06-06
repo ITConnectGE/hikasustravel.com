@@ -171,6 +171,7 @@ const seoPageMap = {
   'things-to-do-in-bakuriani': 'thingsToDoBakuriani',
   'things-to-do-in-batumi': 'thingsToDoBatumi',
   'things-to-do-in-bolnisi': 'thingsToDoBolnisi',
+  'things-to-do-in-borjomi': 'thingsToDoBorjomi',
   'private-tours': 'privateTours',
   'group-tours': 'groupTours',
   'shuttle-service': 'shuttle',

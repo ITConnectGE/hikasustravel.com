@@ -1,4 +1,7 @@
 const seo = {
+  thingsToDoBorjomi: {
+    en: { title: "Things to Do in Borjomi, Georgia: Springs & Park", description: "Things to do in Borjomi, Georgia: Central Park and the mineral spring, the forest sulfur pools, the cable car, Borjomi-Kharagauli National Park, and Likani.", keywords: "things to do in Borjomi, Borjomi Georgia, Borjomi Central Park, Borjomi mineral water, Borjomi sulfur pools, Borjomi cable car, Borjomi-Kharagauli National Park, Likani palace, Borjomi attractions, Borjomi hiking" },
+  },
   borjomi: {
     en: { title: "Borjomi, Georgia: Mineral Water & National Park", description: "Borjomi is Georgia's mineral-water spa town and gateway to Borjomi-Kharagauli National Park. Springs, hiking, history, day trips, and the best time to visit.", keywords: "Borjomi, Borjomi Georgia, Borjomi mineral water, Borjomi-Kharagauli National Park, Borjomi Central Park, Likani palace, Bakuriani, Akhaltsikhe, Vardzia, Samtskhe-Javakheti, things to do in Borjomi, Borjomi hiking" },
     es: { title: "Borjomi, Georgia: agua mineral y parque nacional", description: "Borjomi es la ciudad balneario de agua mineral de Georgia y la puerta al Parque Nacional Borjomi-Kharagauli. Manantiales, senderismo, historia, excursiones y cuándo ir.", keywords: "Borjomi, Borjomi Georgia, agua mineral de Borjomi, Parque Nacional Borjomi-Kharagauli, parque central de Borjomi, palacio de Likani, Bakuriani, Akhaltsikhe, Vardzia, Samtskhe-Javakheti, qué ver en Borjomi, senderismo en Borjomi" },

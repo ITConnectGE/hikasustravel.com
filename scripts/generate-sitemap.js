@@ -39,6 +39,7 @@ const staticPages = [
   { path: 'things-to-do-in-bakuriani', changefreq: 'monthly', priority: '0.7' },
   { path: 'things-to-do-in-batumi', changefreq: 'monthly', priority: '0.7' },
   { path: 'things-to-do-in-bolnisi', changefreq: 'monthly', priority: '0.7' },
+  { path: 'things-to-do-in-borjomi', changefreq: 'monthly', priority: '0.7' },
   { path: 'private-tours', changefreq: 'weekly', priority: '0.9' },
   { path: 'group-tours', changefreq: 'weekly', priority: '0.9' },
   { path: 'shuttle-service', changefreq: 'monthly', priority: '0.8' },

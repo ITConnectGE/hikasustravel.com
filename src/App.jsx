@@ -19,6 +19,7 @@ import ThingsToDoAmbrolauriPage from './components/pages/ThingsToDoAmbrolauriPag
 import ThingsToDoBakurianiPage from './components/pages/ThingsToDoBakurianiPage'
 import ThingsToDoBatumiPage from './components/pages/ThingsToDoBatumiPage'
 import ThingsToDoBolnisiPage from './components/pages/ThingsToDoBolnisiPage'
+import ThingsToDoBorjomiPage from './components/pages/ThingsToDoBorjomiPage'
 import PrivateToursPage from './components/pages/PrivateToursPage'
 import GroupToursPage from './components/pages/GroupToursPage'
 import TourDetailPage from './components/pages/TourDetailPage'
@@ -61,6 +62,7 @@ export default function App() {
           <Route path="things-to-do-in-bakuriani" element={<ThingsToDoBakurianiPage />} />
           <Route path="things-to-do-in-batumi" element={<ThingsToDoBatumiPage />} />
           <Route path="things-to-do-in-bolnisi" element={<ThingsToDoBolnisiPage />} />
+          <Route path="things-to-do-in-borjomi" element={<ThingsToDoBorjomiPage />} />
           <Route path="private-tours" element={<PrivateToursPage />} />
           <Route path="group-tours" element={<GroupToursPage />} />
           <Route path="private-tours/:slug" element={<TourDetailPage />} />
