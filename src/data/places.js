@@ -50,6 +50,7 @@ export const cities = [
   { slug: 'tbilisi', name: 'Tbilisi', region: null, published: true, seoKey: 'tbilisi', contentKey: 'tbilisi', image: '/images/files/tbilisi.jpg' },
   { slug: 'akhaltsikhe', name: 'Akhaltsikhe', region: 'samtskhe-javakheti', published: true, seoKey: 'akhaltsikhe', contentKey: 'akhaltsikhe', image: '/images/files/georgia-home.jpg' },
   { slug: 'ambrolauri', name: 'Ambrolauri', region: 'racha-lechkhumi', published: true, seoKey: 'ambrolauri', contentKey: 'ambrolauri', image: '/images/files/georgia-home.jpg' },
+  { slug: 'bakuriani', name: 'Bakuriani', region: 'samtskhe-javakheti', published: true, seoKey: 'bakuriani', contentKey: 'bakuriani', image: '/images/files/georgia-home.jpg' },
   { slug: 'kutaisi', name: 'Kutaisi', region: 'imereti', published: false },
   { slug: 'batumi', name: 'Batumi', region: 'adjara', published: false },
   { slug: 'mtskheta', name: 'Mtskheta', region: 'mtskheta-mtianeti', published: false },

@@ -1,4 +1,7 @@
 const seo = {
+  bakuriani: {
+    en: { title: "Bakuriani, Georgia: Ski Resort & Summer Guide", description: "Bakuriani is Georgia's most accessible ski resort, best for beginners and families. Skiing at Didveli and Kokhta, summer hiking, the Kukushka train, and more.", keywords: "Bakuriani, Bakuriani Georgia, Bakuriani ski resort, skiing in Georgia, Didveli, Kokhta, Bakuriani skiing, beginner ski Georgia, Kukushka train, Borjomi, Trialeti, Bakuriani summer" },
+  },
   home: {
     en: { title: 'Hikasus Travel – Discover Georgia | Tours & Shuttle Services', description: 'Explore Georgia with expertly curated private and group tours, shuttle transfers, and local experiences. Book your Georgian adventure today.', keywords: 'Georgia tours, travel Georgia, Georgia travel agency, private tours Georgia, group tours Georgia, shuttle service Georgia, Tbilisi tours, Georgia vacation, Caucasus travel, book tour Georgia' },
     es: { title: 'Hikasus Travel – Descubre Georgia | Tours y Servicios de Transporte', description: 'Explora Georgia con tours privados y grupales, traslados y experiencias locales. Reserva tu aventura georgiana hoy.', keywords: 'tours Georgia, viajar a Georgia, agencia de viajes Georgia, tours privados Georgia, tours grupales Georgia, shuttle Georgia, vacaciones Georgia' },
