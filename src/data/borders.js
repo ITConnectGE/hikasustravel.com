@@ -71,6 +71,14 @@ export const borderCrossings = [
     image: '/images/files/georgia-home.jpg',
     published: true,
   },
+  {
+    slug: 'red-bridge-border-crossing',
+    name: 'Red Bridge Border Crossing',
+    seoKey: 'redBridgeBorderCrossing',
+    contentKey: 'redBridgeBorderCrossing',
+    image: '/images/files/georgia-home.jpg',
+    published: true,
+  },
 ]
 
 export const borderHubPath = '/georgia/border-crossings'
