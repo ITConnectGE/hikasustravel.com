@@ -135,6 +135,11 @@ export const cities = [
   {
     slug: 'martvili', name: 'Martvili', region: 'samegrelo', published: true,
     seoKey: 'martvili', contentKey: 'martvili', image: '/images/files/georgia-home.jpg',
+    thingsToDo: {
+      seoKey: 'thingsToDoMartvili', contentKey: 'thingsToDoMartvili', image: '/images/files/georgia-home.jpg',
+      address: { addressLocality: 'Martvili' },
+      attractions: ['Martvili Canyon', 'Martvili Monastery', 'Balda Canyon', 'Abasha River'],
+    },
   },
   { slug: 'telavi', name: 'Telavi', region: 'kakheti', published: false },
   {

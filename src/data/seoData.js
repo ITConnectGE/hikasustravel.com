@@ -257,6 +257,9 @@ const seo = {
   thingsToDoKvareli: {
     en: { title: 'Things to Do in Kvareli, Georgia: Wine & Kakheti', description: 'Things to do in Kvareli, Georgia: the Khareba wine tunnel, family qvevri cellars, Nekresi Monastery, Kvareli Lake, and the Ilia Chavchavadze Museum.', keywords: 'things to do in Kvareli, Khareba wine tunnel, Kvareli wine, qvevri wine, Nekresi Monastery, Kvareli Lake, Ilia Chavchavadze Museum, Kindzmarauli, Kakheti, Alazani valley' },
   },
+  thingsToDoMartvili: {
+    en: { title: 'Things to Do in Martvili, Georgia: Canyons & Nature', description: 'Things to do in Martvili, Georgia: the turquoise Martvili Canyon and its boat ride, the hilltop monastery, Balda Canyon, the Abasha River, and Megrelian food.', keywords: 'things to do in Martvili, Martvili Canyon, Martvili Monastery, Balda Canyon, Abasha River, Samegrelo, Megrelian cuisine, Okatse Canyon, western Georgia, canyon boat ride' },
+  },
   thingsToDoTbilisi: {
     en: { title: 'Things to Do in Tbilisi, Georgia: A Local Guide', description: 'The best things to do in Tbilisi, capital of Georgia: the Old Town, sulfur baths, Narikala Fortress, museums, food and wine — with local tips and timing.', keywords: 'things to do in Tbilisi, what to do in Tbilisi, Tbilisi attractions, Tbilisi Old Town, Abanotubani sulfur baths, Narikala Fortress, Sameba Cathedral, Georgian National Museum, Tbilisi food, Tbilisi wine bars, Tbilisi sightseeing, Tbilisi itinerary' },
     es: { title: "Qué hacer en Tiflis, Georgia: guía local", description: "Las mejores cosas que hacer en Tiflis, capital de Georgia: el casco antiguo, los baños de azufre, la fortaleza Narikala, museos, gastronomía y vino, con consejos locales.", keywords: "qué hacer en Tiflis, qué ver en Tiflis, atracciones de Tiflis, casco antiguo de Tiflis, baños de azufre Abanotubani, fortaleza Narikala, catedral Sameba, Museo Nacional de Georgia, gastronomía de Tiflis, bares de vino Tiflis" },
