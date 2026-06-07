@@ -127,6 +127,10 @@ export const cities = [
   { slug: 'telavi', name: 'Telavi', region: 'kakheti', published: false },
   { slug: 'sighnaghi', name: 'Sighnaghi', region: 'kakheti', published: false },
   {
+    slug: 'gori', name: 'Gori', region: 'shida-kartli', published: true,
+    seoKey: 'gori', contentKey: 'gori', image: '/images/files/georgia-home.jpg',
+  },
+  {
     slug: 'borjomi', name: 'Borjomi', region: 'samtskhe-javakheti', published: true,
     seoKey: 'borjomi', contentKey: 'borjomi', image: '/images/files/borjomi-town.jpg',
     thingsToDo: {
