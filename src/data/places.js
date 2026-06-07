@@ -133,6 +133,10 @@ export const cities = [
   },
   { slug: 'mtskheta', name: 'Mtskheta', region: 'mtskheta-mtianeti', published: false },
   {
+    slug: 'mestia', name: 'Mestia', region: 'svaneti', published: true,
+    seoKey: 'mestia', contentKey: 'mestia', image: '/images/files/georgia-home.jpg',
+  },
+  {
     slug: 'martvili', name: 'Martvili', region: 'samegrelo', published: true,
     seoKey: 'martvili', contentKey: 'martvili', image: '/images/files/georgia-home.jpg',
     thingsToDo: {
