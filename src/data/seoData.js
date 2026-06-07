@@ -215,6 +215,9 @@ const seo = {
   kazbegiStepantsminda: {
     en: { title: 'Kazbegi, Georgia: Gergeti Church & Mount Kazbek', description: 'Kazbegi (Stepantsminda) in northern Georgia is home to the Gergeti Trinity Church and Mount Kazbek. Hiking, the drive, how to get there, and the best time.', keywords: 'Kazbegi, Stepantsminda, Kazbegi Georgia, Gergeti Trinity Church, Mount Kazbek, Tsminda Sameba, Georgian Military Highway, Truso Valley, Dariali Gorge, hiking Kazbegi, climb Mount Kazbek' },
   },
+  kutaisi: {
+    en: { title: 'Kutaisi, Georgia: Bagrati, Gelati & Canyons Guide', description: 'Kutaisi is western Georgia\'s historic center: the UNESCO Gelati Monastery and Bagrati Cathedral, Prometheus Cave, Martvili and Okatse canyons, and Tskaltubo.', keywords: 'Kutaisi, Kutaisi Georgia, Gelati Monastery, Bagrati Cathedral, Prometheus Cave, Martvili Canyon, Okatse Canyon, Tskaltubo, Imereti, Imeretian khachapuri, Kutaisi airport' },
+  },
   tbilisi: {
     en: { title: 'Tbilisi, Georgia: Things to Do, Tips & Day Trips', description: 'Tbilisi is the capital of Georgia in the South Caucasus. What to see, how many days you need, best time to visit, and easy day trips from the city.', keywords: 'Tbilisi, Tbilisi Georgia, things to do in Tbilisi, Tbilisi travel guide, visit Tbilisi, Old Town Tbilisi, Narikala Fortress, sulfur baths Tbilisi, day trips from Tbilisi, best time to visit Tbilisi, Tbilisi itinerary' },
     es: { title: "Tiflis, Georgia: qué ver, consejos y excursiones", description: "Tiflis es la capital de Georgia, en el sur del Cáucaso. Qué ver, cuántos días necesitas, la mejor época para visitarla y excursiones fáciles desde la ciudad.", keywords: "Tiflis, Tiflis Georgia, qué hacer en Tiflis, guía de Tiflis, visitar Tiflis, casco antiguo de Tiflis, fortaleza Narikala, baños de azufre Tiflis, excursiones desde Tiflis, mejor época para visitar Tiflis" },
