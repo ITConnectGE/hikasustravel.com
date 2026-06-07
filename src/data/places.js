@@ -142,6 +142,11 @@ export const cities = [
   {
     slug: 'dmanisi', name: 'Dmanisi', region: 'kvemo-kartli', published: true,
     seoKey: 'dmanisi', contentKey: 'dmanisi', image: '/images/files/georgia-home.jpg',
+    thingsToDo: {
+      seoKey: 'thingsToDoDmanisi', contentKey: 'thingsToDoDmanisi', image: '/images/files/georgia-home.jpg',
+      address: { addressLocality: 'Dmanisi' },
+      attractions: ['Dmanisi Archaeological Site', 'Dmanisi Medieval Town Ruins', 'Dmanisi Sioni Cathedral', 'Dmanisi Museum-Reserve'],
+    },
   },
   {
     slug: 'bolnisi', name: 'Bolnisi', region: 'kvemo-kartli', published: true,
