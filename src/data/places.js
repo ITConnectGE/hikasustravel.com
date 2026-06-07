@@ -125,6 +125,10 @@ export const cities = [
   },
   { slug: 'mtskheta', name: 'Mtskheta', region: 'mtskheta-mtianeti', published: false },
   { slug: 'telavi', name: 'Telavi', region: 'kakheti', published: false },
+  {
+    slug: 'gurjaani', name: 'Gurjaani', region: 'kakheti', published: true,
+    seoKey: 'gurjaani', contentKey: 'gurjaani', image: '/images/files/georgia-home.jpg',
+  },
   { slug: 'sighnaghi', name: 'Sighnaghi', region: 'kakheti', published: false },
   {
     slug: 'gori', name: 'Gori', region: 'shida-kartli', published: true,

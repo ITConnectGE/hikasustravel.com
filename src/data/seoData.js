@@ -209,6 +209,9 @@ const seo = {
   gudauri: {
     en: { title: 'Gudauri, Georgia: Top Ski Resort Guide', description: "Gudauri is Georgia's top ski resort: big vertical, reliable December–March snow, famous off-piste, and great value. Skiing, summer, and how to get there.", keywords: 'Gudauri, Gudauri Georgia, Gudauri ski resort, skiing in Georgia, Gudauri off-piste, freeride Georgia, Georgian Military Highway, ski Georgia, Gudauri snowboarding, Caucasus skiing' },
   },
+  gurjaani: {
+    en: { title: 'Gurjaani, Georgia: Kakheti Wine Country Guide', description: 'Gurjaani is quiet Kakheti wine country in eastern Georgia: family qvevri cellars, the two-domed Kvelatsminda Church, Nekresi Monastery, and the Alazani valley.', keywords: 'Gurjaani, Gurjaani Georgia, Kakheti wine, qvevri wine, Kvelatsminda Church, Nekresi Monastery, Alazani valley, family wineries Kakheti, Saperavi, Rkatsiteli, rtveli harvest' },
+  },
   tbilisi: {
     en: { title: 'Tbilisi, Georgia: Things to Do, Tips & Day Trips', description: 'Tbilisi is the capital of Georgia in the South Caucasus. What to see, how many days you need, best time to visit, and easy day trips from the city.', keywords: 'Tbilisi, Tbilisi Georgia, things to do in Tbilisi, Tbilisi travel guide, visit Tbilisi, Old Town Tbilisi, Narikala Fortress, sulfur baths Tbilisi, day trips from Tbilisi, best time to visit Tbilisi, Tbilisi itinerary' },
     es: { title: "Tiflis, Georgia: qué ver, consejos y excursiones", description: "Tiflis es la capital de Georgia, en el sur del Cáucaso. Qué ver, cuántos días necesitas, la mejor época para visitarla y excursiones fáciles desde la ciudad.", keywords: "Tiflis, Tiflis Georgia, qué hacer en Tiflis, guía de Tiflis, visitar Tiflis, casco antiguo de Tiflis, fortaleza Narikala, baños de azufre Tiflis, excursiones desde Tiflis, mejor época para visitar Tiflis" },
