@@ -230,6 +230,9 @@ const seo = {
   mtskheta: {
     en: { title: 'Mtskheta, Georgia: Ancient Capital & UNESCO Churches', description: "Mtskheta, Georgia's ancient capital 20 km from Tbilisi, is a UNESCO site: Svetitskhoveli Cathedral, the clifftop Jvari Monastery, Samtavro, and Armaztsikhe.", keywords: 'Mtskheta, Mtskheta Georgia, Svetitskhoveli Cathedral, Jvari Monastery, Samtavro Monastery, Armaztsikhe, ancient capital of Georgia, St Nino, UNESCO Georgia, day trip from Tbilisi' },
   },
+  oni: {
+    en: { title: 'Oni, Georgia: Synagogue & the Rioni Valley in Racha', description: 'Oni in the remote Racha region of Georgia is home to a grand 19th-century synagogue, the quiet Rioni valley, and a circuit with Ambrolauri and Nikortsminda.', keywords: 'Oni, Oni Georgia, Oni synagogue, Georgian Jews, Jewish heritage Georgia, Racha, Rioni valley, Ambrolauri, Nikortsminda, Shaori Reservoir, off the beaten track Georgia' },
+  },
   tbilisi: {
     en: { title: 'Tbilisi, Georgia: Things to Do, Tips & Day Trips', description: 'Tbilisi is the capital of Georgia in the South Caucasus. What to see, how many days you need, best time to visit, and easy day trips from the city.', keywords: 'Tbilisi, Tbilisi Georgia, things to do in Tbilisi, Tbilisi travel guide, visit Tbilisi, Old Town Tbilisi, Narikala Fortress, sulfur baths Tbilisi, day trips from Tbilisi, best time to visit Tbilisi, Tbilisi itinerary' },
     es: { title: "Tiflis, Georgia: qué ver, consejos y excursiones", description: "Tiflis es la capital de Georgia, en el sur del Cáucaso. Qué ver, cuántos días necesitas, la mejor época para visitarla y excursiones fáciles desde la ciudad.", keywords: "Tiflis, Tiflis Georgia, qué hacer en Tiflis, guía de Tiflis, visitar Tiflis, casco antiguo de Tiflis, fortaleza Narikala, baños de azufre Tiflis, excursiones desde Tiflis, mejor época para visitar Tiflis" },

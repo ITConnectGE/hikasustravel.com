@@ -160,6 +160,10 @@ export const cities = [
   },
   { slug: 'telavi', name: 'Telavi', region: 'kakheti', published: false },
   {
+    slug: 'oni', name: 'Oni', region: 'racha-lechkhumi', published: true,
+    seoKey: 'oni', contentKey: 'oni', image: '/images/files/georgia-home.jpg',
+  },
+  {
     slug: 'gurjaani', name: 'Gurjaani', region: 'kakheti', published: true,
     seoKey: 'gurjaani', contentKey: 'gurjaani', image: '/images/files/georgia-home.jpg',
     thingsToDo: {
