@@ -161,6 +161,11 @@ export const cities = [
   {
     slug: 'telavi', name: 'Telavi', region: 'kakheti', published: true,
     seoKey: 'telavi', contentKey: 'telavi', image: '/images/files/georgia-home.jpg',
+    thingsToDo: {
+      seoKey: 'thingsToDoTelavi', contentKey: 'thingsToDoTelavi', image: '/images/files/georgia-home.jpg',
+      address: { addressLocality: 'Telavi' },
+      attractions: ['Batonis Tsikhe', 'Alaverdi Monastery', 'Ikalto Monastery', 'Tsinandali Estate', 'Gremi', 'Shuamta Monasteries', 'Nadikvari Viewpoint'],
+    },
   },
   {
     slug: 'oni', name: 'Oni', region: 'racha-lechkhumi', published: true,
