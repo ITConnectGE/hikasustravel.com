@@ -269,6 +269,9 @@ const seo = {
   thingsToDoMestia: {
     en: { title: 'Things to Do in Mestia, Georgia: Towers & Glaciers', description: 'Things to do in Mestia, Georgia: the Svan towers, the Svaneti museum, the Chalaadi Glacier hike, a day trip to Ushguli, and skiing at Hatsvali and Tetnuldi.', keywords: 'things to do in Mestia, Svan towers, Svaneti museum, Margiani house museum, Chalaadi Glacier, Ushguli, Hatsvali, Tetnuldi skiing, Svaneti hiking, kubdari' },
   },
+  thingsToDoMtskheta: {
+    en: { title: 'Things to Do in Mtskheta, Georgia: Churches & Sites', description: 'Things to do in Mtskheta, Georgia: Svetitskhoveli Cathedral, Jvari Monastery, Samtavro, Shio-Mgvime, Zedazeni, and the ancient Armaztsikhe-Bagineti citadel.', keywords: 'things to do in Mtskheta, Svetitskhoveli Cathedral, Jvari Monastery, Samtavro Monastery, Shio-Mgvime, Zedazeni, Armaztsikhe-Bagineti, Bebristsikhe, ancient capital, day trip from Tbilisi' },
+  },
   thingsToDoTbilisi: {
     en: { title: 'Things to Do in Tbilisi, Georgia: A Local Guide', description: 'The best things to do in Tbilisi, capital of Georgia: the Old Town, sulfur baths, Narikala Fortress, museums, food and wine — with local tips and timing.', keywords: 'things to do in Tbilisi, what to do in Tbilisi, Tbilisi attractions, Tbilisi Old Town, Abanotubani sulfur baths, Narikala Fortress, Sameba Cathedral, Georgian National Museum, Tbilisi food, Tbilisi wine bars, Tbilisi sightseeing, Tbilisi itinerary' },
     es: { title: "Qué hacer en Tiflis, Georgia: guía local", description: "Las mejores cosas que hacer en Tiflis, capital de Georgia: el casco antiguo, los baños de azufre, la fortaleza Narikala, museos, gastronomía y vino, con consejos locales.", keywords: "qué hacer en Tiflis, qué ver en Tiflis, atracciones de Tiflis, casco antiguo de Tiflis, baños de azufre Abanotubani, fortaleza Narikala, catedral Sameba, Museo Nacional de Georgia, gastronomía de Tiflis, bares de vino Tiflis" },

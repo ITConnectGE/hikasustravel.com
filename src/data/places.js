@@ -134,6 +134,11 @@ export const cities = [
   {
     slug: 'mtskheta', name: 'Mtskheta', region: 'mtskheta-mtianeti', published: true,
     seoKey: 'mtskheta', contentKey: 'mtskheta', image: '/images/files/georgia-home.jpg',
+    thingsToDo: {
+      seoKey: 'thingsToDoMtskheta', contentKey: 'thingsToDoMtskheta', image: '/images/files/georgia-home.jpg',
+      address: { addressLocality: 'Mtskheta' },
+      attractions: ['Svetitskhoveli Cathedral', 'Jvari Monastery', 'Samtavro Monastery', 'Shio-Mgvime Monastery', 'Armaztsikhe-Bagineti', 'Zedazeni Monastery', 'Bebristsikhe Fortress'],
+    },
   },
   {
     slug: 'mestia', name: 'Mestia', region: 'svaneti', published: true,
