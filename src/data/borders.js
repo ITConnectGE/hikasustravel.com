@@ -55,6 +55,14 @@ export const borderCrossings = [
     image: '/images/files/georgia-home.jpg',
     published: true,
   },
+  {
+    slug: 'lagodekhi-balakan-border-crossing',
+    name: 'Lagodekhi / Balakan Border Crossing',
+    seoKey: 'lagodekhiBalakanBorderCrossing',
+    contentKey: 'lagodekhiBalakanBorderCrossing',
+    image: '/images/files/georgia-home.jpg',
+    published: true,
+  },
 ]
 
 export const borderHubPath = '/georgia/border-crossings'
