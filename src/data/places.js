@@ -135,6 +135,11 @@ export const cities = [
   {
     slug: 'mestia', name: 'Mestia', region: 'svaneti', published: true,
     seoKey: 'mestia', contentKey: 'mestia', image: '/images/files/georgia-home.jpg',
+    thingsToDo: {
+      seoKey: 'thingsToDoMestia', contentKey: 'thingsToDoMestia', image: '/images/files/georgia-home.jpg',
+      address: { addressLocality: 'Mestia' },
+      attractions: ['Svan Towers', 'Svaneti History and Ethnography Museum', 'Margiani House Museum', 'Chalaadi Glacier', 'Ushguli', 'Hatsvali Cable Car', 'Tetnuldi Ski Resort'],
+    },
   },
   {
     slug: 'martvili', name: 'Martvili', region: 'samegrelo', published: true,
