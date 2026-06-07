@@ -356,6 +356,12 @@ export const sites = [
     seoKey: 'batumiDancingFountains', contentKey: 'batumiDancingFountains',
     image: '/images/files/Batumi%20Black%20Sea%20Coast.jpg',
   },
+  {
+    slug: 'europe-square-batumi', name: 'Europe Square',
+    parentType: 'city', parent: 'batumi', published: true,
+    seoKey: 'europeSquareBatumi', contentKey: 'europeSquareBatumi',
+    image: '/images/files/Batumi.jpg',
+  },
   { slug: 'narikala-fortress', name: 'Narikala Fortress', parentType: 'city', parent: 'tbilisi', published: false },
   { slug: 'jvari-monastery', name: 'Jvari Monastery', parentType: 'city', parent: 'mtskheta', published: false },
   { slug: 'uplistsikhe-cave-town', name: 'Uplistsikhe Cave Town', parentType: 'region', parent: 'shida-kartli', published: false },
