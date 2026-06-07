@@ -113,6 +113,11 @@ export const cities = [
   {
     slug: 'tskaltubo', name: 'Tskaltubo', region: 'imereti', published: true,
     seoKey: 'tskaltubo', contentKey: 'tskaltubo', image: '/images/files/georgia-home.jpg',
+    thingsToDo: {
+      seoKey: 'thingsToDoTskaltubo', contentKey: 'thingsToDoTskaltubo', image: '/images/files/georgia-home.jpg',
+      address: { addressLocality: 'Tskaltubo' },
+      attractions: ['Tskaltubo Soviet Sanatoriums', 'Tskaltubo Mineral Baths', 'Tskaltubo Central Park', 'Prometheus Cave', 'Sataplia Nature Reserve'],
+    },
   },
   {
     slug: 'chiatura', name: 'Chiatura', region: 'imereti', published: true,
