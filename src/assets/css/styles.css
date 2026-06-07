@@ -523,6 +523,14 @@ div.taxi-arrow {
   margin-left: auto;
   margin-right: auto;
 }
+/* "Things to do in <City>" CTA button on city pages — override the 50vw
+   paragraph leak above so the button block centres cleanly. */
+.city-ttd-cta {
+  width: auto;
+  max-width: 800px;
+  text-align: center;
+  margin: var(--indent) auto 0;
+}
 .page-items {
   padding: var(--indent);
   text-align: justify;

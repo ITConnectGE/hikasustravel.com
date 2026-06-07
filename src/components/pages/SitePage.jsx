@@ -17,8 +17,8 @@ const SITE_URL = 'https://www.hikasustravel.com'
 
 /**
  * Generic tourist-site detail page. Serves both nesting patterns:
- *   /destinations/cities/:citySlug/places-to-visit/:siteSlug
- *   /destinations/regions/:regionSlug/places-to-visit/:siteSlug
+ *   /georgia/:citySlug/places-to-visit/:siteSlug
+ *   /georgia/regions/:regionSlug/places-to-visit/:siteSlug
  * The URL's parent must match the site's registry parent, otherwise (or until
  * the site is published) it renders the 404 page.
  */
@@ -51,10 +51,10 @@ export default function SitePage() {
   const trail = published
     ? [
         { name: t('breadcrumb.home'), to: '/' },
-        { name: t('nav.allDestinations'), to: '/destinations' },
+        { name: t('nav.allDestinations'), to: '/georgia' },
         site.parentType === 'city'
-          ? { name: t('nav.cities'), to: '/destinations/cities' }
-          : { name: t('nav.regions'), to: '/destinations/regions' },
+          ? { name: t('nav.cities'), to: '/georgia/cities' }
+          : { name: t('nav.regions'), to: '/georgia/regions' },
         {
           name: parent ? parent.name : site.parent,
           to: site.parentType === 'city' ? cityPath(site.parent) : regionPath(site.parent),

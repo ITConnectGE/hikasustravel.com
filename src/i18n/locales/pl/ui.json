@@ -207,6 +207,8 @@
   "nav.placesToVisit": "Miejsca do zwiedzania",
   "breadcrumb.home": "Strona główna",
   "destinations.comingSoon": "Przewodnik wkrótce",
+
+  "city.thingsToDoCta": "Atrakcje w {city}",
   "destinations.featuredCities": "Polecane przewodniki po miastach",
   "tour.requestPrice": "Zapytaj o dostępność i cenę",
   "tour.askCustom": "Poproś o wersję na zamówienie",

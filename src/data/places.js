@@ -7,16 +7,27 @@
  * all read from here, so adding a new place is a data edit — set
  * `published: true` and add its content to pages.json + SEO to seoData.js.
  *
- * URL scheme (all language-prefixed at runtime, e.g. /en/...):
- *   Hub:    /destinations/regions | /destinations/cities | /destinations/places-to-visit
- *   Region: /destinations/regions/<slug>
- *   City:   /destinations/cities/<slug>
- *   Site:   /destinations/<cities|regions>/<parent>/places-to-visit/<slug>
+ * URL scheme (all language-prefixed at runtime, e.g. /en/...). The whole
+ * Georgia destinations tree is rooted at /georgia:
+ *   Hub:        /georgia | /georgia/regions | /georgia/cities | /georgia/places-to-visit
+ *   Region:     /georgia/regions/<slug>
+ *   City:       /georgia/<slug>
+ *   Things to do: /georgia/<city>/things-to-do-in-<city>
+ *   Site:       /georgia/<city>/places-to-visit/<slug>   (city-parented)
+ *               /georgia/regions/<region>/places-to-visit/<slug>   (region-parented)
+ *
+ * The previous scheme lived under /destinations/... and the city/things-to-do
+ * pages under /destinations/cities/<slug> and /things-to-do-in-<slug>; those
+ * old URLs now 301-redirect here (see legacyRedirects()).
  *
  * A tourist site nests under its parent CITY when it is clearly inside that
  * city, otherwise under its REGION. Each site therefore has exactly ONE
  * canonical URL; other pages (a nearby city, the global places-to-visit hub)
  * link to that single URL rather than duplicating it.
+ *
+ * A city's "things to do" guide is data-driven too: give the city a
+ * `thingsToDo` block (seoKey + contentKey + image + attractions list) and the
+ * route, sitemap, prerender, and the city page's CTA card all pick it up.
  */
 
 export const SITE_URL = 'https://www.hikasustravel.com'
@@ -47,18 +58,90 @@ export const regions = [
 //   region     -> parent region slug (for breadcrumbs / cross-links)
 // ---------------------------------------------------------------------------
 export const cities = [
-  { slug: 'tbilisi', name: 'Tbilisi', region: null, published: true, seoKey: 'tbilisi', contentKey: 'tbilisi', image: '/images/files/tbilisi.jpg' },
-  { slug: 'akhaltsikhe', name: 'Akhaltsikhe', region: 'samtskhe-javakheti', published: true, seoKey: 'akhaltsikhe', contentKey: 'akhaltsikhe', image: '/images/files/georgia-home.jpg' },
-  { slug: 'ambrolauri', name: 'Ambrolauri', region: 'racha-lechkhumi', published: true, seoKey: 'ambrolauri', contentKey: 'ambrolauri', image: '/images/files/georgia-home.jpg' },
-  { slug: 'bakuriani', name: 'Bakuriani', region: 'samtskhe-javakheti', published: true, seoKey: 'bakuriani', contentKey: 'bakuriani', image: '/images/files/georgia-home.jpg' },
+  {
+    slug: 'tbilisi', name: 'Tbilisi', region: null, published: true,
+    seoKey: 'tbilisi', contentKey: 'tbilisi', image: '/images/files/tbilisi.jpg',
+    thingsToDo: {
+      seoKey: 'thingsToDoTbilisi', contentKey: 'thingsToDoTbilisi', image: '/images/files/tbilisi.jpg',
+      address: { addressLocality: 'Tbilisi' },
+      attractions: [
+        'Old Town (Dzveli Tbilisi)', 'Abanotubani Sulfur Baths', 'Narikala Fortress',
+        'Holy Trinity Cathedral (Sameba)', 'Georgian National Museum', 'Rustaveli Avenue', 'Mtatsminda',
+      ],
+    },
+  },
+  {
+    slug: 'akhaltsikhe', name: 'Akhaltsikhe', region: 'samtskhe-javakheti', published: true,
+    seoKey: 'akhaltsikhe', contentKey: 'akhaltsikhe', image: '/images/files/georgia-home.jpg',
+    thingsToDo: {
+      seoKey: 'thingsToDoAkhaltsikhe', contentKey: 'thingsToDoAkhaltsikhe', image: '/images/files/georgia-home.jpg',
+      address: { addressRegion: 'Samtskhe-Javakheti' },
+      attractions: ['Rabati Castle', 'Vardzia cave monastery', 'Khertvisi Fortress', 'Sapara Monastery', 'Borjomi'],
+    },
+  },
+  {
+    slug: 'ambrolauri', name: 'Ambrolauri', region: 'racha-lechkhumi', published: true,
+    seoKey: 'ambrolauri', contentKey: 'ambrolauri', image: '/images/files/georgia-home.jpg',
+    thingsToDo: {
+      seoKey: 'thingsToDoAmbrolauri', contentKey: 'thingsToDoAmbrolauri', image: '/images/files/georgia-home.jpg',
+      address: { addressRegion: 'Racha' },
+      attractions: ['Khvanchkara wineries', 'Nikortsminda Cathedral', 'Shaori Lake', 'Racha villages', 'Rioni River'],
+    },
+  },
+  {
+    slug: 'bakuriani', name: 'Bakuriani', region: 'samtskhe-javakheti', published: true,
+    seoKey: 'bakuriani', contentKey: 'bakuriani', image: '/images/files/georgia-home.jpg',
+    thingsToDo: {
+      seoKey: 'thingsToDoBakuriani', contentKey: 'thingsToDoBakuriani', image: '/images/files/georgia-home.jpg',
+      address: { addressLocality: 'Bakuriani' },
+      attractions: [
+        'Didveli Ski Area', 'Kokhta Ski Area', 'Ski and Snowboard Lessons',
+        'Snow Activities (Sledding and Snowmobiling)', 'Forest Hiking Trails', 'Mountain Biking',
+        'Kukushka Narrow-Gauge Railway', 'Borjomi',
+      ],
+    },
+  },
   { slug: 'kutaisi', name: 'Kutaisi', region: 'imereti', published: false },
-  { slug: 'batumi', name: 'Batumi', region: 'adjara', published: true, seoKey: 'batumi', contentKey: 'batumi', image: '/images/files/georgia-home.jpg' },
+  {
+    slug: 'batumi', name: 'Batumi', region: 'adjara', published: true,
+    seoKey: 'batumi', contentKey: 'batumi', image: '/images/files/georgia-home.jpg',
+    thingsToDo: {
+      seoKey: 'thingsToDoBatumi', contentKey: 'thingsToDoBatumi', image: '/images/files/georgia-home.jpg',
+      address: { addressLocality: 'Batumi' },
+      attractions: [
+        'Batumi Boulevard', 'Ali and Nino Sculpture', 'Batumi Botanical Garden',
+        'Old Batumi (Europe Square)', 'Gonio Fortress', 'Argo Cable Car', 'Makhuntseti Waterfall',
+      ],
+    },
+  },
   { slug: 'mtskheta', name: 'Mtskheta', region: 'mtskheta-mtianeti', published: false },
   { slug: 'telavi', name: 'Telavi', region: 'kakheti', published: false },
   { slug: 'sighnaghi', name: 'Sighnaghi', region: 'kakheti', published: false },
-  { slug: 'borjomi', name: 'Borjomi', region: 'samtskhe-javakheti', published: true, seoKey: 'borjomi', contentKey: 'borjomi', image: '/images/files/borjomi-town.jpg' },
+  {
+    slug: 'borjomi', name: 'Borjomi', region: 'samtskhe-javakheti', published: true,
+    seoKey: 'borjomi', contentKey: 'borjomi', image: '/images/files/borjomi-town.jpg',
+    thingsToDo: {
+      seoKey: 'thingsToDoBorjomi', contentKey: 'thingsToDoBorjomi', image: '/images/files/borjomi-town.jpg',
+      address: { addressLocality: 'Borjomi' },
+      attractions: [
+        'Borjomi Central Park', 'Borjomi Mineral Water Spring', 'Borjomi Sulfur Pools',
+        'Borjomi Cable Car', 'Borjomi-Kharagauli National Park', 'Likani Romanov Palace Grounds',
+      ],
+    },
+  },
   { slug: 'stepantsminda', name: 'Stepantsminda (Kazbegi)', region: 'mtskheta-mtianeti', published: false },
-  { slug: 'bolnisi', name: 'Bolnisi', region: 'kvemo-kartli', published: true, seoKey: 'bolnisi', contentKey: 'bolnisi', image: '/images/files/georgia-home.jpg' },
+  {
+    slug: 'bolnisi', name: 'Bolnisi', region: 'kvemo-kartli', published: true,
+    seoKey: 'bolnisi', contentKey: 'bolnisi', image: '/images/files/georgia-home.jpg',
+    thingsToDo: {
+      seoKey: 'thingsToDoBolnisi', contentKey: 'thingsToDoBolnisi', image: '/images/files/georgia-home.jpg',
+      address: { addressLocality: 'Bolnisi' },
+      attractions: [
+        'Bolnisi Sioni Cathedral', 'German Heritage (Katharinenfeld)', 'Dmanisi Archaeological Site',
+        'Kvemo Kartli Countryside', 'Local Markets and Life', 'Kvemo Kartli Wineries',
+      ],
+    },
+  },
 ]
 
 // ---------------------------------------------------------------------------
@@ -91,14 +174,21 @@ export const getCity = (slug) => cities.find((c) => c.slug === slug) || null
 export const getSite = (slug) => sites.find((s) => s.slug === slug) || null
 
 // ---------------------------------------------------------------------------
-// Canonical path builders (NOT language-prefixed — callers add /<lang>)
+// Canonical path builders (NOT language-prefixed — callers add /<lang>).
+// The whole tree is rooted at /georgia.
 // ---------------------------------------------------------------------------
-export const regionPath = (slug) => `/destinations/regions/${slug}`
-export const cityPath = (slug) => `/destinations/cities/${slug}`
+export const destinationsBase = '/georgia'
+export const regionsHubPath = '/georgia/regions'
+export const citiesHubPath = '/georgia/cities'
+export const placesHubPath = '/georgia/places-to-visit'
+
+export const regionPath = (slug) => `/georgia/regions/${slug}`
+export const cityPath = (slug) => `/georgia/${slug}`
+export const thingsToDoPath = (citySlug) => `/georgia/${citySlug}/things-to-do-in-${citySlug}`
 export const sitePath = (site) => {
   const base = site.parentType === 'city'
-    ? `/destinations/cities/${site.parent}`
-    : `/destinations/regions/${site.parent}`
+    ? `/georgia/${site.parent}`
+    : `/georgia/regions/${site.parent}`
   return `${base}/places-to-visit/${site.slug}`
 }
 
@@ -109,16 +199,38 @@ export const sitePath = (site) => {
 export function publishedDestinationPages() {
   const pages = []
   for (const r of regions) if (r.published) pages.push({ path: cleanPath(regionPath(r.slug)), seoKey: r.seoKey, image: r.image })
-  for (const c of cities) if (c.published) pages.push({ path: cleanPath(cityPath(c.slug)), seoKey: c.seoKey, image: c.image })
+  for (const c of cities) if (c.published) {
+    pages.push({ path: cleanPath(cityPath(c.slug)), seoKey: c.seoKey, image: c.image })
+    if (c.thingsToDo) {
+      pages.push({
+        path: cleanPath(thingsToDoPath(c.slug)),
+        seoKey: c.thingsToDo.seoKey,
+        image: c.thingsToDo.image || c.image,
+      })
+    }
+  }
   for (const s of sites) if (s.published) pages.push({ path: cleanPath(sitePath(s)), seoKey: s.seoKey, image: s.image })
   return pages
 }
 
-// Old flat city URLs (e.g. destinations/tbilisi) -> new nested path.
-export function legacyCityRedirects() {
-  return cities
-    .filter((c) => c.published)
-    .map((c) => ({ from: `destinations/${c.slug}`, to: cleanPath(cityPath(c.slug)) }))
+// Old URLs -> their new /georgia home. Consumed by the build (static redirect
+// stubs in prerender.js) and mirrored client-side by the SPA router.
+//   `from` = old path (no leading slash); `to` = new path (no leading slash).
+export function legacyRedirects() {
+  const out = [
+    { from: 'destinations', to: cleanPath(destinationsBase) },
+    { from: 'destinations/regions', to: cleanPath(regionsHubPath) },
+    { from: 'destinations/cities', to: cleanPath(citiesHubPath) },
+    { from: 'destinations/places-to-visit', to: cleanPath(placesHubPath) },
+  ]
+  for (const c of cities) {
+    if (!c.published) continue
+    out.push({ from: `destinations/cities/${c.slug}`, to: cleanPath(cityPath(c.slug)) }) // old nested city
+    out.push({ from: `destinations/${c.slug}`, to: cleanPath(cityPath(c.slug)) })        // legacy flat city
+    if (c.thingsToDo) out.push({ from: `things-to-do-in-${c.slug}`, to: cleanPath(thingsToDoPath(c.slug)) })
+  }
+  for (const r of regions) if (r.published) out.push({ from: `destinations/regions/${r.slug}`, to: cleanPath(regionPath(r.slug)) })
+  return out
 }
 
 const cleanPath = (p) => p.replace(/^\//, '')

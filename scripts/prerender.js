@@ -18,7 +18,7 @@ const __dirname = dirname(fileURLToPath(import.meta.url))
 
 // Destination registry (regions / cities / sites) — published detail pages and
 // the legacy flat-city URLs that must redirect to their new nested location.
-const { publishedDestinationPages, legacyCityRedirects } = await import(
+const { publishedDestinationPages, legacyRedirects } = await import(
   pathToFileURL(join(__dirname, '../src/data/places.js')).href
 )
 const DIST = join(__dirname, '..', 'dist')
@@ -161,17 +161,12 @@ const seoPageMap = {
   'georgian-lari-currency-guide': 'lariGuide',
   'georgia-visa-entry-requirements': 'visaGuide',
   'languages-of-georgia': 'languagesGuide',
-  'destinations': 'destinations',
-  'destinations/regions': 'destinationsRegions',
-  'destinations/cities': 'destinationsCities',
-  'destinations/places-to-visit': 'destinationsPlaces',
-  'things-to-do-in-tbilisi': 'thingsToDoTbilisi',
-  'things-to-do-in-akhaltsikhe': 'thingsToDoAkhaltsikhe',
-  'things-to-do-in-ambrolauri': 'thingsToDoAmbrolauri',
-  'things-to-do-in-bakuriani': 'thingsToDoBakuriani',
-  'things-to-do-in-batumi': 'thingsToDoBatumi',
-  'things-to-do-in-bolnisi': 'thingsToDoBolnisi',
-  'things-to-do-in-borjomi': 'thingsToDoBorjomi',
+  'georgia': 'destinations',
+  'georgia/regions': 'destinationsRegions',
+  'georgia/cities': 'destinationsCities',
+  'georgia/places-to-visit': 'destinationsPlaces',
+  // City detail pages + their things-to-do guides are emitted from the
+  // destination registry (publishedDestinationPages), not from this map.
   'private-tours': 'privateTours',
   'group-tours': 'groupTours',
   'shuttle-service': 'shuttle',
@@ -323,8 +318,9 @@ for (const lang of LANGS) {
     })
   }
 
-  // --- Legacy flat city URLs -> redirect stubs to the new nested location ---
-  for (const { from, to } of legacyCityRedirects()) {
+  // --- Old URLs (the /destinations tree + flat things-to-do) -> redirect
+  //     stubs pointing at their new /georgia home. ---
+  for (const { from, to } of legacyRedirects()) {
     const filePath = join(DIST, lang, from, 'index.html')
     writeRedirectStub(filePath, `${SITE_URL}/${lang}/${to}`)
   }

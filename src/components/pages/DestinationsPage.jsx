@@ -18,9 +18,9 @@ const SITE_URL = 'https://www.hikasustravel.com'
 // The four ways into the Destinations section. Wineries are intentionally
 // omitted until winery pages are published.
 const SUBHUBS = [
-  { to: '/destinations/regions', image: '/images/files/georgia-home.jpg', labelKey: 'nav.regions' },
-  { to: '/destinations/cities', image: '/images/files/tbilisi.jpg', labelKey: 'nav.cities' },
-  { to: '/destinations/places-to-visit', image: '/images/files/georgia-home.jpg', labelKey: 'nav.placesToVisit' },
+  { to: '/georgia/regions', image: '/images/files/georgia-home.jpg', labelKey: 'nav.regions' },
+  { to: '/georgia/cities', image: '/images/files/tbilisi.jpg', labelKey: 'nav.cities' },
+  { to: '/georgia/places-to-visit', image: '/images/files/georgia-home.jpg', labelKey: 'nav.placesToVisit' },
 ]
 
 // Existing important destination pages — the published city guides.
@@ -39,7 +39,7 @@ export default function DestinationsPage() {
   ]
 
   const jsonLd = useMemo(() => {
-    const url = `${SITE_URL}/${lang}/destinations`
+    const url = `${SITE_URL}/${lang}/georgia`
     return {
       '@context': 'https://schema.org',
       '@graph': [
@@ -64,7 +64,7 @@ export default function DestinationsPage() {
     }
   }, [lang, t])
 
-  useSEO({ ...seo, lang, path: 'destinations', image: HERO_IMAGE, jsonLd })
+  useSEO({ ...seo, lang, path: 'georgia', image: HERO_IMAGE, jsonLd })
 
   return (
     <>

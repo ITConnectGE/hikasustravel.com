@@ -207,6 +207,8 @@
   "nav.placesToVisit": "Místa k návštěvě",
   "breadcrumb.home": "Domů",
   "destinations.comingSoon": "Průvodce již brzy",
+
+  "city.thingsToDoCta": "Co dělat v {city}",
   "destinations.featuredCities": "Vybraní průvodci městy",
   "tour.requestPrice": "Zjistit dostupnost a cenu",
   "tour.askCustom": "Požádat o úpravu na míru",

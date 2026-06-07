@@ -207,6 +207,8 @@
   "nav.placesToVisit": "Places to Visit",
   "breadcrumb.home": "Home",
   "destinations.comingSoon": "Guide coming soon",
+
+  "city.thingsToDoCta": "Things to do in {city}",
   "destinations.featuredCities": "Featured city guides",
   "tour.requestPrice": "Request Availability & Price",
   "tour.askCustom": "Ask for a Custom Version",

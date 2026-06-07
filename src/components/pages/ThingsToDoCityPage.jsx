@@ -9,43 +9,48 @@ import useT from '../../i18n/useT'
 import useLang from '../../i18n/useLang'
 import useSEO from '../../hooks/useSEO'
 import { getSEO } from '../../data/seoData'
-import { getRegion, regionPath } from '../../data/places'
+import { getCity, cityPath, thingsToDoPath } from '../../data/places'
 import enPages from '../../i18n/locales/en/pages.json'
 import NotFoundPage from './NotFoundPage'
 
 const SITE_URL = 'https://www.hikasustravel.com'
 
 /**
- * Generic region detail page. Scaffolded against the places.js registry; a
- * region renders only once it has `published: true` plus seoKey/contentKey/
- * image. Until then the route resolves to the 404 page (no thin/empty pages).
+ * Generic "Things to do in <City>" page, driven by the places.js registry.
+ * The URL /:lang/georgia/:citySlug/:ttd resolves a city whose `thingsToDo`
+ * block exists and whose `:ttd` segment is exactly things-to-do-in-<citySlug>;
+ * anything else renders the 404 page (never an empty stub).
  */
-export default function RegionPage() {
-  const { regionSlug } = useParams()
-  const region = getRegion(regionSlug)
+export default function ThingsToDoCityPage() {
+  const { citySlug, ttd } = useParams()
+  const city = getCity(citySlug)
   const t = useT()
   const { pages } = useContext(I18nContext)
   const { lang } = useLang()
   const navigate = useNavigate()
   const contentRef = useRef(null)
 
-  const published = region && region.published
-  const contentKey = published ? region.contentKey : null
-  const page = published ? (pages[contentKey] || enPages[contentKey]) : null
-  const seo = getSEO(published ? region.seoKey : 'destinations', lang)
-  const faqItems = useMemo(() => (page && page.faq) || [], [page])
-  const path = published ? regionPath(region.slug).replace(/^\//, '') : ''
-  const heroImage = published ? region.image : null
+  const config = city && city.published ? city.thingsToDo : null
+  // Guard the exact slug so /georgia/tbilisi/anything doesn't render this page.
+  const valid = !!config && ttd === `things-to-do-in-${citySlug}`
 
-  const trail = published
+  const heroImage = config ? (config.image || city.image) : null
+  const page = valid ? (pages[config.contentKey] || enPages[config.contentKey]) : null
+  const seo = getSEO(valid ? config.seoKey : 'destinations', lang)
+  const faqItems = useMemo(() => (page && page.faq) || [], [page])
+  const path = valid ? thingsToDoPath(citySlug).replace(/^\//, '') : ''
+  const ttdLabel = valid ? t('city.thingsToDoCta', { city: city.name }) : ''
+
+  const trail = valid
     ? [
         { name: t('breadcrumb.home'), to: '/' },
         { name: t('nav.allDestinations'), to: '/georgia' },
-        { name: t('nav.regions'), to: '/georgia/regions' },
-        { name: region.name },
+        { name: city.name, to: cityPath(city.slug) },
+        { name: ttdLabel },
       ]
     : []
 
+  // Intercept in-content internal links (data-internal) for same-tab SPA nav.
   useEffect(() => {
     const el = contentRef.current
     if (!el) return
@@ -57,21 +62,23 @@ export default function RegionPage() {
     }
     el.addEventListener('click', onClick)
     return () => el.removeEventListener('click', onClick)
-  }, [lang, navigate, published])
+  }, [lang, navigate, valid])
 
   const jsonLd = useMemo(() => {
-    if (!published) return null
+    if (!valid) return null
     const url = `${SITE_URL}/${lang}/${path}`
     return {
       '@context': 'https://schema.org',
       '@graph': [
         {
-          '@type': 'TouristDestination',
-          name: region.name,
+          '@type': 'Article',
+          headline: page.heroTitle,
           description: seo.description,
-          url,
+          inLanguage: lang,
+          mainEntityOfPage: url,
           image: `${SITE_URL}${heroImage}`,
-          containedInPlace: { '@type': 'Country', name: 'Georgia' },
+          author: { '@type': 'Organization', name: 'Hikasus Travel' },
+          publisher: { '@type': 'Organization', name: 'Hikasus Travel', url: SITE_URL },
         },
         {
           '@type': 'BreadcrumbList',
@@ -80,6 +87,19 @@ export default function RegionPage() {
             position: i + 1,
             name: c.name,
             item: c.to ? `${SITE_URL}/${lang}${c.to === '/' ? '' : c.to}` : url,
+          })),
+        },
+        {
+          '@type': 'ItemList',
+          name: ttdLabel,
+          itemListElement: config.attractions.map((name, i) => ({
+            '@type': 'ListItem',
+            position: i + 1,
+            item: {
+              '@type': 'TouristAttraction',
+              name,
+              address: { '@type': 'PostalAddress', ...config.address, addressCountry: 'GE' },
+            },
           })),
         },
         {
@@ -93,19 +113,18 @@ export default function RegionPage() {
       ],
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [published, lang, path, seo.description, heroImage, faqItems])
+  }, [valid, lang, path, seo.description, heroImage, faqItems, ttdLabel])
 
-  useSEO(published ? { ...seo, lang, path, image: heroImage, jsonLd } : {})
+  useSEO(valid ? { ...seo, lang, path, image: heroImage, jsonLd } : {})
 
-  if (!published) return <NotFoundPage />
+  if (!valid) return <NotFoundPage />
 
   return (
     <>
-      {/* Small breadcrumb bar above the hero — the H1 is the region name. */}
       <div className="dest-breadcrumbs">
         <Breadcrumbs trail={trail} />
       </div>
-      <HeroSection image={heroImage} title={region.name} />
+      <HeroSection image={heroImage} title={page.heroTitle} />
       <section className="page-items about-georgia">
         <FadeUp>
           <div ref={contentRef} dangerouslySetInnerHTML={{ __html: page.content }} />

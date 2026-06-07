@@ -12,14 +12,9 @@ import { RegionsHubPage, CitiesHubPage, PlacesToVisitHubPage } from './component
 import CityPage from './components/pages/CityPage'
 import RegionPage from './components/pages/RegionPage'
 import SitePage from './components/pages/SitePage'
-import LegacyCityRedirect from './components/pages/LegacyCityRedirect'
-import ThingsToDoTbilisiPage from './components/pages/ThingsToDoTbilisiPage'
-import ThingsToDoAkhaltsikhePage from './components/pages/ThingsToDoAkhaltsikhePage'
-import ThingsToDoAmbrolauriPage from './components/pages/ThingsToDoAmbrolauriPage'
-import ThingsToDoBakurianiPage from './components/pages/ThingsToDoBakurianiPage'
-import ThingsToDoBatumiPage from './components/pages/ThingsToDoBatumiPage'
-import ThingsToDoBolnisiPage from './components/pages/ThingsToDoBolnisiPage'
-import ThingsToDoBorjomiPage from './components/pages/ThingsToDoBorjomiPage'
+import ThingsToDoCityPage from './components/pages/ThingsToDoCityPage'
+import { DestinationsRedirect, ThingsToDoRedirect } from './components/pages/LegacyRedirects'
+import { cities } from './data/places'
 import PrivateToursPage from './components/pages/PrivateToursPage'
 import GroupToursPage from './components/pages/GroupToursPage'
 import TourDetailPage from './components/pages/TourDetailPage'
@@ -45,24 +40,32 @@ export default function App() {
           <Route path="georgian-lari-currency-guide" element={<CurrencyGuidePage />} />
           <Route path="georgia-visa-entry-requirements" element={<VisaPage />} />
           <Route path="languages-of-georgia" element={<LanguagesPage />} />
-          <Route path="destinations" element={<DestinationsPage />} />
-          <Route path="destinations/regions" element={<RegionsHubPage />} />
-          <Route path="destinations/cities" element={<CitiesHubPage />} />
-          <Route path="destinations/places-to-visit" element={<PlacesToVisitHubPage />} />
-          <Route path="destinations/cities/:citySlug" element={<CityPage />} />
-          <Route path="destinations/cities/:citySlug/places-to-visit/:siteSlug" element={<SitePage />} />
-          <Route path="destinations/regions/:regionSlug" element={<RegionPage />} />
-          <Route path="destinations/regions/:regionSlug/places-to-visit/:siteSlug" element={<SitePage />} />
-          {/* Legacy flat city URLs (e.g. /destinations/tbilisi) -> /destinations/cities/<city>.
-              Static segments above outrank this dynamic one, so the hubs still resolve. */}
-          <Route path="destinations/:legacyCitySlug" element={<LegacyCityRedirect />} />
-          <Route path="things-to-do-in-tbilisi" element={<ThingsToDoTbilisiPage />} />
-          <Route path="things-to-do-in-akhaltsikhe" element={<ThingsToDoAkhaltsikhePage />} />
-          <Route path="things-to-do-in-ambrolauri" element={<ThingsToDoAmbrolauriPage />} />
-          <Route path="things-to-do-in-bakuriani" element={<ThingsToDoBakurianiPage />} />
-          <Route path="things-to-do-in-batumi" element={<ThingsToDoBatumiPage />} />
-          <Route path="things-to-do-in-bolnisi" element={<ThingsToDoBolnisiPage />} />
-          <Route path="things-to-do-in-borjomi" element={<ThingsToDoBorjomiPage />} />
+          {/* Georgia destinations tree. Static segments (regions/cities/
+              places-to-visit) outrank the dynamic :citySlug, so hubs resolve. */}
+          <Route path="georgia" element={<DestinationsPage />} />
+          <Route path="georgia/regions" element={<RegionsHubPage />} />
+          <Route path="georgia/cities" element={<CitiesHubPage />} />
+          <Route path="georgia/places-to-visit" element={<PlacesToVisitHubPage />} />
+          <Route path="georgia/regions/:regionSlug" element={<RegionPage />} />
+          <Route path="georgia/regions/:regionSlug/places-to-visit/:siteSlug" element={<SitePage />} />
+          <Route path="georgia/:citySlug" element={<CityPage />} />
+          <Route path="georgia/:citySlug/places-to-visit/:siteSlug" element={<SitePage />} />
+          {/* /georgia/<city>/things-to-do-in-<city> — the component validates the
+              :ttd segment matches the city, otherwise renders the 404 page. */}
+          <Route path="georgia/:citySlug/:ttd" element={<ThingsToDoCityPage />} />
+          {/* Legacy URL redirects -> their new /georgia home (mirror the static
+              redirect stubs emitted by scripts/prerender.js). */}
+          <Route path="destinations/*" element={<DestinationsRedirect />} />
+          <Route path="destinations" element={<DestinationsRedirect />} />
+          {cities
+            .filter((c) => c.published && c.thingsToDo)
+            .map((c) => (
+              <Route
+                key={c.slug}
+                path={`things-to-do-in-${c.slug}`}
+                element={<ThingsToDoRedirect citySlug={c.slug} />}
+              />
+            ))}
           <Route path="private-tours" element={<PrivateToursPage />} />
           <Route path="group-tours" element={<GroupToursPage />} />
           <Route path="private-tours/:slug" element={<TourDetailPage />} />

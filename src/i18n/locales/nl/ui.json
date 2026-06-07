@@ -207,6 +207,8 @@
   "nav.placesToVisit": "Bezienswaardigheden",
   "breadcrumb.home": "Home",
   "destinations.comingSoon": "Gids binnenkort beschikbaar",
+
+  "city.thingsToDoCta": "Wat te doen in {city}",
   "destinations.featuredCities": "Uitgelichte stadsgidsen",
   "tour.requestPrice": "Vraag beschikbaarheid & prijs op",
   "tour.askCustom": "Vraag een versie op maat aan",

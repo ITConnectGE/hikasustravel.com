@@ -10,10 +10,10 @@ export const navLinks = [
   {
     labelKey: 'nav.destinations',
     children: [
-      { to: '/destinations', labelKey: 'nav.allDestinations' },
-      { to: '/destinations/regions', labelKey: 'nav.regions' },
-      { to: '/destinations/cities', labelKey: 'nav.cities' },
-      { to: '/destinations/places-to-visit', labelKey: 'nav.placesToVisit' },
+      { to: '/georgia', labelKey: 'nav.allDestinations' },
+      { to: '/georgia/regions', labelKey: 'nav.regions' },
+      { to: '/georgia/cities', labelKey: 'nav.cities' },
+      { to: '/georgia/places-to-visit', labelKey: 'nav.placesToVisit' },
     ],
   },
   { to: '/about-georgia', labelKey: 'nav.aboutGeorgia' },

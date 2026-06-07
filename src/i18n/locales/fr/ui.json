@@ -207,6 +207,8 @@
   "nav.placesToVisit": "Que visiter",
   "breadcrumb.home": "Accueil",
   "destinations.comingSoon": "Guide bientôt disponible",
+
+  "city.thingsToDoCta": "Que faire à {city}",
   "destinations.featuredCities": "Guides de villes en vedette",
   "tour.requestPrice": "Demander disponibilité et prix",
   "tour.askCustom": "Demander une version sur mesure",

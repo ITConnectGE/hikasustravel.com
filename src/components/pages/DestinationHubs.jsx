@@ -21,7 +21,7 @@ export function RegionsHubPage() {
     <DestinationHub
       pageKey="destinationsRegions"
       seoKey="destinationsRegions"
-      path="destinations/regions"
+      path="georgia/regions"
       heroImage={HERO_IMAGE}
       entries={entries}
       currentLabelKey="nav.regions"
@@ -40,7 +40,7 @@ export function CitiesHubPage() {
     <DestinationHub
       pageKey="destinationsCities"
       seoKey="destinationsCities"
-      path="destinations/cities"
+      path="georgia/cities"
       heroImage={HERO_IMAGE}
       entries={entries}
       currentLabelKey="nav.cities"
@@ -59,7 +59,7 @@ export function PlacesToVisitHubPage() {
     <DestinationHub
       pageKey="destinationsPlaces"
       seoKey="destinationsPlaces"
-      path="destinations/places-to-visit"
+      path="georgia/places-to-visit"
       heroImage={HERO_IMAGE}
       entries={entries}
       currentLabelKey="nav.placesToVisit"

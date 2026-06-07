@@ -4,12 +4,13 @@ import HeroSection from '../shared/HeroSection'
 import FadeUp from '../shared/FadeUp'
 import Accordion from '../shared/Accordion'
 import Breadcrumbs from '../shared/Breadcrumbs'
+import LocaleLink from '../../i18n/LocaleLink'
 import { I18nContext } from '../../i18n/I18nProvider'
 import useT from '../../i18n/useT'
 import useLang from '../../i18n/useLang'
 import useSEO from '../../hooks/useSEO'
 import { getSEO } from '../../data/seoData'
-import { getCity } from '../../data/places'
+import { getCity, cityPath, thingsToDoPath } from '../../data/places'
 import enPages from '../../i18n/locales/en/pages.json'
 import NotFoundPage from './NotFoundPage'
 
@@ -17,8 +18,8 @@ const SITE_URL = 'https://www.hikasustravel.com'
 
 /**
  * Generic city detail page. Driven by the places.js registry — the URL
- * /:lang/destinations/cities/:citySlug resolves a registry entry; an unknown
- * or not-yet-published slug renders the 404 page (never an empty stub).
+ * /:lang/georgia/:citySlug resolves a registry entry; an unknown or
+ * not-yet-published slug renders the 404 page (never an empty stub).
  */
 export default function CityPage() {
   const { citySlug } = useParams()
@@ -34,14 +35,16 @@ export default function CityPage() {
   const page = published ? (pages[contentKey] || enPages[contentKey]) : null
   const seo = getSEO(published ? city.seoKey : 'destinations', lang)
   const faqItems = useMemo(() => (page && page.faq) || [], [page])
-  const path = published ? `destinations/cities/${city.slug}` : ''
+  const path = published ? cityPath(city.slug).replace(/^\//, '') : ''
   const heroImage = published ? city.image : null
+  // Only link the things-to-do guide when the city actually has one published.
+  const hasThingsToDo = published && !!city.thingsToDo
 
   const trail = published
     ? [
         { name: t('breadcrumb.home'), to: '/' },
-        { name: t('nav.allDestinations'), to: '/destinations' },
-        { name: t('nav.cities'), to: '/destinations/cities' },
+        { name: t('nav.allDestinations'), to: '/georgia' },
+        { name: t('nav.cities'), to: '/georgia/cities' },
         { name: city.name },
       ]
     : []
@@ -121,6 +124,15 @@ export default function CityPage() {
         <FadeUp>
           <div ref={contentRef} dangerouslySetInnerHTML={{ __html: page.content }} />
         </FadeUp>
+        {hasThingsToDo && (
+          <FadeUp>
+            <p className="city-ttd-cta">
+              <LocaleLink to={thingsToDoPath(city.slug)} className="button">
+                {t('city.thingsToDoCta', { city: city.name })}
+              </LocaleLink>
+            </p>
+          </FadeUp>
+        )}
       </section>
       {faqItems.length > 0 && (
         <section className="page-items faq" id="faq-section">

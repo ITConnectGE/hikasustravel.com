@@ -50,7 +50,7 @@ export default function DestinationHub({
 
   const trail = [
     { name: t('breadcrumb.home'), to: '/' },
-    { name: t('nav.allDestinations'), to: '/destinations' },
+    { name: t('nav.allDestinations'), to: '/georgia' },
     { name: t(currentLabelKey) },
   ]
 
