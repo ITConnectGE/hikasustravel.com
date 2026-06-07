@@ -344,6 +344,12 @@ export const sites = [
     seoKey: 'batumiDolphinarium', contentKey: 'batumiDolphinarium',
     image: '/images/files/batumi-coastal-tour.jpg',
   },
+  {
+    slug: 'batumi-piazza', name: 'Batumi Piazza',
+    parentType: 'city', parent: 'batumi', published: true,
+    seoKey: 'batumiPiazza', contentKey: 'batumiPiazza',
+    image: '/images/files/Batumi.jpg',
+  },
   { slug: 'narikala-fortress', name: 'Narikala Fortress', parentType: 'city', parent: 'tbilisi', published: false },
   { slug: 'jvari-monastery', name: 'Jvari Monastery', parentType: 'city', parent: 'mtskheta', published: false },
   { slug: 'uplistsikhe-cave-town', name: 'Uplistsikhe Cave Town', parentType: 'region', parent: 'shida-kartli', published: false },
