@@ -156,7 +156,10 @@ export const cities = [
       ],
     },
   },
-  { slug: 'stepantsminda', name: 'Stepantsminda (Kazbegi)', region: 'mtskheta-mtianeti', published: false },
+  {
+    slug: 'kazbegi-stepantsminda', name: 'Kazbegi (Stepantsminda)', region: 'mtskheta-mtianeti', published: true,
+    seoKey: 'kazbegiStepantsminda', contentKey: 'kazbegiStepantsminda', image: '/images/files/georgia-home.jpg',
+  },
   {
     slug: 'gudauri', name: 'Gudauri', region: 'mtskheta-mtianeti', published: true,
     seoKey: 'gudauri', contentKey: 'gudauri', image: '/images/files/georgia-home.jpg',
