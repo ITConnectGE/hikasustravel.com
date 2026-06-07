@@ -332,6 +332,12 @@ export const sites = [
     seoKey: 'batumiBoulevard', contentKey: 'batumiBoulevard',
     image: '/images/files/batumi-coastal-tour.jpg',
   },
+  {
+    slug: 'batumi-central-mosque', name: 'Batumi Central Mosque',
+    parentType: 'city', parent: 'batumi', published: true,
+    seoKey: 'batumiCentralMosque', contentKey: 'batumiCentralMosque',
+    image: '/images/files/Batumi.jpg',
+  },
   { slug: 'narikala-fortress', name: 'Narikala Fortress', parentType: 'city', parent: 'tbilisi', published: false },
   { slug: 'jvari-monastery', name: 'Jvari Monastery', parentType: 'city', parent: 'mtskheta', published: false },
   { slug: 'uplistsikhe-cave-town', name: 'Uplistsikhe Cave Town', parentType: 'region', parent: 'shida-kartli', published: false },
