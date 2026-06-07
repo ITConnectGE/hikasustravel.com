@@ -128,6 +128,11 @@ export const cities = [
   {
     slug: 'gurjaani', name: 'Gurjaani', region: 'kakheti', published: true,
     seoKey: 'gurjaani', contentKey: 'gurjaani', image: '/images/files/georgia-home.jpg',
+    thingsToDo: {
+      seoKey: 'thingsToDoGurjaani', contentKey: 'thingsToDoGurjaani', image: '/images/files/georgia-home.jpg',
+      address: { addressLocality: 'Gurjaani' },
+      attractions: ['Gurjaani Kvelatsminda Church', 'Velistsikhe Wine Museum', 'Nekresi Monastery', 'Alazani Valley'],
+    },
   },
   { slug: 'sighnaghi', name: 'Sighnaghi', region: 'kakheti', published: false },
   {
