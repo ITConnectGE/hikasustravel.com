@@ -95,6 +95,14 @@ export const borderCrossings = [
     image: '/images/files/georgia-home.jpg',
     published: true,
   },
+  {
+    slug: 'vale-border-crossing',
+    name: 'Vale Border Crossing',
+    seoKey: 'valeBorderCrossing',
+    contentKey: 'valeBorderCrossing',
+    image: '/images/files/georgia-home.jpg',
+    published: true,
+  },
 ]
 
 export const borderHubPath = '/georgia/border-crossings'

@@ -29,6 +29,9 @@ const seo = {
   sarpiBorderCrossing: {
     en: { title: "Sarpi Border Crossing: Georgia–Turkey near Batumi", description: "Sarpi is the main, 24/7 Georgia–Turkey crossing near Batumi on the Black Sea: how to cross, transport to Hopa and Trabzon, visas, and what to know first.", keywords: "Sarpi border crossing, Georgia Turkey border, Batumi border crossing, Sarpi Sarp, Black Sea crossing, Hopa Trabzon, Adjara Turkey, Georgia Turkey 24/7 crossing, Khelvachauri" },
   },
+  valeBorderCrossing: {
+    en: { title: "Vale Border Crossing: Georgia–Turkey near Akhaltsikhe", description: "Vale (Vale–Türkgözü/Posof) is Georgia's inland crossing to Turkey near Akhaltsikhe, into Ardahan province: who should use it, the route, transport, and hours.", keywords: "Vale border crossing, Vale Turkgozu, Posof crossing, Georgia Turkey border, Akhaltsikhe border, Samtskhe-Javakheti, Ardahan Kars, inland Georgia Turkey crossing, Sarpi alternative" },
+  },
   thingsToDoBorjomi: {
     en: { title: "Things to Do in Borjomi, Georgia: Springs & Park", description: "Things to do in Borjomi, Georgia: Central Park and the mineral spring, the forest sulfur pools, the cable car, Borjomi-Kharagauli National Park, and Likani.", keywords: "things to do in Borjomi, Borjomi Georgia, Borjomi Central Park, Borjomi mineral water, Borjomi sulfur pools, Borjomi cable car, Borjomi-Kharagauli National Park, Likani palace, Borjomi attractions, Borjomi hiking" },
     es: { title: "Qué hacer en Borjomi, Georgia: manantiales y parque", description: "Qué hacer en Borjomi, Georgia: el Parque Central y el manantial mineral, las piscinas de azufre del bosque, el teleférico, el Parque Nacional Borjomi-Kharagauli y Likani.", keywords: "qué hacer en Borjomi, Borjomi Georgia, Parque Central de Borjomi, agua mineral de Borjomi, piscinas de azufre de Borjomi, teleférico de Borjomi, Parque Nacional Borjomi-Kharagauli, palacio de Likani, atracciones de Borjomi, senderismo en Borjomi" },
