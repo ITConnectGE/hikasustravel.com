@@ -242,6 +242,9 @@ const seo = {
   telavi: {
     en: { title: 'Telavi, Georgia: Capital of Kakheti Wine Country', description: 'Telavi is the hub of Georgia\'s Kakheti wine country: the Batonis Tsikhe fortress, the Alaverdi Cathedral, Tsinandali, Gremi, and the best base for wine tours.', keywords: 'Telavi, Telavi Georgia, Kakheti wine, Batonis Tsikhe, Alaverdi Cathedral, Tsinandali, Ikalto, Gremi, Erekle II, Alazani valley, qvevri wine, wine tours Kakheti' },
   },
+  tskaltubo: {
+    en: { title: 'Tskaltubo, Georgia: Soviet Sanatoriums & Mineral Baths', description: 'Tskaltubo in western Georgia is famous for its abandoned Soviet sanatoriums, working mineral baths, and Prometheus Cave nearby. What to see, and how to visit.', keywords: 'Tskaltubo, Tskaltubo Georgia, Soviet sanatoriums, abandoned sanatoriums, Tskaltubo mineral baths, balneotherapy, Prometheus Cave, Sataplia, Imereti, Kutaisi, urban exploration Georgia' },
+  },
   tbilisi: {
     en: { title: 'Tbilisi, Georgia: Things to Do, Tips & Day Trips', description: 'Tbilisi is the capital of Georgia in the South Caucasus. What to see, how many days you need, best time to visit, and easy day trips from the city.', keywords: 'Tbilisi, Tbilisi Georgia, things to do in Tbilisi, Tbilisi travel guide, visit Tbilisi, Old Town Tbilisi, Narikala Fortress, sulfur baths Tbilisi, day trips from Tbilisi, best time to visit Tbilisi, Tbilisi itinerary' },
     es: { title: "Tiflis, Georgia: qué ver, consejos y excursiones", description: "Tiflis es la capital de Georgia, en el sur del Cáucaso. Qué ver, cuántos días necesitas, la mejor época para visitarla y excursiones fáciles desde la ciudad.", keywords: "Tiflis, Tiflis Georgia, qué hacer en Tiflis, guía de Tiflis, visitar Tiflis, casco antiguo de Tiflis, fortaleza Narikala, baños de azufre Tiflis, excursiones desde Tiflis, mejor época para visitar Tiflis" },

@@ -111,6 +111,10 @@ export const cities = [
     },
   },
   {
+    slug: 'tskaltubo', name: 'Tskaltubo', region: 'imereti', published: true,
+    seoKey: 'tskaltubo', contentKey: 'tskaltubo', image: '/images/files/georgia-home.jpg',
+  },
+  {
     slug: 'chiatura', name: 'Chiatura', region: 'imereti', published: true,
     seoKey: 'chiatura', contentKey: 'chiatura', image: '/images/files/georgia-home.jpg',
     thingsToDo: {
