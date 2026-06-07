@@ -152,6 +152,11 @@ export const cities = [
   {
     slug: 'ushguli', name: 'Ushguli', region: 'svaneti', published: true,
     seoKey: 'ushguli', contentKey: 'ushguli', image: '/images/files/georgia-home.jpg',
+    thingsToDo: {
+      seoKey: 'thingsToDoUshguli', contentKey: 'thingsToDoUshguli', image: '/images/files/georgia-home.jpg',
+      address: { addressLocality: 'Ushguli' },
+      attractions: ['Ushguli Svan Towers', 'Lamaria Church', 'Mount Shkhara & Glacier', 'Chazhashi Village'],
+    },
   },
   {
     slug: 'mestia', name: 'Mestia', region: 'svaneti', published: true,
