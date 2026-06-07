@@ -311,6 +311,9 @@ const seo = {
   thingsToDoUshguli: {
     en: { title: 'Things to Do in Ushguli, Georgia: Towers & Shkhara', description: 'Things to do in Ushguli, Georgia: walk the UNESCO villages and Svan towers, visit Lamaria Church, hike toward Mount Shkhara, and stay in a Svaneti guesthouse.', keywords: 'things to do in Ushguli, Svan towers, Lamaria Church, Mount Shkhara, Shkhara Glacier, Upper Svaneti, UNESCO Georgia, Chazhashi, Svaneti guesthouse, Enguri valley' },
   },
+  thingsToDoZugdidi: {
+    en: { title: 'Things to Do in Zugdidi, Georgia: Palace & Svaneti', description: 'Things to do in Zugdidi, Georgia: the Dadiani Palace and its Napoleon death mask, the local market, spicy Mingrelian cuisine, and the gateway to Svaneti.', keywords: 'things to do in Zugdidi, Dadiani Palace, Napoleon death mask, Zugdidi market, Mingrelian cuisine, gateway to Svaneti, Mestia, Anaklia, Samegrelo, western Georgia' },
+  },
   thingsToDoTbilisi: {
     en: { title: 'Things to Do in Tbilisi, Georgia: A Local Guide', description: 'The best things to do in Tbilisi, capital of Georgia: the Old Town, sulfur baths, Narikala Fortress, museums, food and wine — with local tips and timing.', keywords: 'things to do in Tbilisi, what to do in Tbilisi, Tbilisi attractions, Tbilisi Old Town, Abanotubani sulfur baths, Narikala Fortress, Sameba Cathedral, Georgian National Museum, Tbilisi food, Tbilisi wine bars, Tbilisi sightseeing, Tbilisi itinerary' },
     es: { title: "Qué hacer en Tiflis, Georgia: guía local", description: "Las mejores cosas que hacer en Tiflis, capital de Georgia: el casco antiguo, los baños de azufre, la fortaleza Narikala, museos, gastronomía y vino, con consejos locales.", keywords: "qué hacer en Tiflis, qué ver en Tiflis, atracciones de Tiflis, casco antiguo de Tiflis, baños de azufre Abanotubani, fortaleza Narikala, catedral Sameba, Museo Nacional de Georgia, gastronomía de Tiflis, bares de vino Tiflis" },

@@ -170,6 +170,11 @@ export const cities = [
   {
     slug: 'zugdidi', name: 'Zugdidi', region: 'samegrelo', published: true,
     seoKey: 'zugdidi', contentKey: 'zugdidi', image: '/images/files/georgia-home.jpg',
+    thingsToDo: {
+      seoKey: 'thingsToDoZugdidi', contentKey: 'thingsToDoZugdidi', image: '/images/files/georgia-home.jpg',
+      address: { addressLocality: 'Zugdidi' },
+      attractions: ['Dadiani Palace', 'Dadiani Palace Gardens', 'Zugdidi Market', 'Anaklia Black Sea Coast'],
+    },
   },
   {
     slug: 'martvili', name: 'Martvili', region: 'samegrelo', published: true,
