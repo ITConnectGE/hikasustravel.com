@@ -79,6 +79,14 @@ export const borderCrossings = [
     image: '/images/files/georgia-home.jpg',
     published: true,
   },
+  {
+    slug: 'sadakhlo-bagratashen-border-crossing',
+    name: 'Sadakhlo / Bagratashen Border Crossing',
+    seoKey: 'sadakhloBagratashenBorderCrossing',
+    contentKey: 'sadakhloBagratashenBorderCrossing',
+    image: '/images/files/georgia-home.jpg',
+    published: true,
+  },
 ]
 
 export const borderHubPath = '/georgia/border-crossings'
