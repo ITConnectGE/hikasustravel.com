@@ -36,18 +36,19 @@ export const SITE_URL = 'https://www.hikasustravel.com'
 // Regions of Georgia (tourism taxonomy). `name` is the English/house-style
 // proper name used for schema + fallback; localized names come from pages.json.
 // ---------------------------------------------------------------------------
+// Listed alphabetically by name — this is the order shown on the Regions hub.
 export const regions = [
-  { slug: 'kakheti', name: 'Kakheti', published: false },
-  { slug: 'imereti', name: 'Imereti', published: false },
   { slug: 'adjara', name: 'Adjara', published: false },
-  { slug: 'samtskhe-javakheti', name: 'Samtskhe-Javakheti', published: false },
-  { slug: 'racha-lechkhumi', name: 'Racha-Lechkhumi', published: false },
-  { slug: 'mtskheta-mtianeti', name: 'Mtskheta-Mtianeti', published: false },
-  { slug: 'samegrelo', name: 'Samegrelo', published: false },
-  { slug: 'svaneti', name: 'Svaneti', published: false },
   { slug: 'guria', name: 'Guria', published: false },
-  { slug: 'shida-kartli', name: 'Shida Kartli', published: false },
+  { slug: 'imereti', name: 'Imereti', published: false },
+  { slug: 'kakheti', name: 'Kakheti', published: false },
   { slug: 'kvemo-kartli', name: 'Kvemo Kartli', published: false },
+  { slug: 'mtskheta-mtianeti', name: 'Mtskheta-Mtianeti', published: false },
+  { slug: 'racha-lechkhumi', name: 'Racha-Lechkhumi', published: false },
+  { slug: 'samegrelo', name: 'Samegrelo', published: false },
+  { slug: 'samtskhe-javakheti', name: 'Samtskhe-Javakheti', published: false },
+  { slug: 'shida-kartli', name: 'Shida Kartli', published: false },
+  { slug: 'svaneti', name: 'Svaneti', published: false },
 ]
 
 // ---------------------------------------------------------------------------
