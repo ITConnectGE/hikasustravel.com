@@ -221,6 +221,9 @@ const seo = {
   thingsToDoDmanisi: {
     en: { title: 'Things to Do in Dmanisi, Georgia: Ancient Site', description: 'Things to do in Dmanisi, Georgia: the archaeological site with 1.8-million-year-old human remains, the medieval town ruins, Sioni Cathedral, and Kvemo Kartli.', keywords: 'things to do in Dmanisi, Dmanisi archaeological site, Dmanisi hominins, Dmanisi Sioni Cathedral, medieval Dmanisi, Dmanisi Museum-Reserve, Kvemo Kartli, Bolnisi, day trip from Tbilisi, archaeology Georgia' },
   },
+  thingsToDoGori: {
+    en: { title: 'Things to Do in Gori: Stalin Museum & Uplistsikhe', description: 'Things to do in Gori, Georgia: the Stalin Museum, Gori Fortress, the Uplistsikhe cave town, the city center, and easy trips to Mtskheta and Ananuri.', keywords: 'things to do in Gori, Stalin Museum, Joseph Stalin Museum Gori, Gori Fortress, Uplistsikhe, Great Patriotic War Museum, Shida Kartli, Mtskheta, Ananuri, day trip from Tbilisi' },
+  },
   thingsToDoTbilisi: {
     en: { title: 'Things to Do in Tbilisi, Georgia: A Local Guide', description: 'The best things to do in Tbilisi, capital of Georgia: the Old Town, sulfur baths, Narikala Fortress, museums, food and wine — with local tips and timing.', keywords: 'things to do in Tbilisi, what to do in Tbilisi, Tbilisi attractions, Tbilisi Old Town, Abanotubani sulfur baths, Narikala Fortress, Sameba Cathedral, Georgian National Museum, Tbilisi food, Tbilisi wine bars, Tbilisi sightseeing, Tbilisi itinerary' },
     es: { title: "Qué hacer en Tiflis, Georgia: guía local", description: "Las mejores cosas que hacer en Tiflis, capital de Georgia: el casco antiguo, los baños de azufre, la fortaleza Narikala, museos, gastronomía y vino, con consejos locales.", keywords: "qué hacer en Tiflis, qué ver en Tiflis, atracciones de Tiflis, casco antiguo de Tiflis, baños de azufre Abanotubani, fortaleza Narikala, catedral Sameba, Museo Nacional de Georgia, gastronomía de Tiflis, bares de vino Tiflis" },

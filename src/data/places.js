@@ -129,6 +129,11 @@ export const cities = [
   {
     slug: 'gori', name: 'Gori', region: 'shida-kartli', published: true,
     seoKey: 'gori', contentKey: 'gori', image: '/images/files/georgia-home.jpg',
+    thingsToDo: {
+      seoKey: 'thingsToDoGori', contentKey: 'thingsToDoGori', image: '/images/files/georgia-home.jpg',
+      address: { addressLocality: 'Gori' },
+      attractions: ['Joseph Stalin Museum', 'Gori Fortress', 'Uplistsikhe Cave Town', 'Great Patriotic War Museum'],
+    },
   },
   {
     slug: 'borjomi', name: 'Borjomi', region: 'samtskhe-javakheti', published: true,
