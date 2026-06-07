@@ -317,7 +317,7 @@
       "telavi": { "name": "Telawi", "description": "Die wichtigste Stadt der Weinregion Kachetien, gelegen oberhalb des Alasani-Tals." },
       "sighnaghi": { "name": "Sighnaghi", "description": "Eine von Mauern umgebene Stadt auf einem Hugel in Kachetien, bekannt fur ihre Ausblicke, Wehrmauern und Weinguter." },
       "borjomi": { "name": "Borjomi", "description": "Ein bewaldeter Kurort, beruhmt fur sein Mineralwasser und seinen Nationalpark." },
-      "stepantsminda": { "name": "Stepanzminda (Kasbegi)", "description": "Eine Bergstadt unterhalb des Kasbek und der Gergeti-Dreifaltigkeitskirche." }
+      "kazbegi-stepantsminda": { "name": "Stepanzminda (Kasbegi)", "description": "Eine Bergstadt unterhalb des Kasbek und der Gergeti-Dreifaltigkeitskirche." }
     }
   },
   "destinationsPlaces": {

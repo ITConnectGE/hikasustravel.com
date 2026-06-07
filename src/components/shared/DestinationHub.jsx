@@ -27,25 +27,32 @@ export default function DestinationHub({
   heroImage,
   entries,
   currentLabelKey,
+  ctaKey,
 }) {
   const t = useT()
   const { lang } = useLang()
   const { pages } = useContext(I18nContext)
   const page = pages[pageKey] || enPages[pageKey]
   const seo = getSEO(seoKey, lang)
-  const items = page.items || {}
 
   const resolved = useMemo(
-    () =>
-      entries.map((e) => {
+    () => {
+      const items = page.items || {}
+      // English card name/description fallback per entry, so a summary still
+      // shows in every language until that card's text is translated (mirrors
+      // how the detail pages fall back to English).
+      const enItems = (enPages[pageKey] && enPages[pageKey].items) || {}
+      return entries.map((e) => {
         const localized = items[e.slug] || {}
+        const enLocalized = enItems[e.slug] || {}
         return {
           ...e,
-          name: localized.name || e.fallbackName,
-          description: localized.description || '',
+          name: localized.name || enLocalized.name || e.fallbackName,
+          description: localized.description || enLocalized.description || '',
         }
-      }),
-    [entries, items],
+      })
+    },
+    [entries, page, pageKey],
   )
 
   const trail = [
@@ -106,6 +113,7 @@ export default function DestinationHub({
                     <LocaleLink to={e.to} className="dest-hub-card__link">
                       <h3>{e.name}</h3>
                       {e.description && <p>{e.description}</p>}
+                      {ctaKey && <span className="dest-hub-card__cta">{t(ctaKey)}</span>}
                     </LocaleLink>
                   ) : (
                     <div className="dest-hub-card__pending">

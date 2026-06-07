@@ -317,7 +317,7 @@
       "telavi": { "name": "Telawi", "description": "Główne miasto regionu winiarskiego Kachetii, położone nad doliną Alazani." },
       "sighnaghi": { "name": "Sighnaghi", "description": "Otoczone murami miasteczko na wzgórzu w Kachetii, znane z widoków, fortyfikacji i winnic." },
       "borjomi": { "name": "Borjomi", "description": "Zalesione miasteczko uzdrowiskowe słynące z wody mineralnej i parku narodowego." },
-      "stepantsminda": { "name": "Stepancminda (Kazbegi)", "description": "Górskie miasteczko poniżej szczytu Kazbek i cerkwi Trójcy Świętej w Gergeti." }
+      "kazbegi-stepantsminda": { "name": "Stepancminda (Kazbegi)", "description": "Górskie miasteczko poniżej szczytu Kazbek i cerkwi Trójcy Świętej w Gergeti." }
     }
   },
   "destinationsPlaces": {

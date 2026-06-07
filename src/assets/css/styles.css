@@ -5898,42 +5898,86 @@ select option:checked {
   grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
   gap: 20px;
 }
+/* White cards sit inside the dark-teal `.home-items` section, whose light text
+   color would otherwise cascade in and make card text near-white-on-white.
+   Force dark, high-contrast text on the card and add a premium gold accent. */
 .dest-hub-card {
-  border: 1px solid rgba(0, 0, 0, 0.1);
-  border-radius: 10px;
+  position: relative;
+  border: 1px solid rgba(43, 78, 71, 0.12);
+  border-top: 3px solid var(--color-h3);
+  border-radius: 12px;
   overflow: hidden;
   background: #fff;
-  transition: box-shadow 0.2s ease, transform 0.2s ease;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.06);
+  transition: box-shadow 0.2s ease, transform 0.2s ease, border-color 0.2s ease;
 }
-.dest-hub-card:hover { box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08); transform: translateY(-2px); }
+/* Lift only on cards that actually link somewhere (not "coming soon" cards). */
+.dest-hub-card:has(.dest-hub-card__link):hover,
+.dest-hub-card:focus-within {
+  box-shadow: 0 10px 26px rgba(0, 0, 0, 0.16);
+  transform: translateY(-3px);
+  border-color: rgba(43, 78, 71, 0.28);
+}
 .dest-hub-card__link,
 .dest-hub-card__pending {
-  display: block;
+  display: flex;
+  flex-direction: column;
   padding: 22px 24px;
   height: 100%;
   text-decoration: none;
-  color: inherit;
+  color: var(--color-h2);
 }
-.dest-hub-card h3 { margin: 0 0 8px; font-size: 1.15rem; }
-/* Reset the global `.home-items p { width:50vw }` leak inside cards. */
+.dest-hub-card__link:focus-visible {
+  outline: 3px solid var(--color-h3);
+  outline-offset: 2px;
+}
+.dest-hub-card h3 {
+  margin: 0 0 10px;
+  padding-bottom: 0;
+  font-size: 1.2rem;
+  color: var(--color-h2);
+}
+/* Reset the global `.home-items p { width:50vw }` leak inside cards, and keep a
+   dark, readable body color (not the section's light cream). */
 .dest-hub-grid p {
   width: auto;
   max-width: none;
   margin: 0;
+  flex: 1 0 auto;
   font-size: 0.95rem;
-  line-height: 1.5;
-  opacity: 0.85;
+  line-height: 1.55;
+  color: #3c534d;
   text-align: left;
 }
-.dest-hub-card__soon {
-  display: inline-block;
-  margin-top: 12px;
-  font-size: 0.75rem;
+.dest-hub-card__cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  margin-top: 16px;
+  font-family: "rockwell";
+  font-size: 0.8rem;
+  font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 0.04em;
-  opacity: 0.6;
+  color: var(--color-h2);
 }
-.dest-hub-card__pending { cursor: default; opacity: 0.85; }
+.dest-hub-card__cta::after {
+  content: "\203A";
+  color: var(--color-h3);
+  font-size: 1.15rem;
+  line-height: 1;
+  transition: transform 0.2s ease;
+}
+.dest-hub-card:hover .dest-hub-card__cta::after { transform: translateX(4px); }
+.dest-hub-card__soon {
+  display: inline-block;
+  margin-top: 16px;
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: rgba(43, 78, 71, 0.6);
+}
+.dest-hub-card__pending { cursor: default; }
 .dest-featured-title {
   text-align: center;
   margin: 50px 0 0;

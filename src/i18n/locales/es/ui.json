@@ -209,6 +209,12 @@
   "destinations.comingSoon": "Guía próximamente",
 
   "city.thingsToDoCta": "Qué hacer en {city}",
+
+  "destinations.exploreRegion": "Explorar la región",
+
+  "destinations.exploreCity": "Explorar la ciudad",
+
+  "destinations.explorePlace": "Leer más",
   "destinations.featuredCities": "Guías de ciudades destacadas",
   "tour.requestPrice": "Consultar disponibilidad y precio",
   "tour.askCustom": "Pedir una versión personalizada",

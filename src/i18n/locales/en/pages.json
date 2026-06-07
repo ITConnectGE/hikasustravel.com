@@ -1245,6 +1245,21 @@
     "intro": "Georgia's cities range from the lively, walkable capital to Black Sea resorts, ancient royal towns, and mountain gateways. Browse our city guides for what to see, how long to stay, and how to get there.",
     "items": {
       "tbilisi": { "name": "Tbilisi", "description": "The capital and largest city — Old Town sulphur baths, Narikala Fortress, and a famous food and wine scene." },
+      "bakuriani": { "name": "Bakuriani", "description": "A family-friendly mountain ski resort in the Trialeti range, next door to the Borjomi spa town." },
+      "tskaltubo": { "name": "Tskaltubo", "description": "A faded Soviet spa town near Kutaisi, known for its grand abandoned sanatoriums and warm mineral baths." },
+      "chiatura": { "name": "Chiatura", "description": "A dramatic mining town in the Kvirila canyon, famous for its Soviet-era cable cars and the nearby Katskhi Pillar." },
+      "ushguli": { "name": "Ushguli", "description": "A cluster of medieval Svan-tower villages beneath Mount Shkhara, one of the highest inhabited places in Europe." },
+      "mestia": { "name": "Mestia", "description": "The hub of Svaneti, with medieval stone towers and the best base for high-Caucasus hiking and skiing." },
+      "zugdidi": { "name": "Zugdidi", "description": "The gateway to Svaneti, home to the Dadiani Palace, its Napoleon death mask, and spicy Mingrelian food." },
+      "martvili": { "name": "Martvili", "description": "A Samegrelo town known for its turquoise canyon boat ride and a 7th-century hilltop monastery." },
+      "oni": { "name": "Oni", "description": "A quiet Racha town with a grand 19th-century synagogue, set in the forested upper Rioni valley." },
+      "gurjaani": { "name": "Gurjaani", "description": "Quiet Kakheti wine country with small family qvevri cellars and the unusual two-domed Kvelatsminda Church." },
+      "rustavi": { "name": "Rustavi", "description": "Georgia's planned Soviet industrial city near Tbilisi, and a practical base for David Gareja and Kvemo Kartli." },
+      "kvareli": { "name": "Kvareli", "description": "Home of Kindzmarauli wine in eastern Kakheti, with a famous wine tunnel and the Nekresi Monastery nearby." },
+      "gori": { "name": "Gori", "description": "Stalin's birthplace and museum, beside the ancient Uplistsikhe cave town and a hilltop fortress." },
+      "gudauri": { "name": "Gudauri", "description": "Georgia's premier ski resort on the Georgian Military Highway, known for big vertical and off-piste freeride." },
+      "dmanisi": { "name": "Dmanisi", "description": "Site of the oldest human ancestors found outside Africa, plus a medieval town and 6th-century cathedral." },
+      "bolnisi": { "name": "Bolnisi", "description": "A Kvemo Kartli town with the 5th-century Bolnisi Sioni Cathedral and German colonial heritage." },
       "akhaltsikhe": { "name": "Akhaltsikhe", "description": "Southern gateway town below Rabati Castle, and the base for Vardzia and Borjomi." },
       "ambrolauri": { "name": "Ambrolauri", "description": "The small capital of Racha and the heart of Khvanchkara wine country." },
       "kutaisi": { "name": "Kutaisi", "description": "Georgia's second city, a relaxed base for Imereti's monasteries and caves." },
@@ -1253,7 +1268,7 @@
       "telavi": { "name": "Telavi", "description": "The main town of Kakheti's wine region, set above the Alazani Valley." },
       "sighnaghi": { "name": "Sighnaghi", "description": "A walled hilltop town in Kakheti, known for its views, ramparts, and wineries." },
       "borjomi": { "name": "Borjomi", "description": "A forested spa town famous for its mineral water and national park." },
-      "stepantsminda": { "name": "Stepantsminda (Kazbegi)", "description": "A mountain town below Mount Kazbek and the Gergeti Trinity Church." }
+      "kazbegi-stepantsminda": { "name": "Stepantsminda (Kazbegi)", "description": "A mountain town below Mount Kazbek and the Gergeti Trinity Church." }
     }
   },
   "destinationsPlaces": {

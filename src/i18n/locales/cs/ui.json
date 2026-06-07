@@ -209,6 +209,12 @@
   "destinations.comingSoon": "Průvodce již brzy",
 
   "city.thingsToDoCta": "Co dělat v {city}",
+
+  "destinations.exploreRegion": "Prozkoumat region",
+
+  "destinations.exploreCity": "Prozkoumat město",
+
+  "destinations.explorePlace": "Číst více",
   "destinations.featuredCities": "Vybraní průvodci městy",
   "tour.requestPrice": "Zjistit dostupnost a cenu",
   "tour.askCustom": "Požádat o úpravu na míru",

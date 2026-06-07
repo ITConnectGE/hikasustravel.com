@@ -25,6 +25,7 @@ export function RegionsHubPage() {
       heroImage={HERO_IMAGE}
       entries={entries}
       currentLabelKey="nav.regions"
+      ctaKey="destinations.exploreRegion"
     />
   )
 }
@@ -44,6 +45,7 @@ export function CitiesHubPage() {
       heroImage={HERO_IMAGE}
       entries={entries}
       currentLabelKey="nav.cities"
+      ctaKey="destinations.exploreCity"
     />
   )
 }
@@ -63,6 +65,7 @@ export function PlacesToVisitHubPage() {
       heroImage={HERO_IMAGE}
       entries={entries}
       currentLabelKey="nav.placesToVisit"
+      ctaKey="destinations.explorePlace"
     />
   )
 }

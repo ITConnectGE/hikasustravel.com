@@ -209,6 +209,12 @@
   "destinations.comingSoon": "Gids binnenkort beschikbaar",
 
   "city.thingsToDoCta": "Wat te doen in {city}",
+
+  "destinations.exploreRegion": "Ontdek de regio",
+
+  "destinations.exploreCity": "Ontdek de stad",
+
+  "destinations.explorePlace": "Lees meer",
   "destinations.featuredCities": "Uitgelichte stadsgidsen",
   "tour.requestPrice": "Vraag beschikbaarheid & prijs op",
   "tour.askCustom": "Vraag een versie op maat aan",

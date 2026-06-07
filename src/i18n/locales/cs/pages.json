@@ -317,7 +317,7 @@
       "telavi": { "name": "Telavi", "description": "Hlavní město kachetské vinařské oblasti, položené nad Alazanským údolím." },
       "sighnaghi": { "name": "Sighnaghi", "description": "Opevněné městečko na kopci v Kachetii, známé svými výhledy, hradbami a vinařstvími." },
       "borjomi": { "name": "Borjomi", "description": "Zalesněné lázeňské městečko proslulé minerální vodou a národním parkem." },
-      "stepantsminda": { "name": "Stepancminda (Kazbegi)", "description": "Horské městečko pod horou Kazbek a kostelem Nejsvětější Trojice v Gergeti." }
+      "kazbegi-stepantsminda": { "name": "Stepancminda (Kazbegi)", "description": "Horské městečko pod horou Kazbek a kostelem Nejsvětější Trojice v Gergeti." }
     }
   },
   "destinationsPlaces": {

@@ -317,7 +317,7 @@
       "telavi": { "name": "Telavi", "description": "La principale ville de la region viticole de Kakhétie, situee au-dessus de la vallee de l'Alazani." },
       "sighnaghi": { "name": "Sighnaghi", "description": "Une ville fortifiee perchee de Kakhétie, connue pour ses vues, ses remparts et ses domaines viticoles." },
       "borjomi": { "name": "Borjomi", "description": "Une ville thermale boisee, celebre pour son eau minerale et son parc national." },
-      "stepantsminda": { "name": "Stepantsminda (Kazbegi)", "description": "Une ville de montagne au pied du mont Kazbek et de l'eglise de la Trinité de Gergeti." }
+      "kazbegi-stepantsminda": { "name": "Stepantsminda (Kazbegi)", "description": "Une ville de montagne au pied du mont Kazbek et de l'eglise de la Trinité de Gergeti." }
     }
   },
   "destinationsPlaces": {
