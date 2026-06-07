@@ -103,6 +103,10 @@ export const cities = [
   },
   { slug: 'kutaisi', name: 'Kutaisi', region: 'imereti', published: false },
   {
+    slug: 'chiatura', name: 'Chiatura', region: 'imereti', published: true,
+    seoKey: 'chiatura', contentKey: 'chiatura', image: '/images/files/georgia-home.jpg',
+  },
+  {
     slug: 'batumi', name: 'Batumi', region: 'adjara', published: true,
     seoKey: 'batumi', contentKey: 'batumi', image: '/images/files/georgia-home.jpg',
     thingsToDo: {
