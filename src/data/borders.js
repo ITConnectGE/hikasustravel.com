@@ -31,6 +31,14 @@ export const borderCrossings = [
     image: '/images/files/georgia-home.jpg',
     published: true,
   },
+  {
+    slug: 'guguti-gogavan-border-crossing',
+    name: 'Guguti / Gogavan Border Crossing',
+    seoKey: 'gugutiGogavanBorderCrossing',
+    contentKey: 'gugutiGogavanBorderCrossing',
+    image: '/images/files/georgia-home.jpg',
+    published: true,
+  },
 ]
 
 export const borderHubPath = '/georgia/border-crossings'
