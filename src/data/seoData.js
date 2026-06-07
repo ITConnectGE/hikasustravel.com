@@ -281,6 +281,9 @@ const seo = {
   thingsToDoOni: {
     en: { title: 'Things to Do in Oni, Georgia: Synagogue & Racha', description: 'Things to do in Oni, Georgia: the grand 19th-century synagogue, the quiet town and Rioni valley, the drive to Shovi, and the villages of the Racha region.', keywords: 'things to do in Oni, Oni synagogue, Jewish heritage Georgia, Racha, Rioni valley, Shovi, Racha villages, Ambrolauri, Khvanchkara, off the beaten track Georgia' },
   },
+  thingsToDoRustavi: {
+    en: { title: 'Things to Do in Rustavi, Georgia: Soviet City & More', description: 'Things to do in Rustavi, Georgia: the Soviet-planned city, the International Motorpark, Central Park, the history museum, and day trips to David Gareja.', keywords: 'things to do in Rustavi, Rustavi Motorpark, Rustavi Central Park, Rustavi History Museum, Soviet city Georgia, David Gareja, Bolnisi, Dmanisi, Kvemo Kartli, day trip from Tbilisi' },
+  },
   thingsToDoTbilisi: {
     en: { title: 'Things to Do in Tbilisi, Georgia: A Local Guide', description: 'The best things to do in Tbilisi, capital of Georgia: the Old Town, sulfur baths, Narikala Fortress, museums, food and wine — with local tips and timing.', keywords: 'things to do in Tbilisi, what to do in Tbilisi, Tbilisi attractions, Tbilisi Old Town, Abanotubani sulfur baths, Narikala Fortress, Sameba Cathedral, Georgian National Museum, Tbilisi food, Tbilisi wine bars, Tbilisi sightseeing, Tbilisi itinerary' },
     es: { title: "Qué hacer en Tiflis, Georgia: guía local", description: "Las mejores cosas que hacer en Tiflis, capital de Georgia: el casco antiguo, los baños de azufre, la fortaleza Narikala, museos, gastronomía y vino, con consejos locales.", keywords: "qué hacer en Tiflis, qué ver en Tiflis, atracciones de Tiflis, casco antiguo de Tiflis, baños de azufre Abanotubani, fortaleza Narikala, catedral Sameba, Museo Nacional de Georgia, gastronomía de Tiflis, bares de vino Tiflis" },

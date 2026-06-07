@@ -181,6 +181,11 @@ export const cities = [
   {
     slug: 'rustavi', name: 'Rustavi', region: 'kvemo-kartli', published: true,
     seoKey: 'rustavi', contentKey: 'rustavi', image: '/images/files/georgia-home.jpg',
+    thingsToDo: {
+      seoKey: 'thingsToDoRustavi', contentKey: 'thingsToDoRustavi', image: '/images/files/georgia-home.jpg',
+      address: { addressLocality: 'Rustavi' },
+      attractions: ['Rustavi International Motorpark', 'Rustavi Central Park', 'Rustavi History Museum', 'David Gareja Monastery'],
+    },
   },
   {
     slug: 'kvareli', name: 'Kvareli', region: 'kakheti', published: true,
