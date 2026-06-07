@@ -151,6 +151,11 @@ export const cities = [
   {
     slug: 'gudauri', name: 'Gudauri', region: 'mtskheta-mtianeti', published: true,
     seoKey: 'gudauri', contentKey: 'gudauri', image: '/images/files/georgia-home.jpg',
+    thingsToDo: {
+      seoKey: 'thingsToDoGudauri', contentKey: 'thingsToDoGudauri', image: '/images/files/georgia-home.jpg',
+      address: { addressLocality: 'Gudauri' },
+      attractions: ['Gudauri Ski Resort', 'Russia-Georgia Friendship Monument', 'Ananuri Fortress', 'Kazbegi (Stepantsminda)'],
+    },
   },
   {
     slug: 'dmanisi', name: 'Dmanisi', region: 'kvemo-kartli', published: true,
