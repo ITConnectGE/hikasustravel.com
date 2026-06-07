@@ -333,7 +333,12 @@ export const sites = [
   { slug: 'gelati-monastery', name: 'Gelati Monastery', parentType: 'region', parent: 'imereti', published: false },
   { slug: 'vardzia', name: 'Vardzia', parentType: 'region', parent: 'samtskhe-javakheti', published: false },
   { slug: 'gergeti-trinity-church', name: 'Gergeti Trinity Church', parentType: 'region', parent: 'mtskheta-mtianeti', published: false },
-  { slug: 'batumi-botanical-garden', name: 'Batumi Botanical Garden', parentType: 'region', parent: 'adjara', published: false },
+  {
+    slug: 'batumi-botanical-garden', name: 'Batumi Botanical Garden',
+    parentType: 'city', parent: 'batumi', published: true,
+    seoKey: 'batumiBotanicalGarden', contentKey: 'batumiBotanicalGarden',
+    image: '/images/files/Batumi%20Botanical%20Garden.jpg',
+  },
   { slug: 'martvili-canyon', name: 'Martvili Canyon', parentType: 'region', parent: 'samegrelo', published: false },
   { slug: 'katskhi-pillar', name: 'Katskhi Pillar', parentType: 'region', parent: 'imereti', published: false },
 ]
