@@ -144,6 +144,10 @@ export const cities = [
   },
   { slug: 'sighnaghi', name: 'Sighnaghi', region: 'kakheti', published: false },
   {
+    slug: 'kvareli', name: 'Kvareli', region: 'kakheti', published: true,
+    seoKey: 'kvareli', contentKey: 'kvareli', image: '/images/files/georgia-home.jpg',
+  },
+  {
     slug: 'gori', name: 'Gori', region: 'shida-kartli', published: true,
     seoKey: 'gori', contentKey: 'gori', image: '/images/files/georgia-home.jpg',
     thingsToDo: {
