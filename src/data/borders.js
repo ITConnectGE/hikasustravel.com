@@ -87,6 +87,14 @@ export const borderCrossings = [
     image: '/images/files/georgia-home.jpg',
     published: true,
   },
+  {
+    slug: 'sarpi-border-crossing',
+    name: 'Sarpi Border Crossing',
+    seoKey: 'sarpiBorderCrossing',
+    contentKey: 'sarpiBorderCrossing',
+    image: '/images/files/georgia-home.jpg',
+    published: true,
+  },
 ]
 
 export const borderHubPath = '/georgia/border-crossings'
