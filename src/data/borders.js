@@ -47,6 +47,14 @@ export const borderCrossings = [
     image: '/images/files/georgia-home.jpg',
     published: true,
   },
+  {
+    slug: 'kazbegi-dariali-upper-lars-border-crossing',
+    name: 'Kazbegi (Upper Lars) Border Crossing',
+    seoKey: 'kazbegiUpperLarsBorderCrossing',
+    contentKey: 'kazbegiUpperLarsBorderCrossing',
+    image: '/images/files/georgia-home.jpg',
+    published: true,
+  },
 ]
 
 export const borderHubPath = '/georgia/border-crossings'
