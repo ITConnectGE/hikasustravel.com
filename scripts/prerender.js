@@ -21,6 +21,11 @@ const __dirname = dirname(fileURLToPath(import.meta.url))
 const { publishedDestinationPages, legacyRedirects } = await import(
   pathToFileURL(join(__dirname, '../src/data/places.js')).href
 )
+
+// Published border-crossing pages (overview guide + individual crossings).
+const { publishedBorderPages } = await import(
+  pathToFileURL(join(__dirname, '../src/data/borders.js')).href
+)
 const DIST = join(__dirname, '..', 'dist')
 const SITE_URL = 'https://www.hikasustravel.com'
 const LANGS = ['en', 'es', 'fr', 'de', 'pl', 'cs', 'nl']
@@ -314,6 +319,21 @@ for (const lang of LANGS) {
       keywords: data.keywords,
       canonical,
       image: dest.image || '/images/files/georgia-home.jpg',
+      ogLocale,
+    })
+  }
+
+  // --- Border-crossing pages (overview guide + individual crossings) ---
+  for (const bp of publishedBorderPages()) {
+    const data = getSEO(bp.seoKey, lang)
+    const canonical = `${SITE_URL}/${lang}/${bp.path}`
+    const filePath = join(DIST, lang, bp.path, 'index.html')
+    writeHtml(filePath, lang, {
+      title: data.title,
+      description: data.description,
+      keywords: data.keywords,
+      canonical,
+      image: bp.image || '/images/files/georgia-home.jpg',
       ogLocale,
     })
   }

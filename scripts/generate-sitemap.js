@@ -9,6 +9,11 @@ const { publishedDestinationPages } = await import(
   pathToFileURL(join(__dirname, '../src/data/places.js')).href
 )
 
+// Published border-crossing pages (overview guide + individual crossings).
+const { publishedBorderPages } = await import(
+  pathToFileURL(join(__dirname, '../src/data/borders.js')).href
+)
+
 // Parse tours data from the source file
 const toursFile = readFileSync(join(__dirname, '../src/data/tours.js'), 'utf-8')
 const slugTypeRegex = /"slug":\s*"([^"]+)"[\s\S]*?"type":\s*"([^"]+)"/g
@@ -63,6 +68,11 @@ for (const tour of tours) {
 // Published destination detail pages (cities/regions/sites) at their nested URLs.
 for (const dest of publishedDestinationPages()) {
   allPaths.push({ path: dest.path, changefreq: 'monthly', priority: '0.7' })
+}
+
+// Published border-crossing pages (overview + individual crossings).
+for (const bp of publishedBorderPages()) {
+  allPaths.push({ path: bp.path, changefreq: 'monthly', priority: '0.7' })
 }
 
 // Generate URL entries with hreflang alternates

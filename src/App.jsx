@@ -13,6 +13,7 @@ import CityPage from './components/pages/CityPage'
 import RegionPage from './components/pages/RegionPage'
 import SitePage from './components/pages/SitePage'
 import ThingsToDoCityPage from './components/pages/ThingsToDoCityPage'
+import BorderCrossingPage from './components/pages/BorderCrossingPage'
 import { DestinationsRedirect, ThingsToDoRedirect } from './components/pages/LegacyRedirects'
 import { cities } from './data/places'
 import PrivateToursPage from './components/pages/PrivateToursPage'
@@ -46,6 +47,11 @@ export default function App() {
           <Route path="georgia/regions" element={<RegionsHubPage />} />
           <Route path="georgia/cities" element={<CitiesHubPage />} />
           <Route path="georgia/places-to-visit" element={<PlacesToVisitHubPage />} />
+          {/* Border crossings: a static index (the complete guide) + individual
+              crossings. Both static-first segments outrank the dynamic
+              :citySlug / :citySlug/:ttd routes, so they resolve cleanly. */}
+          <Route path="georgia/border-crossings" element={<BorderCrossingPage overview />} />
+          <Route path="georgia/border-crossings/:borderSlug" element={<BorderCrossingPage />} />
           <Route path="georgia/regions/:regionSlug" element={<RegionPage />} />
           <Route path="georgia/regions/:regionSlug/places-to-visit/:siteSlug" element={<SitePage />} />
           <Route path="georgia/:citySlug" element={<CityPage />} />

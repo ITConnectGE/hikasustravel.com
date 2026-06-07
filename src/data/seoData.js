@@ -1,4 +1,10 @@
 const seo = {
+  borderCrossingsOverview: {
+    en: { title: "Border Crossings of Georgia: Complete Guide", description: "Georgia's land borders with Turkey, Armenia, Azerbaijan, and Russia: which crossings are open, where they are, current status, plus airports and sea ports.", keywords: "border crossings Georgia, Georgia land borders, Sarpi border crossing, Upper Lars Kazbegi, Sadakhlo Bagratashen, Red Bridge Tsiteli Khidi, Lagodekhi border, Georgia Azerbaijan border closed, Georgia Armenia border, Georgia Turkey border, Georgia Russia border, entering Georgia overland" },
+  },
+  akhkerpiBorderCrossing: {
+    en: { title: "Akhkerpi Border Crossing: Georgia–Armenia Guide", description: "Akhkerpi is the smallest, least-used Georgia–Armenia border crossing, in Kvemo Kartli near Sadakhlo. Where it is, who should use it, and what to verify first.", keywords: "Akhkerpi border crossing, Georgia Armenia border, Akhkerpi Marneuli, least-used Georgia border, Kvemo Kartli border crossing, Sadakhlo Bagratashen alternative, Georgia Armenia overland" },
+  },
   thingsToDoBorjomi: {
     en: { title: "Things to Do in Borjomi, Georgia: Springs & Park", description: "Things to do in Borjomi, Georgia: Central Park and the mineral spring, the forest sulfur pools, the cable car, Borjomi-Kharagauli National Park, and Likani.", keywords: "things to do in Borjomi, Borjomi Georgia, Borjomi Central Park, Borjomi mineral water, Borjomi sulfur pools, Borjomi cable car, Borjomi-Kharagauli National Park, Likani palace, Borjomi attractions, Borjomi hiking" },
     es: { title: "Qué hacer en Borjomi, Georgia: manantiales y parque", description: "Qué hacer en Borjomi, Georgia: el Parque Central y el manantial mineral, las piscinas de azufre del bosque, el teleférico, el Parque Nacional Borjomi-Kharagauli y Likani.", keywords: "qué hacer en Borjomi, Borjomi Georgia, Parque Central de Borjomi, agua mineral de Borjomi, piscinas de azufre de Borjomi, teleférico de Borjomi, Parque Nacional Borjomi-Kharagauli, palacio de Likani, atracciones de Borjomi, senderismo en Borjomi" },

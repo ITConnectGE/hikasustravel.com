@@ -1,0 +1,63 @@
+// Border-crossing pages registry.
+//
+// This is the time-sensitive part of the site: open/closed status, operating
+// hours, and entry rules can change. Content lives in pages.json / seoData.js
+// like every other page; this file only decides which border pages exist, what
+// they are called, and where they live in the URL tree.
+//
+// URL scheme (consistent with the rest of the /georgia tree):
+//   /georgia/border-crossings                      -> the overview / complete guide
+//   /georgia/border-crossings/<slug>               -> an individual crossing
+//
+// A page renders only when published === true; otherwise the route 404s, so an
+// unfinished or unverified crossing never shows a half-built stub.
+
+// The overview / complete-guide hub. It lives at the section index URL.
+export const borderOverview = {
+  seoKey: 'borderCrossingsOverview',
+  contentKey: 'borderCrossingsOverview',
+  image: '/images/files/georgia-home.jpg',
+  published: true,
+}
+
+// Individual crossings. Add an entry here (with matching seoData + pages.json
+// keys) to publish a new one; flip published to false to hide it again.
+export const borderCrossings = [
+  {
+    slug: 'akhkerpi-border-crossing',
+    name: 'Akhkerpi Border Crossing',
+    seoKey: 'akhkerpiBorderCrossing',
+    contentKey: 'akhkerpiBorderCrossing',
+    image: '/images/files/georgia-home.jpg',
+    published: true,
+  },
+]
+
+export const borderHubPath = '/georgia/border-crossings'
+export const borderCrossingPath = (slug) => `/georgia/border-crossings/${slug}`
+export const getBorderCrossing = (slug) =>
+  borderCrossings.find((b) => b.slug === slug) || null
+
+const strip = (p) => p.replace(/^\//, '')
+
+// Published border pages (overview + individual crossings) for the sitemap and
+// the prerenderer. Same shape as places.js publishedDestinationPages().
+export function publishedBorderPages() {
+  const pages = []
+  if (borderOverview.published) {
+    pages.push({
+      path: strip(borderHubPath),
+      seoKey: borderOverview.seoKey,
+      image: borderOverview.image,
+    })
+  }
+  for (const b of borderCrossings) {
+    if (!b.published) continue
+    pages.push({
+      path: strip(borderCrossingPath(b.slug)),
+      seoKey: b.seoKey,
+      image: b.image,
+    })
+  }
+  return pages
+}
