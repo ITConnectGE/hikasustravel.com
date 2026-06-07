@@ -159,6 +159,11 @@ export const cities = [
   {
     slug: 'kazbegi-stepantsminda', name: 'Kazbegi (Stepantsminda)', region: 'mtskheta-mtianeti', published: true,
     seoKey: 'kazbegiStepantsminda', contentKey: 'kazbegiStepantsminda', image: '/images/files/georgia-home.jpg',
+    thingsToDo: {
+      seoKey: 'thingsToDoKazbegiStepantsminda', contentKey: 'thingsToDoKazbegiStepantsminda', image: '/images/files/georgia-home.jpg',
+      address: { addressLocality: 'Stepantsminda' },
+      attractions: ['Gergeti Trinity Church', 'Juta Valley & Chaukhi Mountains', 'Truso Valley', 'Gergeti Glacier', 'Gveleti Waterfalls', 'Dariali Gorge', 'Russia-Georgia Friendship Monument'],
+    },
   },
   {
     slug: 'gudauri', name: 'Gudauri', region: 'mtskheta-mtianeti', published: true,
