@@ -287,6 +287,9 @@ const seo = {
   thingsToDoRustavi: {
     en: { title: 'Things to Do in Rustavi, Georgia: Soviet City & More', description: 'Things to do in Rustavi, Georgia: the Soviet-planned city, the International Motorpark, Central Park, the history museum, and day trips to David Gareja.', keywords: 'things to do in Rustavi, Rustavi Motorpark, Rustavi Central Park, Rustavi History Museum, Soviet city Georgia, David Gareja, Bolnisi, Dmanisi, Kvemo Kartli, day trip from Tbilisi' },
   },
+  thingsToDoSighnaghi: {
+    en: { title: 'Things to Do in Sighnaghi, Georgia: Walls & Wine', description: 'Things to do in Sighnaghi, Georgia: walk the city walls, take in the Alazani valley views, visit Bodbe Monastery, taste Kakheti wine, and see the museum.', keywords: 'things to do in Sighnaghi, Sighnaghi city walls, Bodbe Monastery, Alazani valley, Kakheti wine, qvevri wine, Pirosmani, Sighnaghi Museum, City of Love, Kakheti' },
+  },
   thingsToDoTbilisi: {
     en: { title: 'Things to Do in Tbilisi, Georgia: A Local Guide', description: 'The best things to do in Tbilisi, capital of Georgia: the Old Town, sulfur baths, Narikala Fortress, museums, food and wine — with local tips and timing.', keywords: 'things to do in Tbilisi, what to do in Tbilisi, Tbilisi attractions, Tbilisi Old Town, Abanotubani sulfur baths, Narikala Fortress, Sameba Cathedral, Georgian National Museum, Tbilisi food, Tbilisi wine bars, Tbilisi sightseeing, Tbilisi itinerary' },
     es: { title: "Qué hacer en Tiflis, Georgia: guía local", description: "Las mejores cosas que hacer en Tiflis, capital de Georgia: el casco antiguo, los baños de azufre, la fortaleza Narikala, museos, gastronomía y vino, con consejos locales.", keywords: "qué hacer en Tiflis, qué ver en Tiflis, atracciones de Tiflis, casco antiguo de Tiflis, baños de azufre Abanotubani, fortaleza Narikala, catedral Sameba, Museo Nacional de Georgia, gastronomía de Tiflis, bares de vino Tiflis" },

@@ -180,6 +180,11 @@ export const cities = [
   {
     slug: 'sighnaghi', name: 'Sighnaghi', region: 'kakheti', published: true,
     seoKey: 'sighnaghi', contentKey: 'sighnaghi', image: '/images/files/georgia-home.jpg',
+    thingsToDo: {
+      seoKey: 'thingsToDoSighnaghi', contentKey: 'thingsToDoSighnaghi', image: '/images/files/georgia-home.jpg',
+      address: { addressLocality: 'Sighnaghi' },
+      attractions: ['Sighnaghi City Walls', 'Bodbe Monastery', 'Alazani Valley Viewpoint', 'Sighnaghi Museum'],
+    },
   },
   {
     slug: 'rustavi', name: 'Rustavi', region: 'kvemo-kartli', published: true,
