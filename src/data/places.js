@@ -150,6 +150,10 @@ export const cities = [
     },
   },
   {
+    slug: 'ushguli', name: 'Ushguli', region: 'svaneti', published: true,
+    seoKey: 'ushguli', contentKey: 'ushguli', image: '/images/files/georgia-home.jpg',
+  },
+  {
     slug: 'mestia', name: 'Mestia', region: 'svaneti', published: true,
     seoKey: 'mestia', contentKey: 'mestia', image: '/images/files/georgia-home.jpg',
     thingsToDo: {
