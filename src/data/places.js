@@ -177,7 +177,10 @@ export const cities = [
       attractions: ['Gurjaani Kvelatsminda Church', 'Velistsikhe Wine Museum', 'Nekresi Monastery', 'Alazani Valley'],
     },
   },
-  { slug: 'sighnaghi', name: 'Sighnaghi', region: 'kakheti', published: false },
+  {
+    slug: 'sighnaghi', name: 'Sighnaghi', region: 'kakheti', published: true,
+    seoKey: 'sighnaghi', contentKey: 'sighnaghi', image: '/images/files/georgia-home.jpg',
+  },
   {
     slug: 'rustavi', name: 'Rustavi', region: 'kvemo-kartli', published: true,
     seoKey: 'rustavi', contentKey: 'rustavi', image: '/images/files/georgia-home.jpg',
