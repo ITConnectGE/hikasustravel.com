@@ -162,6 +162,11 @@ export const cities = [
   {
     slug: 'oni', name: 'Oni', region: 'racha-lechkhumi', published: true,
     seoKey: 'oni', contentKey: 'oni', image: '/images/files/georgia-home.jpg',
+    thingsToDo: {
+      seoKey: 'thingsToDoOni', contentKey: 'thingsToDoOni', image: '/images/files/georgia-home.jpg',
+      address: { addressLocality: 'Oni' },
+      attractions: ['Oni Synagogue', 'Rioni River Valley', 'Shovi Mountain Resort', 'Racha Villages'],
+    },
   },
   {
     slug: 'gurjaani', name: 'Gurjaani', region: 'kakheti', published: true,

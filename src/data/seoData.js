@@ -275,6 +275,9 @@ const seo = {
   thingsToDoMtskheta: {
     en: { title: 'Things to Do in Mtskheta, Georgia: Churches & Sites', description: 'Things to do in Mtskheta, Georgia: Svetitskhoveli Cathedral, Jvari Monastery, Samtavro, Shio-Mgvime, Zedazeni, and the ancient Armaztsikhe-Bagineti citadel.', keywords: 'things to do in Mtskheta, Svetitskhoveli Cathedral, Jvari Monastery, Samtavro Monastery, Shio-Mgvime, Zedazeni, Armaztsikhe-Bagineti, Bebristsikhe, ancient capital, day trip from Tbilisi' },
   },
+  thingsToDoOni: {
+    en: { title: 'Things to Do in Oni, Georgia: Synagogue & Racha', description: 'Things to do in Oni, Georgia: the grand 19th-century synagogue, the quiet town and Rioni valley, the drive to Shovi, and the villages of the Racha region.', keywords: 'things to do in Oni, Oni synagogue, Jewish heritage Georgia, Racha, Rioni valley, Shovi, Racha villages, Ambrolauri, Khvanchkara, off the beaten track Georgia' },
+  },
   thingsToDoTbilisi: {
     en: { title: 'Things to Do in Tbilisi, Georgia: A Local Guide', description: 'The best things to do in Tbilisi, capital of Georgia: the Old Town, sulfur baths, Narikala Fortress, museums, food and wine — with local tips and timing.', keywords: 'things to do in Tbilisi, what to do in Tbilisi, Tbilisi attractions, Tbilisi Old Town, Abanotubani sulfur baths, Narikala Fortress, Sameba Cathedral, Georgian National Museum, Tbilisi food, Tbilisi wine bars, Tbilisi sightseeing, Tbilisi itinerary' },
     es: { title: "Qué hacer en Tiflis, Georgia: guía local", description: "Las mejores cosas que hacer en Tiflis, capital de Georgia: el casco antiguo, los baños de azufre, la fortaleza Narikala, museos, gastronomía y vino, con consejos locales.", keywords: "qué hacer en Tiflis, qué ver en Tiflis, atracciones de Tiflis, casco antiguo de Tiflis, baños de azufre Abanotubani, fortaleza Narikala, catedral Sameba, Museo Nacional de Georgia, gastronomía de Tiflis, bares de vino Tiflis" },
