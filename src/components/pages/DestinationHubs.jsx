@@ -31,12 +31,15 @@ export function RegionsHubPage() {
 }
 
 export function CitiesHubPage() {
-  const entries = cities.map((c) => ({
-    slug: c.slug,
-    fallbackName: c.name,
-    published: c.published,
-    to: c.published ? cityPath(c.slug) : null,
-  }))
+  // Cities are shown alphabetically on the hub (registry order is unaffected).
+  const entries = [...cities]
+    .sort((a, b) => a.name.localeCompare(b.name))
+    .map((c) => ({
+      slug: c.slug,
+      fallbackName: c.name,
+      published: c.published,
+      to: c.published ? cityPath(c.slug) : null,
+    }))
   return (
     <DestinationHub
       pageKey="destinationsCities"
