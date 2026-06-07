@@ -158,7 +158,10 @@ export const cities = [
       attractions: ['Martvili Canyon', 'Martvili Monastery', 'Balda Canyon', 'Abasha River'],
     },
   },
-  { slug: 'telavi', name: 'Telavi', region: 'kakheti', published: false },
+  {
+    slug: 'telavi', name: 'Telavi', region: 'kakheti', published: true,
+    seoKey: 'telavi', contentKey: 'telavi', image: '/images/files/georgia-home.jpg',
+  },
   {
     slug: 'oni', name: 'Oni', region: 'racha-lechkhumi', published: true,
     seoKey: 'oni', contentKey: 'oni', image: '/images/files/georgia-home.jpg',
