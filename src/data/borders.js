@@ -63,6 +63,14 @@ export const borderCrossings = [
     image: '/images/files/georgia-home.jpg',
     published: true,
   },
+  {
+    slug: 'ninotsminda-bavra-border-crossing',
+    name: 'Ninotsminda / Bavra Border Crossing',
+    seoKey: 'ninotsmindaBavraBorderCrossing',
+    contentKey: 'ninotsmindaBavraBorderCrossing',
+    image: '/images/files/georgia-home.jpg',
+    published: true,
+  },
 ]
 
 export const borderHubPath = '/georgia/border-crossings'
