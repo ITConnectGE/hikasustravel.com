@@ -122,7 +122,7 @@ export default function SitePage() {
       <div className="dest-breadcrumbs">
         <Breadcrumbs trail={trail} />
       </div>
-      <HeroSection image={heroImage} title={site.name} />
+      <HeroSection image={heroImage} title={page.heroTitle || site.name} />
       <section className="page-items about-georgia">
         <FadeUp>
           <div ref={contentRef} dangerouslySetInnerHTML={{ __html: page.content }} />
