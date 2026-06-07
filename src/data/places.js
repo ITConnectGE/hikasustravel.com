@@ -140,6 +140,10 @@ export const cities = [
   },
   { slug: 'stepantsminda', name: 'Stepantsminda (Kazbegi)', region: 'mtskheta-mtianeti', published: false },
   {
+    slug: 'dmanisi', name: 'Dmanisi', region: 'kvemo-kartli', published: true,
+    seoKey: 'dmanisi', contentKey: 'dmanisi', image: '/images/files/georgia-home.jpg',
+  },
+  {
     slug: 'bolnisi', name: 'Bolnisi', region: 'kvemo-kartli', published: true,
     seoKey: 'bolnisi', contentKey: 'bolnisi', image: '/images/files/georgia-home.jpg',
     thingsToDo: {
