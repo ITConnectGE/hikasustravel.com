@@ -131,7 +131,10 @@ export const cities = [
       ],
     },
   },
-  { slug: 'mtskheta', name: 'Mtskheta', region: 'mtskheta-mtianeti', published: false },
+  {
+    slug: 'mtskheta', name: 'Mtskheta', region: 'mtskheta-mtianeti', published: true,
+    seoKey: 'mtskheta', contentKey: 'mtskheta', image: '/images/files/georgia-home.jpg',
+  },
   {
     slug: 'mestia', name: 'Mestia', region: 'svaneti', published: true,
     seoKey: 'mestia', contentKey: 'mestia', image: '/images/files/georgia-home.jpg',
