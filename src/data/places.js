@@ -146,6 +146,11 @@ export const cities = [
   {
     slug: 'kvareli', name: 'Kvareli', region: 'kakheti', published: true,
     seoKey: 'kvareli', contentKey: 'kvareli', image: '/images/files/georgia-home.jpg',
+    thingsToDo: {
+      seoKey: 'thingsToDoKvareli', contentKey: 'thingsToDoKvareli', image: '/images/files/georgia-home.jpg',
+      address: { addressLocality: 'Kvareli' },
+      attractions: ['Khareba Winery Wine Tunnel', 'Nekresi Monastery', 'Kvareli Lake', 'Ilia Chavchavadze Museum'],
+    },
   },
   {
     slug: 'gori', name: 'Gori', region: 'shida-kartli', published: true,
