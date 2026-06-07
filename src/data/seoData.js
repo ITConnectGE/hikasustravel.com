@@ -221,6 +221,9 @@ const seo = {
   kvareli: {
     en: { title: 'Kvareli, Georgia: Kindzmarauli Wine & Kakheti Guide', description: 'Kvareli in eastern Kakheti is the home of Kindzmarauli wine: family qvevri cellars, the Kvareli wine tunnel, Nekresi Monastery, and the Chavchavadze museum.', keywords: 'Kvareli, Kvareli Georgia, Kindzmarauli wine, Saperavi, Kakheti wine, Kvareli wine tunnel, Nekresi Monastery, Ilia Chavchavadze, Alazani valley, qvevri wine, family wineries Kakheti' },
   },
+  martvili: {
+    en: { title: 'Martvili, Georgia: Canyon, Monastery & Samegrelo', description: 'Martvili in western Georgia is home to the turquoise Martvili Canyon and its boat ride, a 7th-century monastery, and distinctive Megrelian cuisine. Full guide.', keywords: 'Martvili, Martvili Georgia, Martvili Canyon, Martvili Monastery, Chkondidi Cathedral, Samegrelo, Megrelian cuisine, Okatse Canyon, Abasha River, western Georgia' },
+  },
   tbilisi: {
     en: { title: 'Tbilisi, Georgia: Things to Do, Tips & Day Trips', description: 'Tbilisi is the capital of Georgia in the South Caucasus. What to see, how many days you need, best time to visit, and easy day trips from the city.', keywords: 'Tbilisi, Tbilisi Georgia, things to do in Tbilisi, Tbilisi travel guide, visit Tbilisi, Old Town Tbilisi, Narikala Fortress, sulfur baths Tbilisi, day trips from Tbilisi, best time to visit Tbilisi, Tbilisi itinerary' },
     es: { title: "Tiflis, Georgia: qué ver, consejos y excursiones", description: "Tiflis es la capital de Georgia, en el sur del Cáucaso. Qué ver, cuántos días necesitas, la mejor época para visitarla y excursiones fáciles desde la ciudad.", keywords: "Tiflis, Tiflis Georgia, qué hacer en Tiflis, guía de Tiflis, visitar Tiflis, casco antiguo de Tiflis, fortaleza Narikala, baños de azufre Tiflis, excursiones desde Tiflis, mejor época para visitar Tiflis" },

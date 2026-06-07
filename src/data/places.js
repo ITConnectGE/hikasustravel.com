@@ -132,6 +132,10 @@ export const cities = [
     },
   },
   { slug: 'mtskheta', name: 'Mtskheta', region: 'mtskheta-mtianeti', published: false },
+  {
+    slug: 'martvili', name: 'Martvili', region: 'samegrelo', published: true,
+    seoKey: 'martvili', contentKey: 'martvili', image: '/images/files/georgia-home.jpg',
+  },
   { slug: 'telavi', name: 'Telavi', region: 'kakheti', published: false },
   {
     slug: 'gurjaani', name: 'Gurjaani', region: 'kakheti', published: true,
