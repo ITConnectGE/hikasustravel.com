@@ -12,7 +12,7 @@ import { RegionsHubPage, CitiesHubPage, PlacesToVisitHubPage } from './component
 import CityPage from './components/pages/CityPage'
 import RegionPage from './components/pages/RegionPage'
 import SitePage from './components/pages/SitePage'
-import ThingsToDoCityPage from './components/pages/ThingsToDoCityPage'
+import CitySubPage from './components/pages/CitySubPage'
 import BorderCrossingPage from './components/pages/BorderCrossingPage'
 import { DestinationsRedirect, ThingsToDoRedirect } from './components/pages/LegacyRedirects'
 import { cities } from './data/places'
@@ -53,12 +53,13 @@ export default function App() {
           <Route path="georgia/border-crossings" element={<BorderCrossingPage overview />} />
           <Route path="georgia/border-crossings/:borderSlug" element={<BorderCrossingPage />} />
           <Route path="georgia/regions/:regionSlug" element={<RegionPage />} />
-          <Route path="georgia/regions/:regionSlug/places-to-visit/:siteSlug" element={<SitePage />} />
+          <Route path="georgia/regions/:regionSlug/:siteSlug" element={<SitePage />} />
           <Route path="georgia/:citySlug" element={<CityPage />} />
-          <Route path="georgia/:citySlug/places-to-visit/:siteSlug" element={<SitePage />} />
-          {/* /georgia/<city>/things-to-do-in-<city> — the component validates the
-              :ttd segment matches the city, otherwise renders the 404 page. */}
-          <Route path="georgia/:citySlug/:ttd" element={<ThingsToDoCityPage />} />
+          {/* /georgia/<city>/<sub> — one dynamic route shared by the city's
+              things-to-do guide (sub === things-to-do-in-<city>) and its tourist
+              sites (sub === a city-parented site slug). CitySubPage dispatches
+              between them and 404s otherwise. */}
+          <Route path="georgia/:citySlug/:sub" element={<CitySubPage />} />
           {/* Legacy URL redirects -> their new /georgia home (mirror the static
               redirect stubs emitted by scripts/prerender.js). */}
           <Route path="destinations/*" element={<DestinationsRedirect />} />

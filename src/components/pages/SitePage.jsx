@@ -23,7 +23,10 @@ const SITE_URL = 'https://www.hikasustravel.com'
  * the site is published) it renders the 404 page.
  */
 export default function SitePage() {
-  const { siteSlug, citySlug, regionSlug } = useParams()
+  // City-parented sites arrive via the /georgia/:citySlug/:sub dispatcher (slug
+  // in :sub); region-parented sites use /georgia/regions/:regionSlug/:siteSlug.
+  const { siteSlug: siteSlugParam, sub, citySlug, regionSlug } = useParams()
+  const siteSlug = siteSlugParam || sub
   const site = getSite(siteSlug)
   const t = useT()
   const { pages } = useContext(I18nContext)

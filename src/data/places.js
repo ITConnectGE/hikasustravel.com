@@ -13,8 +13,8 @@
  *   Region:     /georgia/regions/<slug>
  *   City:       /georgia/<slug>
  *   Things to do: /georgia/<city>/things-to-do-in-<city>
- *   Site:       /georgia/<city>/places-to-visit/<slug>   (city-parented)
- *               /georgia/regions/<region>/places-to-visit/<slug>   (region-parented)
+ *   Site:       /georgia/<city>/<slug>   (city-parented)
+ *               /georgia/regions/<region>/<slug>   (region-parented)
  *
  * The previous scheme lived under /destinations/... and the city/things-to-do
  * pages under /destinations/cities/<slug> and /things-to-do-in-<slug>; those
@@ -353,7 +353,7 @@ export const sitePath = (site) => {
   const base = site.parentType === 'city'
     ? `/georgia/${site.parent}`
     : `/georgia/regions/${site.parent}`
-  return `${base}/places-to-visit/${site.slug}`
+  return `${base}/${site.slug}`
 }
 
 // ---------------------------------------------------------------------------
