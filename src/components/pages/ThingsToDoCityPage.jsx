@@ -22,7 +22,9 @@ const SITE_URL = 'https://www.hikasustravel.com'
  * anything else renders the 404 page (never an empty stub).
  */
 export default function ThingsToDoCityPage() {
-  const { citySlug, ttd } = useParams()
+  // Served via the /georgia/:citySlug/:sub dispatcher (CitySubPage); the second
+  // segment arrives as :sub.
+  const { citySlug, sub: ttd } = useParams()
   const city = getCity(citySlug)
   const t = useT()
   const { pages } = useContext(I18nContext)

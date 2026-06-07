@@ -13,8 +13,8 @@
  *   Region:     /georgia/regions/<slug>
  *   City:       /georgia/<slug>
  *   Things to do: /georgia/<city>/things-to-do-in-<city>
- *   Site:       /georgia/<city>/places-to-visit/<slug>   (city-parented)
- *               /georgia/regions/<region>/places-to-visit/<slug>   (region-parented)
+ *   Site:       /georgia/<city>/<slug>   (city-parented)
+ *               /georgia/regions/<region>/<slug>   (region-parented)
  *
  * The previous scheme lived under /destinations/... and the city/things-to-do
  * pages under /destinations/cities/<slug> and /things-to-do-in-<slug>; those
@@ -308,6 +308,12 @@ export const cities = [
 // text (no link) until their detail page is created.
 // ---------------------------------------------------------------------------
 export const sites = [
+  {
+    slug: 'ali-and-nino-statue', name: 'Ali & Nino Statue',
+    parentType: 'city', parent: 'batumi', published: true,
+    seoKey: 'aliAndNinoStatue', contentKey: 'aliAndNinoStatue',
+    image: '/images/files/Ali%20and%20Nino%20Statue%20Sunset.jpg',
+  },
   { slug: 'narikala-fortress', name: 'Narikala Fortress', parentType: 'city', parent: 'tbilisi', published: false },
   { slug: 'jvari-monastery', name: 'Jvari Monastery', parentType: 'city', parent: 'mtskheta', published: false },
   { slug: 'uplistsikhe-cave-town', name: 'Uplistsikhe Cave Town', parentType: 'region', parent: 'shida-kartli', published: false },
@@ -347,7 +353,7 @@ export const sitePath = (site) => {
   const base = site.parentType === 'city'
     ? `/georgia/${site.parent}`
     : `/georgia/regions/${site.parent}`
-  return `${base}/places-to-visit/${site.slug}`
+  return `${base}/${site.slug}`
 }
 
 // ---------------------------------------------------------------------------
