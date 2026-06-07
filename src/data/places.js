@@ -105,6 +105,11 @@ export const cities = [
   {
     slug: 'chiatura', name: 'Chiatura', region: 'imereti', published: true,
     seoKey: 'chiatura', contentKey: 'chiatura', image: '/images/files/georgia-home.jpg',
+    thingsToDo: {
+      seoKey: 'thingsToDoChiatura', contentKey: 'thingsToDoChiatura', image: '/images/files/georgia-home.jpg',
+      address: { addressLocality: 'Chiatura' },
+      attractions: ['Chiatura Cable Cars', 'Katskhi Pillar', 'Mghvimevi Monastery', 'Kvirila River Canyon'],
+    },
   },
   {
     slug: 'batumi', name: 'Batumi', region: 'adjara', published: true,
