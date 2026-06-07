@@ -314,6 +314,12 @@ export const sites = [
     seoKey: 'aliAndNinoStatue', contentKey: 'aliAndNinoStatue',
     image: '/images/files/Ali%20and%20Nino%20Statue%20Sunset.jpg',
   },
+  {
+    slug: 'alphabetic-tower', name: 'Alphabetic Tower',
+    parentType: 'city', parent: 'batumi', published: true,
+    seoKey: 'alphabeticTower', contentKey: 'alphabeticTower',
+    image: '/images/files/Batumi.jpg',
+  },
   { slug: 'narikala-fortress', name: 'Narikala Fortress', parentType: 'city', parent: 'tbilisi', published: false },
   { slug: 'jvari-monastery', name: 'Jvari Monastery', parentType: 'city', parent: 'mtskheta', published: false },
   { slug: 'uplistsikhe-cave-town', name: 'Uplistsikhe Cave Town', parentType: 'region', parent: 'shida-kartli', published: false },
