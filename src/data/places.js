@@ -168,6 +168,10 @@ export const cities = [
     },
   },
   {
+    slug: 'zugdidi', name: 'Zugdidi', region: 'samegrelo', published: true,
+    seoKey: 'zugdidi', contentKey: 'zugdidi', image: '/images/files/georgia-home.jpg',
+  },
+  {
     slug: 'martvili', name: 'Martvili', region: 'samegrelo', published: true,
     seoKey: 'martvili', contentKey: 'martvili', image: '/images/files/georgia-home.jpg',
     thingsToDo: {

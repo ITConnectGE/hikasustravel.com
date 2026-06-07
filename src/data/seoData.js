@@ -248,6 +248,9 @@ const seo = {
   ushguli: {
     en: { title: 'Ushguli, Georgia: Svan Towers & Mount Shkhara Guide', description: "Ushguli in Upper Svaneti is one of Europe's highest villages: medieval Svan towers beneath Mount Shkhara, a UNESCO site reached by 4x4 or trek from Mestia.", keywords: 'Ushguli, Ushguli Georgia, Svan towers, Mount Shkhara, Upper Svaneti, highest village in Europe, UNESCO Georgia, Mestia to Ushguli trek, Shkhara Glacier, Lamaria Church, Enguri valley' },
   },
+  zugdidi: {
+    en: { title: 'Zugdidi, Georgia: Dadiani Palace & Gateway to Svaneti', description: 'Zugdidi is western Georgia\'s gateway to Svaneti and home to the Dadiani Palace with its Napoleon death mask, Mingrelian cuisine, and the Enguri Dam nearby.', keywords: 'Zugdidi, Zugdidi Georgia, Dadiani Palace, Napoleon death mask, gateway to Svaneti, Mestia, Mingrelian cuisine, Enguri Dam, Anaklia, Samegrelo, western Georgia' },
+  },
   tbilisi: {
     en: { title: 'Tbilisi, Georgia: Things to Do, Tips & Day Trips', description: 'Tbilisi is the capital of Georgia in the South Caucasus. What to see, how many days you need, best time to visit, and easy day trips from the city.', keywords: 'Tbilisi, Tbilisi Georgia, things to do in Tbilisi, Tbilisi travel guide, visit Tbilisi, Old Town Tbilisi, Narikala Fortress, sulfur baths Tbilisi, day trips from Tbilisi, best time to visit Tbilisi, Tbilisi itinerary' },
     es: { title: "Tiflis, Georgia: qué ver, consejos y excursiones", description: "Tiflis es la capital de Georgia, en el sur del Cáucaso. Qué ver, cuántos días necesitas, la mejor época para visitarla y excursiones fáciles desde la ciudad.", keywords: "Tiflis, Tiflis Georgia, qué hacer en Tiflis, guía de Tiflis, visitar Tiflis, casco antiguo de Tiflis, fortaleza Narikala, baños de azufre Tiflis, excursiones desde Tiflis, mejor época para visitar Tiflis" },
