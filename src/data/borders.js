@@ -39,6 +39,14 @@ export const borderCrossings = [
     image: '/images/files/georgia-home.jpg',
     published: true,
   },
+  {
+    slug: 'kartsakhi-border-crossing',
+    name: 'Kartsakhi Border Crossing',
+    seoKey: 'kartsakhiBorderCrossing',
+    contentKey: 'kartsakhiBorderCrossing',
+    image: '/images/files/georgia-home.jpg',
+    published: true,
+  },
 ]
 
 export const borderHubPath = '/georgia/border-crossings'
