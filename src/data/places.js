@@ -362,6 +362,12 @@ export const sites = [
     seoKey: 'europeSquareBatumi', contentKey: 'europeSquareBatumi',
     image: '/images/files/Batumi.jpg',
   },
+  {
+    slug: 'goderdzi-pass', name: 'Goderdzi Pass',
+    parentType: 'city', parent: 'batumi', published: true,
+    seoKey: 'goderdziPass', contentKey: 'goderdziPass',
+    image: '/images/files/georgia-home.jpg',
+  },
   { slug: 'narikala-fortress', name: 'Narikala Fortress', parentType: 'city', parent: 'tbilisi', published: false },
   { slug: 'jvari-monastery', name: 'Jvari Monastery', parentType: 'city', parent: 'mtskheta', published: false },
   { slug: 'uplistsikhe-cave-town', name: 'Uplistsikhe Cave Town', parentType: 'region', parent: 'shida-kartli', published: false },
