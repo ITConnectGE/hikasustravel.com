@@ -392,6 +392,12 @@ export const sites = [
     seoKey: 'mtiralaNationalPark', contentKey: 'mtiralaNationalPark',
     image: '/images/files/georgia-home.jpg',
   },
+  {
+    slug: 'petra-fortress', name: 'Petra Fortress',
+    parentType: 'city', parent: 'batumi', published: true,
+    seoKey: 'petraFortress', contentKey: 'petraFortress',
+    image: '/images/files/georgia-home.jpg',
+  },
   { slug: 'narikala-fortress', name: 'Narikala Fortress', parentType: 'city', parent: 'tbilisi', published: false },
   { slug: 'jvari-monastery', name: 'Jvari Monastery', parentType: 'city', parent: 'mtskheta', published: false },
   { slug: 'uplistsikhe-cave-town', name: 'Uplistsikhe Cave Town', parentType: 'region', parent: 'shida-kartli', published: false },
