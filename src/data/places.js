@@ -380,6 +380,12 @@ export const sites = [
     seoKey: 'machakhelaNationalPark', contentKey: 'machakhelaNationalPark',
     image: '/images/files/georgia-home.jpg',
   },
+  {
+    slug: 'makhuntseti-waterfall-queen-tamar-bridge', name: 'Makhuntseti Waterfall & Queen Tamar Bridge',
+    parentType: 'city', parent: 'batumi', published: true,
+    seoKey: 'makhuntsetiWaterfall', contentKey: 'makhuntsetiWaterfall',
+    image: '/images/files/georgia-home.jpg',
+  },
   { slug: 'narikala-fortress', name: 'Narikala Fortress', parentType: 'city', parent: 'tbilisi', published: false },
   { slug: 'jvari-monastery', name: 'Jvari Monastery', parentType: 'city', parent: 'mtskheta', published: false },
   { slug: 'uplistsikhe-cave-town', name: 'Uplistsikhe Cave Town', parentType: 'region', parent: 'shida-kartli', published: false },
