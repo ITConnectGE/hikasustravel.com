@@ -374,6 +374,12 @@ export const sites = [
     seoKey: 'gonioFortress', contentKey: 'gonioFortress',
     image: '/images/files/georgia-home.jpg',
   },
+  {
+    slug: 'machakhela-national-park', name: 'Machakhela National Park',
+    parentType: 'city', parent: 'batumi', published: true,
+    seoKey: 'machakhelaNationalPark', contentKey: 'machakhelaNationalPark',
+    image: '/images/files/georgia-home.jpg',
+  },
   { slug: 'narikala-fortress', name: 'Narikala Fortress', parentType: 'city', parent: 'tbilisi', published: false },
   { slug: 'jvari-monastery', name: 'Jvari Monastery', parentType: 'city', parent: 'mtskheta', published: false },
   { slug: 'uplistsikhe-cave-town', name: 'Uplistsikhe Cave Town', parentType: 'region', parent: 'shida-kartli', published: false },
