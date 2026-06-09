@@ -368,6 +368,12 @@ export const sites = [
     seoKey: 'goderdziPass', contentKey: 'goderdziPass',
     image: '/images/files/georgia-home.jpg',
   },
+  {
+    slug: 'gonio-fortress', name: 'Gonio Fortress',
+    parentType: 'city', parent: 'batumi', published: true,
+    seoKey: 'gonioFortress', contentKey: 'gonioFortress',
+    image: '/images/files/georgia-home.jpg',
+  },
   { slug: 'narikala-fortress', name: 'Narikala Fortress', parentType: 'city', parent: 'tbilisi', published: false },
   { slug: 'jvari-monastery', name: 'Jvari Monastery', parentType: 'city', parent: 'mtskheta', published: false },
   { slug: 'uplistsikhe-cave-town', name: 'Uplistsikhe Cave Town', parentType: 'region', parent: 'shida-kartli', published: false },
