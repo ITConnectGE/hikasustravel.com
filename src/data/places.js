@@ -107,6 +107,10 @@ export const cities = [
     seoKey: 'bakhmaro', contentKey: 'bakhmaro', image: '/images/files/georgia-home.jpg',
   },
   {
+    slug: 'gomismta', name: 'Gomismta (Gomi Mountain)', region: 'guria', published: true,
+    seoKey: 'gomismta', contentKey: 'gomismta', image: '/images/files/georgia-home.jpg',
+  },
+  {
     slug: 'kutaisi', name: 'Kutaisi', region: 'imereti', published: true,
     seoKey: 'kutaisi', contentKey: 'kutaisi', image: '/images/files/georgia-home.jpg',
     thingsToDo: {
