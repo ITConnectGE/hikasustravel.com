@@ -103,6 +103,10 @@ export const cities = [
     },
   },
   {
+    slug: 'bakhmaro', name: 'Bakhmaro', region: 'guria', published: true,
+    seoKey: 'bakhmaro', contentKey: 'bakhmaro', image: '/images/files/georgia-home.jpg',
+  },
+  {
     slug: 'kutaisi', name: 'Kutaisi', region: 'imereti', published: true,
     seoKey: 'kutaisi', contentKey: 'kutaisi', image: '/images/files/georgia-home.jpg',
     thingsToDo: {
