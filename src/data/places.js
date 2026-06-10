@@ -412,6 +412,12 @@ export const sites = [
     seoKey: 'georgiaInMiniatures', contentKey: 'georgiaInMiniatures',
     image: '/images/files/georgia-home.jpg',
   },
+  {
+    slug: 'musicians-park-shekvetili', name: 'Musicians Park',
+    parentType: 'region', parent: 'guria', published: true,
+    seoKey: 'musiciansPark', contentKey: 'musiciansPark',
+    image: '/images/files/georgia-home.jpg',
+  },
   { slug: 'narikala-fortress', name: 'Narikala Fortress', parentType: 'city', parent: 'tbilisi', published: false },
   { slug: 'jvari-monastery', name: 'Jvari Monastery', parentType: 'city', parent: 'mtskheta', published: false },
   { slug: 'uplistsikhe-cave-town', name: 'Uplistsikhe Cave Town', parentType: 'region', parent: 'shida-kartli', published: false },
