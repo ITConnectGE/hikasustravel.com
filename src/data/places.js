@@ -432,6 +432,12 @@ export const sites = [
     image: '/images/files/Batumi%20Botanical%20Garden.jpg',
   },
   { slug: 'martvili-canyon', name: 'Martvili Canyon', parentType: 'region', parent: 'samegrelo', published: false },
+  {
+    slug: 'paliastomi-lake-kolkheti-national-park', name: 'Paliastomi Lake & Kolkheti National Park',
+    parentType: 'region', parent: 'samegrelo', published: true,
+    seoKey: 'paliastomiKolkheti', contentKey: 'paliastomiKolkheti',
+    image: '/images/files/georgia-home.jpg',
+  },
   { slug: 'katskhi-pillar', name: 'Katskhi Pillar', parentType: 'region', parent: 'imereti', published: false },
 ]
 
