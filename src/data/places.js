@@ -402,6 +402,12 @@ export const sites = [
     seoKey: 'petraFortress', contentKey: 'petraFortress',
     image: '/images/files/georgia-home.jpg',
   },
+  {
+    slug: 'georgia-in-miniatures-shekvetili', name: 'Georgia in Miniatures Park',
+    parentType: 'region', parent: 'guria', published: true,
+    seoKey: 'georgiaInMiniatures', contentKey: 'georgiaInMiniatures',
+    image: '/images/files/georgia-home.jpg',
+  },
   { slug: 'narikala-fortress', name: 'Narikala Fortress', parentType: 'city', parent: 'tbilisi', published: false },
   { slug: 'jvari-monastery', name: 'Jvari Monastery', parentType: 'city', parent: 'mtskheta', published: false },
   { slug: 'uplistsikhe-cave-town', name: 'Uplistsikhe Cave Town', parentType: 'region', parent: 'shida-kartli', published: false },
