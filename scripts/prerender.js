@@ -166,6 +166,7 @@ const seoPageMap = {
   'georgian-lari-currency-guide': 'lariGuide',
   'georgia-visa-entry-requirements': 'visaGuide',
   'languages-of-georgia': 'languagesGuide',
+  'kutaisi-international-airport': 'airportGuide',
   'georgia': 'destinations',
   'georgia/regions': 'destinationsRegions',
   'georgia/cities': 'destinationsCities',

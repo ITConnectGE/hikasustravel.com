@@ -7,6 +7,7 @@ import AboutGeorgiaPage from './components/pages/AboutGeorgiaPage'
 import CurrencyGuidePage from './components/pages/CurrencyGuidePage'
 import VisaPage from './components/pages/VisaPage'
 import LanguagesPage from './components/pages/LanguagesPage'
+import AirportGuidePage from './components/pages/AirportGuidePage'
 import DestinationsPage from './components/pages/DestinationsPage'
 import { RegionsHubPage, CitiesHubPage, PlacesToVisitHubPage } from './components/pages/DestinationHubs'
 import CityPage from './components/pages/CityPage'
@@ -41,6 +42,7 @@ export default function App() {
           <Route path="georgian-lari-currency-guide" element={<CurrencyGuidePage />} />
           <Route path="georgia-visa-entry-requirements" element={<VisaPage />} />
           <Route path="languages-of-georgia" element={<LanguagesPage />} />
+          <Route path="kutaisi-international-airport" element={<AirportGuidePage />} />
           {/* Georgia destinations tree. Static segments (regions/cities/
               places-to-visit) outrank the dynamic :citySlug, so hubs resolve. */}
           <Route path="georgia" element={<DestinationsPage />} />

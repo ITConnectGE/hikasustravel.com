@@ -34,6 +34,7 @@ const staticPages = [
   { path: 'georgian-lari-currency-guide', changefreq: 'monthly', priority: '0.6' },
   { path: 'georgia-visa-entry-requirements', changefreq: 'monthly', priority: '0.7' },
   { path: 'languages-of-georgia', changefreq: 'monthly', priority: '0.6' },
+  { path: 'kutaisi-international-airport', changefreq: 'monthly', priority: '0.6' },
   { path: 'georgia', changefreq: 'monthly', priority: '0.7' },
   { path: 'georgia/regions', changefreq: 'monthly', priority: '0.7' },
   { path: 'georgia/cities', changefreq: 'monthly', priority: '0.7' },
