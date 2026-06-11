@@ -184,6 +184,11 @@ const seoPageMap = {
   'terms-and-conditions': 'terms',
 }
 
+// Per-path og:image overrides for static pages (default is georgia-home.jpg).
+const staticPageImages = {
+  'kutaisi-international-airport': '/images/files/kutaisi-airport.jpg',
+}
+
 // ---------------------------------------------------------------------------
 // 3. Build per-route HTML
 // ---------------------------------------------------------------------------
@@ -304,7 +309,7 @@ for (const lang of LANGS) {
       description: data.description,
       keywords: data.keywords,
       canonical,
-      image: '/images/files/georgia-home.jpg',
+      image: staticPageImages[path] || '/images/files/georgia-home.jpg',
       ogLocale,
     })
   }

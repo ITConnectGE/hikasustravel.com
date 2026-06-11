@@ -557,7 +557,7 @@ export const blogGuides = [
     seoKey: 'airportGuide',
     date: '2026-06-12',
     readTime: 7,
-    thumbnail: '/images/files/georgia-home.jpg',
+    thumbnail: '/images/files/kutaisi-airport.jpg',
     tags: ['transport', 'planning', 'travel-tips'],
   },
 ]

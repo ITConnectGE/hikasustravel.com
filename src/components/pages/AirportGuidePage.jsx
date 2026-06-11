@@ -8,8 +8,11 @@ import useSEO from '../../hooks/useSEO'
 import { getSEO } from '../../data/seoData'
 import enPages from '../../i18n/locales/en/pages.json'
 
-// Placeholder hero — swap for an airport/terminal image if desired.
-const HERO_IMAGE = '/images/files/georgia-home.jpg'
+// Hero photo of the terminal interior (Wizz Air check-in area).
+// Source: Wikimedia Commons, by Andrew Milligan Sumo, licensed CC BY 2.0 —
+// attribution rendered on-page below (required by the licence). File:
+// David the Builder Kutaisi International Airport, KUT, Georgia (41001394845).jpg
+const HERO_IMAGE = '/images/files/kutaisi-airport.jpg'
 const SITE_URL = 'https://www.hikasustravel.com'
 const PATH = 'kutaisi-international-airport'
 
@@ -74,6 +77,24 @@ export default function AirportGuidePage() {
           <Accordion items={faqItems} headingKey="faq.heroTitle" />
         </section>
       )}
+      {/* Photo attribution — required by the CC BY 2.0 licence of the hero image. */}
+      <section className="page-items">
+        <p style={{ fontSize: '0.8rem', opacity: 0.65, textAlign: 'center', margin: 0 }}>
+          Photo:{' '}
+          <a
+            href="https://commons.wikimedia.org/wiki/File:David_the_Builder_Kutaisi_International_Airport,_KUT,_Georgia_(41001394845).jpg"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Andrew Milligan Sumo
+          </a>{' '}
+          via Wikimedia Commons,{' '}
+          <a href="https://creativecommons.org/licenses/by/2.0/" target="_blank" rel="noopener noreferrer">
+            CC BY 2.0
+          </a>{' '}
+          (resized).
+        </p>
+      </section>
     </>
   )
 }
