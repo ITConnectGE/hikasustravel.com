@@ -467,7 +467,7 @@ export const sites = [
     slug: 'bagrati-cathedral', name: 'Bagrati Cathedral',
     parentType: 'city', parent: 'kutaisi', published: true,
     seoKey: 'bagratiCathedral', contentKey: 'bagratiCathedral',
-    image: '/images/files/georgia-home.jpg',
+    image: '/images/files/bagrati-cathedral.jpg',
   },
 ]
 
