@@ -468,6 +468,12 @@ export const sites = [
     image: '/images/files/georgia-home.jpg',
   },
   {
+    slug: 'mghvimevi-monastery', name: 'Mghvimevi Monastery',
+    parentType: 'region', parent: 'imereti', published: true,
+    seoKey: 'mghvimeviMonastery', contentKey: 'mghvimeviMonastery',
+    image: '/images/files/georgia-home.jpg',
+  },
+  {
     slug: 'chiatura-cable-cars', name: 'Chiatura Cable Cars',
     parentType: 'city', parent: 'chiatura', published: true,
     seoKey: 'chiaturaCableCars', contentKey: 'chiaturaCableCars',
