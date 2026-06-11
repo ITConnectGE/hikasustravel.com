@@ -469,6 +469,12 @@ export const sites = [
     seoKey: 'bagratiCathedral', contentKey: 'bagratiCathedral',
     image: '/images/files/bagrati-cathedral.jpg',
   },
+  {
+    slug: 'colchis-fountain-kutaisi', name: 'Colchis Fountain',
+    parentType: 'city', parent: 'kutaisi', published: true,
+    seoKey: 'colchisFountain', contentKey: 'colchisFountain',
+    image: '/images/files/georgia-home.jpg',
+  },
 ]
 
 // Wineries are intentionally an empty, scaffolded list — no winery pages are
