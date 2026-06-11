@@ -480,6 +480,12 @@ export const sites = [
     seoKey: 'colchisFountain', contentKey: 'colchisFountain',
     image: '/images/files/georgia-home.jpg',
   },
+  {
+    slug: 'green-bazaar-kutaisi', name: 'Green Bazaar (Mtsvane Bazari)',
+    parentType: 'city', parent: 'kutaisi', published: true,
+    seoKey: 'greenBazaar', contentKey: 'greenBazaar',
+    image: '/images/files/georgia-home.jpg',
+  },
 ]
 
 // Wineries are intentionally an empty, scaffolded list — no winery pages are
