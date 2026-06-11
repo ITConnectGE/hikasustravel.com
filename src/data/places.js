@@ -497,6 +497,12 @@ export const sites = [
     seoKey: 'kutaisiMuseum', contentKey: 'kutaisiMuseum',
     image: '/images/files/georgia-home.jpg',
   },
+  {
+    slug: 'kutaisi-synagogue', name: 'Kutaisi Synagogue',
+    parentType: 'city', parent: 'kutaisi', published: true,
+    seoKey: 'kutaisiSynagogue', contentKey: 'kutaisiSynagogue',
+    image: '/images/files/georgia-home.jpg',
+  },
 ]
 
 // Wineries are intentionally an empty, scaffolded list — no winery pages are
