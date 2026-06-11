@@ -440,7 +440,12 @@ export const sites = [
   { slug: 'jvari-monastery', name: 'Jvari Monastery', parentType: 'city', parent: 'mtskheta', published: false },
   { slug: 'uplistsikhe-cave-town', name: 'Uplistsikhe Cave Town', parentType: 'region', parent: 'shida-kartli', published: false },
   { slug: 'prometheus-cave', name: 'Prometheus Cave', parentType: 'region', parent: 'imereti', published: false },
-  { slug: 'gelati-monastery', name: 'Gelati Monastery', parentType: 'region', parent: 'imereti', published: false },
+  {
+    slug: 'gelati-monastery', name: 'Gelati Monastery',
+    parentType: 'city', parent: 'kutaisi', published: true,
+    seoKey: 'gelatiMonastery', contentKey: 'gelatiMonastery',
+    image: '/images/files/georgia-home.jpg',
+  },
   { slug: 'vardzia', name: 'Vardzia', parentType: 'region', parent: 'samtskhe-javakheti', published: false },
   { slug: 'gergeti-trinity-church', name: 'Gergeti Trinity Church', parentType: 'region', parent: 'mtskheta-mtianeti', published: false },
   {
