@@ -461,7 +461,12 @@ export const sites = [
     seoKey: 'paliastomiKolkheti', contentKey: 'paliastomiKolkheti',
     image: '/images/files/georgia-home.jpg',
   },
-  { slug: 'katskhi-pillar', name: 'Katskhi Pillar', parentType: 'region', parent: 'imereti', published: false },
+  {
+    slug: 'katskhi-pillar', name: 'Katskhi Pillar',
+    parentType: 'region', parent: 'imereti', published: true,
+    seoKey: 'katskhiPillar', contentKey: 'katskhiPillar',
+    image: '/images/files/georgia-home.jpg',
+  },
   {
     slug: 'chiatura-cable-cars', name: 'Chiatura Cable Cars',
     parentType: 'city', parent: 'chiatura', published: true,
