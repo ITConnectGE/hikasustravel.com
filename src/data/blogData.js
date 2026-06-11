@@ -552,6 +552,14 @@ export const blogGuides = [
     thumbnail: '/images/files/about-georgia.jpg',
     tags: ['language', 'culture', 'travel-tips'],
   },
+  {
+    path: '/kutaisi-international-airport',
+    seoKey: 'airportGuide',
+    date: '2026-06-12',
+    readTime: 7,
+    thumbnail: '/images/files/georgia-home.jpg',
+    tags: ['transport', 'planning', 'travel-tips'],
+  },
 ]
 
 export function getBlogArticle(slug) {
