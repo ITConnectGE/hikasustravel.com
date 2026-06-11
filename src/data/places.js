@@ -457,6 +457,12 @@ export const sites = [
     image: '/images/files/georgia-home.jpg',
   },
   { slug: 'katskhi-pillar', name: 'Katskhi Pillar', parentType: 'region', parent: 'imereti', published: false },
+  {
+    slug: 'chiatura-cable-cars', name: 'Chiatura Cable Cars',
+    parentType: 'city', parent: 'chiatura', published: true,
+    seoKey: 'chiaturaCableCars', contentKey: 'chiaturaCableCars',
+    image: '/images/files/georgia-home.jpg',
+  },
 ]
 
 // Wineries are intentionally an empty, scaffolded list — no winery pages are
