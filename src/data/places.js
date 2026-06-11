@@ -491,6 +491,12 @@ export const sites = [
     seoKey: 'greenBazaar', contentKey: 'greenBazaar',
     image: '/images/files/georgia-home.jpg',
   },
+  {
+    slug: 'kutaisi-state-historical-museum', name: 'Kutaisi State Historical Museum',
+    parentType: 'city', parent: 'kutaisi', published: true,
+    seoKey: 'kutaisiMuseum', contentKey: 'kutaisiMuseum',
+    image: '/images/files/georgia-home.jpg',
+  },
 ]
 
 // Wineries are intentionally an empty, scaffolded list — no winery pages are
