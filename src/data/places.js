@@ -463,6 +463,12 @@ export const sites = [
     seoKey: 'chiaturaCableCars', contentKey: 'chiaturaCableCars',
     image: '/images/files/georgia-home.jpg',
   },
+  {
+    slug: 'bagrati-cathedral', name: 'Bagrati Cathedral',
+    parentType: 'city', parent: 'kutaisi', published: true,
+    seoKey: 'bagratiCathedral', contentKey: 'bagratiCathedral',
+    image: '/images/files/georgia-home.jpg',
+  },
 ]
 
 // Wineries are intentionally an empty, scaffolded list — no winery pages are
