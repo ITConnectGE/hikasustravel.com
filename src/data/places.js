@@ -479,6 +479,12 @@ export const sites = [
     image: '/images/files/georgia-home.jpg',
   },
   {
+    slug: 'sataplia-nature-reserve', name: 'Sataplia Nature Reserve',
+    parentType: 'region', parent: 'imereti', published: true,
+    seoKey: 'satapliaNatureReserve', contentKey: 'satapliaNatureReserve',
+    image: '/images/files/georgia-home.jpg',
+  },
+  {
     slug: 'okatse-kinchkha-waterfall', name: 'Okatse (Kinchkha) Waterfall',
     parentType: 'region', parent: 'imereti', published: true,
     seoKey: 'okatseKinchkhaWaterfall', contentKey: 'okatseKinchkhaWaterfall',
