@@ -539,6 +539,12 @@ export const sites = [
     image: '/images/files/georgia-home.jpg',
   },
   {
+    slug: 'white-bridge-kutaisi', name: 'White Bridge',
+    parentType: 'city', parent: 'kutaisi', published: true,
+    seoKey: 'whiteBridgeKutaisi', contentKey: 'whiteBridgeKutaisi',
+    image: '/images/files/georgia-home.jpg',
+  },
+  {
     slug: 'green-bazaar-kutaisi', name: 'Green Bazaar (Mtsvane Bazari)',
     parentType: 'city', parent: 'kutaisi', published: true,
     seoKey: 'greenBazaar', contentKey: 'greenBazaar',
