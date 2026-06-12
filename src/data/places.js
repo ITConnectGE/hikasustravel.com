@@ -479,6 +479,12 @@ export const sites = [
     image: '/images/files/georgia-home.jpg',
   },
   {
+    slug: 'tetra-cave', name: 'Tetra Cave',
+    parentType: 'region', parent: 'imereti', published: true,
+    seoKey: 'tetraCave', contentKey: 'tetraCave',
+    image: '/images/files/georgia-home.jpg',
+  },
+  {
     slug: 'sataplia-nature-reserve', name: 'Sataplia Nature Reserve',
     parentType: 'region', parent: 'imereti', published: true,
     seoKey: 'satapliaNatureReserve', contentKey: 'satapliaNatureReserve',
