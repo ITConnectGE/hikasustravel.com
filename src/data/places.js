@@ -479,6 +479,12 @@ export const sites = [
     image: '/images/files/georgia-home.jpg',
   },
   {
+    slug: 'vani-archaeological-museum', name: 'Vani Archaeological Museum',
+    parentType: 'region', parent: 'imereti', published: true,
+    seoKey: 'vaniArchaeologicalMuseum', contentKey: 'vaniArchaeologicalMuseum',
+    image: '/images/files/georgia-home.jpg',
+  },
+  {
     slug: 'ubisa-monastery', name: 'Ubisa Monastery',
     parentType: 'region', parent: 'imereti', published: true,
     seoKey: 'ubisaMonastery', contentKey: 'ubisaMonastery',
