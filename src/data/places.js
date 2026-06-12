@@ -446,6 +446,12 @@ export const sites = [
     seoKey: 'gelatiMonastery', contentKey: 'gelatiMonastery',
     image: '/images/files/georgia-home.jpg',
   },
+  {
+    slug: 'motsameta-monastery', name: 'Motsameta Monastery',
+    parentType: 'city', parent: 'kutaisi', published: true,
+    seoKey: 'motsametaMonastery', contentKey: 'motsametaMonastery',
+    image: '/images/files/georgia-home.jpg',
+  },
   { slug: 'vardzia', name: 'Vardzia', parentType: 'region', parent: 'samtskhe-javakheti', published: false },
   { slug: 'gergeti-trinity-church', name: 'Gergeti Trinity Church', parentType: 'region', parent: 'mtskheta-mtianeti', published: false },
   {
