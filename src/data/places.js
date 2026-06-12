@@ -479,6 +479,12 @@ export const sites = [
     image: '/images/files/georgia-home.jpg',
   },
   {
+    slug: 'tskaltubo-sanatoriums', name: 'Tskaltubo Sanatoriums',
+    parentType: 'city', parent: 'tskaltubo', published: true,
+    seoKey: 'tskaltuboSanatoriums', contentKey: 'tskaltuboSanatoriums',
+    image: '/images/files/georgia-home.jpg',
+  },
+  {
     slug: 'tetra-cave', name: 'Tetra Cave',
     parentType: 'region', parent: 'imereti', published: true,
     seoKey: 'tetraCave', contentKey: 'tetraCave',
