@@ -479,6 +479,12 @@ export const sites = [
     image: '/images/files/georgia-home.jpg',
   },
   {
+    slug: 'ubisa-monastery', name: 'Ubisa Monastery',
+    parentType: 'region', parent: 'imereti', published: true,
+    seoKey: 'ubisaMonastery', contentKey: 'ubisaMonastery',
+    image: '/images/files/georgia-home.jpg',
+  },
+  {
     slug: 'tskaltubo-sanatoriums', name: 'Tskaltubo Sanatoriums',
     parentType: 'city', parent: 'tskaltubo', published: true,
     seoKey: 'tskaltuboSanatoriums', contentKey: 'tskaltuboSanatoriums',
