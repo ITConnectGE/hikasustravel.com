@@ -439,7 +439,12 @@ export const sites = [
   { slug: 'narikala-fortress', name: 'Narikala Fortress', parentType: 'city', parent: 'tbilisi', published: false },
   { slug: 'jvari-monastery', name: 'Jvari Monastery', parentType: 'city', parent: 'mtskheta', published: false },
   { slug: 'uplistsikhe-cave-town', name: 'Uplistsikhe Cave Town', parentType: 'region', parent: 'shida-kartli', published: false },
-  { slug: 'prometheus-cave', name: 'Prometheus Cave', parentType: 'region', parent: 'imereti', published: false },
+  {
+    slug: 'prometheus-cave', name: 'Prometheus Cave',
+    parentType: 'region', parent: 'imereti', published: true,
+    seoKey: 'prometheusCave', contentKey: 'prometheusCave',
+    image: '/images/files/georgia-home.jpg',
+  },
   {
     slug: 'gelati-monastery', name: 'Gelati Monastery',
     parentType: 'city', parent: 'kutaisi', published: true,
