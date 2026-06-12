@@ -474,6 +474,12 @@ export const sites = [
     image: '/images/files/georgia-home.jpg',
   },
   {
+    slug: 'okatse-kinchkha-waterfall', name: 'Okatse (Kinchkha) Waterfall',
+    parentType: 'region', parent: 'imereti', published: true,
+    seoKey: 'okatseKinchkhaWaterfall', contentKey: 'okatseKinchkhaWaterfall',
+    image: '/images/files/georgia-home.jpg',
+  },
+  {
     slug: 'mghvimevi-monastery', name: 'Mghvimevi Monastery',
     parentType: 'region', parent: 'imereti', published: true,
     seoKey: 'mghvimeviMonastery', contentKey: 'mghvimeviMonastery',
