@@ -317,6 +317,12 @@ export const cities = [
 // ---------------------------------------------------------------------------
 export const sites = [
   {
+    slug: 'gurjaani-kvelatsminda', name: 'Gurjaani Kvelatsminda',
+    parentType: 'region', parent: 'kakheti', published: true,
+    seoKey: 'gurjaaniKvelatsminda', contentKey: 'gurjaaniKvelatsminda',
+    image: '/images/files/georgia-home.jpg',
+  },
+  {
     slug: 'gremi-archangels-complex', name: 'Gremi Archangels\' Complex',
     parentType: 'region', parent: 'kakheti', published: true,
     seoKey: 'gremiArchangelsComplex', contentKey: 'gremiArchangelsComplex',
