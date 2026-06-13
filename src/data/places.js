@@ -317,6 +317,12 @@ export const cities = [
 // ---------------------------------------------------------------------------
 export const sites = [
   {
+    slug: 'ikalto-monastery', name: 'Ikalto Monastery',
+    parentType: 'city', parent: 'telavi', published: true,
+    seoKey: 'ikaltoMonastery', contentKey: 'ikaltoMonastery',
+    image: '/images/files/georgia-home.jpg',
+  },
+  {
     slug: 'gurjaani-kvelatsminda', name: 'Gurjaani Kvelatsminda',
     parentType: 'region', parent: 'kakheti', published: true,
     seoKey: 'gurjaaniKvelatsminda', contentKey: 'gurjaaniKvelatsminda',
