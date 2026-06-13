@@ -317,6 +317,12 @@ export const cities = [
 // ---------------------------------------------------------------------------
 export const sites = [
   {
+    slug: 'pankisi-gorge', name: 'Pankisi Gorge',
+    parentType: 'region', parent: 'kakheti', published: true,
+    seoKey: 'pankisiGorge', contentKey: 'pankisiGorge',
+    image: '/images/files/georgia-home.jpg',
+  },
+  {
     slug: 'nekresi-monastery', name: 'Nekresi Monastery',
     parentType: 'region', parent: 'kakheti', published: true,
     seoKey: 'nekresiMonastery', contentKey: 'nekresiMonastery',
