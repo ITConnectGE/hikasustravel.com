@@ -1,4 +1,41 @@
 const seo = {
+  shumiWinery: {
+    en: {
+      title: "Shumi Winery, Tsinandali: Tour, Museum & Tasting",
+      description: "Shumi Winery near Tsinandali, Georgia: qvevri and modern wines, the first Georgian wine museum, a vast living vine collection, and tastings near Telavi in Kakheti.",
+      keywords: "Shumi Winery, Shumi Tsinandali, Tsinandali winery, Chavchavadze estate, Georgian wine museum, qvevri, marani, Rkatsiteli, Mtsvane, Saperavi, amber wine, ampelographic collection, vine collection, Georgian wine tasting, Kakheti wine tour, Telavi, Alazani valley, things to do near Telavi",
+    },
+    es: {
+      title: "Bodega Shumi, Tsinandali: visita, museo y cata",
+      description: "Bodega Shumi cerca de Tsinandali, Georgia: vinos en qvevri y modernos, el primer museo del vino georgiano, una vasta colección viva de vides y catas cerca de Telavi, en Kakheti.",
+      keywords: "bodega Shumi, Shumi Tsinandali, bodega Tsinandali, finca Chavchavadze, museo del vino georgiano, qvevri, marani, Rkatsiteli, Mtsvane, Saperavi, vino ámbar, colección ampelográfica, colección de vides, cata de vino georgiano, ruta del vino de Kakheti, Telavi, valle del Alazani, qué ver cerca de Telavi",
+    },
+    fr: {
+      title: "Domaine Shumi, Tsinandali : visite, musée et dégustation",
+      description: "Le domaine Shumi près de Tsinandali, en Géorgie : vins en qvevri et modernes, le premier musée du vin géorgien, une vaste collection vivante de cépages et des dégustations près de Telavi, en Kakheti.",
+      keywords: "domaine Shumi, Shumi Tsinandali, cave de Tsinandali, domaine Chavchavadze, musée du vin géorgien, qvevri, marani, Rkatsiteli, Mtsvane, Saperavi, vin ambré, collection ampélographique, collection de cépages, dégustation de vin géorgien, route des vins de Kakheti, Telavi, vallée de l'Alazani, que voir près de Telavi",
+    },
+    de: {
+      title: "Weingut Shumi, Tsinandali: Tour, Museum & Verkostung",
+      description: "Das Weingut Shumi bei Tsinandali, Georgien: qvevri und moderne Weine, das erste georgische Weinmuseum, eine riesige lebende Rebsammlung und Verkostungen bei Telavi in Kachetien.",
+      keywords: "Weingut Shumi, Shumi, Shumi Tsinandali, Weingut Tsinandali, Chavchavadze-Anwesen, Tschawtschawadse-Anwesen, georgisches Weinmuseum, qvevri, marani, Rkatsiteli, Mtsvane, Saperavi, Bernsteinwein, Orange Wine, ampelografische Sammlung, Rebsammlung, autochthone Reben, georgische Weinverkostung, Weintour Kachetien, Telavi, Alazani-Tal, Tsinandali, Kachetien, georgischer Wein, Sehenswürdigkeiten bei Telavi",
+    },
+    nl: {
+      title: "Wijnmakerij Shumi, Tsinandali: tour, museum & proeverij",
+      description: "Wijnmakerij Shumi nabij Tsinandali, Georgië: qvevri- en moderne wijnen, het eerste Georgische wijnmuseum, een uitgestrekte levende druivencollectie en proeverijen nabij Telavi in Kacheti.",
+      keywords: "wijnmakerij Shumi, Shumi Tsinandali, wijnmakerij Tsinandali, Chavchavadze-landgoed, Georgisch wijnmuseum, qvevri, marani, Rkatsiteli, Mtsvane, Saperavi, amberwijn, ampelografische collectie, druivencollectie, Georgische wijnproeverij, wijntour Kacheti, Telavi, Alazani-vallei, bezienswaardigheden bij Telavi",
+    },
+    pl: {
+      title: "Winiarnia Shumi, Tsinandali: zwiedzanie, muzeum i degustacja",
+      description: "Winiarnia Shumi koło Tsinandali w Gruzji: wina qvevri i nowoczesne, pierwsze gruzińskie muzeum wina, rozległa żywa kolekcja winorośli i degustacje koło Telavi w Kakheti.",
+      keywords: "winiarnia Shumi, Shumi Tsinandali, winiarnia Tsinandali, posiadłość Chavchavadze, gruzińskie muzeum wina, qvevri, marani, Rkatsiteli, Mtsvane, Saperavi, wino bursztynowe, kolekcja ampelograficzna, kolekcja winorośli, degustacja wina gruzińskiego, szlak winny Kakheti, Telavi, dolina Alazani, Kakheti, atrakcje koło Telavi",
+    },
+    cs: {
+      title: "Vinařství Shumi, Tsinandali: prohlídka, muzeum a degustace",
+      description: "Vinařství Shumi poblíž Tsinandali v Gruzii: qvevri a moderní vína, první gruzínské muzeum vína, rozsáhlá živá sbírka révy a degustace poblíž Telavi v Kachetii.",
+      keywords: "vinařství Shumi, Shumi, Shumi Tsinandali, vinařství Tsinandali, panství Chavchavadze, gruzínské muzeum vína, qvevri, qvevri víno, marani, Rkatsiteli, Mtsvane, Saperavi, jantarové víno, ampelografická sbírka, sbírka odrůd révy, degustace gruzínského vína, vinařská cesta Kachetie, Telavi, údolí Alazani, Kachetie, co vidět poblíž Telavi",
+    },
+  },
   shuamtaMonasteries: {
     en: { title: "Shuamta Monasteries: Forest Churches near Telavi", description: "The Shuamta monasteries near Telavi, Georgia: Old Shuamta's 5th–7th-century forest churches and 16th-century New Shuamta, founded by Queen Tinatin — a Kakheti gem.", keywords: "Shuamta monasteries, Dzveli Shuamta, Old Shuamta, Akhali Shuamta, New Shuamta, Queen Tinatin, King Levan, Khakhuli St. Mary monastery, Khakhuli icon, Jvari, Mtskheta, Gremi, Tsiv-Gombori, Ikalto, Tsinandali, Telavi, Kakheti, Georgian Orthodox monastery, active nunnery, things to do near Telavi" },
     es: { title: "Monasterios de Shuamta: iglesias del bosque cerca de Telavi", description: "Los monasterios de Shuamta cerca de Telavi, Georgia: las iglesias del bosque de los siglos V–VII de Shuamta Vieja y la Shuamta Nueva del siglo XVI, fundada por la reina Tinatin, una joya de Kakheti.", keywords: "monasterios de Shuamta, Dzveli Shuamta, Shuamta Vieja, Akhali Shuamta, Shuamta Nueva, reina Tinatin, rey Levan, monasterio de Santa María de Khakhuli, icono de Khakhuli, Jvari, Mtskheta, Gremi, Tsiv-Gombori, Ikalto, Tsinandali, Telavi, Kakheti, monasterio ortodoxo georgiano, qué ver cerca de Telavi" },

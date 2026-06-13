@@ -317,6 +317,12 @@ export const cities = [
 // ---------------------------------------------------------------------------
 export const sites = [
   {
+    slug: 'shumi-winery', name: 'Shumi Winery',
+    parentType: 'city', parent: 'telavi', published: true,
+    seoKey: 'shumiWinery', contentKey: 'shumiWinery',
+    image: '/images/files/georgia-home.jpg',
+  },
+  {
     slug: 'shuamta-monasteries', name: 'The Shuamta Monasteries',
     parentType: 'city', parent: 'telavi', published: true,
     seoKey: 'shuamtaMonasteries', contentKey: 'shuamtaMonasteries',
