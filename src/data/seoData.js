@@ -1,4 +1,41 @@
 const seo = {
+  tsinandaliEstate: {
+    en: {
+      title: "Tsinandali Estate: Chavchavadze House & Wine, Kakheti",
+      description: "Tsinandali Estate near Telavi, Georgia: the Chavchavadze house museum, English-style park, and historic wine cellar — birthplace of European-style Georgian wine.",
+      keywords: "Tsinandali Estate, Chavchavadze house, Chavchavadze museum, Alexander Chavchavadze, Tsinandali wine, Tsinandali park, Georgian wine cellar, dry white Tsinandali, Rkatsiteli, Mtsvane, qvevri, Tsinandali Festival, Telavi, Kakheti, Alazani valley, things to do near Telavi, Shumi winery, Georgian wine history",
+    },
+    es: {
+      title: "Finca de Tsinandali: casa Chavchavadze y vino, Kakheti",
+      description: "La finca de Tsinandali, cerca de Telavi, en Georgia: la casa museo de los Chavchavadze, el parque de estilo inglés y la bodega histórica —cuna del vino georgiano de estilo europeo—.",
+      keywords: "Finca de Tsinandali, casa Chavchavadze, museo Chavchavadze, Alexander Chavchavadze, vino Tsinandali, parque de Tsinandali, bodega histórica georgiana, Tsinandali blanco seco, Rkatsiteli, Mtsvane, qvevri, Festival de Tsinandali, Telavi, Kakheti, valle del Alazani, qué ver cerca de Telavi, bodega Shumi, historia del vino georgiano",
+    },
+    fr: {
+      title: "Domaine de Tsinandali : maison Chavchavadze et vin",
+      description: "Le domaine de Tsinandali près de Telavi, en Géorgie : la maison-musée Chavchavadze, le parc à l'anglaise et la cave historique — berceau du vin géorgien de style européen.",
+      keywords: "domaine de Tsinandali, maison Chavchavadze, musée Chavchavadze, Alexander Chavchavadze, vin Tsinandali, parc de Tsinandali, cave historique géorgienne, Tsinandali blanc sec, Rkatsiteli, Mtsvane, qvevri, Festival de Tsinandali, Telavi, Kakheti, vallée de l'Alazani, que voir près de Telavi, domaine Shumi, histoire du vin géorgien",
+    },
+    de: {
+      title: "Anwesen Tsinandali: Chavchavadze-Haus & Wein, Kachetien",
+      description: "Das Anwesen Tsinandali bei Telavi, Georgien: das Chavchavadze-Hausmuseum, der Park im englischen Stil und der historische Weinkeller — die Geburtsstätte des georgischen Weins europäischen Stils.",
+      keywords: "Anwesen Tsinandali, Tsinandali, Chavchavadze-Haus, Chavchavadze-Museum, Chavchavadze-Anwesen, Alexander Chavchavadze, Tsinandali-Wein, Tsinandali-Park, historischer georgischer Weinkeller, trockener Weißwein Tsinandali, Rkatsiteli, Mtsvane, qvevri, Bernsteinwein, Hausmuseum, Park im englischen Stil, Tsinandali-Festival, Telavi, Kachetien, Alazani-Tal, georgischer Wein, Sehenswürdigkeiten bei Telavi, Weingut Shumi, georgische Weingeschichte",
+    },
+    nl: {
+      title: "Landgoed Tsinandali: Chavchavadze-huis & wijn, Kacheti",
+      description: "Landgoed Tsinandali bij Telavi, Georgië: het Chavchavadze-huismuseum, het park in Engelse stijl en de historische wijnkelder — bakermat van Georgische wijn in Europese stijl.",
+      keywords: "landgoed Tsinandali, Chavchavadze-huis, Chavchavadze-museum, Alexander Chavchavadze, Tsinandali-wijn, park van Tsinandali, historische Georgische wijnkelder, droge witte Tsinandali, Rkatsiteli, Mtsvane, qvevri, Tsinandali-festival, Telavi, Kacheti, Alazani-vallei, bezienswaardigheden bij Telavi, wijnmakerij Shumi, Georgische wijngeschiedenis",
+    },
+    pl: {
+      title: "Posiadłość Tsinandali: dom Chavchavadze i wino, Kakheti",
+      description: "Posiadłość Tsinandali koło Telavi w Gruzji: dom-muzeum Chavchavadze, park w stylu angielskim i historyczna piwnica winna — kolebka gruzińskiego wina w stylu europejskim.",
+      keywords: "posiadłość Tsinandali, dom Chavchavadze, muzeum Chavchavadze, Alexander Chavchavadze, wino Tsinandali, park Tsinandali, historyczna gruzińska piwnica winna, wytrawne białe Tsinandali, Rkatsiteli, Mtsvane, qvevri, Festiwal Tsinandali, Telavi, Kakheti, dolina Alazani, atrakcje koło Telavi, winiarnia Shumi, historia gruzińskiego wina",
+    },
+    cs: {
+      title: "Panství Tsinandali: dům Chavchavadze a víno, Kachetie",
+      description: "Panství Tsinandali poblíž Telavi v Gruzii: dům-muzeum Chavchavadze, park v anglickém stylu a historický vinný sklep — rodiště gruzínského vína evropského stylu.",
+      keywords: "panství Tsinandali, dům Chavchavadze, muzeum Chavchavadze, Alexander Chavchavadze, víno Tsinandali, park Tsinandali, historický gruzínský vinný sklep, suché bílé Tsinandali, Rkatsiteli, Mtsvane, qvevri, festival Tsinandali, Telavi, Kachetie, údolí Alazani, co vidět poblíž Telavi, vinařství Shumi, historie gruzínského vína",
+    },
+  },
   telaviBazaar: {
     en: {
       title: "Telavi Bazaar: Kakheti's Local Market, Georgia",

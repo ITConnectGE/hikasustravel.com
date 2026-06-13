@@ -317,6 +317,12 @@ export const cities = [
 // ---------------------------------------------------------------------------
 export const sites = [
   {
+    slug: 'tsinandali-estate', name: 'Tsinandali Estate',
+    parentType: 'city', parent: 'telavi', published: true,
+    seoKey: 'tsinandaliEstate', contentKey: 'tsinandaliEstate',
+    image: '/images/files/georgia-home.jpg',
+  },
+  {
     slug: 'telavi-bazaar', name: 'The Telavi Bazaar',
     parentType: 'city', parent: 'telavi', published: true,
     seoKey: 'telaviBazaar', contentKey: 'telaviBazaar',
