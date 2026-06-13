@@ -317,6 +317,12 @@ export const cities = [
 // ---------------------------------------------------------------------------
 export const sites = [
   {
+    slug: 'sighnaghi-museum', name: 'The Sighnaghi Museum',
+    parentType: 'city', parent: 'sighnaghi', published: true,
+    seoKey: 'sighnaghiMuseum', contentKey: 'sighnaghiMuseum',
+    image: '/images/files/georgia-home.jpg',
+  },
+  {
     slug: 'shumi-winery', name: 'Shumi Winery',
     parentType: 'city', parent: 'telavi', published: true,
     seoKey: 'shumiWinery', contentKey: 'shumiWinery',

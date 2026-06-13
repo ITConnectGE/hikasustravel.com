@@ -1,4 +1,41 @@
 const seo = {
+  sighnaghiMuseum: {
+    en: {
+      title: "Sighnaghi Museum: Pirosmani Paintings, Kakheti",
+      description: "The Sighnaghi Museum, Georgia: the largest collection of Niko Pirosmani's paintings outside Tbilisi, plus Kakheti's archaeology and history, in the hilltop town.",
+      keywords: "Sighnaghi Museum, Sighnaghi Historical-Ethnographic Museum, Niko Pirosmani, Pirosmani paintings, Nikoloz Pirosmanashvili, Georgian naive art, Mirzaani, Pirosmani Sighnaghi, Georgian National Museum, Kakheti museum, Sighnaghi art, things to do in Sighnaghi, Alazani valley, Bodbe, Georgian painter",
+    },
+    es: {
+      title: "Museo de Sighnaghi: pinturas de Pirosmani, Kakheti",
+      description: "El Museo de Sighnaghi, Georgia: la mayor colección de pinturas de Niko Pirosmani fuera de Tbilisi, además de la arqueología y la historia de Kakheti, en la localidad encaramada en la colina.",
+      keywords: "Museo de Sighnaghi, Niko Pirosmani, pinturas de Pirosmani, Nikoloz Pirosmanashvili, arte naíf georgiano, Mirzaani, Museo Nacional de Georgia, museo de Kakheti, qué ver en Sighnaghi, valle del Alazani, Bodbe, pintor georgiano",
+    },
+    fr: {
+      title: "Musée de Sighnaghi : tableaux de Pirosmani, Kakheti",
+      description: "Le musée de Sighnaghi, en Géorgie : la plus grande collection de tableaux de Niko Pirosmani hors de Tbilissi, ainsi que l'archéologie et l'histoire de la Kakheti, dans la ville perchée.",
+      keywords: "musée de Sighnaghi, Sighnaghi, Niko Pirosmani, peintures de Pirosmani, Nikoloz Pirosmanashvili, art naïf géorgien, peintre géorgien, Mirzaani, maison-musée de Mirzaani, Musée national géorgien, Galerie nationale Tbilissi, musée de Kakheti, archéologie de Kakheti, que voir à Sighnaghi, vallée de l'Alazani, Bodbe, Dedoplistskaro, Tbilissi",
+    },
+    de: {
+      title: "Sighnaghi-Museum: Pirosmani-Gemälde, Kachetien",
+      description: "Das Sighnaghi-Museum, Georgien: die größte Sammlung von Niko Pirosmanis Gemälden außerhalb von Tiflis, dazu die Archäologie und Geschichte Kachetiens, in der Stadt auf dem Hügel.",
+      keywords: "Sighnaghi-Museum, Niko Pirosmani, Pirosmani-Gemälde, Nikoloz Pirosmanashvili, georgische naive Kunst, Mirzaani, Georgisches Nationalmuseum, Museum Kachetien, Sehenswürdigkeiten in Sighnaghi, Alazani-Tal, Bodbe, georgischer Maler, Historisch-Ethnographisches Museum Sighnaghi, Nationalgalerie Tiflis, Kachetien",
+    },
+    nl: {
+      title: "Sighnaghi-museum: schilderijen Pirosmani, Kacheti",
+      description: "Het Sighnaghi-museum, Georgië: de grootste collectie schilderijen van Niko Pirosmani buiten Tbilisi, plus de archeologie en geschiedenis van Kacheti, in het heuvelstadje.",
+      keywords: "Sighnaghi-museum, Niko Pirosmani, schilderijen van Pirosmani, Nikoloz Pirosmanashvili, Georgische naïeve kunst, Mirzaani, Niko Pirosmanashvili Huismuseum, Georgisch Nationaal Museum, Nationale Galerie Tbilisi, museum Kacheti, Sighnaghi, bezienswaardigheden in Sighnaghi, Alazani-vallei, Bodbe, Dedoplistskaro, Georgische schilder, Een miljoen rozen",
+    },
+    pl: {
+      title: "Muzeum w Sighnaghi: obrazy Pirosmaniego, Kakheti",
+      description: "Muzeum w Sighnaghi w Gruzji: największa kolekcja obrazów Niko Pirosmaniego poza Tbilisi, a do tego archeologia i historia Kakheti, w mieście na wzgórzu.",
+      keywords: "Muzeum w Sighnaghi, Niko Pirosmani, obrazy Pirosmaniego, Nikoloz Pirosmanashvili, gruzińska sztuka naiwna, Mirzaani, Dom-Muzeum Pirosmanashvilego, Gruzińskie Muzeum Narodowe, Galeria Narodowa Tbilisi, muzeum Kakheti, archeologia Kakheti, co zobaczyć w Sighnaghi, dolina Alazani, Bodbe, gruziński malarz, sztuka gruzińska",
+    },
+    cs: {
+      title: "Muzeum v Sighnaghi: obrazy Pirosmaniho, Kachetie",
+      description: "Muzeum v Sighnaghi v Gruzii: největší sbírka obrazů Nika Pirosmaniho mimo Tbilisi, k tomu archeologie a dějiny Kachetie, v kopcovitém městě.",
+      keywords: "muzeum v Sighnaghi, Niko Pirosmani, obrazy Pirosmaniho, Nikoloz Pirosmanashvili, gruzínské naivní umění, Mirzaani, Gruzínské národní muzeum, muzeum Kachetie, co vidět v Sighnaghi, údolí Alazani, Bodbe, gruzínský malíř",
+    },
+  },
   shumiWinery: {
     en: {
       title: "Shumi Winery, Tsinandali: Tour, Museum & Tasting",
