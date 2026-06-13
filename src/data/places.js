@@ -320,7 +320,7 @@ export const sites = [
     slug: 'gombori-pass', name: 'The Gombori Pass',
     parentType: 'region', parent: 'kakheti', published: true,
     seoKey: 'gomboriPass', contentKey: 'gomboriPass',
-    image: '/images/files/georgia-home.jpg',
+    image: '/images/files/gombori-pass.jpg',
   },
   {
     slug: 'giant-plane-tree-telavi', name: 'The Giant Plane Tree of Telavi',
