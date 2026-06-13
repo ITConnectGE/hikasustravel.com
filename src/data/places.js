@@ -317,6 +317,12 @@ export const cities = [
 // ---------------------------------------------------------------------------
 export const sites = [
   {
+    slug: 'david-gareja-monastery', name: 'David Gareja',
+    parentType: 'region', parent: 'kakheti', published: true,
+    seoKey: 'davidGarejaMonastery', contentKey: 'davidGarejaMonastery',
+    image: '/images/files/georgia-home.jpg',
+  },
+  {
     slug: 'bodbe-monastery', name: 'Bodbe Monastery',
     parentType: 'city', parent: 'sighnaghi', published: true,
     seoKey: 'bodbeMonastery', contentKey: 'bodbeMonastery',
