@@ -82,17 +82,33 @@ export default function SitePage() {
   const jsonLd = useMemo(() => {
     if (!published) return null
     const url = `${SITE_URL}/${lang}/${path}`
+    // Most sites are places (TouristAttraction). Thematic/cultural explainers can
+    // opt into an Article-class type via `schemaType` (e.g. 'TravelGuide') so they
+    // aren't mislabelled as a physical attraction.
+    const primaryNode =
+      site.schemaType === 'TravelGuide' || site.schemaType === 'Article'
+        ? {
+            '@type': site.schemaType,
+            name: site.name,
+            headline: (page && page.heroTitle) || site.name,
+            description: seo.description,
+            url,
+            image: `${SITE_URL}${heroImage}`,
+            inLanguage: lang,
+            about: { '@type': 'Place', name: 'Kakheti, Georgia' },
+          }
+        : {
+            '@type': 'TouristAttraction',
+            name: site.name,
+            description: seo.description,
+            url,
+            image: `${SITE_URL}${heroImage}`,
+            containedInPlace: { '@type': 'Country', name: 'Georgia' },
+          }
     return {
       '@context': 'https://schema.org',
       '@graph': [
-        {
-          '@type': 'TouristAttraction',
-          name: site.name,
-          description: seo.description,
-          url,
-          image: `${SITE_URL}${heroImage}`,
-          containedInPlace: { '@type': 'Country', name: 'Georgia' },
-        },
+        primaryNode,
         {
           '@type': 'BreadcrumbList',
           itemListElement: trail.map((c, i) => ({

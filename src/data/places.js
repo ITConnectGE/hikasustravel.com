@@ -317,6 +317,14 @@ export const cities = [
 // ---------------------------------------------------------------------------
 export const sites = [
   {
+    // Thematic/cultural explainer (not a place): uses Article-class TravelGuide
+    // schema rather than TouristAttraction — see SitePage jsonLd.
+    slug: 'rtveli-georgian-grape-harvest', name: 'Rtveli: The Georgian Grape Harvest',
+    parentType: 'region', parent: 'kakheti', published: true,
+    seoKey: 'rtveli', contentKey: 'rtveli', schemaType: 'TravelGuide',
+    image: '/images/files/georgia-home.jpg',
+  },
+  {
     slug: 'pankisi-gorge', name: 'Pankisi Gorge',
     parentType: 'region', parent: 'kakheti', published: true,
     seoKey: 'pankisiGorge', contentKey: 'pankisiGorge',
