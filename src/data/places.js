@@ -317,6 +317,12 @@ export const cities = [
 // ---------------------------------------------------------------------------
 export const sites = [
   {
+    slug: 'giant-plane-tree-telavi', name: 'The Giant Plane Tree of Telavi',
+    parentType: 'city', parent: 'telavi', published: true,
+    seoKey: 'giantPlaneTreeTelavi', contentKey: 'giantPlaneTreeTelavi',
+    image: '/images/files/georgia-home.jpg',
+  },
+  {
     slug: 'erekle-ii-statue-telavi', name: 'Equestrian Statue of King Erekle II',
     parentType: 'city', parent: 'telavi', published: true,
     seoKey: 'erekleIIStatueTelavi', contentKey: 'erekleIIStatueTelavi',
