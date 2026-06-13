@@ -320,7 +320,7 @@ export const sites = [
     slug: 'gremi-archangels-complex', name: 'Gremi Archangels\' Complex',
     parentType: 'region', parent: 'kakheti', published: true,
     seoKey: 'gremiArchangelsComplex', contentKey: 'gremiArchangelsComplex',
-    image: '/images/files/georgia-home.jpg',
+    image: '/images/files/gremi-archangels-complex.jpg',
   },
   {
     slug: 'gombori-pass', name: 'The Gombori Pass',
