@@ -317,6 +317,12 @@ export const cities = [
 // ---------------------------------------------------------------------------
 export const sites = [
   {
+    slug: 'nekresi-monastery', name: 'Nekresi Monastery',
+    parentType: 'region', parent: 'kakheti', published: true,
+    seoKey: 'nekresiMonastery', contentKey: 'nekresiMonastery',
+    image: '/images/files/georgia-home.jpg',
+  },
+  {
     slug: 'lagodekhi-national-park', name: 'Lagodekhi National Park',
     parentType: 'region', parent: 'kakheti', published: true,
     seoKey: 'lagodekhiNationalPark', contentKey: 'lagodekhiNationalPark',
