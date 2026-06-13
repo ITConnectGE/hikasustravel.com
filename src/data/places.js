@@ -317,6 +317,12 @@ export const cities = [
 // ---------------------------------------------------------------------------
 export const sites = [
   {
+    slug: 'telavi-bazaar', name: 'The Telavi Bazaar',
+    parentType: 'city', parent: 'telavi', published: true,
+    seoKey: 'telaviBazaar', contentKey: 'telaviBazaar',
+    image: '/images/files/georgia-home.jpg',
+  },
+  {
     slug: 'sighnaghi-museum', name: 'The Sighnaghi Museum',
     parentType: 'city', parent: 'sighnaghi', published: true,
     seoKey: 'sighnaghiMuseum', contentKey: 'sighnaghiMuseum',

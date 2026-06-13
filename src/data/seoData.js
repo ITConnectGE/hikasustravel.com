@@ -1,4 +1,41 @@
 const seo = {
+  telaviBazaar: {
+    en: {
+      title: "Telavi Bazaar: Kakheti's Local Market, Georgia",
+      description: "The Telavi Bazaar, Georgia: the working market of Kakheti's main town — local produce, cheese, churchkhela, spices, and fresh bread from the Alazani valley.",
+      keywords: "Telavi Bazaar, Telavi market, Kakheti market, Telavi things to do, churchkhela, sulguni, tkemali, adjika, shotis puri, Georgian food market, Alazani valley, local market Georgia, Kakheti produce, Batonistsikhe, Georgian lari",
+    },
+    es: {
+      title: "Bazar de Telavi: el mercado local de Kakheti",
+      description: "El bazar de Telavi (Georgia): el mercado de trabajo de la principal localidad de Kakheti —productos locales, queso, churchkhela, especias y pan fresco del valle del Alazani—.",
+      keywords: "bazar de Telavi, mercado de Telavi, mercado de Kakheti, qué hacer en Telavi, churchkhela, sulguni, tkemali, adjika, shotis puri, mercado de comida georgiana, valle del Alazani, mercado local Georgia, productos de Kakheti, Batonistsikhe, lari georgiano",
+    },
+    fr: {
+      title: "Bazar de Telavi : le marché local de Kakheti",
+      description: "Le bazar de Telavi, en Géorgie : le marché vivant de la principale ville de Kakheti — produits locaux, fromage, churchkhela, épices et pain frais de la vallée de l'Alazani.",
+      keywords: "bazar de Telavi, marché de Telavi, marché de Kakheti, que faire à Telavi, churchkhela, sulguni, tkemali, adjika, shotis puri, marché gastronomique géorgien, vallée de l'Alazani, marché local Géorgie, produits de Kakheti, Batonistsikhe, lari géorgien",
+    },
+    de: {
+      title: "Basar von Telavi: Kachetiens lokaler Markt",
+      description: "Der Basar von Telavi, Georgien: der lebendige Markt der Hauptstadt Kachetiens — örtliche Erzeugnisse, Käse, Churchkhela, Gewürze und frisches Brot aus dem Alazani-Tal.",
+      keywords: "Basar von Telavi, Markt in Telavi, Markt Kachetien, Telavi Sehenswürdigkeiten, churchkhela, sulguni, tkemali, adjika, shotis puri, georgischer Lebensmittelmarkt, Alazani-Tal, lokaler Markt Georgien, Produkte aus Kachetien, Batonistsikhe, georgischer Lari",
+    },
+    nl: {
+      title: "Bazaar van Telavi: lokale markt van Kacheti",
+      description: "De bazaar van Telavi, Georgië: de werkende markt van de hoofdstad van Kacheti — lokale groenten en fruit, kaas, churchkhela, specerijen en vers brood uit de Alazani-vallei.",
+      keywords: "bazaar van Telavi, markt van Telavi, markt Kacheti, wat te doen in Telavi, churchkhela, sulguni, tkemali, adjika, shotis puri, Georgische voedselmarkt, Alazani-vallei, lokale markt Georgië, producten uit Kacheti, Batonistsikhe, Georgische lari",
+    },
+    pl: {
+      title: "Bazar w Telavi: lokalny targ Kakheti w Gruzji",
+      description: "Bazar w Telavi w Gruzji: czynny targ głównego miasta Kakheti — lokalne produkty, ser, churchkhela, przyprawy i świeży chleb z doliny Alazani.",
+      keywords: "bazar w Telavi, targ w Telavi, targ Kakheti, co robić w Telavi, churchkhela, sulguni, tkemali, adjika, shotis puri, gruziński targ spożywczy, dolina Alazani, lokalny targ Gruzja, produkty z Kakheti, Batonistsikhe, gruzińskie lari",
+    },
+    cs: {
+      title: "Bazar v Telavi: místní trh Kachetie, Gruzie",
+      description: "Bazar v Telavi, Gruzie: fungující trh hlavního města Kachetie — místní produkty, sýr, churchkhela, koření a čerstvý chléb z údolí Alazani.",
+      keywords: "bazar v Telavi, trh v Telavi, trh Kachetie, co dělat v Telavi, churchkhela, sulguni, tkemali, adjika, shotis puri, gruzínský potravinový trh, údolí Alazani, místní trh Gruzie, produkty z Kachetie, Batonistsikhe, gruzínské lari",
+    },
+  },
   sighnaghiMuseum: {
     en: {
       title: "Sighnaghi Museum: Pirosmani Paintings, Kakheti",
