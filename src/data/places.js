@@ -317,6 +317,12 @@ export const cities = [
 // ---------------------------------------------------------------------------
 export const sites = [
   {
+    slug: 'lagodekhi-national-park', name: 'Lagodekhi National Park',
+    parentType: 'region', parent: 'kakheti', published: true,
+    seoKey: 'lagodekhiNationalPark', contentKey: 'lagodekhiNationalPark',
+    image: '/images/files/georgia-home.jpg',
+  },
+  {
     slug: 'kvareli-wine-cave-khareba', name: 'Kvareli Wine Cave (Khareba)',
     parentType: 'city', parent: 'kvareli', published: true,
     seoKey: 'kvareliWineCave', contentKey: 'kvareliWineCave',
