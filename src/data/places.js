@@ -317,6 +317,12 @@ export const cities = [
 // ---------------------------------------------------------------------------
 export const sites = [
   {
+    slug: 'shuamta-monasteries', name: 'The Shuamta Monasteries',
+    parentType: 'city', parent: 'telavi', published: true,
+    seoKey: 'shuamtaMonasteries', contentKey: 'shuamtaMonasteries',
+    image: '/images/files/georgia-home.jpg',
+  },
+  {
     // Thematic/cultural explainer (not a place): uses Article-class TravelGuide
     // schema rather than TouristAttraction — see SitePage jsonLd.
     slug: 'rtveli-georgian-grape-harvest', name: 'Rtveli: The Georgian Grape Harvest',
