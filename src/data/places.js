@@ -317,6 +317,12 @@ export const cities = [
 // ---------------------------------------------------------------------------
 export const sites = [
   {
+    slug: 'kvareli-wine-cave-khareba', name: 'Kvareli Wine Cave (Khareba)',
+    parentType: 'city', parent: 'kvareli', published: true,
+    seoKey: 'kvareliWineCave', contentKey: 'kvareliWineCave',
+    image: '/images/files/georgia-home.jpg',
+  },
+  {
     slug: 'ikalto-monastery', name: 'Ikalto Monastery',
     parentType: 'city', parent: 'telavi', published: true,
     seoKey: 'ikaltoMonastery', contentKey: 'ikaltoMonastery',
