@@ -317,6 +317,12 @@ export const cities = [
 // ---------------------------------------------------------------------------
 export const sites = [
   {
+    slug: 'erekle-ii-statue-telavi', name: 'Equestrian Statue of King Erekle II',
+    parentType: 'city', parent: 'telavi', published: true,
+    seoKey: 'erekleIIStatueTelavi', contentKey: 'erekleIIStatueTelavi',
+    image: '/images/files/georgia-home.jpg',
+  },
+  {
     slug: 'david-gareja-monastery', name: 'David Gareja',
     parentType: 'region', parent: 'kakheti', published: true,
     seoKey: 'davidGarejaMonastery', contentKey: 'davidGarejaMonastery',
