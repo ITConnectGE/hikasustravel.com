@@ -317,6 +317,12 @@ export const cities = [
 // ---------------------------------------------------------------------------
 export const sites = [
   {
+    slug: 'batonistsikhe-fortress', name: 'Batonistsikhe Fortress',
+    parentType: 'city', parent: 'telavi', published: true,
+    seoKey: 'batonistsikheFortress', contentKey: 'batonistsikheFortress',
+    image: '/images/files/georgia-home.jpg',
+  },
+  {
     slug: 'alaverdi-monastery', name: 'Alaverdi Cathedral',
     parentType: 'city', parent: 'telavi', published: true,
     seoKey: 'alaverdiMonastery', contentKey: 'alaverdiMonastery',
