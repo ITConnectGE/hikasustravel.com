@@ -317,6 +317,12 @@ export const cities = [
 // ---------------------------------------------------------------------------
 export const sites = [
   {
+    slug: 'bodbe-monastery', name: 'Bodbe Monastery',
+    parentType: 'city', parent: 'sighnaghi', published: true,
+    seoKey: 'bodbeMonastery', contentKey: 'bodbeMonastery',
+    image: '/images/files/georgia-home.jpg',
+  },
+  {
     slug: 'batonistsikhe-fortress', name: 'Batonistsikhe Fortress',
     parentType: 'city', parent: 'telavi', published: true,
     seoKey: 'batonistsikheFortress', contentKey: 'batonistsikheFortress',
