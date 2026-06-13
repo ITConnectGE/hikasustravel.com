@@ -131,6 +131,22 @@ export default function SitePage() {
           <div ref={contentRef} dangerouslySetInnerHTML={{ __html: page.content }} />
         </FadeUp>
       </section>
+      {site.imageCredit && (
+        /* Hero photo attribution — required by the image's Creative Commons licence. */
+        <section className="page-items">
+          <p style={{ fontSize: '0.8rem', opacity: 0.65, textAlign: 'center', margin: 0 }}>
+            Photo:{' '}
+            <a href={site.imageCredit.sourceUrl} target="_blank" rel="noopener noreferrer">
+              {site.imageCredit.author}
+            </a>{' '}
+            via Wikimedia Commons,{' '}
+            <a href={site.imageCredit.licenseUrl} target="_blank" rel="noopener noreferrer">
+              {site.imageCredit.license}
+            </a>{' '}
+            (resized).
+          </p>
+        </section>
+      )}
       {faqItems.length > 0 && (
         <section className="page-items faq" id="faq-section">
           <Accordion items={faqItems} headingKey="faq.heroTitle" />

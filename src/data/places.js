@@ -320,13 +320,25 @@ export const sites = [
     slug: 'giant-plane-tree-telavi', name: 'The Giant Plane Tree of Telavi',
     parentType: 'city', parent: 'telavi', published: true,
     seoKey: 'giantPlaneTreeTelavi', contentKey: 'giantPlaneTreeTelavi',
-    image: '/images/files/georgia-home.jpg',
+    image: '/images/files/giant-plane-tree-telavi.jpg',
+    imageCredit: {
+      author: 'Maia Tsignadze',
+      sourceUrl: 'https://commons.wikimedia.org/wiki/File:%E1%83%AD%E1%83%90%E1%83%93%E1%83%90%E1%83%A0%E1%83%98_%E1%83%93%E1%83%90_%E1%83%97%E1%83%94%E1%83%9A%E1%83%90%E1%83%95%E1%83%98%E1%83%A1_%E1%83%AE%E1%83%94%E1%83%93%E1%83%98._%E1%83%9B%E1%83%90%E1%83%98%E1%83%90_%E1%83%AC%E1%83%98%E1%83%92%E1%83%9C%E1%83%90%E1%83%AB%E1%83%94.2021.jpg',
+      license: 'CC BY-SA 4.0',
+      licenseUrl: 'https://creativecommons.org/licenses/by-sa/4.0/',
+    },
   },
   {
     slug: 'erekle-ii-statue-telavi', name: 'Equestrian Statue of King Erekle II',
     parentType: 'city', parent: 'telavi', published: true,
     seoKey: 'erekleIIStatueTelavi', contentKey: 'erekleIIStatueTelavi',
-    image: '/images/files/georgia-home.jpg',
+    image: '/images/files/erekle-ii-statue-telavi.jpg',
+    imageCredit: {
+      author: 'MIKHEIL',
+      sourceUrl: 'https://commons.wikimedia.org/wiki/File:Irakli_II,_telavi.jpg',
+      license: 'CC BY-SA 3.0',
+      licenseUrl: 'https://creativecommons.org/licenses/by-sa/3.0/',
+    },
   },
   {
     slug: 'david-gareja-monastery', name: 'David Gareja',
@@ -344,7 +356,13 @@ export const sites = [
     slug: 'batonistsikhe-fortress', name: 'Batonistsikhe Fortress',
     parentType: 'city', parent: 'telavi', published: true,
     seoKey: 'batonistsikheFortress', contentKey: 'batonistsikheFortress',
-    image: '/images/files/georgia-home.jpg',
+    image: '/images/files/batonistsikhe-fortress-telavi.jpg',
+    imageCredit: {
+      author: 'shankar s.',
+      sourceUrl: 'https://commons.wikimedia.org/wiki/File:Remains_of_the_old_fortress_at_Telavi_(31134073816).jpg',
+      license: 'CC BY 2.0',
+      licenseUrl: 'https://creativecommons.org/licenses/by/2.0/',
+    },
   },
   {
     slug: 'alaverdi-monastery', name: 'Alaverdi Cathedral',
