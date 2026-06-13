@@ -317,6 +317,12 @@ export const cities = [
 // ---------------------------------------------------------------------------
 export const sites = [
   {
+    slug: 'alaverdi-monastery', name: 'Alaverdi Cathedral',
+    parentType: 'city', parent: 'telavi', published: true,
+    seoKey: 'alaverdiMonastery', contentKey: 'alaverdiMonastery',
+    image: '/images/files/georgia-home.jpg',
+  },
+  {
     slug: 'ali-and-nino-statue', name: 'Ali & Nino Statue',
     parentType: 'city', parent: 'batumi', published: true,
     seoKey: 'aliAndNinoStatue', contentKey: 'aliAndNinoStatue',
