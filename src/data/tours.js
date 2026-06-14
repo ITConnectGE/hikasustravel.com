@@ -364,6 +364,326 @@ export const tours = [
     ]
   },
   {
+    "slug": "savor-the-flavors-of-kakheti-3-day-wine-and-culture-adventure",
+    "type": "private",
+    "title": "Savor the Flavors of Kakheti: 3-Day Wine & Culture Tour",
+    "heroImage": "/images/files/kakheti-wine-tasting.jpg",
+    "tileImage": "/images/files/kakheti-wine-tasting.jpg",
+    "listingImage": "/images/files/kakheti-wine-tasting.jpg",
+    "days": 3,
+    "description": "Savor the Flavors of Kakheti is a private 3-day wine and culture tour from Tbilisi into Kakheti, Georgia's renowned wine region and the cradle of winemaking. Based in Telavi for two nights, you taste at both family-run wineries and established estates, see the ancient qvevri method that earned UNESCO recognition, and visit the cultural landmarks that define the region — the Tsinandali Estate, the medieval Gremi Fortress, hilltop Sighnaghi and the peaceful Bodbe Monastery. The pace is balanced and the experiences are hands-on, with traditional Georgian meals paired with local wines along the way. Hikasus Travel, a local team based in Georgia, handles the transport, hotels, guiding and day-to-day logistics, and because the tour is private the route and pace stay flexible — it works equally well as a focused standalone trip or as a short premium extension to a longer Georgia itinerary.",
+    "listingDescription": "A private 3-day wine and culture tour of Kakheti from Tbilisi — qvevri winemaking, up to 6 tastings, and cultural stops at Tsinandali, Gremi, Sighnaghi and Bodbe, with hotels, transport and a guide-driver handled for you.",
+    "heroH1": "Savor the Flavors of Kakheti: 3-Day Wine & Culture Tour",
+    "heroSubtitle": "A private 3-day route from Tbilisi into Kakheti — wine tastings at family wineries and estates, qvevri winemaking, and cultural stops at Tsinandali, Gremi, Sighnaghi and Bodbe, with two nights in Telavi.",
+    "seoTitle": "3-Day Kakheti Wine & Culture Tour",
+    "metaDescription": "Private 3-day Kakheti wine and culture tour from Tbilisi: qvevri winemaking, up to 6 wine tastings, Tsinandali, Khareba, Gremi, Sighnaghi and Bodbe — hotels, transport and guide included.",
+    "heroFacts": [
+      "3 days / 2 nights",
+      "Private tour",
+      "Starts & ends in Tbilisi",
+      "Main region: Kakheti",
+      "Two nights in Telavi",
+      "Hotels included",
+      "From €590 per person",
+      "Customizable route"
+    ],
+    "rightForYou": [
+      "Wine lovers and food-focused travelers who want to experience Kakheti, the cradle of wine",
+      "Couples, families and small private groups",
+      "Travelers short on time who want a focused introduction to Georgia's wine region",
+      "Anyone looking for a premium short program or an extension to a longer Georgia itinerary",
+      "Travelers who'd rather have hotels, transport, tastings and logistics handled for them"
+    ],
+    "faq": [
+      {
+        "title": "Can this tour be customized?",
+        "content": "<p>Yes. It's a private tour, so the route, pace, hotels, wineries and stops can be adjusted to suit you. Tell us what you have in mind and we'll shape the plan around it.</p>"
+      },
+      {
+        "title": "Is this a private tour?",
+        "content": "<p>Yes — it runs privately for your group with your own guide-driver. You won't share it with other travelers.</p>"
+      },
+      {
+        "title": "Are hotels included?",
+        "content": "<p>Yes. Two nights of hotels with breakfast are included, both in Telavi, in your choice of Classic, Mid-Range or Premium.</p>"
+      },
+      {
+        "title": "How many wine tastings are included?",
+        "content": "<p>Up to six wine tastings at a mix of family-run wineries and established estates, plus the qvevri winemaking experience and meals paired with local wines — one lunch and two dinners.</p>"
+      },
+      {
+        "title": "Is the tour suitable for families or non-drinkers?",
+        "content": "<p>Yes. The cultural sites, landscapes and Georgian cuisine make it rewarding even if you're not focused on wine, and the private, flexible format suits families — we can adjust the pace and stops.</p>"
+      },
+      {
+        "title": "Where does the tour start and end?",
+        "content": "<p>It starts and ends in Tbilisi, with two nights based in Telavi in the heart of Kakheti.</p>"
+      },
+      {
+        "title": "What about larger groups?",
+        "content": "<p>The prices shown are for up to four travelers. For groups of five, a vehicle upgrade is included to keep everyone comfortable — contact us for a tailored quote.</p>"
+      },
+      {
+        "title": "When is the best time for this tour?",
+        "content": "<p>Spring to autumn (roughly May to October) is the most comfortable season for Kakheti and its wineries; the grape harvest in autumn is a particularly special time to visit.</p>"
+      }
+    ],
+    "highlights": [
+      "A curated journey through Kakheti, Georgia's renowned wine region and the cradle of wine",
+      "Up to 6 wine tastings at family-run wineries and established wine estates",
+      "Authentic, UNESCO-listed Qvevri winemaking experiences",
+      "Wine tasting in Khareba Winery's underground tunnels",
+      "Cultural highlights including Tsinandali Estate, Telavi, Gremi Fortress, Sighnaghi and Bodbe Monastery",
+      "Traditional Georgian cuisine paired with regional wines",
+      "Scenic drives over the Gombori Pass and through the Alazani Valley",
+      "Comfortable stays in carefully selected hotels in the heart of Kakheti"
+    ],
+    "itinerary": [
+      {
+        "title": "Day 1: Tbilisi – Telavi – Tsinandali Estate – Wine Tasting",
+        "content": "<p>You leave Tbilisi behind and head east into Kakheti over the Gombori Pass, a scenic mountain road that makes a gentle introduction to the region's rural landscapes. Around midday you visit the Tsinandali Estate, a historic winery set within elegant gardens and known for its long-standing winemaking traditions. Afterward you stop at a carefully selected family-run winery for a traditional Georgian lunch paired with locally produced wines. In the evening you arrive in Telavi and check in to your hotel for the first of two nights.</p><ul><li>Morning pick-up from your hotel in Tbilisi;</li><li>Drive east into Kakheti over the scenic Gombori Pass;</li><li>Visit the historic Tsinandali Estate and its gardens;</li><li>Lunch and wine tasting at a family-run winery;</li><li>Arrive in Telavi for an overnight stay.</li><li><strong>Duration of the tour:</strong> 7-8 hours</li><li><strong>Driving duration:</strong> 2.5 hours</li></ul>"
+      },
+      {
+        "title": "Day 2: Telavi – Vardisubani – Khareba Winery – Gremi – Napareuli",
+        "content": "<p>A full day exploring traditional winemaking and local culture. You begin in the village of Vardisubani, where families still make wine in qvevris — large clay vessels buried underground, a method that goes back thousands of years — for a direct look at traditional Georgian winemaking. Next is Khareba Winery, known for the unique wine tunnels carved into the rock, a distinctive setting for a curated tasting. The historic Gremi Fortress follows, with views and a sense of Kakheti's past. The day ends in the village of Napareuli with a traditional dinner paired with locally produced wines, before you return to your hotel in Telavi.</p><ul><li>Qvevri winemaking experience in the village of Vardisubani;</li><li>Wine tasting in Khareba Winery's underground tunnels;</li><li>Explore the medieval Gremi Fortress;</li><li>Traditional dinner with homemade wine in Napareuli;</li><li>Return to your hotel in Telavi.</li><li><strong>Duration of the tour:</strong> 8-9 hours</li><li><strong>Driving duration:</strong> 2 hours</li></ul>"
+      },
+      {
+        "title": "Day 3: Telavi – Sighnaghi – Bodbe Monastery – Tbilisi",
+        "content": "<p>On your final day you take in a few of Kakheti's cultural highlights before returning to Tbilisi. You start at Batonistsikhe Castle, a former royal residence, and walk through Telavi, a town with a quiet charm and friendly pace. Next is a relaxed visit to Sighnaghi — known as the \"City of Love\" — a hilltop town of cobbled streets, colorful houses and panoramic views over the Alazani Valley. Nearby is the peaceful Bodbe Monastery, surrounded by cypress trees. To close the trip, you share a final dinner and wine tasting at a local winery before driving back to Tbilisi.</p><ul><li>Visit Batonistsikhe Castle and explore Telavi;</li><li>Walk through Sighnaghi, the City of Love, with views over the Alazani Valley;</li><li>Visit the peaceful Bodbe Monastery;</li><li>Final dinner and wine tasting at a local winery;</li><li>Return to Tbilisi.</li><li><strong>Duration of the tour:</strong> 10-11 hours</li><li><strong>Driving duration:</strong> 4 hours</li></ul>"
+      }
+    ],
+    "accommodations": [
+      {
+        "city": "Telavi (2 nights)",
+        "luxury": "Communal Hotel Telavi",
+        "midRange": "Boutique Hotel Kviria, Hotel Arge, Seventeen Rooms or similar",
+        "economy": "Villa Lapa, Chateau Orberi or similar"
+      }
+    ],
+    "pricing": [
+      {
+        "travelers": "Single Supplement",
+        "luxury": "€235",
+        "midRange": "€115",
+        "economy": "€80"
+      },
+      {
+        "travelers": "1",
+        "luxury": "€1695",
+        "midRange": "€1385",
+        "economy": "€1255"
+      },
+      {
+        "travelers": "2",
+        "luxury": "€1025",
+        "midRange": "€850",
+        "economy": "€770"
+      },
+      {
+        "travelers": "3",
+        "luxury": "€905",
+        "midRange": "€740",
+        "economy": "€665"
+      },
+      {
+        "travelers": "4",
+        "luxury": "€825",
+        "midRange": "€660",
+        "economy": "€590"
+      }
+    ],
+    "included": [
+      "Accommodation based on double/twin room sharing, with breakfast included;",
+      "Transfers as per the itinerary;",
+      "Entrance tickets;",
+      "Guide service;",
+      "6 wine tastings, 1 lunch and 2 dinners."
+    ],
+    "notIncluded": [
+      "Full board;",
+      "Additional hotel expenses;",
+      "Travel insurance."
+    ],
+    "gallery": [
+      {
+        "src": "/images/files/kakheti-route-map.jpg",
+        "caption": "Tour Route Map: Kakheti Wine & Culture Tour",
+        "description": "Illustrated route of the 3-day journey from Tbilisi through Kakheti via Telavi, Gremi, Sighnaghi and Bodbe"
+      },
+      {
+        "src": "/images/files/gombori-pass.jpg",
+        "caption": "The Gombori Pass",
+        "description": "Scenic mountain road from Tbilisi into Kakheti, crossed on the first day"
+      },
+      {
+        "src": "/images/files/tsinandali-estate.jpg",
+        "caption": "Tsinandali Estate",
+        "description": "Historic 19th-century estate, gardens and winery near Telavi"
+      },
+      {
+        "src": "/images/files/kakheti-wine-tasting.jpg",
+        "caption": "Georgian Wine Tasting in Kakheti",
+        "description": "Traditional Georgian wine and food paired in the Alazani Valley"
+      },
+      {
+        "src": "/images/files/Qvevri%20(Clay%20Vessels).jpg",
+        "caption": "Qvevri Winemaking in Vardisubani",
+        "description": "UNESCO-listed qvevri method, with wine fermented in clay vessels buried underground"
+      },
+      {
+        "src": "/images/files/gremi-archangels-complex.jpg",
+        "caption": "Gremi Fortress",
+        "description": "16th-century royal citadel and Church of the Archangels in Kakheti"
+      },
+      {
+        "src": "/images/files/kakheti-vineyard.jpg",
+        "caption": "Kakheti Vineyards",
+        "description": "Vineyards of the Alazani Valley, the heart of Georgia's wine region"
+      },
+      {
+        "src": "/images/files/sighnaghi-kakheti.jpg",
+        "caption": "Sighnaghi, the City of Love",
+        "description": "Hilltop walled town with views over the Alazani Valley, near Bodbe Monastery"
+      }
+    ],
+    "map": {
+      "center": [
+        45.3,
+        41.83
+      ],
+      "zoom": 8.3,
+      "markers": [
+        {
+          "coordinates": [
+            44.7925,
+            41.7099
+          ],
+          "title": "Tbilisi",
+          "description": "Georgia's capital and the start and end point of the tour."
+        },
+        {
+          "coordinates": [
+            45.2406,
+            41.8389
+          ],
+          "title": "Gombori Pass",
+          "description": "Scenic mountain pass on the road from Tbilisi into Kakheti."
+        },
+        {
+          "coordinates": [
+            45.5842,
+            41.9019
+          ],
+          "title": "Tsinandali Estate",
+          "description": "Historic 19th-century estate, gardens and winery near Telavi."
+        },
+        {
+          "coordinates": [
+            45.4733,
+            41.9167
+          ],
+          "title": "Telavi",
+          "description": "The main town of Kakheti and your base for two nights."
+        },
+        {
+          "coordinates": [
+            45.5,
+            41.9444
+          ],
+          "title": "Vardisubani",
+          "description": "Village known for traditional qvevri (clay vessel) winemaking."
+        },
+        {
+          "coordinates": [
+            45.7194,
+            41.9525
+          ],
+          "title": "Khareba Winery",
+          "description": "Winery famous for its underground wine tunnels, near Kvareli."
+        },
+        {
+          "coordinates": [
+            45.6086,
+            41.9783
+          ],
+          "title": "Gremi Fortress",
+          "description": "16th-century royal citadel and church complex of Kakheti."
+        },
+        {
+          "coordinates": [
+            45.3925,
+            41.9719
+          ],
+          "title": "Napareuli",
+          "description": "Wine-producing village in the Alazani Valley."
+        },
+        {
+          "coordinates": [
+            45.9239,
+            41.6203
+          ],
+          "title": "Sighnaghi",
+          "description": "Hilltop walled town known as the City of Love, above the Alazani Valley."
+        },
+        {
+          "coordinates": [
+            45.9181,
+            41.6322
+          ],
+          "title": "Bodbe Monastery",
+          "description": "Pilgrimage monastery near Sighnaghi, burial place of St. Nino."
+        }
+      ],
+      "routeCoordinates": [
+        [
+          44.7925,
+          41.7099
+        ],
+        [
+          45.2406,
+          41.8389
+        ],
+        [
+          45.5842,
+          41.9019
+        ],
+        [
+          45.4733,
+          41.9167
+        ],
+        [
+          45.5,
+          41.9444
+        ],
+        [
+          45.7194,
+          41.9525
+        ],
+        [
+          45.6086,
+          41.9783
+        ],
+        [
+          45.3925,
+          41.9719
+        ],
+        [
+          45.9239,
+          41.6203
+        ],
+        [
+          45.9181,
+          41.6322
+        ],
+        [
+          44.7925,
+          41.7099
+        ]
+      ]
+    },
+    "tourFormTitle": "Savor the Flavors of Kakheti – 3-Day Wine & Culture Tour"
+  },
+  {
     "slug": "experience-georgias-rich-culture-coastal-beauty-5-day-tour-from-tbilisi-to-batumi",
     "type": "private",
     "title": "5-Day Private Tour from Tbilisi to Batumi",
