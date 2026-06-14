@@ -614,6 +614,12 @@ export const sites = [
     image: '/images/files/georgia-home.jpg',
   },
   {
+    slug: 'svetitskhoveli-cathedral', name: 'Svetitskhoveli Cathedral',
+    parentType: 'city', parent: 'mtskheta', published: true,
+    seoKey: 'svetitskhoveliCathedral', contentKey: 'svetitskhoveliCathedral',
+    image: '/images/files/georgia-home.jpg',
+  },
+  {
     slug: 'russia-georgia-friendship-monument', name: 'Russia–Georgia Friendship Monument',
     parentType: 'city', parent: 'gudauri', published: true,
     seoKey: 'russiaGeorgiaFriendshipMonument', contentKey: 'russiaGeorgiaFriendshipMonument',
