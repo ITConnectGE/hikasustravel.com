@@ -231,9 +231,9 @@ function PrivateAccommodationsTable({ accommodations }) {
         {accommodations.map((row, i) => (
           <div key={i} className="pricing-grid-row">
             <div>{row.city}</div>
-            <div><HotelName name={row.luxury} onSelect={setSelectedHotel} /></div>
-            <div><HotelName name={row.midRange} onSelect={setSelectedHotel} /></div>
-            <div><HotelName name={row.economy} onSelect={setSelectedHotel} /></div>
+            <div><span className="td-hotel"><HotelName name={row.luxury} onSelect={setSelectedHotel} /></span></div>
+            <div><span className="td-hotel"><HotelName name={row.midRange} onSelect={setSelectedHotel} /></span></div>
+            <div><span className="td-hotel"><HotelName name={row.economy} onSelect={setSelectedHotel} /></span></div>
           </div>
         ))}
       </div>

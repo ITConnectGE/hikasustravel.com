@@ -3513,6 +3513,21 @@ select option:checked {
 
 .pricing-grid--private .pricing-grid-row > div {
   font-size: 13px;
+  /* Allow the flex cell to shrink below its content's intrinsic width so a
+     multi-option / long hotel name wraps instead of overflowing (and being
+     clipped by the grid's overflow:hidden). */
+  min-width: 0;
+}
+
+/* Each accommodation cell holds its hotel name(s) in one inline wrapper so the
+   flex cell has a single item whose text — including a comma-separated
+   "or similar" list — wraps naturally onto multiple lines and stays centered. */
+.pricing-grid--private .td-hotel {
+  display: inline-block;
+  max-width: 100%;
+  line-height: 1.5;
+  overflow-wrap: break-word;
+  word-break: normal;
 }
 
 /* Hotel link button (inside accommodations table) */
