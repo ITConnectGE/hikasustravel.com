@@ -623,6 +623,12 @@ export const sites = [
     image: '/images/files/georgia-home.jpg',
   },
   {
+    slug: 'gveleti-waterfalls', name: 'Gveleti Waterfalls',
+    parentType: 'city', parent: 'kazbegi-stepantsminda', published: true,
+    seoKey: 'gveletiWaterfalls', contentKey: 'gveletiWaterfalls',
+    image: '/images/files/georgia-home.jpg',
+  },
+  {
     slug: 'arsha-waterfall', name: 'Arsha Waterfall',
     parentType: 'city', parent: 'kazbegi-stepantsminda', published: true,
     seoKey: 'arshaWaterfall', contentKey: 'arshaWaterfall',
