@@ -4,13 +4,42 @@ import FadeUp from './FadeUp'
 import hotelData from '../../data/hotelData'
 import HotelModal from './HotelModal'
 
-function HotelName({ name, onSelect }) {
-  const data = hotelData[name]
-  if (!data) return <>{name}</>
+function HotelLink({ name, onSelect }) {
   return (
-    <button type="button" className="hotel-link" onClick={() => onSelect({ name, ...data })}>
+    <button type="button" className="hotel-link" onClick={() => onSelect({ name, ...hotelData[name] })}>
       {name}
     </button>
+  )
+}
+
+// A cell may hold a single hotel name (an exact hotelData key, which can itself
+// contain a comma — e.g. "Tsinandali Estate, A Radisson Collection Hotel"), or a
+// comma-separated list of options optionally ending in "or similar". We try an
+// exact match first so every existing single-hotel cell renders exactly as
+// before; only when that fails do we split a list and link the hotels we know.
+function HotelName({ name, onSelect }) {
+  if (!name) return null
+  if (hotelData[name]) return <HotelLink name={name} onSelect={onSelect} />
+
+  const trailingMatch = name.match(/\s+or similar\s*$/i)
+  const trailing = trailingMatch ? trailingMatch[0] : ''
+  const core = trailingMatch ? name.slice(0, trailingMatch.index) : name
+  const parts = core.split(',').map((p) => p.trim()).filter(Boolean)
+
+  // Only treat the cell as a linkable list when it has multiple parts and at
+  // least one is a known hotel; otherwise keep the original text verbatim.
+  if (parts.length <= 1 || !parts.some((p) => hotelData[p])) return <>{name}</>
+
+  return (
+    <>
+      {parts.map((part, j) => (
+        <span key={j}>
+          {j > 0 && ', '}
+          {hotelData[part] ? <HotelLink name={part} onSelect={onSelect} /> : part}
+        </span>
+      ))}
+      {trailing}
+    </>
   )
 }
 

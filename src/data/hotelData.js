@@ -593,6 +593,121 @@ const hotelData = {
       'Near trailheads for Koruldi Lakes & Ushguli',
     ],
   },
+
+  // --- Kakheti / Telavi hotels for the "Savor the Flavors of Kakheti" tour.
+  // Details verified from official sites and reputable booking sources; only
+  // confirmed facts are listed. Photos are pending for the text-only entries.
+  'Communal Hotel Telavi': {
+    images: [],
+    stars: null,
+    description: 'A boutique hotel set in a restored historic villa in central Telavi, with Moorish archways, a rooftop sunroom and a courtyard swimming pool. Part of the Communal Hotels family, it pairs preserved period architecture with a lively poolside bar and a relaxed, sociable atmosphere in the heart of the Kakheti wine region.',
+    amenities: [
+      { icon: 'pool', label: 'Courtyard Swimming Pool' },
+      { icon: 'restaurant', label: 'Restaurant & Bar' },
+      { icon: 'ac', label: 'Air Conditioning' },
+      { icon: 'wifi', label: 'Free Wi-Fi' },
+      { icon: 'parking', label: 'Free Parking' },
+      { icon: 'terrace', label: 'Rooftop Terrace' },
+    ],
+    locationHighlights: [
+      'Central Telavi, near cafés and shops',
+      '7-minute walk to Batonistsikhe Fortress',
+      '10-minute walk to Nadikvari Park',
+    ],
+  },
+  'Boutique Hotel Kviria': {
+    images: [],
+    stars: null,
+    description: 'A smart, eco-friendly boutique hotel that opened in 2021, blending Georgian tradition with contemporary design across 14 individually styled rooms. Kviria has its own winery and poolside bar, a landscaped garden and a seasonal outdoor pool, a short drive from central Telavi.',
+    amenities: [
+      { icon: 'wine', label: 'On-site Winery' },
+      { icon: 'pool', label: 'Outdoor Swimming Pool' },
+      { icon: 'garden', label: 'Garden' },
+      { icon: 'restaurant', label: 'Restaurant' },
+      { icon: 'breakfast', label: 'Breakfast Included' },
+      { icon: 'wifi', label: 'Free Wi-Fi' },
+      { icon: 'parking', label: 'Free Parking' },
+    ],
+    locationHighlights: [
+      '51 Gogebashvili Street, Telavi',
+      'About 10 minutes from downtown Telavi',
+      'Surrounded by Kakheti countryside',
+    ],
+  },
+  'Hotel Arge': {
+    images: [
+      { src: '/images/hotels/hotel-arge.jpg', alt: 'Hotel and Wine Cellar ARGE building exterior with garden in Telavi, Kakheti wine region, Georgia' },
+      { src: '/images/hotels/hotel-arge-2.jpg', alt: 'Hotel ARGE lobby and lounge area in Telavi, Georgia' },
+      { src: '/images/hotels/hotel-arge-3.jpg', alt: 'Hotel ARGE guest room with vineyard views in Kakheti, Georgia' },
+      { src: '/images/hotels/hotel-arge-4.jpg', alt: 'Hotel ARGE bathroom with modern amenities in Telavi, Georgia' },
+    ],
+    stars: null,
+    description: 'A vineyard hotel in the village of Ruispiri, a few kilometres from Telavi, welcoming guests since 2018. Hotel Arge has its own wine cellar for tastings, an outdoor pool and a garden restaurant, with most rooms opening onto balconies that look out over the Alazani Valley and the Greater Caucasus.',
+    amenities: [
+      { icon: 'wine', label: 'Wine Cellar & Tasting' },
+      { icon: 'pool', label: 'Swimming Pool' },
+      { icon: 'garden', label: 'Private Vineyards' },
+      { icon: 'restaurant', label: 'Garden Restaurant' },
+      { icon: 'wifi', label: 'Free Wi-Fi' },
+      { icon: 'parking', label: 'Free Parking' },
+    ],
+    locationHighlights: [
+      'Ruispiri village, about 3 km from Telavi',
+      'Views over the Alazani Valley & Caucasus Mountains',
+      'In the heart of the Kakheti wine country',
+    ],
+  },
+  'Seventeen Rooms': {
+    images: [],
+    stars: null,
+    description: 'An intimate hotel in central Telavi with seventeen comfortable rooms, a seasonal outdoor pool and a leafy garden. The on-site restaurant serves Georgian and European dishes alongside local Kakhetian wines, and the relaxed communal lounge makes it an easy base for exploring the old town.',
+    amenities: [
+      { icon: 'pool', label: 'Seasonal Outdoor Pool' },
+      { icon: 'garden', label: 'Garden' },
+      { icon: 'restaurant', label: 'Restaurant & Bar' },
+      { icon: 'ac', label: 'Air Conditioning' },
+      { icon: 'wifi', label: 'Free Wi-Fi' },
+      { icon: 'parking', label: 'Free Private Parking' },
+    ],
+    locationHighlights: [
+      'Leonidze Street, central Telavi',
+      '10-minute walk to the Erekle II Palace (Batonistsikhe)',
+      'Close to Telavi old town',
+    ],
+  },
+  'Villa Lapa': {
+    images: [],
+    stars: null,
+    description: 'A welcoming family-run villa in a quiet, green setting about five minutes from central Telavi. Rooms open onto balconies with sweeping views of the Alazani Valley and the Caucasus peaks, and guests can unwind by the outdoor pool, in the garden or on the terrace after a day in the vineyards.',
+    amenities: [
+      { icon: 'pool', label: 'Outdoor Swimming Pool' },
+      { icon: 'garden', label: 'Garden' },
+      { icon: 'restaurant', label: 'Restaurant & Bar' },
+      { icon: 'terrace', label: 'Terrace & Verandas' },
+      { icon: 'wifi', label: 'Free Wi-Fi' },
+      { icon: 'parking', label: 'Free Private Parking' },
+    ],
+    locationHighlights: [
+      'About 5 minutes from central Telavi',
+      'Balcony views of the Alazani Valley & Caucasus Mountains',
+      'Quiet, garden setting on the edge of town',
+    ],
+  },
+  'Chateau Orberi': {
+    images: [],
+    stars: null,
+    description: 'A small vineyard guesthouse in the village of Ikalto near Telavi, where the host family makes its own organic wine in a traditional marani. Surrounded by vines with a garden and outdoor pool, Chateau Orberi offers warm, home-style Kakhetian hospitality a short drive from the historic Ikalto Monastery.',
+    amenities: [
+      { icon: 'wine', label: 'Family Wine Cellar (Marani)' },
+      { icon: 'pool', label: 'Outdoor Swimming Pool' },
+      { icon: 'garden', label: 'Garden & Vineyards' },
+    ],
+    locationHighlights: [
+      'Ikalto village, a short drive from Telavi',
+      'Set among its own vineyards',
+      'Near the Ikalto Monastery & Academy',
+    ],
+  },
 }
 
 export default hotelData

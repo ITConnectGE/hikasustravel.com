@@ -3575,6 +3575,13 @@ select option:checked {
   border-radius: 12px 12px 0 0;
 }
 
+/* Hotels without photos: a slim branded header bar so the close button never
+   overlaps the title. Only applies when there are zero images. */
+.hotel-modal__hero--empty {
+  min-height: 52px;
+  background: linear-gradient(135deg, #2b4e47 0%, #3d6b61 100%);
+}
+
 .hotel-modal__gallery {
   display: flex;
   overflow-x: auto;

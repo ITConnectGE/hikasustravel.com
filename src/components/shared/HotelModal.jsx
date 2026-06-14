@@ -89,7 +89,7 @@ export default function HotelModal({ hotel, onClose }) {
   return createPortal(
     <div className="hotel-modal-backdrop" onClick={onClose}>
       <div className="hotel-modal" onClick={(e) => e.stopPropagation()} role="dialog" aria-modal="true" aria-label={hotel.name}>
-        <div className="hotel-modal__hero">
+        <div className={`hotel-modal__hero${images.length === 0 ? ' hotel-modal__hero--empty' : ''}`}>
           <div className="hotel-modal__gallery" ref={galleryRef}>
             {images.map((img, i) => (
               <img
