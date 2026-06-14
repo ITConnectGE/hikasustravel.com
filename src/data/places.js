@@ -608,6 +608,12 @@ export const sites = [
     image: '/images/files/georgia-home.jpg',
   },
   {
+    slug: 'shio-mgvime-monastery', name: 'Shio-Mgvime Monastery',
+    parentType: 'city', parent: 'mtskheta', published: true,
+    seoKey: 'shioMgvimeMonastery', contentKey: 'shioMgvimeMonastery',
+    image: '/images/files/georgia-home.jpg',
+  },
+  {
     slug: 'russia-georgia-friendship-monument', name: 'Russia–Georgia Friendship Monument',
     parentType: 'city', parent: 'gudauri', published: true,
     seoKey: 'russiaGeorgiaFriendshipMonument', contentKey: 'russiaGeorgiaFriendshipMonument',
