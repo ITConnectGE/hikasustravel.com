@@ -601,6 +601,12 @@ export const sites = [
     seoKey: 'jvariMonastery', contentKey: 'jvariMonastery',
     image: '/images/files/georgia-home.jpg',
   },
+  {
+    slug: 'russia-georgia-friendship-monument', name: 'Russia–Georgia Friendship Monument',
+    parentType: 'city', parent: 'gudauri', published: true,
+    seoKey: 'russiaGeorgiaFriendshipMonument', contentKey: 'russiaGeorgiaFriendshipMonument',
+    image: '/images/files/georgia-home.jpg',
+  },
   { slug: 'uplistsikhe-cave-town', name: 'Uplistsikhe Cave Town', parentType: 'region', parent: 'shida-kartli', published: false },
   {
     slug: 'prometheus-cave', name: 'Prometheus Cave',
