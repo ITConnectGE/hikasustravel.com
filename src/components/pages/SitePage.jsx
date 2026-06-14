@@ -59,7 +59,12 @@ export default function SitePage() {
           : { name: t('nav.regions'), to: '/georgia/regions' },
         {
           name: parent ? parent.name : site.parent,
-          to: site.parentType === 'city' ? cityPath(site.parent) : regionPath(site.parent),
+          // Only link the parent crumb when its landing page actually exists
+          // (is published). Region landings are currently unpublished, so their
+          // crumb renders as plain text rather than a dead 404 link.
+          to: parent && parent.published
+            ? (site.parentType === 'city' ? cityPath(site.parent) : regionPath(site.parent))
+            : undefined,
         },
         { name: site.name },
       ]
@@ -110,12 +115,15 @@ export default function SitePage() {
         primaryNode,
         {
           '@type': 'BreadcrumbList',
-          itemListElement: trail.map((c, i) => ({
-            '@type': 'ListItem',
-            position: i + 1,
-            name: c.name,
-            item: c.to ? `${SITE_URL}/${lang}${c.to === '/' ? '' : c.to}` : url,
-          })),
+          itemListElement: trail.map((c, i) => {
+            const li = { '@type': 'ListItem', position: i + 1, name: c.name }
+            // Linked crumbs carry their URL; the current page (last) uses its own
+            // URL; a non-linked intermediate crumb (e.g. an unpublished region)
+            // omits `item` rather than pointing at a dead/duplicate URL.
+            if (c.to) li.item = `${SITE_URL}/${lang}${c.to === '/' ? '' : c.to}`
+            else if (i === trail.length - 1) li.item = url
+            return li
+          }),
         },
         {
           '@type': 'FAQPage',
