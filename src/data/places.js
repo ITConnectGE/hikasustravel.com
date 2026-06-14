@@ -630,6 +630,12 @@ export const sites = [
     image: '/images/files/georgia-home.jpg',
   },
   {
+    slug: 'gergeti-glacier', name: 'Gergeti Glacier',
+    parentType: 'city', parent: 'kazbegi-stepantsminda', published: true,
+    seoKey: 'gergetiGlacier', contentKey: 'gergetiGlacier',
+    image: '/images/files/georgia-home.jpg',
+  },
+  {
     slug: 'batumi-botanical-garden', name: 'Batumi Botanical Garden',
     parentType: 'city', parent: 'batumi', published: true,
     seoKey: 'batumiBotanicalGarden', contentKey: 'batumiBotanicalGarden',
