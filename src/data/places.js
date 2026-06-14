@@ -664,6 +664,12 @@ export const sites = [
     image: '/images/files/georgia-home.jpg',
   },
   {
+    slug: 'truso-valley', name: 'Truso Valley',
+    parentType: 'city', parent: 'kazbegi-stepantsminda', published: true,
+    seoKey: 'trusoValley', contentKey: 'trusoValley',
+    image: '/images/files/georgia-home.jpg',
+  },
+  {
     slug: 'arsha-waterfall', name: 'Arsha Waterfall',
     parentType: 'city', parent: 'kazbegi-stepantsminda', published: true,
     seoKey: 'arshaWaterfall', contentKey: 'arshaWaterfall',
