@@ -16,15 +16,15 @@ import NotFoundPage from './NotFoundPage'
 const SITE_URL = 'https://www.hikasustravel.com'
 
 /**
- * Generic tourist-site detail page. Serves both nesting patterns:
- *   /georgia/:citySlug/places-to-visit/:siteSlug
- *   /georgia/regions/:regionSlug/places-to-visit/:siteSlug
- * The URL's parent must match the site's registry parent, otherwise (or until
- * the site is published) it renders the 404 page.
+ * Generic tourist-site detail page. Both city- and region-parented sites now
+ * live at /georgia/<parent>/<slug> and arrive via the /georgia/:citySlug/:sub
+ * dispatcher (slug in :sub, parent slug in :citySlug). The URL's parent must
+ * match the site's registry parent, otherwise (or until the site is published)
+ * it renders the 404 page.
  */
 export default function SitePage() {
-  // City-parented sites arrive via the /georgia/:citySlug/:sub dispatcher (slug
-  // in :sub); region-parented sites use /georgia/regions/:regionSlug/:siteSlug.
+  // Parent slug comes in as :citySlug for both parent types now; :regionSlug is
+  // kept for backwards-compatibility with any legacy region URL shape.
   const { siteSlug: siteSlugParam, sub, citySlug, regionSlug } = useParams()
   const siteSlug = siteSlugParam || sub
   const site = getSite(siteSlug)
@@ -34,11 +34,10 @@ export default function SitePage() {
   const navigate = useNavigate()
   const contentRef = useRef(null)
 
-  // The site is only valid at the URL whose parent matches its registry parent.
-  const parentMatches =
-    site &&
-    ((site.parentType === 'city' && citySlug === site.parent) ||
-      (site.parentType === 'region' && regionSlug === site.parent))
+  // The site is only valid at the URL whose parent segment matches its registry
+  // parent (region slug now arrives via :citySlug, like a city slug).
+  const parentSlug = citySlug || regionSlug
+  const parentMatches = site && parentSlug === site.parent
   const published = site && site.published && parentMatches
 
   const contentKey = published ? site.contentKey : null

@@ -6,12 +6,14 @@ import NotFoundPage from './NotFoundPage'
 
 /**
  * Dispatcher for /georgia/:citySlug/:sub. This single dynamic route is shared by
- * two page types that have the same URL shape:
+ * three page types that have the same URL shape (the first segment is a city OR
+ * a region slug — the two namespaces are disjoint):
  *   - the city's things-to-do guide  (sub === things-to-do-in-<citySlug>)
- *   - a city-parented tourist site   (sub === a published site's slug)
+ *   - a city-parented tourist site   (citySlug is a city,   sub === its slug)
+ *   - a region-parented tourist site (citySlug is a region, sub === its slug)
  * Anything else renders the 404 page. The chosen child re-reads the params
  * itself (ThingsToDoCityPage aliases :sub as its ttd segment; SitePage reads
- * the site slug from :sub).
+ * the site slug from :sub and matches its parent against :citySlug).
  */
 export default function CitySubPage() {
   const { citySlug, sub } = useParams()
@@ -21,8 +23,10 @@ export default function CitySubPage() {
     return <ThingsToDoCityPage />
   }
 
+  // A site lives at /georgia/<parent>/<slug> whether its parent is a city or a
+  // region, so match on parent === citySlug for either parentType.
   const site = getSite(sub)
-  if (site && site.parentType === 'city' && site.parent === citySlug) {
+  if (site && site.parent === citySlug) {
     return <SitePage />
   }
 

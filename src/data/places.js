@@ -13,8 +13,9 @@
  *   Region:     /georgia/regions/<slug>
  *   City:       /georgia/<slug>
  *   Things to do: /georgia/<city>/things-to-do-in-<city>
- *   Site:       /georgia/<city>/<slug>   (city-parented)
- *               /georgia/regions/<region>/<slug>   (region-parented)
+ *   Site:       /georgia/<city>/<slug>     (city-parented)
+ *               /georgia/<region>/<slug>   (region-parented; the region slug
+ *               sits at the same level as a city slug — namespaces are disjoint)
  *
  * The previous scheme lived under /destinations/... and the city/things-to-do
  * pages under /destinations/cities/<slug> and /things-to-do-in-<slug>; those
@@ -815,12 +816,12 @@ export const placesHubPath = '/georgia/places-to-visit'
 export const regionPath = (slug) => `/georgia/regions/${slug}`
 export const cityPath = (slug) => `/georgia/${slug}`
 export const thingsToDoPath = (citySlug) => `/georgia/${citySlug}/things-to-do-in-${citySlug}`
-export const sitePath = (site) => {
-  const base = site.parentType === 'city'
-    ? `/georgia/${site.parent}`
-    : `/georgia/regions/${site.parent}`
-  return `${base}/${site.slug}`
-}
+// Both city- and region-parented sites live directly under /georgia/<parent>/<slug>.
+// For region-parented sites the region slug sits at the same level as a city slug
+// — region and city slug namespaces are disjoint, so there is no collision. The
+// region LANDING pages stay at /georgia/regions/<slug>; old region-site URLs
+// (/georgia/regions/<region>/<slug>) 301-redirect here (see legacyRedirects()).
+export const sitePath = (site) => `/georgia/${site.parent}/${site.slug}`
 
 // ---------------------------------------------------------------------------
 // Build-pipeline helpers: published destination detail pages, plus the legacy
@@ -860,6 +861,11 @@ export function legacyRedirects() {
     if (c.thingsToDo) out.push({ from: `things-to-do-in-${c.slug}`, to: cleanPath(thingsToDoPath(c.slug)) })
   }
   for (const r of regions) if (r.published) out.push({ from: `destinations/regions/${r.slug}`, to: cleanPath(regionPath(r.slug)) })
+  // Region-parented Places to Visit dropped the /regions/ segment:
+  //   /georgia/regions/<region>/<slug>  ->  /georgia/<region>/<slug>
+  for (const s of sites) if (s.published && s.parentType === 'region') {
+    out.push({ from: `georgia/regions/${s.parent}/${s.slug}`, to: cleanPath(sitePath(s)) })
+  }
   return out
 }
 

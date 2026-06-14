@@ -12,10 +12,9 @@ import DestinationsPage from './components/pages/DestinationsPage'
 import { RegionsHubPage, CitiesHubPage, PlacesToVisitHubPage } from './components/pages/DestinationHubs'
 import CityPage from './components/pages/CityPage'
 import RegionPage from './components/pages/RegionPage'
-import SitePage from './components/pages/SitePage'
 import CitySubPage from './components/pages/CitySubPage'
 import BorderCrossingPage from './components/pages/BorderCrossingPage'
-import { DestinationsRedirect, ThingsToDoRedirect } from './components/pages/LegacyRedirects'
+import { DestinationsRedirect, ThingsToDoRedirect, RegionSiteRedirect } from './components/pages/LegacyRedirects'
 import { cities } from './data/places'
 import PrivateToursPage from './components/pages/PrivateToursPage'
 import GroupToursPage from './components/pages/GroupToursPage'
@@ -55,7 +54,10 @@ export default function App() {
           <Route path="georgia/border-crossings" element={<BorderCrossingPage overview />} />
           <Route path="georgia/border-crossings/:borderSlug" element={<BorderCrossingPage />} />
           <Route path="georgia/regions/:regionSlug" element={<RegionPage />} />
-          <Route path="georgia/regions/:regionSlug/:siteSlug" element={<SitePage />} />
+          {/* Region-parented Places to Visit moved to /georgia/<region>/<slug>
+              (handled by the :citySlug/:sub dispatcher below). The old
+              /regions/<region>/<slug> URL now 301-redirects to the new one. */}
+          <Route path="georgia/regions/:regionSlug/:siteSlug" element={<RegionSiteRedirect />} />
           <Route path="georgia/:citySlug" element={<CityPage />} />
           {/* /georgia/<city>/<sub> — one dynamic route shared by the city's
               things-to-do guide (sub === things-to-do-in-<city>) and its tourist

@@ -34,3 +34,12 @@ export function ThingsToDoRedirect({ citySlug }) {
   const { lang } = useParams()
   return <Navigate to={`/${lang}/georgia/${citySlug}/things-to-do-in-${citySlug}`} replace />
 }
+
+// Region-parented Places to Visit lost the /regions/ segment. The old
+// /:lang/georgia/regions/<region>/<site> URL redirects to its new home at
+// /:lang/georgia/<region>/<site> (the SPA mirror of the static redirect stubs
+// emitted by scripts/prerender.js). Region LANDING pages keep /regions/.
+export function RegionSiteRedirect() {
+  const { lang, regionSlug, siteSlug } = useParams()
+  return <Navigate to={`/${lang}/georgia/${regionSlug}/${siteSlug}`} replace />
+}
