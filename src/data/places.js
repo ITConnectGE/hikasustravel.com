@@ -595,7 +595,12 @@ export const sites = [
     image: '/images/files/georgia-home.jpg',
   },
   { slug: 'narikala-fortress', name: 'Narikala Fortress', parentType: 'city', parent: 'tbilisi', published: false },
-  { slug: 'jvari-monastery', name: 'Jvari Monastery', parentType: 'city', parent: 'mtskheta', published: false },
+  {
+    slug: 'jvari-monastery', name: 'Jvari Monastery',
+    parentType: 'city', parent: 'mtskheta', published: true,
+    seoKey: 'jvariMonastery', contentKey: 'jvariMonastery',
+    image: '/images/files/georgia-home.jpg',
+  },
   { slug: 'uplistsikhe-cave-town', name: 'Uplistsikhe Cave Town', parentType: 'region', parent: 'shida-kartli', published: false },
   {
     slug: 'prometheus-cave', name: 'Prometheus Cave',
