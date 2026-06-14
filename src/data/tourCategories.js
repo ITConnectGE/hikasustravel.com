@@ -16,7 +16,6 @@ export const CATEGORY_IDS = [
   'adventure-hiking',
   'nature-mountain',
   'western-georgia-black-sea',
-  'grand-tours',
 ]
 
 // Stable id -> ui.json translation key (visible label per language).
@@ -27,7 +26,6 @@ export const CATEGORY_LABEL_KEYS = {
   'adventure-hiking': 'tour.catAdventureHiking',
   'nature-mountain': 'tour.catNatureMountain',
   'western-georgia-black-sea': 'tour.catWesternBlackSea',
-  'grand-tours': 'tour.catGrandTours',
 }
 
 // Per-tour assignments, keyed by stable slug (confirmed with the owner).
@@ -43,9 +41,9 @@ export const PRIVATE_TOUR_CATEGORIES = {
   'wander-wonder-and-wine-9-days-of-georgias-best': ['wine-food', 'cultural-heritage', 'nature-mountain'],
   'wine-wonders-and-the-caucasus-a-9-day-adventure-in-georgia': ['wine-food', 'nature-mountain', 'adventure-hiking'],
   'georgia-in-10-days-where-every-corner-has-a-story-and-every-meal-is-a-celebration': ['cultural-heritage', 'wine-food'],
-  'georgias-wonders-11-day-grand-tour-from-kutaisi-to-kazbegi-and-batumi': ['grand-tours', 'nature-mountain', 'western-georgia-black-sea'],
-  '12-day-ultimate-georgia-adventure-tour-tbilisi-kazbegi-mestia-kutaisi-batumi': ['grand-tours', 'nature-mountain', 'adventure-hiking', 'western-georgia-black-sea'],
-  'grand-georgia-adventure-13-day-cultural-and-scenic-journey': ['grand-tours', 'adventure-hiking', 'nature-mountain', 'cultural-heritage'],
-  'ultimate-15-day-georgia-tour-from-tbilisi-to-svaneti--wine-culture-and-natural-beauty': ['grand-tours', 'nature-mountain', 'wine-food', 'cultural-heritage'],
-  'georgia-on-my-mind-20-days-of-tasting-trekking-and-total-relaxation': ['grand-tours', 'wine-food', 'adventure-hiking', 'nature-mountain'],
+  'georgias-wonders-11-day-grand-tour-from-kutaisi-to-kazbegi-and-batumi': ['nature-mountain', 'western-georgia-black-sea'],
+  '12-day-ultimate-georgia-adventure-tour-tbilisi-kazbegi-mestia-kutaisi-batumi': ['nature-mountain', 'adventure-hiking', 'western-georgia-black-sea'],
+  'grand-georgia-adventure-13-day-cultural-and-scenic-journey': ['adventure-hiking', 'nature-mountain', 'cultural-heritage'],
+  'ultimate-15-day-georgia-tour-from-tbilisi-to-svaneti--wine-culture-and-natural-beauty': ['nature-mountain', 'wine-food', 'cultural-heritage'],
+  'georgia-on-my-mind-20-days-of-tasting-trekking-and-total-relaxation': ['wine-food', 'adventure-hiking', 'nature-mountain'],
 }
