@@ -317,6 +317,12 @@ export const cities = [
 // ---------------------------------------------------------------------------
 export const sites = [
   {
+    slug: 'ujarma-fortress', name: 'Ujarma Fortress',
+    parentType: 'region', parent: 'kakheti', published: true,
+    seoKey: 'ujarmaFortress', contentKey: 'ujarmaFortress',
+    image: '/images/files/georgia-home.jpg',
+  },
+  {
     slug: 'tsinandali-estate', name: 'Tsinandali Estate',
     parentType: 'city', parent: 'telavi', published: true,
     seoKey: 'tsinandaliEstate', contentKey: 'tsinandaliEstate',
@@ -401,6 +407,12 @@ export const sites = [
     parentType: 'region', parent: 'kakheti', published: true,
     seoKey: 'gomboriPass', contentKey: 'gomboriPass',
     image: '/images/files/gombori-pass.jpg',
+  },
+  {
+    slug: 'ujarma-fortress', name: 'Ujarma Fortress',
+    parentType: 'region', parent: 'kakheti', published: true,
+    seoKey: 'ujarmaFortress', contentKey: 'ujarmaFortress',
+    image: '/images/files/georgia-home.jpg',
   },
   {
     slug: 'giant-plane-tree-telavi', name: 'The Giant Plane Tree of Telavi',
