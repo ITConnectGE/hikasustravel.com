@@ -616,7 +616,12 @@ export const sites = [
     image: '/images/files/georgia-home.jpg',
   },
   { slug: 'vardzia', name: 'Vardzia', parentType: 'region', parent: 'samtskhe-javakheti', published: false },
-  { slug: 'gergeti-trinity-church', name: 'Gergeti Trinity Church', parentType: 'region', parent: 'mtskheta-mtianeti', published: false },
+  {
+    slug: 'gergeti-trinity-church', name: 'Gergeti Trinity Church',
+    parentType: 'city', parent: 'kazbegi-stepantsminda', published: true,
+    seoKey: 'gergetiTrinityChurch', contentKey: 'gergetiTrinityChurch',
+    image: '/images/files/georgia-home.jpg',
+  },
   {
     slug: 'arsha-waterfall', name: 'Arsha Waterfall',
     parentType: 'city', parent: 'kazbegi-stepantsminda', published: true,
