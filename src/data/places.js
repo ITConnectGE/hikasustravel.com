@@ -379,6 +379,12 @@ export const sites = [
     image: '/images/files/georgia-home.jpg',
   },
   {
+    slug: 'vashlovani-national-park', name: 'Vashlovani National Park',
+    parentType: 'region', parent: 'kakheti', published: true,
+    seoKey: 'vashlovaniNationalPark', contentKey: 'vashlovaniNationalPark',
+    image: '/images/files/georgia-home.jpg',
+  },
+  {
     slug: 'kvareli-wine-cave-khareba', name: 'Kvareli Wine Cave (Khareba)',
     parentType: 'city', parent: 'kvareli', published: true,
     seoKey: 'kvareliWineCave', contentKey: 'kvareliWineCave',
