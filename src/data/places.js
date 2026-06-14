@@ -624,6 +624,12 @@ export const sites = [
     image: '/images/files/georgia-home.jpg',
   },
   {
+    slug: 'elia-hill-kazbegi', name: 'Elia Hill (St. Elias Church)',
+    parentType: 'city', parent: 'kazbegi-stepantsminda', published: true,
+    seoKey: 'eliaHill', contentKey: 'eliaHill',
+    image: '/images/files/georgia-home.jpg',
+  },
+  {
     slug: 'batumi-botanical-garden', name: 'Batumi Botanical Garden',
     parentType: 'city', parent: 'batumi', published: true,
     seoKey: 'batumiBotanicalGarden', contentKey: 'batumiBotanicalGarden',
