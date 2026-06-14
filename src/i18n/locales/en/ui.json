@@ -208,13 +208,9 @@
   "nav.borderCrossings": "Border Crossings",
   "breadcrumb.home": "Home",
   "destinations.comingSoon": "Guide coming soon",
-
   "city.thingsToDoCta": "Things to do in {city}",
-
   "destinations.exploreRegion": "Explore region",
-
   "destinations.exploreCity": "Explore city",
-
   "destinations.explorePlace": "Read more",
   "destinations.featuredCities": "Featured city guides",
   "tour.requestPrice": "Request Availability & Price",
@@ -230,5 +226,14 @@
   "blog.article2.desc": "Learn 25 essential Georgian words and phrases — hello, thank you, cheers, and more — with simple pronunciation, for travelers to Georgia (the country).",
   "page.publishedOn": "Published",
   "footer.visa": "Visa & Entry Requirements",
-  "footer.airport": "Kutaisi Airport (KUT)"
+  "footer.airport": "Kutaisi Airport (KUT)",
+  "tour.toursFrom": "Tours from",
+  "tour.tourCategories": "Tour Categories",
+  "tour.catAll": "All Categories",
+  "tour.catCulturalHeritage": "Cultural & Heritage",
+  "tour.catWineFood": "Wine & Food",
+  "tour.catAdventureHiking": "Adventure & Hiking",
+  "tour.catNatureMountain": "Nature & Mountains",
+  "tour.catWesternBlackSea": "Western Georgia & Black Sea",
+  "tour.catGrandTours": "Grand Tours"
 }

@@ -2,6 +2,7 @@ import { useContext, useEffect, useState, useMemo } from 'react'
 import ToursHero from '../shared/ToursHero'
 import TourCard from '../shared/TourCard'
 import { tours } from '../../data/tours'
+import { PRIVATE_TOUR_CATEGORIES, CATEGORY_IDS, CATEGORY_LABEL_KEYS } from '../../data/tourCategories'
 import useT from '../../i18n/useT'
 import useLang from '../../i18n/useLang'
 import { I18nContext } from '../../i18n/I18nProvider'
@@ -16,8 +17,13 @@ export default function PrivateToursPage() {
   const [search, setSearch] = useState('')
   const [sort, setSort] = useState('')
   const [origin, setOrigin] = useState('')
+  const [category, setCategory] = useState('all')
   const seo = getSEO('privateTours', lang)
   useSEO({ ...seo, lang, path: 'private-tours', image: '/images/files/georgia-tour-01.jpg' })
+
+  // Visible category labels are looked up per locale; filtering still uses the
+  // stable ids above. "all" is the default ("All Categories" = no restriction).
+  const categoryOptions = CATEGORY_IDS.map((id) => ({ value: id, label: t(CATEGORY_LABEL_KEYS[id]) }))
 
   useEffect(() => {
     if (!tourTranslations) loadTourTranslations()
@@ -35,6 +41,10 @@ export default function PrivateToursPage() {
 
     if (origin === 'kutaisi') list = list.filter((tour) => kutaisiSlugs.includes(tour.slug))
     else if (origin === 'tbilisi') list = list.filter((tour) => !kutaisiSlugs.includes(tour.slug))
+
+    if (category && category !== 'all') {
+      list = list.filter((tour) => (PRIVATE_TOUR_CATEGORIES[tour.slug] || []).includes(category))
+    }
 
     if (search.trim()) {
       const q = search.toLowerCase()
@@ -56,7 +66,7 @@ export default function PrivateToursPage() {
     })
 
     return list
-  }, [privateTours, tourTranslations, search, sort, origin])
+  }, [privateTours, tourTranslations, search, sort, origin, category])
 
   return (
     <>
@@ -71,6 +81,9 @@ export default function PrivateToursPage() {
         onSortChange={setSort}
         originValue={origin}
         onOriginChange={setOrigin}
+        categoryValue={category}
+        onCategoryChange={setCategory}
+        categoryOptions={categoryOptions}
       />
 
       <section className="tour-listing" aria-label={t('tour.privateTours')}>

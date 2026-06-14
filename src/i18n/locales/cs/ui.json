@@ -208,13 +208,9 @@
   "nav.borderCrossings": "Hraniční přechody",
   "breadcrumb.home": "Domů",
   "destinations.comingSoon": "Průvodce již brzy",
-
   "city.thingsToDoCta": "Co dělat v {city}",
-
   "destinations.exploreRegion": "Prozkoumat region",
-
   "destinations.exploreCity": "Prozkoumat město",
-
   "destinations.explorePlace": "Číst více",
   "destinations.featuredCities": "Vybraní průvodci městy",
   "tour.requestPrice": "Zjistit dostupnost a cenu",
@@ -230,5 +226,14 @@
   "blog.article2.desc": "Naučte se 25 základních gruzínských slov a frází — ahoj, děkuji, na zdraví a další — s jednoduchou výslovností, pro cestovatele do Gruzie (země).",
   "page.publishedOn": "Zveřejněno",
   "footer.visa": "Vízum a vstup",
-  "footer.airport": "Letiště Kutaisi (KUT)"
+  "footer.airport": "Letiště Kutaisi (KUT)",
+  "tour.toursFrom": "Zájezdy z",
+  "tour.tourCategories": "Kategorie zájezdů",
+  "tour.catAll": "Všechny kategorie",
+  "tour.catCulturalHeritage": "Kultura a dědictví",
+  "tour.catWineFood": "Víno a gastronomie",
+  "tour.catAdventureHiking": "Dobrodružství a turistika",
+  "tour.catNatureMountain": "Příroda a hory",
+  "tour.catWesternBlackSea": "Západní Gruzie a Černé moře",
+  "tour.catGrandTours": "Velké okruhy"
 }

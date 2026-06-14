@@ -208,13 +208,9 @@
   "nav.borderCrossings": "Grensovergangen",
   "breadcrumb.home": "Home",
   "destinations.comingSoon": "Gids binnenkort beschikbaar",
-
   "city.thingsToDoCta": "Wat te doen in {city}",
-
   "destinations.exploreRegion": "Ontdek de regio",
-
   "destinations.exploreCity": "Ontdek de stad",
-
   "destinations.explorePlace": "Lees meer",
   "destinations.featuredCities": "Uitgelichte stadsgidsen",
   "tour.requestPrice": "Vraag beschikbaarheid & prijs op",
@@ -230,5 +226,14 @@
   "blog.article2.desc": "Leer 25 essentiële Georgische woorden en zinnen — hallo, dank je, proost en meer — met eenvoudige uitspraak, voor reizigers naar Georgië (het land).",
   "page.publishedOn": "Gepubliceerd",
   "footer.visa": "Visum & inreis",
-  "footer.airport": "Luchthaven Kutaisi (KUT)"
+  "footer.airport": "Luchthaven Kutaisi (KUT)",
+  "tour.toursFrom": "Reizen vanuit",
+  "tour.tourCategories": "Reiscategorieën",
+  "tour.catAll": "Alle categorieën",
+  "tour.catCulturalHeritage": "Cultuur & erfgoed",
+  "tour.catWineFood": "Wijn & gastronomie",
+  "tour.catAdventureHiking": "Avontuur & wandelen",
+  "tour.catNatureMountain": "Natuur & bergen",
+  "tour.catWesternBlackSea": "West-Georgië & Zwarte Zee",
+  "tour.catGrandTours": "Grote rondreizen"
 }

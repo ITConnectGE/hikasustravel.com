@@ -208,13 +208,9 @@
   "nav.borderCrossings": "Przejścia graniczne",
   "breadcrumb.home": "Strona główna",
   "destinations.comingSoon": "Przewodnik wkrótce",
-
   "city.thingsToDoCta": "Atrakcje w {city}",
-
   "destinations.exploreRegion": "Poznaj region",
-
   "destinations.exploreCity": "Poznaj miasto",
-
   "destinations.explorePlace": "Czytaj więcej",
   "destinations.featuredCities": "Polecane przewodniki po miastach",
   "tour.requestPrice": "Zapytaj o dostępność i cenę",
@@ -230,5 +226,14 @@
   "blog.article2.desc": "Poznaj 25 niezbędnych gruzińskich słów i zwrotów — dzień dobry, dziękuję, na zdrowie i więcej — z prostą wymową, dla podróżnych do Gruzji (kraju).",
   "page.publishedOn": "Opublikowano",
   "footer.visa": "Wiza i wjazd",
-  "footer.airport": "Lotnisko w Kutaisi (KUT)"
+  "footer.airport": "Lotnisko w Kutaisi (KUT)",
+  "tour.toursFrom": "Wycieczki z",
+  "tour.tourCategories": "Kategorie wycieczek",
+  "tour.catAll": "Wszystkie kategorie",
+  "tour.catCulturalHeritage": "Kultura i dziedzictwo",
+  "tour.catWineFood": "Wino i kuchnia",
+  "tour.catAdventureHiking": "Przygoda i wędrówki",
+  "tour.catNatureMountain": "Natura i góry",
+  "tour.catWesternBlackSea": "Zachodnia Gruzja i Morze Czarne",
+  "tour.catGrandTours": "Wielkie wyprawy"
 }

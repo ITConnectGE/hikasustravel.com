@@ -208,13 +208,9 @@
   "nav.borderCrossings": "Pasos fronterizos",
   "breadcrumb.home": "Inicio",
   "destinations.comingSoon": "Guía próximamente",
-
   "city.thingsToDoCta": "Qué hacer en {city}",
-
   "destinations.exploreRegion": "Explorar la región",
-
   "destinations.exploreCity": "Explorar la ciudad",
-
   "destinations.explorePlace": "Leer más",
   "destinations.featuredCities": "Guías de ciudades destacadas",
   "tour.requestPrice": "Consultar disponibilidad y precio",
@@ -230,5 +226,14 @@
   "blog.article2.desc": "Aprende 25 palabras y frases georgianas esenciales — hola, gracias, salud y más — con pronunciación sencilla, para viajeros a Georgia (el país).",
   "page.publishedOn": "Publicado",
   "footer.visa": "Visado y requisitos de entrada",
-  "footer.airport": "Aeropuerto de Kutaisi (KUT)"
+  "footer.airport": "Aeropuerto de Kutaisi (KUT)",
+  "tour.toursFrom": "Tours desde",
+  "tour.tourCategories": "Categorías de tours",
+  "tour.catAll": "Todas las categorías",
+  "tour.catCulturalHeritage": "Cultura y patrimonio",
+  "tour.catWineFood": "Vino y gastronomía",
+  "tour.catAdventureHiking": "Aventura y senderismo",
+  "tour.catNatureMountain": "Naturaleza y montañas",
+  "tour.catWesternBlackSea": "Georgia occidental y mar Negro",
+  "tour.catGrandTours": "Grandes tours"
 }

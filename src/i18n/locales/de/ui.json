@@ -208,13 +208,9 @@
   "nav.borderCrossings": "Grenzübergänge",
   "breadcrumb.home": "Startseite",
   "destinations.comingSoon": "Reiseführer folgt in Kürze",
-
   "city.thingsToDoCta": "Aktivitäten in {city}",
-
   "destinations.exploreRegion": "Region entdecken",
-
   "destinations.exploreCity": "Stadt entdecken",
-
   "destinations.explorePlace": "Mehr erfahren",
   "destinations.featuredCities": "Ausgewählte Stadtführer",
   "tour.requestPrice": "Verfügbarkeit & Preis anfragen",
@@ -230,5 +226,14 @@
   "blog.article2.desc": "Lernen Sie 25 wichtige georgische Wörter und Sätze — Hallo, Danke, Prost und mehr — mit einfacher Aussprache, für Reisende nach Georgien (das Land).",
   "page.publishedOn": "Veröffentlicht",
   "footer.visa": "Visum & Einreise",
-  "footer.airport": "Flughafen Kutaisi (KUT)"
+  "footer.airport": "Flughafen Kutaisi (KUT)",
+  "tour.toursFrom": "Touren ab",
+  "tour.tourCategories": "Tour-Kategorien",
+  "tour.catAll": "Alle Kategorien",
+  "tour.catCulturalHeritage": "Kultur & Kulturerbe",
+  "tour.catWineFood": "Wein & Kulinarik",
+  "tour.catAdventureHiking": "Abenteuer & Wandern",
+  "tour.catNatureMountain": "Natur & Berge",
+  "tour.catWesternBlackSea": "Westgeorgien & Schwarzes Meer",
+  "tour.catGrandTours": "Große Rundreisen"
 }
