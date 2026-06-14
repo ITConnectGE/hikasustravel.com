@@ -629,6 +629,12 @@ export const sites = [
     image: '/images/files/georgia-home.jpg',
   },
   {
+    slug: 'juta', name: 'Juta & the Chaukhi Massif',
+    parentType: 'city', parent: 'kazbegi-stepantsminda', published: true,
+    seoKey: 'juta', contentKey: 'juta',
+    image: '/images/files/georgia-home.jpg',
+  },
+  {
     slug: 'arsha-waterfall', name: 'Arsha Waterfall',
     parentType: 'city', parent: 'kazbegi-stepantsminda', published: true,
     seoKey: 'arshaWaterfall', contentKey: 'arshaWaterfall',
