@@ -324,6 +324,12 @@ export const sites = [
     image: '/images/files/georgia-home.jpg',
   },
   {
+    slug: 'birtvisi-fortress', name: 'Birtvisi Fortress',
+    parentType: 'region', parent: 'kvemo-kartli', published: true,
+    seoKey: 'birtvisiFortress', contentKey: 'birtvisiFortress',
+    image: '/images/files/georgia-home.jpg',
+  },
+  {
     slug: 'ujarma-fortress', name: 'Ujarma Fortress',
     parentType: 'region', parent: 'kakheti', published: true,
     seoKey: 'ujarmaFortress', contentKey: 'ujarmaFortress',
