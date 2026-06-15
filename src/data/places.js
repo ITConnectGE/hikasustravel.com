@@ -318,6 +318,12 @@ export const cities = [
 // ---------------------------------------------------------------------------
 export const sites = [
   {
+    slug: 'rachkha-waterfall', name: 'Rachkha Waterfall',
+    parentType: 'region', parent: 'racha-lechkhumi', published: true,
+    seoKey: 'rachkhaWaterfall', contentKey: 'rachkhaWaterfall',
+    image: '/images/files/georgia-home.jpg',
+  },
+  {
     slug: 'orbeli-fortress', name: 'Orbeli Fortress',
     parentType: 'region', parent: 'racha-lechkhumi', published: true,
     seoKey: 'orbeliFortress', contentKey: 'orbeliFortress',
