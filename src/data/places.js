@@ -318,6 +318,12 @@ export const cities = [
 // ---------------------------------------------------------------------------
 export const sites = [
   {
+    slug: 'dekhviri-fortress', name: 'Dekhviri Fortress',
+    parentType: 'region', parent: 'racha-lechkhumi', published: true,
+    seoKey: 'dekhviriFortress', contentKey: 'dekhviriFortress',
+    image: '/images/files/georgia-home.jpg',
+  },
+  {
     slug: 'dmanisi-museum-reserve', name: 'Dmanisi Museum Reserve',
     parentType: 'city', parent: 'dmanisi', published: true,
     seoKey: 'dmanisiMuseumReserve', contentKey: 'dmanisiMuseumReserve',
