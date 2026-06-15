@@ -330,6 +330,12 @@ export const sites = [
     image: '/images/files/georgia-home.jpg',
   },
   {
+    slug: 'rustavi-central-park', name: 'Rustavi Central Park',
+    parentType: 'city', parent: 'rustavi', published: true,
+    seoKey: 'rustaviCentralPark', contentKey: 'rustaviCentralPark',
+    image: '/images/files/georgia-home.jpg',
+  },
+  {
     slug: 'algeti-national-park', name: 'Algeti National Park',
     parentType: 'region', parent: 'kvemo-kartli', published: true,
     seoKey: 'algetiNationalPark', contentKey: 'algetiNationalPark',
