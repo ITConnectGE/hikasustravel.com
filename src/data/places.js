@@ -318,6 +318,12 @@ export const cities = [
 // ---------------------------------------------------------------------------
 export const sites = [
   {
+    slug: 'dmanisi-museum-reserve', name: 'Dmanisi Museum Reserve',
+    parentType: 'city', parent: 'dmanisi', published: true,
+    seoKey: 'dmanisiMuseumReserve', contentKey: 'dmanisiMuseumReserve',
+    image: '/images/files/georgia-home.jpg',
+  },
+  {
     slug: 'algeti-national-park', name: 'Algeti National Park',
     parentType: 'region', parent: 'kvemo-kartli', published: true,
     seoKey: 'algetiNationalPark', contentKey: 'algetiNationalPark',
