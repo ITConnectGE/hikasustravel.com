@@ -372,6 +372,12 @@ export const sites = [
     image: '/images/files/georgia-home.jpg',
   },
   {
+    slug: 'tsughrughasheni-church', name: 'Tsughrughasheni Church',
+    parentType: 'city', parent: 'bolnisi', published: true,
+    seoKey: 'tsughrughasheniChurch', contentKey: 'tsughrughasheniChurch',
+    image: '/images/files/georgia-home.jpg',
+  },
+  {
     slug: 'tsalka-dashbashi-canyon', name: 'Tsalka (Dashbashi) Canyon',
     parentType: 'region', parent: 'kvemo-kartli', published: true,
     seoKey: 'tsalkaDashbashiCanyon', contentKey: 'tsalkaDashbashiCanyon',
