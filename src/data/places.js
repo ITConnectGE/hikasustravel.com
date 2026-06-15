@@ -336,6 +336,12 @@ export const sites = [
     image: '/images/files/georgia-home.jpg',
   },
   {
+    slug: 'rustavi-fortress', name: 'Rustavi Fortress',
+    parentType: 'city', parent: 'rustavi', published: true,
+    seoKey: 'rustaviFortress', contentKey: 'rustaviFortress',
+    image: '/images/files/georgia-home.jpg',
+  },
+  {
     slug: 'algeti-national-park', name: 'Algeti National Park',
     parentType: 'region', parent: 'kvemo-kartli', published: true,
     seoKey: 'algetiNationalPark', contentKey: 'algetiNationalPark',
