@@ -318,6 +318,12 @@ export const cities = [
 // ---------------------------------------------------------------------------
 export const sites = [
   {
+    slug: 'tsageri-history-museum', name: 'Tsageri History Museum',
+    parentType: 'region', parent: 'racha-lechkhumi', published: true,
+    seoKey: 'tsageriHistoryMuseum', contentKey: 'tsageriHistoryMuseum',
+    image: '/images/files/georgia-home.jpg',
+  },
+  {
     slug: 'sairme-pillars', name: 'The Sairme Pillars',
     parentType: 'region', parent: 'racha-lechkhumi', published: true,
     seoKey: 'sairmePillars', contentKey: 'sairmePillars',
