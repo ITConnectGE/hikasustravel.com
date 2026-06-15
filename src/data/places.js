@@ -318,6 +318,12 @@ export const cities = [
 // ---------------------------------------------------------------------------
 export const sites = [
   {
+    slug: 'lailashi-pool-okronishi', name: 'The Lailashi Pool (Okronishi)',
+    parentType: 'region', parent: 'racha-lechkhumi', published: true,
+    seoKey: 'lailashiPool', contentKey: 'lailashiPool',
+    image: '/images/files/georgia-home.jpg',
+  },
+  {
     slug: 'kulbaki-lakes', name: 'The Kulbaki Lakes',
     parentType: 'region', parent: 'racha-lechkhumi', published: true,
     seoKey: 'kulbakiLakes', contentKey: 'kulbakiLakes',
