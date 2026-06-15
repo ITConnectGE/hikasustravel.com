@@ -336,6 +336,12 @@ export const sites = [
     image: '/images/files/georgia-home.jpg',
   },
   {
+    slug: 'bolnisi-sioni-cathedral', name: 'Bolnisi Sioni Cathedral',
+    parentType: 'city', parent: 'bolnisi', published: true,
+    seoKey: 'bolnisiSioniCathedral', contentKey: 'bolnisiSioniCathedral',
+    image: '/images/files/georgia-home.jpg',
+  },
+  {
     slug: 'ujarma-fortress', name: 'Ujarma Fortress',
     parentType: 'region', parent: 'kakheti', published: true,
     seoKey: 'ujarmaFortress', contentKey: 'ujarmaFortress',
