@@ -318,6 +318,12 @@ export const cities = [
 // ---------------------------------------------------------------------------
 export const sites = [
   {
+    slug: 'askhi-massif', name: 'The Askhi Massif',
+    parentType: 'region', parent: 'racha-lechkhumi', published: true,
+    seoKey: 'askhiMassif', contentKey: 'askhiMassif',
+    image: '/images/files/georgia-home.jpg',
+  },
+  {
     slug: 'dekhviri-fortress', name: 'Dekhviri Fortress',
     parentType: 'region', parent: 'racha-lechkhumi', published: true,
     seoKey: 'dekhviriFortress', contentKey: 'dekhviriFortress',
