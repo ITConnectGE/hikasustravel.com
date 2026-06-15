@@ -46,6 +46,12 @@ function LocationIcon() {
 
 export default function HotelModal({ hotel, onClose }) {
   const t = useT()
+  const galleryRef = useRef(null)
+  const [activeSlide, setActiveSlide] = useState(0)
+
+  // Guard against a null hotel here (not via early return) so every Hook below
+  // is still called unconditionally on every render.
+  const images = hotel?.images || (hotel?.image ? [{ src: hotel.image, alt: hotel.name }] : [])
 
   useEffect(() => {
     const prev = document.body.style.overflow
@@ -61,12 +67,6 @@ export default function HotelModal({ hotel, onClose }) {
       document.removeEventListener('keydown', handleKey)
     }
   }, [onClose])
-
-  if (!hotel) return null
-
-  const images = hotel.images || (hotel.image ? [{ src: hotel.image, alt: hotel.name }] : [])
-  const galleryRef = useRef(null)
-  const [activeSlide, setActiveSlide] = useState(0)
 
   const scrollTo = useCallback((index) => {
     const el = galleryRef.current
@@ -85,6 +85,8 @@ export default function HotelModal({ hotel, onClose }) {
     el.addEventListener('scroll', onScroll, { passive: true })
     return () => el.removeEventListener('scroll', onScroll)
   }, [images.length])
+
+  if (!hotel) return null
 
   return createPortal(
     <div className="hotel-modal-backdrop" onClick={onClose}>

@@ -1,7 +1,7 @@
 import { useContext } from 'react'
 import HeroSection from '../shared/HeroSection'
 import FadeUp from '../shared/FadeUp'
-import { I18nContext } from '../../i18n/I18nProvider'
+import { I18nContext } from '../../i18n/I18nContext'
 import useLang from '../../i18n/useLang'
 import useSEO from '../../hooks/useSEO'
 import { getSEO } from '../../data/seoData'

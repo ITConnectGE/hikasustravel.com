@@ -1,16 +1,7 @@
-import { createContext, useState, useEffect, useMemo, useCallback } from 'react'
+import { useState, useEffect, useMemo, useCallback } from 'react'
 import { useParams, useNavigate, useLocation } from 'react-router-dom'
 import { langCodes, defaultLang } from './languages'
-
-export const I18nContext = createContext({
-  lang: defaultLang,
-  setLang: () => {},
-  translations: {},
-  pages: {},
-  faq: [],
-  tourTranslations: null,
-  loadTourTranslations: () => Promise.resolve(null),
-})
+import { I18nContext } from './I18nContext'
 
 const translationCache = {}
 
@@ -49,7 +40,10 @@ export default function I18nProvider({ children }) {
   const lang = langCodes.includes(paramLang) ? paramLang : defaultLang
 
   const [data, setData] = useState(null)
-  const [tourTranslations, setTourTranslations] = useState(null)
+  // Store the loaded tour translations together with the language they belong to,
+  // so a language change drops stale translations during render (no reset effect).
+  const [tourState, setTourState] = useState({ lang: null, data: null })
+  const tourTranslations = tourState.lang === lang ? tourState.data : null
 
   useEffect(() => {
     loadLocale(lang).then(setData)
@@ -63,14 +57,9 @@ export default function I18nProvider({ children }) {
 
   const loadTourTranslations = useCallback(() => {
     return loadTours(lang).then((t) => {
-      setTourTranslations(t)
+      setTourState({ lang, data: t })
       return t
     })
-  }, [lang])
-
-  // Reset tour translations when language changes
-  useEffect(() => {
-    setTourTranslations(null)
   }, [lang])
 
   const translations = useMemo(() => (data ? data.ui : {}), [data])

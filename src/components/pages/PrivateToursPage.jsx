@@ -5,9 +5,18 @@ import { tours } from '../../data/tours'
 import { PRIVATE_TOUR_CATEGORIES, CATEGORY_IDS, CATEGORY_LABEL_KEYS } from '../../data/tourCategories'
 import useT from '../../i18n/useT'
 import useLang from '../../i18n/useLang'
-import { I18nContext } from '../../i18n/I18nProvider'
+import { I18nContext } from '../../i18n/I18nContext'
 import useSEO from '../../hooks/useSEO'
 import { getSEO } from '../../data/seoData'
+
+// Slugs of the tours that start from Kutaisi (module-level constant so it stays
+// referentially stable across renders and out of the useMemo dependency list).
+const kutaisiSlugs = [
+  'georgias-cultural-wonders-7-day-adventure-from-kutaisi-to-tbilisi-and-beyond',
+  'ultimate-georgia-exploration-9-day-tour-from-kutaisi-to-tbilisi-and-hidden-gems',
+  'georgias-wonders-11-day-grand-tour-from-kutaisi-to-kazbegi-and-batumi',
+  'grand-georgia-adventure-13-day-cultural-and-scenic-journey',
+]
 
 export default function PrivateToursPage() {
   const privateTours = tours.filter((t) => t.type === 'private')
@@ -19,22 +28,15 @@ export default function PrivateToursPage() {
   const [origin, setOrigin] = useState('')
   const [category, setCategory] = useState('all')
   const seo = getSEO('privateTours', lang)
-  useSEO({ ...seo, lang, path: 'private-tours', image: '/images/files/georgia-tour-01.jpg' })
 
   // Visible category labels are looked up per locale; filtering still uses the
   // stable ids above. "all" is the default ("All Categories" = no restriction).
   const categoryOptions = CATEGORY_IDS.map((id) => ({ value: id, label: t(CATEGORY_LABEL_KEYS[id]) }))
+  useSEO({ ...seo, lang, path: 'private-tours', image: '/images/files/georgia-tour-01.jpg' })
 
   useEffect(() => {
     if (!tourTranslations) loadTourTranslations()
   }, [tourTranslations, loadTourTranslations])
-
-  const kutaisiSlugs = [
-    'georgias-cultural-wonders-7-day-adventure-from-kutaisi-to-tbilisi-and-beyond',
-    'ultimate-georgia-exploration-9-day-tour-from-kutaisi-to-tbilisi-and-hidden-gems',
-    'georgias-wonders-11-day-grand-tour-from-kutaisi-to-kazbegi-and-batumi',
-    'grand-georgia-adventure-13-day-cultural-and-scenic-journey',
-  ]
 
   const filtered = useMemo(() => {
     let list = privateTours

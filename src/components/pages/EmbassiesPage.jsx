@@ -1,4 +1,4 @@
-import { useState, useMemo, useEffect, useRef } from 'react'
+import { useState, useMemo, useEffect } from 'react'
 import HeroSection from '../shared/HeroSection'
 import useT from '../../i18n/useT'
 import useLang from '../../i18n/useLang'
@@ -25,7 +25,13 @@ export default function EmbassiesPage() {
   const { lang } = useLang()
   const seo = getSEO('embassies', lang)
   const [query, setQuery] = useState('')
-  const highlightedRef = useRef(null)
+  // Resolve the visitor's own embassy once, from the browser locale, at mount.
+  const [highlightedId] = useState(() => {
+    const code = getUserCountryCode()
+    if (!code) return null
+    const match = embassies.find(e => e.countryCode === code)
+    return match ? match.id : null
+  })
 
   const filtered = useMemo(() => filterEmbassies(query), [query])
 
@@ -53,20 +59,14 @@ export default function EmbassiesPage() {
 
   useSEO({ ...seo, lang, path: 'embassies', image: '/images/files/georgia-tour-03.jpg', jsonLd })
 
-  // Auto-highlight user's embassy on mount
+  // Scroll the visitor's embassy into view on mount (DOM side-effect only).
   useEffect(() => {
-    const code = getUserCountryCode()
-    if (code) {
-      const match = embassies.find(e => e.countryCode === code)
-      if (match) {
-        highlightedRef.current = match.id
-        requestAnimationFrame(() => {
-          const el = document.getElementById(`embassy-${match.id}`)
-          if (el) el.scrollIntoView({ behavior: 'smooth', block: 'center' })
-        })
-      }
-    }
-  }, [])
+    if (!highlightedId) return
+    requestAnimationFrame(() => {
+      const el = document.getElementById(`embassy-${highlightedId}`)
+      if (el) el.scrollIntoView({ behavior: 'smooth', block: 'center' })
+    })
+  }, [highlightedId])
 
   return (
     <>
@@ -112,7 +112,7 @@ export default function EmbassiesPage() {
               <div
                 key={e.id}
                 id={`embassy-${e.id}`}
-                className={`embassy-card${highlightedRef.current === e.id ? ' embassy-card--highlighted' : ''}`}
+                className={`embassy-card${highlightedId === e.id ? ' embassy-card--highlighted' : ''}`}
               >
                 <div className="embassy-card__header">
                   <span className="embassy-card__flag"><FlagImg code={e.countryCode} size={32} /></span>

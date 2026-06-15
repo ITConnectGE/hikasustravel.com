@@ -9,7 +9,7 @@ import { tours } from '../../data/tours'
 import useT from '../../i18n/useT'
 import useLang from '../../i18n/useLang'
 import LocaleLink from '../../i18n/LocaleLink'
-import { I18nContext } from '../../i18n/I18nProvider'
+import { I18nContext } from '../../i18n/I18nContext'
 import useSEO from '../../hooks/useSEO'
 import { getSEO } from '../../data/seoData'
 

@@ -66,14 +66,7 @@ const toursFile = readFileSync(join(__dirname, '../src/data/tours.js'), 'utf-8')
 
 function parseTours(source) {
   const tours = []
-  // Match each tour object to extract key fields
-  const slugRegex = /"slug":\s*"([^"]+)"/g
-  const typeRegex = /"type":\s*"([^"]+)"/g
-  const titleRegex = /"title":\s*"([^"]+)"/g
-  const descRegex = /"description":\s*"([^"]+)"/g
-  const heroRegex = /"heroImage":\s*"([^"]+)"/g
-  const daysRegex = /"days":\s*(\d+)/g
-
+  // Match each tour object to extract key fields, splitting the source by slug.
   // Split by slug to get chunks
   const slugMatches = [...source.matchAll(/"slug":\s*"([^"]+)"/g)]
   for (let i = 0; i < slugMatches.length; i++) {

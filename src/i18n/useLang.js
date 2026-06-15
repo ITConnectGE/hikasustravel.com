@@ -1,5 +1,5 @@
 import { useContext } from 'react'
-import { I18nContext } from './I18nProvider'
+import { I18nContext } from './I18nContext'
 import { languages } from './languages'
 
 export default function useLang() {

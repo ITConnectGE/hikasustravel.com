@@ -82,16 +82,19 @@ export default function Header({ variant = 'default' }) {
   const [isSticky, setIsSticky] = useState(false)
   const menuRef = useRef(null)
   const stickyThreshold = useRef(0)
-  const menuHeight = useRef(0)
+  const [menuHeight, setMenuHeight] = useState(0)
   const location = useLocation()
   const t = useT()
   const { lang } = useLang()
 
-  // Close mobile menu on navigation - this is a legitimate sync with router state
-  useEffect(() => {
-    // eslint-disable-next-line react-hooks/set-state-in-effect
-    setMenuOpen(false)
-  }, [location])
+  // Close the mobile menu on navigation. Adjusting state during render (instead
+  // of in an effect) avoids an extra render pass — see React's "you might not
+  // need an effect" guidance for resetting state when a value changes.
+  const [prevPathname, setPrevPathname] = useState(location.pathname)
+  if (location.pathname !== prevPathname) {
+    setPrevPathname(location.pathname)
+    if (menuOpen) setMenuOpen(false)
+  }
 
   useEffect(() => {
     // On mobile the header is already position:fixed via CSS, so skip sticky logic
@@ -102,7 +105,7 @@ export default function Header({ variant = 'default' }) {
     const menuEl = menuRef.current
     if (menuEl) {
       stickyThreshold.current = menuEl.offsetTop
-      menuHeight.current = menuEl.offsetHeight
+      setMenuHeight(menuEl.offsetHeight)
     }
     const handleScroll = () => {
       if (!ticking) {
@@ -162,7 +165,7 @@ export default function Header({ variant = 'default' }) {
           )
         )}
       </nav>
-      {isSticky && <div style={{ height: menuHeight.current }} />}
+      {isSticky && <div style={{ height: menuHeight }} />}
     </header>
   )
 }

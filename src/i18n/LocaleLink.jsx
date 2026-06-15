@@ -1,6 +1,6 @@
 import { forwardRef, useContext } from 'react'
 import { Link } from 'react-router-dom'
-import { I18nContext } from './I18nProvider'
+import { I18nContext } from './I18nContext'
 
 const LocaleLink = forwardRef(function LocaleLink({ to, ...props }, ref) {
   const { lang } = useContext(I18nContext)
