@@ -342,6 +342,12 @@ export const sites = [
     image: '/images/files/georgia-home.jpg',
   },
   {
+    slug: 'rustavi-history-museum', name: 'The Rustavi History Museum',
+    parentType: 'city', parent: 'rustavi', published: true,
+    seoKey: 'rustaviHistoryMuseum', contentKey: 'rustaviHistoryMuseum',
+    image: '/images/files/georgia-home.jpg',
+  },
+  {
     slug: 'algeti-national-park', name: 'Algeti National Park',
     parentType: 'region', parent: 'kvemo-kartli', published: true,
     seoKey: 'algetiNationalPark', contentKey: 'algetiNationalPark',
