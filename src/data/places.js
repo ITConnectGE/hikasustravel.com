@@ -318,6 +318,12 @@ export const cities = [
 // ---------------------------------------------------------------------------
 export const sites = [
   {
+    slug: 'ghvirishi-waterfall', name: 'Ghvirishi Waterfall',
+    parentType: 'region', parent: 'racha-lechkhumi', published: true,
+    seoKey: 'ghvirishiWaterfall', contentKey: 'ghvirishiWaterfall',
+    image: '/images/files/georgia-home.jpg',
+  },
+  {
     slug: 'askhi-massif', name: 'The Askhi Massif',
     parentType: 'region', parent: 'racha-lechkhumi', published: true,
     seoKey: 'askhiMassif', contentKey: 'askhiMassif',
