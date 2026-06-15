@@ -318,6 +318,12 @@ export const cities = [
 // ---------------------------------------------------------------------------
 export const sites = [
   {
+    slug: 'sairme-pillars', name: 'The Sairme Pillars',
+    parentType: 'region', parent: 'racha-lechkhumi', published: true,
+    seoKey: 'sairmePillars', contentKey: 'sairmePillars',
+    image: '/images/files/georgia-home.jpg',
+  },
+  {
     slug: 'rachkha-waterfall', name: 'Rachkha Waterfall',
     parentType: 'region', parent: 'racha-lechkhumi', published: true,
     seoKey: 'rachkhaWaterfall', contentKey: 'rachkhaWaterfall',
