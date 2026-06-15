@@ -318,6 +318,12 @@ export const cities = [
 // ---------------------------------------------------------------------------
 export const sites = [
   {
+    slug: 'algeti-national-park', name: 'Algeti National Park',
+    parentType: 'region', parent: 'kvemo-kartli', published: true,
+    seoKey: 'algetiNationalPark', contentKey: 'algetiNationalPark',
+    image: '/images/files/georgia-home.jpg',
+  },
+  {
     slug: 'ujarma-fortress', name: 'Ujarma Fortress',
     parentType: 'region', parent: 'kakheti', published: true,
     seoKey: 'ujarmaFortress', contentKey: 'ujarmaFortress',
