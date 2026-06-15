@@ -318,6 +318,12 @@ export const cities = [
 // ---------------------------------------------------------------------------
 export const sites = [
   {
+    slug: 'orbeli-fortress', name: 'Orbeli Fortress',
+    parentType: 'region', parent: 'racha-lechkhumi', published: true,
+    seoKey: 'orbeliFortress', contentKey: 'orbeliFortress',
+    image: '/images/files/georgia-home.jpg',
+  },
+  {
     slug: 'lailashi-pool-okronishi', name: 'The Lailashi Pool (Okronishi)',
     parentType: 'region', parent: 'racha-lechkhumi', published: true,
     seoKey: 'lailashiPool', contentKey: 'lailashiPool',
