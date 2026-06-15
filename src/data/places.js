@@ -324,6 +324,12 @@ export const sites = [
     image: '/images/files/georgia-home.jpg',
   },
   {
+    slug: 'dmanisi-sioni-cathedral', name: 'Dmanisi Sioni Cathedral',
+    parentType: 'city', parent: 'dmanisi', published: true,
+    seoKey: 'dmanisiSioniCathedral', contentKey: 'dmanisiSioniCathedral',
+    image: '/images/files/georgia-home.jpg',
+  },
+  {
     slug: 'algeti-national-park', name: 'Algeti National Park',
     parentType: 'region', parent: 'kvemo-kartli', published: true,
     seoKey: 'algetiNationalPark', contentKey: 'algetiNationalPark',
