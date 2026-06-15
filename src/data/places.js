@@ -330,6 +330,12 @@ export const sites = [
     image: '/images/files/georgia-home.jpg',
   },
   {
+    slug: 'bolnisi-museum', name: 'The Bolnisi Museum',
+    parentType: 'city', parent: 'bolnisi', published: true,
+    seoKey: 'bolnisiMuseum', contentKey: 'bolnisiMuseum',
+    image: '/images/files/georgia-home.jpg',
+  },
+  {
     slug: 'ujarma-fortress', name: 'Ujarma Fortress',
     parentType: 'region', parent: 'kakheti', published: true,
     seoKey: 'ujarmaFortress', contentKey: 'ujarmaFortress',
