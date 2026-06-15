@@ -108,7 +108,7 @@ export default function HomePage() {
             <h2>{t('tour.privateTours')}</h2>
           </FadeUp>
           <FadeUp>
-            <div className="tours-grid">
+            <div className="tours-grid tours-grid--private-home">
               {tours.filter((tour) => tour.type === 'private').map((tour) => {
                 const tt = tourTranslations?.[tour.slug]
                 const classicRow = tour.pricing?.find((r) => r.travelers === '4')
