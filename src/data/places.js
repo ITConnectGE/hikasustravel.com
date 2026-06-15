@@ -342,6 +342,12 @@ export const sites = [
     image: '/images/files/georgia-home.jpg',
   },
   {
+    slug: 'tsalka-dashbashi-canyon', name: 'Tsalka (Dashbashi) Canyon',
+    parentType: 'region', parent: 'kvemo-kartli', published: true,
+    seoKey: 'tsalkaDashbashiCanyon', contentKey: 'tsalkaDashbashiCanyon',
+    image: '/images/files/georgia-home.jpg',
+  },
+  {
     slug: 'ujarma-fortress', name: 'Ujarma Fortress',
     parentType: 'region', parent: 'kakheti', published: true,
     seoKey: 'ujarmaFortress', contentKey: 'ujarmaFortress',
