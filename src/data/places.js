@@ -390,6 +390,12 @@ export const sites = [
     image: '/images/files/georgia-home.jpg',
   },
   {
+    slug: 'nikortsminda-cathedral', name: 'Nikortsminda Cathedral',
+    parentType: 'region', parent: 'racha-lechkhumi', published: true,
+    seoKey: 'nikortsmindaCathedral', contentKey: 'nikortsmindaCathedral',
+    image: '/images/files/georgia-home.jpg',
+  },
+  {
     slug: 'khvamli-mountain', name: 'Khvamli Mountain',
     parentType: 'region', parent: 'racha-lechkhumi', published: true,
     seoKey: 'khvamliMountain', contentKey: 'khvamliMountain',
