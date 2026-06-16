@@ -384,6 +384,12 @@ export const sites = [
     image: '/images/files/georgia-home.jpg',
   },
   {
+    slug: 'minda-fortress', name: 'Minda Fortress',
+    parentType: 'region', parent: 'racha-lechkhumi', published: true,
+    seoKey: 'mindaFortress', contentKey: 'mindaFortress',
+    image: '/images/files/georgia-home.jpg',
+  },
+  {
     slug: 'khvamli-mountain', name: 'Khvamli Mountain',
     parentType: 'region', parent: 'racha-lechkhumi', published: true,
     seoKey: 'khvamliMountain', contentKey: 'khvamliMountain',
