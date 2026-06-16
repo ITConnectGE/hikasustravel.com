@@ -336,6 +336,12 @@ export const sites = [
     image: '/images/files/georgia-home.jpg',
   },
   {
+    slug: 'verdzistava-waterfall', name: 'Verdzistava Waterfall',
+    parentType: 'region', parent: 'racha-lechkhumi', published: true,
+    seoKey: 'verdzistavaWaterfall', contentKey: 'verdzistavaWaterfall',
+    image: '/images/files/georgia-home.jpg',
+  },
+  {
     slug: 'orbeli-fortress', name: 'Orbeli Fortress',
     parentType: 'region', parent: 'racha-lechkhumi', published: true,
     seoKey: 'orbeliFortress', contentKey: 'orbeliFortress',
