@@ -366,6 +366,12 @@ export const sites = [
     image: '/images/files/georgia-home.jpg',
   },
   {
+    slug: 'cholevi-lake', name: 'Cholevi Lake (Lake of Love)',
+    parentType: 'region', parent: 'racha-lechkhumi', published: true,
+    seoKey: 'choleviLake', contentKey: 'choleviLake',
+    image: '/images/files/georgia-home.jpg',
+  },
+  {
     slug: 'khvamli-mountain', name: 'Khvamli Mountain',
     parentType: 'region', parent: 'racha-lechkhumi', published: true,
     seoKey: 'khvamliMountain', contentKey: 'khvamliMountain',
