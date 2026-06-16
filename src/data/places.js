@@ -396,6 +396,12 @@ export const sites = [
     image: '/images/files/georgia-home.jpg',
   },
   {
+    slug: 'oni-synagogue', name: 'The Oni Synagogue',
+    parentType: 'region', parent: 'racha-lechkhumi', published: true,
+    seoKey: 'oniSynagogue', contentKey: 'oniSynagogue',
+    image: '/images/files/georgia-home.jpg',
+  },
+  {
     slug: 'khvamli-mountain', name: 'Khvamli Mountain',
     parentType: 'region', parent: 'racha-lechkhumi', published: true,
     seoKey: 'khvamliMountain', contentKey: 'khvamliMountain',
