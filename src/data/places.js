@@ -378,6 +378,12 @@ export const sites = [
     image: '/images/files/georgia-home.jpg',
   },
   {
+    slug: 'love-waterfall', name: 'The Love Waterfall (Sikvaruli)',
+    parentType: 'region', parent: 'racha-lechkhumi', published: true,
+    seoKey: 'loveWaterfall', contentKey: 'loveWaterfall',
+    image: '/images/files/georgia-home.jpg',
+  },
+  {
     slug: 'khvamli-mountain', name: 'Khvamli Mountain',
     parentType: 'region', parent: 'racha-lechkhumi', published: true,
     seoKey: 'khvamliMountain', contentKey: 'khvamliMountain',
