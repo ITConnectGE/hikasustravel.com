@@ -342,6 +342,12 @@ export const sites = [
     image: '/images/files/georgia-home.jpg',
   },
   {
+    slug: 'zubi-fortress', name: 'Zubi Fortress',
+    parentType: 'region', parent: 'racha-lechkhumi', published: true,
+    seoKey: 'zubiFortress', contentKey: 'zubiFortress',
+    image: '/images/files/georgia-home.jpg',
+  },
+  {
     slug: 'orbeli-fortress', name: 'Orbeli Fortress',
     parentType: 'region', parent: 'racha-lechkhumi', published: true,
     seoKey: 'orbeliFortress', contentKey: 'orbeliFortress',
