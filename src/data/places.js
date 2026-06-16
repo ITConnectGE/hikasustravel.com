@@ -506,6 +506,12 @@ export const sites = [
     image: '/images/files/georgia-home.jpg',
   },
   {
+    slug: 'kvetera-fortress', name: 'Kvetera Fortress',
+    parentType: 'region', parent: 'kakheti', published: true,
+    seoKey: 'kveteraFortress', contentKey: 'kveteraFortress',
+    image: '/images/files/georgia-home.jpg',
+  },
+  {
     slug: 'nekresi-monastery', name: 'Nekresi Monastery',
     parentType: 'region', parent: 'kakheti', published: true,
     seoKey: 'nekresiMonastery', contentKey: 'nekresiMonastery',
