@@ -899,6 +899,12 @@ export const sites = [
     image: '/images/files/georgia-home.jpg',
   },
   {
+    slug: 'nokalakevi', name: 'Nokalakevi (Archaeopolis)',
+    parentType: 'region', parent: 'samegrelo', published: true,
+    seoKey: 'nokalakevi', contentKey: 'nokalakevi',
+    image: '/images/files/georgia-home.jpg',
+  },
+  {
     slug: 'paliastomi-lake-kolkheti-national-park', name: 'Paliastomi Lake & Kolkheti National Park',
     parentType: 'region', parent: 'samegrelo', published: true,
     seoKey: 'paliastomiKolkheti', contentKey: 'paliastomiKolkheti',
