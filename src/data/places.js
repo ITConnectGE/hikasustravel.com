@@ -894,6 +894,12 @@ export const sites = [
     image: '/images/files/georgia-home.jpg',
   },
   {
+    slug: 'dadiani-palace-museum', name: 'The Dadiani Palace Museum',
+    parentType: 'region', parent: 'samegrelo', published: true,
+    seoKey: 'dadianiPalaceMuseum', contentKey: 'dadianiPalaceMuseum',
+    image: '/images/files/georgia-home.jpg',
+  },
+  {
     slug: 'katskhi-pillar', name: 'Katskhi Pillar',
     parentType: 'region', parent: 'imereti', published: true,
     seoKey: 'katskhiPillar', contentKey: 'katskhiPillar',
