@@ -408,6 +408,12 @@ export const sites = [
     image: '/images/files/georgia-home.jpg',
   },
   {
+    slug: 'udziro-lake', name: 'Udziro Lake',
+    parentType: 'region', parent: 'racha-lechkhumi', published: true,
+    seoKey: 'udziroLake', contentKey: 'udziroLake',
+    image: '/images/files/georgia-home.jpg',
+  },
+  {
     slug: 'khvamli-mountain', name: 'Khvamli Mountain',
     parentType: 'region', parent: 'racha-lechkhumi', published: true,
     seoKey: 'khvamliMountain', contentKey: 'khvamliMountain',
