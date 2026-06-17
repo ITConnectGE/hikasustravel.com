@@ -905,6 +905,12 @@ export const sites = [
     image: '/images/files/georgia-home.jpg',
   },
   {
+    slug: 'tobavarchkhili-lakes', name: 'Tobavarchkhili (the Silver Lakes)',
+    parentType: 'region', parent: 'samegrelo', published: true,
+    seoKey: 'tobavarchkhili', contentKey: 'tobavarchkhili',
+    image: '/images/files/georgia-home.jpg',
+  },
+  {
     slug: 'paliastomi-lake-kolkheti-national-park', name: 'Paliastomi Lake & Kolkheti National Park',
     parentType: 'region', parent: 'samegrelo', published: true,
     seoKey: 'paliastomiKolkheti', contentKey: 'paliastomiKolkheti',
