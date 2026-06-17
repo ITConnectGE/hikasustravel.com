@@ -893,6 +893,12 @@ export const sites = [
     image: '/images/files/georgia-home.jpg',
   },
   {
+    slug: 'martvili-monastery', name: 'Martvili Monastery (Chkondidi)',
+    parentType: 'region', parent: 'samegrelo', published: true,
+    seoKey: 'martviliMonastery', contentKey: 'martviliMonastery',
+    image: '/images/files/georgia-home.jpg',
+  },
+  {
     slug: 'paliastomi-lake-kolkheti-national-park', name: 'Paliastomi Lake & Kolkheti National Park',
     parentType: 'region', parent: 'samegrelo', published: true,
     seoKey: 'paliastomiKolkheti', contentKey: 'paliastomiKolkheti',
