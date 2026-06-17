@@ -912,6 +912,12 @@ export const sites = [
     image: '/images/files/georgia-home.jpg',
   },
   {
+    slug: 'kolkheti-national-park', name: 'Kolkheti National Park',
+    parentType: 'region', parent: 'samegrelo', published: true,
+    seoKey: 'kolkhetiNationalPark', contentKey: 'kolkhetiNationalPark',
+    image: '/images/files/georgia-home.jpg',
+  },
+  {
     slug: 'katskhi-pillar', name: 'Katskhi Pillar',
     parentType: 'region', parent: 'imereti', published: true,
     seoKey: 'katskhiPillar', contentKey: 'katskhiPillar',
