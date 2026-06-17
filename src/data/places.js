@@ -900,6 +900,12 @@ export const sites = [
     image: '/images/files/georgia-home.jpg',
   },
   {
+    slug: 'enguri-dam', name: 'The Enguri Dam',
+    parentType: 'region', parent: 'samegrelo', published: true,
+    seoKey: 'enguriDam', contentKey: 'enguriDam',
+    image: '/images/files/georgia-home.jpg',
+  },
+  {
     slug: 'katskhi-pillar', name: 'Katskhi Pillar',
     parentType: 'region', parent: 'imereti', published: true,
     seoKey: 'katskhiPillar', contentKey: 'katskhiPillar',
