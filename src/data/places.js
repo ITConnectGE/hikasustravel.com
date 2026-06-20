@@ -807,6 +807,12 @@ export const sites = [
     image: '/images/files/georgia-home.jpg',
   },
   {
+    slug: 'shindisi-fortress', name: 'Shindisi Fortress',
+    parentType: 'region', parent: 'mtskheta-mtianeti', published: true,
+    seoKey: 'shindisiFortress', contentKey: 'shindisiFortress',
+    image: '/images/files/georgia-home.jpg',
+  },
+  {
     slug: 'svetitskhoveli-cathedral', name: 'Svetitskhoveli Cathedral',
     parentType: 'city', parent: 'mtskheta', published: true,
     seoKey: 'svetitskhoveliCathedral', contentKey: 'svetitskhoveliCathedral',
