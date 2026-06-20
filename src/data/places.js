@@ -989,6 +989,12 @@ export const sites = [
     image: '/images/files/georgia-home.jpg',
   },
   {
+    slug: 'sapara-monastery', name: 'Sapara Monastery',
+    parentType: 'region', parent: 'samtskhe-javakheti', published: true,
+    seoKey: 'saparaMonastery', contentKey: 'saparaMonastery',
+    image: '/images/files/georgia-home.jpg',
+  },
+  {
     slug: 'khertvisi-fortress', name: 'Khertvisi Fortress',
     parentType: 'region', parent: 'samtskhe-javakheti', published: true,
     seoKey: 'khertvisiFortress', contentKey: 'khertvisiFortress',
