@@ -832,6 +832,12 @@ export const sites = [
     image: '/images/files/georgia-home.jpg',
   },
   {
+    slug: 'kintsvisi-monastery', name: 'Kintsvisi Monastery',
+    parentType: 'region', parent: 'shida-kartli', published: true,
+    seoKey: 'kintsvisiMonastery', contentKey: 'kintsvisiMonastery',
+    image: '/images/files/georgia-home.jpg',
+  },
+  {
     slug: 'giorgi-tatulashvili-ceramics-studio', name: 'Giorgi Tatulashvili Ceramics Studio & Museum',
     parentType: 'city', parent: 'gori', published: true,
     seoKey: 'giorgiTatulashviliCeramics', contentKey: 'giorgiTatulashviliCeramics',
