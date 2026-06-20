@@ -838,6 +838,12 @@ export const sites = [
     image: '/images/files/georgia-home.jpg',
   },
   {
+    slug: 'gori-fortress', name: 'Gori Fortress',
+    parentType: 'city', parent: 'gori', published: true,
+    seoKey: 'goriFortress', contentKey: 'goriFortress',
+    image: '/images/files/georgia-home.jpg',
+  },
+  {
     slug: 'prometheus-cave', name: 'Prometheus Cave',
     parentType: 'region', parent: 'imereti', published: true,
     seoKey: 'prometheusCave', contentKey: 'prometheusCave',
