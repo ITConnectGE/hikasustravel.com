@@ -953,6 +953,12 @@ export const sites = [
     image: '/images/files/georgia-home.jpg',
   },
   {
+    slug: 'akhaltsikhe-synagogue', name: 'The Akhaltsikhe Synagogue',
+    parentType: 'city', parent: 'akhaltsikhe', published: true,
+    seoKey: 'akhaltsikheSynagogue', contentKey: 'akhaltsikheSynagogue',
+    image: '/images/files/georgia-home.jpg',
+  },
+  {
     slug: 'vani-archaeological-museum', name: 'Vani Archaeological Museum',
     parentType: 'region', parent: 'imereti', published: true,
     seoKey: 'vaniArchaeologicalMuseum', contentKey: 'vaniArchaeologicalMuseum',
