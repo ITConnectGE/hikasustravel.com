@@ -995,6 +995,12 @@ export const sites = [
     image: '/images/files/georgia-home.jpg',
   },
   {
+    slug: 'poka-nunnery', name: 'Poka Nunnery (St. Nino Monastery of Poka)',
+    parentType: 'region', parent: 'samtskhe-javakheti', published: true,
+    seoKey: 'pokaNunnery', contentKey: 'pokaNunnery',
+    image: '/images/files/georgia-home.jpg',
+  },
+  {
     slug: 'vani-archaeological-museum', name: 'Vani Archaeological Museum',
     parentType: 'region', parent: 'imereti', published: true,
     seoKey: 'vaniArchaeologicalMuseum', contentKey: 'vaniArchaeologicalMuseum',
