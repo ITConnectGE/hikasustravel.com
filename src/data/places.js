@@ -1007,6 +1007,12 @@ export const sites = [
     image: '/images/files/khertvisi-fortress.jpg',
   },
   {
+    slug: 'tmogvi-fortress', name: 'Tmogvi Fortress',
+    parentType: 'region', parent: 'samtskhe-javakheti', published: true,
+    seoKey: 'tmogviFortress', contentKey: 'tmogviFortress',
+    image: '/images/files/georgia-home.jpg',
+  },
+  {
     slug: 'lake-paravani', name: 'Lake Paravani',
     parentType: 'region', parent: 'samtskhe-javakheti', published: true,
     seoKey: 'lakeParavani', contentKey: 'lakeParavani',
