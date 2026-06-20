@@ -820,6 +820,12 @@ export const sites = [
   },
   { slug: 'uplistsikhe-cave-town', name: 'Uplistsikhe Cave Town', parentType: 'region', parent: 'shida-kartli', published: false },
   {
+    slug: 'ateni-sioni', name: 'Ateni Sioni',
+    parentType: 'region', parent: 'shida-kartli', published: true,
+    seoKey: 'ateniSioni', contentKey: 'ateniSioni',
+    image: '/images/files/georgia-home.jpg',
+  },
+  {
     slug: 'prometheus-cave', name: 'Prometheus Cave',
     parentType: 'region', parent: 'imereti', published: true,
     seoKey: 'prometheusCave', contentKey: 'prometheusCave',
