@@ -983,6 +983,12 @@ export const sites = [
     image: '/images/files/georgia-home.jpg',
   },
   {
+    slug: 'khertvisi-fortress', name: 'Khertvisi Fortress',
+    parentType: 'region', parent: 'samtskhe-javakheti', published: true,
+    seoKey: 'khertvisiFortress', contentKey: 'khertvisiFortress',
+    image: '/images/files/khertvisi-fortress.jpg',
+  },
+  {
     slug: 'vani-archaeological-museum', name: 'Vani Archaeological Museum',
     parentType: 'region', parent: 'imereti', published: true,
     seoKey: 'vaniArchaeologicalMuseum', contentKey: 'vaniArchaeologicalMuseum',
