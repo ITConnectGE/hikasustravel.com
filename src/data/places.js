@@ -826,6 +826,12 @@ export const sites = [
     image: '/images/files/georgia-home.jpg',
   },
   {
+    slug: 'bateti-lake', name: 'Bateti Lake',
+    parentType: 'region', parent: 'shida-kartli', published: true,
+    seoKey: 'batetiLake', contentKey: 'batetiLake',
+    image: '/images/files/georgia-home.jpg',
+  },
+  {
     slug: 'prometheus-cave', name: 'Prometheus Cave',
     parentType: 'region', parent: 'imereti', published: true,
     seoKey: 'prometheusCave', contentKey: 'prometheusCave',
