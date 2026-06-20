@@ -965,6 +965,12 @@ export const sites = [
     image: '/images/files/georgia-home.jpg',
   },
   {
+    slug: 'borjomi-sulphur-pools', name: 'Borjomi Sulphur Pools',
+    parentType: 'city', parent: 'borjomi', published: true,
+    seoKey: 'borjomiSulphurPools', contentKey: 'borjomiSulphurPools',
+    image: '/images/files/georgia-home.jpg',
+  },
+  {
     slug: 'vani-archaeological-museum', name: 'Vani Archaeological Museum',
     parentType: 'region', parent: 'imereti', published: true,
     seoKey: 'vaniArchaeologicalMuseum', contentKey: 'vaniArchaeologicalMuseum',
