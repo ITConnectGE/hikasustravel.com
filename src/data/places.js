@@ -959,6 +959,12 @@ export const sites = [
     image: '/images/files/georgia-home.jpg',
   },
   {
+    slug: 'rabati-fortress', name: 'Rabati Fortress',
+    parentType: 'city', parent: 'akhaltsikhe', published: true,
+    seoKey: 'rabatiFortress', contentKey: 'rabatiFortress',
+    image: '/images/files/georgia-home.jpg',
+  },
+  {
     slug: 'borjomi-central-park', name: 'Borjomi Central Park',
     parentType: 'city', parent: 'borjomi', published: true,
     seoKey: 'borjomiCentralPark', contentKey: 'borjomiCentralPark',
