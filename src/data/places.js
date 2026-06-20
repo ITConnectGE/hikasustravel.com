@@ -844,6 +844,12 @@ export const sites = [
     image: '/images/files/georgia-home.jpg',
   },
   {
+    slug: 'samtavisi-cathedral', name: 'Samtavisi Cathedral',
+    parentType: 'region', parent: 'shida-kartli', published: true,
+    seoKey: 'samtavisiCathedral', contentKey: 'samtavisiCathedral',
+    image: '/images/files/georgia-home.jpg',
+  },
+  {
     slug: 'giorgi-tatulashvili-ceramics-studio', name: 'Giorgi Tatulashvili Ceramics Studio & Museum',
     parentType: 'city', parent: 'gori', published: true,
     seoKey: 'giorgiTatulashviliCeramics', contentKey: 'giorgiTatulashviliCeramics',
