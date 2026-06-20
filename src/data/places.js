@@ -989,6 +989,12 @@ export const sites = [
     image: '/images/files/khertvisi-fortress.jpg',
   },
   {
+    slug: 'lake-paravani', name: 'Lake Paravani',
+    parentType: 'region', parent: 'samtskhe-javakheti', published: true,
+    seoKey: 'lakeParavani', contentKey: 'lakeParavani',
+    image: '/images/files/georgia-home.jpg',
+  },
+  {
     slug: 'vani-archaeological-museum', name: 'Vani Archaeological Museum',
     parentType: 'region', parent: 'imereti', published: true,
     seoKey: 'vaniArchaeologicalMuseum', contentKey: 'vaniArchaeologicalMuseum',
