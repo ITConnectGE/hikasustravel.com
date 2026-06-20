@@ -971,6 +971,12 @@ export const sites = [
     image: '/images/files/georgia-home.jpg',
   },
   {
+    slug: 'borjomi-kharagauli-national-park', name: 'Borjomi-Kharagauli National Park',
+    parentType: 'region', parent: 'samtskhe-javakheti', published: true,
+    seoKey: 'borjomiKharagauliNationalPark', contentKey: 'borjomiKharagauliNationalPark',
+    image: '/images/files/georgia-home.jpg',
+  },
+  {
     slug: 'vani-archaeological-museum', name: 'Vani Archaeological Museum',
     parentType: 'region', parent: 'imereti', published: true,
     seoKey: 'vaniArchaeologicalMuseum', contentKey: 'vaniArchaeologicalMuseum',
