@@ -837,7 +837,12 @@ export const sites = [
     seoKey: 'motsametaMonastery', contentKey: 'motsametaMonastery',
     image: '/images/files/georgia-home.jpg',
   },
-  { slug: 'vardzia', name: 'Vardzia', parentType: 'region', parent: 'samtskhe-javakheti', published: false },
+  {
+    slug: 'vardzia', name: 'Vardzia',
+    parentType: 'region', parent: 'samtskhe-javakheti', published: true,
+    seoKey: 'vardzia', contentKey: 'vardzia',
+    image: '/images/files/georgia-home.jpg',
+  },
   {
     slug: 'gergeti-trinity-church', name: 'Gergeti Trinity Church',
     parentType: 'city', parent: 'kazbegi-stepantsminda', published: true,
