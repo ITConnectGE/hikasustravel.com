@@ -959,6 +959,12 @@ export const sites = [
     image: '/images/files/georgia-home.jpg',
   },
   {
+    slug: 'borjomi-central-park', name: 'Borjomi Central Park',
+    parentType: 'city', parent: 'borjomi', published: true,
+    seoKey: 'borjomiCentralPark', contentKey: 'borjomiCentralPark',
+    image: '/images/files/georgia-home.jpg',
+  },
+  {
     slug: 'vani-archaeological-museum', name: 'Vani Archaeological Museum',
     parentType: 'region', parent: 'imereti', published: true,
     seoKey: 'vaniArchaeologicalMuseum', contentKey: 'vaniArchaeologicalMuseum',
