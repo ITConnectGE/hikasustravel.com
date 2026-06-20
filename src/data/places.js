@@ -947,6 +947,12 @@ export const sites = [
     image: '/images/files/georgia-home.jpg',
   },
   {
+    slug: 'abastumani-observatory', name: 'Abastumani Astrophysical Observatory',
+    parentType: 'region', parent: 'samtskhe-javakheti', published: true,
+    seoKey: 'abastumaniObservatory', contentKey: 'abastumaniObservatory',
+    image: '/images/files/georgia-home.jpg',
+  },
+  {
     slug: 'vani-archaeological-museum', name: 'Vani Archaeological Museum',
     parentType: 'region', parent: 'imereti', published: true,
     seoKey: 'vaniArchaeologicalMuseum', contentKey: 'vaniArchaeologicalMuseum',
