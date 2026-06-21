@@ -16,6 +16,12 @@ import { load } from 'cheerio'
 
 const __dirname = dirname(fileURLToPath(import.meta.url))
 
+// Canonical-URL helper (trailing-slash normalisation to match how the static
+// host actually serves each page).
+const { withTrailingSlash } = await import(
+  pathToFileURL(join(__dirname, '../src/utils/url.js')).href
+)
+
 // Destination registry (regions / cities / sites) — published detail pages and
 // the legacy flat-city URLs that must redirect to their new nested location.
 const { publishedDestinationPages, legacyRedirects } = await import(
@@ -190,6 +196,9 @@ const template = readFileSync(join(DIST, 'index.html'), 'utf-8')
 let fileCount = 0
 
 function writeHtml(filePath, lang, { title, description, keywords, canonical, image, ogLocale }) {
+  // Use the trailing-slash form the host serves at 200; this also flows through
+  // to the hreflang/x-default alternates and og:url derived from it below.
+  canonical = withTrailingSlash(canonical)
   const $ = load(template)
 
   // html lang
@@ -267,6 +276,7 @@ function escAttr(str) {
 // without JS follow the meta-refresh + canonical; the SPA router redirects
 // in-browser. Used for the legacy flat city URLs after the move under /cities.
 function writeRedirectStub(filePath, target) {
+  target = withTrailingSlash(target)
   const $ = load(template)
   $('head').prepend(`<meta http-equiv="refresh" content="0; url=${target}">`)
   $('link[rel="canonical"]').attr('href', target)

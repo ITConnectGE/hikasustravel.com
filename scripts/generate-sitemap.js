@@ -4,6 +4,11 @@ import { dirname, join } from 'path'
 
 const __dirname = dirname(fileURLToPath(import.meta.url))
 
+// Canonical-URL helper (trailing-slash form matching how the host serves pages).
+const { withTrailingSlash } = await import(
+  pathToFileURL(join(__dirname, '../src/utils/url.js')).href
+)
+
 // Published destination detail pages (regions / cities / sites) from the registry.
 const { publishedDestinationPages } = await import(
   pathToFileURL(join(__dirname, '../src/data/places.js')).href
@@ -81,19 +86,19 @@ const urlEntries = []
 
 for (const lang of languages) {
   for (const { path, changefreq, priority } of allPaths) {
-    const loc = path
+    const loc = withTrailingSlash(path
       ? `${SITE_URL}/${lang}/${path}`
-      : `${SITE_URL}/${lang}`
+      : `${SITE_URL}/${lang}`)
 
     // Build hreflang alternates
     const hreflangs = languages.map(altLang => {
-      const altUrl = path
+      const altUrl = withTrailingSlash(path
         ? `${SITE_URL}/${altLang}/${path}`
-        : `${SITE_URL}/${altLang}`
+        : `${SITE_URL}/${altLang}`)
       return `      <xhtml:link rel="alternate" hreflang="${altLang}" href="${altUrl}" />`
     })
     // x-default points to English
-    const xDefaultUrl = path ? `${SITE_URL}/en/${path}` : `${SITE_URL}/en`
+    const xDefaultUrl = withTrailingSlash(path ? `${SITE_URL}/en/${path}` : `${SITE_URL}/en`)
     hreflangs.push(`      <xhtml:link rel="alternate" hreflang="x-default" href="${xDefaultUrl}" />`)
 
     urlEntries.push({ loc, lastmod: today, changefreq, priority, hreflangs })

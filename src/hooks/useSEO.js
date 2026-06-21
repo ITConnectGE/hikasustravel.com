@@ -1,4 +1,5 @@
 import { useEffect } from 'react'
+import { withTrailingSlash, normalizeJsonLdUrls } from '../utils/url'
 
 const SITE_URL = 'https://www.hikasustravel.com'
 
@@ -44,8 +45,9 @@ export default function useSEO({ title, description, keywords, lang = 'en', path
     // Meta keywords
     setMeta('keywords', keywords)
 
-    // Canonical
-    const canonical = `${SITE_URL}/${lang}${path ? `/${path}` : ''}`
+    // Canonical — trailing-slash form matches the URL the host actually serves
+    // (200), instead of the slashless form that 301-redirects to it.
+    const canonical = withTrailingSlash(`${SITE_URL}/${lang}${path ? `/${path}` : ''}`)
     setLink('canonical', canonical)
 
     // Open Graph
@@ -78,7 +80,7 @@ export default function useSEO({ title, description, keywords, lang = 'en', path
         scriptEl.setAttribute('data-seo-jsonld', '')
         document.head.appendChild(scriptEl)
       }
-      scriptEl.textContent = JSON.stringify(jsonLd)
+      scriptEl.textContent = JSON.stringify(normalizeJsonLdUrls(jsonLd))
     } else {
       scriptEl?.remove()
     }
