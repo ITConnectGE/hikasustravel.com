@@ -819,6 +819,12 @@ export const sites = [
     image: '/images/files/georgia-home.jpg',
   },
   {
+    slug: 'dezerter-bazaar', name: 'Dezerter Bazaar',
+    parentType: 'city', parent: 'tbilisi', published: true,
+    seoKey: 'dezerterBazaar', contentKey: 'dezerterBazaar',
+    image: '/images/files/georgia-home.jpg',
+  },
+  {
     slug: 'bridge-of-peace', name: 'The Bridge of Peace',
     parentType: 'city', parent: 'tbilisi', published: true,
     seoKey: 'bridgeOfPeace', contentKey: 'bridgeOfPeace',
