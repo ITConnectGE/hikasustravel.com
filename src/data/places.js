@@ -837,6 +837,12 @@ export const sites = [
     image: '/images/files/georgia-home.jpg',
   },
   {
+    slug: 'great-synagogue-tbilisi', name: 'The Great Synagogue of Tbilisi',
+    parentType: 'city', parent: 'tbilisi', published: true,
+    seoKey: 'greatSynagogue', contentKey: 'greatSynagogue',
+    image: '/images/files/georgia-home.jpg',
+  },
+  {
     slug: 'bridge-of-peace', name: 'The Bridge of Peace',
     parentType: 'city', parent: 'tbilisi', published: true,
     seoKey: 'bridgeOfPeace', contentKey: 'bridgeOfPeace',
