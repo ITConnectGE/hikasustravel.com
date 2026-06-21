@@ -1017,6 +1017,12 @@ export const sites = [
     image: '/images/files/georgia-home.jpg',
   },
   {
+    slug: 'lamaria-church', name: 'Lamaria Church',
+    parentType: 'city', parent: 'ushguli', published: true,
+    seoKey: 'lamariaChurch', contentKey: 'lamariaChurch',
+    image: '/images/files/georgia-home.jpg',
+  },
+  {
     slug: 'katskhi-pillar', name: 'Katskhi Pillar',
     parentType: 'region', parent: 'imereti', published: true,
     seoKey: 'katskhiPillar', contentKey: 'katskhiPillar',
