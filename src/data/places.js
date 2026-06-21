@@ -825,6 +825,12 @@ export const sites = [
     image: '/images/files/georgia-home.jpg',
   },
   {
+    slug: 'dry-bridge-market', name: 'The Dry Bridge Market',
+    parentType: 'city', parent: 'tbilisi', published: true,
+    seoKey: 'dryBridgeMarket', contentKey: 'dryBridgeMarket',
+    image: '/images/files/georgia-home.jpg',
+  },
+  {
     slug: 'bridge-of-peace', name: 'The Bridge of Peace',
     parentType: 'city', parent: 'tbilisi', published: true,
     seoKey: 'bridgeOfPeace', contentKey: 'bridgeOfPeace',
