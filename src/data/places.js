@@ -1005,6 +1005,12 @@ export const sites = [
     image: '/images/files/georgia-home.jpg',
   },
   {
+    slug: 'mikheil-khergiani-house-museum', name: 'Mikheil Khergiani House Museum',
+    parentType: 'city', parent: 'mestia', published: true,
+    seoKey: 'mikheilKhergianiHouseMuseum', contentKey: 'mikheilKhergianiHouseMuseum',
+    image: '/images/files/georgia-home.jpg',
+  },
+  {
     slug: 'katskhi-pillar', name: 'Katskhi Pillar',
     parentType: 'region', parent: 'imereti', published: true,
     seoKey: 'katskhiPillar', contentKey: 'katskhiPillar',
