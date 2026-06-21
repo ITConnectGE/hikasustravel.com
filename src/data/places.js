@@ -999,6 +999,12 @@ export const sites = [
     image: '/images/files/georgia-home.jpg',
   },
   {
+    slug: 'chalaadi-glacier', name: 'Chalaadi Glacier',
+    parentType: 'region', parent: 'svaneti', published: true,
+    seoKey: 'chalaadiGlacier', contentKey: 'chalaadiGlacier',
+    image: '/images/files/georgia-home.jpg',
+  },
+  {
     slug: 'katskhi-pillar', name: 'Katskhi Pillar',
     parentType: 'region', parent: 'imereti', published: true,
     seoKey: 'katskhiPillar', contentKey: 'katskhiPillar',
