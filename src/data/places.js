@@ -789,6 +789,12 @@ export const sites = [
   },
   { slug: 'narikala-fortress', name: 'Narikala Fortress', parentType: 'city', parent: 'tbilisi', published: false },
   {
+    slug: 'abanotubani-sulfur-baths', name: 'Abanotubani Sulfur Baths',
+    parentType: 'city', parent: 'tbilisi', published: true,
+    seoKey: 'abanotubaniSulfurBaths', contentKey: 'abanotubaniSulfurBaths',
+    image: '/images/files/georgia-home.jpg',
+  },
+  {
     slug: 'jvari-monastery', name: 'Jvari Monastery',
     parentType: 'city', parent: 'mtskheta', published: true,
     seoKey: 'jvariMonastery', contentKey: 'jvariMonastery',
