@@ -1011,6 +1011,12 @@ export const sites = [
     image: '/images/files/georgia-home.jpg',
   },
   {
+    slug: 'svaneti-museum-history-ethnography', name: 'Svaneti Museum of History and Ethnography',
+    parentType: 'city', parent: 'mestia', published: true,
+    seoKey: 'svanetiMuseumHistoryEthnography', contentKey: 'svanetiMuseumHistoryEthnography',
+    image: '/images/files/georgia-home.jpg',
+  },
+  {
     slug: 'koruldi-lakes', name: 'Koruldi Lakes',
     parentType: 'region', parent: 'svaneti', published: true,
     seoKey: 'koruldiLakes', contentKey: 'koruldiLakes',
