@@ -1023,6 +1023,12 @@ export const sites = [
     image: '/images/files/georgia-home.jpg',
   },
   {
+    slug: 'mount-ushba', name: 'Mount Ushba',
+    parentType: 'region', parent: 'svaneti', published: true,
+    seoKey: 'mountUshba', contentKey: 'mountUshba',
+    image: '/images/files/georgia-home.jpg',
+  },
+  {
     slug: 'tetnuldi-ski-resort', name: 'Tetnuldi Ski Resort',
     parentType: 'region', parent: 'svaneti', published: true,
     seoKey: 'tetnuldiSkiResort', contentKey: 'tetnuldiSkiResort',
