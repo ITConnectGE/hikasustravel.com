@@ -115,15 +115,18 @@ export default function SitePage() {
         primaryNode,
         {
           '@type': 'BreadcrumbList',
-          itemListElement: trail.map((c, i) => {
-            const li = { '@type': 'ListItem', position: i + 1, name: c.name }
-            // Linked crumbs carry their URL; the current page (last) uses its own
-            // URL; a non-linked intermediate crumb (e.g. an unpublished region)
-            // omits `item` rather than pointing at a dead/duplicate URL.
-            if (c.to) li.item = `${SITE_URL}/${lang}${c.to === '/' ? '' : c.to}`
-            else if (i === trail.length - 1) li.item = url
-            return li
-          }),
+          // Every ListItem must carry an `item` URL — Google flags a non-final
+          // breadcrumb entry without one as an "Item: N/A" structured-data error
+          // (which previously affected region-parented places, whose parent
+          // region landing is unpublished and so has no link). Linked crumbs use
+          // their own URL; a non-linked crumb falls back to the current page URL,
+          // matching CityPage/RegionPage/ThingsToDoCityPage.
+          itemListElement: trail.map((c, i) => ({
+            '@type': 'ListItem',
+            position: i + 1,
+            name: c.name,
+            item: c.to ? `${SITE_URL}/${lang}${c.to === '/' ? '' : c.to}` : url,
+          })),
         },
         {
           '@type': 'FAQPage',
