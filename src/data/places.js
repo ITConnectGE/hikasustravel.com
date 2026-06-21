@@ -787,7 +787,12 @@ export const sites = [
     seoKey: 'urekiBeach', contentKey: 'urekiBeach',
     image: '/images/files/georgia-home.jpg',
   },
-  { slug: 'narikala-fortress', name: 'Narikala Fortress', parentType: 'city', parent: 'tbilisi', published: false },
+  {
+    slug: 'narikala-fortress', name: 'Narikala Fortress',
+    parentType: 'city', parent: 'tbilisi', published: true,
+    seoKey: 'narikalaFortress', contentKey: 'narikalaFortress',
+    image: '/images/files/georgia-home.jpg',
+  },
   {
     slug: 'abanotubani-sulfur-baths', name: 'Abanotubani Sulfur Baths',
     parentType: 'city', parent: 'tbilisi', published: true,
