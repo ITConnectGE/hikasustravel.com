@@ -794,6 +794,12 @@ export const sites = [
     image: '/images/files/georgia-home.jpg',
   },
   {
+    slug: 'national-botanical-garden-of-georgia', name: 'National Botanical Garden of Georgia',
+    parentType: 'city', parent: 'tbilisi', published: true,
+    seoKey: 'nationalBotanicalGarden', contentKey: 'nationalBotanicalGarden',
+    image: '/images/files/georgia-home.jpg',
+  },
+  {
     slug: 'abanotubani-sulfur-baths', name: 'Abanotubani Sulfur Baths',
     parentType: 'city', parent: 'tbilisi', published: true,
     seoKey: 'abanotubaniSulfurBaths', contentKey: 'abanotubaniSulfurBaths',
