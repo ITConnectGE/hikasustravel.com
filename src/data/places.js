@@ -1011,6 +1011,12 @@ export const sites = [
     image: '/images/files/georgia-home.jpg',
   },
   {
+    slug: 'koruldi-lakes', name: 'Koruldi Lakes',
+    parentType: 'region', parent: 'svaneti', published: true,
+    seoKey: 'koruldiLakes', contentKey: 'koruldiLakes',
+    image: '/images/files/georgia-home.jpg',
+  },
+  {
     slug: 'katskhi-pillar', name: 'Katskhi Pillar',
     parentType: 'region', parent: 'imereti', published: true,
     seoKey: 'katskhiPillar', contentKey: 'katskhiPillar',
