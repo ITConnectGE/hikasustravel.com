@@ -807,6 +807,12 @@ export const sites = [
     image: '/images/files/georgia-home.jpg',
   },
   {
+    slug: 'bazari-orbeliani', name: 'Bazari Orbeliani',
+    parentType: 'city', parent: 'tbilisi', published: true,
+    seoKey: 'bazariOrbeliani', contentKey: 'bazariOrbeliani',
+    image: '/images/files/georgia-home.jpg',
+  },
+  {
     slug: 'jvari-monastery', name: 'Jvari Monastery',
     parentType: 'city', parent: 'mtskheta', published: true,
     seoKey: 'jvariMonastery', contentKey: 'jvariMonastery',
