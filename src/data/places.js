@@ -825,6 +825,12 @@ export const sites = [
     image: '/images/files/georgia-home.jpg',
   },
   {
+    slug: 'chronicles-of-georgia', name: 'The Chronicles of Georgia',
+    parentType: 'city', parent: 'tbilisi', published: true,
+    seoKey: 'chroniclesOfGeorgia', contentKey: 'chroniclesOfGeorgia',
+    image: '/images/files/georgia-home.jpg',
+  },
+  {
     slug: 'jvari-monastery', name: 'Jvari Monastery',
     parentType: 'city', parent: 'mtskheta', published: true,
     seoKey: 'jvariMonastery', contentKey: 'jvariMonastery',
