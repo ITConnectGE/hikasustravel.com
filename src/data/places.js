@@ -818,7 +818,12 @@ export const sites = [
     seoKey: 'russiaGeorgiaFriendshipMonument', contentKey: 'russiaGeorgiaFriendshipMonument',
     image: '/images/files/georgia-home.jpg',
   },
-  { slug: 'uplistsikhe-cave-town', name: 'Uplistsikhe Cave Town', parentType: 'region', parent: 'shida-kartli', published: false },
+  {
+    slug: 'uplistsikhe', name: 'Uplistsikhe',
+    parentType: 'region', parent: 'shida-kartli', published: true,
+    seoKey: 'uplistsikhe', contentKey: 'uplistsikhe',
+    image: '/images/files/georgia-home.jpg',
+  },
   {
     slug: 'ateni-sioni', name: 'Ateni Sioni',
     parentType: 'region', parent: 'shida-kartli', published: true,
