@@ -795,6 +795,12 @@ export const sites = [
     image: '/images/files/georgia-home.jpg',
   },
   {
+    slug: 'anchiskhati-basilica', name: 'Anchiskhati Basilica',
+    parentType: 'city', parent: 'tbilisi', published: true,
+    seoKey: 'anchiskhatiBasilica', contentKey: 'anchiskhatiBasilica',
+    image: '/images/files/georgia-home.jpg',
+  },
+  {
     slug: 'jvari-monastery', name: 'Jvari Monastery',
     parentType: 'city', parent: 'mtskheta', published: true,
     seoKey: 'jvariMonastery', contentKey: 'jvariMonastery',
