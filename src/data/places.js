@@ -1017,6 +1017,12 @@ export const sites = [
     image: '/images/files/georgia-home.jpg',
   },
   {
+    slug: 'cross-over-mestia', name: 'The Cross Over Mestia',
+    parentType: 'region', parent: 'svaneti', published: true,
+    seoKey: 'crossOverMestia', contentKey: 'crossOverMestia',
+    image: '/images/files/georgia-home.jpg',
+  },
+  {
     slug: 'lamaria-church', name: 'Lamaria Church',
     parentType: 'city', parent: 'ushguli', published: true,
     seoKey: 'lamariaChurch', contentKey: 'lamariaChurch',
