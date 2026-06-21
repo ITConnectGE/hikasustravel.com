@@ -795,6 +795,12 @@ export const sites = [
     image: '/images/files/georgia-home.jpg',
   },
   {
+    slug: 'chreli-abano', name: 'Chreli Abano (Orbeliani Baths)',
+    parentType: 'city', parent: 'tbilisi', published: true,
+    seoKey: 'chreliAbano', contentKey: 'chreliAbano',
+    image: '/images/files/georgia-home.jpg',
+  },
+  {
     slug: 'anchiskhati-basilica', name: 'Anchiskhati Basilica',
     parentType: 'city', parent: 'tbilisi', published: true,
     seoKey: 'anchiskhatiBasilica', contentKey: 'anchiskhatiBasilica',
