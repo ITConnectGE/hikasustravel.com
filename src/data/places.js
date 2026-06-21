@@ -1023,6 +1023,12 @@ export const sites = [
     image: '/images/files/georgia-home.jpg',
   },
   {
+    slug: 'shkhara-glacier', name: 'Shkhara Glacier',
+    parentType: 'region', parent: 'svaneti', published: true,
+    seoKey: 'shkharaGlacier', contentKey: 'shkharaGlacier',
+    image: '/images/files/georgia-home.jpg',
+  },
+  {
     slug: 'lamaria-church', name: 'Lamaria Church',
     parentType: 'city', parent: 'ushguli', published: true,
     seoKey: 'lamariaChurch', contentKey: 'lamariaChurch',
