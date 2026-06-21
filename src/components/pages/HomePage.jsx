@@ -26,7 +26,7 @@ export default function HomePage() {
   return (
     <>
       <HeroSection
-        image="/images/files/georgia-home.jpg"
+        image="/images/files/Sighnaghi.jpg"
         title={t('home.heroTitle')}
       />
 
