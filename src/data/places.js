@@ -867,6 +867,12 @@ export const sites = [
     image: '/images/files/georgia-home.jpg',
   },
   {
+    slug: 'mtatsminda-park', name: 'Mtatsminda Park',
+    parentType: 'city', parent: 'tbilisi', published: true,
+    seoKey: 'mtatsmindaPark', contentKey: 'mtatsmindaPark',
+    image: '/images/files/georgia-home.jpg',
+  },
+  {
     slug: 'bridge-of-peace', name: 'The Bridge of Peace',
     parentType: 'city', parent: 'tbilisi', published: true,
     seoKey: 'bridgeOfPeace', contentKey: 'bridgeOfPeace',
