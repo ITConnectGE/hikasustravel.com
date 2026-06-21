@@ -862,6 +862,12 @@ export const sites = [
     image: '/images/files/georgia-home.jpg',
   },
   {
+    slug: 'stalin-museum-gori', name: 'Stalin Museum',
+    parentType: 'city', parent: 'gori', published: true,
+    seoKey: 'stalinMuseumGori', contentKey: 'stalinMuseumGori',
+    image: '/images/files/georgia-home.jpg',
+  },
+  {
     slug: 'prometheus-cave', name: 'Prometheus Cave',
     parentType: 'region', parent: 'imereti', published: true,
     seoKey: 'prometheusCave', contentKey: 'prometheusCave',
