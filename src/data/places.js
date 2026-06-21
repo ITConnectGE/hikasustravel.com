@@ -1023,6 +1023,12 @@ export const sites = [
     image: '/images/files/georgia-home.jpg',
   },
   {
+    slug: 'tetnuldi-ski-resort', name: 'Tetnuldi Ski Resort',
+    parentType: 'region', parent: 'svaneti', published: true,
+    seoKey: 'tetnuldiSkiResort', contentKey: 'tetnuldiSkiResort',
+    image: '/images/files/georgia-home.jpg',
+  },
+  {
     slug: 'cross-over-mestia', name: 'The Cross Over Mestia',
     parentType: 'region', parent: 'svaneti', published: true,
     seoKey: 'crossOverMestia', contentKey: 'crossOverMestia',
