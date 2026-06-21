@@ -1023,6 +1023,12 @@ export const sites = [
     image: '/images/files/georgia-home.jpg',
   },
   {
+    slug: 'margiani-house-museum', name: 'Margiani House Museum',
+    parentType: 'city', parent: 'mestia', published: true,
+    seoKey: 'margianiHouseMuseum', contentKey: 'margianiHouseMuseum',
+    image: '/images/files/georgia-home.jpg',
+  },
+  {
     slug: 'katskhi-pillar', name: 'Katskhi Pillar',
     parentType: 'region', parent: 'imereti', published: true,
     seoKey: 'katskhiPillar', contentKey: 'katskhiPillar',
