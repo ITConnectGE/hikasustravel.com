@@ -1029,6 +1029,12 @@ export const sites = [
     image: '/images/files/georgia-home.jpg',
   },
   {
+    slug: 'svan-towers', name: 'Svan Towers',
+    parentType: 'region', parent: 'svaneti', published: true,
+    seoKey: 'svanTowers', contentKey: 'svanTowers',
+    image: '/images/files/georgia-home.jpg',
+  },
+  {
     slug: 'lamaria-church', name: 'Lamaria Church',
     parentType: 'city', parent: 'ushguli', published: true,
     seoKey: 'lamariaChurch', contentKey: 'lamariaChurch',
