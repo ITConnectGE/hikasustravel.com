@@ -453,13 +453,13 @@ export const sites = [
     slug: 'rustavi-central-park', name: 'Rustavi Central Park',
     parentType: 'city', parent: 'rustavi', published: true,
     seoKey: 'rustaviCentralPark', contentKey: 'rustaviCentralPark',
-    image: '/images/files/georgia-home.jpg',
+    image: '/images/files/rustavi-central-park-lake.jpg',
   },
   {
     slug: 'rustavi-fortress', name: 'Rustavi Fortress',
     parentType: 'city', parent: 'rustavi', published: true,
     seoKey: 'rustaviFortress', contentKey: 'rustaviFortress',
-    image: '/images/files/georgia-home.jpg',
+    image: '/images/files/rustavi-fortress.jpg',
   },
   {
     slug: 'rustavi-history-museum', name: 'The Rustavi History Museum',
