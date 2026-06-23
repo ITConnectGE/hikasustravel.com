@@ -806,6 +806,12 @@ export const sites = [
     image: '/images/files/georgia-home.jpg',
   },
   {
+    slug: 'parliament-of-georgia', name: 'Parliament of Georgia',
+    parentType: 'city', parent: 'tbilisi', published: true,
+    seoKey: 'parliamentOfGeorgia', contentKey: 'parliamentOfGeorgia',
+    image: '/images/files/georgia-home.jpg',
+  },
+  {
     slug: 'abanotubani-sulfur-baths', name: 'Abanotubani Sulfur Baths',
     parentType: 'city', parent: 'tbilisi', published: true,
     seoKey: 'abanotubaniSulfurBaths', contentKey: 'abanotubaniSulfurBaths',
