@@ -10,6 +10,7 @@ import LanguagesPage from './components/pages/LanguagesPage'
 import AirportGuidePage from './components/pages/AirportGuidePage'
 import TbilisiAirportGuidePage from './components/pages/TbilisiAirportGuidePage'
 import TbilisiMetroPage from './components/pages/TbilisiMetroPage'
+import TbilisiRailwayStationPage from './components/pages/TbilisiRailwayStationPage'
 import DestinationsPage from './components/pages/DestinationsPage'
 import { RegionsHubPage, CitiesHubPage, PlacesToVisitHubPage } from './components/pages/DestinationHubs'
 import CityPage from './components/pages/CityPage'
@@ -46,6 +47,7 @@ export default function App() {
           <Route path="kutaisi-international-airport" element={<AirportGuidePage />} />
           <Route path="tbilisi-international-airport" element={<TbilisiAirportGuidePage />} />
           <Route path="tbilisi-metro" element={<TbilisiMetroPage />} />
+          <Route path="tbilisi-railway-station" element={<TbilisiRailwayStationPage />} />
           {/* Georgia destinations tree. Static segments (regions/cities/
               places-to-visit) outrank the dynamic :citySlug, so hubs resolve. */}
           <Route path="georgia" element={<DestinationsPage />} />
