@@ -812,6 +812,12 @@ export const sites = [
     image: '/images/files/georgia-home.jpg',
   },
   {
+    slug: 'rezo-gabriadze-marionette-theatre', name: 'Rezo Gabriadze Marionette Theatre and Clock Tower',
+    parentType: 'city', parent: 'tbilisi', published: true,
+    seoKey: 'gabriadzeMarionetteTheatre', contentKey: 'gabriadzeMarionetteTheatre',
+    image: '/images/files/georgia-home.jpg',
+  },
+  {
     slug: 'abanotubani-sulfur-baths', name: 'Abanotubani Sulfur Baths',
     parentType: 'city', parent: 'tbilisi', published: true,
     seoKey: 'abanotubaniSulfurBaths', contentKey: 'abanotubaniSulfurBaths',
