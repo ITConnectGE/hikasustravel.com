@@ -854,6 +854,12 @@ export const sites = [
     image: '/images/files/georgia-home.jpg',
   },
   {
+    slug: 'tbilisi-funicular', name: 'Tbilisi Funicular',
+    parentType: 'city', parent: 'tbilisi', published: true,
+    seoKey: 'tbilisiFunicular', contentKey: 'tbilisiFunicular',
+    image: '/images/files/georgia-home.jpg',
+  },
+  {
     slug: 'abanotubani-sulfur-baths', name: 'Abanotubani Sulfur Baths',
     parentType: 'city', parent: 'tbilisi', published: true,
     seoKey: 'abanotubaniSulfurBaths', contentKey: 'abanotubaniSulfurBaths',
