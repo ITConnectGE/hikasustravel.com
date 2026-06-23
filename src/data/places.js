@@ -854,6 +854,12 @@ export const sites = [
     image: '/images/files/georgia-home.jpg',
   },
   {
+    slug: 'tbilisi-juma-mosque', name: 'Tbilisi Juma Mosque',
+    parentType: 'city', parent: 'tbilisi', published: true,
+    seoKey: 'jumaMosque', contentKey: 'jumaMosque',
+    image: '/images/files/georgia-home.jpg',
+  },
+  {
     slug: 'tbilisi-funicular', name: 'Tbilisi Funicular',
     parentType: 'city', parent: 'tbilisi', published: true,
     seoKey: 'tbilisiFunicular', contentKey: 'tbilisiFunicular',
