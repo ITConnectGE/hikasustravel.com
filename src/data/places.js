@@ -824,6 +824,12 @@ export const sites = [
     image: '/images/files/georgia-home.jpg',
   },
   {
+    slug: 'rike-narikala-cable-car', name: 'Rike–Narikala Cable Car',
+    parentType: 'city', parent: 'tbilisi', published: true,
+    seoKey: 'rikeNarikalaCableCar', contentKey: 'rikeNarikalaCableCar',
+    image: '/images/files/georgia-home.jpg',
+  },
+  {
     slug: 'abanotubani-sulfur-baths', name: 'Abanotubani Sulfur Baths',
     parentType: 'city', parent: 'tbilisi', published: true,
     seoKey: 'abanotubaniSulfurBaths', contentKey: 'abanotubaniSulfurBaths',
