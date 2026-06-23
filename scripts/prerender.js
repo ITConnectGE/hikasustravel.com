@@ -167,6 +167,7 @@ const seoPageMap = {
   'languages-of-georgia': 'languagesGuide',
   'kutaisi-international-airport': 'airportGuide',
   'tbilisi-international-airport': 'tbilisiAirportGuide',
+  'tbilisi-metro': 'tbilisiMetro',
   'georgia': 'destinations',
   'georgia/regions': 'destinationsRegions',
   'georgia/cities': 'destinationsCities',
@@ -188,6 +189,7 @@ const seoPageMap = {
 const staticPageImages = {
   'kutaisi-international-airport': '/images/files/kutaisi-airport.jpg',
   'tbilisi-international-airport': '/images/files/tbilisi.jpg',
+  'tbilisi-metro': '/images/files/tbilisi-metekhi-mtatsminda.jpg',
 }
 
 // ---------------------------------------------------------------------------
