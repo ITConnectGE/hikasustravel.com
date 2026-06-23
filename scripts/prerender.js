@@ -166,6 +166,7 @@ const seoPageMap = {
   'georgia-visa-entry-requirements': 'visaGuide',
   'languages-of-georgia': 'languagesGuide',
   'kutaisi-international-airport': 'airportGuide',
+  'tbilisi-international-airport': 'tbilisiAirportGuide',
   'georgia': 'destinations',
   'georgia/regions': 'destinationsRegions',
   'georgia/cities': 'destinationsCities',
@@ -186,6 +187,7 @@ const seoPageMap = {
 // Per-path og:image overrides for static pages (default is georgia-home.jpg).
 const staticPageImages = {
   'kutaisi-international-airport': '/images/files/kutaisi-airport.jpg',
+  'tbilisi-international-airport': '/images/files/tbilisi.jpg',
 }
 
 // ---------------------------------------------------------------------------
