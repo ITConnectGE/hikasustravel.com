@@ -848,6 +848,12 @@ export const sites = [
     image: '/images/files/georgia-home.jpg',
   },
   {
+    slug: 'tamada-statue', name: 'Tamada (Toastmaster) Statue',
+    parentType: 'city', parent: 'tbilisi', published: true,
+    seoKey: 'tamadaStatue', contentKey: 'tamadaStatue',
+    image: '/images/files/georgia-home.jpg',
+  },
+  {
     slug: 'abanotubani-sulfur-baths', name: 'Abanotubani Sulfur Baths',
     parentType: 'city', parent: 'tbilisi', published: true,
     seoKey: 'abanotubaniSulfurBaths', contentKey: 'abanotubaniSulfurBaths',
