@@ -884,6 +884,12 @@ export const sites = [
     image: '/images/files/georgia-home.jpg',
   },
   {
+    slug: 'georgian-national-museum', name: 'Georgian National Museum (Simon Janashia Museum)',
+    parentType: 'city', parent: 'tbilisi', published: true,
+    seoKey: 'georgianNationalMuseum', contentKey: 'georgianNationalMuseum',
+    image: '/images/files/georgia-home.jpg',
+  },
+  {
     slug: 'tbilisi-funicular', name: 'Tbilisi Funicular',
     parentType: 'city', parent: 'tbilisi', published: true,
     seoKey: 'tbilisiFunicular', contentKey: 'tbilisiFunicular',
