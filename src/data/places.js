@@ -860,6 +860,12 @@ export const sites = [
     image: '/images/files/georgia-home.jpg',
   },
   {
+    slug: 'tbilisi-zoo', name: 'Tbilisi Zoo',
+    parentType: 'city', parent: 'tbilisi', published: true,
+    seoKey: 'tbilisiZoo', contentKey: 'tbilisiZoo',
+    image: '/images/files/georgia-home.jpg',
+  },
+  {
     slug: 'tbilisi-funicular', name: 'Tbilisi Funicular',
     parentType: 'city', parent: 'tbilisi', published: true,
     seoKey: 'tbilisiFunicular', contentKey: 'tbilisiFunicular',
