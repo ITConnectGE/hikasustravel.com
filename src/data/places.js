@@ -872,6 +872,12 @@ export const sites = [
     image: '/images/files/georgia-home.jpg',
   },
   {
+    slug: 'national-centre-of-manuscripts', name: 'Korneli Kekelidze Georgian National Centre of Manuscripts',
+    parentType: 'city', parent: 'tbilisi', published: true,
+    seoKey: 'nationalCentreOfManuscripts', contentKey: 'nationalCentreOfManuscripts',
+    image: '/images/files/georgia-home.jpg',
+  },
+  {
     slug: 'tbilisi-funicular', name: 'Tbilisi Funicular',
     parentType: 'city', parent: 'tbilisi', published: true,
     seoKey: 'tbilisiFunicular', contentKey: 'tbilisiFunicular',
