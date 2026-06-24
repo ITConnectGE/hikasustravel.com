@@ -866,6 +866,12 @@ export const sites = [
     image: '/images/files/georgia-home.jpg',
   },
   {
+    slug: 'georgian-museum-of-fine-arts', name: 'Georgian Museum of Fine Arts',
+    parentType: 'city', parent: 'tbilisi', published: true,
+    seoKey: 'georgianMuseumFineArts', contentKey: 'georgianMuseumFineArts',
+    image: '/images/files/georgia-home.jpg',
+  },
+  {
     slug: 'tbilisi-funicular', name: 'Tbilisi Funicular',
     parentType: 'city', parent: 'tbilisi', published: true,
     seoKey: 'tbilisiFunicular', contentKey: 'tbilisiFunicular',
