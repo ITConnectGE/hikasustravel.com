@@ -878,6 +878,12 @@ export const sites = [
     image: '/images/files/georgia-home.jpg',
   },
   {
+    slug: 'museum-history-georgian-jews', name: 'Museum of History of Georgian Jews (David Baazov Museum)',
+    parentType: 'city', parent: 'tbilisi', published: true,
+    seoKey: 'museumHistoryGeorgianJews', contentKey: 'museumHistoryGeorgianJews',
+    image: '/images/files/georgia-home.jpg',
+  },
+  {
     slug: 'tbilisi-funicular', name: 'Tbilisi Funicular',
     parentType: 'city', parent: 'tbilisi', published: true,
     seoKey: 'tbilisiFunicular', contentKey: 'tbilisiFunicular',
