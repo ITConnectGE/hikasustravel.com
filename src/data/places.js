@@ -890,6 +890,12 @@ export const sites = [
     image: '/images/files/georgia-home.jpg',
   },
   {
+    slug: 'open-air-museum-of-ethnography', name: 'Tbilisi Open Air Museum of Ethnography (Giorgi Chitaia Museum)',
+    parentType: 'city', parent: 'tbilisi', published: true,
+    seoKey: 'openAirMuseumEthnography', contentKey: 'openAirMuseumEthnography',
+    image: '/images/files/georgia-home.jpg',
+  },
+  {
     slug: 'tbilisi-funicular', name: 'Tbilisi Funicular',
     parentType: 'city', parent: 'tbilisi', published: true,
     seoKey: 'tbilisiFunicular', contentKey: 'tbilisiFunicular',
