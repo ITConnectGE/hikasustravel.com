@@ -57,6 +57,7 @@ export function PlacesToVisitHubPage() {
   const entries = sites.map((s) => ({
     slug: s.slug,
     fallbackName: s.name,
+    seoKey: s.seoKey,
     published: s.published,
     to: s.published ? sitePath(s) : null,
   }))
@@ -70,6 +71,7 @@ export function PlacesToVisitHubPage() {
       currentLabelKey="nav.placesToVisit"
       ctaKey="destinations.explorePlace"
       sortByName
+      seoFallback
     />
   )
 }

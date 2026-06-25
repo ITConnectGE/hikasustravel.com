@@ -12,6 +12,12 @@ import enPages from '../../i18n/locales/en/pages.json'
 
 const SITE_URL = 'https://www.hikasustravel.com'
 
+// Derive a clean, translated card title from a site's per-language SEO title,
+// e.g. "Festung Ujarma: königliche Hochburg …" -> "Festung Ujarma" and
+// "Forteresse d'Ujarma : bastion …" -> "Forteresse d'Ujarma". Cuts at the first
+// tagline / locator separator so marketing and ", City"/", Country" suffixes drop off.
+const seoCardName = (title) => (title || '').split(/[|:]/)[0].split(',')[0].trim()
+
 /**
  * Generic sub-hub page (Regions / Cities / Places to Visit).
  *
@@ -29,6 +35,7 @@ export default function DestinationHub({
   currentLabelKey,
   ctaKey,
   sortByName = false,
+  seoFallback = false,
 }) {
   const t = useT()
   const { lang } = useLang()
@@ -46,10 +53,20 @@ export default function DestinationHub({
       const list = entries.map((e) => {
         const localized = items[e.slug] || {}
         const enLocalized = enItems[e.slug] || {}
+        // For non-English pages, fall back to the per-language SEO title and
+        // description (authored for every site) so cards show translated text
+        // instead of the English site name when there is no curated card
+        // override. English is left exactly as-is, and new sites are covered
+        // automatically since each one ships its own per-language SEO entry.
+        const seoCard = (seoFallback && lang !== 'en' && e.seoKey) ? getSEO(e.seoKey, lang) : null
         return {
           ...e,
-          name: localized.name || enLocalized.name || e.fallbackName,
-          description: localized.description || enLocalized.description || '',
+          name:
+            localized.name || enLocalized.name ||
+            (seoCard && seoCardName(seoCard.title)) || e.fallbackName,
+          description:
+            localized.description || enLocalized.description ||
+            (seoCard && seoCard.description) || '',
         }
       })
       // Places to Visit lists alphabetically by the visible (translated) title —
@@ -61,7 +78,7 @@ export default function DestinationHub({
       }
       return list
     },
-    [entries, page, pageKey, sortByName, lang],
+    [entries, page, pageKey, sortByName, seoFallback, lang],
   )
 
   const trail = [
