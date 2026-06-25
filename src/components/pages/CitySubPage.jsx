@@ -1,5 +1,5 @@
-import { useParams } from 'react-router-dom'
-import { getCity, getSite } from '../../data/places'
+import { useParams, useLocation, Navigate } from 'react-router-dom'
+import { getCity, getSite, legacyRedirects } from '../../data/places'
 import ThingsToDoCityPage from './ThingsToDoCityPage'
 import SitePage from './SitePage'
 import NotFoundPage from './NotFoundPage'
@@ -16,7 +16,8 @@ import NotFoundPage from './NotFoundPage'
  * the site slug from :sub and matches its parent against :citySlug).
  */
 export default function CitySubPage() {
-  const { citySlug, sub } = useParams()
+  const { lang, citySlug, sub } = useParams()
+  const location = useLocation()
   const city = getCity(citySlug)
 
   if (city && city.thingsToDo && sub === `things-to-do-in-${citySlug}`) {
@@ -28,6 +29,18 @@ export default function CitySubPage() {
   const site = getSite(sub)
   if (site && site.parent === citySlug) {
     return <SitePage />
+  }
+
+  // Renamed-slug redirects (the SPA mirror of the static stubs emitted by
+  // scripts/prerender.js). An old slug that no longer matches a site — e.g. the
+  // former russia-georgia-friendship-monument -> gudauri-panorama rename — is
+  // looked up in the shared registry and 301-redirected to its new URL, so old
+  // in-app links and bookmarks land on the new page instead of a 404. Query
+  // params are preserved.
+  const fromPath = `georgia/${citySlug}/${sub}`
+  const redirect = legacyRedirects().find((r) => r.from === fromPath)
+  if (redirect) {
+    return <Navigate to={`/${lang}/${redirect.to}${location.search}`} replace />
   }
 
   return <NotFoundPage />

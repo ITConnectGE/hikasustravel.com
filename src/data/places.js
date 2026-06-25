@@ -276,7 +276,7 @@ export const cities = [
     thingsToDo: {
       seoKey: 'thingsToDoKazbegiStepantsminda', contentKey: 'thingsToDoKazbegiStepantsminda', image: '/images/files/georgia-home.jpg',
       address: { addressLocality: 'Stepantsminda' },
-      attractions: ['Gergeti Trinity Church', 'Juta Valley & Chaukhi Mountains', 'Truso Valley', 'Gergeti Glacier', 'Gveleti Waterfalls', 'Dariali Gorge', 'Russia-Georgia Friendship Monument'],
+      attractions: ['Gergeti Trinity Church', 'Juta Valley & Chaukhi Mountains', 'Truso Valley', 'Gergeti Glacier', 'Gveleti Waterfalls', 'Dariali Gorge', 'Gudauri Panorama'],
     },
   },
   {
@@ -285,7 +285,7 @@ export const cities = [
     thingsToDo: {
       seoKey: 'thingsToDoGudauri', contentKey: 'thingsToDoGudauri', image: '/images/files/georgia-home.jpg',
       address: { addressLocality: 'Gudauri' },
-      attractions: ['Gudauri Ski Resort', 'Russia-Georgia Friendship Monument', 'Ananuri Fortress', 'Kazbegi (Stepantsminda)'],
+      attractions: ['Gudauri Ski Resort', 'Gudauri Panorama', 'Ananuri Fortress', 'Kazbegi (Stepantsminda)'],
     },
   },
   {
@@ -1022,7 +1022,7 @@ export const sites = [
     image: '/images/files/georgia-home.jpg',
   },
   {
-    slug: 'russia-georgia-friendship-monument', name: 'Russia–Georgia Friendship Monument',
+    slug: 'gudauri-panorama', name: 'Gudauri Panorama',
     parentType: 'city', parent: 'gudauri', published: true,
     seoKey: 'russiaGeorgiaFriendshipMonument', contentKey: 'russiaGeorgiaFriendshipMonument',
     image: '/images/files/georgia-home.jpg',
@@ -1516,6 +1516,9 @@ export function legacyRedirects() {
   for (const s of sites) if (s.published && s.parentType === 'region') {
     out.push({ from: `georgia/regions/${s.parent}/${s.slug}`, to: cleanPath(sitePath(s)) })
   }
+  // Renamed Places to Visit — old slug 301-redirects to its new home.
+  //   Russia–Georgia Friendship Monument -> Gudauri Panorama
+  out.push({ from: 'georgia/gudauri/russia-georgia-friendship-monument', to: 'georgia/gudauri/gudauri-panorama' })
   return out
 }
 
