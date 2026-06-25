@@ -69,6 +69,7 @@ export function PlacesToVisitHubPage() {
       entries={entries}
       currentLabelKey="nav.placesToVisit"
       ctaKey="destinations.explorePlace"
+      sortByName
     />
   )
 }

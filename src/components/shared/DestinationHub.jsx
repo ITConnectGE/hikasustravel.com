@@ -28,6 +28,7 @@ export default function DestinationHub({
   entries,
   currentLabelKey,
   ctaKey,
+  sortByName = false,
 }) {
   const t = useT()
   const { lang } = useLang()
@@ -42,7 +43,7 @@ export default function DestinationHub({
       // shows in every language until that card's text is translated (mirrors
       // how the detail pages fall back to English).
       const enItems = (enPages[pageKey] && enPages[pageKey].items) || {}
-      return entries.map((e) => {
+      const list = entries.map((e) => {
         const localized = items[e.slug] || {}
         const enLocalized = enItems[e.slug] || {}
         return {
@@ -51,8 +52,16 @@ export default function DestinationHub({
           description: localized.description || enLocalized.description || '',
         }
       })
+      // Places to Visit lists alphabetically by the visible (translated) title —
+      // locale-aware and case-insensitive — so every published site, including
+      // newly added ones, appears in its correct A–Z position automatically
+      // rather than in registry order. Sorting never drops an entry.
+      if (sortByName) {
+        list.sort((a, b) => a.name.localeCompare(b.name, lang, { sensitivity: 'base' }))
+      }
+      return list
     },
-    [entries, page, pageKey],
+    [entries, page, pageKey, sortByName, lang],
   )
 
   const trail = [

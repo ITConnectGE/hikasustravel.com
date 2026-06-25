@@ -608,12 +608,6 @@ export const sites = [
     image: '/images/files/gombori-pass.jpg',
   },
   {
-    slug: 'ujarma-fortress', name: 'Ujarma Fortress',
-    parentType: 'region', parent: 'kakheti', published: true,
-    seoKey: 'ujarmaFortress', contentKey: 'ujarmaFortress',
-    image: '/images/files/georgia-home.jpg',
-  },
-  {
     slug: 'giant-plane-tree-telavi', name: 'The Giant Plane Tree of Telavi',
     parentType: 'city', parent: 'telavi', published: true,
     seoKey: 'giantPlaneTreeTelavi', contentKey: 'giantPlaneTreeTelavi',
