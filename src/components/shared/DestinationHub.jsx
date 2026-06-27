@@ -53,17 +53,17 @@ export default function DestinationHub({
       const list = entries.map((e) => {
         const localized = items[e.slug] || {}
         const enLocalized = enItems[e.slug] || {}
-        // For non-English pages, fall back to the per-language SEO title and
-        // description (authored for every site) so cards show translated text
-        // instead of the English site name when there is no curated card
-        // override. English is left exactly as-is, and new sites are covered
-        // automatically since each one ships its own per-language SEO entry.
-        const seoCard = (seoFallback && lang !== 'en' && e.seoKey) ? getSEO(e.seoKey, lang) : null
+        // Fall back to the per-language SEO entry (authored for every site) so
+        // each card shows a translated one-line summary even without a curated
+        // override, and new sites are covered automatically. The title fallback
+        // is non-English only: English keeps its exact site name, while the SEO
+        // *description* now backs every language so no card is left blank.
+        const seoCard = (seoFallback && e.seoKey) ? getSEO(e.seoKey, lang) : null
         return {
           ...e,
           name:
             localized.name || enLocalized.name ||
-            (seoCard && seoCardName(seoCard.title)) || e.fallbackName,
+            (seoCard && lang !== 'en' && seoCardName(seoCard.title)) || e.fallbackName,
           description:
             localized.description || enLocalized.description ||
             (seoCard && seoCard.description) || '',
@@ -120,6 +120,25 @@ export default function DestinationHub({
 
   useSEO({ ...seo, lang, path, image: heroImage, jsonLd })
 
+  // Secondary "City, Region" / "City, Georgia" / "Region, Georgia" line for
+  // Places to Visit cards. Stable city/region IDs (set on each entry from the
+  // site's structured parent) map to the already-translated city and region
+  // names, so the facts stay identical across languages while the labels are
+  // localized. Cards without a `location` (Regions / Cities hubs) render none.
+  const cityItems = (pages.destinationsCities && pages.destinationsCities.items) || {}
+  const regionItems = (pages.destinationsRegions && pages.destinationsRegions.items) || {}
+  const enCityItems = (enPages.destinationsCities && enPages.destinationsCities.items) || {}
+  const enRegionItems = (enPages.destinationsRegions && enPages.destinationsRegions.items) || {}
+  const country = t('destinations.country')
+  const locationLabel = (loc) => {
+    if (!loc) return ''
+    const cityName = loc.cityId && ((cityItems[loc.cityId] && cityItems[loc.cityId].name) || (enCityItems[loc.cityId] && enCityItems[loc.cityId].name))
+    const regionName = loc.regionId && ((regionItems[loc.regionId] && regionItems[loc.regionId].name) || (enRegionItems[loc.regionId] && enRegionItems[loc.regionId].name))
+    if (cityName) return regionName ? `${cityName}, ${regionName}` : `${cityName}, ${country}`
+    if (regionName) return `${regionName}, ${country}`
+    return ''
+  }
+
   return (
     <>
       <HeroSection image={heroImage} title={page.heroTitle} />
@@ -138,12 +157,18 @@ export default function DestinationHub({
                   {e.published && e.to ? (
                     <LocaleLink to={e.to} className="dest-hub-card__link">
                       <h3>{e.name}</h3>
+                      {locationLabel(e.location) && (
+                        <span className="dest-hub-card__loc">{locationLabel(e.location)}</span>
+                      )}
                       {e.description && <p>{e.description}</p>}
                       {ctaKey && <span className="dest-hub-card__cta">{t(ctaKey)}</span>}
                     </LocaleLink>
                   ) : (
                     <div className="dest-hub-card__pending">
                       <h3>{e.name}</h3>
+                      {locationLabel(e.location) && (
+                        <span className="dest-hub-card__loc">{locationLabel(e.location)}</span>
+                      )}
                       {e.description && <p>{e.description}</p>}
                       <span className="dest-hub-card__soon">{t('destinations.comingSoon')}</span>
                     </div>

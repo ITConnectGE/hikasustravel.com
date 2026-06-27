@@ -6,6 +6,7 @@ import {
   regionPath,
   cityPath,
   sitePath,
+  siteLocation,
 } from '../../data/places'
 
 const HERO_IMAGE = '/images/files/tbilisi.jpg'
@@ -60,6 +61,9 @@ export function PlacesToVisitHubPage() {
     seoKey: s.seoKey,
     published: s.published,
     to: s.published ? sitePath(s) : null,
+    // Stable city/region IDs (from structured parent data) — the hub resolves
+    // them to translated labels for the secondary location line.
+    location: siteLocation(s),
   }))
   return (
     <DestinationHub

@@ -1467,6 +1467,21 @@ export const thingsToDoPath = (citySlug) => `/georgia/${citySlug}/things-to-do-i
 // (/georgia/regions/<region>/<slug>) 301-redirect here (see legacyRedirects()).
 export const sitePath = (site) => `/georgia/${site.parent}/${site.slug}`
 
+// Stable location IDs for a tourist site, derived from its structured parent
+// (never from its title or URL text). A city-parented site reports that city
+// plus the city's region; a region-parented site reports only the region. The
+// hub maps these IDs to translated city/region labels for each language, so the
+// location line stays factually identical across all languages and every future
+// site is covered automatically.
+const _cityBySlug = Object.fromEntries(cities.map((c) => [c.slug, c]))
+export function siteLocation(site) {
+  if (site.parentType === 'city') {
+    const city = _cityBySlug[site.parent]
+    return { cityId: site.parent, regionId: city ? city.region : null }
+  }
+  return { cityId: null, regionId: site.parent }
+}
+
 // ---------------------------------------------------------------------------
 // Build-pipeline helpers: published destination detail pages, plus the legacy
 // flat city URLs that must redirect to their new nested location.
