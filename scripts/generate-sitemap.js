@@ -43,6 +43,7 @@ const staticPages = [
   { path: 'tbilisi-international-airport', changefreq: 'monthly', priority: '0.6' },
   { path: 'tbilisi-metro', changefreq: 'monthly', priority: '0.6' },
   { path: 'tbilisi-railway-station', changefreq: 'monthly', priority: '0.6' },
+  { path: 'abkhazia', changefreq: 'monthly', priority: '0.5' },
   { path: 'georgia', changefreq: 'monthly', priority: '0.7' },
   { path: 'georgia/regions', changefreq: 'monthly', priority: '0.7' },
   { path: 'georgia/cities', changefreq: 'monthly', priority: '0.7' },

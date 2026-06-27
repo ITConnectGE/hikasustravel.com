@@ -169,6 +169,7 @@ const seoPageMap = {
   'tbilisi-international-airport': 'tbilisiAirportGuide',
   'tbilisi-metro': 'tbilisiMetro',
   'tbilisi-railway-station': 'tbilisiRailwayStation',
+  'abkhazia': 'abkhazia',
   'georgia': 'destinations',
   'georgia/regions': 'destinationsRegions',
   'georgia/cities': 'destinationsCities',
