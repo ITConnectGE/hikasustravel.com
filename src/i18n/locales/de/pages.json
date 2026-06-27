@@ -4945,6 +4945,15 @@
     "heroTitle": "Regionen Georgiens",
     "intro": "Georgien gliedert sich in deutlich unterschiedliche Regionen, jede mit ihrer eigenen Landschaft, Kuche und Geschichte - von den Weinkellern im Osten uber die hohen Kaukasusgipfel bis zur Schwarzmeerkuste. Nutzen Sie diesen Uberblick, um die Region zu finden, die zu Ihrer Reise passt; ausfuhrliche Regionalfuhrer kommen mit der Zeit hinzu.",
     "items": {
+      "abkhazia": {
+        "name": "Abchasien"
+      },
+      "lechkhumi": {
+        "name": "Letschchumi"
+      },
+      "racha": {
+        "name": "Ratscha"
+      },
       "kakheti": {
         "name": "Kachetien",
         "description": "Georgiens ostliches Weinland - Kwewri-Keller, das auf einem Hugel gelegene Stadtchen Sighnaghi und das Alasani-Tal."

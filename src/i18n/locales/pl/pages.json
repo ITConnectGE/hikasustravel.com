@@ -4945,6 +4945,15 @@
     "heroTitle": "Regiony Gruzji",
     "intro": "Gruzja dzieli się na wyraźnie odrębne regiony, z których każdy ma własny krajobraz, kuchnię i historię — od piwnic winiarskich na wschodzie po wysokie szczyty Kaukazu i wybrzeże Morza Czarnego. Skorzystaj z tego przeglądu, aby znaleźć region pasujący do Twojej podróży; szczegółowe przewodniki po regionach dodajemy z czasem.",
     "items": {
+      "abkhazia": {
+        "name": "Abchazja"
+      },
+      "lechkhumi": {
+        "name": "Leczchumi"
+      },
+      "racha": {
+        "name": "Racza"
+      },
       "kakheti": {
         "name": "Kachetia",
         "description": "Wschodni kraj winiarski Gruzji — piwnice z kwewri, położone na wzgórzu miasteczko Sighnaghi i dolina Alazani."

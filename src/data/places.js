@@ -38,14 +38,25 @@ export const SITE_URL = 'https://www.hikasustravel.com'
 // proper name used for schema + fallback; localized names come from pages.json.
 // ---------------------------------------------------------------------------
 // Listed alphabetically by name — this is the order shown on the Regions hub.
+// `hideFromHub` keeps an entry in the registry (so dependent cities/sites still
+// resolve their parent) while excluding its card from the Regions listing —
+// used for the combined Racha-Lechkhumi entry, now split into separate Racha and
+// Lechkhumi cards on the hub. None of the new entries are published yet, so they
+// render as non-clickable "coming soon" cards until their detail pages exist.
 export const regions = [
+  { slug: 'abkhazia', name: 'Abkhazia', published: false },
   { slug: 'adjara', name: 'Adjara', published: false },
   { slug: 'guria', name: 'Guria', published: false },
   { slug: 'imereti', name: 'Imereti', published: false },
   { slug: 'kakheti', name: 'Kakheti', published: false },
   { slug: 'kvemo-kartli', name: 'Kvemo Kartli', published: false },
+  { slug: 'lechkhumi', name: 'Lechkhumi', published: false },
   { slug: 'mtskheta-mtianeti', name: 'Mtskheta-Mtianeti', published: false },
-  { slug: 'racha-lechkhumi', name: 'Racha-Lechkhumi', published: false },
+  { slug: 'racha', name: 'Racha', published: false },
+  // Combined entry kept for its dependents (Ambrolauri/Oni cities + 20 places
+  // parented to it, and the Places-hub location labels), but hidden from the
+  // Regions listing now that Racha and Lechkhumi are separate cards.
+  { slug: 'racha-lechkhumi', name: 'Racha-Lechkhumi', published: false, hideFromHub: true },
   { slug: 'samegrelo', name: 'Samegrelo', published: false },
   { slug: 'samtskhe-javakheti', name: 'Samtskhe-Javakheti', published: false },
   { slug: 'shida-kartli', name: 'Shida Kartli', published: false },

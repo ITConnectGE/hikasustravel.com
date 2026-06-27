@@ -12,12 +12,16 @@ import {
 const HERO_IMAGE = '/images/files/tbilisi.jpg'
 
 export function RegionsHubPage() {
-  const entries = regions.map((r) => ({
-    slug: r.slug,
-    fallbackName: r.name,
-    published: r.published,
-    to: r.published ? regionPath(r.slug) : null,
-  }))
+  // `hideFromHub` entries (e.g. the combined Racha-Lechkhumi, kept for its
+  // dependents) stay in the registry but are excluded from the listing.
+  const entries = regions
+    .filter((r) => !r.hideFromHub)
+    .map((r) => ({
+      slug: r.slug,
+      fallbackName: r.name,
+      published: r.published,
+      to: r.published ? regionPath(r.slug) : null,
+    }))
   return (
     <DestinationHub
       pageKey="destinationsRegions"

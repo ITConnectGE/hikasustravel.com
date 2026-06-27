@@ -4945,6 +4945,15 @@
     "heroTitle": "Regions de Georgie",
     "intro": "La Georgie se divise en regions bien distinctes, chacune avec son propre paysage, sa cuisine et son histoire — des caves a vin de l'est aux hauts sommets du Caucase et a la cote de la mer Noire. Utilisez cet apercu pour trouver la region qui correspond a votre voyage ; des guides regionaux detailles sont ajoutes au fil du temps.",
     "items": {
+      "abkhazia": {
+        "name": "Abkhazie"
+      },
+      "lechkhumi": {
+        "name": "Lechkhumi"
+      },
+      "racha": {
+        "name": "Racha"
+      },
       "kakheti": {
         "name": "Kakhétie",
         "description": "La region viticole de l'est de la Georgie — caves a qvevri, la ville perchee de Sighnaghi et la vallee de l'Alazani."

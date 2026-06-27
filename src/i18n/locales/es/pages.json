@@ -4945,6 +4945,15 @@
     "heroTitle": "Regiones de Georgia",
     "intro": "Georgia se divide en regiones bien diferenciadas, cada una con su propio paisaje, gastronomia e historia: desde las bodegas vinicolas del este hasta los altos picos del Caucaso y la costa del mar Negro. Usa esta vision general para encontrar la region que encaja con tu viaje; las guias regionales detalladas se van anadiendo con el tiempo.",
     "items": {
+      "abkhazia": {
+        "name": "Abjasia"
+      },
+      "lechkhumi": {
+        "name": "Lechkhumi"
+      },
+      "racha": {
+        "name": "Racha"
+      },
       "kakheti": {
         "name": "Kakheti",
         "description": "La region vinicola del este de Georgia: bodegas de qvevri, el pueblo en lo alto de Sighnaghi y el valle de Alazani."

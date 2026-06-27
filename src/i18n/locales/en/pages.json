@@ -5881,6 +5881,15 @@
     "heroTitle": "Regions of Georgia",
     "intro": "Georgia divides into distinct regions, each with its own landscape, food, and history — from the wine cellars of the east to the high Caucasus peaks and the Black Sea coast. Use this overview to find the region that fits your trip; detailed regional guides are being added over time.",
     "items": {
+      "abkhazia": {
+        "name": "Abkhazia"
+      },
+      "lechkhumi": {
+        "name": "Lechkhumi"
+      },
+      "racha": {
+        "name": "Racha"
+      },
       "kakheti": {
         "name": "Kakheti",
         "description": "Georgia's eastern wine country — qvevri cellars, the hilltop town of Sighnaghi, and the Alazani Valley."

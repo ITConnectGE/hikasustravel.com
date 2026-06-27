@@ -4945,6 +4945,15 @@
     "heroTitle": "Regio's van Georgië",
     "intro": "Georgië is opgedeeld in afzonderlijke regio's, elk met een eigen landschap, keuken en geschiedenis — van de wijnkelders in het oosten tot de hoge Kaukasustoppen en de kust van de Zwarte Zee. Gebruik dit overzicht om de regio te vinden die bij je reis past; gedetailleerde regionale gidsen worden na verloop van tijd toegevoegd.",
     "items": {
+      "abkhazia": {
+        "name": "Abchazië"
+      },
+      "lechkhumi": {
+        "name": "Lechkhumi"
+      },
+      "racha": {
+        "name": "Racha"
+      },
       "kakheti": {
         "name": "Kachetië",
         "description": "Het oostelijke wijngebied van Georgië — qvevri-kelders, het heuveltopstadje Sighnaghi en de Alazani-vallei."

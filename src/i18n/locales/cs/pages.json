@@ -4945,6 +4945,15 @@
     "heroTitle": "Regiony Gruzie",
     "intro": "Gruzie se dělí na výrazně odlišné regiony, každý s vlastní krajinou, jídlem a historií — od vinných sklepů na východě po vysoké kavkazské vrcholky a pobřeží Černého moře. Použijte tento přehled k nalezení regionu, který se hodí pro vaši cestu; podrobní průvodci jednotlivými regiony postupem času přibývají.",
     "items": {
+      "abkhazia": {
+        "name": "Abcházie"
+      },
+      "lechkhumi": {
+        "name": "Lečchumi"
+      },
+      "racha": {
+        "name": "Rača"
+      },
       "kakheti": {
         "name": "Kachetie",
         "description": "Východní vinařská oblast Gruzie — sklepy s kvevri, městečko Sighnaghi na kopci a Alazanské údolí."
