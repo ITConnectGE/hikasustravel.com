@@ -40,11 +40,18 @@ export default function CityPage() {
   // Only link the things-to-do guide when the city actually has one published.
   const hasThingsToDo = published && !!city.thingsToDo
 
+  // Most entries here are cities, but a few are reclassified as a place to visit
+  // (e.g. Gomismta) while keeping this /georgia/<slug> detail page — their
+  // breadcrumb points back to the Places to Visit hub, where their card lives.
+  const isPlace = published && city.classifyAs === 'place'
+  const parentCrumb = isPlace
+    ? { name: t('nav.placesToVisit'), to: '/georgia/places-to-visit' }
+    : { name: t('nav.cities'), to: '/georgia/cities' }
   const trail = published
     ? [
         { name: t('breadcrumb.home'), to: '/' },
         { name: t('nav.allDestinations'), to: '/georgia' },
-        { name: t('nav.cities'), to: '/georgia/cities' },
+        parentCrumb,
         { name: city.name },
       ]
     : []
