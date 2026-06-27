@@ -4,6 +4,7 @@ import FadeUp from '../shared/FadeUp'
 import Accordion from '../shared/Accordion'
 import { I18nContext } from '../../i18n/I18nContext'
 import useLang from '../../i18n/useLang'
+import { useLinkedHtml, useLinkedFaq } from '../../utils/autolinkReact'
 import useT from '../../i18n/useT'
 import useSEO from '../../hooks/useSEO'
 import { getSEO } from '../../data/seoData'
@@ -30,6 +31,8 @@ export default function VisaPage() {
   const page = pages.visaGuide || enPages.visaGuide
   const seo = getSEO('visaGuide', lang)
   const faqItems = useMemo(() => page.faq || [], [page])
+  const linkedContent = useLinkedHtml(page.content)
+  const linkedFaq = useLinkedFaq(faqItems)
   const published = page.date
 
   const jsonLd = useMemo(() => {
@@ -81,12 +84,12 @@ export default function VisaPage() {
           {published && (
             <p className="page-published">{t('page.publishedOn')} {formatDate(published, lang)}</p>
           )}
-          <div dangerouslySetInnerHTML={{ __html: page.content }} />
+          <div dangerouslySetInnerHTML={{ __html: linkedContent }} />
         </FadeUp>
       </section>
       {faqItems.length > 0 && (
         <section className="page-items faq" id="faq-section">
-          <Accordion items={faqItems} headingKey="faq.heroTitle" />
+          <Accordion items={linkedFaq} headingKey="faq.heroTitle" />
         </section>
       )}
     </>

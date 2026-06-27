@@ -15,12 +15,14 @@ import useT from '../../i18n/useT'
 import useLang from '../../i18n/useLang'
 import { I18nContext } from '../../i18n/I18nContext'
 import useSEO from '../../hooks/useSEO'
+import { autolinkHtml } from '../../utils/autolink'
+import { autolinkNodes } from '../../utils/autolinkReact'
 
 export default function TourDetailPage() {
   const { slug } = useParams()
   const t = useT()
   const { lang } = useLang()
-  const { tourTranslations, loadTourTranslations } = useContext(I18nContext)
+  const { tourTranslations, loadTourTranslations, pages } = useContext(I18nContext)
 
   useEffect(() => {
     if (!tourTranslations) loadTourTranslations()
@@ -143,6 +145,10 @@ export default function TourDetailPage() {
   const notIncludedItems = tt?.notIncluded || tour.notIncluded
   const rightForYouItems = tt?.rightForYou || tour.rightForYou
   const faqList = tt?.faq || tour.faq
+  // Auto-link destination mentions in the itinerary day + FAQ answer HTML. Plain
+  // functions (not the hooks) because this runs after the `!tour` early return.
+  const linkedItinerary = (itineraryItems || []).map((it) => ({ ...it, content: autolinkHtml(it.content, lang, pages) }))
+  const linkedFaq = (faqList || []).map((it) => ({ ...it, content: autolinkHtml(it.content, lang, pages) }))
 
   // Extract starting price
   const startingPrice = isGroup
@@ -174,7 +180,7 @@ export default function TourDetailPage() {
           <section id="overview" className="td-section">
             <FadeUp>
               <h2 className="td-section__title">{t('tour.overview')}</h2>
-              <p className="td-overview__text">{tt?.description || tour.description}</p>
+              <p className="td-overview__text">{autolinkNodes(tt?.description || tour.description, lang, pages)}</p>
 
               {highlightItems.length > 0 && (
                 <div className="td-overview__highlights">
@@ -183,7 +189,7 @@ export default function TourDetailPage() {
                       <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#4caf50" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
                         <polyline points="20 6 9 17 4 12"/>
                       </svg>
-                      <span>{item.replace(/;$/, '')}</span>
+                      <span>{autolinkNodes(item.replace(/;$/, ''), lang, pages)}</span>
                     </div>
                   ))}
                 </div>
@@ -242,7 +248,7 @@ export default function TourDetailPage() {
           {itineraryItems && itineraryItems.length > 0 && (
             <section id="itinerary" className="td-section">
               <FadeUp>
-                <Accordion items={itineraryItems} itinerary />
+                <Accordion items={linkedItinerary} itinerary />
               </FadeUp>
             </section>
           )}
@@ -314,7 +320,7 @@ export default function TourDetailPage() {
           <main className="td-main">
             <section id="faq" className="td-section">
               <FadeUp>
-                <Accordion items={faqList} headingKey="faq.heroTitle" />
+                <Accordion items={linkedFaq} headingKey="faq.heroTitle" />
               </FadeUp>
             </section>
           </main>

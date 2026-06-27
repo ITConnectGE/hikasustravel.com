@@ -7,6 +7,7 @@ import Breadcrumbs from '../shared/Breadcrumbs'
 import { I18nContext } from '../../i18n/I18nContext'
 import useT from '../../i18n/useT'
 import useLang from '../../i18n/useLang'
+import { useLinkedHtml, useLinkedFaq } from '../../utils/autolinkReact'
 import useSEO from '../../hooks/useSEO'
 import { getSEO } from '../../data/seoData'
 import {
@@ -45,6 +46,8 @@ export default function BorderCrossingPage({ overview = false }) {
   const page = published ? (pages[contentKey] || enPages[contentKey]) : null
   const seo = getSEO(published ? entry.seoKey : 'destinations', lang)
   const faqItems = useMemo(() => (page && page.faq) || [], [page])
+  const linkedContent = useLinkedHtml(page.content)
+  const linkedFaq = useLinkedFaq(faqItems)
   const heroImage = published ? entry.image : null
   const path = overview
     ? borderHubPath.replace(/^\//, '')
@@ -134,12 +137,12 @@ export default function BorderCrossingPage({ overview = false }) {
       <HeroSection image={heroImage} title={page.heroTitle} />
       <section className="page-items about-georgia">
         <FadeUp>
-          <div ref={contentRef} dangerouslySetInnerHTML={{ __html: page.content }} />
+          <div ref={contentRef} dangerouslySetInnerHTML={{ __html: linkedContent }} />
         </FadeUp>
       </section>
       {faqItems.length > 0 && (
         <section className="page-items faq" id="faq-section">
-          <Accordion items={faqItems} headingKey="faq.heroTitle" />
+          <Accordion items={linkedFaq} headingKey="faq.heroTitle" />
         </section>
       )}
     </>

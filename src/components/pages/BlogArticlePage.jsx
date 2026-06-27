@@ -7,6 +7,7 @@ import useT from '../../i18n/useT'
 import useLang from '../../i18n/useLang'
 import useSEO from '../../hooks/useSEO'
 import { getBlogArticle, getRelatedArticles } from '../../data/blogData'
+import { useLinkedHtml, useLinkedFaq } from '../../utils/autolinkReact'
 import asset from '../../utils/basePath'
 
 function formatDate(dateStr, lang) {
@@ -37,6 +38,9 @@ export default function BlogArticlePage() {
   const tr = article && lang !== 'en' ? (article.translations?.[lang] || null) : null
   const articleContent = tr?.content || article?.content
   const articleFaq = tr?.faq || article?.faq
+  // Auto-link destination mentions in the article body + FAQ answers.
+  const linkedArticle = useLinkedHtml(articleContent)
+  const linkedFaq = useLinkedFaq(articleFaq)
   const localizedDesc = article
     ? (article.descKey ? tf(t, article.descKey, article.metaDescription || article.excerpt) : (article.metaDescription || article.excerpt))
     : ''
@@ -149,11 +153,11 @@ export default function BlogArticlePage() {
           <span>{readTimeTemplate.replace('{min}', article.readTime)}</span>
         </div>
 
-        <div className="blog-article__content" dangerouslySetInnerHTML={{ __html: articleContent }} />
+        <div className="blog-article__content" dangerouslySetInnerHTML={{ __html: linkedArticle }} />
 
         {articleFaq?.length > 0 && (
           <div className="blog-article__faq">
-            <Accordion items={articleFaq} headingKey="faq.heroTitle" />
+            <Accordion items={linkedFaq} headingKey="faq.heroTitle" />
           </div>
         )}
 

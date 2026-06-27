@@ -5,6 +5,7 @@ import ContactForm from '../shared/ContactForm'
 import { I18nContext } from '../../i18n/I18nContext'
 import useT from '../../i18n/useT'
 import useLang from '../../i18n/useLang'
+import { useLinkedHtml } from '../../utils/autolinkReact'
 import useSEO from '../../hooks/useSEO'
 import { getSEO } from '../../data/seoData'
 
@@ -13,6 +14,7 @@ export default function ContactPage() {
   const t = useT()
   const { lang } = useLang()
   const page = pages.contact || {}
+  const linkedIntro = useLinkedHtml(page.intro)
   const seo = getSEO('contact', lang)
   useSEO({ ...seo, lang, path: 'contact', image: '/images/files/contact-page.jpg' })
 
@@ -21,7 +23,7 @@ export default function ContactPage() {
       <HeroSection image="/images/files/contact-page.jpg" title={page.heroTitle || t('contact.heroTitle')} />
       <section className="page-items contact">
         <FadeUp>
-          <div className="contact-intro" dangerouslySetInnerHTML={{ __html: page.intro }} />
+          <div className="contact-intro" dangerouslySetInnerHTML={{ __html: linkedIntro }} />
 
           <div className="contact-cards">
             <a href="mailto:info@hikasustravel.com" className="contact-card">

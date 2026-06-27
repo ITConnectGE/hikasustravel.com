@@ -4,6 +4,7 @@ import FadeUp from '../shared/FadeUp'
 import DishModal from '../shared/DishModal'
 import { I18nContext } from '../../i18n/I18nContext'
 import useLang from '../../i18n/useLang'
+import { useLinkedHtml } from '../../utils/autolinkReact'
 import useSEO from '../../hooks/useSEO'
 import { getSEO } from '../../data/seoData'
 import dishData from '../../data/dishData'
@@ -12,6 +13,7 @@ export default function AboutGeorgiaPage() {
   const { pages } = useContext(I18nContext)
   const { lang } = useLang()
   const page = pages.aboutGeorgia || {}
+  const linkedContent = useLinkedHtml(page.content)
   const seo = getSEO('aboutGeorgia', lang)
   useSEO({ ...seo, lang, path: 'about-georgia', image: '/images/files/about-georgia.jpg' })
 
@@ -50,7 +52,7 @@ export default function AboutGeorgiaPage() {
       <HeroSection image="/images/files/about-georgia.jpg" title={page.heroTitle} />
       <section className="page-items about-georgia">
         <FadeUp>
-          <div ref={contentRef} dangerouslySetInnerHTML={{ __html: page.content }} />
+          <div ref={contentRef} dangerouslySetInnerHTML={{ __html: linkedContent }} />
         </FadeUp>
       </section>
       {selectedDish && <DishModal dish={selectedDish} lang={lang} onClose={closeDish} />}
