@@ -1256,13 +1256,22 @@ tour-info h2 a,
   .tour-item-card {
     grid-template-columns: 1fr;
   }
+  /* Once stacked, the image is the first row of a single column. Reserve its
+     space with a stable aspect ratio rather than height:100% (whose percentage
+     resolves against an indefinite grid row) plus a fixed min-height. The image
+     wrapper then always reserves the correct height from its own width, so the
+     absolutely-positioned cover image can never collapse and let the title /
+     description slide up over it — overlap-proof across browsers. */
   .tour-item-card .tour-image-link {
-    min-height: 300px;
+    height: auto;
+    min-height: 0;
+    aspect-ratio: 16 / 9;
   }
 }
 @media (max-width: 600px) {
+  /* Slightly taller crop on phones so the image keeps presence in the stack. */
   .tour-item-card .tour-image-link {
-    min-height: 230px;
+    aspect-ratio: 3 / 2;
   }
 }
 
