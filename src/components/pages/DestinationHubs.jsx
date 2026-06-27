@@ -33,7 +33,10 @@ export function RegionsHubPage() {
 
 export function CitiesHubPage() {
   // Cities are shown alphabetically on the hub (registry order is unaffected).
-  const entries = [...cities]
+  // Entries reclassified as a place to visit (e.g. the highland resort Gomismta)
+  // are excluded here and listed on the Places to Visit hub instead.
+  const entries = cities
+    .filter((c) => c.classifyAs !== 'place')
     .sort((a, b) => a.name.localeCompare(b.name))
     .map((c) => ({
       slug: c.slug,
@@ -55,7 +58,7 @@ export function CitiesHubPage() {
 }
 
 export function PlacesToVisitHubPage() {
-  const entries = sites.map((s) => ({
+  const siteEntries = sites.map((s) => ({
     slug: s.slug,
     fallbackName: s.name,
     seoKey: s.seoKey,
@@ -65,6 +68,20 @@ export function PlacesToVisitHubPage() {
     // them to translated labels for the secondary location line.
     location: siteLocation(s),
   }))
+  // Entries classified as a place but kept in the cities registry for their
+  // existing /georgia/<slug> detail page (e.g. Gomismta). They link to that same
+  // detail URL and carry their own structured `placeLocation`.
+  const placeCityEntries = cities
+    .filter((c) => c.classifyAs === 'place')
+    .map((c) => ({
+      slug: c.slug,
+      fallbackName: c.name,
+      seoKey: c.seoKey,
+      published: c.published,
+      to: c.published ? cityPath(c.slug) : null,
+      location: c.placeLocation,
+    }))
+  const entries = [...siteEntries, ...placeCityEntries]
   return (
     <DestinationHub
       pageKey="destinationsPlaces"

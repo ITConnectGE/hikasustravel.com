@@ -23,8 +23,10 @@ const SUBHUBS = [
   { to: '/georgia/places-to-visit', image: '/images/files/georgia-home.jpg', labelKey: 'nav.placesToVisit' },
 ]
 
-// Existing important destination pages — the published city guides.
-const FEATURED_CITIES = cities.filter((c) => c.published)
+// Existing important destination pages — the published city guides. Entries
+// reclassified as a place to visit (e.g. Gomismta) are not cities, so they are
+// excluded from the featured-cities strip.
+const FEATURED_CITIES = cities.filter((c) => c.published && c.classifyAs !== 'place')
 
 export default function DestinationsPage() {
   const t = useT()

@@ -132,9 +132,18 @@ export default function DestinationHub({
   const country = t('destinations.country')
   const locationLabel = (loc) => {
     if (!loc) return ''
+    // A municipality label (e.g. "Ozurgeti Municipality") is a translated ui
+    // string keyed by its stable id; fall back to no municipality if untranslated.
+    let municipalityName = ''
+    if (loc.municipalityId) {
+      const key = `municipality.${loc.municipalityId}`
+      const label = t(key)
+      if (label && label !== key) municipalityName = label
+    }
     const cityName = loc.cityId && ((cityItems[loc.cityId] && cityItems[loc.cityId].name) || (enCityItems[loc.cityId] && enCityItems[loc.cityId].name))
     const regionName = loc.regionId && ((regionItems[loc.regionId] && regionItems[loc.regionId].name) || (enRegionItems[loc.regionId] && enRegionItems[loc.regionId].name))
-    if (cityName) return regionName ? `${cityName}, ${regionName}` : `${cityName}, ${country}`
+    const primary = municipalityName || cityName
+    if (primary) return regionName ? `${primary}, ${regionName}` : `${primary}, ${country}`
     if (regionName) return `${regionName}, ${country}`
     return ''
   }

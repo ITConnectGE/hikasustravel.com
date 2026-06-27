@@ -110,6 +110,13 @@ export const cities = [
   {
     slug: 'gomismta', name: 'Gomismta (Gomi Mountain)', region: 'guria', published: true,
     seoKey: 'gomismta', contentKey: 'gomismta', image: '/images/files/georgia-home.jpg',
+    // Gomismta is a highland resort, not a city. It keeps its existing
+    // /georgia/gomismta detail page (so URL / SEO / content are untouched) but
+    // is classified as a Place to Visit: the Cities hub and the featured-cities
+    // strip skip `classifyAs: 'place'` entries, and the Places to Visit hub
+    // includes them, using `placeLocation` for the card's location line.
+    classifyAs: 'place',
+    placeLocation: { cityId: null, municipalityId: 'ozurgeti', regionId: 'guria' },
   },
   {
     slug: 'kutaisi', name: 'Kutaisi', region: 'imereti', published: true,
