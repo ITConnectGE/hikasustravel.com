@@ -10,6 +10,7 @@ import useLang from '../../i18n/useLang'
 import useSEO from '../../hooks/useSEO'
 import { getSEO } from '../../data/seoData'
 import { getSite, getCity, getRegion, cityPath, regionPath, sitePath } from '../../data/places'
+import { autolinkHtml } from '../../utils/autolink'
 import enPages from '../../i18n/locales/en/pages.json'
 import NotFoundPage from './NotFoundPage'
 
@@ -44,6 +45,16 @@ export default function SitePage() {
   const page = published ? (pages[contentKey] || enPages[contentKey]) : null
   const seo = getSEO(published ? site.seoKey : 'destinations', lang)
   const faqItems = useMemo(() => (page && page.faq) || [], [page])
+  // Auto-link other destinations in the body + FAQ, skipping self-links.
+  const excludeKey = published ? `place:${site.slug}` : null
+  const linkedContent = useMemo(
+    () => (page ? autolinkHtml(page.content, lang, pages, excludeKey) : ''),
+    [page, lang, pages, excludeKey],
+  )
+  const linkedFaq = useMemo(
+    () => faqItems.map((it) => ({ ...it, content: autolinkHtml(it.content, lang, pages, excludeKey) })),
+    [faqItems, lang, pages, excludeKey],
+  )
   const path = published ? sitePath(site).replace(/^\//, '') : ''
   const heroImage = published ? site.image : null
 
@@ -154,7 +165,7 @@ export default function SitePage() {
       <HeroSection image={heroImage} title={page.heroTitle || site.name} />
       <section className="page-items about-georgia">
         <FadeUp>
-          <div ref={contentRef} dangerouslySetInnerHTML={{ __html: page.content }} />
+          <div ref={contentRef} dangerouslySetInnerHTML={{ __html: linkedContent }} />
         </FadeUp>
       </section>
       {site.imageCredit && (
@@ -175,7 +186,7 @@ export default function SitePage() {
       )}
       {faqItems.length > 0 && (
         <section className="page-items faq" id="faq-section">
-          <Accordion items={faqItems} headingKey="faq.heroTitle" />
+          <Accordion items={linkedFaq} headingKey="faq.heroTitle" />
         </section>
       )}
     </>

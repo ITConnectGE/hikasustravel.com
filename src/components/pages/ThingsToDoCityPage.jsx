@@ -10,6 +10,7 @@ import useLang from '../../i18n/useLang'
 import useSEO from '../../hooks/useSEO'
 import { getSEO } from '../../data/seoData'
 import { getCity, cityPath, thingsToDoPath } from '../../data/places'
+import { autolinkHtml } from '../../utils/autolink'
 import enPages from '../../i18n/locales/en/pages.json'
 import NotFoundPage from './NotFoundPage'
 
@@ -40,6 +41,17 @@ export default function ThingsToDoCityPage() {
   const page = valid ? (pages[config.contentKey] || enPages[config.contentKey]) : null
   const seo = getSEO(valid ? config.seoKey : 'destinations', lang)
   const faqItems = useMemo(() => (page && page.faq) || [], [page])
+  // Auto-link destination mentions in the body + FAQ. This page is a city's
+  // things-to-do guide (a distinct URL from the city page), so no self-link
+  // exclusion is needed — mentions of the city link to the city page itself.
+  const linkedContent = useMemo(
+    () => (page ? autolinkHtml(page.content, lang, pages) : ''),
+    [page, lang, pages],
+  )
+  const linkedFaq = useMemo(
+    () => faqItems.map((it) => ({ ...it, content: autolinkHtml(it.content, lang, pages) })),
+    [faqItems, lang, pages],
+  )
   const path = valid ? thingsToDoPath(citySlug).replace(/^\//, '') : ''
   const ttdLabel = valid ? t('city.thingsToDoCta', { city: city.name }) : ''
 
@@ -129,12 +141,12 @@ export default function ThingsToDoCityPage() {
       <HeroSection image={heroImage} title={page.heroTitle} />
       <section className="page-items about-georgia">
         <FadeUp>
-          <div ref={contentRef} dangerouslySetInnerHTML={{ __html: page.content }} />
+          <div ref={contentRef} dangerouslySetInnerHTML={{ __html: linkedContent }} />
         </FadeUp>
       </section>
       {faqItems.length > 0 && (
         <section className="page-items faq" id="faq-section">
-          <Accordion items={faqItems} headingKey="faq.heroTitle" />
+          <Accordion items={linkedFaq} headingKey="faq.heroTitle" />
         </section>
       )}
     </>

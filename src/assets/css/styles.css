@@ -543,6 +543,17 @@ div.taxi-arrow {
   color: var(--color-h3);
   text-decoration: none;
 }
+/* Auto-generated inline destination links in editorial content. Match the
+   existing in-content link colour; underline only on hover / keyboard focus for
+   an accessible, non-distracting affordance (no layout shift). */
+.entity-link {
+  color: var(--color-h3);
+  text-decoration: none;
+}
+.entity-link:hover,
+.entity-link:focus-visible {
+  text-decoration: underline;
+}
 
 /* Odd items (1st, 3rd, 5th, 7th, etc.) */
 .page-items:nth-child(even) {
