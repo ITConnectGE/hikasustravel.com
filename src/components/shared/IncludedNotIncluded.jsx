@@ -1,4 +1,8 @@
+import { useContext } from 'react'
 import useT from '../../i18n/useT'
+import useLang from '../../i18n/useLang'
+import { I18nContext } from '../../i18n/I18nContext'
+import { autolinkNodes } from '../../utils/autolinkReact'
 
 const iconPatterns = [
   { pattern: /accommodat|room|hotel|overnight/i, icon: 'bed' },
@@ -55,6 +59,8 @@ function XIcon() {
 
 export default function IncludedNotIncluded({ included = [], notIncluded = [] }) {
   const t = useT()
+  const { lang } = useLang()
+  const { pages } = useContext(I18nContext)
   if (included.length === 0 && notIncluded.length === 0) return null
 
   return (
@@ -68,7 +74,7 @@ export default function IncludedNotIncluded({ included = [], notIncluded = [] })
               return (
                 <li key={i} className="incl__item">
                   {iconType ? <span className="incl__context-icon incl__context-icon--yes"><ItemIcon type={iconType} /></span> : <CheckIcon />}
-                  <span>{item}</span>
+                  <span>{autolinkNodes(item, lang, pages)}</span>
                 </li>
               )
             })}
@@ -84,7 +90,7 @@ export default function IncludedNotIncluded({ included = [], notIncluded = [] })
               return (
                 <li key={i} className="incl__item">
                   {iconType ? <span className="incl__context-icon incl__context-icon--no"><ItemIcon type={iconType} /></span> : <XIcon />}
-                  <span>{item}</span>
+                  <span>{autolinkNodes(item, lang, pages)}</span>
                 </li>
               )
             })}

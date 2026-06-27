@@ -1,9 +1,11 @@
-import { useState, useMemo, useRef } from 'react'
+import { useState, useMemo, useRef, useContext } from 'react'
 import FadeUp from '../shared/FadeUp'
 import { startLocations, getStopsForStart, getStartsForStop, filterRoutes } from '../../data/shuttleData'
 import asset from '../../utils/basePath'
 import useT from '../../i18n/useT'
 import useLang from '../../i18n/useLang'
+import { I18nContext } from '../../i18n/I18nContext'
+import { autolinkNodes } from '../../utils/autolinkReact'
 import useSEO from '../../hooks/useSEO'
 import { getSEO } from '../../data/seoData'
 
@@ -12,6 +14,7 @@ export default function ShuttleServicePage() {
   const [selectedStop, setSelectedStop] = useState('')
   const t = useT()
   const { lang } = useLang()
+  const { pages } = useContext(I18nContext)
   const seo = getSEO('shuttle', lang)
   useSEO({ ...seo, lang, path: 'shuttle-service', image: '/images/files/taxi-service.jpg' })
 
@@ -62,7 +65,7 @@ export default function ShuttleServicePage() {
           <FadeUp>
             <h2>{t('shuttle.title')}</h2>
           </FadeUp>
-          <p>{t('shuttle.description')}</p>
+          <p>{autolinkNodes(t('shuttle.description'), lang, pages)}</p>
         </div>
       </section>
 

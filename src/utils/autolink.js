@@ -22,7 +22,7 @@
  * prerender (window absent); body content is client-rendered, so there is no
  * hydration mismatch.
  */
-import { cities, sites, cityPath, sitePath } from '../data/places'
+import { regions, cities, sites, regionPath, cityPath, sitePath } from '../data/places'
 
 // Generic words that must never become a link by themselves.
 const GENERIC = new Set([
@@ -61,9 +61,23 @@ function localizedName(items, slug) {
 // single canonical entity. Names that resolve to more than one entity are
 // dropped (ambiguous -> left unlinked, by design).
 function buildIndex(lang, pages) {
+  const regionItems = (pages && pages.destinationsRegions && pages.destinationsRegions.items) || {}
   const cityItems = (pages && pages.destinationsCities && pages.destinationsCities.items) || {}
   const placeItems = (pages && pages.destinationsPlaces && pages.destinationsPlaces.items) || {}
   const raw = [] // { name, url, key }
+
+  // Regions are gated on `published`: none are published today, so this adds NO
+  // region links yet (linking them would point at a 404). The localized region
+  // names already exist (destinationsRegions.items, all 7 languages), so the
+  // moment a region's detail page is published this links every mention of it
+  // automatically — no further code change. URL = canonical /georgia/regions/<slug>.
+  for (const r of regions) {
+    if (!r.published) continue
+    const url = regionPath(r.slug)
+    const key = `region:${r.slug}`
+    const display = lang === 'en' ? r.name : (localizedName(regionItems, r.slug) || r.name)
+    for (const v of variants(display, lang)) raw.push({ name: v, url, key })
+  }
 
   for (const c of cities) {
     if (!c.published) continue

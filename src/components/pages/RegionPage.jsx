@@ -10,6 +10,7 @@ import useLang from '../../i18n/useLang'
 import useSEO from '../../hooks/useSEO'
 import { getSEO } from '../../data/seoData'
 import { getRegion, regionPath } from '../../data/places'
+import { autolinkHtml } from '../../utils/autolink'
 import enPages from '../../i18n/locales/en/pages.json'
 import NotFoundPage from './NotFoundPage'
 
@@ -34,6 +35,17 @@ export default function RegionPage() {
   const page = published ? (pages[contentKey] || enPages[contentKey]) : null
   const seo = getSEO(published ? region.seoKey : 'destinations', lang)
   const faqItems = useMemo(() => (page && page.faq) || [], [page])
+  // Auto-link other destinations in the body + FAQ, skipping self-links to this
+  // region. (Region pages are unpublished today; this is ready for when they go live.)
+  const excludeKey = published ? `region:${region.slug}` : null
+  const linkedContent = useMemo(
+    () => (page ? autolinkHtml(page.content, lang, pages, excludeKey) : ''),
+    [page, lang, pages, excludeKey],
+  )
+  const linkedFaq = useMemo(
+    () => faqItems.map((it) => ({ ...it, content: autolinkHtml(it.content, lang, pages, excludeKey) })),
+    [faqItems, lang, pages, excludeKey],
+  )
   const path = published ? regionPath(region.slug).replace(/^\//, '') : ''
   const heroImage = published ? region.image : null
 
@@ -108,12 +120,12 @@ export default function RegionPage() {
       <HeroSection image={heroImage} title={region.name} />
       <section className="page-items about-georgia">
         <FadeUp>
-          <div ref={contentRef} dangerouslySetInnerHTML={{ __html: page.content }} />
+          <div ref={contentRef} dangerouslySetInnerHTML={{ __html: linkedContent }} />
         </FadeUp>
       </section>
       {faqItems.length > 0 && (
         <section className="page-items faq" id="faq-section">
-          <Accordion items={faqItems} headingKey="faq.heroTitle" />
+          <Accordion items={linkedFaq} headingKey="faq.heroTitle" />
         </section>
       )}
     </>
