@@ -1251,26 +1251,38 @@ tour-info h2 a,
   text-align: center;
 }
 
-/* Group card — tablet: stack into a single column */
+/* Group card — tablet/mobile: stack into a single column.
+
+   The desktop layout overlays the image with an absolutely-positioned cover
+   (.tour-image is position:absolute, filling the .tour-image-link cell). Reusing
+   that on the stacked layout is what let the photo collapse / the content ride
+   over it on some mobile browsers. So on narrow widths we drop the overlay
+   entirely: the image flows as a normal block sized by a stable aspect ratio,
+   the wrapper takes its height from the image, and the title / description /
+   dates / price / CTA follow in normal document flow strictly below it. No
+   absolute positioning, transforms, negative margins or fixed card heights are
+   involved, so text can never cover the image at any width. */
 @media (max-width: 900px) {
   .tour-item-card {
     grid-template-columns: 1fr;
   }
-  /* Once stacked, the image is the first row of a single column. Reserve its
-     space with a stable aspect ratio rather than height:100% (whose percentage
-     resolves against an indefinite grid row) plus a fixed min-height. The image
-     wrapper then always reserves the correct height from its own width, so the
-     absolutely-positioned cover image can never collapse and let the title /
-     description slide up over it — overlap-proof across browsers. */
   .tour-item-card .tour-image-link {
     height: auto;
     min-height: 0;
+  }
+  /* position:static !important is required only to defeat two higher-priority
+     declarations: BlurUpBackground's inline `position:relative` and the desktop
+     `.tour-item-card .tour-image { position:absolute !important }` rule. */
+  .tour-item-card .tour-image {
+    position: static !important;
+    width: 100%;
+    height: auto;
     aspect-ratio: 16 / 9;
   }
 }
 @media (max-width: 600px) {
   /* Slightly taller crop on phones so the image keeps presence in the stack. */
-  .tour-item-card .tour-image-link {
+  .tour-item-card .tour-image {
     aspect-ratio: 3 / 2;
   }
 }
