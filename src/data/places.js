@@ -89,7 +89,15 @@ export const regions = [
       ],
     },
   },
-  { slug: 'imereti', name: 'Imereti', published: false },
+  // Imereti is published as a region detail page. `noAutolink` keeps it out of
+  // the automatic internal-linker for now (both its own body and site-wide
+  // mentions of "Imereti"), so linking can be handled separately later.
+  {
+    slug: 'imereti', name: 'Imereti', published: true,
+    seoKey: 'imereti', contentKey: 'imereti',
+    image: '/images/files/bagrati-cathedral.jpg',
+    noAutolink: true,
+  },
   { slug: 'kakheti', name: 'Kakheti', published: false },
   { slug: 'kvemo-kartli', name: 'Kvemo Kartli', published: false },
   { slug: 'lechkhumi', name: 'Lechkhumi', published: false },
