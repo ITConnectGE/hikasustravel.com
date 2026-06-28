@@ -91,7 +91,15 @@ export const regions = [
   },
   { slug: 'imereti', name: 'Imereti', published: false },
   { slug: 'kakheti', name: 'Kakheti', published: false },
-  { slug: 'kvemo-kartli', name: 'Kvemo Kartli', published: false },
+  // Kvemo Kartli is published as a region detail page. `noAutolink` keeps it out
+  // of the automatic internal-linker for now (both its own body and site-wide
+  // mentions of "Kvemo Kartli"), so linking can be handled separately later.
+  {
+    slug: 'kvemo-kartli', name: 'Kvemo Kartli', published: true,
+    seoKey: 'kvemoKartli', contentKey: 'kvemoKartli',
+    image: '/images/files/georgia-home.jpg',
+    noAutolink: true,
+  },
   { slug: 'lechkhumi', name: 'Lechkhumi', published: false },
   { slug: 'mtskheta-mtianeti', name: 'Mtskheta-Mtianeti', published: false },
   { slug: 'racha', name: 'Racha', published: false },
