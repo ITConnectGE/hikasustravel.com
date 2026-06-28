@@ -97,6 +97,16 @@ export const regions = [
     seoKey: 'imereti', contentKey: 'imereti',
     image: '/images/files/bagrati-cathedral.jpg',
     noAutolink: true,
+    // Region-level "things to do" guide, served (like Adjara's/Guria's) at
+    // /georgia/imereti/things-to-do-in-imereti via the CitySubPage dispatcher.
+    thingsToDo: {
+      seoKey: 'thingsToDoImereti', contentKey: 'thingsToDoImereti',
+      image: '/images/files/bagrati-cathedral.jpg',
+      address: { addressRegion: 'Imereti' },
+      attractions: [
+        'Gelati Monastery', 'Bagrati Cathedral', 'Prometheus Cave', 'Okatse Canyon', 'Martvili Canyon', 'Tskaltubo',
+      ],
+    },
   },
   { slug: 'kakheti', name: 'Kakheti', published: false },
   { slug: 'kvemo-kartli', name: 'Kvemo Kartli', published: false },
