@@ -107,6 +107,16 @@ export const regions = [
     seoKey: 'samegrelo', contentKey: 'samegrelo',
     image: '/images/files/georgia-home.jpg',
     noAutolink: true,
+    // Region-level "things to do" guide, served (like Adjara's/Guria's) at
+    // /georgia/samegrelo/things-to-do-in-samegrelo via the CitySubPage dispatcher.
+    thingsToDo: {
+      seoKey: 'thingsToDoSamegrelo', contentKey: 'thingsToDoSamegrelo',
+      image: '/images/files/georgia-home.jpg',
+      address: { addressRegion: 'Samegrelo' },
+      attractions: [
+        'Martvili Canyon', 'Balda Canyon', 'Tobavarchkhili Lakes', 'Dadiani Palace', 'Zugdidi',
+      ],
+    },
   },
   { slug: 'samtskhe-javakheti', name: 'Samtskhe-Javakheti', published: false },
   { slug: 'shida-kartli', name: 'Shida Kartli', published: false },
