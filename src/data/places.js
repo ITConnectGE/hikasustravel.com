@@ -135,6 +135,17 @@ export const regions = [
     seoKey: 'kvemoKartli', contentKey: 'kvemoKartli',
     image: '/images/files/georgia-home.jpg',
     noAutolink: true,
+    // Region-level "things to do" guide, served (like Adjara's/Guria's) at
+    // /georgia/kvemo-kartli/things-to-do-in-kvemo-kartli via the CitySubPage dispatcher.
+    thingsToDo: {
+      seoKey: 'thingsToDoKvemoKartli', contentKey: 'thingsToDoKvemoKartli',
+      image: '/images/files/georgia-home.jpg',
+      address: { addressRegion: 'Kvemo Kartli' },
+      attractions: [
+        'Dmanisi Archaeological Site', 'Dashbashi Canyon', 'Diamond Bridge',
+        'Bolnisi Sioni Cathedral', 'Rustavi',
+      ],
+    },
   },
   { slug: 'lechkhumi', name: 'Lechkhumi', published: false },
   { slug: 'mtskheta-mtianeti', name: 'Mtskheta-Mtianeti', published: false },
