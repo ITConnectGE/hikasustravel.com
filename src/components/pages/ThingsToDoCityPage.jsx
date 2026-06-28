@@ -49,13 +49,17 @@ export default function ThingsToDoCityPage() {
   // Auto-link destination mentions in the body + FAQ. This page is a city's
   // things-to-do guide (a distinct URL from the city page), so no self-link
   // exclusion is needed — mentions of the city link to the city page itself.
+  // The parent place can opt out (place.noAutolink, e.g. published region
+  // things-to-do guides), or a thingsToDo block can opt out on its own
+  // (config.noAutolink), so the body stays plain text until linking is handled.
+  const noLink = !!(valid && ((place && place.noAutolink) || (config && config.noAutolink)))
   const linkedContent = useMemo(
-    () => (page ? autolinkHtml(page.content, lang, pages) : ''),
-    [page, lang, pages],
+    () => (page ? (noLink ? page.content : autolinkHtml(page.content, lang, pages)) : ''),
+    [page, lang, pages, noLink],
   )
   const linkedFaq = useMemo(
-    () => faqItems.map((it) => ({ ...it, content: autolinkHtml(it.content, lang, pages) })),
-    [faqItems, lang, pages],
+    () => faqItems.map((it) => ({ ...it, content: noLink ? it.content : autolinkHtml(it.content, lang, pages) })),
+    [faqItems, lang, pages, noLink],
   )
   const path = valid ? thingsToDoPath(citySlug).replace(/^\//, '') : ''
   const ttdLabel = valid ? t('city.thingsToDoCta', { city: place.name }) : ''
