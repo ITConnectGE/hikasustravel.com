@@ -178,6 +178,17 @@ export const regions = [
     seoKey: 'mtskhetaMtianeti', contentKey: 'mtskhetaMtianeti',
     image: '/images/files/Ananuri%20Fortress%20and%20Zhinvali%20Reservoir.jpg',
     noAutolink: true,
+    // Region-level "things to do" guide, served (like Kvemo Kartli's) at
+    // /georgia/mtskheta-mtianeti/things-to-do-in-mtskheta-mtianeti via the CitySubPage dispatcher.
+    thingsToDo: {
+      seoKey: 'thingsToDoMtskhetaMtianeti', contentKey: 'thingsToDoMtskhetaMtianeti',
+      image: '/images/files/Ananuri%20Fortress%20and%20Zhinvali%20Reservoir.jpg',
+      address: { addressRegion: 'Mtskheta-Mtianeti' },
+      attractions: [
+        'Mtskheta', 'Georgian Military Highway', 'Ananuri Fortress',
+        'Gudauri', 'Gergeti Trinity Church',
+      ],
+    },
   },
   { slug: 'racha', name: 'Racha', published: false },
   // Combined entry kept for its dependents (Ambrolauri/Oni cities + 20 places
