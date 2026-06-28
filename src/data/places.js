@@ -108,7 +108,15 @@ export const regions = [
       ],
     },
   },
-  { slug: 'kakheti', name: 'Kakheti', published: false },
+  // Kakheti is published as a region detail page. `noAutolink` keeps it out of
+  // the automatic internal-linker for now (both its own body and site-wide
+  // mentions of "Kakheti"), so linking can be handled separately later.
+  {
+    slug: 'kakheti', name: 'Kakheti', published: true,
+    seoKey: 'kakheti', contentKey: 'kakheti',
+    image: '/images/files/kakheti-vineyard.jpg',
+    noAutolink: true,
+  },
   { slug: 'kvemo-kartli', name: 'Kvemo Kartli', published: false },
   { slug: 'lechkhumi', name: 'Lechkhumi', published: false },
   { slug: 'mtskheta-mtianeti', name: 'Mtskheta-Mtianeti', published: false },
