@@ -147,7 +147,17 @@ export const regions = [
       ],
     },
   },
-  { slug: 'lechkhumi', name: 'Lechkhumi', published: false },
+  // Lechkhumi is published as a region detail page. `noAutolink` keeps it out of
+  // the automatic internal-linker for now (both its own body and site-wide
+  // mentions of "Lechkhumi"); linking is handled separately later. This is the
+  // SPLIT-OUT lechkhumi card — the combined `racha-lechkhumi` parent below stays
+  // untouched for its dependents.
+  {
+    slug: 'lechkhumi', name: 'Lechkhumi', published: true,
+    seoKey: 'lechkhumi', contentKey: 'lechkhumi',
+    image: '/images/files/georgia-home.jpg',
+    noAutolink: true,
+  },
   { slug: 'mtskheta-mtianeti', name: 'Mtskheta-Mtianeti', published: false },
   { slug: 'racha', name: 'Racha', published: false },
   // Combined entry kept for its dependents (Ambrolauri/Oni cities + 20 places
