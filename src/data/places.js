@@ -127,7 +127,15 @@ export const regions = [
       ],
     },
   },
-  { slug: 'kvemo-kartli', name: 'Kvemo Kartli', published: false },
+  // Kvemo Kartli is published as a region detail page. `noAutolink` keeps it out
+  // of the automatic internal-linker for now. The hyphenated slug uses camelCase
+  // seo/content keys (kvemoKartli) so the seoData.js object key needs no quoting.
+  {
+    slug: 'kvemo-kartli', name: 'Kvemo Kartli', published: true,
+    seoKey: 'kvemoKartli', contentKey: 'kvemoKartli',
+    image: '/images/files/georgia-home.jpg',
+    noAutolink: true,
+  },
   { slug: 'lechkhumi', name: 'Lechkhumi', published: false },
   { slug: 'mtskheta-mtianeti', name: 'Mtskheta-Mtianeti', published: false },
   { slug: 'racha', name: 'Racha', published: false },
