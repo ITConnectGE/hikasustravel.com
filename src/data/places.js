@@ -49,7 +49,15 @@ export const regions = [
   // /georgia/regions/abkhazia route). Its card instead links to the dedicated
   // informational page at /<lang>/abkhazia via `linkPath`.
   { slug: 'abkhazia', name: 'Abkhazia', published: false, linkPath: '/abkhazia' },
-  { slug: 'adjara', name: 'Adjara', published: false },
+  // Adjara is published as a region detail page. `noAutolink` keeps it out of the
+  // automatic internal-linker for now (both its own body and site-wide mentions
+  // of "Adjara"), so linking can be handled separately later.
+  {
+    slug: 'adjara', name: 'Adjara', published: true,
+    seoKey: 'adjara', contentKey: 'adjara',
+    image: '/images/files/Batumi%20Black%20Sea%20Coast.jpg',
+    noAutolink: true,
+  },
   { slug: 'guria', name: 'Guria', published: false },
   { slug: 'imereti', name: 'Imereti', published: false },
   { slug: 'kakheti', name: 'Kakheti', published: false },

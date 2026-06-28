@@ -38,13 +38,16 @@ export default function RegionPage() {
   // Auto-link other destinations in the body + FAQ, skipping self-links to this
   // region. (Region pages are unpublished today; this is ready for when they go live.)
   const excludeKey = published ? `region:${region.slug}` : null
+  // A region can opt out of auto-linking (region.noAutolink) so its body stays
+  // plain text and its name isn't linked site-wide until linking is handled.
+  const noLink = !!(published && region.noAutolink)
   const linkedContent = useMemo(
-    () => (page ? autolinkHtml(page.content, lang, pages, excludeKey) : ''),
-    [page, lang, pages, excludeKey],
+    () => (page ? (noLink ? page.content : autolinkHtml(page.content, lang, pages, excludeKey)) : ''),
+    [page, lang, pages, excludeKey, noLink],
   )
   const linkedFaq = useMemo(
-    () => faqItems.map((it) => ({ ...it, content: autolinkHtml(it.content, lang, pages, excludeKey) })),
-    [faqItems, lang, pages, excludeKey],
+    () => faqItems.map((it) => ({ ...it, content: noLink ? it.content : autolinkHtml(it.content, lang, pages, excludeKey) })),
+    [faqItems, lang, pages, excludeKey, noLink],
   )
   const path = published ? regionPath(region.slug).replace(/^\//, '') : ''
   const heroImage = published ? region.image : null
@@ -117,7 +120,7 @@ export default function RegionPage() {
       <div className="dest-breadcrumbs">
         <Breadcrumbs trail={trail} />
       </div>
-      <HeroSection image={heroImage} title={region.name} />
+      <HeroSection image={heroImage} title={(page && page.heroTitle) || region.name} />
       <section className="page-items about-georgia">
         <FadeUp>
           <div ref={contentRef} dangerouslySetInnerHTML={{ __html: linkedContent }} />

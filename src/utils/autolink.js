@@ -72,7 +72,7 @@ function buildIndex(lang, pages) {
   // moment a region's detail page is published this links every mention of it
   // automatically — no further code change. URL = canonical /georgia/regions/<slug>.
   for (const r of regions) {
-    if (!r.published) continue
+    if (!r.published || r.noAutolink) continue
     const url = regionPath(r.slug)
     const key = `region:${r.slug}`
     const display = lang === 'en' ? r.name : (localizedName(regionItems, r.slug) || r.name)
