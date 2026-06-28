@@ -116,6 +116,16 @@ export const regions = [
     seoKey: 'kakheti', contentKey: 'kakheti',
     image: '/images/files/kakheti-vineyard.jpg',
     noAutolink: true,
+    // Region-level "things to do" guide, served (like Adjara's/Guria's) at
+    // /georgia/kakheti/things-to-do-in-kakheti via the CitySubPage dispatcher.
+    thingsToDo: {
+      seoKey: 'thingsToDoKakheti', contentKey: 'thingsToDoKakheti',
+      image: '/images/files/kakheti-vineyard.jpg',
+      address: { addressRegion: 'Kakheti' },
+      attractions: [
+        'Family Wineries', 'Kvareli Wine Cave', 'Shumi Winery', 'Sighnaghi', 'Telavi', 'Bodbe Monastery', 'Alaverdi Cathedral', 'Alazani Valley',
+      ],
+    },
   },
   { slug: 'kvemo-kartli', name: 'Kvemo Kartli', published: false },
   { slug: 'lechkhumi', name: 'Lechkhumi', published: false },
