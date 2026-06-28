@@ -99,7 +99,15 @@ export const regions = [
   // parented to it, and the Places-hub location labels), but hidden from the
   // Regions listing now that Racha and Lechkhumi are separate cards.
   { slug: 'racha-lechkhumi', name: 'Racha-Lechkhumi', published: false, hideFromHub: true },
-  { slug: 'samegrelo', name: 'Samegrelo', published: false },
+  // Samegrelo is published as a region detail page. `noAutolink` keeps it out of
+  // the automatic internal-linker for now (both its own body and site-wide
+  // mentions of "Samegrelo"), so linking can be handled separately later.
+  {
+    slug: 'samegrelo', name: 'Samegrelo', published: true,
+    seoKey: 'samegrelo', contentKey: 'samegrelo',
+    image: '/images/files/georgia-home.jpg',
+    noAutolink: true,
+  },
   { slug: 'samtskhe-javakheti', name: 'Samtskhe-Javakheti', published: false },
   { slug: 'shida-kartli', name: 'Shida Kartli', published: false },
   { slug: 'svaneti', name: 'Svaneti', published: false },
