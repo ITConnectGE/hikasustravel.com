@@ -157,6 +157,17 @@ export const regions = [
     seoKey: 'lechkhumi', contentKey: 'lechkhumi',
     image: '/images/files/georgia-home.jpg',
     noAutolink: true,
+    // Region-level "things to do" guide, served (like Kvemo Kartli's) at
+    // /georgia/lechkhumi/things-to-do-in-lechkhumi via the CitySubPage dispatcher.
+    thingsToDo: {
+      seoKey: 'thingsToDoLechkhumi', contentKey: 'thingsToDoLechkhumi',
+      image: '/images/files/georgia-home.jpg',
+      address: { addressRegion: 'Lechkhumi' },
+      attractions: [
+        'Tvishi Family Wineries', 'Lailashi', 'Green Lake',
+        'Rioni Valley', 'Tskhenistskali Valley',
+      ],
+    },
   },
   { slug: 'mtskheta-mtianeti', name: 'Mtskheta-Mtianeti', published: false },
   { slug: 'racha', name: 'Racha', published: false },
