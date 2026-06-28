@@ -1,5 +1,5 @@
 import { useParams, useLocation, Navigate } from 'react-router-dom'
-import { getCity, getSite, legacyRedirects } from '../../data/places'
+import { getCity, getRegion, getSite, legacyRedirects } from '../../data/places'
 import ThingsToDoCityPage from './ThingsToDoCityPage'
 import SitePage from './SitePage'
 import NotFoundPage from './NotFoundPage'
@@ -20,7 +20,10 @@ export default function CitySubPage() {
   const location = useLocation()
   const city = getCity(citySlug)
 
-  if (city && city.thingsToDo && sub === `things-to-do-in-${citySlug}`) {
+  // Things-to-do guide for either a city or a published region (e.g. Adjara at
+  // /georgia/adjara/things-to-do-in-adjara). City/region slugs are disjoint.
+  const place = city || getRegion(citySlug)
+  if (place && (city || place.published) && place.thingsToDo && sub === `things-to-do-in-${citySlug}`) {
     return <ThingsToDoCityPage />
   }
 

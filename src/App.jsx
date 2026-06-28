@@ -19,7 +19,7 @@ import RegionPage from './components/pages/RegionPage'
 import CitySubPage from './components/pages/CitySubPage'
 import BorderCrossingPage from './components/pages/BorderCrossingPage'
 import { DestinationsRedirect, ThingsToDoRedirect, RegionSiteRedirect } from './components/pages/LegacyRedirects'
-import { cities } from './data/places'
+import { cities, regions } from './data/places'
 import PrivateToursPage from './components/pages/PrivateToursPage'
 import GroupToursPage from './components/pages/GroupToursPage'
 import TourDetailPage from './components/pages/TourDetailPage'
@@ -76,13 +76,13 @@ export default function App() {
               redirect stubs emitted by scripts/prerender.js). */}
           <Route path="destinations/*" element={<DestinationsRedirect />} />
           <Route path="destinations" element={<DestinationsRedirect />} />
-          {cities
-            .filter((c) => c.published && c.thingsToDo)
-            .map((c) => (
+          {[...cities, ...regions]
+            .filter((p) => p.published && p.thingsToDo)
+            .map((p) => (
               <Route
-                key={c.slug}
-                path={`things-to-do-in-${c.slug}`}
-                element={<ThingsToDoRedirect citySlug={c.slug} />}
+                key={p.slug}
+                path={`things-to-do-in-${p.slug}`}
+                element={<ThingsToDoRedirect citySlug={p.slug} />}
               />
             ))}
           <Route path="private-tours" element={<PrivateToursPage />} />

@@ -57,6 +57,18 @@ export const regions = [
     seoKey: 'adjara', contentKey: 'adjara',
     image: '/images/files/Batumi%20Black%20Sea%20Coast.jpg',
     noAutolink: true,
+    // Region-level "things to do" guide, served (like a city's) at
+    // /georgia/adjara/things-to-do-in-adjara via the CitySubPage dispatcher.
+    thingsToDo: {
+      seoKey: 'thingsToDoAdjara', contentKey: 'thingsToDoAdjara',
+      image: '/images/files/Batumi%20Black%20Sea%20Coast.jpg',
+      address: { addressRegion: 'Adjara' },
+      attractions: [
+        'Batumi', 'Batumi Boulevard', 'Black Sea Beaches', 'Batumi Botanical Garden',
+        'Mtirala National Park', 'Machakhela National Park', 'Gonio Fortress',
+        'Makhuntseti Waterfall',
+      ],
+    },
   },
   { slug: 'guria', name: 'Guria', published: false },
   { slug: 'imereti', name: 'Imereti', published: false },
@@ -1518,7 +1530,16 @@ export function siteLocation(site) {
 // ---------------------------------------------------------------------------
 export function publishedDestinationPages() {
   const pages = []
-  for (const r of regions) if (r.published) pages.push({ path: cleanPath(regionPath(r.slug)), seoKey: r.seoKey, image: r.image })
+  for (const r of regions) if (r.published) {
+    pages.push({ path: cleanPath(regionPath(r.slug)), seoKey: r.seoKey, image: r.image })
+    if (r.thingsToDo) {
+      pages.push({
+        path: cleanPath(thingsToDoPath(r.slug)),
+        seoKey: r.thingsToDo.seoKey,
+        image: r.thingsToDo.image || r.image,
+      })
+    }
+  }
   for (const c of cities) if (c.published) {
     pages.push({ path: cleanPath(cityPath(c.slug)), seoKey: c.seoKey, image: c.image })
     if (c.thingsToDo) {
@@ -1549,7 +1570,11 @@ export function legacyRedirects() {
     out.push({ from: `destinations/${c.slug}`, to: cleanPath(cityPath(c.slug)) })        // legacy flat city
     if (c.thingsToDo) out.push({ from: `things-to-do-in-${c.slug}`, to: cleanPath(thingsToDoPath(c.slug)) })
   }
-  for (const r of regions) if (r.published) out.push({ from: `destinations/regions/${r.slug}`, to: cleanPath(regionPath(r.slug)) })
+  for (const r of regions) if (r.published) {
+    out.push({ from: `destinations/regions/${r.slug}`, to: cleanPath(regionPath(r.slug)) })
+    // Bare /things-to-do-in-<region> -> the canonical nested URL (mirrors cities).
+    if (r.thingsToDo) out.push({ from: `things-to-do-in-${r.slug}`, to: cleanPath(thingsToDoPath(r.slug)) })
+  }
   // Region-parented Places to Visit dropped the /regions/ segment:
   //   /georgia/regions/<region>/<slug>  ->  /georgia/<region>/<slug>
   for (const s of sites) if (s.published && s.parentType === 'region') {

@@ -9,7 +9,7 @@ import useT from '../../i18n/useT'
 import useLang from '../../i18n/useLang'
 import useSEO from '../../hooks/useSEO'
 import { getSEO } from '../../data/seoData'
-import { getCity, cityPath, thingsToDoPath } from '../../data/places'
+import { getCity, getRegion, cityPath, regionPath, thingsToDoPath } from '../../data/places'
 import { autolinkHtml } from '../../utils/autolink'
 import enPages from '../../i18n/locales/en/pages.json'
 import NotFoundPage from './NotFoundPage'
@@ -26,18 +26,23 @@ export default function ThingsToDoCityPage() {
   // Served via the /georgia/:citySlug/:sub dispatcher (CitySubPage); the second
   // segment arrives as :sub.
   const { citySlug, sub: ttd } = useParams()
+  // The first segment is a city OR a published region (disjoint namespaces); a
+  // region's things-to-do guide (e.g. Adjara) reuses this same page/template.
   const city = getCity(citySlug)
+  const place = city || getRegion(citySlug)
+  const isCity = !!city
+  const placePath = isCity ? cityPath(citySlug) : regionPath(citySlug)
   const t = useT()
   const { pages } = useContext(I18nContext)
   const { lang } = useLang()
   const navigate = useNavigate()
   const contentRef = useRef(null)
 
-  const config = city && city.published ? city.thingsToDo : null
+  const config = place && place.published ? place.thingsToDo : null
   // Guard the exact slug so /georgia/tbilisi/anything doesn't render this page.
   const valid = !!config && ttd === `things-to-do-in-${citySlug}`
 
-  const heroImage = config ? (config.image || city.image) : null
+  const heroImage = config ? (config.image || place.image) : null
   const page = valid ? (pages[config.contentKey] || enPages[config.contentKey]) : null
   const seo = getSEO(valid ? config.seoKey : 'destinations', lang)
   const faqItems = useMemo(() => (page && page.faq) || [], [page])
@@ -53,13 +58,13 @@ export default function ThingsToDoCityPage() {
     [faqItems, lang, pages],
   )
   const path = valid ? thingsToDoPath(citySlug).replace(/^\//, '') : ''
-  const ttdLabel = valid ? t('city.thingsToDoCta', { city: city.name }) : ''
+  const ttdLabel = valid ? t('city.thingsToDoCta', { city: place.name }) : ''
 
   const trail = valid
     ? [
         { name: t('breadcrumb.home'), to: '/' },
         { name: t('nav.allDestinations'), to: '/georgia' },
-        { name: city.name, to: cityPath(city.slug) },
+        { name: place.name, to: placePath },
         { name: ttdLabel },
       ]
     : []
