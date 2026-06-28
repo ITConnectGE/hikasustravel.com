@@ -19,8 +19,12 @@ export function RegionsHubPage() {
     .map((r) => ({
       slug: r.slug,
       fallbackName: r.name,
-      published: r.published,
-      to: r.published ? regionPath(r.slug) : null,
+      // A region may link its card to a dedicated page elsewhere (e.g. Abkhazia
+      // -> /<lang>/abkhazia) via `linkPath`, without being a published region
+      // *detail* page. Such a card is clickable; otherwise it links to its
+      // region detail page only once published.
+      published: r.published || !!r.linkPath,
+      to: r.linkPath || (r.published ? regionPath(r.slug) : null),
     }))
   return (
     <DestinationHub

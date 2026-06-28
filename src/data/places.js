@@ -44,7 +44,11 @@ export const SITE_URL = 'https://www.hikasustravel.com'
 // Lechkhumi cards on the hub. None of the new entries are published yet, so they
 // render as non-clickable "coming soon" cards until their detail pages exist.
 export const regions = [
-  { slug: 'abkhazia', name: 'Abkhazia', published: false },
+  // Abkhazia has no region *detail* page (published stays false, so it is left
+  // out of region detail sitemap/prerender/redirects and the
+  // /georgia/regions/abkhazia route). Its card instead links to the dedicated
+  // informational page at /<lang>/abkhazia via `linkPath`.
+  { slug: 'abkhazia', name: 'Abkhazia', published: false, linkPath: '/abkhazia' },
   { slug: 'adjara', name: 'Adjara', published: false },
   { slug: 'guria', name: 'Guria', published: false },
   { slug: 'imereti', name: 'Imereti', published: false },
