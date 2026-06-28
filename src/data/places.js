@@ -169,7 +169,16 @@ export const regions = [
       ],
     },
   },
-  { slug: 'mtskheta-mtianeti', name: 'Mtskheta-Mtianeti', published: false },
+  // Mtskheta-Mtianeti is published as a region detail page. `noAutolink` keeps it
+  // out of the automatic internal-linker for now. The hyphenated slug uses
+  // camelCase seo/content keys (mtskhetaMtianeti) so the seoData.js key needs no
+  // quoting.
+  {
+    slug: 'mtskheta-mtianeti', name: 'Mtskheta-Mtianeti', published: true,
+    seoKey: 'mtskhetaMtianeti', contentKey: 'mtskhetaMtianeti',
+    image: '/images/files/Ananuri%20Fortress%20and%20Zhinvali%20Reservoir.jpg',
+    noAutolink: true,
+  },
   { slug: 'racha', name: 'Racha', published: false },
   // Combined entry kept for its dependents (Ambrolauri/Oni cities + 20 places
   // parented to it, and the Places-hub location labels), but hidden from the
