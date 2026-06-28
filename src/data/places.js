@@ -70,7 +70,15 @@ export const regions = [
       ],
     },
   },
-  { slug: 'guria', name: 'Guria', published: false },
+  // Guria is published as a region detail page. `noAutolink` keeps it out of the
+  // automatic internal-linker for now (both its own body and site-wide mentions
+  // of "Guria"), so linking can be handled separately later.
+  {
+    slug: 'guria', name: 'Guria', published: true,
+    seoKey: 'guria', contentKey: 'guria',
+    image: '/images/files/georgia-home.jpg',
+    noAutolink: true,
+  },
   { slug: 'imereti', name: 'Imereti', published: false },
   { slug: 'kakheti', name: 'Kakheti', published: false },
   { slug: 'kvemo-kartli', name: 'Kvemo Kartli', published: false },
