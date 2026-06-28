@@ -78,6 +78,16 @@ export const regions = [
     seoKey: 'guria', contentKey: 'guria',
     image: '/images/files/georgia-home.jpg',
     noAutolink: true,
+    // Region-level "things to do" guide, served (like Adjara's) at
+    // /georgia/guria/things-to-do-in-guria via the CitySubPage dispatcher.
+    thingsToDo: {
+      seoKey: 'thingsToDoGuria', contentKey: 'thingsToDoGuria',
+      image: '/images/files/georgia-home.jpg',
+      address: { addressRegion: 'Guria' },
+      attractions: [
+        'Family Tea Farms', 'Gomi Mountain', 'Ureki', 'Ozurgeti', 'Lanchkhuti',
+      ],
+    },
   },
   { slug: 'imereti', name: 'Imereti', published: false },
   { slug: 'kakheti', name: 'Kakheti', published: false },
