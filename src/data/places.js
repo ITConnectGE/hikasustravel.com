@@ -243,6 +243,17 @@ export const regions = [
     seoKey: 'samtskheJavakheti', contentKey: 'samtskheJavakheti',
     image: '/images/files/vardzia-cave-monastery.jpg',
     noAutolink: true,
+    // Region-level "things to do" guide, served at
+    // /georgia/samtskhe-javakheti/things-to-do-in-samtskhe-javakheti via the
+    // CitySubPage dispatcher.
+    thingsToDo: {
+      seoKey: 'thingsToDoSamtskheJavakheti', contentKey: 'thingsToDoSamtskheJavakheti',
+      image: '/images/files/vardzia-cave-monastery.jpg',
+      address: { addressRegion: 'Samtskhe-Javakheti' },
+      attractions: [
+        'Vardzia Cave Monastery', 'Rabati Fortress', 'Borjomi', 'Khertvisi Fortress', 'Lake Paravani',
+      ],
+    },
   },
   { slug: 'shida-kartli', name: 'Shida Kartli', published: false },
   { slug: 'svaneti', name: 'Svaneti', published: false },
