@@ -263,6 +263,17 @@ export const regions = [
     seoKey: 'shidaKartli', contentKey: 'shidaKartli',
     image: '/images/files/Uplistsikhe%20Cave%20Town.jpg',
     noAutolink: true,
+    // Region-level "things to do" guide, served at
+    // /georgia/shida-kartli/things-to-do-in-shida-kartli via the CitySubPage
+    // dispatcher.
+    thingsToDo: {
+      seoKey: 'thingsToDoShidaKartli', contentKey: 'thingsToDoShidaKartli',
+      image: '/images/files/Uplistsikhe%20Cave%20Town.jpg',
+      address: { addressRegion: 'Shida Kartli' },
+      attractions: [
+        'Uplistsikhe Cave City', 'Gori', 'Stalin Museum', 'Ateni Sioni', 'Mtkvari Valley',
+      ],
+    },
   },
   { slug: 'svaneti', name: 'Svaneti', published: false },
 ]
