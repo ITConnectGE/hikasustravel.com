@@ -275,7 +275,15 @@ export const regions = [
       ],
     },
   },
-  { slug: 'svaneti', name: 'Svaneti', published: false },
+  // Svaneti is published as a region detail page. `noAutolink` keeps it out of
+  // the automatic internal-linker for now. Single-word slug, so the seo/content
+  // keys are plain `svaneti`.
+  {
+    slug: 'svaneti', name: 'Svaneti', published: true,
+    seoKey: 'svaneti', contentKey: 'svaneti',
+    image: '/images/files/Koruldi%20Lakes.jpg',
+    noAutolink: true,
+  },
 ]
 
 // ---------------------------------------------------------------------------
