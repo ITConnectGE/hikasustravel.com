@@ -255,7 +255,15 @@ export const regions = [
       ],
     },
   },
-  { slug: 'shida-kartli', name: 'Shida Kartli', published: false },
+  // Shida Kartli is published as a region detail page. `noAutolink` keeps it out
+  // of the automatic internal-linker for now. The hyphenated slug uses camelCase
+  // seo/content keys (shidaKartli) so the seoData.js key needs no quoting.
+  {
+    slug: 'shida-kartli', name: 'Shida Kartli', published: true,
+    seoKey: 'shidaKartli', contentKey: 'shidaKartli',
+    image: '/images/files/Uplistsikhe%20Cave%20Town.jpg',
+    noAutolink: true,
+  },
   { slug: 'svaneti', name: 'Svaneti', published: false },
 ]
 
