@@ -190,7 +190,17 @@ export const regions = [
       ],
     },
   },
-  { slug: 'racha', name: 'Racha', published: false },
+  // Racha is published as a region detail page. `noAutolink` keeps it out of the
+  // automatic internal-linker for now (both its own body and site-wide mentions
+  // of "Racha"); linking is handled separately later. This SPLIT-OUT `racha`
+  // card carries the landing page; the combined `racha-lechkhumi` parent below
+  // stays untouched for its dependents.
+  {
+    slug: 'racha', name: 'Racha', published: true,
+    seoKey: 'racha', contentKey: 'racha',
+    image: '/images/files/shaori-reservoir.jpg',
+    noAutolink: true,
+  },
   // Combined entry kept for its dependents (Ambrolauri/Oni cities + 20 places
   // parented to it, and the Places-hub location labels), but hidden from the
   // Regions listing now that Racha and Lechkhumi are separate cards.
