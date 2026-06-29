@@ -234,7 +234,16 @@ export const regions = [
       ],
     },
   },
-  { slug: 'samtskhe-javakheti', name: 'Samtskhe-Javakheti', published: false },
+  // Samtskhe-Javakheti is published as a region detail page. `noAutolink` keeps
+  // it out of the automatic internal-linker for now. The hyphenated slug uses
+  // camelCase seo/content keys (samtskheJavakheti) so the seoData.js key needs no
+  // quoting.
+  {
+    slug: 'samtskhe-javakheti', name: 'Samtskhe-Javakheti', published: true,
+    seoKey: 'samtskheJavakheti', contentKey: 'samtskheJavakheti',
+    image: '/images/files/vardzia-cave-monastery.jpg',
+    noAutolink: true,
+  },
   { slug: 'shida-kartli', name: 'Shida Kartli', published: false },
   { slug: 'svaneti', name: 'Svaneti', published: false },
 ]
