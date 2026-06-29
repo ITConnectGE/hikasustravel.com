@@ -283,6 +283,16 @@ export const regions = [
     seoKey: 'svaneti', contentKey: 'svaneti',
     image: '/images/files/Koruldi%20Lakes.jpg',
     noAutolink: true,
+    // Region-level "things to do" guide, served at
+    // /georgia/svaneti/things-to-do-in-svaneti via the CitySubPage dispatcher.
+    thingsToDo: {
+      seoKey: 'thingsToDoSvaneti', contentKey: 'thingsToDoSvaneti',
+      image: '/images/files/Koruldi%20Lakes.jpg',
+      address: { addressRegion: 'Svaneti' },
+      attractions: [
+        'Mestia-Ushguli Trek', 'Svan Towers', 'Ushguli', 'Chalaadi Glacier', 'Tetnuldi',
+      ],
+    },
   },
 ]
 
