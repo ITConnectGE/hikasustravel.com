@@ -200,6 +200,16 @@ export const regions = [
     seoKey: 'racha', contentKey: 'racha',
     image: '/images/files/shaori-reservoir.jpg',
     noAutolink: true,
+    // Region-level "things to do" guide, served (like Samegrelo's/Lechkhumi's) at
+    // /georgia/racha/things-to-do-in-racha via the CitySubPage dispatcher.
+    thingsToDo: {
+      seoKey: 'thingsToDoRacha', contentKey: 'thingsToDoRacha',
+      image: '/images/files/shaori-reservoir.jpg',
+      address: { addressRegion: 'Racha' },
+      attractions: [
+        'Khvanchkara Family Wineries', 'Nikortsminda Cathedral', 'Shaori Lake', 'Oni', 'Rioni Valley',
+      ],
+    },
   },
   // Combined entry kept for its dependents (Ambrolauri/Oni cities + 20 places
   // parented to it, and the Places-hub location labels), but hidden from the
