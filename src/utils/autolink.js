@@ -1,10 +1,10 @@
 /**
  * Comprehensive internal-link auto-linker for destination entities.
  *
- * Wraps every visible mention of a published City or Place to Visit in the
- * editorial body content with a link to that entity's canonical, same-language
- * page. Regions are intentionally excluded — none are published, so they have no
- * live detail page to link to.
+ * Wraps every visible mention of a published Region, City or Place to Visit in
+ * the editorial body content with a link to that entity's canonical, same-
+ * language page. Only regions with a published detail page are linked; regions
+ * are matched by both their localized name and their Latin/English form.
  *
  * Matching rules (see the task spec):
  *   - Longest entity name wins (alternation is sorted longest-first).
@@ -66,17 +66,24 @@ function buildIndex(lang, pages) {
   const placeItems = (pages && pages.destinationsPlaces && pages.destinationsPlaces.items) || {}
   const raw = [] // { name, url, key }
 
-  // Regions are gated on `published`: none are published today, so this adds NO
-  // region links yet (linking them would point at a 404). The localized region
-  // names already exist (destinationsRegions.items, all 7 languages), so the
-  // moment a region's detail page is published this links every mention of it
-  // automatically — no further code change. URL = canonical /georgia/regions/<slug>.
+  // Published regions are auto-linked to their canonical detail page
+  // (/georgia/regions/<slug>). For non-English, we match BOTH the localized
+  // region name (e.g. de "Imeretien", fr "Iméréthie") AND the Latin/English
+  // transliteration (e.g. "Imereti"): the published region content mixes both
+  // forms across locales, and both resolve to the SAME same-language region URL,
+  // so matching both catches every mention without inventing a translation.
+  // (A region whose Latin form collides with a city/place name is dropped by the
+  // ambiguity check below — never mislinked.)
   for (const r of regions) {
     if (!r.published || r.noAutolink) continue
     const url = regionPath(r.slug)
     const key = `region:${r.slug}`
-    const display = lang === 'en' ? r.name : (localizedName(regionItems, r.slug) || r.name)
-    for (const v of variants(display, lang)) raw.push({ name: v, url, key })
+    const names = new Set([r.name])
+    if (lang !== 'en') {
+      const loc = localizedName(regionItems, r.slug)
+      if (loc) names.add(loc)
+    }
+    for (const nm of names) for (const v of variants(nm, lang)) raw.push({ name: v, url, key })
   }
 
   for (const c of cities) {

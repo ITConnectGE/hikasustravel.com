@@ -49,14 +49,12 @@ export const regions = [
   // /georgia/regions/abkhazia route). Its card instead links to the dedicated
   // informational page at /<lang>/abkhazia via `linkPath`.
   { slug: 'abkhazia', name: 'Abkhazia', published: false, linkPath: '/abkhazia' },
-  // Adjara is published as a region detail page. `noAutolink` keeps it out of the
-  // automatic internal-linker for now (both its own body and site-wide mentions
-  // of "Adjara"), so linking can be handled separately later.
+  // Adjara is published as a region detail page. Its name is auto-linked site-wide (localized + Latin form) to this page,
+  // and its own body cross-links other entities via the shared auto-linker.
   {
     slug: 'adjara', name: 'Adjara', published: true,
     seoKey: 'adjara', contentKey: 'adjara',
     image: '/images/files/Batumi%20Black%20Sea%20Coast.jpg',
-    noAutolink: true,
     // Region-level "things to do" guide, served (like a city's) at
     // /georgia/adjara/things-to-do-in-adjara via the CitySubPage dispatcher.
     thingsToDo: {
@@ -70,14 +68,12 @@ export const regions = [
       ],
     },
   },
-  // Guria is published as a region detail page. `noAutolink` keeps it out of the
-  // automatic internal-linker for now (both its own body and site-wide mentions
-  // of "Guria"), so linking can be handled separately later.
+  // Guria is published as a region detail page. Its name is auto-linked site-wide (localized + Latin form) to this page,
+  // and its own body cross-links other entities via the shared auto-linker.
   {
     slug: 'guria', name: 'Guria', published: true,
     seoKey: 'guria', contentKey: 'guria',
     image: '/images/files/georgia-home.jpg',
-    noAutolink: true,
     // Region-level "things to do" guide, served (like Adjara's) at
     // /georgia/guria/things-to-do-in-guria via the CitySubPage dispatcher.
     thingsToDo: {
@@ -89,14 +85,12 @@ export const regions = [
       ],
     },
   },
-  // Imereti is published as a region detail page. `noAutolink` keeps it out of
-  // the automatic internal-linker for now (both its own body and site-wide
-  // mentions of "Imereti"), so linking can be handled separately later.
+  // Imereti is published as a region detail page. Its name is auto-linked site-wide (localized + Latin form) to this
+  // page, and its own body cross-links other entities via the shared auto-linker.
   {
     slug: 'imereti', name: 'Imereti', published: true,
     seoKey: 'imereti', contentKey: 'imereti',
     image: '/images/files/bagrati-cathedral.jpg',
-    noAutolink: true,
     // Region-level "things to do" guide, served (like Adjara's/Guria's) at
     // /georgia/imereti/things-to-do-in-imereti via the CitySubPage dispatcher.
     thingsToDo: {
@@ -108,14 +102,12 @@ export const regions = [
       ],
     },
   },
-  // Kakheti is published as a region detail page. `noAutolink` keeps it out of
-  // the automatic internal-linker for now (both its own body and site-wide
-  // mentions of "Kakheti"), so linking can be handled separately later.
+  // Kakheti is published as a region detail page. Its name is auto-linked site-wide (localized + Latin form) to this
+  // page, and its own body cross-links other entities via the shared auto-linker.
   {
     slug: 'kakheti', name: 'Kakheti', published: true,
     seoKey: 'kakheti', contentKey: 'kakheti',
     image: '/images/files/kakheti-vineyard.jpg',
-    noAutolink: true,
     // Region-level "things to do" guide, served (like Adjara's/Guria's) at
     // /georgia/kakheti/things-to-do-in-kakheti via the CitySubPage dispatcher.
     thingsToDo: {
@@ -127,14 +119,12 @@ export const regions = [
       ],
     },
   },
-  // Kvemo Kartli is published as a region detail page. `noAutolink` keeps it out
-  // of the automatic internal-linker for now. The hyphenated slug uses camelCase
+  // Kvemo Kartli is published as a region detail page. Its name is auto-linked site-wide to this page. The hyphenated slug uses camelCase
   // seo/content keys (kvemoKartli) so the seoData.js object key needs no quoting.
   {
     slug: 'kvemo-kartli', name: 'Kvemo Kartli', published: true,
     seoKey: 'kvemoKartli', contentKey: 'kvemoKartli',
     image: '/images/files/georgia-home.jpg',
-    noAutolink: true,
     // Region-level "things to do" guide, served (like Adjara's/Guria's) at
     // /georgia/kvemo-kartli/things-to-do-in-kvemo-kartli via the CitySubPage dispatcher.
     thingsToDo: {
@@ -147,16 +137,14 @@ export const regions = [
       ],
     },
   },
-  // Lechkhumi is published as a region detail page. `noAutolink` keeps it out of
-  // the automatic internal-linker for now (both its own body and site-wide
-  // mentions of "Lechkhumi"); linking is handled separately later. This is the
+  // Lechkhumi is published as a region detail page. Its name is auto-linked site-wide (localized + Latin form) to this
+  // page. This is the
   // SPLIT-OUT lechkhumi card — the combined `racha-lechkhumi` parent below stays
   // untouched for its dependents.
   {
     slug: 'lechkhumi', name: 'Lechkhumi', published: true,
     seoKey: 'lechkhumi', contentKey: 'lechkhumi',
     image: '/images/files/georgia-home.jpg',
-    noAutolink: true,
     // Region-level "things to do" guide, served (like Kvemo Kartli's) at
     // /georgia/lechkhumi/things-to-do-in-lechkhumi via the CitySubPage dispatcher.
     thingsToDo: {
@@ -169,15 +157,13 @@ export const regions = [
       ],
     },
   },
-  // Mtskheta-Mtianeti is published as a region detail page. `noAutolink` keeps it
-  // out of the automatic internal-linker for now. The hyphenated slug uses
+  // Mtskheta-Mtianeti is published as a region detail page. Its name is auto-linked site-wide to this page. The hyphenated slug uses
   // camelCase seo/content keys (mtskhetaMtianeti) so the seoData.js key needs no
   // quoting.
   {
     slug: 'mtskheta-mtianeti', name: 'Mtskheta-Mtianeti', published: true,
     seoKey: 'mtskhetaMtianeti', contentKey: 'mtskhetaMtianeti',
     image: '/images/files/Ananuri%20Fortress%20and%20Zhinvali%20Reservoir.jpg',
-    noAutolink: true,
     // Region-level "things to do" guide, served (like Kvemo Kartli's) at
     // /georgia/mtskheta-mtianeti/things-to-do-in-mtskheta-mtianeti via the CitySubPage dispatcher.
     thingsToDo: {
@@ -190,16 +176,14 @@ export const regions = [
       ],
     },
   },
-  // Racha is published as a region detail page. `noAutolink` keeps it out of the
-  // automatic internal-linker for now (both its own body and site-wide mentions
-  // of "Racha"); linking is handled separately later. This SPLIT-OUT `racha`
+  // Racha is published as a region detail page. Its name is auto-linked site-wide (localized + Latin form) to this page.
+  // This SPLIT-OUT `racha`
   // card carries the landing page; the combined `racha-lechkhumi` parent below
   // stays untouched for its dependents.
   {
     slug: 'racha', name: 'Racha', published: true,
     seoKey: 'racha', contentKey: 'racha',
     image: '/images/files/shaori-reservoir.jpg',
-    noAutolink: true,
     // Region-level "things to do" guide, served (like Samegrelo's/Lechkhumi's) at
     // /georgia/racha/things-to-do-in-racha via the CitySubPage dispatcher.
     thingsToDo: {
@@ -215,14 +199,12 @@ export const regions = [
   // parented to it, and the Places-hub location labels), but hidden from the
   // Regions listing now that Racha and Lechkhumi are separate cards.
   { slug: 'racha-lechkhumi', name: 'Racha-Lechkhumi', published: false, hideFromHub: true },
-  // Samegrelo is published as a region detail page. `noAutolink` keeps it out of
-  // the automatic internal-linker for now (both its own body and site-wide
-  // mentions of "Samegrelo"), so linking can be handled separately later.
+  // Samegrelo is published as a region detail page. Its name is auto-linked site-wide (localized + Latin form) to this
+  // page, and its own body cross-links other entities via the shared auto-linker.
   {
     slug: 'samegrelo', name: 'Samegrelo', published: true,
     seoKey: 'samegrelo', contentKey: 'samegrelo',
     image: '/images/files/georgia-home.jpg',
-    noAutolink: true,
     // Region-level "things to do" guide, served (like Adjara's/Guria's) at
     // /georgia/samegrelo/things-to-do-in-samegrelo via the CitySubPage dispatcher.
     thingsToDo: {
@@ -234,15 +216,14 @@ export const regions = [
       ],
     },
   },
-  // Samtskhe-Javakheti is published as a region detail page. `noAutolink` keeps
-  // it out of the automatic internal-linker for now. The hyphenated slug uses
+  // Samtskhe-Javakheti is published as a region detail page. Its name is
+  // auto-linked site-wide to this page. The hyphenated slug uses
   // camelCase seo/content keys (samtskheJavakheti) so the seoData.js key needs no
   // quoting.
   {
     slug: 'samtskhe-javakheti', name: 'Samtskhe-Javakheti', published: true,
     seoKey: 'samtskheJavakheti', contentKey: 'samtskheJavakheti',
     image: '/images/files/vardzia-cave-monastery.jpg',
-    noAutolink: true,
     // Region-level "things to do" guide, served at
     // /georgia/samtskhe-javakheti/things-to-do-in-samtskhe-javakheti via the
     // CitySubPage dispatcher.
@@ -255,14 +236,12 @@ export const regions = [
       ],
     },
   },
-  // Shida Kartli is published as a region detail page. `noAutolink` keeps it out
-  // of the automatic internal-linker for now. The hyphenated slug uses camelCase
+  // Shida Kartli is published as a region detail page. Its name is auto-linked site-wide to this page. The hyphenated slug uses camelCase
   // seo/content keys (shidaKartli) so the seoData.js key needs no quoting.
   {
     slug: 'shida-kartli', name: 'Shida Kartli', published: true,
     seoKey: 'shidaKartli', contentKey: 'shidaKartli',
     image: '/images/files/Uplistsikhe%20Cave%20Town.jpg',
-    noAutolink: true,
     // Region-level "things to do" guide, served at
     // /georgia/shida-kartli/things-to-do-in-shida-kartli via the CitySubPage
     // dispatcher.
@@ -275,14 +254,12 @@ export const regions = [
       ],
     },
   },
-  // Svaneti is published as a region detail page. `noAutolink` keeps it out of
-  // the automatic internal-linker for now. Single-word slug, so the seo/content
+  // Svaneti is published as a region detail page. Its name is auto-linked site-wide to this page. Single-word slug, so the seo/content
   // keys are plain `svaneti`.
   {
     slug: 'svaneti', name: 'Svaneti', published: true,
     seoKey: 'svaneti', contentKey: 'svaneti',
     image: '/images/files/Koruldi%20Lakes.jpg',
-    noAutolink: true,
     // Region-level "things to do" guide, served at
     // /georgia/svaneti/things-to-do-in-svaneti via the CitySubPage dispatcher.
     thingsToDo: {
