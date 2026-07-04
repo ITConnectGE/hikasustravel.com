@@ -1,5 +1,5 @@
 import { useContext, useMemo, useRef, useEffect } from 'react'
-import { useParams, useNavigate } from 'react-router-dom'
+import { useParams, useNavigate, useLocation, Navigate } from 'react-router-dom'
 import HeroSection from '../shared/HeroSection'
 import FadeUp from '../shared/FadeUp'
 import Accordion from '../shared/Accordion'
@@ -10,7 +10,7 @@ import useT from '../../i18n/useT'
 import useLang from '../../i18n/useLang'
 import useSEO from '../../hooks/useSEO'
 import { getSEO } from '../../data/seoData'
-import { getCity, cityPath, thingsToDoPath } from '../../data/places'
+import { getCity, cityPath, thingsToDoPath, legacyRedirects } from '../../data/places'
 import { autolinkHtml } from '../../utils/autolink'
 import enPages from '../../i18n/locales/en/pages.json'
 import NotFoundPage from './NotFoundPage'
@@ -29,6 +29,7 @@ export default function CityPage() {
   const { pages } = useContext(I18nContext)
   const { lang } = useLang()
   const navigate = useNavigate()
+  const location = useLocation()
   const contentRef = useRef(null)
 
   const published = city && city.published
@@ -130,7 +131,16 @@ export default function CityPage() {
 
   useSEO(published ? { ...seo, lang, path, image: heroImage, jsonLd } : {})
 
-  if (!published) return <NotFoundPage />
+  if (!published) {
+    // Renamed-slug redirect (the SPA mirror of the static stubs emitted by
+    // scripts/prerender.js). An old city slug that no longer matches a registry
+    // entry — e.g. the former kazbegi-stepantsminda -> kazbegi rename — is looked
+    // up in the shared registry and 301-redirected to its new URL so old links
+    // and bookmarks land on the new page instead of a 404. Query params kept.
+    const redirect = legacyRedirects().find((r) => r.from === `georgia/${citySlug}`)
+    if (redirect) return <Navigate to={`/${lang}/${redirect.to}${location.search}`} replace />
+    return <NotFoundPage />
+  }
 
   return (
     <>

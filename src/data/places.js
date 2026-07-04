@@ -499,7 +499,7 @@ export const cities = [
     },
   },
   {
-    slug: 'kazbegi-stepantsminda', name: 'Kazbegi (Stepantsminda)', region: 'mtskheta-mtianeti', published: true,
+    slug: 'kazbegi', name: 'Kazbegi (Stepantsminda)', region: 'mtskheta-mtianeti', published: true,
     seoKey: 'kazbegiStepantsminda', contentKey: 'kazbegiStepantsminda', image: '/images/files/georgia-home.jpg',
     thingsToDo: {
       seoKey: 'thingsToDoKazbegiStepantsminda', contentKey: 'thingsToDoKazbegiStepantsminda', image: '/images/files/georgia-home.jpg',
@@ -1329,43 +1329,43 @@ export const sites = [
   },
   {
     slug: 'gergeti-trinity-church', name: 'Gergeti Trinity Church',
-    parentType: 'city', parent: 'kazbegi-stepantsminda', published: true,
+    parentType: 'city', parent: 'kazbegi', published: true,
     seoKey: 'gergetiTrinityChurch', contentKey: 'gergetiTrinityChurch',
     image: '/images/files/georgia-home.jpg',
   },
   {
     slug: 'gveleti-waterfalls', name: 'Gveleti Waterfalls',
-    parentType: 'city', parent: 'kazbegi-stepantsminda', published: true,
+    parentType: 'city', parent: 'kazbegi', published: true,
     seoKey: 'gveletiWaterfalls', contentKey: 'gveletiWaterfalls',
     image: '/images/files/georgia-home.jpg',
   },
   {
     slug: 'juta', name: 'Juta & the Chaukhi Massif',
-    parentType: 'city', parent: 'kazbegi-stepantsminda', published: true,
+    parentType: 'city', parent: 'kazbegi', published: true,
     seoKey: 'juta', contentKey: 'juta',
     image: '/images/files/georgia-home.jpg',
   },
   {
     slug: 'truso-valley', name: 'Truso Valley',
-    parentType: 'city', parent: 'kazbegi-stepantsminda', published: true,
+    parentType: 'city', parent: 'kazbegi', published: true,
     seoKey: 'trusoValley', contentKey: 'trusoValley',
     image: '/images/files/georgia-home.jpg',
   },
   {
     slug: 'arsha-waterfall', name: 'Arsha Waterfall',
-    parentType: 'city', parent: 'kazbegi-stepantsminda', published: true,
+    parentType: 'city', parent: 'kazbegi', published: true,
     seoKey: 'arshaWaterfall', contentKey: 'arshaWaterfall',
     image: '/images/files/georgia-home.jpg',
   },
   {
     slug: 'elia-hill-kazbegi', name: 'Elia Hill (St. Elias Church)',
-    parentType: 'city', parent: 'kazbegi-stepantsminda', published: true,
+    parentType: 'city', parent: 'kazbegi', published: true,
     seoKey: 'eliaHill', contentKey: 'eliaHill',
     image: '/images/files/georgia-home.jpg',
   },
   {
     slug: 'gergeti-glacier', name: 'Gergeti Glacier',
-    parentType: 'city', parent: 'kazbegi-stepantsminda', published: true,
+    parentType: 'city', parent: 'kazbegi', published: true,
     seoKey: 'gergetiGlacier', contentKey: 'gergetiGlacier',
     image: '/images/files/georgia-home.jpg',
   },
@@ -1769,6 +1769,21 @@ export function legacyRedirects() {
   // Renamed Places to Visit — old slug 301-redirects to its new home.
   //   Russia–Georgia Friendship Monument -> Gudauri Panorama
   out.push({ from: 'georgia/gudauri/russia-georgia-friendship-monument', to: 'georgia/gudauri/gudauri-panorama' })
+  // Renamed city — kazbegi-stepantsminda -> kazbegi. Redirect the old city page,
+  // its things-to-do guide, and every city-parented site (Gergeti Trinity, Juta,
+  // Truso, etc.) directly to the new slug — one hop each, no chains.
+  const kazbegiOld = 'kazbegi-stepantsminda'
+  const kazbegiNew = 'kazbegi'
+  out.push({ from: `georgia/${kazbegiOld}`, to: `georgia/${kazbegiNew}` })
+  out.push({
+    from: `georgia/${kazbegiOld}/things-to-do-in-${kazbegiOld}`,
+    to: `georgia/${kazbegiNew}/things-to-do-in-${kazbegiNew}`,
+  })
+  for (const s of sites) {
+    if (s.published && s.parentType === 'city' && s.parent === kazbegiNew) {
+      out.push({ from: `georgia/${kazbegiOld}/${s.slug}`, to: `georgia/${kazbegiNew}/${s.slug}` })
+    }
+  }
   return out
 }
 
