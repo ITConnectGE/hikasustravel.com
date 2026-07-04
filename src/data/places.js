@@ -601,7 +601,7 @@ export const sites = [
   },
   {
     slug: 'khvanchkara-wine-monument', name: 'The Khvanchkara Wine Monument',
-    parentType: 'region', parent: 'racha-lechkhumi', published: true,
+    parentType: 'city', parent: 'ambrolauri', formerParent: 'racha-lechkhumi', published: true,
     seoKey: 'khvanchkaraMonument', contentKey: 'khvanchkaraMonument',
     image: '/images/files/georgia-home.jpg',
   },
@@ -625,7 +625,7 @@ export const sites = [
   },
   {
     slug: 'oni-synagogue', name: 'The Oni Synagogue',
-    parentType: 'region', parent: 'racha-lechkhumi', published: true,
+    parentType: 'city', parent: 'oni', formerParent: 'racha-lechkhumi', published: true,
     seoKey: 'oniSynagogue', contentKey: 'oniSynagogue',
     image: '/images/files/georgia-home.jpg',
   },
@@ -789,7 +789,7 @@ export const sites = [
   },
   {
     slug: 'nekresi-monastery', name: 'Nekresi Monastery',
-    parentType: 'region', parent: 'kakheti', published: true,
+    parentType: 'city', parent: 'kvareli', formerParent: 'kakheti', published: true,
     seoKey: 'nekresiMonastery', contentKey: 'nekresiMonastery',
     image: '/images/files/georgia-home.jpg',
   },
@@ -819,7 +819,7 @@ export const sites = [
   },
   {
     slug: 'gurjaani-kvelatsminda', name: 'Gurjaani Kvelatsminda',
-    parentType: 'region', parent: 'kakheti', published: true,
+    parentType: 'city', parent: 'gurjaani', formerParent: 'kakheti', published: true,
     seoKey: 'gurjaaniKvelatsminda', contentKey: 'gurjaaniKvelatsminda',
     image: '/images/files/georgia-home.jpg',
   },
@@ -1251,13 +1251,13 @@ export const sites = [
   },
   {
     slug: 'uplistsikhe', name: 'Uplistsikhe',
-    parentType: 'region', parent: 'shida-kartli', published: true,
+    parentType: 'city', parent: 'gori', formerParent: 'shida-kartli', published: true,
     seoKey: 'uplistsikhe', contentKey: 'uplistsikhe',
     image: '/images/files/georgia-home.jpg',
   },
   {
     slug: 'ateni-sioni', name: 'Ateni Sioni',
-    parentType: 'region', parent: 'shida-kartli', published: true,
+    parentType: 'city', parent: 'gori', formerParent: 'shida-kartli', published: true,
     seoKey: 'ateniSioni', contentKey: 'ateniSioni',
     image: '/images/files/georgia-home.jpg',
   },
@@ -1377,13 +1377,13 @@ export const sites = [
   },
   {
     slug: 'martvili-canyon', name: 'Martvili Canyon',
-    parentType: 'region', parent: 'samegrelo', published: true,
+    parentType: 'city', parent: 'martvili', formerParent: 'samegrelo', published: true,
     seoKey: 'martviliCanyon', contentKey: 'martviliCanyon',
     image: '/images/files/georgia-home.jpg',
   },
   {
     slug: 'martvili-monastery', name: 'Martvili Monastery (Chkondidi)',
-    parentType: 'region', parent: 'samegrelo', published: true,
+    parentType: 'city', parent: 'martvili', formerParent: 'samegrelo', published: true,
     seoKey: 'martviliMonastery', contentKey: 'martviliMonastery',
     image: '/images/files/georgia-home.jpg',
   },
@@ -1407,7 +1407,7 @@ export const sites = [
   },
   {
     slug: 'dadiani-palace-museum', name: 'The Dadiani Palace Museum',
-    parentType: 'region', parent: 'samegrelo', published: true,
+    parentType: 'city', parent: 'zugdidi', formerParent: 'samegrelo', published: true,
     seoKey: 'dadianiPalaceMuseum', contentKey: 'dadianiPalaceMuseum',
     image: '/images/files/georgia-home.jpg',
   },
@@ -1431,7 +1431,7 @@ export const sites = [
   },
   {
     slug: 'chalaadi-glacier', name: 'Chalaadi Glacier',
-    parentType: 'region', parent: 'svaneti', published: true,
+    parentType: 'city', parent: 'mestia', formerParent: 'svaneti', published: true,
     seoKey: 'chalaadiGlacier', contentKey: 'chalaadiGlacier',
     image: '/images/files/georgia-home.jpg',
   },
@@ -1449,7 +1449,7 @@ export const sites = [
   },
   {
     slug: 'koruldi-lakes', name: 'Koruldi Lakes',
-    parentType: 'region', parent: 'svaneti', published: true,
+    parentType: 'city', parent: 'mestia', formerParent: 'svaneti', published: true,
     seoKey: 'koruldiLakes', contentKey: 'koruldiLakes',
     image: '/images/files/georgia-home.jpg',
   },
@@ -1461,19 +1461,19 @@ export const sites = [
   },
   {
     slug: 'tetnuldi-ski-resort', name: 'Tetnuldi Ski Resort',
-    parentType: 'region', parent: 'svaneti', published: true,
+    parentType: 'city', parent: 'mestia', formerParent: 'svaneti', published: true,
     seoKey: 'tetnuldiSkiResort', contentKey: 'tetnuldiSkiResort',
     image: '/images/files/georgia-home.jpg',
   },
   {
     slug: 'cross-over-mestia', name: 'The Cross Over Mestia',
-    parentType: 'region', parent: 'svaneti', published: true,
+    parentType: 'city', parent: 'mestia', formerParent: 'svaneti', published: true,
     seoKey: 'crossOverMestia', contentKey: 'crossOverMestia',
     image: '/images/files/georgia-home.jpg',
   },
   {
     slug: 'shkhara-glacier', name: 'Shkhara Glacier',
-    parentType: 'region', parent: 'svaneti', published: true,
+    parentType: 'city', parent: 'ushguli', formerParent: 'svaneti', published: true,
     seoKey: 'shkharaGlacier', contentKey: 'shkharaGlacier',
     image: '/images/files/georgia-home.jpg',
   },
@@ -1497,13 +1497,18 @@ export const sites = [
   },
   {
     slug: 'katskhi-pillar', name: 'Katskhi Pillar',
-    parentType: 'region', parent: 'imereti', published: true,
+    parentType: 'city', parent: 'chiatura', formerParent: 'imereti', published: true,
     seoKey: 'katskhiPillar', contentKey: 'katskhiPillar',
     image: '/images/files/georgia-home.jpg',
   },
   {
     slug: 'abastumani-observatory', name: 'Abastumani Astrophysical Observatory',
-    parentType: 'region', parent: 'samtskhe-javakheti', published: true,
+    // Parented on the spa town of Abastumani (local destination) for the URL,
+    // with the region kept as metadata. Abastumani has no landing page of its
+    // own, so parentType 'place' routes the site + shows a Places-to-Visit
+    // breadcrumb rather than a dead town link. `formerParent` drives the 301.
+    parentType: 'place', parent: 'abastumani', region: 'samtskhe-javakheti',
+    formerParent: 'samtskhe-javakheti', published: true,
     seoKey: 'abastumaniObservatory', contentKey: 'abastumaniObservatory',
     image: '/images/files/georgia-home.jpg',
   },
@@ -1539,19 +1544,19 @@ export const sites = [
   },
   {
     slug: 'green-monastery', name: 'The Green Monastery (Mtsvane Monastery)',
-    parentType: 'region', parent: 'samtskhe-javakheti', published: true,
+    parentType: 'city', parent: 'borjomi', formerParent: 'samtskhe-javakheti', published: true,
     seoKey: 'greenMonastery', contentKey: 'greenMonastery',
     image: '/images/files/georgia-home.jpg',
   },
   {
     slug: 'sapara-monastery', name: 'Sapara Monastery',
-    parentType: 'region', parent: 'samtskhe-javakheti', published: true,
+    parentType: 'city', parent: 'akhaltsikhe', formerParent: 'samtskhe-javakheti', published: true,
     seoKey: 'saparaMonastery', contentKey: 'saparaMonastery',
     image: '/images/files/georgia-home.jpg',
   },
   {
     slug: 'timotesubani-monastery', name: 'Timotesubani Monastery',
-    parentType: 'region', parent: 'samtskhe-javakheti', published: true,
+    parentType: 'city', parent: 'borjomi', formerParent: 'samtskhe-javakheti', published: true,
     seoKey: 'timotesubaniMonastery', contentKey: 'timotesubaniMonastery',
     image: '/images/files/georgia-home.jpg',
   },
@@ -1599,7 +1604,7 @@ export const sites = [
   },
   {
     slug: 'tetra-cave', name: 'Tetra Cave',
-    parentType: 'region', parent: 'imereti', published: true,
+    parentType: 'city', parent: 'tskaltubo', formerParent: 'imereti', published: true,
     seoKey: 'tetraCave', contentKey: 'tetraCave',
     image: '/images/files/georgia-home.jpg',
   },
@@ -1617,7 +1622,7 @@ export const sites = [
   },
   {
     slug: 'mghvimevi-monastery', name: 'Mghvimevi Monastery',
-    parentType: 'region', parent: 'imereti', published: true,
+    parentType: 'city', parent: 'chiatura', formerParent: 'imereti', published: true,
     seoKey: 'mghvimeviMonastery', contentKey: 'mghvimeviMonastery',
     image: '/images/files/georgia-home.jpg',
   },
@@ -1707,6 +1712,12 @@ export function siteLocation(site) {
     const city = _cityBySlug[site.parent]
     return { cityId: site.parent, regionId: city ? city.region : null }
   }
+  // A site parented on a local destination that has no landing page (parentType
+  // 'place') carries its region explicitly, so the card location line still
+  // shows the region even though the URL parent is the town/resort.
+  if (site.parentType === 'place') {
+    return { cityId: null, regionId: site.region || null }
+  }
   return { cityId: null, regionId: site.parent }
 }
 
@@ -1765,6 +1776,14 @@ export function legacyRedirects() {
   //   /georgia/regions/<region>/<slug>  ->  /georgia/<region>/<slug>
   for (const s of sites) if (s.published && s.parentType === 'region') {
     out.push({ from: `georgia/regions/${s.parent}/${s.slug}`, to: cleanPath(sitePath(s)) })
+  }
+  // Places to Visit re-parented from a region slug to a more specific local
+  // destination (city/town/resort). The old regional URL — and its even older
+  // /regions/<region>/<slug> form — 301-redirect directly to the new URL. Driven
+  // by each site's `formerParent`, so adding a re-parented site needs no new rule.
+  for (const s of sites) if (s.published && s.formerParent) {
+    out.push({ from: `georgia/${s.formerParent}/${s.slug}`, to: cleanPath(sitePath(s)) })
+    out.push({ from: `georgia/regions/${s.formerParent}/${s.slug}`, to: cleanPath(sitePath(s)) })
   }
   // Renamed Places to Visit — old slug 301-redirects to its new home.
   //   Russia–Georgia Friendship Monument -> Gudauri Panorama

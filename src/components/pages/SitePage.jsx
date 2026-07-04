@@ -59,27 +59,39 @@ export default function SitePage() {
   const heroImage = published ? site.image : null
 
   const parent = published
-    ? (site.parentType === 'city' ? getCity(site.parent) : getRegion(site.parent))
+    ? (site.parentType === 'city' ? getCity(site.parent)
+      : site.parentType === 'region' ? getRegion(site.parent)
+      : null)
     : null
-  const trail = published
-    ? [
-        { name: t('breadcrumb.home'), to: '/' },
-        { name: t('nav.allDestinations'), to: '/georgia' },
+  let trail = []
+  if (published) {
+    trail = [
+      { name: t('breadcrumb.home'), to: '/' },
+      { name: t('nav.allDestinations'), to: '/georgia' },
+    ]
+    if (site.parentType === 'place') {
+      // Sites parented on a local destination without its own landing page use
+      // the Places to Visit hub as their intermediate crumb (that's where their
+      // card lives), avoiding a dead link to a town page that doesn't exist.
+      trail.push({ name: t('nav.placesToVisit'), to: '/georgia/places-to-visit' })
+    } else {
+      trail.push(
         site.parentType === 'city'
           ? { name: t('nav.cities'), to: '/georgia/cities' }
           : { name: t('nav.regions'), to: '/georgia/regions' },
-        {
-          name: parent ? parent.name : site.parent,
-          // Only link the parent crumb when its landing page actually exists
-          // (is published). Region landings are currently unpublished, so their
-          // crumb renders as plain text rather than a dead 404 link.
-          to: parent && parent.published
-            ? (site.parentType === 'city' ? cityPath(site.parent) : regionPath(site.parent))
-            : undefined,
-        },
-        { name: site.name },
-      ]
-    : []
+      )
+      trail.push({
+        name: parent ? parent.name : site.parent,
+        // Only link the parent crumb when its landing page actually exists
+        // (is published). Region landings are currently unpublished, so their
+        // crumb renders as plain text rather than a dead 404 link.
+        to: parent && parent.published
+          ? (site.parentType === 'city' ? cityPath(site.parent) : regionPath(site.parent))
+          : undefined,
+      })
+    }
+    trail.push({ name: site.name })
+  }
 
   useEffect(() => {
     const el = contentRef.current
