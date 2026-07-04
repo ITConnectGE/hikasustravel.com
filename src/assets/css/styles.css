@@ -82,6 +82,11 @@ header {
   width: 100%;
   height: 300px;
   background: transparent;
+  /* The header is a transparent 300px-tall overlay sitting above the top of the
+     page. Without this it would intercept clicks meant for content beneath it
+     (e.g. the breadcrumb bar on destination detail pages, which sits at y≈0).
+     Let clicks pass through the empty area; the real controls below re-enable. */
+  pointer-events: none;
 }
 header::before {
   content: "";
@@ -102,6 +107,9 @@ header::before {
 header > * {
   position: relative;
   z-index: 2;
+  /* Re-enable clicks on the actual header controls (logo, language switcher,
+     hamburger, nav) — see the pointer-events note on `header` above. */
+  pointer-events: auto;
 }
 
 /* Hamburger Menu */
