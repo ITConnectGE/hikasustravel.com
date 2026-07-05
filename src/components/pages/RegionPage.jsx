@@ -4,12 +4,13 @@ import HeroSection from '../shared/HeroSection'
 import FadeUp from '../shared/FadeUp'
 import Accordion from '../shared/Accordion'
 import Breadcrumbs from '../shared/Breadcrumbs'
+import LocaleLink from '../../i18n/LocaleLink'
 import { I18nContext } from '../../i18n/I18nContext'
 import useT from '../../i18n/useT'
 import useLang from '../../i18n/useLang'
 import useSEO from '../../hooks/useSEO'
 import { getSEO } from '../../data/seoData'
-import { getRegion, regionPath } from '../../data/places'
+import { getRegion, regionPath, thingsToDoPath } from '../../data/places'
 import { autolinkHtml } from '../../utils/autolink'
 import enPages from '../../i18n/locales/en/pages.json'
 import NotFoundPage from './NotFoundPage'
@@ -51,6 +52,10 @@ export default function RegionPage() {
   )
   const path = published ? regionPath(region.slug).replace(/^\//, '') : ''
   const heroImage = published ? region.image : null
+  // Only link the things-to-do guide when the region actually has one published
+  // (mirrors CityPage). This excludes unpublished/informational regions such as
+  // Abkhazia, which carry no `thingsToDo` block.
+  const hasThingsToDo = published && !!region.thingsToDo
 
   const trail = published
     ? [
@@ -125,6 +130,15 @@ export default function RegionPage() {
         <FadeUp>
           <div ref={contentRef} dangerouslySetInnerHTML={{ __html: linkedContent }} />
         </FadeUp>
+        {hasThingsToDo && (
+          <FadeUp>
+            <p className="city-ttd-cta">
+              <LocaleLink to={thingsToDoPath(region.slug)} className="button">
+                {t('city.thingsToDoCta', { city: region.name })}
+              </LocaleLink>
+            </p>
+          </FadeUp>
+        )}
       </section>
       {faqItems.length > 0 && (
         <section className="page-items faq" id="faq-section">
