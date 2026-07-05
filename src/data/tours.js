@@ -346,7 +346,7 @@ export const tours = [
       },
       {
         "label": "Group Size",
-        "value": "Max 16 travelers"
+        "value": "Max 12 travelers"
       },
       {
         "label": "Available Dates",
