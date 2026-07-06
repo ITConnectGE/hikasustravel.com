@@ -978,7 +978,7 @@ export const tours = [
   {
     "slug": "sulfur-baths-and-sipping-wine-5-days-of-georgian-delights",
     "type": "private",
-    "title": "Sulfur Baths and Sipping Wine: 5 Days of Georgian Delights",
+    "title": "5-Day Georgia Private Tour: Tbilisi, Wine & Sulfur Baths",
     "heroImage": "/images/files/sulfur-baths-wine-tour.jpg",
     "tileImage": "/images/files/sulfur-baths-wine-tour.jpg",
     "listingImage": "/images/files/sulfur-baths-wine-tour.jpg",
