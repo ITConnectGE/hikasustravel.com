@@ -12,7 +12,7 @@ import { getSEO } from '../../data/seoData'
 // Slugs of the tours that start from Kutaisi (module-level constant so it stays
 // referentially stable across renders and out of the useMemo dependency list).
 const kutaisiSlugs = [
-  'georgias-cultural-wonders-7-day-adventure-from-kutaisi-to-tbilisi-and-beyond',
+  '7-day-georgia-cultural-tour-kutaisi-to-tbilisi',
   'ultimate-georgia-exploration-9-day-tour-from-kutaisi-to-tbilisi-and-hidden-gems',
   'georgias-wonders-11-day-grand-tour-from-kutaisi-to-kazbegi-and-batumi',
   'grand-georgia-adventure-13-day-cultural-and-scenic-journey',

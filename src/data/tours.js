@@ -1448,7 +1448,8 @@ export const tours = [
     "tourFormTitle": "Tbilisi to Treasures: A 6-Day Journey Through Georgia's Icons and Hidden Gems"
   },
   {
-    "slug": "georgias-cultural-wonders-7-day-adventure-from-kutaisi-to-tbilisi-and-beyond",
+    "slug": "7-day-georgia-cultural-tour-kutaisi-to-tbilisi",
+    "formerSlug": "georgias-cultural-wonders-7-day-adventure-from-kutaisi-to-tbilisi-and-beyond",
     "type": "private",
     "title": "7-Day Georgia Cultural Tour: Kutaisi to Tbilisi",
     "heroImage": "/images/files/cultural-wonders-kutaisi.jpg",
