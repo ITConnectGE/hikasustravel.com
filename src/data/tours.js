@@ -1221,7 +1221,8 @@ export const tours = [
   {
     "slug": "tbilisi-to-treasures-a-6-day-journey-through-georgias-icons-and-hidden-gems",
     "type": "private",
-    "title": "Tbilisi to Treasures: A 6-Day Journey Through Georgia's Icons and Hidden Gems",
+    "title": "6-Day Georgia Private Tour: Highlights from Tbilisi",
+    "seoTitle": "6-Day Georgia Private Tour: Highlights & Culture from Tbilisi",
     "heroImage": "/images/files/georgia-tour-02.jpg",
     "tileImage": "/images/files/georgia-tour-02.jpg",
     "listingImage": "/images/files/georgia-tour-02.jpg",
