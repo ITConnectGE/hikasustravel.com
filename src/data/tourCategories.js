@@ -33,7 +33,7 @@ export const PRIVATE_TOUR_CATEGORIES = {
   'savor-the-flavors-of-kakheti-3-day-wine-and-culture-adventure': ['wine-food', 'cultural-heritage'],
   '5-day-private-tour-from-tbilisi-to-batumi': ['cultural-heritage', 'western-georgia-black-sea'],
   '5-day-georgia-private-tour-tbilisi-wine-and-sulfur-baths': ['wine-food', 'cultural-heritage'],
-  'tbilisi-to-treasures-a-6-day-journey-through-georgias-icons-and-hidden-gems': ['cultural-heritage', 'wine-food'],
+  '6-day-georgia-private-tour-highlights-from-tbilisi': ['cultural-heritage', 'wine-food'],
   'georgias-cultural-wonders-7-day-adventure-from-kutaisi-to-tbilisi-and-beyond': ['cultural-heritage', 'western-georgia-black-sea'],
   'experience-the-heart-of-georgia-8-day-journey-of-culture-nature-wine-tastings': ['cultural-heritage', 'wine-food', 'nature-mountain'],
   'immerse-yourself-in-georgia-8-day-cultural-and-adventure-journey-through-the-caucasus': ['cultural-heritage', 'adventure-hiking', 'nature-mountain'],

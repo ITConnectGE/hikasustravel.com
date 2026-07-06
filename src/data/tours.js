@@ -1219,7 +1219,8 @@ export const tours = [
     "tourFormTitle": "Sulfur Baths and Sipping Wine: 5 Days of Georgian Delights"
   },
   {
-    "slug": "tbilisi-to-treasures-a-6-day-journey-through-georgias-icons-and-hidden-gems",
+    "slug": "6-day-georgia-private-tour-highlights-from-tbilisi",
+    "formerSlug": "tbilisi-to-treasures-a-6-day-journey-through-georgias-icons-and-hidden-gems",
     "type": "private",
     "title": "6-Day Georgia Private Tour: Highlights from Tbilisi",
     "seoTitle": "6-Day Georgia Private Tour: Highlights & Culture from Tbilisi",
