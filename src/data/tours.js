@@ -2045,7 +2045,8 @@ export const tours = [
   {
     "slug": "immerse-yourself-in-georgia-8-day-cultural-and-adventure-journey-through-the-caucasus",
     "type": "private",
-    "title": "Immerse Yourself in Georgia: 8-Day Cultural and Adventure Journey Through the Caucasus",
+    "title": "8-Day Georgia Culture & Adventure Tour",
+    "seoTitle": "8-Day Georgia Culture & Adventure Tour: Caucasus Mountains",
     "heroImage": "/images/files/cultural-adventure-caucasus.jpg",
     "tileImage": "/images/files/cultural-adventure-caucasus.jpg",
     "listingImage": "/images/files/cultural-adventure-caucasus.jpg",
