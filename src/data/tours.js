@@ -1766,7 +1766,8 @@ export const tours = [
   {
     "slug": "experience-the-heart-of-georgia-8-day-journey-of-culture-nature-wine-tastings",
     "type": "private",
-    "title": "Experience the Heart of Georgia: 8-Day Journey of Culture, Nature, Wine Tastings",
+    "title": "8-Day Georgia Private Tour: Culture, Nature & Wine",
+    "seoTitle": "8-Day Georgia Private Tour: Culture, Nature & Wine from Tbilisi",
     "heroImage": "/images/files/culture-nature-wine-tour.jpg",
     "tileImage": "/images/files/culture-nature-wine-tour.jpg",
     "listingImage": "/images/files/culture-nature-wine-tour.jpg",
