@@ -2366,7 +2366,8 @@ export const tours = [
     "tourFormTitle": "Immerse Yourself in Georgia: 8-Day Cultural and Adventure Journey Through the Caucasus"
   },
   {
-    "slug": "ultimate-georgia-exploration-9-day-tour-from-kutaisi-to-tbilisi-and-hidden-gems",
+    "slug": "9-day-georgia-private-tour-kutaisi-to-tbilisi",
+    "formerSlug": "ultimate-georgia-exploration-9-day-tour-from-kutaisi-to-tbilisi-and-hidden-gems",
     "type": "private",
     "title": "9-Day Georgia Private Tour: Kutaisi to Tbilisi",
     "seoTitle": "9-Day Georgia Private Tour: Kutaisi to Tbilisi Highlights",

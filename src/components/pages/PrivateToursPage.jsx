@@ -13,7 +13,7 @@ import { getSEO } from '../../data/seoData'
 // referentially stable across renders and out of the useMemo dependency list).
 const kutaisiSlugs = [
   '7-day-georgia-cultural-tour-kutaisi-to-tbilisi',
-  'ultimate-georgia-exploration-9-day-tour-from-kutaisi-to-tbilisi-and-hidden-gems',
+  '9-day-georgia-private-tour-kutaisi-to-tbilisi',
   'georgias-wonders-11-day-grand-tour-from-kutaisi-to-kazbegi-and-batumi',
   'grand-georgia-adventure-13-day-cultural-and-scenic-journey',
 ]
