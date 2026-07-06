@@ -2368,7 +2368,8 @@ export const tours = [
   {
     "slug": "ultimate-georgia-exploration-9-day-tour-from-kutaisi-to-tbilisi-and-hidden-gems",
     "type": "private",
-    "title": "Ultimate Georgia Exploration: 9-Day Tour from Kutaisi to Tbilisi and Hidden Gems",
+    "title": "9-Day Georgia Private Tour: Kutaisi to Tbilisi",
+    "seoTitle": "9-Day Georgia Private Tour: Kutaisi to Tbilisi Highlights",
     "heroImage": "/images/files/ultimate-exploration-kutaisi.jpg",
     "tileImage": "/images/files/Bazaar%20in%20Kutaisi.jpg",
     "listingImage": "/images/files/Bazaar%20in%20Kutaisi.jpg",
