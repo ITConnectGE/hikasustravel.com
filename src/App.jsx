@@ -18,8 +18,9 @@ import CityPage from './components/pages/CityPage'
 import RegionPage from './components/pages/RegionPage'
 import CitySubPage from './components/pages/CitySubPage'
 import BorderCrossingPage from './components/pages/BorderCrossingPage'
-import { DestinationsRedirect, ThingsToDoRedirect, RegionSiteRedirect } from './components/pages/LegacyRedirects'
+import { DestinationsRedirect, ThingsToDoRedirect, RegionSiteRedirect, TourSlugRedirect } from './components/pages/LegacyRedirects'
 import { cities, regions } from './data/places'
+import { tours } from './data/tours'
 import PrivateToursPage from './components/pages/PrivateToursPage'
 import GroupToursPage from './components/pages/GroupToursPage'
 import TourDetailPage from './components/pages/TourDetailPage'
@@ -89,6 +90,21 @@ export default function App() {
           <Route path="group-tours" element={<GroupToursPage />} />
           <Route path="private-tours/:slug" element={<TourDetailPage />} />
           <Route path="group-tours/:slug" element={<TourDetailPage />} />
+          {/* Renamed tour slugs: the old URL 301-redirects to the new canonical
+              slug (mirrors the static stubs in scripts/prerender.js). The static
+              path outranks the dynamic :slug route above. */}
+          {tours
+            .filter((tr) => tr.formerSlug)
+            .map((tr) => {
+              const prefix = tr.type === 'group' ? 'group-tours' : 'private-tours'
+              return (
+                <Route
+                  key={tr.formerSlug}
+                  path={`${prefix}/${tr.formerSlug}`}
+                  element={<TourSlugRedirect prefix={prefix} newSlug={tr.slug} />}
+                />
+              )
+            })}
           <Route path="shuttle-service" element={<ShuttleServicePage />} />
           <Route path="embassies" element={<EmbassiesPage />} />
           <Route path="blog" element={<BlogPage />} />

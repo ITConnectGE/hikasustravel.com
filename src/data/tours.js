@@ -976,7 +976,8 @@ export const tours = [
     "tourFormTitle": "5-Day Private Tour from Tbilisi to Batumi"
   },
   {
-    "slug": "sulfur-baths-and-sipping-wine-5-days-of-georgian-delights",
+    "slug": "5-day-georgia-private-tour-tbilisi-wine-and-sulfur-baths",
+    "formerSlug": "sulfur-baths-and-sipping-wine-5-days-of-georgian-delights",
     "type": "private",
     "title": "5-Day Georgia Private Tour: Tbilisi, Wine & Sulfur Baths",
     "heroImage": "/images/files/sulfur-baths-wine-tour.jpg",

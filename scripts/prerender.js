@@ -88,6 +88,7 @@ function parseTours(source) {
     const daysM = chunk.match(/"days":\s*(\d+)/)
     const seoTitleM = chunk.match(/"seoTitle":\s*"([^"]+)"/)
     const metaDescM = chunk.match(/"metaDescription":\s*"([^"]+)"/)
+    const formerSlugM = chunk.match(/"formerSlug":\s*"([^"]+)"/)
 
     // Extract itinerary day titles for keywords
     const itineraryTitles = []
@@ -103,6 +104,7 @@ function parseTours(source) {
       metaDescription: metaDescM?.[1] || '',
       heroImage: heroM?.[1] || '',
       days: daysM ? parseInt(daysM[1]) : 0,
+      formerSlug: formerSlugM?.[1] || '',
       itineraryTitles,
     })
   }
@@ -391,6 +393,13 @@ for (const lang of LANGS) {
       image: tour.heroImage,
       ogLocale,
     })
+
+    // Renamed tour slug: the old URL 301-redirects to the new canonical
+    // (mirrors the client-side TourSlugRedirect route in App.jsx).
+    if (tour.formerSlug) {
+      const oldFilePath = join(DIST, lang, prefix, tour.formerSlug, 'index.html')
+      writeRedirectStub(oldFilePath, canonical)
+    }
   }
 
   // --- Blog article pages ---

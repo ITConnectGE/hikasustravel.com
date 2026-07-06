@@ -43,3 +43,11 @@ export function RegionSiteRedirect() {
   const { lang, regionSlug, siteSlug } = useParams()
   return <Navigate to={`/${lang}/georgia/${regionSlug}/${siteSlug}`} replace />
 }
+
+// A tour whose slug was renamed keeps its old URL working: the old
+// /:lang/<prefix>/<formerSlug> path redirects to the new canonical slug (the
+// SPA mirror of the static redirect stub emitted by scripts/prerender.js).
+export function TourSlugRedirect({ prefix, newSlug }) {
+  const { lang } = useParams()
+  return <Navigate to={`/${lang}/${prefix}/${newSlug}`} replace />
+}
