@@ -684,7 +684,8 @@ export const tours = [
     "tourFormTitle": "Savor the Flavors of Kakheti – 3-Day Wine & Culture Tour"
   },
   {
-    "slug": "experience-georgias-rich-culture-coastal-beauty-5-day-tour-from-tbilisi-to-batumi",
+    "slug": "5-day-private-tour-from-tbilisi-to-batumi",
+    "formerSlug": "experience-georgias-rich-culture-coastal-beauty-5-day-tour-from-tbilisi-to-batumi",
     "type": "private",
     "title": "5-Day Private Tour from Tbilisi to Batumi",
     "heroImage": "/images/files/batumi-coastal-tour.jpg",
