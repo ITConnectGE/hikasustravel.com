@@ -1450,7 +1450,7 @@ export const tours = [
   {
     "slug": "georgias-cultural-wonders-7-day-adventure-from-kutaisi-to-tbilisi-and-beyond",
     "type": "private",
-    "title": "Georgia's Cultural Wonders: 7-Day Adventure from Kutaisi to Tbilisi and Beyond",
+    "title": "7-Day Georgia Cultural Tour: Kutaisi to Tbilisi",
     "heroImage": "/images/files/cultural-wonders-kutaisi.jpg",
     "tileImage": "/images/files/Prometheus%20Cave.jpg",
     "listingImage": "/images/files/Prometheus%20Cave.jpg",
