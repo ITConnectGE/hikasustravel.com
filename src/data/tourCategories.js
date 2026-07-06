@@ -36,7 +36,7 @@ export const PRIVATE_TOUR_CATEGORIES = {
   '6-day-georgia-private-tour-highlights-from-tbilisi': ['cultural-heritage', 'wine-food'],
   '7-day-georgia-cultural-tour-kutaisi-to-tbilisi': ['cultural-heritage', 'western-georgia-black-sea'],
   '8-day-georgia-private-tour-culture-nature-and-wine': ['cultural-heritage', 'wine-food', 'nature-mountain'],
-  'immerse-yourself-in-georgia-8-day-cultural-and-adventure-journey-through-the-caucasus': ['cultural-heritage', 'adventure-hiking', 'nature-mountain'],
+  '8-day-georgia-culture-and-adventure-tour': ['cultural-heritage', 'adventure-hiking', 'nature-mountain'],
   'ultimate-georgia-exploration-9-day-tour-from-kutaisi-to-tbilisi-and-hidden-gems': ['cultural-heritage', 'western-georgia-black-sea'],
   'wander-wonder-and-wine-9-days-of-georgias-best': ['wine-food', 'cultural-heritage', 'nature-mountain'],
   'wine-wonders-and-the-caucasus-a-9-day-adventure-in-georgia': ['wine-food', 'nature-mountain', 'adventure-hiking'],

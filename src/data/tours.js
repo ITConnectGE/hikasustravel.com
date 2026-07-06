@@ -2043,7 +2043,8 @@ export const tours = [
     "tourFormTitle": "Experience the Heart of Georgia: 8-Day Journey of Culture, Nature, Wine Tastings"
   },
   {
-    "slug": "immerse-yourself-in-georgia-8-day-cultural-and-adventure-journey-through-the-caucasus",
+    "slug": "8-day-georgia-culture-and-adventure-tour",
+    "formerSlug": "immerse-yourself-in-georgia-8-day-cultural-and-adventure-journey-through-the-caucasus",
     "type": "private",
     "title": "8-Day Georgia Culture & Adventure Tour",
     "seoTitle": "8-Day Georgia Culture & Adventure Tour: Caucasus Mountains",
