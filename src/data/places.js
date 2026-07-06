@@ -1250,6 +1250,14 @@ export const sites = [
     image: '/images/files/georgia-home.jpg',
   },
   {
+    // On the Georgian Military Highway between Mtskheta and Gudauri; not inside
+    // any city we publish, so parented on the Mtskheta-Mtianeti region.
+    slug: 'ananuri-fortress', name: 'Ananuri Fortress',
+    parentType: 'region', parent: 'mtskheta-mtianeti', published: true,
+    seoKey: 'ananuriFortress', contentKey: 'ananuriFortress',
+    image: '/images/files/Ananuri%20Fortress%20and%20Zhinvali%20Reservoir.jpg',
+  },
+  {
     slug: 'uplistsikhe', name: 'Uplistsikhe',
     parentType: 'city', parent: 'gori', formerParent: 'shida-kartli', published: true,
     seoKey: 'uplistsikhe', contentKey: 'uplistsikhe',
