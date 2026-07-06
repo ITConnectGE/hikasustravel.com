@@ -1764,7 +1764,8 @@ export const tours = [
     "tourFormTitle": "Georgia's Cultural Wonders: 7-Day Adventure from Kutaisi to Tbilisi and Beyond"
   },
   {
-    "slug": "experience-the-heart-of-georgia-8-day-journey-of-culture-nature-wine-tastings",
+    "slug": "8-day-georgia-private-tour-culture-nature-and-wine",
+    "formerSlug": "experience-the-heart-of-georgia-8-day-journey-of-culture-nature-wine-tastings",
     "type": "private",
     "title": "8-Day Georgia Private Tour: Culture, Nature & Wine",
     "seoTitle": "8-Day Georgia Private Tour: Culture, Nature & Wine from Tbilisi",
