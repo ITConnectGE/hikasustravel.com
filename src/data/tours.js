@@ -4091,8 +4091,7 @@ export const tours = [
     "slug": "13-day-georgia-grand-tour-culture-and-nature",
     "formerSlug": "grand-georgia-adventure-13-day-cultural-and-scenic-journey",
     "type": "private",
-    "title": "13-Day Georgia Grand Tour: Culture & Nature",
-    "seoTitle": "13-Day Georgia Grand Tour: Culture, Nature & Wine",
+    "title": "13-Day Georgia Grand Tour from Kutaisi: Culture & Nature",
     "heroImage": "/images/files/grand-georgia-cultural-journey.jpg",
     "tileImage": "/images/files/grand-georgia-cultural-journey.jpg",
     "listingImage": "/images/files/grand-georgia-cultural-journey.jpg",
@@ -4246,7 +4245,7 @@ export const tours = [
       "markers": [],
       "routeCoordinates": []
     },
-    "tourFormTitle": "13-Day Georgia Grand Tour: Culture & Nature"
+    "tourFormTitle": "13-Day Georgia Grand Tour from Kutaisi: Culture & Nature"
   },
   {
     "slug": "ultimate-15-day-georgia-tour-from-tbilisi-to-svaneti--wine-culture-and-natural-beauty",
