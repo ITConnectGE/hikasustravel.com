@@ -2871,7 +2871,8 @@ export const tours = [
   {
     "slug": "wine-wonders-and-the-caucasus-a-9-day-adventure-in-georgia",
     "type": "private",
-    "title": "Wine, Wonders, and the Caucasus: A 9-Day Adventure in Georgia",
+    "title": "9-Day Georgia Wine & Adventure Tour",
+    "seoTitle": "9-Day Georgia Wine & Adventure Tour: Caucasus Mountains",
     "heroImage": "/images/files/wine-caucasus-adventure.jpg",
     "tileImage": "/images/files/wine-caucasus-adventure.jpg",
     "listingImage": "/images/files/wine-caucasus-adventure.jpg",
@@ -3183,7 +3184,7 @@ export const tours = [
         ]
       ]
     },
-    "tourFormTitle": "Wine, Wonders, and the Caucasus: A 9-Day Adventure in Georgia"
+    "tourFormTitle": "9-Day Georgia Wine & Adventure Tour"
   },
   {
     "slug": "georgia-in-10-days-where-every-corner-has-a-story-and-every-meal-is-a-celebration",
