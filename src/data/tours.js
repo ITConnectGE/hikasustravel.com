@@ -4757,7 +4757,7 @@ export const tours = [
   {
     "slug": "georgia-on-my-mind-20-days-of-tasting-trekking-and-total-relaxation",
     "type": "private",
-    "title": "Georgia on my Mind: 20 Days of Tasting, Trekking, and Total Relaxation",
+    "title": "20-Day Georgia Grand Tour: Wine, Hiking & Culture",
     "heroImage": "/images/files/georgia-20-days-relaxation.jpg",
     "tileImage": "/images/files/georgia-20-days-relaxation.jpg",
     "listingImage": "/images/files/georgia-20-days-relaxation.jpg",
@@ -5287,6 +5287,6 @@ export const tours = [
         ]
       ]
     },
-    "tourFormTitle": "Georgia on my Mind: 20 Days of Tasting, Trekking, and Total Relaxation"
+    "tourFormTitle": "20-Day Georgia Grand Tour: Wine, Hiking & Culture"
   }
 ]
