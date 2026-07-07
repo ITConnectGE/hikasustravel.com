@@ -15,7 +15,7 @@ const kutaisiSlugs = [
   '7-day-georgia-cultural-tour-kutaisi-to-tbilisi',
   '9-day-georgia-private-tour-kutaisi-to-tbilisi',
   'georgias-wonders-11-day-grand-tour-from-kutaisi-to-kazbegi-and-batumi',
-  '13-day-georgia-grand-tour-culture-and-nature',
+  '13-day-georgia-grand-tour-from-kutaisi-culture-and-nature',
 ]
 
 export default function PrivateToursPage() {

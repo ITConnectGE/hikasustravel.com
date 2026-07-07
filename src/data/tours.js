@@ -4088,8 +4088,11 @@ export const tours = [
     "tourFormTitle": "12-Day Ultimate Georgia Adventure Tour: Tbilisi, Kazbegi, Mestia, Kutaisi, Batumi"
   },
   {
-    "slug": "13-day-georgia-grand-tour-culture-and-nature",
-    "formerSlug": "grand-georgia-adventure-13-day-cultural-and-scenic-journey",
+    "slug": "13-day-georgia-grand-tour-from-kutaisi-culture-and-nature",
+    "formerSlugs": [
+      "13-day-georgia-grand-tour-culture-and-nature",
+      "grand-georgia-adventure-13-day-cultural-and-scenic-journey"
+    ],
     "type": "private",
     "title": "13-Day Georgia Grand Tour from Kutaisi: Culture & Nature",
     "heroImage": "/images/files/grand-georgia-cultural-journey.jpg",

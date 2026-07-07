@@ -43,7 +43,7 @@ export const PRIVATE_TOUR_CATEGORIES = {
   'georgia-in-10-days-where-every-corner-has-a-story-and-every-meal-is-a-celebration': ['cultural-heritage', 'wine-food'],
   'georgias-wonders-11-day-grand-tour-from-kutaisi-to-kazbegi-and-batumi': ['nature-mountain', 'western-georgia-black-sea'],
   '12-day-ultimate-georgia-adventure-tour-tbilisi-kazbegi-mestia-kutaisi-batumi': ['nature-mountain', 'adventure-hiking', 'western-georgia-black-sea'],
-  '13-day-georgia-grand-tour-culture-and-nature': ['adventure-hiking', 'nature-mountain', 'cultural-heritage'],
+  '13-day-georgia-grand-tour-from-kutaisi-culture-and-nature': ['adventure-hiking', 'nature-mountain', 'cultural-heritage'],
   'ultimate-15-day-georgia-tour-from-tbilisi-to-svaneti--wine-culture-and-natural-beauty': ['nature-mountain', 'wine-food', 'cultural-heritage'],
   'georgia-on-my-mind-20-days-of-tasting-trekking-and-total-relaxation': ['wine-food', 'adventure-hiking', 'nature-mountain'],
 }

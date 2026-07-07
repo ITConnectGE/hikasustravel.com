@@ -94,16 +94,21 @@ export default function App() {
               slug (mirrors the static stubs in scripts/prerender.js). The static
               path outranks the dynamic :slug route above. */}
           {tours
-            .filter((tr) => tr.formerSlug)
-            .map((tr) => {
+            .flatMap((tr) => {
               const prefix = tr.type === 'group' ? 'group-tours' : 'private-tours'
-              return (
+              // Merge single `formerSlug` and multi `formerSlugs` into one list
+              // so a tour renamed more than once redirects every old URL.
+              const formers = [
+                ...(tr.formerSlug ? [tr.formerSlug] : []),
+                ...(tr.formerSlugs || []),
+              ]
+              return formers.map((former) => (
                 <Route
-                  key={tr.formerSlug}
-                  path={`${prefix}/${tr.formerSlug}`}
+                  key={`${prefix}/${former}`}
+                  path={`${prefix}/${former}`}
                   element={<TourSlugRedirect prefix={prefix} newSlug={tr.slug} />}
                 />
-              )
+              ))
             })}
           <Route path="shuttle-service" element={<ShuttleServicePage />} />
           <Route path="embassies" element={<EmbassiesPage />} />

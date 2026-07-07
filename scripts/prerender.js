@@ -89,6 +89,14 @@ function parseTours(source) {
     const seoTitleM = chunk.match(/"seoTitle":\s*"([^"]+)"/)
     const metaDescM = chunk.match(/"metaDescription":\s*"([^"]+)"/)
     const formerSlugM = chunk.match(/"formerSlug":\s*"([^"]+)"/)
+    // A tour renamed more than once carries an array of every prior slug so
+    // each old URL keeps redirecting. Both `formerSlug` (single) and
+    // `formerSlugs` (array) are supported and merged into one list.
+    const formerSlugsM = chunk.match(/"formerSlugs":\s*\[([\s\S]*?)\]/)
+    const formerSlugs = [
+      ...(formerSlugM ? [formerSlugM[1]] : []),
+      ...(formerSlugsM ? [...formerSlugsM[1].matchAll(/"([^"]+)"/g)].map((m) => m[1]) : []),
+    ]
 
     // Extract itinerary day titles for keywords
     const itineraryTitles = []
@@ -104,7 +112,7 @@ function parseTours(source) {
       metaDescription: metaDescM?.[1] || '',
       heroImage: heroM?.[1] || '',
       days: daysM ? parseInt(daysM[1]) : 0,
-      formerSlug: formerSlugM?.[1] || '',
+      formerSlugs,
       itineraryTitles,
     })
   }
@@ -394,10 +402,10 @@ for (const lang of LANGS) {
       ogLocale,
     })
 
-    // Renamed tour slug: the old URL 301-redirects to the new canonical
-    // (mirrors the client-side TourSlugRedirect route in App.jsx).
-    if (tour.formerSlug) {
-      const oldFilePath = join(DIST, lang, prefix, tour.formerSlug, 'index.html')
+    // Renamed tour slug(s): every old URL 301-redirects to the new canonical
+    // (mirrors the client-side TourSlugRedirect routes in App.jsx).
+    for (const former of tour.formerSlugs) {
+      const oldFilePath = join(DIST, lang, prefix, former, 'index.html')
       writeRedirectStub(oldFilePath, canonical)
     }
   }
