@@ -2869,7 +2869,8 @@ export const tours = [
     "tourFormTitle": "Wander, Wonder and Wine: 9 Days of Georgia's Best"
   },
   {
-    "slug": "wine-wonders-and-the-caucasus-a-9-day-adventure-in-georgia",
+    "slug": "9-day-georgia-wine-and-adventure-tour",
+    "formerSlug": "wine-wonders-and-the-caucasus-a-9-day-adventure-in-georgia",
     "type": "private",
     "title": "9-Day Georgia Wine & Adventure Tour",
     "seoTitle": "9-Day Georgia Wine & Adventure Tour: Caucasus Mountains",
