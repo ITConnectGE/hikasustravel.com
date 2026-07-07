@@ -4755,7 +4755,8 @@ export const tours = [
     "tourFormTitle": "Ultimate 15-Day Georgia Tour: From Tbilisi to Svaneti – Wine, Culture, and Natural Beauty"
   },
   {
-    "slug": "georgia-on-my-mind-20-days-of-tasting-trekking-and-total-relaxation",
+    "slug": "20-day-georgia-grand-tour-wine-hiking-and-culture",
+    "formerSlug": "georgia-on-my-mind-20-days-of-tasting-trekking-and-total-relaxation",
     "type": "private",
     "title": "20-Day Georgia Grand Tour: Wine, Hiking & Culture",
     "heroImage": "/images/files/georgia-20-days-relaxation.jpg",

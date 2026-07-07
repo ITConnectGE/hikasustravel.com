@@ -45,5 +45,5 @@ export const PRIVATE_TOUR_CATEGORIES = {
   '12-day-ultimate-georgia-adventure-tour-tbilisi-kazbegi-mestia-kutaisi-batumi': ['nature-mountain', 'adventure-hiking', 'western-georgia-black-sea'],
   '13-day-georgia-grand-tour-from-kutaisi-culture-and-nature': ['adventure-hiking', 'nature-mountain', 'cultural-heritage'],
   'ultimate-15-day-georgia-tour-from-tbilisi-to-svaneti--wine-culture-and-natural-beauty': ['nature-mountain', 'wine-food', 'cultural-heritage'],
-  'georgia-on-my-mind-20-days-of-tasting-trekking-and-total-relaxation': ['wine-food', 'adventure-hiking', 'nature-mountain'],
+  '20-day-georgia-grand-tour-wine-hiking-and-culture': ['wine-food', 'adventure-hiking', 'nature-mountain'],
 }
