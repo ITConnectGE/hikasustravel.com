@@ -12,10 +12,16 @@ import useSEO from '../../hooks/useSEO'
 import { getSEO } from '../../data/seoData'
 import { getCity, cityPath, thingsToDoPath, legacyRedirects } from '../../data/places'
 import { autolinkHtml } from '../../utils/autolink'
+import asset from '../../utils/basePath'
 import enPages from '../../i18n/locales/en/pages.json'
 import NotFoundPage from './NotFoundPage'
 
 const SITE_URL = 'https://www.hikasustravel.com'
+// Brand used for ImageObject credit/creator (mirrors og:site_name / the Article
+// author & publisher below).
+const BRAND = 'Hikasus Travel'
+// Responsive-variant widths shipped for each gallery base name.
+const GALLERY_WIDTHS = [1200, 1600, 2400]
 
 /**
  * Generic city detail page. Driven by the places.js registry — the URL
@@ -52,6 +58,19 @@ export default function CityPage() {
   const heroImage = published ? city.image : null
   // Only link the things-to-do guide when the city actually has one published.
   const hasThingsToDo = published && !!city.thingsToDo
+
+  // Body/gallery images: resolve each image's alt + figcaption to the current
+  // locale from its 7-language maps in places.js (city.gallery). English is a
+  // crash-guard only — every locale ships its own strings, so non-English pages
+  // never show English alt/captions.
+  const gallery = useMemo(() => {
+    if (!published || !city.gallery) return []
+    return city.gallery.map((img) => ({
+      ...img,
+      alt: (img.alt && (img.alt[lang] || img.alt.en)) || '',
+      caption: (img.caption && (img.caption[lang] || img.caption.en)) || '',
+    }))
+  }, [published, city, lang])
 
   // Most entries here are cities, but a few are reclassified as a place to visit
   // (e.g. Gomismta) while keeping this /georgia/<slug> detail page — their
@@ -107,6 +126,32 @@ export default function CityPage() {
           author: { '@type': 'Organization', name: 'Hikasus Travel' },
           publisher: { '@type': 'Organization', name: 'Hikasus Travel', url: SITE_URL },
         },
+        // Body/gallery images (our own photos) — one ImageObject each, contentUrl
+        // pointing at the real file; caption localized per locale, brand credit.
+        ...gallery.map((img) => ({
+          '@type': 'ImageObject',
+          contentUrl: `${SITE_URL}/images/files/${img.base}-1600w.webp`,
+          url: `${SITE_URL}/images/files/${img.base}-1600w.webp`,
+          width: img.width,
+          height: img.height,
+          name: img.name,
+          caption: img.caption || img.description,
+          description: img.description,
+          creator: { '@type': 'Organization', name: BRAND },
+          creditText: BRAND,
+          copyrightNotice: `© ${BRAND}`,
+          contentLocation: {
+            '@type': 'Place',
+            name: img.locationName,
+            address: {
+              '@type': 'PostalAddress',
+              addressLocality: 'Telavi',
+              addressRegion: 'Kakheti',
+              addressCountry: 'GE',
+            },
+            geo: { '@type': 'GeoCoordinates', latitude: img.geo.lat, longitude: img.geo.lng },
+          },
+        })),
         {
           '@type': 'BreadcrumbList',
           itemListElement: trail.map((c, i) => ({
@@ -127,7 +172,7 @@ export default function CityPage() {
       ],
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [published, lang, path, seo.description, heroImage, faqItems])
+  }, [published, lang, path, seo.description, heroImage, faqItems, gallery])
 
   useSEO(published ? { ...seo, lang, path, image: heroImage, jsonLd } : {})
 
@@ -163,6 +208,40 @@ export default function CityPage() {
           </FadeUp>
         )}
       </section>
+      {gallery.length > 0 && (
+        /* Body/gallery images — real, crawlable, lazy-loaded responsive <picture>
+           (not the hero, not CSS backgrounds). Placed after the body, before FAQ. */
+        <section className="page-items city-gallery">
+          {gallery.map((img) => (
+            <FadeUp key={img.base}>
+              <figure className="city-gallery__figure">
+                <picture>
+                  <source
+                    type="image/avif"
+                    srcSet={GALLERY_WIDTHS.map((w) => `${asset(`/images/files/${img.base}-${w}w.avif`)} ${w}w`).join(', ')}
+                    sizes="(max-width: 768px) 100vw, 760px"
+                  />
+                  <source
+                    type="image/webp"
+                    srcSet={GALLERY_WIDTHS.map((w) => `${asset(`/images/files/${img.base}-${w}w.webp`)} ${w}w`).join(', ')}
+                    sizes="(max-width: 768px) 100vw, 760px"
+                  />
+                  <img
+                    src={asset(`/images/files/${img.base}-1600w.webp`)}
+                    width={img.width}
+                    height={img.height}
+                    alt={img.alt}
+                    loading="lazy"
+                    decoding="async"
+                    className="city-gallery__img"
+                  />
+                </picture>
+                {img.caption && <figcaption className="city-gallery__caption">{img.caption}</figcaption>}
+              </figure>
+            </FadeUp>
+          ))}
+        </section>
+      )}
       {faqItems.length > 0 && (
         <section className="page-items faq" id="faq-section">
           <Accordion items={linkedFaq} headingKey="faq.heroTitle" />

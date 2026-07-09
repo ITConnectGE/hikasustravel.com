@@ -431,6 +431,112 @@ export const cities = [
       address: { addressLocality: 'Telavi' },
       attractions: ['Batonis Tsikhe', 'Alaverdi Monastery', 'Ikalto Monastery', 'Tsinandali Estate', 'Gremi', 'Shuamta Monasteries', 'Nadikvari Viewpoint'],
     },
+    // Body/gallery images (our own photos) rendered as real responsive <picture>
+    // by CityPage — NOT the hero. Each base has -{1200,1600,2400}w.{avif,webp}
+    // variants in /images/files/. `name`/`description`/`locationName`/`geo` feed
+    // the ImageObject JSON-LD; the per-locale `alt` and `caption` maps drive the
+    // <img alt>, <figcaption> and the localized ImageObject caption. Strings live
+    // here (not pages.json) because the Telavi page-content block only exists in
+    // English and falls back all-or-nothing, which would force English captions
+    // on non-English pages — these 7-language maps guarantee each locale's own.
+    gallery: [
+      {
+        base: 'erekle-ii-statue-telavi-kakheti-georgia', width: 1600, height: 1205,
+        name: 'Equestrian statue of King Erekle II, Telavi, Kakheti, Georgia',
+        description: 'The 8.5-metre bronze equestrian statue of King Erekle II (sculptor Merab Merabishvili, 1971) in central Telavi, beside Batonis Tsikhe palace, overlooking the Alazani Valley and Greater Caucasus.',
+        locationName: 'Monument to King Erekle II, Telavi', geo: { lat: 41.9192, lng: 45.4731 },
+        alt: {
+          en: "Bronze equestrian statue of King Erekle II in central Telavi, Kakheti, Georgia, above the Alazani Valley",
+          de: "Bronzenes Reiterstandbild von König Erekle II. im Zentrum von Telawi, Kachetien, Georgien, über dem Alazani-Tal",
+          fr: "Statue équestre en bronze du roi Héraclius II au centre de Telavi, Kakhétie, Géorgie, au-dessus de la vallée de l'Alazani",
+          es: "Estatua ecuestre de bronce del rey Erekle II en el centro de Telavi, Kajetia, Georgia, sobre el valle del Alazani",
+          nl: "Bronzen ruiterstandbeeld van koning Erekle II in het centrum van Telavi, Kachetië, Georgië, boven de Alazani-vallei",
+          cs: "Bronzová jezdecká socha krále Erekleho II. v centru Telavi, Kachetie, Gruzie, nad údolím Alazani",
+          pl: "Brązowy pomnik konny króla Herakliusza II w centrum Telawi, Kachetia, Gruzja, nad doliną Alazani",
+        },
+        caption: {
+          en: "In the heart of Telavi stands the 8.5-metre bronze equestrian statue of King Erekle II, sculpted by Merab Merabishvili in 1971, beside the king's palace at Batonis Tsikhe and overlooking the Alazani Valley.",
+          de: "Im Herzen von Telawi steht das 8,5 Meter hohe bronzene Reiterstandbild von König Erekle II., 1971 vom Bildhauer Merab Merabischwili geschaffen, neben dem Königspalast Batonis Zikhe und mit Blick über das Alazani-Tal.",
+          fr: "Au cœur de Telavi se dresse la statue équestre en bronze de 8,5 mètres du roi Héraclius II, sculptée par Merab Merabichvili en 1971, à côté du palais royal de Batonis Tsikhe et dominant la vallée de l'Alazani.",
+          es: "En el corazón de Telavi se alza la estatua ecuestre de bronce de 8,5 metros del rey Erekle II, esculpida por Merab Merabishvili en 1971, junto al palacio real de Batonis Tsikhe y con vistas al valle del Alazani.",
+          nl: "In het hart van Telavi staat het 8,5 meter hoge bronzen ruiterstandbeeld van koning Erekle II, in 1971 gemaakt door beeldhouwer Merab Merabisjvili, naast het koninklijk paleis Batonis Tsikhe en met uitzicht over de Alazani-vallei.",
+          cs: "V srdci Telavi stojí 8,5 metru vysoká bronzová jezdecká socha krále Erekleho II., kterou v roce 1971 vytvořil sochař Merab Merabišvili, vedle královského paláce Batonis Tsikhe a s výhledem na údolí Alazani.",
+          pl: "W sercu Telawi wznosi się 8,5-metrowy brązowy pomnik konny króla Herakliusza II, wykonany przez rzeźbiarza Meraba Merabiszwilego w 1971 roku, obok królewskiego pałacu Batonis Tsikhe, z widokiem na dolinę Alazani.",
+        },
+      },
+      {
+        base: 'telavi-town-view-erekle-ii-monument-kakheti-georgia', width: 1600, height: 1205,
+        name: 'Telavi old town from the King Erekle II monument, Kakheti, Georgia',
+        description: 'The red-roofed old town of Telavi, former capital of the Kakheti kingdom, seen from the King Erekle II monument, with the Alazani Valley and Greater Caucasus beyond.',
+        locationName: 'Telavi, Kakheti', geo: { lat: 41.9192, lng: 45.4731 },
+        alt: {
+          en: "View over Telavi old town from the King Erekle II monument, Kakheti, Georgia, with the Alazani Valley beyond",
+          de: "Blick über die Altstadt von Telawi vom König-Erekle-II.-Denkmal, Kachetien, Georgien, mit dem Alazani-Tal",
+          fr: "Vue sur la vieille ville de Telavi depuis le monument au roi Héraclius II, Kakhétie, Géorgie, et la vallée de l'Alazani",
+          es: "Vista del casco antiguo de Telavi desde el monumento al rey Erekle II, Kajetia, Georgia, con el valle del Alazani",
+          nl: "Uitzicht over de oude stad van Telavi vanaf het monument voor koning Erekle II, Kachetië, Georgië, met de Alazani-vallei",
+          cs: "Pohled na staré město Telavi od pomníku krále Erekleho II., Kachetie, Gruzie, s údolím Alazani v pozadí",
+          pl: "Widok na stare miasto Telawi od pomnika króla Herakliusza II, Kachetia, Gruzja, z doliną Alazani w tle",
+        },
+        caption: {
+          en: "From beside the King Erekle II monument, the red-roofed old town of Telavi spreads toward the vineyards of the Alazani Valley and the Greater Caucasus — the former capital of the Kakheti kingdom.",
+          de: "Vom König-Erekle-II.-Denkmal aus erstreckt sich die Altstadt von Telawi mit ihren roten Ziegeldächern zu den Weinbergen des Alazani-Tals und dem Großen Kaukasus — die einstige Hauptstadt des Königreichs Kachetien.",
+          fr: "Depuis le monument au roi Héraclius II, la vieille ville de Telavi aux toits rouges s'étend vers les vignobles de la vallée de l'Alazani et le Grand Caucase — ancienne capitale du royaume de Kakhétie.",
+          es: "Desde el monumento al rey Erekle II, el casco antiguo de Telavi, de tejados rojos, se extiende hacia los viñedos del valle del Alazani y el Gran Cáucaso — la antigua capital del reino de Kajetia.",
+          nl: "Vanaf het monument voor koning Erekle II strekt de oude stad van Telavi met haar rode daken zich uit naar de wijngaarden van de Alazani-vallei en de Grote Kaukasus — de voormalige hoofdstad van het koninkrijk Kachetië.",
+          cs: "Od pomníku krále Erekleho II. se staré město Telavi s červenými střechami rozprostírá k vinicím údolí Alazani a Velkému Kavkazu — bývalé hlavní město Kachetského království.",
+          pl: "Od pomnika króla Herakliusza II stare miasto Telawi o czerwonych dachach rozciąga się ku winnicom doliny Alazani i Wielkiemu Kaukazowi — dawna stolica królestwa Kachetii.",
+        },
+      },
+      {
+        base: 'telavi-park-promenade-kakheti-georgia', width: 1600, height: 1205,
+        name: 'Central park and promenade, Telavi, Kakheti, Georgia',
+        description: 'A landscaped park and promenade in central Telavi, Kakheti, with views of the Greater Caucasus at dusk.',
+        locationName: 'Telavi, Kakheti', geo: { lat: 41.9192, lng: 45.4731 },
+        alt: {
+          en: "Landscaped park and promenade in central Telavi, Kakheti, Georgia, with the Greater Caucasus at dusk",
+          de: "Angelegter Park und Promenade im Zentrum von Telawi, Kachetien, Georgien, mit dem Großen Kaukasus in der Abenddämmerung",
+          fr: "Parc paysager et promenade au centre de Telavi, Kakhétie, Géorgie, avec le Grand Caucase au crépuscule",
+          es: "Parque ajardinado y paseo en el centro de Telavi, Kajetia, Georgia, con el Gran Cáucaso al atardecer",
+          nl: "Aangelegd park en promenade in het centrum van Telavi, Kachetië, Georgië, met de Grote Kaukasus in de schemering",
+          cs: "Upravený park a promenáda v centru Telavi, Kachetie, Gruzie, s Velkým Kavkazem za soumraku",
+          pl: "Zadbany park i promenada w centrum Telawi, Kachetia, Gruzja, z Wielkim Kaukazem o zmierzchu",
+        },
+        caption: {
+          en: "A landscaped park and promenade in central Telavi offers open views of the Greater Caucasus — a quiet stop between the town's museums, wineries and the Batonis Tsikhe fortress.",
+          de: "Ein angelegter Park mit Promenade im Zentrum von Telawi bietet freie Sicht auf den Großen Kaukasus — ein ruhiger Halt zwischen den Museen, Weingütern und der Festung Batonis Zikhe.",
+          fr: "Un parc paysager et sa promenade au centre de Telavi offrent une vue dégagée sur le Grand Caucase — une halte paisible entre les musées, les caves et la forteresse Batonis Tsikhe.",
+          es: "Un parque ajardinado con paseo en el centro de Telavi ofrece vistas abiertas al Gran Cáucaso — una parada tranquila entre los museos, las bodegas y la fortaleza Batonis Tsikhe.",
+          nl: "Een aangelegd park met promenade in het centrum van Telavi biedt vrij uitzicht op de Grote Kaukasus — een rustige stop tussen de musea, wijnhuizen en het fort Batonis Tsikhe.",
+          cs: "Upravený park s promenádou v centru Telavi nabízí volný výhled na Velký Kavkaz — klidné zastavení mezi muzei, vinařstvími a pevností Batonis Tsikhe.",
+          pl: "Zadbany park z promenadą w centrum Telawi oferuje otwarty widok na Wielki Kaukaz — spokojny przystanek między muzeami, winiarniami a twierdzą Batonis Tsikhe.",
+        },
+      },
+      {
+        base: 'batonis-tsikhe-fortress-evening-telavi-kakheti-georgia', width: 1600, height: 1205,
+        name: 'Batonis Tsikhe fortress at dusk, Telavi, Kakheti, Georgia',
+        description: 'The walls and tower of Batonis Tsikhe, the royal residence of King Erekle II in central Telavi, Kakheti, in warm evening light; today home to the Telavi history museum.',
+        locationName: 'Batonis Tsikhe, Telavi', geo: { lat: 41.9200, lng: 45.4750 },
+        alt: {
+          en: "Batonis Tsikhe fortress walls and tower in Telavi, Kakheti, Georgia, in warm evening light",
+          de: "Festungsmauern und Turm der Batonis-Zikhe-Festung in Telawi, Kachetien, Georgien, im warmen Abendlicht",
+          fr: "Remparts et tour de la forteresse Batonis Tsikhe à Telavi, Kakhétie, Géorgie, sous la lumière chaude du soir",
+          es: "Murallas y torre de la fortaleza Batonis Tsikhe en Telavi, Kajetia, Georgia, con la cálida luz del atardecer",
+          nl: "Vestingmuren en toren van fort Batonis Tsikhe in Telavi, Kachetië, Georgië, in warm avondlicht",
+          cs: "Hradby a věž pevnosti Batonis Tsikhe v Telavi, Kachetie, Gruzie, v teplém večerním světle",
+          pl: "Mury i wieża twierdzy Batonis Tsikhe w Telawi, Kachetia, Gruzja, w ciepłym świetle wieczoru",
+        },
+        caption: {
+          en: "Evening light on the walls of Batonis Tsikhe, the royal residence of King Erekle II in central Telavi and today home to the town's history museum.",
+          de: "Abendlicht auf den Mauern von Batonis Zikhe, der königlichen Residenz von Erekle II. im Zentrum von Telawi, heute Sitz des Stadtgeschichtsmuseums.",
+          fr: "Lumière du soir sur les murs de Batonis Tsikhe, résidence royale d'Héraclius II au centre de Telavi, aujourd'hui musée d'histoire de la ville.",
+          es: "Luz del atardecer sobre los muros de Batonis Tsikhe, residencia real del rey Erekle II en el centro de Telavi y hoy sede del museo de historia de la ciudad.",
+          nl: "Avondlicht op de muren van Batonis Tsikhe, de koninklijke residentie van koning Erekle II in het centrum van Telavi en tegenwoordig het historisch museum van de stad.",
+          cs: "Večerní světlo na hradbách Batonis Tsikhe, královského sídla Erekleho II. v centru Telavi, dnes sídla městského historického muzea.",
+          pl: "Wieczorne światło na murach Batonis Tsikhe, królewskiej rezydencji Herakliusza II w centrum Telawi, dziś siedziby miejskiego muzeum historii.",
+        },
+      },
+    ],
   },
   {
     slug: 'oni', name: 'Oni', region: 'racha-lechkhumi', published: true,
