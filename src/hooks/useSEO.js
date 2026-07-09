@@ -34,7 +34,7 @@ function setLink(rel, href, attrs = {}) {
   el.setAttribute('href', href)
 }
 
-export default function useSEO({ title, description, keywords, lang = 'en', path = '', image, jsonLd } = {}) {
+export default function useSEO({ title, description, keywords, lang = 'en', path = '', image, imageAlt, ogImage, ogImageWidth, ogImageHeight, jsonLd } = {}) {
   useEffect(() => {
     // Title
     if (title) document.title = title
@@ -57,18 +57,26 @@ export default function useSEO({ title, description, keywords, lang = 'en', path
     setMeta('og:type', 'website', 'property')
     setMeta('og:locale', localeMap[lang] || 'en_US', 'property')
     setMeta('og:site_name', 'Hikasus Travel', 'property')
-    if (image) {
-      const imgUrl = image.startsWith('http') ? image : `${SITE_URL}${image}`
+    // Prefer a dedicated social image (1.91:1) when supplied; fall back to the
+    // page hero. og:image:alt / width / height are set when known and cleared
+    // otherwise (setMeta removes the tag for empty content).
+    const ogImg = ogImage || image
+    if (ogImg) {
+      const imgUrl = ogImg.startsWith('http') ? ogImg : `${SITE_URL}${ogImg}`
       setMeta('og:image', imgUrl, 'property')
+      setMeta('og:image:alt', imageAlt, 'property')
+      setMeta('og:image:width', ogImageWidth ? String(ogImageWidth) : '', 'property')
+      setMeta('og:image:height', ogImageHeight ? String(ogImageHeight) : '', 'property')
     }
 
     // Twitter Card
     setMeta('twitter:card', 'summary_large_image')
     setMeta('twitter:title', title)
     setMeta('twitter:description', description)
-    if (image) {
-      const imgUrl = image.startsWith('http') ? image : `${SITE_URL}${image}`
+    if (ogImg) {
+      const imgUrl = ogImg.startsWith('http') ? ogImg : `${SITE_URL}${ogImg}`
       setMeta('twitter:image', imgUrl)
+      setMeta('twitter:image:alt', imageAlt)
     }
 
     // JSON-LD
@@ -89,5 +97,5 @@ export default function useSEO({ title, description, keywords, lang = 'en', path
       // Clean up JSON-LD on unmount
       document.querySelector('script[data-seo-jsonld]')?.remove()
     }
-  }, [title, description, keywords, lang, path, image, jsonLd])
+  }, [title, description, keywords, lang, path, image, imageAlt, ogImage, ogImageWidth, ogImageHeight, jsonLd])
 }

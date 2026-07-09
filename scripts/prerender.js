@@ -212,7 +212,17 @@ const staticPageImages = {
 const template = readFileSync(join(DIST, 'index.html'), 'utf-8')
 let fileCount = 0
 
-function writeHtml(filePath, lang, { title, description, keywords, canonical, image, ogLocale }) {
+// Set a meta tag's content, appending the tag if the template doesn't have it.
+// Used for the optional image-SEO tags (og:image:alt / width / height) that the
+// base template doesn't ship. No-op when content is empty.
+function setOrAppendMeta($, name, content, attr = 'property') {
+  if (content === undefined || content === null || content === '') return
+  const sel = `meta[${attr}="${name}"]`
+  if ($(sel).length) $(sel).attr('content', String(content))
+  else $('head').append(`<meta ${attr}="${name}" content="${escAttr(String(content))}">`)
+}
+
+function writeHtml(filePath, lang, { title, description, keywords, canonical, image, ogImage, ogImageAlt, ogImageWidth, ogImageHeight, ogLocale }) {
   // Use the trailing-slash form the host serves at 200; this also flows through
   // to the hreflang/x-default alternates and og:url derived from it below.
   canonical = withTrailingSlash(canonical)
@@ -244,17 +254,23 @@ function writeHtml(filePath, lang, { title, description, keywords, canonical, im
   $('meta[property="og:description"]').attr('content', description)
   $('meta[property="og:url"]').attr('content', canonical)
   $('meta[property="og:locale"]').attr('content', ogLocale)
-  if (image) {
-    const imgUrl = image.startsWith('http') ? image : `${SITE_URL}${image}`
+  // Prefer a dedicated 1.91:1 social image when supplied, otherwise the hero.
+  const ogImg = ogImage || image
+  if (ogImg) {
+    const imgUrl = ogImg.startsWith('http') ? ogImg : `${SITE_URL}${ogImg}`
     $('meta[property="og:image"]').attr('content', imgUrl)
+    setOrAppendMeta($, 'og:image:alt', ogImageAlt, 'property')
+    setOrAppendMeta($, 'og:image:width', ogImageWidth, 'property')
+    setOrAppendMeta($, 'og:image:height', ogImageHeight, 'property')
   }
 
   // Twitter Card
   $('meta[name="twitter:title"]').attr('content', title)
   $('meta[name="twitter:description"]').attr('content', description)
-  if (image) {
-    const imgUrl = image.startsWith('http') ? image : `${SITE_URL}${image}`
+  if (ogImg) {
+    const imgUrl = ogImg.startsWith('http') ? ogImg : `${SITE_URL}${ogImg}`
     $('meta[name="twitter:image"]').attr('content', imgUrl)
+    setOrAppendMeta($, 'twitter:image:alt', ogImageAlt, 'name')
   }
 
   // Remove existing og:locale:alternate tags
@@ -345,6 +361,12 @@ for (const lang of LANGS) {
       keywords: data.keywords,
       canonical,
       image: dest.image || '/images/files/georgia-home.jpg',
+      // Optional image-SEO extras (only sites that define them, e.g. Batonis
+      // Tsikhe): dedicated social image + dimensions + per-locale alt text.
+      ogImage: dest.ogImage,
+      ogImageAlt: dest.imageAlt?.[lang],
+      ogImageWidth: dest.ogImageWidth,
+      ogImageHeight: dest.ogImageHeight,
       ogLocale,
     })
   }

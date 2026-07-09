@@ -15,6 +15,8 @@ import enPages from '../../i18n/locales/en/pages.json'
 import NotFoundPage from './NotFoundPage'
 
 const SITE_URL = 'https://www.hikasustravel.com'
+// Brand used for ImageObject credit/creator (mirrors og:site_name in useSEO).
+const BRAND = 'Hikasus Travel'
 
 /**
  * Generic tourist-site detail page. Both city- and region-parented sites now
@@ -57,6 +59,11 @@ export default function SitePage() {
   )
   const path = published ? sitePath(site).replace(/^\//, '') : ''
   const heroImage = published ? site.image : null
+  // Localized alt text for the hero image (from the image SEO package). The hero
+  // renders as a CSS background, so this carries the alt into the ImageObject
+  // caption and og:image:alt / twitter:image:alt instead of an <img alt>.
+  const heroImageMeta = published ? site.imageMeta : null
+  const heroAlt = heroImageMeta ? (heroImageMeta.alt[lang] || heroImageMeta.alt.en) : null
 
   const parent = published
     ? (site.parentType === 'city' ? getCity(site.parent)
@@ -132,10 +139,45 @@ export default function SitePage() {
             image: `${SITE_URL}${heroImage}`,
             containedInPlace: { '@type': 'Country', name: 'Georgia' },
           }
+    // Image SEO/AEO: a standalone ImageObject describing the hero. Because the
+    // hero is a CSS background (not an indexable <img>), this keeps the image
+    // describable to Google/AI — contentUrl points at the real image file.
+    const imageNode = heroImageMeta
+      ? {
+          '@type': 'ImageObject',
+          contentUrl: `${SITE_URL}${heroImage}`,
+          url: `${SITE_URL}${heroImage}`,
+          width: heroImageMeta.width,
+          height: heroImageMeta.height,
+          caption: heroAlt,
+          name: heroImageMeta.name,
+          description: heroImageMeta.description,
+          representativeOfPage: true,
+          creator: { '@type': 'Organization', name: BRAND },
+          creditText: BRAND,
+          copyrightNotice: `© ${BRAND}`,
+          contentLocation: {
+            '@type': 'Place',
+            name: heroImageMeta.locationName,
+            address: {
+              '@type': 'PostalAddress',
+              addressLocality: heroImageMeta.locality,
+              addressRegion: heroImageMeta.region,
+              addressCountry: heroImageMeta.country,
+            },
+            geo: {
+              '@type': 'GeoCoordinates',
+              latitude: heroImageMeta.geo.lat,
+              longitude: heroImageMeta.geo.lng,
+            },
+          },
+        }
+      : null
     return {
       '@context': 'https://schema.org',
       '@graph': [
         primaryNode,
+        ...(imageNode ? [imageNode] : []),
         {
           '@type': 'BreadcrumbList',
           // Every ListItem must carry an `item` URL — Google flags a non-final
@@ -164,7 +206,17 @@ export default function SitePage() {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [published, lang, path, seo.description, heroImage, faqItems])
 
-  useSEO(published ? { ...seo, lang, path, image: heroImage, jsonLd } : {})
+  useSEO(published ? {
+    ...seo, lang, path,
+    image: heroImage,
+    imageAlt: heroAlt,
+    // Prefer the dedicated 1.91:1 social image for og:image/twitter:image when
+    // the site defines one; otherwise useSEO falls back to the hero image.
+    ogImage: site.ogImage?.src,
+    ogImageWidth: site.ogImage?.width,
+    ogImageHeight: site.ogImage?.height,
+    jsonLd,
+  } : {})
 
   if (!published) return <NotFoundPage />
 
@@ -174,7 +226,7 @@ export default function SitePage() {
       <div className="dest-breadcrumbs">
         <Breadcrumbs trail={trail} />
       </div>
-      <HeroSection image={heroImage} title={page.heroTitle || site.name} />
+      <HeroSection image={heroImage} imageAvif={site.imageAvif} title={page.heroTitle || site.name} />
       <section className="page-items about-georgia">
         <FadeUp>
           <div ref={contentRef} dangerouslySetInnerHTML={{ __html: linkedContent }} />

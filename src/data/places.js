@@ -875,12 +875,33 @@ export const sites = [
     slug: 'batonistsikhe-fortress', name: 'Batonistsikhe Fortress',
     parentType: 'city', parent: 'telavi', published: true,
     seoKey: 'batonistsikheFortress', contentKey: 'batonistsikheFortress',
-    image: '/images/files/batonistsikhe-fortress-telavi.jpg',
-    imageCredit: {
-      author: 'shankar s.',
-      sourceUrl: 'https://commons.wikimedia.org/wiki/File:Remains_of_the_old_fortress_at_Telavi_(31134073816).jpg',
-      license: 'CC BY 2.0',
-      licenseUrl: 'https://creativecommons.org/licenses/by/2.0/',
+    // Own original photograph (the former Wikimedia CC-BY-2.0 image was replaced,
+    // so its attribution was removed). `image` is the WebP the CSS hero renders
+    // and the URL used by og:image fallback / the ImageObject; `imageAvif` is the
+    // smaller variant served to AVIF-capable browsers via CSS image-set().
+    image: '/images/files/batonis-tsikhe-telavi-kakheti-georgia-1600w.webp',
+    imageAvif: '/images/files/batonis-tsikhe-telavi-kakheti-georgia-1600w.avif',
+    // Dedicated 1.91:1 social-share image (og:image / twitter:image).
+    ogImage: { src: '/images/files/batonis-tsikhe-telavi-kakheti-georgia-og-1200x630.jpg', width: 1200, height: 630 },
+    // Image SEO/AEO metadata. The hero is a CSS background (no <img alt>), so the
+    // localized alt text lives here and is emitted as the ImageObject caption,
+    // og:image:alt and twitter:image:alt per locale.
+    imageMeta: {
+      width: 1600, height: 1205,
+      name: 'Batonis Tsikhe fortress, Telavi, Kakheti, Georgia',
+      description: 'The royal residence of King Erekle II in central Telavi, Kakheti, with the Alazani Valley and Greater Caucasus behind.',
+      locationName: 'Batonis Tsikhe, Telavi',
+      locality: 'Telavi', region: 'Kakheti', country: 'GE',
+      geo: { lat: 41.9200, lng: 45.4750 },
+      alt: {
+        en: 'Batonis Tsikhe fortress walls and church bell tower in Telavi, Kakheti, Georgia, above the Alazani Valley',
+        de: 'Festungsmauern und Kirchturm der Batonis-Zikhe-Festung in Telawi, Kachetien, Georgien, über dem Alazani-Tal',
+        fr: "Remparts et clocher de la forteresse Batonis Tsikhe à Telavi, Kakhétie, Géorgie, au-dessus de la vallée de l'Alazani",
+        es: 'Murallas y campanario de la fortaleza Batonis Tsikhe en Telavi, Kajetia, Georgia, sobre el valle del Alazani',
+        nl: 'Vestingmuren en kerktoren van fort Batonis Tsikhe in Telavi, Kachetië, Georgië, boven de Alazani-vallei',
+        cs: 'Hradby a zvonice pevnosti Batonis Tsikhe v Telavi, Kachetie, Gruzie, nad údolím Alazani',
+        pl: 'Mury i dzwonnica twierdzy Batonis Tsikhe w Telawi, Kachetia, Gruzja, nad doliną Alazani',
+      },
     },
   },
   {
@@ -1755,7 +1776,14 @@ export function publishedDestinationPages() {
       })
     }
   }
-  for (const s of sites) if (s.published) pages.push({ path: cleanPath(sitePath(s)), seoKey: s.seoKey, image: s.image })
+  for (const s of sites) if (s.published) pages.push({
+    path: cleanPath(sitePath(s)), seoKey: s.seoKey, image: s.image,
+    // Optional image-SEO extras (only sites that define them). The dedicated
+    // social image + its dimensions and the per-locale alt text feed the static
+    // og:image / og:image:alt tags emitted by prerender.js.
+    ogImage: s.ogImage?.src, ogImageWidth: s.ogImage?.width, ogImageHeight: s.ogImage?.height,
+    imageAlt: s.imageMeta?.alt,
+  })
   return pages
 }
 
