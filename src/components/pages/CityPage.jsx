@@ -1,4 +1,4 @@
-import { useContext, useMemo, useRef, useEffect } from 'react'
+import { Fragment, useContext, useMemo, useRef, useEffect } from 'react'
 import { useParams, useNavigate, useLocation, Navigate } from 'react-router-dom'
 import HeroSection from '../shared/HeroSection'
 import FadeUp from '../shared/FadeUp'
@@ -71,6 +71,15 @@ export default function CityPage() {
       caption: (img.caption && (img.caption[lang] || img.caption.en)) || '',
     }))
   }, [published, city, lang])
+  // The gallery item flagged `hero` is the cover image (not rendered inline); the
+  // rest are body images placed between content sections via their `afterChunk`.
+  const bodyImages = useMemo(() => gallery.filter((img) => !img.hero), [gallery])
+  // Split the body HTML into chunks at each <h2> (chunk 0 = intro), so body
+  // images can be interleaved between sections rather than grouped in a block.
+  const bodyChunks = useMemo(
+    () => (linkedContent ? linkedContent.split(/(?=<h2)/) : []),
+    [linkedContent],
+  )
 
   // Most entries here are cities, but a few are reclassified as a place to visit
   // (e.g. Gomismta) while keeping this /georgia/<slug> detail page — their
@@ -134,6 +143,7 @@ export default function CityPage() {
           url: `${SITE_URL}/images/files/${img.base}-1600w.webp`,
           width: img.width,
           height: img.height,
+          representativeOfPage: !!img.hero,
           name: img.name,
           caption: img.caption || img.description,
           description: img.description,
@@ -193,11 +203,50 @@ export default function CityPage() {
       <div className="dest-breadcrumbs">
         <Breadcrumbs trail={trail} />
       </div>
-      <HeroSection image={heroImage} title={city.name} />
+      <HeroSection image={heroImage} imageAvif={city.imageAvif} title={city.name} />
       <section className="page-items about-georgia">
-        <FadeUp>
-          <div ref={contentRef} dangerouslySetInnerHTML={{ __html: linkedContent }} />
-        </FadeUp>
+        <div ref={contentRef}>
+          {bodyChunks.map((chunk, i) => {
+            const img = bodyImages.find((im) => im.afterChunk === i)
+            return (
+              <Fragment key={`chunk-${i}`}>
+                <FadeUp>
+                  <div dangerouslySetInnerHTML={{ __html: chunk }} />
+                </FadeUp>
+                {img && (
+                  /* Body image between content sections — real, crawlable, lazy
+                     responsive <picture>/<img> (not the hero, not a CSS background). */
+                  <FadeUp>
+                    <figure className="city-body-figure">
+                      <picture>
+                        <source
+                          type="image/avif"
+                          srcSet={GALLERY_WIDTHS.map((w) => `${asset(`/images/files/${img.base}-${w}w.avif`)} ${w}w`).join(', ')}
+                          sizes="(max-width: 768px) 100vw, 760px"
+                        />
+                        <source
+                          type="image/webp"
+                          srcSet={GALLERY_WIDTHS.map((w) => `${asset(`/images/files/${img.base}-${w}w.webp`)} ${w}w`).join(', ')}
+                          sizes="(max-width: 768px) 100vw, 760px"
+                        />
+                        <img
+                          src={asset(`/images/files/${img.base}-1600w.webp`)}
+                          width={img.width}
+                          height={img.height}
+                          alt={img.alt}
+                          loading="lazy"
+                          decoding="async"
+                          className="city-body-figure__img"
+                        />
+                      </picture>
+                      {img.caption && <figcaption className="city-body-figure__caption">{img.caption}</figcaption>}
+                    </figure>
+                  </FadeUp>
+                )}
+              </Fragment>
+            )
+          })}
+        </div>
         {hasThingsToDo && (
           <FadeUp>
             <p className="city-ttd-cta">
@@ -208,40 +257,6 @@ export default function CityPage() {
           </FadeUp>
         )}
       </section>
-      {gallery.length > 0 && (
-        /* Body/gallery images — real, crawlable, lazy-loaded responsive <picture>
-           (not the hero, not CSS backgrounds). Placed after the body, before FAQ. */
-        <section className="page-items city-gallery">
-          {gallery.map((img) => (
-            <FadeUp key={img.base}>
-              <figure className="city-gallery__figure">
-                <picture>
-                  <source
-                    type="image/avif"
-                    srcSet={GALLERY_WIDTHS.map((w) => `${asset(`/images/files/${img.base}-${w}w.avif`)} ${w}w`).join(', ')}
-                    sizes="(max-width: 768px) 100vw, 760px"
-                  />
-                  <source
-                    type="image/webp"
-                    srcSet={GALLERY_WIDTHS.map((w) => `${asset(`/images/files/${img.base}-${w}w.webp`)} ${w}w`).join(', ')}
-                    sizes="(max-width: 768px) 100vw, 760px"
-                  />
-                  <img
-                    src={asset(`/images/files/${img.base}-1600w.webp`)}
-                    width={img.width}
-                    height={img.height}
-                    alt={img.alt}
-                    loading="lazy"
-                    decoding="async"
-                    className="city-gallery__img"
-                  />
-                </picture>
-                {img.caption && <figcaption className="city-gallery__caption">{img.caption}</figcaption>}
-              </figure>
-            </FadeUp>
-          ))}
-        </section>
-      )}
       {faqItems.length > 0 && (
         <section className="page-items faq" id="faq-section">
           <Accordion items={linkedFaq} headingKey="faq.heroTitle" />

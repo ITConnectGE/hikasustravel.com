@@ -5579,21 +5579,15 @@ select option:checked {
   text-align: center;
 }
 
-/* Telavi (city) body/gallery images — real responsive <picture> figures,
-   two-up on desktop, single column on mobile. Mirrors the blog-img caption. */
-.city-gallery {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 1.5rem;
-}
-
-.city-gallery__figure {
-  margin: 0;
+/* Telavi (city) body images — a single real responsive <picture> figure placed
+   between content sections (not a bottom gallery block). Mirrors .blog-img. */
+.city-body-figure {
+  margin: 2rem 0;
   padding: 0;
   text-align: center;
 }
 
-.city-gallery__img {
+.city-body-figure__img {
   display: block;
   width: 100%;
   height: auto;
@@ -5603,18 +5597,12 @@ select option:checked {
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
 }
 
-.city-gallery__caption {
+.city-body-figure__caption {
   margin-top: 10px;
   font-size: calc(var(--font-size) * 0.82);
   color: #888;
   font-style: italic;
   text-align: center;
-}
-
-@media (max-width: 768px) {
-  .city-gallery {
-    grid-template-columns: 1fr;
-  }
 }
 
 .blog-article__tags {

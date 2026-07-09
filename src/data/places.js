@@ -425,23 +425,31 @@ export const cities = [
   },
   {
     slug: 'telavi', name: 'Telavi', region: 'kakheti', published: true,
-    seoKey: 'telavi', contentKey: 'telavi', image: '/images/files/georgia-home.jpg',
+    seoKey: 'telavi', contentKey: 'telavi',
+    // Cover/hero = the Telavi town-view photo (represents the destination, not a
+    // single attraction). Rendered as the existing CSS-background hero via
+    // HeroSection with image-set(avif, webp); og:image derives from `image`.
+    image: '/images/files/telavi-town-view-erekle-ii-monument-kakheti-georgia-1600w.webp',
+    imageAvif: '/images/files/telavi-town-view-erekle-ii-monument-kakheti-georgia-1600w.avif',
     thingsToDo: {
       seoKey: 'thingsToDoTelavi', contentKey: 'thingsToDoTelavi', image: '/images/files/georgia-home.jpg',
       address: { addressLocality: 'Telavi' },
       attractions: ['Batonis Tsikhe', 'Alaverdi Monastery', 'Ikalto Monastery', 'Tsinandali Estate', 'Gremi', 'Shuamta Monasteries', 'Nadikvari Viewpoint'],
     },
-    // Body/gallery images (our own photos) rendered as real responsive <picture>
-    // by CityPage — NOT the hero. Each base has -{1200,1600,2400}w.{avif,webp}
-    // variants in /images/files/. `name`/`description`/`locationName`/`geo` feed
-    // the ImageObject JSON-LD; the per-locale `alt` and `caption` maps drive the
-    // <img alt>, <figcaption> and the localized ImageObject caption. Strings live
-    // here (not pages.json) because the Telavi page-content block only exists in
-    // English and falls back all-or-nothing, which would force English captions
-    // on non-English pages — these 7-language maps guarantee each locale's own.
+    // Telavi photos (our own). CityPage uses the one flagged `hero: true` as the
+    // cover/background hero, and places the others (each with an `afterChunk`
+    // index) as real responsive <picture>/<img> BETWEEN body sections — never a
+    // bottom block. Each base has -{1200,1600,2400}w.{avif,webp} in /images/files/.
+    // `name`/`description`/`locationName`/`geo` feed the ImageObject JSON-LD; the
+    // per-locale `alt` and `caption` maps drive the <img alt>, <figcaption> and
+    // the localized ImageObject caption. Strings live here (not pages.json)
+    // because the Telavi page-content block only exists in English and falls back
+    // all-or-nothing, which would force English captions on non-English pages —
+    // these 7-language maps guarantee each locale's own. `afterChunk` = insert the
+    // figure after the Nth body chunk (chunk 0 = intro, then one per <h2>).
     gallery: [
       {
-        base: 'erekle-ii-statue-telavi-kakheti-georgia', width: 1600, height: 1205,
+        base: 'erekle-ii-statue-telavi-kakheti-georgia', width: 1600, height: 1205, afterChunk: 0,
         name: 'Equestrian statue of King Erekle II, Telavi, Kakheti, Georgia',
         description: 'The 8.5-metre bronze equestrian statue of King Erekle II (sculptor Merab Merabishvili, 1971) in central Telavi, beside Batonis Tsikhe palace, overlooking the Alazani Valley and Greater Caucasus.',
         locationName: 'Monument to King Erekle II, Telavi', geo: { lat: 41.9192, lng: 45.4731 },
@@ -465,7 +473,7 @@ export const cities = [
         },
       },
       {
-        base: 'telavi-town-view-erekle-ii-monument-kakheti-georgia', width: 1600, height: 1205,
+        base: 'telavi-town-view-erekle-ii-monument-kakheti-georgia', width: 1600, height: 1205, hero: true,
         name: 'Telavi old town from the King Erekle II monument, Kakheti, Georgia',
         description: 'The red-roofed old town of Telavi, former capital of the Kakheti kingdom, seen from the King Erekle II monument, with the Alazani Valley and Greater Caucasus beyond.',
         locationName: 'Telavi, Kakheti', geo: { lat: 41.9192, lng: 45.4731 },
@@ -489,7 +497,7 @@ export const cities = [
         },
       },
       {
-        base: 'telavi-park-promenade-kakheti-georgia', width: 1600, height: 1205,
+        base: 'telavi-park-promenade-kakheti-georgia', width: 1600, height: 1205, afterChunk: 7,
         name: 'Central park and promenade, Telavi, Kakheti, Georgia',
         description: 'A landscaped park and promenade in central Telavi, Kakheti, with views of the Greater Caucasus at dusk.',
         locationName: 'Telavi, Kakheti', geo: { lat: 41.9192, lng: 45.4731 },
@@ -513,7 +521,7 @@ export const cities = [
         },
       },
       {
-        base: 'batonis-tsikhe-fortress-evening-telavi-kakheti-georgia', width: 1600, height: 1205,
+        base: 'batonis-tsikhe-fortress-evening-telavi-kakheti-georgia', width: 1600, height: 1205, afterChunk: 3,
         name: 'Batonis Tsikhe fortress at dusk, Telavi, Kakheti, Georgia',
         description: 'The walls and tower of Batonis Tsikhe, the royal residence of King Erekle II in central Telavi, Kakheti, in warm evening light; today home to the Telavi history museum.',
         locationName: 'Batonis Tsikhe, Telavi', geo: { lat: 41.9200, lng: 45.4750 },
