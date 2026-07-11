@@ -389,8 +389,11 @@ export const tours = [
       "Customizable route"
     ],
     "rightForYou": [
-      "This tour is a good fit if you want a relaxed but substantial introduction to Georgian wine and Kakheti — you enjoy wine and food, you'd rather taste at a mix of small family cellars and larger estates than rush through one day trip, and you like the idea of a private trip shaped around your own pace. It suits couples, friends and small groups, and travelers combining it with a longer route through Georgia.",
-      "It's less suited to travelers who don't drink wine at all (though the cultural sites, food and scenery still stand on their own and the route can be adjusted), or to anyone wanting a fast, sight-only itinerary — the days are built around tastings, meals and slower cultural stops rather than a packed checklist."
+      "Wine lovers and food-focused travelers who want to experience Kakheti, the cradle of wine",
+      "Couples, families and small private groups",
+      "Travelers short on time who want a focused introduction to Georgia's wine region",
+      "Anyone looking for a premium short program or an extension to a longer Georgia itinerary",
+      "Travelers who'd rather have hotels, transport, tastings and logistics handled for them"
     ],
     "faq": [
       {

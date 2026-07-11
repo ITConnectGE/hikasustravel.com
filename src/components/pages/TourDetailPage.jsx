@@ -193,7 +193,13 @@ export default function TourDetailPage() {
           <section id="overview" className="td-section">
             <FadeUp>
               <h2 className="td-section__title">{t('tour.overview')}</h2>
-              <p className="td-overview__text">{autolinkNodes(tt?.description || tour.description, lang, pages)}</p>
+              {/* Render the overview as one <p> per paragraph (split on blank
+                  lines). Single-paragraph descriptions are unchanged (one <p>);
+                  only descriptions that contain blank-line breaks render multiple
+                  paragraphs. */}
+              {(tt?.description || tour.description || '').split(/\n{2,}/).map((para, i) => (
+                <p key={i} className="td-overview__text">{autolinkNodes(para, lang, pages)}</p>
+              ))}
 
               {highlightItems.length > 0 && (
                 <div className="td-overview__highlights">
