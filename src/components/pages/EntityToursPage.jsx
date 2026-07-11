@@ -1,5 +1,6 @@
 import { useContext, useEffect, useMemo } from 'react'
 import { useParams } from 'react-router-dom'
+import HeroSection from '../shared/HeroSection'
 import TourCard from '../shared/TourCard'
 import FadeUp from '../shared/FadeUp'
 import Breadcrumbs from '../shared/Breadcrumbs'
@@ -75,12 +76,16 @@ export default function EntityToursPage() {
 
   return (
     <>
+      {/* Breadcrumb bar above the hero, then the standard full-screen hero (the
+          site header is a transparent overlay that expects a hero behind it — so
+          this matches CityPage/SitePage and avoids the header overlapping the
+          page content). The hero <h1> is the page title. */}
       <div className="dest-breadcrumbs">
         <Breadcrumbs trail={trail} />
       </div>
+      <HeroSection image="/images/files/georgia-tour-01.jpg" title={t('tours.entityToursCta', { name })} />
       <section className="page-items entity-tours-header">
         <FadeUp>
-          <h1>{t('tours.entityToursCta', { name })}</h1>
           <p className="entity-tours-intro">{t('tours.listIntro', { name })}</p>
         </FadeUp>
       </section>
