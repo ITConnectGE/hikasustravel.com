@@ -1,4 +1,4 @@
-import { useContext, useMemo, useRef, useEffect } from 'react'
+import { Fragment, useContext, useMemo, useRef, useEffect } from 'react'
 import { useParams, useNavigate } from 'react-router-dom'
 import HeroSection from '../shared/HeroSection'
 import FadeUp from '../shared/FadeUp'
@@ -11,12 +11,18 @@ import useSEO from '../../hooks/useSEO'
 import { getSEO } from '../../data/seoData'
 import { getSite, getCity, getRegion, cityPath, regionPath, sitePath } from '../../data/places'
 import { autolinkHtml } from '../../utils/autolink'
+import asset from '../../utils/basePath'
 import enPages from '../../i18n/locales/en/pages.json'
 import NotFoundPage from './NotFoundPage'
 
 const SITE_URL = 'https://www.hikasustravel.com'
 // Brand used for ImageObject credit/creator (mirrors og:site_name in useSEO).
 const BRAND = 'Hikasus Travel'
+// Responsive-variant widths shipped for each gallery base name. These originals
+// top out at 1536px (no upscaled 2400 variant), so the largest source is 1536w
+// and the fallback <img> uses -1200w.webp. Mirrors the Telavi CityPage gallery.
+const GALLERY_WIDTHS = [768, 1200, 1536]
+const GALLERY_MAX_WIDTH = GALLERY_WIDTHS[GALLERY_WIDTHS.length - 1]
 
 /**
  * Generic tourist-site detail page. Both city- and region-parented sites now
@@ -59,6 +65,29 @@ export default function SitePage() {
   )
   const path = published ? sitePath(site).replace(/^\//, '') : ''
   const heroImage = published ? site.image : null
+
+  // Body/gallery images (our own photos): resolve each image's alt + figcaption
+  // to the current locale from its 7-language maps in places.js (site.gallery).
+  // English is a crash-guard only — every locale ships its own strings, so
+  // non-English pages never show English alt/captions. Same mechanism as the
+  // Telavi CityPage gallery; the hero is untouched (these are body images only).
+  const gallery = useMemo(() => {
+    if (!published || !site.gallery) return []
+    return site.gallery.map((img) => ({
+      ...img,
+      alt: (img.alt && (img.alt[lang] || img.alt.en)) || '',
+      caption: (img.caption && (img.caption[lang] || img.caption.en)) || '',
+    }))
+  }, [published, site, lang])
+  // Any item flagged `hero` would be a cover image (not rendered inline); the
+  // rest are body images placed between content sections via their `afterChunk`.
+  const bodyImages = useMemo(() => gallery.filter((img) => !img.hero), [gallery])
+  // Split the body HTML into chunks at each <h2> (chunk 0 = intro), so body
+  // images can be interleaved between sections rather than grouped in a block.
+  const bodyChunks = useMemo(
+    () => (linkedContent ? linkedContent.split(/(?=<h2)/) : []),
+    [linkedContent],
+  )
   // Localized alt text for the hero image (from the image SEO package). The hero
   // renders as a CSS background, so this carries the alt into the ImageObject
   // caption and og:image:alt / twitter:image:alt instead of an <img alt>.
@@ -178,6 +207,35 @@ export default function SitePage() {
       '@graph': [
         primaryNode,
         ...(imageNode ? [imageNode] : []),
+        // Body/gallery images (our own photos) — one ImageObject each, contentUrl
+        // pointing at the real largest file; caption localized per locale, brand
+        // credit. These are body images (not the hero), so representativeOfPage
+        // follows the item's `hero` flag (false here).
+        ...gallery.map((img) => ({
+          '@type': 'ImageObject',
+          contentUrl: `${SITE_URL}/images/files/${img.base}-${GALLERY_MAX_WIDTH}w.webp`,
+          url: `${SITE_URL}/images/files/${img.base}-${GALLERY_MAX_WIDTH}w.webp`,
+          width: GALLERY_MAX_WIDTH,
+          height: Math.round((GALLERY_MAX_WIDTH * img.height) / img.width),
+          representativeOfPage: !!img.hero,
+          name: img.name,
+          caption: img.caption || img.description,
+          description: img.description,
+          creator: { '@type': 'Organization', name: BRAND },
+          creditText: BRAND,
+          copyrightNotice: `© ${BRAND}`,
+          contentLocation: {
+            '@type': 'Place',
+            name: img.locationName,
+            address: {
+              '@type': 'PostalAddress',
+              addressLocality: img.locality,
+              addressRegion: img.region,
+              addressCountry: img.country,
+            },
+            geo: { '@type': 'GeoCoordinates', latitude: img.geo.lat, longitude: img.geo.lng },
+          },
+        })),
         {
           '@type': 'BreadcrumbList',
           // Every ListItem must carry an `item` URL — Google flags a non-final
@@ -204,7 +262,7 @@ export default function SitePage() {
       ],
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [published, lang, path, seo.description, heroImage, faqItems])
+  }, [published, lang, path, seo.description, heroImage, faqItems, gallery])
 
   useSEO(published ? {
     ...seo, lang, path,
@@ -228,9 +286,48 @@ export default function SitePage() {
       </div>
       <HeroSection image={heroImage} imageAvif={site.imageAvif} title={page.heroTitle || site.name} />
       <section className="page-items about-georgia">
-        <FadeUp>
-          <div ref={contentRef} dangerouslySetInnerHTML={{ __html: linkedContent }} />
-        </FadeUp>
+        <div ref={contentRef}>
+          {bodyChunks.map((chunk, i) => {
+            const img = bodyImages.find((im) => im.afterChunk === i)
+            return (
+              <Fragment key={`chunk-${i}`}>
+                <FadeUp>
+                  <div dangerouslySetInnerHTML={{ __html: chunk }} />
+                </FadeUp>
+                {img && (
+                  /* Body image between content sections — real, crawlable, lazy
+                     responsive <picture>/<img> (not the hero, not a CSS background). */
+                  <FadeUp>
+                    <figure className="city-body-figure">
+                      <picture>
+                        <source
+                          type="image/avif"
+                          srcSet={GALLERY_WIDTHS.map((w) => `${asset(`/images/files/${img.base}-${w}w.avif`)} ${w}w`).join(', ')}
+                          sizes="(max-width: 768px) 100vw, 760px"
+                        />
+                        <source
+                          type="image/webp"
+                          srcSet={GALLERY_WIDTHS.map((w) => `${asset(`/images/files/${img.base}-${w}w.webp`)} ${w}w`).join(', ')}
+                          sizes="(max-width: 768px) 100vw, 760px"
+                        />
+                        <img
+                          src={asset(`/images/files/${img.base}-1200w.webp`)}
+                          width={img.width}
+                          height={img.height}
+                          alt={img.alt}
+                          loading="lazy"
+                          decoding="async"
+                          className="city-body-figure__img"
+                        />
+                      </picture>
+                      {img.caption && <figcaption className="city-body-figure__caption">{img.caption}</figcaption>}
+                    </figure>
+                  </FadeUp>
+                )}
+              </Fragment>
+            )
+          })}
+        </div>
       </section>
       {site.imageCredit && (
         /* Hero photo attribution — required by the image's Creative Commons licence. */

@@ -856,6 +856,93 @@ export const sites = [
     parentType: 'city', parent: 'telavi', published: true,
     seoKey: 'tsinandaliEstate', contentKey: 'tsinandaliEstate',
     image: '/images/files/georgia-home.jpg',
+    // Body/gallery images (our own photos), placed BETWEEN body sections as real
+    // responsive <picture>/<img> by SitePage — NOT the hero, NOT og:image (hero
+    // stays georgia-home.jpg). Same mechanism as the Telavi CityPage gallery, but
+    // these originals top out at 1536px, so each base ships -{768,1200,1536}w
+    // .{avif,webp} in /images/files/ (fallback <img> = -1200w.webp, 1200x800; the
+    // ImageObject contentUrl uses the largest -1536w.webp). `afterChunk` = insert
+    // the figure after the Nth body chunk (chunk 0 = intro, then one per <h2>).
+    // Per-locale `alt`/`caption` maps live here (not pages.json) so every locale
+    // shows its own strings; `name`/`description`/`locationName`/`geo`/`locality`/
+    // `region`/`country` feed the per-image ImageObject JSON-LD (brand credit).
+    gallery: [
+      {
+        base: 'tsinandali-estate-chavchavadze-house-kakheti-georgia', width: 1200, height: 800, afterChunk: 1,
+        name: 'Chavchavadze palace and garden, Tsinandali Estate, Kakheti, Georgia',
+        description: "The Italianate palace of Prince Alexander Chavchavadze at Tsinandali Estate, overlooking Georgia's first European-style landscape garden (laid out in the 1830s), Kakheti.",
+        locationName: 'Tsinandali Estate', geo: { lat: 41.8945, lng: 45.5705 },
+        locality: 'Tsinandali', region: 'Kakheti', country: 'GE',
+        alt: {
+          en: 'The 19th-century Chavchavadze palace and landscaped garden at Tsinandali Estate, Kakheti, Georgia, in autumn',
+          de: 'Der Chavchavadze-Palast aus dem 19. Jahrhundert und der Landschaftsgarten des Anwesens Tsinandali, Kachetien, Georgien, im Herbst',
+          fr: 'Le palais Chavchavadze du XIXe siècle et son jardin paysager au domaine de Tsinandali, Kakhétie, Géorgie, en automne',
+          es: 'El palacio Chavchavadze del siglo XIX y el jardín paisajístico de la finca Tsinandali, Kajetia, Georgia, en otoño',
+          nl: 'Het 19e-eeuwse Chavchavadze-paleis en de landschapstuin van landgoed Tsinandali, Kachetië, Georgië, in de herfst',
+          cs: 'Palác Chavchavadze z 19. století a krajinná zahrada usedlosti Tsinandali, Kachetie, Gruzie, na podzim',
+          pl: 'XIX-wieczny pałac Chavchavadze i ogród krajobrazowy w posiadłości Tsinandali, Kachetia, Gruzja, jesienią',
+        },
+        caption: {
+          en: "At Tsinandali Estate, the Italianate palace of Prince Alexander Chavchavadze looks out over Georgia's first European-style landscape garden, laid out in the 1830s and still a highlight of any Kakheti wine tour.",
+          de: 'Auf dem Anwesen Tsinandali blickt der italienisch geprägte Palast von Fürst Alexander Chavchavadze über Georgiens ersten Landschaftsgarten im europäischen Stil, angelegt in den 1830er Jahren und bis heute ein Höhepunkt jeder Weintour durch Kachetien.',
+          fr: "Au domaine de Tsinandali, le palais d'inspiration italienne du prince Alexandre Chavchavadze domine le premier jardin paysager de style européen de Géorgie, aménagé dans les années 1830 et toujours incontournable lors d'un circuit œnologique en Kakhétie.",
+          es: 'En la finca Tsinandali, el palacio de estilo italiano del príncipe Alexander Chavchavadze se asoma al primer jardín paisajístico de estilo europeo de Georgia, creado en la década de 1830 y aún hoy imprescindible en cualquier ruta del vino por Kajetia.',
+          nl: 'Op landgoed Tsinandali kijkt het Italianiserende paleis van prins Alexander Chavchavadze uit over de eerste landschapstuin in Europese stijl van Georgië, aangelegd in de jaren 1830 en nog altijd een hoogtepunt van elke wijntour door Kachetië.',
+          cs: 'Na usedlosti Tsinandali shlíží italsky laděný palác knížete Alexandra Chavchavadzeho na první krajinnou zahradu v evropském stylu v Gruzii, založenou ve 30. letech 19. století a dodnes vrchol každého vinařského výletu po Kachetii.',
+          pl: 'W posiadłości Tsinandali włoski w stylu pałac księcia Aleksandra Chavchavadzego spogląda na pierwszy w Gruzji ogród krajobrazowy w stylu europejskim, założony w latach 30. XIX wieku i wciąż będący atrakcją każdej trasy winiarskiej po Kachetii.',
+        },
+      },
+      {
+        base: 'tsinandali-estate-boxwood-maze-kakheti-georgia', width: 1200, height: 800, afterChunk: 3,
+        name: 'Boxwood maze and wish tree, Tsinandali Estate garden, Kakheti, Georgia',
+        description: 'A wish tree hung with ribbons in the clipped boxwood maze of the 19th-century Tsinandali Estate garden, Kakheti.',
+        locationName: 'Tsinandali Estate', geo: { lat: 41.8945, lng: 45.5705 },
+        locality: 'Tsinandali', region: 'Kakheti', country: 'GE',
+        alt: {
+          en: 'Wish tree hung with ribbons in the boxwood maze of the Tsinandali Estate garden, Kakheti, Georgia',
+          de: 'Wunschbaum mit Bändern im Buchsbaum-Labyrinth des Gartens von Tsinandali, Kachetien, Georgien',
+          fr: 'Arbre à vœux orné de rubans dans le labyrinthe de buis du jardin du domaine de Tsinandali, Kakhétie, Géorgie',
+          es: 'Árbol de los deseos con cintas en el laberinto de boj del jardín de la finca Tsinandali, Kajetia, Georgia',
+          nl: 'Wensboom met linten in het buxusdoolhof van de tuin van landgoed Tsinandali, Kachetië, Georgië',
+          cs: 'Strom přání ozdobený stuhami v zimostrázovém bludišti zahrady Tsinandali, Kachetie, Gruzie',
+          pl: 'Drzewo życzeń ozdobione wstążkami w bukszpanowym labiryncie ogrodu posiadłości Tsinandali, Kachetia, Gruzja',
+        },
+        caption: {
+          en: "In the boxwood maze of the Tsinandali garden, visitors tie ribbons to a wish tree — one of the quieter corners of Prince Chavchavadze's 19th-century park.",
+          de: 'Im Buchsbaum-Labyrinth des Gartens von Tsinandali binden Besucher Bänder an einen Wunschbaum — eine der stilleren Ecken des Parks von Fürst Chavchavadze aus dem 19. Jahrhundert.',
+          fr: "Dans le labyrinthe de buis du jardin de Tsinandali, les visiteurs nouent des rubans à un arbre à vœux — l'un des coins les plus paisibles du parc du XIXe siècle du prince Chavchavadze.",
+          es: 'En el laberinto de boj del jardín de Tsinandali, los visitantes atan cintas a un árbol de los deseos, uno de los rincones más tranquilos del parque decimonónico del príncipe Chavchavadze.',
+          nl: 'In het buxusdoolhof van de tuin van Tsinandali knopen bezoekers linten aan een wensboom — een van de rustigere hoekjes van het 19e-eeuwse park van prins Chavchavadze.',
+          cs: 'V zimostrázovém bludišti zahrady Tsinandali návštěvníci uvazují stuhy na strom přání — jedno z klidnějších zákoutí parku knížete Chavchavadzeho z 19. století.',
+          pl: 'W bukszpanowym labiryncie ogrodu Tsinandali odwiedzający wiążą wstążki na drzewie życzeń — jednym z cichszych zakątków XIX-wiecznego parku księcia Chavchavadzego.',
+        },
+      },
+      {
+        base: 'tsinandali-estate-garden-autumn-kakheti-georgia', width: 1200, height: 800, afterChunk: 4,
+        name: 'Tsinandali Estate garden in autumn, Kakheti, Georgia',
+        description: 'Autumn in the landscaped garden of Tsinandali Estate, planted with species from every continent, around the Chavchavadze palace-museum, Kakheti.',
+        locationName: 'Tsinandali Estate', geo: { lat: 41.8945, lng: 45.5705 },
+        locality: 'Tsinandali', region: 'Kakheti', country: 'GE',
+        alt: {
+          en: 'Autumn colours in the landscaped garden of Tsinandali Estate with the Chavchavadze palace, Kakheti, Georgia',
+          de: 'Herbstfarben im Landschaftsgarten des Anwesens Tsinandali mit dem Chavchavadze-Palast, Kachetien, Georgien',
+          fr: "Couleurs d'automne dans le jardin paysager du domaine de Tsinandali avec le palais Chavchavadze, Kakhétie, Géorgie",
+          es: 'Colores otoñales en el jardín paisajístico de la finca Tsinandali con el palacio Chavchavadze, Kajetia, Georgia',
+          nl: 'Herfstkleuren in de landschapstuin van landgoed Tsinandali met het Chavchavadze-paleis, Kachetië, Georgië',
+          cs: 'Podzimní barvy v krajinné zahradě usedlosti Tsinandali s palácem Chavchavadze, Kachetie, Gruzie',
+          pl: 'Jesienne barwy w ogrodzie krajobrazowym posiadłości Tsinandali z pałacem Chavchavadze, Kachetia, Gruzja',
+        },
+        caption: {
+          en: "Autumn settles over the Tsinandali garden, planted with trees and shrubs from every continent around Prince Alexander Chavchavadze's palace-museum in Kakheti.",
+          de: 'Der Herbst legt sich über den Garten von Tsinandali, der mit Bäumen und Sträuchern aus allen Kontinenten rund um das Palast-Museum von Fürst Alexander Chavchavadze in Kachetien bepflanzt ist.',
+          fr: "L'automne s'installe sur le jardin de Tsinandali, planté d'arbres et d'arbustes de tous les continents autour du palais-musée du prince Alexandre Chavchavadze en Kakhétie.",
+          es: 'El otoño se instala en el jardín de Tsinandali, plantado con árboles y arbustos de todos los continentes alrededor del palacio-museo del príncipe Alexander Chavchavadze en Kajetia.',
+          nl: 'De herfst daalt neer over de tuin van Tsinandali, beplant met bomen en struiken van elk continent rond het paleismuseum van prins Alexander Chavchavadze in Kachetië.',
+          cs: 'Podzim se snáší nad zahradou Tsinandali, osázenou stromy a keři ze všech kontinentů kolem palácového muzea knížete Alexandra Chavchavadzeho v Kachetii.',
+          pl: 'Jesień zstępuje na ogród Tsinandali, obsadzony drzewami i krzewami ze wszystkich kontynentów wokół pałacu-muzeum księcia Aleksandra Chavchavadzego w Kachetii.',
+        },
+      },
+    ],
   },
   {
     slug: 'telavi-bazaar', name: 'The Telavi Bazaar',
