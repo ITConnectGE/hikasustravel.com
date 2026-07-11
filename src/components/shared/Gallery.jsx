@@ -39,7 +39,8 @@ function GalleryLightbox({ images, startIndex, onClose }) {
   const image = images[index]
   if (!image) return null
 
-  const alt = image.caption ? image.caption.replace(/<[^>]*>/g, '') : (image.description || '')
+  const caption = image.caption ? image.caption.replace(/<[^>]*>/g, '') : ''
+  const alt = caption || (image.description || '')
 
   const onTouchStart = (e) => { touchStartX.current = e.touches[0].clientX }
   const onTouchEnd = (e) => {
@@ -78,6 +79,16 @@ function GalleryLightbox({ images, startIndex, onClose }) {
         onTouchStart={onTouchStart}
         onTouchEnd={onTouchEnd}
       />
+      {(caption || image.description) && (
+        /* Place name/caption in the expanded view — same data shown in the grid
+           card. A bottom overlay bar (below the mid-height nav arrows and the
+           top-right close, so nothing is blocked); pointer-events:none lets a
+           click still fall through to close. */
+        <div className="gallery-lightbox__caption">
+          {caption && <p className="gallery-lightbox__caption-title">{caption}</p>}
+          {image.description && <p className="gallery-lightbox__caption-desc">{image.description}</p>}
+        </div>
+      )}
       {count > 1 && (
         <button
           className="gallery-lightbox__nav gallery-lightbox__nav--next"
