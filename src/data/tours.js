@@ -364,7 +364,8 @@ export const tours = [
     ]
   },
   {
-    "slug": "savor-the-flavors-of-kakheti-3-day-wine-and-culture-adventure",
+    "slug": "3-day-kakheti-wine-and-food-tour-from-tbilisi",
+    "formerSlug": "savor-the-flavors-of-kakheti-3-day-wine-and-culture-adventure",
     "type": "private",
     "title": "3-Day Kakheti Wine and Food Tour from Tbilisi",
     "heroImage": "/images/files/kakheti-wine-tasting.jpg",

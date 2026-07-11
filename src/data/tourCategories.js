@@ -30,7 +30,7 @@ export const CATEGORY_LABEL_KEYS = {
 
 // Per-tour assignments, keyed by stable slug (confirmed with the owner).
 export const PRIVATE_TOUR_CATEGORIES = {
-  'savor-the-flavors-of-kakheti-3-day-wine-and-culture-adventure': ['wine-food', 'cultural-heritage'],
+  '3-day-kakheti-wine-and-food-tour-from-tbilisi': ['wine-food', 'cultural-heritage'],
   '5-day-private-tour-from-tbilisi-to-batumi': ['cultural-heritage', 'western-georgia-black-sea'],
   '5-day-georgia-private-tour-tbilisi-wine-and-sulfur-baths': ['wine-food', 'cultural-heritage'],
   '6-day-georgia-private-tour-highlights-from-tbilisi': ['cultural-heritage', 'wine-food'],
