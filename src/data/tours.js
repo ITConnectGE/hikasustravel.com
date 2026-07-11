@@ -375,9 +375,9 @@ export const tours = [
     "description": "Savor the Flavors of Kakheti is a private 3-day wine and culture tour from Tbilisi into Kakheti, Georgia's renowned wine region and the cradle of winemaking. Based in Telavi for two nights, you taste at both family-run wineries and established estates, see the ancient qvevri method that earned UNESCO recognition, and visit the cultural landmarks that define the region — the Tsinandali Estate, the medieval Gremi Fortress, hilltop Sighnaghi and the peaceful Bodbe Monastery. The pace is balanced and the experiences are hands-on, with traditional Georgian meals paired with local wines along the way. Hikasus Travel, a local team based in Georgia, handles the transport, hotels, guiding and day-to-day logistics, and because the tour is private the route and pace stay flexible — it works equally well as a focused standalone trip or as a short premium extension to a longer Georgia itinerary.",
     "listingDescription": "A private 3-day wine and culture tour of Kakheti from Tbilisi — qvevri winemaking, up to 6 tastings, and cultural stops at Tsinandali, Gremi, Sighnaghi and Bodbe, with hotels, transport and a guide-driver handled for you.",
     "heroH1": "3-Day Kakheti Wine and Food Tour from Tbilisi",
-    "heroSubtitle": "A private 3-day route from Tbilisi into Kakheti — wine tastings at family wineries and estates, qvevri winemaking, and cultural stops at Tsinandali, Gremi, Sighnaghi and Bodbe, with two nights in Telavi.",
-    "seoTitle": "3-Day Kakheti Wine & Food Tour from Tbilisi, Georgia",
-    "metaDescription": "Private 3-day Kakheti wine and culture tour from Tbilisi: qvevri winemaking, up to 6 wine tastings, Tsinandali, Khareba, Gremi, Sighnaghi and Bodbe — hotels, transport and guide included.",
+    "heroSubtitle": "A private three-day wine and food tour from Tbilisi into Kakheti, the region in eastern Georgia where winemaking began. Over three days you taste at family wineries and larger estates, see the qvevri method up close, and visit Tsinandali, Gremi, Sighnaghi and Bodbe, with two nights based in Telavi. The tour runs privately for your group and can be adjusted to your dates, pace and interests.",
+    "seoTitle": "3-Day Kakheti Wine & Food Tour from Tbilisi",
+    "metaDescription": "Explore Kakheti on a private 3-day wine and food tour from Tbilisi, with family wineries, qvevri wine, cultural sites and two nights in Telavi.",
     "heroFacts": [
       "3 days / 2 nights",
       "Private tour",
@@ -389,46 +389,77 @@ export const tours = [
       "Customizable route"
     ],
     "rightForYou": [
-      "Wine lovers and food-focused travelers who want to experience Kakheti, the cradle of wine",
-      "Couples, families and small private groups",
-      "Travelers short on time who want a focused introduction to Georgia's wine region",
-      "Anyone looking for a premium short program or an extension to a longer Georgia itinerary",
-      "Travelers who'd rather have hotels, transport, tastings and logistics handled for them"
+      "This tour is a good fit if you want a relaxed but substantial introduction to Georgian wine and Kakheti — you enjoy wine and food, you'd rather taste at a mix of small family cellars and larger estates than rush through one day trip, and you like the idea of a private trip shaped around your own pace. It suits couples, friends and small groups, and travelers combining it with a longer route through Georgia.",
+      "It's less suited to travelers who don't drink wine at all (though the cultural sites, food and scenery still stand on their own and the route can be adjusted), or to anyone wanting a fast, sight-only itinerary — the days are built around tastings, meals and slower cultural stops rather than a packed checklist."
     ],
     "faq": [
       {
-        "title": "Can this tour be customized?",
-        "content": "<p>Yes. It's a private tour, so the route, pace, hotels, wineries and stops can be adjusted to suit you. Tell us what you have in mind and we'll shape the plan around it.</p>"
+        "title": "How long is the Kakheti wine and food tour, and where does it go?",
+        "content": "<p>It's a private three-day tour from Tbilisi into Kakheti, eastern Georgia's main wine region, with two nights based in Telavi. Over the three days it covers Tsinandali Estate, qvevri winemaking in Vardisubani, Khareba Winery's underground tunnels, Gremi Fortress, Telavi, Sighnaghi and Bodbe Monastery, with drives over the Gombori Pass and through the Alazani Valley.</p>"
       },
       {
-        "title": "Is this a private tour?",
-        "content": "<p>Yes — it runs privately for your group with your own guide-driver. You won't share it with other travelers.</p>"
+        "title": "Is this a private tour or a group tour?",
+        "content": "<p>It runs privately for your own group, with your own guide-driver, and the route, hotels and pace can be adjusted to your dates and interests. The per-person price falls as more people share the tour.</p>"
       },
       {
-        "title": "Are hotels included?",
-        "content": "<p>Yes. Two nights of hotels with breakfast are included, both in Telavi, in your choice of Classic, Mid-Range or Premium.</p>"
+        "title": "How many wine tastings are included, and what kind of wineries?",
+        "content": "<p>Six wine tastings are included, across both family-run wineries — where wine is often still made in buried qvevri vessels and hosted around a home table — and larger estates such as Tsinandali and Khareba, where you see winemaking on a bigger, more formal scale.</p>"
       },
       {
-        "title": "How many wine tastings are included?",
-        "content": "<p>Up to six wine tastings at a mix of family-run wineries and established estates, plus the qvevri winemaking experience and meals paired with local wines — one lunch and two dinners.</p>"
+        "title": "What is qvevri wine?",
+        "content": "<p>Qvevri is the traditional Georgian method of fermenting and aging wine in large clay vessels buried in the ground, a practice going back thousands of years that UNESCO recognizes as intangible cultural heritage. On this tour you see it up close in the village of Vardisubani.</p>"
       },
       {
-        "title": "Is the tour suitable for families or non-drinkers?",
-        "content": "<p>Yes. The cultural sites, landscapes and Georgian cuisine make it rewarding even if you're not focused on wine, and the private, flexible format suits families — we can adjust the pace and stops.</p>"
+        "title": "What's included in the price?",
+        "content": "<p>Two nights' accommodation in Telavi (double/twin sharing, with breakfast), all transfers on the itinerary, entrance tickets, guide service, and six wine tastings with one lunch and two dinners. Not included: full board beyond the listed meals, additional hotel expenses, and travel insurance.</p>"
       },
       {
-        "title": "Where does the tour start and end?",
-        "content": "<p>It starts and ends in Tbilisi, with two nights based in Telavi in the heart of Kakheti.</p>"
+        "title": "How much does the tour cost?",
+        "content": "<p>Pricing is per person and depends on your group size and accommodation level, starting from €590 per person (Classic package, four travelers). Larger groups pay less per person; a single supplement applies for a single room. Send your dates and group size for an exact quote.</p>"
       },
       {
-        "title": "What about larger groups?",
-        "content": "<p>The prices shown are for up to four travelers. For groups of five, a vehicle upgrade is included to keep everyone comfortable — contact us for a tailored quote.</p>"
-      },
-      {
-        "title": "When is the best time for this tour?",
-        "content": "<p>Spring to autumn (roughly May to October) is the most comfortable season for Kakheti and its wineries; the grape harvest in autumn is a particularly special time to visit.</p>"
+        "title": "When is the best time to take this tour?",
+        "content": "<p>It runs from spring through autumn. September and October — the grape harvest, or rtveli — are especially rewarding for wine travelers, though the wineries, food and cultural sites are enjoyable across the whole season.</p>"
       }
     ],
+    "enTouristTrip": {
+      "@context": "https://schema.org",
+      "@type": "TouristTrip",
+      "name": "3-Day Kakheti Wine and Food Tour from Tbilisi",
+      "description": "A private three-day wine and food tour from Tbilisi into Kakheti, eastern Georgia's main wine region, with family wineries, qvevri winemaking, cultural sites, and two nights in Telavi.",
+      "url": "https://www.hikasustravel.com/en/private-tours/3-day-kakheti-wine-and-food-tour-from-tbilisi/",
+      "touristType": ["Wine tourism", "Food tourism", "Cultural tourism"],
+      "provider": {
+        "@type": "TravelAgency",
+        "name": "Hikasus Travel",
+        "url": "https://www.hikasustravel.com/"
+      },
+      "itinerary": {
+        "@type": "ItemList",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "Day 1 — Tbilisi to Telavi over the Gombori Pass, with Tsinandali Estate" },
+          { "@type": "ListItem", "position": 2, "name": "Day 2 — Qvevri winemaking, Khareba's wine tunnels, Gremi Fortress and dinner in Napareuli" },
+          { "@type": "ListItem", "position": 3, "name": "Day 3 — Telavi, Sighnaghi and Bodbe Monastery, then back to Tbilisi" }
+        ]
+      },
+      "offers": {
+        "@type": "AggregateOffer",
+        "priceCurrency": "EUR",
+        "lowPrice": "590",
+        "highPrice": "1695",
+        "offerCount": "3",
+        "url": "https://www.hikasustravel.com/en/private-tours/3-day-kakheti-wine-and-food-tour-from-tbilisi/"
+      }
+    },
+    "enBreadcrumb": {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.hikasustravel.com/en/" },
+        { "@type": "ListItem", "position": 2, "name": "Private Tours", "item": "https://www.hikasustravel.com/en/private-tours/" },
+        { "@type": "ListItem", "position": 3, "name": "3-Day Kakheti Wine and Food Tour from Tbilisi", "item": "https://www.hikasustravel.com/en/private-tours/3-day-kakheti-wine-and-food-tour-from-tbilisi/" }
+      ]
+    },
     "highlights": [
       "A curated journey through Kakheti, Georgia's renowned wine region and the cradle of wine",
       "Up to 6 wine tastings at family-run wineries and established wine estates",

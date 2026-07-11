@@ -60,34 +60,42 @@ export function AccordionItem({ title, children, isOpen, onToggle, index, itiner
   const panelId = `acc-panel-${index}`
   const { dayNum, description } = itinerary ? parseDayTitle(title) : { dayNum: null, description: title }
 
+  const trigger = (
+    <button
+      className="acc__trigger"
+      onClick={onToggle}
+      aria-expanded={isOpen}
+      aria-controls={panelId}
+      id={headingId}
+      type="button"
+    >
+      {itinerary && dayNum && (
+        <span className="acc__day-badge">{dayNum}</span>
+      )}
+      <span className="acc__trigger-content">
+        <span className="acc__trigger-text">{itinerary ? description : title}</span>
+        {itinerary && tags && tags.length > 0 && (
+          <span className="acc__tags">
+            {tags.map((tag, i) => (
+              <span key={i} className="acc__tag">
+                {tag.icon === 'clock' ? <ClockIcon /> : <CarIcon />}
+                {tag.label}
+              </span>
+            ))}
+          </span>
+        )}
+      </span>
+      <ChevronIcon open={isOpen} />
+    </button>
+  )
+
   return (
     <div className={`acc__item${isOpen ? ' acc__item--open' : ''}${itinerary ? ' acc__item--itinerary' : ''}`}>
-      <button
-        className="acc__trigger"
-        onClick={onToggle}
-        aria-expanded={isOpen}
-        aria-controls={panelId}
-        id={headingId}
-        type="button"
-      >
-        {itinerary && dayNum && (
-          <span className="acc__day-badge">{dayNum}</span>
-        )}
-        <span className="acc__trigger-content">
-          <span className="acc__trigger-text">{itinerary ? description : title}</span>
-          {itinerary && tags && tags.length > 0 && (
-            <span className="acc__tags">
-              {tags.map((tag, i) => (
-                <span key={i} className="acc__tag">
-                  {tag.icon === 'clock' ? <ClockIcon /> : <CarIcon />}
-                  {tag.label}
-                </span>
-              ))}
-            </span>
-          )}
-        </span>
-        <ChevronIcon open={isOpen} />
-      </button>
+      {/* Itinerary day headers are semantic <h3> wrapping the disclosure button
+          (H2 "Itinerary" -> H3 day), so the heading outline parses cleanly for
+          search/AI. The <h3> is style-reset (.acc__heading) to keep the design
+          identical. FAQ accordions keep the plain button. */}
+      {itinerary ? <h3 className="acc__heading">{trigger}</h3> : trigger}
       <div
         className={`acc__panel${isOpen ? ' acc__panel--open' : ''}`}
         id={panelId}

@@ -1559,6 +1559,9 @@ tour-info h2 a,
 .acc__heading {
   margin: 0;
   padding: 0;
+  /* The <h3> only carries heading semantics for itinerary day titles; the button
+     inside keeps its own styling, so neutralise the default h3 font/box. */
+  font: inherit;
 }
 .acc__toggle-all {
   display: inline-flex;

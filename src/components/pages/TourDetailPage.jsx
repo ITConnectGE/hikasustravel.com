@@ -89,22 +89,35 @@ export default function TourDetailPage() {
 
     // When the tour provides an FAQ, expose it as FAQPage alongside the trip.
     const faqList = tt?.faq || tour.faq
-    const finalJsonLd = faqList?.length > 0
+    const faqNode = faqList?.length > 0
       ? {
-          '@context': 'https://schema.org',
-          '@graph': [
-            jsonLd,
-            {
-              '@type': 'FAQPage',
-              mainEntity: faqList.map((f) => ({
-                '@type': 'Question',
-                name: f.title,
-                acceptedAnswer: { '@type': 'Answer', text: f.content },
-              })),
-            },
-          ],
+          '@type': 'FAQPage',
+          mainEntity: faqList.map((f) => ({
+            '@type': 'Question',
+            name: f.title,
+            acceptedAnswer: { '@type': 'Answer', text: f.content },
+          })),
         }
-      : jsonLd
+      : null
+
+    // English uses the finalized, hand-authored structured data shipped with the
+    // content package (exact TouristTrip + AggregateOffer + BreadcrumbList). Every
+    // other locale and every other tour keeps the generic `jsonLd` node above,
+    // untouched.
+    let finalJsonLd
+    if (lang === 'en' && tour.enTouristTrip) {
+      const stripCtx = (node) => { const rest = { ...node }; delete rest['@context']; return rest }
+      const nodes = [
+        tour.enTouristTrip,
+        ...(tour.enBreadcrumb ? [tour.enBreadcrumb] : []),
+        ...(faqNode ? [faqNode] : []),
+      ]
+      finalJsonLd = { '@context': 'https://schema.org', '@graph': nodes.map(stripCtx) }
+    } else {
+      finalJsonLd = faqNode
+        ? { '@context': 'https://schema.org', '@graph': [jsonLd, faqNode] }
+        : jsonLd
+    }
 
     return { title, description, keywords, path: `${prefix}/${slug}`, image: tour.heroImage, jsonLd: finalJsonLd }
   }, [tour, tt, slug, lang])
