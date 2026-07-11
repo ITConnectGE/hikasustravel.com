@@ -546,7 +546,7 @@ export const tours = [
         "description": "Illustrated route of the 3-day journey from Tbilisi through Kakheti via Telavi, Gremi, Sighnaghi and Bodbe"
       },
       {
-        "src": "/images/files/gombori-pass.jpg",
+        "src": "/images/files/gombori-pass-kakheti-georgia.jpg",
         "caption": "The Gombori Pass",
         "description": "Scenic mountain road from Tbilisi into Kakheti, crossed on the first day"
       },
