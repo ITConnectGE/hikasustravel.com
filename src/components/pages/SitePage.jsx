@@ -90,9 +90,15 @@ export default function SitePage() {
   )
   // Localized alt text for the hero image (from the image SEO package). The hero
   // renders as a CSS background, so this carries the alt into the ImageObject
-  // caption and og:image:alt / twitter:image:alt instead of an <img alt>.
+  // caption and og:image:alt / twitter:image:alt instead of an <img alt>. Two
+  // sources: the legacy `imageMeta` hero mechanism (e.g. Batonis Tsikhe), or a
+  // gallery item flagged `hero` (e.g. Tsinandali) whose alt is already resolved
+  // to the current locale in the `gallery` memo above.
   const heroImageMeta = published ? site.imageMeta : null
-  const heroAlt = heroImageMeta ? (heroImageMeta.alt[lang] || heroImageMeta.alt.en) : null
+  const heroGalleryImg = useMemo(() => gallery.find((img) => img.hero) || null, [gallery])
+  const heroAlt = heroImageMeta
+    ? (heroImageMeta.alt[lang] || heroImageMeta.alt.en)
+    : (heroGalleryImg ? heroGalleryImg.alt : null)
 
   const parent = published
     ? (site.parentType === 'city' ? getCity(site.parent)

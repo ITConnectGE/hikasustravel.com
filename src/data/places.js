@@ -855,20 +855,28 @@ export const sites = [
     slug: 'tsinandali-estate', name: 'Tsinandali Estate',
     parentType: 'city', parent: 'telavi', published: true,
     seoKey: 'tsinandaliEstate', contentKey: 'tsinandaliEstate',
-    image: '/images/files/georgia-home.jpg',
-    // Body/gallery images (our own photos), placed BETWEEN body sections as real
-    // responsive <picture>/<img> by SitePage — NOT the hero, NOT og:image (hero
-    // stays georgia-home.jpg). Same mechanism as the Telavi CityPage gallery, but
-    // these originals top out at 1536px, so each base ships -{768,1200,1536}w
-    // .{avif,webp} in /images/files/ (fallback <img> = -1200w.webp, 1200x800; the
-    // ImageObject contentUrl uses the largest -1536w.webp). `afterChunk` = insert
-    // the figure after the Nth body chunk (chunk 0 = intro, then one per <h2>).
-    // Per-locale `alt`/`caption` maps live here (not pages.json) so every locale
-    // shows its own strings; `name`/`description`/`locationName`/`geo`/`locality`/
-    // `region`/`country` feed the per-image ImageObject JSON-LD (brand credit).
+    // Cover/hero = our own Chavchavadze palace photo (the gallery item flagged
+    // `hero: true`), served as the CSS-background hero via HeroSection image-set
+    // (webp `image` + avif `imageAvif`). og:image/twitter:image auto-derive from
+    // `image` (no separate ogImage) — same convention as the Telavi CityPage hero.
+    image: '/images/files/tsinandali-estate-chavchavadze-house-kakheti-georgia-1536w.webp',
+    imageAvif: '/images/files/tsinandali-estate-chavchavadze-house-kakheti-georgia-1536w.avif',
+    // Photo set (our own). SitePage uses the one flagged `hero: true` as the
+    // cover/background hero (NOT rendered inline); the rest (each with an
+    // `afterChunk` index) render as real responsive <picture>/<img> BETWEEN body
+    // sections — never a bottom block. Same mechanism as the Telavi CityPage
+    // gallery, but these originals top out at 1536px, so each base ships
+    // -{768,1200,1536}w.{avif,webp} in /images/files/ (body-image fallback <img>
+    // = -1200w.webp, 1200x800; the ImageObject contentUrl uses the largest
+    // -1536w.webp). `afterChunk` = insert the figure after the Nth body chunk
+    // (chunk 0 = intro, then one per <h2>). Per-locale `alt`/`caption` maps live
+    // here (not pages.json) so every locale shows its own strings;
+    // `name`/`description`/`locationName`/`geo`/`locality`/`region`/`country`
+    // feed the per-image ImageObject JSON-LD (brand credit; the hero item gets
+    // representativeOfPage:true).
     gallery: [
       {
-        base: 'tsinandali-estate-chavchavadze-house-kakheti-georgia', width: 1200, height: 800, afterChunk: 1,
+        base: 'tsinandali-estate-chavchavadze-house-kakheti-georgia', width: 1200, height: 800, hero: true,
         name: 'Chavchavadze palace and garden, Tsinandali Estate, Kakheti, Georgia',
         description: "The Italianate palace of Prince Alexander Chavchavadze at Tsinandali Estate, overlooking Georgia's first European-style landscape garden (laid out in the 1830s), Kakheti.",
         locationName: 'Tsinandali Estate', geo: { lat: 41.8945, lng: 45.5705 },
