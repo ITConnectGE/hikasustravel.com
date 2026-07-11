@@ -5,6 +5,7 @@ import FadeUp from '../shared/FadeUp'
 import Accordion from '../shared/Accordion'
 import Breadcrumbs from '../shared/Breadcrumbs'
 import LocaleLink from '../../i18n/LocaleLink'
+import EntityToursTag from '../shared/EntityToursTag'
 import { I18nContext } from '../../i18n/I18nContext'
 import useT from '../../i18n/useT'
 import useLang from '../../i18n/useLang'
@@ -127,6 +128,7 @@ export default function RegionPage() {
       </div>
       <HeroSection image={heroImage} title={(page && page.heroTitle) || region.name} />
       <section className="page-items about-georgia">
+        <EntityToursTag type="region" slug={region.slug} name={region.name} />
         <FadeUp>
           <div ref={contentRef} dangerouslySetInnerHTML={{ __html: linkedContent }} />
         </FadeUp>

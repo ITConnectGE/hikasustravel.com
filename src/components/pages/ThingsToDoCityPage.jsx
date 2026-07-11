@@ -4,6 +4,7 @@ import HeroSection from '../shared/HeroSection'
 import FadeUp from '../shared/FadeUp'
 import Accordion from '../shared/Accordion'
 import Breadcrumbs from '../shared/Breadcrumbs'
+import EntityToursTag from '../shared/EntityToursTag'
 import { I18nContext } from '../../i18n/I18nContext'
 import useT from '../../i18n/useT'
 import useLang from '../../i18n/useLang'
@@ -149,6 +150,7 @@ export default function ThingsToDoCityPage() {
       </div>
       <HeroSection image={heroImage} title={page.heroTitle} />
       <section className="page-items about-georgia">
+        <EntityToursTag type={isCity ? 'city' : 'region'} slug={citySlug} name={place.name} />
         <FadeUp>
           <div ref={contentRef} dangerouslySetInnerHTML={{ __html: linkedContent }} />
         </FadeUp>

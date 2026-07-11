@@ -236,5 +236,9 @@
   "tour.catWineFood": "Wino i kuchnia",
   "tour.catAdventureHiking": "Przygoda i wędrówki",
   "tour.catNatureMountain": "Natura i góry",
-  "tour.catWesternBlackSea": "Wycieczki nad Morze Czarne"
+  "tour.catWesternBlackSea": "Wycieczki nad Morze Czarne",
+  "tours.entityToursCta": "Wycieczki z {name}",
+  "tours.listIntro": "Odkryj wycieczki, które obejmują {name} w programie. Te prywatne i grupowe wycieczki odwiedzają {name} jako część szerszej trasy po Gruzji.",
+  "tours.listMetaTitle": "Wycieczki z {name} | Hikasus Travel",
+  "tours.listMetaDescription": "Znajdź prywatne i grupowe wycieczki, które obejmują {name} w Gruzji, z trasami zaplanowanymi przez Hikasus Travel."
 }

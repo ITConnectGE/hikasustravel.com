@@ -236,5 +236,9 @@
   "tour.catWineFood": "Wein & Kulinarik",
   "tour.catAdventureHiking": "Abenteuer & Wandern",
   "tour.catNatureMountain": "Natur & Berge",
-  "tour.catWesternBlackSea": "Schwarzmeer-Touren"
+  "tour.catWesternBlackSea": "Schwarzmeer-Touren",
+  "tours.entityToursCta": "{name} Touren",
+  "tours.listIntro": "Entdecken Sie Touren, die {name} in der Reiseroute enthalten. Diese privaten Touren und Gruppenreisen besuchen {name} als Teil einer größeren Rundreise durch Georgien.",
+  "tours.listMetaTitle": "{name} Touren | Hikasus Travel",
+  "tours.listMetaDescription": "Finden Sie private Touren und Gruppenreisen, die {name} in Georgien besuchen – mit Routen von Hikasus Travel."
 }

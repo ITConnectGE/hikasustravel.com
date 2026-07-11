@@ -236,5 +236,9 @@
   "tour.catWineFood": "Víno a gastronomie",
   "tour.catAdventureHiking": "Dobrodružství a turistika",
   "tour.catNatureMountain": "Příroda a hory",
-  "tour.catWesternBlackSea": "Zájezdy k Černému moři"
+  "tour.catWesternBlackSea": "Zájezdy k Černému moři",
+  "tours.entityToursCta": "Zájezdy s {name}",
+  "tours.listIntro": "Objevte zájezdy, které zahrnují {name} v itineráři. Tyto soukromé a skupinové zájezdy navštěvují {name} jako součást širší trasy po Gruzii.",
+  "tours.listMetaTitle": "Zájezdy s {name} | Hikasus Travel",
+  "tours.listMetaDescription": "Najděte soukromé a skupinové zájezdy, které zahrnují {name} v Gruzii, s trasami od Hikasus Travel."
 }

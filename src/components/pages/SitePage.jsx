@@ -4,6 +4,7 @@ import HeroSection from '../shared/HeroSection'
 import FadeUp from '../shared/FadeUp'
 import Accordion from '../shared/Accordion'
 import Breadcrumbs from '../shared/Breadcrumbs'
+import EntityToursTag from '../shared/EntityToursTag'
 import { I18nContext } from '../../i18n/I18nContext'
 import useT from '../../i18n/useT'
 import useLang from '../../i18n/useLang'
@@ -292,6 +293,7 @@ export default function SitePage() {
       </div>
       <HeroSection image={heroImage} imageAvif={site.imageAvif} title={page.heroTitle || site.name} />
       <section className="page-items about-georgia">
+        <EntityToursTag type="site" slug={site.slug} name={site.name} />
         <div ref={contentRef}>
           {bodyChunks.map((chunk, i) => {
             const img = bodyImages.find((im) => im.afterChunk === i)

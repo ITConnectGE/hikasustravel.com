@@ -5,6 +5,7 @@ import FadeUp from '../shared/FadeUp'
 import Accordion from '../shared/Accordion'
 import Breadcrumbs from '../shared/Breadcrumbs'
 import LocaleLink from '../../i18n/LocaleLink'
+import EntityToursTag from '../shared/EntityToursTag'
 import { I18nContext } from '../../i18n/I18nContext'
 import useT from '../../i18n/useT'
 import useLang from '../../i18n/useLang'
@@ -205,6 +206,7 @@ export default function CityPage() {
       </div>
       <HeroSection image={heroImage} imageAvif={city.imageAvif} title={city.name} />
       <section className="page-items about-georgia">
+        <EntityToursTag type="city" slug={city.slug} name={city.name} />
         <div ref={contentRef}>
           {bodyChunks.map((chunk, i) => {
             const img = bodyImages.find((im) => im.afterChunk === i)

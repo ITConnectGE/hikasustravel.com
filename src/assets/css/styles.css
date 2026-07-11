@@ -5605,6 +5605,29 @@ select option:checked {
   text-align: center;
 }
 
+/* "<Entity> Tours" navigation tag shown near the top of destination pages. */
+.entity-tours-tag-row {
+  margin: 0 0 calc(var(--indent) / 1.5);
+}
+.entity-tours-tag {
+  font-size: calc(var(--font-size) * 0.85);
+}
+/* Visible keyboard-focus ring (accessibility) — scoped to the tag so the global
+   .button style is left unchanged. */
+.entity-tours-tag:focus-visible {
+  outline: 3px solid var(--color-h2);
+  outline-offset: 3px;
+}
+
+/* Generated <Entity> Tours listing page header (H1 + intro above the grid). */
+.entity-tours-header {
+  text-align: center;
+}
+.entity-tours-intro {
+  max-width: 760px;
+  margin: calc(var(--indent) / 2) auto 0;
+}
+
 .blog-article__tags {
   display: flex;
   flex-wrap: wrap;

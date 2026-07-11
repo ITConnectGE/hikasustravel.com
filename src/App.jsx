@@ -24,6 +24,7 @@ import { tours } from './data/tours'
 import PrivateToursPage from './components/pages/PrivateToursPage'
 import GroupToursPage from './components/pages/GroupToursPage'
 import TourDetailPage from './components/pages/TourDetailPage'
+import EntityToursPage from './components/pages/EntityToursPage'
 import FaqPage from './components/pages/FaqPage'
 import ContactPage from './components/pages/ContactPage'
 import ShuttleServicePage from './components/pages/ShuttleServicePage'
@@ -90,6 +91,8 @@ export default function App() {
           <Route path="group-tours" element={<GroupToursPage />} />
           <Route path="private-tours/:slug" element={<TourDetailPage />} />
           <Route path="group-tours/:slug" element={<TourDetailPage />} />
+          {/* Destination/attraction tour listings: /:lang/tours/<entity>-tours */}
+          <Route path="tours/:slug" element={<EntityToursPage />} />
           {/* Renamed tour slugs: the old URL 301-redirects to the new canonical
               slug (mirrors the static stubs in scripts/prerender.js). The static
               path outranks the dynamic :slug route above. */}

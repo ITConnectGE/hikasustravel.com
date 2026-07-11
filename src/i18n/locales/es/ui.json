@@ -236,5 +236,9 @@
   "tour.catWineFood": "Vino y gastronomía",
   "tour.catAdventureHiking": "Aventura y senderismo",
   "tour.catNatureMountain": "Naturaleza y montañas",
-  "tour.catWesternBlackSea": "Tours del mar Negro"
+  "tour.catWesternBlackSea": "Tours del mar Negro",
+  "tours.entityToursCta": "Tours con {name}",
+  "tours.listIntro": "Descubre los tours que incluyen {name} en el itinerario. Estos tours privados y en grupo visitan {name} como parte de una ruta más amplia por Georgia.",
+  "tours.listMetaTitle": "Tours con {name} | Hikasus Travel",
+  "tours.listMetaDescription": "Encuentra tours privados y en grupo que incluyen {name} en Georgia, con rutas planificadas por Hikasus Travel."
 }

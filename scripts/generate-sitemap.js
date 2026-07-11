@@ -19,6 +19,11 @@ const { publishedBorderPages } = await import(
   pathToFileURL(join(__dirname, '../src/data/borders.js')).href
 )
 
+// Generated "<Entity> Tours" listing pages (destination/attraction -> tours).
+const { entityTourPages } = await import(
+  pathToFileURL(join(__dirname, '../src/data/entityTours.js')).href
+)
+
 // Parse tours data from the source file
 const toursFile = readFileSync(join(__dirname, '../src/data/tours.js'), 'utf-8')
 const slugTypeRegex = /"slug":\s*"([^"]+)"[\s\S]*?"type":\s*"([^"]+)"/g
@@ -81,6 +86,10 @@ for (const dest of publishedDestinationPages()) {
 }
 
 // Published border-crossing pages (overview + individual crossings).
+for (const ep of entityTourPages) {
+  allPaths.push({ path: ep.path, changefreq: 'monthly', priority: '0.6' })
+}
+
 for (const bp of publishedBorderPages()) {
   allPaths.push({ path: bp.path, changefreq: 'monthly', priority: '0.7' })
 }

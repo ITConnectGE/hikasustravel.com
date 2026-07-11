@@ -32,6 +32,11 @@ const { publishedDestinationPages, legacyRedirects } = await import(
 const { publishedBorderPages } = await import(
   pathToFileURL(join(__dirname, '../src/data/borders.js')).href
 )
+
+// Generated "<Entity> Tours" listing pages (destination/attraction -> tours).
+const { entityTourPages } = await import(
+  pathToFileURL(join(__dirname, '../src/data/entityTours.js')).href
+)
 const DIST = join(__dirname, '..', 'dist')
 const SITE_URL = 'https://www.hikasustravel.com'
 const LANGS = ['en', 'es', 'fr', 'de', 'pl', 'cs', 'nl']
@@ -163,6 +168,16 @@ function loadBlogTitle(lang, key) {
     return null
   }
 }
+
+// Full ui.json for a locale (used for the entity-tours listing meta templates).
+function loadUi(lang) {
+  try {
+    return JSON.parse(readFileSync(join(__dirname, `../src/i18n/locales/${lang}/ui.json`), 'utf-8'))
+  } catch {
+    return {}
+  }
+}
+const interp = (tpl, name) => (tpl || '').replace(/\{name\}/g, name)
 
 // ---------------------------------------------------------------------------
 // 2. Define all routes
@@ -430,6 +445,22 @@ for (const lang of LANGS) {
       const oldFilePath = join(DIST, lang, prefix, former, 'index.html')
       writeRedirectStub(oldFilePath, canonical)
     }
+  }
+
+  // --- Destination/attraction "<Entity> Tours" listing pages ---
+  const ui = loadUi(lang)
+  for (const ep of entityTourPages) {
+    const title = interp(ui['tours.listMetaTitle'], ep.name)
+    const description = interp(ui['tours.listMetaDescription'], ep.name)
+    const canonical = `${SITE_URL}/${lang}/${ep.path}`
+    const filePath = join(DIST, lang, ep.path, 'index.html')
+    writeHtml(filePath, lang, {
+      title,
+      description,
+      canonical,
+      image: '/images/files/georgia-tour-01.jpg',
+      ogLocale,
+    })
   }
 
   // --- Blog article pages ---
