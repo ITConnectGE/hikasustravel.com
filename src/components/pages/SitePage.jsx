@@ -218,12 +218,15 @@ export default function SitePage() {
         // pointing at the real largest file; caption localized per locale, brand
         // credit. These are body images (not the hero), so representativeOfPage
         // follows the item's `hero` flag (false here).
-        ...gallery.map((img) => ({
+        ...gallery.map((img) => {
+          // Largest shipped variant for this image (per-image override or default).
+          const maxW = img.widths ? img.widths[img.widths.length - 1] : GALLERY_MAX_WIDTH
+          return {
           '@type': 'ImageObject',
-          contentUrl: `${SITE_URL}/images/files/${img.base}-${GALLERY_MAX_WIDTH}w.webp`,
-          url: `${SITE_URL}/images/files/${img.base}-${GALLERY_MAX_WIDTH}w.webp`,
-          width: GALLERY_MAX_WIDTH,
-          height: Math.round((GALLERY_MAX_WIDTH * img.height) / img.width),
+          contentUrl: `${SITE_URL}/images/files/${img.base}-${maxW}w.webp`,
+          url: `${SITE_URL}/images/files/${img.base}-${maxW}w.webp`,
+          width: maxW,
+          height: Math.round((maxW * img.height) / img.width),
           representativeOfPage: !!img.hero,
           name: img.name,
           caption: img.caption || img.description,
@@ -242,7 +245,8 @@ export default function SitePage() {
             },
             geo: { '@type': 'GeoCoordinates', latitude: img.geo.lat, longitude: img.geo.lng },
           },
-        })),
+          }
+        }),
         {
           '@type': 'BreadcrumbList',
           // Every ListItem must carry an `item` URL — Google flags a non-final
@@ -297,6 +301,12 @@ export default function SitePage() {
         <div ref={contentRef}>
           {bodyChunks.map((chunk, i) => {
             const img = bodyImages.find((im) => im.afterChunk === i)
+            // Per-image responsive widths. Most sets ship the default 1536-topped
+            // variants, but some originals top out lower (e.g. Ananuri: 1448/1445
+            // landscape, 1086 portrait), so a gallery item may override `widths`
+            // and the fallback <img> width. Defaults keep Telavi/Tsinandali intact.
+            const widths = img ? (img.widths || GALLERY_WIDTHS) : null
+            const fallbackW = img ? (img.fallbackWidth || 1200) : null
             return (
               <Fragment key={`chunk-${i}`}>
                 <FadeUp>
@@ -310,16 +320,16 @@ export default function SitePage() {
                       <picture>
                         <source
                           type="image/avif"
-                          srcSet={GALLERY_WIDTHS.map((w) => `${asset(`/images/files/${img.base}-${w}w.avif`)} ${w}w`).join(', ')}
+                          srcSet={widths.map((w) => `${asset(`/images/files/${img.base}-${w}w.avif`)} ${w}w`).join(', ')}
                           sizes="(max-width: 768px) 100vw, 760px"
                         />
                         <source
                           type="image/webp"
-                          srcSet={GALLERY_WIDTHS.map((w) => `${asset(`/images/files/${img.base}-${w}w.webp`)} ${w}w`).join(', ')}
+                          srcSet={widths.map((w) => `${asset(`/images/files/${img.base}-${w}w.webp`)} ${w}w`).join(', ')}
                           sizes="(max-width: 768px) 100vw, 760px"
                         />
                         <img
-                          src={asset(`/images/files/${img.base}-1200w.webp`)}
+                          src={asset(`/images/files/${img.base}-${fallbackW}w.webp`)}
                           width={img.width}
                           height={img.height}
                           alt={img.alt}
