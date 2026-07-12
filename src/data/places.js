@@ -1556,28 +1556,21 @@ export const sites = [
     slug: 'ananuri-fortress', name: 'Ananuri Fortress',
     parentType: 'region', parent: 'mtskheta-mtianeti', published: true,
     seoKey: 'ananuriFortress', contentKey: 'ananuriFortress',
-    // Cover/hero = our own classic-view fortress-complex photo (replaces the old
-    // "Ananuri Fortress and Zhinvali Reservoir.jpg"). Rendered as the CSS-background
-    // hero via HeroSection image-set (webp `image` + avif `imageAvif`);
-    // og:image/twitter auto-derive from `image`. Native max width is 1448 (no
-    // upscale). Same hero convention as the Telavi CityPage / Tsinandali SitePage.
-    image: '/images/files/ananuri-fortress-complex-georgia-1448w.webp',
-    imageAvif: '/images/files/ananuri-fortress-complex-georgia-1448w.avif',
-    // Body/gallery photos (our own). Each renders as a real lazy responsive
-    // <picture>/<img> BETWEEN body sections (via its `afterChunk` index) — same
-    // Option-A mechanism as the Telavi CityPage / Tsinandali SitePage gallery.
-    // These originals top out below the default 1536px, so each item overrides
-    // `widths` (and the portrait its fallback `<img>` width) — Telavi/Tsinandali
-    // defaults are untouched. Region is Mtskheta-Mtianeti (NOT Kakheti). Per-locale
-    // alt/caption maps drive every locale's own strings; name/description/geo/
-    // locality feed the per-image ImageObject JSON-LD (brand credit Hikasus
-    // Travel). The classic-view complex photo is flagged `hero: true` → it is the
-    // cover (NOT rendered inline) and its ImageObject is representativeOfPage; the
-    // rest stay inline body images (representativeOfPage false).
+    image: '/images/files/Ananuri%20Fortress%20and%20Zhinvali%20Reservoir.jpg',
+    // Body/gallery photos (our own). Cover/hero above is unchanged. Each renders
+    // as a real lazy responsive <picture>/<img> BETWEEN body sections (via its
+    // `afterChunk` index) — same Option-A mechanism as the Telavi CityPage /
+    // Tsinandali SitePage gallery. These originals top out below the default
+    // 1536px, so each item overrides `widths` (and the portrait its fallback
+    // `<img>` width) — Telavi/Tsinandali defaults are untouched. Region is
+    // Mtskheta-Mtianeti (NOT Kakheti). Per-locale alt/caption maps drive every
+    // locale's own strings; name/description/geo/locality feed the per-image
+    // ImageObject JSON-LD (brand credit Hikasus Travel; body images, so
+    // representativeOfPage stays false — the hero is untouched).
     gallery: [
       {
         base: 'ananuri-fortress-complex-georgia', width: 1200, height: 900,
-        widths: [768, 1200, 1448], hero: true,
+        widths: [768, 1200, 1448], afterChunk: 1,
         name: 'Ananuri fortress complex above the Zhinvali Reservoir, Georgia',
         description: 'The Ananuri fortress complex — crenellated towers and the 1689 Church of the Assumption — above the Zhinvali Reservoir on the Georgian Military Road, former seat of the dukes of Aragvi, Mtskheta-Mtianeti, Georgia.',
         locationName: 'Ananuri Fortress', geo: { lat: 42.1643, lng: 44.7042 },
