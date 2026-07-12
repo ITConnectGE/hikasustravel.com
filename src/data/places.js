@@ -1765,7 +1765,63 @@ export const sites = [
     slug: 'prometheus-cave', name: 'Prometheus Cave',
     parentType: 'region', parent: 'imereti', published: true,
     seoKey: 'prometheusCave', contentKey: 'prometheusCave',
-    image: '/images/files/georgia-home.jpg',
+    // Cover/hero = our own Prometheus Cave photo (replaces the generic
+    // georgia-home.jpg placeholder). Rendered as the CSS-background hero via
+    // HeroSection image-set (webp `image` + avif `imageAvif`); og:image/twitter
+    // auto-derive from `image`. Native max width is 1536 (no upscale).
+    image: '/images/files/prometheus-cave-imereti-georgia-1536w.webp',
+    imageAvif: '/images/files/prometheus-cave-imereti-georgia-1536w.avif',
+    // Contextual body photos (our own). The 5 non-hero images render as real
+    // inline <figure> blocks embedded in the per-locale body HTML (pages.json),
+    // NOT via the data-driven gallery. `imageObjects` feeds ONE ImageObject per
+    // photo into the SitePage JSON-LD @graph (brand credit Hikasus Travel; the
+    // cover is flagged hero → representativeOfPage). contentUrl uses the largest
+    // shipped variant (`width`w). Region is Imereti, locality Kumistavi. Verbatim
+    // from the image SEO package (REPLACE-BRAND → Hikasus Travel, /images/files path).
+    imageObjects: [
+      {
+        base: 'prometheus-cave-imereti-georgia', width: 1536, height: 1024, hero: true,
+        name: 'Prometheus Cave illuminated chamber, Kumistavi, Imereti, Georgia',
+        caption: 'A colourfully lit chamber of Prometheus Cave with a walkway among stalactites',
+        description: "A colourfully illuminated chamber of Prometheus (Kumistavi) Cave near Tskaltubo, one of Georgia's largest karst caves, with a walkway among stalactites and stalagmites, Imereti, Georgia.",
+        locationName: 'Prometheus Cave (Kumistavi)', locality: 'Kumistavi', region: 'Imereti', geo: { lat: 42.3767, lng: 42.6000 },
+      },
+      {
+        base: 'prometheus-cave-illuminated-chamber-imereti-georgia', width: 1536, height: 1024,
+        name: 'Illuminated stalactites in Prometheus Cave, Kumistavi, Imereti, Georgia',
+        caption: 'Stalactites and stalagmites under coloured lighting in Prometheus Cave',
+        description: 'Stalactites and stalagmites under coloured LED lighting in Prometheus (Kumistavi) Cave, Imereti, Georgia.',
+        locationName: 'Prometheus Cave (Kumistavi)', locality: 'Kumistavi', region: 'Imereti', geo: { lat: 42.3767, lng: 42.6000 },
+      },
+      {
+        base: 'prometheus-cave-colored-lighting-imereti-georgia', width: 1536, height: 1024,
+        name: 'Walkway through a lit hall of Prometheus Cave, Kumistavi, Imereti, Georgia',
+        caption: 'A walkway winding through a colour-lit hall of Prometheus Cave',
+        description: 'A visitor walkway winding through a colourfully lit hall of Prometheus (Kumistavi) Cave, Imereti, Georgia.',
+        locationName: 'Prometheus Cave (Kumistavi)', locality: 'Kumistavi', region: 'Imereti', geo: { lat: 42.3767, lng: 42.6000 },
+      },
+      {
+        base: 'prometheus-cave-natural-walkway-imereti-georgia', width: 1448, height: 1086,
+        name: 'Natural formations and boardwalk in Prometheus Cave, Kumistavi, Imereti, Georgia',
+        caption: 'Natural rock formations and a boardwalk in a hall of Prometheus Cave',
+        description: 'Natural stalactites, flowstone and a boardwalk in a hall of Prometheus (Kumistavi) Cave, Imereti, Georgia.',
+        locationName: 'Prometheus Cave (Kumistavi)', locality: 'Kumistavi', region: 'Imereti', geo: { lat: 42.3767, lng: 42.6000 },
+      },
+      {
+        base: 'prometheus-cave-stalactite-column-imereti-georgia', width: 1086, height: 1448,
+        name: 'Flowstone column in Prometheus Cave, Kumistavi, Imereti, Georgia',
+        caption: 'A towering flowstone column with visitors in Prometheus Cave',
+        description: 'A towering flowstone column, one of the largest formations along the walking route through Prometheus (Kumistavi) Cave, Imereti, Georgia.',
+        locationName: 'Prometheus Cave (Kumistavi)', locality: 'Kumistavi', region: 'Imereti', geo: { lat: 42.3767, lng: 42.6000 },
+      },
+      {
+        base: 'prometheus-cave-cavern-bridge-imereti-georgia', width: 1086, height: 1448,
+        name: 'Walkway bridge in a Prometheus Cave hall, Kumistavi, Imereti, Georgia',
+        caption: 'A walkway bridge crossing a large illuminated cavern in Prometheus Cave',
+        description: "A metal walkway bridging a broad, illuminated hall of Prometheus (Kumistavi) Cave, Georgia's largest show cave, Imereti.",
+        locationName: 'Prometheus Cave (Kumistavi)', locality: 'Kumistavi', region: 'Imereti', geo: { lat: 42.3767, lng: 42.6000 },
+      },
+    ],
   },
   {
     slug: 'gelati-monastery', name: 'Gelati Monastery',

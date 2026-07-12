@@ -247,6 +247,36 @@ export default function SitePage() {
           },
           }
         }),
+        // Cover + contextual body photos rendered as inline <figure> blocks in the
+        // per-locale body HTML (not via the data-driven gallery above). Each gets
+        // one ImageObject here — contentUrl at the largest shipped variant
+        // (img.width), brand credit, its own contentLocation, and the cover flagged
+        // hero → representativeOfPage. Mirrors the CityPage imageObjects convention.
+        ...(site.imageObjects || []).map((img) => ({
+          '@type': 'ImageObject',
+          contentUrl: `${SITE_URL}/images/files/${img.base}-${img.width}w.webp`,
+          url: `${SITE_URL}/images/files/${img.base}-${img.width}w.webp`,
+          width: img.width,
+          height: img.height,
+          representativeOfPage: !!img.hero,
+          name: img.name,
+          caption: img.caption,
+          description: img.description,
+          creator: { '@type': 'Organization', name: BRAND },
+          creditText: BRAND,
+          copyrightNotice: `© ${BRAND}`,
+          contentLocation: {
+            '@type': 'Place',
+            name: img.locationName,
+            address: {
+              '@type': 'PostalAddress',
+              addressLocality: img.locality,
+              addressRegion: img.region,
+              addressCountry: 'GE',
+            },
+            geo: { '@type': 'GeoCoordinates', latitude: img.geo.lat, longitude: img.geo.lng },
+          },
+        })),
         {
           '@type': 'BreadcrumbList',
           // Every ListItem must carry an `item` URL — Google flags a non-final
