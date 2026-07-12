@@ -2036,7 +2036,54 @@ export const sites = [
     slug: 'katskhi-pillar', name: 'Katskhi Pillar',
     parentType: 'city', parent: 'chiatura', formerParent: 'imereti', published: true,
     seoKey: 'katskhiPillar', contentKey: 'katskhiPillar',
-    image: '/images/files/georgia-home.jpg',
+    // HERO = the landscape summit-church photo (own). The portrait church shot
+    // (1086x1448) would crop to a mid-pillar band in the wide CSS-background hero
+    // (summit church + base cut on desktop), so it goes inline instead; this
+    // 1536x1024 landscape fills the hero with minimal trim. image-set() upgrades
+    // AVIF-capable browsers to the .avif.
+    image: '/images/files/katskhi-pillar-summit-church-imereti-georgia-1536w.webp',
+    imageAvif: '/images/files/katskhi-pillar-summit-church-imereti-georgia-1536w.avif',
+    // Dedicated 1.91:1 social-share image (og:image / twitter:image) for the hero.
+    ogImage: { src: '/images/files/katskhi-pillar-summit-church-imereti-georgia-og-1200x630.jpg', width: 1200, height: 630 },
+    // Hero image SEO/AEO metadata. The hero is a CSS background (no <img alt>), so
+    // the localized alt lives here and is emitted as the hero ImageObject caption
+    // (representativeOfPage:true), og:image:alt and twitter:image:alt per locale.
+    imageMeta: {
+      width: 1536, height: 1024,
+      name: 'Church on top of the Katskhi Pillar, Imereti, Georgia',
+      description: "The small church, monks' cells and wine cellar on the flat summit of the Katskhi Pillar, reached only by a long metal ladder, near Chiatura, Imereti, Georgia.",
+      locationName: 'Katskhi Pillar',
+      locality: 'Katskhi', region: 'Imereti', country: 'GE',
+      geo: { lat: 42.2933, lng: 43.2144 },
+      alt: {
+        en: "The church and monks' cells on top of the Katskhi Pillar with the climbing ladder, Imereti, Georgia",
+        de: 'Die Kirche und Mönchszellen auf der Katskhi-Säule mit der Aufstiegsleiter, Imeretien, Georgien',
+        fr: "L'église et les cellules des moines au sommet du pilier de Katskhi avec l'échelle d'accès, Iméréthie, Géorgie",
+        es: 'La iglesia y las celdas de los monjes en lo alto del pilar de Katskhi con la escalera de acceso, Imericia, Georgia',
+        nl: 'De kerk en monnikencellen op de top van de Katskhi-pilaar met de klimladder, Imereti, Georgië',
+        cs: 'Kostel a mnišské cely na vrcholu Katskhijského sloupu s výstupovým žebříkem, Imeretie, Gruzie',
+        pl: 'Kościół i cele mnichów na szczycie filaru Katskhi z drabiną wejściową, Imeretia, Gruzja',
+      },
+    },
+    // Contextual inline body photos (own), rendered as real <figure> blocks in the
+    // per-locale body HTML (NOT the hero, NOT a gallery grid). One ImageObject each
+    // into the @graph. representativeOfPage stays false (only the hero is that).
+    imageObjects: [
+      {
+        base: 'katskhi-pillar-church-imereti-georgia', width: 1086, height: 1448,
+        name: 'Katskhi Pillar with clifftop church, near Chiatura, Imereti, Georgia',
+        caption: 'The Katskhi Pillar, a 40-metre limestone monolith topped by a church, near Chiatura',
+        description: 'The Katskhi Pillar, a natural limestone monolith about 40 metres high near Chiatura, topped by the church of Maximus the Confessor and historically used by stylite monks, Imereti, Georgia.',
+        locationName: 'Katskhi Pillar', locality: 'Katskhi', region: 'Imereti', geo: { lat: 42.2933, lng: 43.2144 },
+      },
+      {
+        base: 'katskhi-pillar-autumn-imereti-georgia', width: 1024, height: 1536,
+        name: 'Katskhi Pillar above autumn forest, Imereti, Georgia',
+        caption: 'The Katskhi Pillar rising above autumn forest, near Chiatura',
+        description: 'The Katskhi Pillar rising above autumn forest near Chiatura, a 40-metre limestone monolith topped by a church, Imereti, Georgia.',
+        locationName: 'Katskhi Pillar', locality: 'Katskhi', region: 'Imereti', geo: { lat: 42.2933, lng: 43.2144 },
+      },
+    ],
   },
   {
     slug: 'abastumani-observatory', name: 'Abastumani Astrophysical Observatory',
