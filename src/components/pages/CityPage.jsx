@@ -163,6 +163,37 @@ export default function CityPage() {
             geo: { '@type': 'GeoCoordinates', latitude: img.geo.lat, longitude: img.geo.lng },
           },
         })),
+        // Contextual body photos rendered as inline <figure> blocks in the
+        // per-locale body HTML (not via the data-driven gallery above). Each
+        // gets one ImageObject here — contentUrl at the largest shipped variant,
+        // brand credit, and its own contentLocation (locality/region/geo) so the
+        // location is correct per image (e.g. Katskhi Pillar vs. Chiatura town),
+        // never the hardcoded Telavi/Kakheti of the gallery block above.
+        ...(city.imageObjects || []).map((img) => ({
+          '@type': 'ImageObject',
+          contentUrl: `${SITE_URL}/images/files/${img.base}-${img.width}w.webp`,
+          url: `${SITE_URL}/images/files/${img.base}-${img.width}w.webp`,
+          width: img.width,
+          height: img.height,
+          representativeOfPage: !!img.hero,
+          name: img.name,
+          caption: img.caption,
+          description: img.description,
+          creator: { '@type': 'Organization', name: BRAND },
+          creditText: BRAND,
+          copyrightNotice: `© ${BRAND}`,
+          contentLocation: {
+            '@type': 'Place',
+            name: img.locationName,
+            address: {
+              '@type': 'PostalAddress',
+              addressLocality: img.locality,
+              addressRegion: img.region,
+              addressCountry: 'GE',
+            },
+            geo: { '@type': 'GeoCoordinates', latitude: img.geo.lat, longitude: img.geo.lng },
+          },
+        })),
         {
           '@type': 'BreadcrumbList',
           itemListElement: trail.map((c, i) => ({

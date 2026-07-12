@@ -359,7 +359,78 @@ export const cities = [
   },
   {
     slug: 'chiatura', name: 'Chiatura', region: 'imereti', published: true,
-    seoKey: 'chiatura', contentKey: 'chiatura', image: '/images/files/georgia-home.jpg',
+    seoKey: 'chiatura', contentKey: 'chiatura',
+    // Cover/hero = our own Chiatura town-panorama photo (replaces the generic
+    // georgia-home.jpg placeholder). Rendered as the CSS-background hero via
+    // HeroSection image-set (webp `image` + avif `imageAvif`); og:image/twitter
+    // auto-derive from `image`. Native max width is 1448 (no upscale).
+    image: '/images/files/chiatura-town-panorama-imereti-georgia-1448w.webp',
+    imageAvif: '/images/files/chiatura-town-panorama-imereti-georgia-1448w.avif',
+    // Contextual body photos (our own). These render as real inline <figure>
+    // blocks embedded in the per-locale body HTML (pages.json), NOT via the
+    // data-driven gallery. `imageObjects` below feeds ONE ImageObject per photo
+    // into the CityPage JSON-LD @graph (brand credit Hikasus Travel; the town
+    // panorama is the hero → representativeOfPage). contentUrl uses the largest
+    // shipped variant (`width`w). Region is Imereti (NOT Kakheti). Verbatim from
+    // the image SEO package (REPLACE-BRAND → Hikasus Travel, /images/files path).
+    imageObjects: [
+      {
+        base: 'chiatura-town-panorama-imereti-georgia', width: 1448, height: 1086, hero: true,
+        name: 'Panorama of Chiatura in its gorge, Imereti, Georgia',
+        caption: 'Panorama of Chiatura town in its gorge with autumn forest and cliffs',
+        description: 'A panorama of Chiatura filling the narrow Kvirila River gorge, ringed by autumn forest and cliffs, Imereti, Georgia.',
+        locationName: 'Chiatura', locality: 'Chiatura', region: 'Imereti', geo: { lat: 42.2900, lng: 43.2833 },
+      },
+      {
+        base: 'chiatura-cable-car-gondola-imereti-georgia', width: 1448, height: 1086,
+        name: 'Chiatura cable car gondola over the town, Imereti, Georgia',
+        caption: 'A modern gondola of the Chiatura cable car crossing the gorge above the town',
+        description: "A modern gondola of Chiatura's rebuilt aerial ropeway, originally a 1950s Soviet miners' cable car, crossing the Kvirila gorge above the town, Imereti, Georgia.",
+        locationName: 'Chiatura', locality: 'Chiatura', region: 'Imereti', geo: { lat: 42.2900, lng: 43.2833 },
+      },
+      {
+        base: 'chiatura-cable-car-cabin-imereti-georgia', width: 1448, height: 1086,
+        name: 'Modern cable car cabin at a Chiatura station, Imereti, Georgia',
+        caption: 'A modern glass gondola cabin at a Chiatura cable car station',
+        description: "A modern glass gondola cabin at a station of Chiatura's rebuilt aerial ropeway, Imereti, Georgia.",
+        locationName: 'Chiatura', locality: 'Chiatura', region: 'Imereti', geo: { lat: 42.2900, lng: 43.2833 },
+      },
+      {
+        base: 'katskhi-pillar-imereti-georgia', width: 1086, height: 1448,
+        name: 'Katskhi Pillar near Chiatura, Imereti, Georgia',
+        caption: 'The Katskhi Pillar, a 40-metre limestone monolith with a church on top, near Chiatura',
+        description: 'The Katskhi Pillar, a natural limestone monolith about 40 metres high near Chiatura, topped by the church of Maximus the Confessor, historically used by stylite monks, Imereti, Georgia.',
+        locationName: 'Katskhi Pillar', locality: 'Katskhi', region: 'Imereti', geo: { lat: 42.2933, lng: 43.2144 },
+      },
+      {
+        base: 'mghvimevi-monastery-chiatura-imereti-georgia', width: 1448, height: 1086,
+        name: 'Mghvimevi Monastery near Chiatura, Imereti, Georgia',
+        caption: 'The 13th-century Mghvimevi Monastery built into the cliff above Chiatura',
+        description: 'Mghvimevi Monastery, a 13th-century convent built into the cliff face and natural caves above the Kvirila River near Chiatura, Imereti, Georgia.',
+        locationName: 'Mghvimevi Monastery', locality: 'Chiatura', region: 'Imereti', geo: { lat: 42.2969, lng: 43.2789 },
+      },
+      {
+        base: 'chiatura-swan-lake-park-imereti-georgia', width: 1448, height: 1086,
+        name: 'Swan pond in a Chiatura park, Imereti, Georgia',
+        caption: 'Mute swans on the pond of a landscaped park in Chiatura',
+        description: 'Mute swans on the pond of a landscaped central park in Chiatura, Imereti, Georgia.',
+        locationName: 'Chiatura', locality: 'Chiatura', region: 'Imereti', geo: { lat: 42.2900, lng: 43.2833 },
+      },
+      {
+        base: 'chiatura-hillside-sign-imereti-georgia', width: 1537, height: 1023,
+        name: 'Hillside above the town of Chiatura, Imereti, Georgia',
+        caption: 'A hillside sign above the town of Chiatura among autumn forest',
+        description: 'A hillside sign above the town of Chiatura on the forested cliffs of the Kvirila gorge in autumn, Imereti, Georgia.',
+        locationName: 'Chiatura', locality: 'Chiatura', region: 'Imereti', geo: { lat: 42.2900, lng: 43.2833 },
+      },
+      {
+        base: 'chiatura-caucasus-mountains-view-imereti-georgia', width: 1448, height: 1086,
+        name: 'Caucasus peaks near Chiatura, Imereti, Georgia',
+        caption: 'Snow-capped Caucasus peaks beyond the autumn hills near Chiatura',
+        description: 'Snow-capped peaks of the Greater Caucasus rising beyond the autumn-coloured hills and cliffs around Chiatura, Imereti, Georgia.',
+        locationName: 'Chiatura', locality: 'Chiatura', region: 'Imereti', geo: { lat: 42.2900, lng: 43.2833 },
+      },
+    ],
     thingsToDo: {
       seoKey: 'thingsToDoChiatura', contentKey: 'thingsToDoChiatura', image: '/images/files/georgia-home.jpg',
       address: { addressLocality: 'Chiatura' },
