@@ -728,7 +728,62 @@ export const cities = [
   },
   {
     slug: 'gori', name: 'Gori', region: 'shida-kartli', published: true,
-    seoKey: 'gori', contentKey: 'gori', image: '/images/files/georgia-home.jpg',
+    seoKey: 'gori', contentKey: 'gori',
+    // HERO replaced: was the shared georgia-home.jpg placeholder (the "wrong
+    // Sighnaghi cover" was actually this generic placeholder — used by ~217 entries,
+    // so NOT deleted). Now the own Gori town panorama (1448x1086, crops well as a
+    // wide CSS-background hero); image-set() upgrades AVIF-capable browsers.
+    // og:image / twitter:image auto-derive from this hero.
+    image: '/images/files/gori-town-panorama-georgia-1448w.webp',
+    imageAvif: '/images/files/gori-town-panorama-georgia-1448w.avif',
+    // Own photos → one ImageObject each into the CityPage @graph (brand credit
+    // Hikasus Travel; contentUrl at the largest shipped variant). Hero flagged
+    // hero:true → representativeOfPage; the 5 inline body photos render as real
+    // <figure> blocks in the per-locale body HTML. Region Shida Kartli.
+    imageObjects: [
+      {
+        base: 'gori-town-panorama-georgia', width: 1448, height: 1086, hero: true,
+        name: 'Panorama of Gori, Shida Kartli, Georgia',
+        caption: 'Panorama of Gori in the Kartli plain with snow-dusted Caucasus peaks beyond',
+        description: 'A panorama of Gori spread across the Kartli plain at the confluence of the Mtkvari and Liakhvi rivers, with the Greater Caucasus beyond, Shida Kartli, Georgia.',
+        locationName: 'Gori', locality: 'Gori', region: 'Shida Kartli', geo: { lat: 41.9847, lng: 44.1086 },
+      },
+      {
+        base: 'uplistsikhe-cave-town-georgia', width: 1448, height: 1086,
+        name: 'Uplistsikhe cave town near Gori, Shida Kartli, Georgia',
+        caption: 'The rock-hewn cave town of Uplistsikhe above the Mtkvari valley near Gori',
+        description: 'Uplistsikhe, a rock-hewn cave town about 3,000 years old on the Mtkvari river near Gori, once a pagan religious centre and Silk Road trading post, Shida Kartli, Georgia.',
+        locationName: 'Uplistsikhe', locality: 'Uplistsikhe', region: 'Shida Kartli', geo: { lat: 41.9686, lng: 44.2072 },
+      },
+      {
+        base: 'stalin-museum-gori-georgia', width: 1448, height: 1086,
+        name: 'Joseph Stalin Museum, Gori, Shida Kartli, Georgia',
+        caption: 'The sandstone arcades of the Joseph Stalin Museum in Gori',
+        description: 'The Soviet-era Joseph Stalin Museum in Gori, dedicated to the Soviet leader born in the town in 1879, with its arcaded carved-sandstone facade, Shida Kartli, Georgia.',
+        locationName: 'Joseph Stalin Museum', locality: 'Gori', region: 'Shida Kartli', geo: { lat: 41.9863, lng: 44.1156 },
+      },
+      {
+        base: 'gori-central-park-georgia', width: 1448, height: 1086,
+        name: 'Central park in Gori with the Stalin Museum, Shida Kartli, Georgia',
+        caption: 'The landscaped central park of Gori with the Stalin Museum building behind',
+        description: 'The landscaped central park of Gori with clipped topiary, leading to the Soviet-era Joseph Stalin Museum, Shida Kartli, Georgia.',
+        locationName: 'Gori', locality: 'Gori', region: 'Shida Kartli', geo: { lat: 41.9863, lng: 44.1156 },
+      },
+      {
+        base: 'gori-aerial-view-georgia', width: 1448, height: 1086,
+        name: 'Aerial view of Gori, Shida Kartli, Georgia',
+        caption: 'Aerial view of Gori with its stadium and autumn old town by the river',
+        description: 'An elevated view of Gori with its stadium and low old-town roofs stretching toward the river and hills of the Kartli plain, Shida Kartli, Georgia.',
+        locationName: 'Gori', locality: 'Gori', region: 'Shida Kartli', geo: { lat: 41.9847, lng: 44.1086 },
+      },
+      {
+        base: 'gori-church-view-georgia', width: 1448, height: 1086,
+        name: 'Church in Gori among autumn rooftops, Shida Kartli, Georgia',
+        caption: 'A Georgian Orthodox church among the autumn rooftops of Gori',
+        description: 'A domed Georgian Orthodox church among the autumn trees and rooftops of Gori, beneath the surrounding hills, Shida Kartli, Georgia.',
+        locationName: 'Gori', locality: 'Gori', region: 'Shida Kartli', geo: { lat: 41.9847, lng: 44.1086 },
+      },
+    ],
     thingsToDo: {
       seoKey: 'thingsToDoGori', contentKey: 'thingsToDoGori', image: '/images/files/georgia-home.jpg',
       address: { addressLocality: 'Gori' },
