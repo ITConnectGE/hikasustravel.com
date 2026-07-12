@@ -292,6 +292,36 @@ export const cities = [
         'Holy Trinity Cathedral (Sameba)', 'Georgian National Museum', 'Rustaveli Avenue', 'Mtatsminda',
       ],
     },
+    // Contextual body photos (our own). These render as real inline <figure>
+    // blocks embedded in the per-locale body HTML (pages.json), NOT via the
+    // data-driven gallery and NOT as the hero (which stays tbilisi.jpg).
+    // `imageObjects` feeds ONE ImageObject per photo into the CityPage JSON-LD
+    // @graph (brand credit Hikasus Travel). contentUrl uses the largest shipped
+    // variant (`width`w). Verbatim from the image SEO package
+    // (REPLACE-BRAND → Hikasus Travel via BRAND, /images/files path).
+    imageObjects: [
+      {
+        base: 'mtkvari-river-old-tbilisi-cliffs-georgia', width: 1448, height: 1086,
+        name: 'Old Tbilisi cliffs above the Mtkvari River, Georgia',
+        caption: 'Old Tbilisi houses on the cliffs above the Mtkvari River, reflected in the water',
+        description: 'Houses of Old Tbilisi perched on the cliffs above the Mtkvari (Kura) River, reflected in the water below Mtatsminda hill, Tbilisi, Georgia.',
+        locationName: 'Old Tbilisi, Mtkvari River', locality: 'Tbilisi', region: 'Tbilisi', geo: { lat: 41.6893, lng: 44.8117 },
+      },
+      {
+        base: 'narikala-fortress-tbilisi-georgia', width: 1448, height: 1086,
+        name: 'Narikala Fortress above Old Tbilisi, Georgia',
+        caption: 'The walls and St Nicholas Church of Narikala Fortress above Old Tbilisi',
+        description: 'The 4th-century Narikala Fortress on the Sololaki ridge above Old Tbilisi, with St Nicholas Church (rebuilt 1996) within its walls, Tbilisi, Georgia.',
+        locationName: 'Narikala Fortress', locality: 'Tbilisi', region: 'Tbilisi', geo: { lat: 41.6875, lng: 44.8090 },
+      },
+      {
+        base: 'gabriadze-clock-tower-tbilisi-georgia', width: 1086, height: 1448,
+        name: 'Rezo Gabriadze Clock Tower, old Tbilisi, Georgia',
+        caption: 'The leaning Rezo Gabriadze Clock Tower in old Tbilisi',
+        description: 'The whimsical leaning clock tower built in 2010 by artist and puppeteer Rezo Gabriadze beside his Marionette Theatre in old Tbilisi, faced with hand-painted ceramic tiles, Georgia.',
+        locationName: 'Gabriadze Clock Tower', locality: 'Tbilisi', region: 'Tbilisi', geo: { lat: 41.6935, lng: 44.8073 },
+      },
+    ],
   },
   {
     slug: 'akhaltsikhe', name: 'Akhaltsikhe', region: 'samtskhe-javakheti', published: true,
