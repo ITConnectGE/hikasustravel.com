@@ -371,7 +371,41 @@ export const cities = [
   },
   {
     slug: 'kutaisi', name: 'Kutaisi', region: 'imereti', published: true,
-    seoKey: 'kutaisi', contentKey: 'kutaisi', image: '/images/files/georgia-home.jpg',
+    seoKey: 'kutaisi', contentKey: 'kutaisi',
+    // HERO replaced: was the shared georgia-home.jpg placeholder (the "wrong
+    // Sighnaghi cover" was actually this generic placeholder — used by ~217 entries,
+    // so it is NOT deleted). Now the own Colchis Fountain landscape (1448x1086, crops
+    // well as a wide CSS-background hero); image-set() upgrades AVIF-capable browsers.
+    // og:image / twitter:image auto-derive from this hero.
+    image: '/images/files/colchis-fountain-kutaisi-georgia-1448w.webp',
+    imageAvif: '/images/files/colchis-fountain-kutaisi-georgia-1448w.avif',
+    // Own photos → one ImageObject each into the CityPage @graph (brand credit
+    // Hikasus Travel; contentUrl at the largest shipped variant). Hero flagged
+    // hero:true → representativeOfPage; the 2 inline body photos render as real
+    // <figure> blocks in the per-locale body HTML. Region Imereti.
+    imageObjects: [
+      {
+        base: 'colchis-fountain-kutaisi-georgia', width: 1448, height: 1086, hero: true,
+        name: 'Colchis Fountain and Meskhishvili Theatre, Kutaisi, Imereti, Georgia',
+        caption: 'The golden Colchis Fountain lit at dusk before the Meskhishvili Theatre in central Kutaisi',
+        description: 'The Colchis Fountain (2011, architect Davit Gogichaishvili) on David Aghmashenebeli Square, topped with golden replicas of ancient Colchian artifacts, before the 1861 Meskhishvili Theatre, Kutaisi, Imereti, Georgia.',
+        locationName: 'Colchis Fountain, David Aghmashenebeli Square', locality: 'Kutaisi', region: 'Imereti', geo: { lat: 42.2694, lng: 42.7058 },
+      },
+      {
+        base: 'colchis-fountain-night-kutaisi-georgia', width: 1448, height: 1086,
+        name: 'Colchis Fountain illuminated at night, Kutaisi, Georgia',
+        caption: 'Golden Colchian figures and water jets of the Colchis Fountain lit at night',
+        description: 'The Colchis Fountain in Kutaisi illuminated at night, with 30 gilded figures of Colchian animals modelled on Bronze Age gold from Vani, Imereti, Georgia.',
+        locationName: 'Colchis Fountain', locality: 'Kutaisi', region: 'Imereti', geo: { lat: 42.2694, lng: 42.7058 },
+      },
+      {
+        base: 'kutaisi-green-bazaar-churchkhela-georgia', width: 1536, height: 1024,
+        name: 'Green Bazaar market, Kutaisi, Imereti, Georgia',
+        caption: 'Churchkhela and produce stalls at the Green Bazaar in Kutaisi',
+        description: "Strings of churchkhela above stalls of cheese, pickles, spices and vegetables at the Green Bazaar, Kutaisi's central food market, Imereti, Georgia.",
+        locationName: 'Green Bazaar, Kutaisi', locality: 'Kutaisi', region: 'Imereti', geo: { lat: 42.2662, lng: 42.7089 },
+      },
+    ],
     thingsToDo: {
       seoKey: 'thingsToDoKutaisi', contentKey: 'thingsToDoKutaisi', image: '/images/files/georgia-home.jpg',
       address: { addressLocality: 'Kutaisi' },
