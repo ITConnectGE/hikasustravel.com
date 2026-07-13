@@ -1033,7 +1033,46 @@ export const sites = [
     slug: 'tsalka-dashbashi-canyon', name: 'Tsalka (Dashbashi) Canyon',
     parentType: 'region', parent: 'kvemo-kartli', published: true,
     seoKey: 'tsalkaDashbashiCanyon', contentKey: 'tsalkaDashbashiCanyon',
-    image: '/images/files/georgia-home.jpg',
+    // HERO replaced: was the shared georgia-home.jpg placeholder (the "wrong
+    // Sighnaghi cover"). Now our own Diamond Bridge wide view (1445x1088,
+    // landscape — crops fine as a CSS-background hero); image-set() upgrades
+    // AVIF-capable browsers. og:image / twitter:image auto-derive from this hero.
+    image: '/images/files/diamond-bridge-dashbashi-canyon-georgia-1445w.webp',
+    imageAvif: '/images/files/diamond-bridge-dashbashi-canyon-georgia-1445w.avif',
+    // Own photos → one ImageObject each into the SitePage @graph (brand credit
+    // Hikasus Travel; contentUrl at the largest shipped variant). Hero flagged
+    // hero:true → representativeOfPage; the 3 inline body photos render as real
+    // <figure> blocks in the per-locale body HTML. Region Kvemo Kartli.
+    imageObjects: [
+      {
+        base: 'diamond-bridge-dashbashi-canyon-georgia', width: 1445, height: 1088, hero: true,
+        name: 'Diamond Bridge over Dashbashi Canyon, Kvemo Kartli, Georgia',
+        caption: 'The Diamond Bridge glass suspension bridge over Dashbashi Canyon near Tsalka',
+        description: 'The 240-metre Diamond Bridge (opened 2022) spanning Dashbashi Canyon about 280 metres above the Khrami River, with a diamond-shaped glass café at its centre, near Tsalka, Kvemo Kartli, Georgia.',
+        locationName: 'Dashbashi Canyon Diamond Bridge', locality: 'Tsalka', region: 'Kvemo Kartli', geo: { lat: 41.6394, lng: 44.1103 },
+      },
+      {
+        base: 'diamond-bridge-glass-capsule-dashbashi-canyon-georgia', width: 1086, height: 1448,
+        name: 'Diamond-shaped glass café on the Diamond Bridge, Dashbashi Canyon, Georgia',
+        caption: 'The diamond-shaped glass café hanging beneath the Diamond Bridge over Dashbashi Canyon',
+        description: 'The two-level diamond-shaped glass café suspended at the centre of the Diamond Bridge over Dashbashi Canyon, Kvemo Kartli, Georgia.',
+        locationName: 'Dashbashi Canyon Diamond Bridge', locality: 'Tsalka', region: 'Kvemo Kartli', geo: { lat: 41.6394, lng: 44.1103 },
+      },
+      {
+        base: 'diamond-restaurant-dashbashi-canyon-georgia', width: 1448, height: 1086,
+        name: 'Diamond Restaurant at Dashbashi Canyon, Kvemo Kartli, Georgia',
+        caption: 'The Diamond Restaurant building at Dashbashi Canyon near Tsalka',
+        description: 'The Diamond Restaurant beside the Diamond Bridge at Dashbashi Canyon, serving Georgian cuisine with canyon views, near Tsalka, Kvemo Kartli, Georgia.',
+        locationName: 'Diamond Restaurant, Dashbashi Canyon', locality: 'Tsalka', region: 'Kvemo Kartli', geo: { lat: 41.6394, lng: 44.1103 },
+      },
+      {
+        base: 'dashbashi-canyon-zipline-georgia', width: 1445, height: 1088,
+        name: 'Zipline across Dashbashi Canyon, Kvemo Kartli, Georgia',
+        caption: 'A visitor ziplining across Dashbashi Canyon above the green gorge',
+        description: 'A visitor riding a zipline across Dashbashi Canyon, high above the wooded basalt cliffs near the Diamond Bridge, Kvemo Kartli, Georgia.',
+        locationName: 'Dashbashi Canyon', locality: 'Tsalka', region: 'Kvemo Kartli', geo: { lat: 41.6394, lng: 44.1103 },
+      },
+    ],
   },
   {
     slug: 'ujarma-fortress', name: 'Ujarma Fortress',
