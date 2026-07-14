@@ -303,13 +303,6 @@ export const regions = [
         locationName: 'Becho', locality: 'Becho', region: 'Svaneti', geo: { lat: 43.06, lng: 42.66 },
       },
       {
-        base: 'svaneti-horse-riding-georgia', width: 1024, height: 1024,
-        name: 'Horse riding in Svaneti, Georgia',
-        caption: 'Horseback riders on a mountain trail below snow-capped peaks in Svaneti',
-        description: 'Horseback riders on a mountain trail below snow-capped Caucasus peaks in Svaneti, Georgia.',
-        locationName: 'Svaneti', locality: 'Mestia', region: 'Svaneti', geo: { lat: 43.0451, lng: 42.7289 },
-      },
-      {
         base: 'svaneti-hiking-trail-signpost-georgia', width: 1024, height: 1024,
         name: 'Hiking trail signpost above Mestia, Svaneti, Georgia',
         caption: 'A trail signpost to Becho, Koruldi Lakes and Mestia below Svaneti\'s peaks',
