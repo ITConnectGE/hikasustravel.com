@@ -270,6 +270,53 @@ export const regions = [
         'Mestia-Ushguli Trek', 'Svan Towers', 'Ushguli', 'Chalaadi Glacier', 'Tetnuldi',
       ],
     },
+    // Contextual inline body photos (own), rendered as real <figure> blocks in the
+    // per-locale body HTML (NOT the hero, NOT a gallery grid). One ImageObject each
+    // into the @graph via RegionPage. representativeOfPage stays false (hero only).
+    imageObjects: [
+      {
+        base: 'svaneti-alpine-meadow-georgia', width: 1024, height: 1024,
+        name: 'Alpine meadow in Svaneti, Georgia',
+        caption: 'A green alpine meadow below forested mountains and a snowy peak in Svaneti',
+        description: 'A boulder-strewn green alpine meadow below the forested ridges and snow peaks of the Greater Caucasus, Svaneti, Georgia.',
+        locationName: 'Svaneti', locality: 'Mestia', region: 'Svaneti', geo: { lat: 43.0451, lng: 42.7289 },
+      },
+      {
+        base: 'ushguli-village-shkhara-svaneti-georgia', width: 1217, height: 864,
+        name: 'Ushguli village and Svan towers below Mount Shkhara, Svaneti, Georgia',
+        caption: 'The medieval Svan towers of Ushguli village below Mount Shkhara, Upper Svaneti',
+        description: 'Ushguli, a UNESCO-listed community of medieval Svan tower-houses at about 2,100 m, one of Europe\'s highest continuously inhabited villages, below Mount Shkhara (5,201 m), Upper Svaneti, Georgia.',
+        locationName: 'Ushguli', locality: 'Ushguli', region: 'Svaneti', geo: { lat: 42.9169, lng: 43.0136 },
+      },
+      {
+        base: 'svaneti-glacier-valley-georgia', width: 1024, height: 1024,
+        name: 'Glacier and alpine valley in Svaneti, Georgia',
+        caption: 'A glacier and snow-streaked peaks above a green alpine valley in Svaneti',
+        description: 'A glacier and snow-streaked peaks above a green alpine valley crossed by a hiking trail in the high Greater Caucasus, Svaneti, Georgia.',
+        locationName: 'Svaneti', locality: 'Mestia', region: 'Svaneti', geo: { lat: 43.0451, lng: 42.7289 },
+      },
+      {
+        base: 'becho-village-svaneti-georgia', width: 1024, height: 1024,
+        name: 'Svan village in the Becho valley, Svaneti, Georgia',
+        caption: 'A Svan mountain village in the Becho valley beneath the Ushba peaks',
+        description: 'A small Svan village of stone houses among fields and forest in the Becho valley west of Mestia, below the peaks around Mount Ushba, Svaneti, Georgia.',
+        locationName: 'Becho', locality: 'Becho', region: 'Svaneti', geo: { lat: 43.06, lng: 42.66 },
+      },
+      {
+        base: 'svaneti-horse-riding-georgia', width: 1024, height: 1024,
+        name: 'Horse riding in Svaneti, Georgia',
+        caption: 'Horseback riders on a mountain trail below snow-capped peaks in Svaneti',
+        description: 'Horseback riders on a mountain trail below snow-capped Caucasus peaks in Svaneti, Georgia.',
+        locationName: 'Svaneti', locality: 'Mestia', region: 'Svaneti', geo: { lat: 43.0451, lng: 42.7289 },
+      },
+      {
+        base: 'svaneti-hiking-trail-signpost-georgia', width: 1024, height: 1024,
+        name: 'Hiking trail signpost above Mestia, Svaneti, Georgia',
+        caption: 'A trail signpost to Becho, Koruldi Lakes and Mestia below Svaneti\'s peaks',
+        description: 'A yellow hiking trail signpost above Mestia pointing to Becho, the Koruldi Lakes and Mestia, below the jagged Ushba–Chatyn peaks, Svaneti, Georgia.',
+        locationName: 'Mestia (Koruldi trail)', locality: 'Mestia', region: 'Svaneti', geo: { lat: 43.07, lng: 42.71 },
+      },
+    ],
   },
 ]
 

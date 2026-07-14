@@ -17,6 +17,8 @@ import enPages from '../../i18n/locales/en/pages.json'
 import NotFoundPage from './NotFoundPage'
 
 const SITE_URL = 'https://www.hikasustravel.com'
+// Brand used for ImageObject credit/creator (mirrors og:site_name in useSEO).
+const BRAND = 'Hikasus Travel'
 
 /**
  * Generic region detail page. Scaffolded against the places.js registry; a
@@ -94,6 +96,36 @@ export default function RegionPage() {
           image: `${SITE_URL}${heroImage}`,
           containedInPlace: { '@type': 'Country', name: 'Georgia' },
         },
+        // Contextual body photos (our own) rendered as inline <figure> blocks in the
+        // per-locale body HTML (not the hero, not a gallery grid). Each gets one
+        // ImageObject here — contentUrl at the largest shipped variant (img.width),
+        // brand credit, its own contentLocation. representativeOfPage stays false
+        // (only the hero is representative). Mirrors the SitePage imageObjects block.
+        ...(region.imageObjects || []).map((img) => ({
+          '@type': 'ImageObject',
+          contentUrl: `${SITE_URL}/images/files/${img.base}-${img.width}w.webp`,
+          url: `${SITE_URL}/images/files/${img.base}-${img.width}w.webp`,
+          width: img.width,
+          height: img.height,
+          representativeOfPage: false,
+          name: img.name,
+          caption: img.caption,
+          description: img.description,
+          creator: { '@type': 'Organization', name: BRAND },
+          creditText: BRAND,
+          copyrightNotice: `© ${BRAND}`,
+          contentLocation: {
+            '@type': 'Place',
+            name: img.locationName,
+            address: {
+              '@type': 'PostalAddress',
+              addressLocality: img.locality,
+              addressRegion: img.region,
+              addressCountry: 'GE',
+            },
+            geo: { '@type': 'GeoCoordinates', latitude: img.geo.lat, longitude: img.geo.lng },
+          },
+        })),
         {
           '@type': 'BreadcrumbList',
           itemListElement: trail.map((c, i) => ({
