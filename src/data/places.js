@@ -1944,7 +1944,49 @@ export const sites = [
     slug: 'gori-fortress', name: 'Gori Fortress',
     parentType: 'city', parent: 'gori', published: true,
     seoKey: 'goriFortress', contentKey: 'goriFortress',
-    image: '/images/files/georgia-home.jpg',
+    // Cover/hero = our own Gori Fortress photo (the citadel with the Georgian
+    // flag), replacing the generic georgia-home.jpg placeholder. Rendered as the
+    // CSS-background hero via HeroSection image-set (webp `image` + avif
+    // `imageAvif`); og:image/twitter auto-derive from `image`. Native max width
+    // is 1264 (no upscale). Region is Shida Kartli, locality Gori.
+    image: '/images/files/gori-fortress-georgia-1264w.webp',
+    imageAvif: '/images/files/gori-fortress-georgia-1264w.avif',
+    // Contextual body photos (our own). The 3 non-hero images render as real
+    // inline <figure> blocks embedded in the per-locale body HTML (pages.json),
+    // matched to their descriptions. `imageObjects` feeds ONE ImageObject per
+    // photo into the SitePage JSON-LD @graph (brand credit Hikasus Travel; the
+    // cover is flagged hero → representativeOfPage). contentUrl uses the largest
+    // shipped variant (`width`w). Verbatim from the image SEO package.
+    imageObjects: [
+      {
+        base: 'gori-fortress-georgia', width: 1264, height: 842, hero: true,
+        name: 'Gori Fortress with the Georgian flag, Shida Kartli, Georgia',
+        caption: 'The stone walls of Gori Fortress with the Georgian flag flying above at dusk',
+        description: 'Gori Fortress, a citadel on a rocky hill above the town of Gori, its stone ramparts lit at dusk with the Georgian flag flying from the keep, Shida Kartli, Georgia.',
+        locationName: 'Gori Fortress', locality: 'Gori', region: 'Shida Kartli', geo: { lat: 41.9847, lng: 44.1067 },
+      },
+      {
+        base: 'memorial-georgian-warrior-heroes-gori-georgia', width: 1448, height: 1086,
+        name: 'Memorial of Georgian Warrior Heroes, Gori, Shida Kartli, Georgia',
+        caption: 'The bronze seated warriors of the Memorial of Georgian Warrior Heroes below Gori Fortress',
+        description: "The Memorial of Georgian Warrior Heroes ('Requiem') at the foot of Gori Fortress: eight wounded warriors seated in a circle on stone blocks, sculpted by Giorgi Ochiauri 1981–85 and relocated from Vake Park, Tbilisi, in 2009, Shida Kartli, Georgia.",
+        locationName: 'Memorial of Georgian Warrior Heroes', locality: 'Gori', region: 'Shida Kartli', geo: { lat: 41.9853, lng: 44.1075 },
+      },
+      {
+        base: 'gori-fortress-gateway-georgia', width: 1024, height: 1536,
+        name: 'Archway in the walls of Gori Fortress, Shida Kartli, Georgia',
+        caption: 'The town of Gori framed by a pointed stone archway in the fortress walls',
+        description: 'A pointed stone archway in the walls of Gori Fortress framing the rooftops of Gori and the surrounding hills, Shida Kartli, Georgia.',
+        locationName: 'Gori Fortress', locality: 'Gori', region: 'Shida Kartli', geo: { lat: 41.9847, lng: 44.1067 },
+      },
+      {
+        base: 'gori-fortress-caucasus-view-georgia', width: 1536, height: 1024,
+        name: 'Caucasus view from Gori Fortress, Shida Kartli, Georgia',
+        caption: 'Snow-capped Caucasus peaks seen over the rampart of Gori Fortress at sunrise',
+        description: 'The snow-capped peaks of the Greater Caucasus on the northern horizon, seen over the cobblestone rampart of Gori Fortress at sunrise, Shida Kartli, Georgia.',
+        locationName: 'Gori Fortress', locality: 'Gori', region: 'Shida Kartli', geo: { lat: 41.9847, lng: 44.1067 },
+      },
+    ],
   },
   {
     slug: 'stalin-museum-gori', name: 'Stalin Museum',
