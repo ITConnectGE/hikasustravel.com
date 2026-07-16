@@ -1992,7 +1992,53 @@ export const sites = [
     slug: 'stalin-museum-gori', name: 'Stalin Museum',
     parentType: 'city', parent: 'gori', published: true,
     seoKey: 'stalinMuseumGori', contentKey: 'stalinMuseumGori',
-    image: '/images/files/georgia-home.jpg',
+    // Cover/hero = our own corner-facade photo of the museum, replacing the
+    // generic georgia-home.jpg placeholder. Rendered as the CSS-background hero
+    // via HeroSection image-set (webp `image` + avif `imageAvif`); og:image and
+    // twitter auto-derive from `image`. Native max width is 1370 (no upscale).
+    // The landscape corner view is the hero rather than the portrait arcade shot
+    // (1009x1559): the hero is a full-viewport `cover` background, which crops a
+    // portrait to a ~40% mid-band on desktop, cutting both the roofline and the
+    // column bases. The portrait runs inline beside the architecture text instead.
+    image: '/images/files/stalin-museum-gori-building-georgia-1370w.webp',
+    imageAvif: '/images/files/stalin-museum-gori-building-georgia-1370w.avif',
+    // Contextual body photos (our own). The 3 non-hero images render as real
+    // inline <figure> blocks embedded in the per-locale body HTML (pages.json),
+    // matched to their descriptions. `imageObjects` feeds ONE ImageObject per
+    // photo into the SitePage JSON-LD @graph (brand credit Hikasus Travel; the
+    // cover is flagged hero → representativeOfPage). contentUrl uses the largest
+    // shipped variant (`width`w). Region is Shida Kartli, locality Gori. Verbatim
+    // from the image SEO package (REPLACE-BRAND → Hikasus Travel).
+    imageObjects: [
+      {
+        base: 'stalin-museum-gori-building-georgia', width: 1370, height: 1148, hero: true,
+        name: 'Joseph Stalin Museum building, Gori, Shida Kartli, Georgia',
+        caption: 'The corner facade and arcaded ground floor of the Joseph Stalin Museum in Gori',
+        description: 'The corner facade of the Joseph Stalin Museum in Gori, with arcades of pointed arches around the ground floor, blending Stalinist monumental architecture with Georgian and Gothic detailing, Shida Kartli, Georgia.',
+        locationName: 'Joseph Stalin Museum', locality: 'Gori', region: 'Shida Kartli', geo: { lat: 41.9863, lng: 44.1156 },
+      },
+      {
+        base: 'stalin-museum-gori-arcades-georgia', width: 1009, height: 1559,
+        name: 'Arcades of the Joseph Stalin Museum, Gori, Shida Kartli, Georgia',
+        caption: 'The stone arcades and arched windows of the Joseph Stalin Museum in Gori',
+        description: 'The arcaded facade of the Joseph Stalin Museum in Gori, a two-storey palazzo faced in Eklar stone, begun in 1951 to a design by Archil Kurdiani and opened as a museum in 1957, Shida Kartli, Georgia.',
+        locationName: 'Joseph Stalin Museum', locality: 'Gori', region: 'Shida Kartli', geo: { lat: 41.9863, lng: 44.1156 },
+      },
+      {
+        base: 'stalin-museum-gori-exhibition-hall-georgia', width: 1536, height: 1024,
+        name: 'Exhibition hall of the Stalin Museum, Gori, Shida Kartli, Georgia',
+        caption: 'A marble bust and archive photographs in an exhibition hall of the Stalin Museum in Gori',
+        description: "An exhibition hall of the Joseph Stalin Museum in Gori with a marble bust and archive photographs; the museum's six halls hold tens of thousands of items and retain their 1957 layout, with a hall on the Soviet repressions added in 2010, Shida Kartli, Georgia.",
+        locationName: 'Joseph Stalin Museum', locality: 'Gori', region: 'Shida Kartli', geo: { lat: 41.9863, lng: 44.1156 },
+      },
+      {
+        base: 'stalin-museum-railway-carriage-gori-georgia', width: 1477, height: 1065,
+        name: "Stalin's armoured railway carriage, Gori, Shida Kartli, Georgia",
+        caption: "Stalin's green armoured Pullman railway carriage on display at the museum in Gori",
+        description: 'The green armour-plated Pullman railway carriage displayed beside the Joseph Stalin Museum in Gori: 83 tonnes, used by Stalin from 1941 including journeys to the Tehran, Yalta and Potsdam conferences, brought from Rostov-on-Don in 1985, Shida Kartli, Georgia.',
+        locationName: 'Joseph Stalin Museum', locality: 'Gori', region: 'Shida Kartli', geo: { lat: 41.9863, lng: 44.1156 },
+      },
+    ],
   },
   {
     slug: 'prometheus-cave', name: 'Prometheus Cave',
