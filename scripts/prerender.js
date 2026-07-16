@@ -157,6 +157,17 @@ const blogArticles = [
     heroImage: '/images/files/sulfur-baths-wine-tour.jpg',
     tags: ['language', 'culture', 'travel-tips'],
   },
+  {
+    slug: 'why-georgia-is-called-georgia-sakartvelo',
+    titleKey: 'blog.article3.title',
+    descKey: 'blog.article3.desc',
+    title: "Why Is Georgia Called Georgia — and Why Do Georgians Call It Sakartvelo?",
+    seoTitle: "Why Is Georgia Called Georgia — and Why Sakartvelo? | Hikasus Travel",
+    excerpt: "Georgia is not named after St George — that's a medieval mistake that stuck. The real story runs through Persian, and Georgians call their country something else entirely.",
+    metaDescription: "Georgia is not named after St George — that's a medieval mistake that stuck. The real story runs through Persian, and Georgians call their country something else entirely.",
+    heroImage: '/images/files/georgia-home.jpg',
+    tags: ['history', 'culture', 'language'],
+  },
 ]
 
 // Blog title translation for a given article key from ui.json
