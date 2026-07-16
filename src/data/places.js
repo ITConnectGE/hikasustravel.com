@@ -750,7 +750,58 @@ export const cities = [
   },
   {
     slug: 'rustavi', name: 'Rustavi', region: 'kvemo-kartli', published: true,
-    seoKey: 'rustavi', contentKey: 'rustavi', image: '/images/files/georgia-home.jpg',
+    seoKey: 'rustavi', contentKey: 'rustavi',
+    // Cover/hero = our own Rustavi Fortress photo, replacing the generic
+    // georgia-home.jpg placeholder. Rendered as the CSS-background hero via
+    // HeroSection image-set (webp `image` + avif `imageAvif`); og:image/twitter
+    // auto-derive from `image`. Native max width is 1448 (no upscale). Distinct
+    // from the Rustavi Fortress PLACE page's own rustavi-fortress.jpg — both kept.
+    image: '/images/files/rustavi-fortress-georgia-1448w.webp',
+    imageAvif: '/images/files/rustavi-fortress-georgia-1448w.avif',
+    // Contextual body photos (our own). The 4 non-hero images render as real
+    // inline <figure> blocks embedded in the per-locale body HTML (pages.json),
+    // matched to their descriptions. `imageObjects` feeds ONE ImageObject per
+    // photo into the CityPage JSON-LD @graph (brand credit Hikasus Travel; the
+    // cover is flagged hero → representativeOfPage). contentUrl uses the largest
+    // shipped variant (`width`w). Region is Kvemo Kartli, locality Rustavi.
+    // Verbatim from the image SEO package (REPLACE-BRAND → Hikasus Travel).
+    imageObjects: [
+      {
+        base: 'rustavi-fortress-georgia', width: 1448, height: 1086, hero: true,
+        name: 'Rustavi Fortress ruins, Kvemo Kartli, Georgia',
+        caption: 'The stone ruins of Rustavi Fortress above the Mtkvari River',
+        description: 'The cobblestone walls of Rustavi Fortress on the Mtkvari River, remains of the medieval city that flourished in the 12th–13th centuries and was destroyed in 1265, Kvemo Kartli, Georgia.',
+        locationName: 'Rustavi Fortress', locality: 'Rustavi', region: 'Kvemo Kartli', geo: { lat: 41.5492, lng: 45.0069 },
+      },
+      {
+        base: 'rustavi-metallurgical-plant-building-georgia', width: 1448, height: 1086,
+        name: 'Rustavi Metallurgical Plant administrative building, Kvemo Kartli, Georgia',
+        caption: 'The monumental Soviet-era administrative building of the Rustavi Metallurgical Plant',
+        description: 'The monumental Soviet-era administrative building of the Rustavi Metallurgical Plant, with clock tower, colonnade and a sculpture group in front; the plant, begun in 1944, produced its first steel in 1950, Kvemo Kartli, Georgia.',
+        locationName: 'Rustavi Metallurgical Plant', locality: 'Rustavi', region: 'Kvemo Kartli', geo: { lat: 41.5606, lng: 44.9908 },
+      },
+      {
+        base: 'rustavi-street-art-mural-georgia', width: 1448, height: 1086,
+        name: 'Street mural in Rustavi, Kvemo Kartli, Georgia',
+        caption: 'A street mural of a bridge and snowy mountain between two faces on a concrete wall in Rustavi',
+        description: 'A painted street mural on a concrete wall in Rustavi, showing a bridge and snow-capped mountain between two cartoon faces, Kvemo Kartli, Georgia.',
+        locationName: 'Rustavi', locality: 'Rustavi', region: 'Kvemo Kartli', geo: { lat: 41.5495, lng: 44.9930 },
+      },
+      {
+        base: 'rustavi-street-art-portrait-mural-georgia', width: 1448, height: 1086,
+        name: 'Portrait street mural in Rustavi, Kvemo Kartli, Georgia',
+        caption: "A street mural of a woman's face with lettering on a concrete wall in Rustavi",
+        description: "A signed portrait street mural dated 2018 on a concrete wall in Rustavi, one of many along the city's Soviet-planned streets, Kvemo Kartli, Georgia.",
+        locationName: 'Rustavi', locality: 'Rustavi', region: 'Kvemo Kartli', geo: { lat: 41.5495, lng: 44.9930 },
+      },
+      {
+        base: 'rustavi-central-park-georgia', width: 1672, height: 941,
+        name: 'Central park in Rustavi, Kvemo Kartli, Georgia',
+        caption: 'A cypress-lined avenue hung with Georgian flags in the central park of Rustavi',
+        description: 'A cypress-lined avenue strung with Georgian flags in the central park of Rustavi, Kvemo Kartli, Georgia.',
+        locationName: 'Rustavi central park', locality: 'Rustavi', region: 'Kvemo Kartli', geo: { lat: 41.5495, lng: 44.9930 },
+      },
+    ],
     thingsToDo: {
       seoKey: 'thingsToDoRustavi', contentKey: 'thingsToDoRustavi', image: '/images/files/georgia-home.jpg',
       address: { addressLocality: 'Rustavi' },
