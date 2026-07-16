@@ -96,18 +96,20 @@ export default function RegionPage() {
           image: `${SITE_URL}${heroImage}`,
           containedInPlace: { '@type': 'Country', name: 'Georgia' },
         },
-        // Contextual body photos (our own) rendered as inline <figure> blocks in the
-        // per-locale body HTML (not the hero, not a gallery grid). Each gets one
-        // ImageObject here — contentUrl at the largest shipped variant (img.width),
-        // brand credit, its own contentLocation. representativeOfPage stays false
-        // (only the hero is representative). Mirrors the SitePage imageObjects block.
+        // The cover photo plus the contextual body photos (our own). The non-hero
+        // ones render as inline <figure> blocks in the per-locale body HTML (not a
+        // gallery grid). Each gets one ImageObject here — contentUrl at the largest
+        // shipped variant (img.width), brand credit, its own contentLocation, and the
+        // cover flagged hero → representativeOfPage. Mirrors the SitePage/CityPage
+        // imageObjects block. Regions whose imageObjects flag no hero (e.g. Svaneti,
+        // whose cover is not in this list) simply get representativeOfPage:false.
         ...(region.imageObjects || []).map((img) => ({
           '@type': 'ImageObject',
           contentUrl: `${SITE_URL}/images/files/${img.base}-${img.width}w.webp`,
           url: `${SITE_URL}/images/files/${img.base}-${img.width}w.webp`,
           width: img.width,
           height: img.height,
-          representativeOfPage: false,
+          representativeOfPage: !!img.hero,
           name: img.name,
           caption: img.caption,
           description: img.description,
@@ -158,7 +160,7 @@ export default function RegionPage() {
       <div className="dest-breadcrumbs">
         <Breadcrumbs trail={trail} />
       </div>
-      <HeroSection image={heroImage} title={(page && page.heroTitle) || region.name} />
+      <HeroSection image={heroImage} imageAvif={region.imageAvif} title={(page && page.heroTitle) || region.name} />
       <section className="page-items about-georgia">
         <EntityToursTag type="region" slug={region.slug} name={region.name} />
         <FadeUp>

@@ -107,7 +107,39 @@ export const regions = [
   {
     slug: 'kakheti', name: 'Kakheti', published: true,
     seoKey: 'kakheti', contentKey: 'kakheti',
-    image: '/images/files/kakheti-vineyard.jpg',
+    // Cover/hero = our own qvevri photo, replacing the previous kakheti-vineyard.jpg
+    // (a relevant shot, not a placeholder — it stays in use by the things-to-do guide
+    // below and by a tour, so the file is kept). Rendered as the CSS-background hero
+    // via HeroSection image-set (webp `image` + avif `imageAvif`); og:image/twitter
+    // auto-derive from `image` through useSEO. Native max width is 1448 (no upscale).
+    image: '/images/files/qvevri-clay-vessels-kakheti-georgia-1448w.webp',
+    imageAvif: '/images/files/qvevri-clay-vessels-kakheti-georgia-1448w.avif',
+    // Cover + the one contextual body photo (our own). The vineyard renders as a real
+    // inline <figure> in the per-locale body HTML (pages.json), by the wine/vineyard
+    // text; the qvevri cover is the hero and is NOT repeated inline. `imageObjects`
+    // feeds ONE ImageObject per photo into the RegionPage JSON-LD @graph (brand credit
+    // Hikasus Travel; the cover flagged hero → representativeOfPage). contentUrl uses
+    // the largest shipped variant (`width`w). Region is Kakheti. Verbatim from the
+    // image SEO package (REPLACE-BRAND → Hikasus Travel).
+    imageObjects: [
+      {
+        base: 'qvevri-clay-vessels-kakheti-georgia', width: 1448, height: 1086, hero: true,
+        name: 'Qvevri clay wine vessels, Kakheti, Georgia',
+        caption: 'Large clay qvevri wine vessels lined up against a stone wall in Kakheti',
+        description: "Egg-shaped clay qvevri, the vessels traditionally buried in the ground to ferment and age Georgian wine — a method on UNESCO's Intangible Cultural Heritage list since 2013 — in Kakheti, Georgia.",
+        // No `locality`: both shots are region-level (per the package, which carries
+        // addressRegion only), so addressLocality drops out rather than claiming
+        // Kakheti — a region — is a town. Coordinates are region-level/approximate.
+        locationName: 'Kakheti', region: 'Kakheti', geo: { lat: 41.9200, lng: 45.4750 },
+      },
+      {
+        base: 'kakheti-vineyard-sunset-georgia', width: 1448, height: 1086,
+        name: 'Vineyard in Kakheti at sunrise, Georgia',
+        caption: 'Rows of vines in a Kakheti vineyard at sunrise',
+        description: "Rows of vines in a vineyard in Kakheti, the region that produces the majority of Georgia's wine, at sunrise.",
+        locationName: 'Kakheti', region: 'Kakheti', geo: { lat: 41.9200, lng: 45.4750 },
+      },
+    ],
     // Region-level "things to do" guide, served (like Adjara's/Guria's) at
     // /georgia/kakheti/things-to-do-in-kakheti via the CitySubPage dispatcher.
     thingsToDo: {
