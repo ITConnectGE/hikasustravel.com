@@ -2547,7 +2547,50 @@ export const sites = [
     slug: 'mghvimevi-monastery', name: 'Mghvimevi Monastery',
     parentType: 'city', parent: 'chiatura', formerParent: 'imereti', published: true,
     seoKey: 'mghvimeviMonastery', contentKey: 'mghvimeviMonastery',
-    image: '/images/files/georgia-home.jpg',
+    // Cover/hero = our own cliffside-path photo, replacing the generic
+    // georgia-home.jpg placeholder (that file stays — 200+ other entries use it).
+    // Rendered as the CSS-background hero via HeroSection image-set (webp `image` +
+    // avif `imageAvif`); og:image/twitter auto-derive from `image`. Variants cap at
+    // 1600w for the portraits (source is 2730x4096; no upscale, no extra variants).
+    // The portrait is the hero rather than the landscape cliff-view: on the
+    // full-viewport `cover` hero it crops to a ~42% mid-band on desktop, but that
+    // band lands coherently on the carved facade, door and path (nothing truncated
+    // at both ends) and mobile shows it in full — whereas the landscape carries
+    // power lines across its lower frame, which a full-screen hero would show.
+    image: '/images/files/mghvimevi-monastery-cliff-path-imereti-georgia-1600w.webp',
+    imageAvif: '/images/files/mghvimevi-monastery-cliff-path-imereti-georgia-1600w.avif',
+    // Contextual body photos (our own). The 2 non-hero images render as real inline
+    // <figure> blocks embedded in the per-locale body HTML (pages.json), matched to
+    // their descriptions. `imageObjects` feeds ONE ImageObject per photo into the
+    // SitePage JSON-LD @graph (brand credit Hikasus Travel; the cover flagged hero →
+    // representativeOfPage). contentUrl uses the largest shipped variant (`width`w).
+    // Region is Imereti, locality Chiatura. Verbatim from the image SEO package
+    // (REPLACE-BRAND → Hikasus Travel). Filenames are distinct from the Chiatura
+    // page's own mghvimevi-monastery-chiatura-imereti-georgia — both sets kept; the
+    // package's 4th upload was dropped as a near-duplicate of it and is not here.
+    imageObjects: [
+      {
+        base: 'mghvimevi-monastery-cliff-path-imereti-georgia', width: 1600, height: 2401, hero: true,
+        name: 'Mghvimevi Monastery cliffside path and carved facade, Imereti, Georgia',
+        caption: 'The carved stone facade of Mghvimevi Monastery and its cliffside path under an overhanging rock',
+        description: 'The narrow cliffside path beneath an overhanging rock at Mghvimevi Monastery, past the richly carved stone facade of the church; the monastery was founded in the second half of the 13th century in the Kvirila gorge near Chiatura, Imereti, Georgia.',
+        locationName: 'Mghvimevi Monastery', locality: 'Chiatura', region: 'Imereti', geo: { lat: 42.2969, lng: 43.2789 },
+      },
+      {
+        base: 'mghvimevi-monastery-cliff-view-imereti-georgia', width: 2400, height: 1600,
+        name: 'Mghvimevi Monastery on the cliff above Chiatura, Imereti, Georgia',
+        caption: 'Mghvimevi Monastery on its limestone cliff above the houses of Chiatura in autumn',
+        description: 'Mghvimevi Monastery on a limestone cliff at the eastern edge of Chiatura above the Kvirila gorge, reached by a long stairway and a narrow cliff path, Imereti, Georgia.',
+        locationName: 'Mghvimevi Monastery', locality: 'Chiatura', region: 'Imereti', geo: { lat: 42.2969, lng: 43.2789 },
+      },
+      {
+        base: 'mghvimevi-monastery-carved-doorway-imereti-georgia', width: 1600, height: 2401,
+        name: 'Carved doorway at Mghvimevi Monastery, Imereti, Georgia',
+        caption: 'Carved wooden doors of a church at Mghvimevi Monastery open onto the autumn gorge',
+        description: 'Carved wooden doors inside Mghvimevi Monastery opening onto the Kvirila gorge; the 13th-century church retains fragments of frescoes including portraits of its founders, Imereti, Georgia.',
+        locationName: 'Mghvimevi Monastery', locality: 'Chiatura', region: 'Imereti', geo: { lat: 42.2969, lng: 43.2789 },
+      },
+    ],
   },
   {
     slug: 'chiatura-cable-cars', name: 'Chiatura Cable Cars',
