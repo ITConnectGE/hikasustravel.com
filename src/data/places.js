@@ -679,7 +679,40 @@ export const cities = [
   },
   {
     slug: 'mestia', name: 'Mestia', region: 'svaneti', published: true,
-    seoKey: 'mestia', contentKey: 'mestia', image: '/images/files/georgia-home.jpg',
+    seoKey: 'mestia', contentKey: 'mestia',
+    // Hero = owner's own Mestia Svan-tower photo. Native ceiling is 1541 (BELOW
+    // the usual 1600 rung), so the ladder is 768/1200/1541 only — NO 1600/2400
+    // variant is generated or referenced, and the ImageObject contentUrl points at
+    // the 1541 rung. Visible background is the `.hero--mestia` CSS class (heroClass)
+    // so the image-set ladder + `background-position: center center` apply;
+    // HeroSection then omits its inline background. Distinct from the Ushguli
+    // Svan-tower images and the Svaneti region page images — all kept.
+    image: '/images/files/mestia-svan-tower-houses-svaneti-georgia-1541.webp',
+    imageAvif: '/images/files/mestia-svan-tower-houses-svaneti-georgia-1541.avif',
+    heroClass: 'hero--mestia',
+    // Dedicated 1.91:1 social-share image (og:image / twitter:image).
+    ogImage: { src: '/images/files/mestia-svan-tower-houses-svaneti-georgia-og.jpg', width: 1200, height: 630 },
+    // Image SEO/AEO metadata (owner's own photo → brand credit, set by CityPage).
+    // Hero is a CSS background (no <img alt>), so the localized alt lives here and
+    // is emitted as the ImageObject caption + og:image:alt/twitter:image:alt per
+    // locale. Verbatim from mestia-hero-image-package.md. width/height = 1541 rung.
+    imageMeta: {
+      width: 1541, height: 1020,
+      name: 'Svan stone tower houses in Mestia with shingled roofs and a forested slope behind, Upper Svaneti, Georgia',
+      description: 'Svan stone tower houses in Mestia, seen past a dry-stone wall in the foreground, with shingle-roofed dwellings attached at their base and a forested slope and river gorge behind. Mestia is the administrative centre of Mestia Municipality in Samegrelo-Zemo Svaneti, in the Greater Caucasus of Georgia (the country).',
+      locationName: 'Mestia, Mestia Municipality, Samegrelo-Zemo Svaneti, Georgia',
+      locality: 'Mestia', region: 'Samegrelo-Zemo Svaneti', country: 'GE',
+      geo: { lat: 43.04556, lng: 42.72972 },
+      alt: {
+        en: 'Svan stone tower houses in Mestia with shingled roofs and a forested slope behind, Upper Svaneti, Georgia',
+        de: 'Swanische Wehrtürme in Mestia mit Schindeldächern vor bewaldetem Hang, Oberswanetien, Georgien',
+        fr: "Tours-maisons svanes à Mestia, toits de bardeaux et versant boisé à l'arrière, Haute-Svanétie, Géorgie",
+        es: 'Torres-vivienda svanas en Mestia, con tejados de tablilla y ladera boscosa detrás, Alta Esvanetia, Georgia',
+        nl: 'Svanetische woontorens in Mestia met houten daken en een beboste helling erachter, Boven-Svaneti, Georgië',
+        cs: 'Svanské obytné věže v Mestii se šindelovými střechami a zalesněným svahem v pozadí, Horní Svanetie, Gruzie',
+        pl: 'Swańskie wieże mieszkalne w Mestii z gontowymi dachami i zalesionym stokiem w tle, Górna Swanetia, Gruzja',
+      },
+    },
     thingsToDo: {
       seoKey: 'thingsToDoMestia', contentKey: 'thingsToDoMestia', image: '/images/files/georgia-home.jpg',
       address: { addressLocality: 'Mestia' },
@@ -2891,7 +2924,14 @@ export function publishedDestinationPages() {
     }
   }
   for (const c of cities) if (c.published) {
-    pages.push({ path: cleanPath(cityPath(c.slug)), seoKey: c.seoKey, image: c.image })
+    pages.push({
+      path: cleanPath(cityPath(c.slug)), seoKey: c.seoKey, image: c.image,
+      // Optional image-SEO extras (only cities that define them, e.g. Mestia):
+      // dedicated social image + dimensions + per-locale alt for the static
+      // og:image / og:image:alt tags. Mirrors the sites branch below.
+      ogImage: c.ogImage?.src, ogImageWidth: c.ogImage?.width, ogImageHeight: c.ogImage?.height,
+      imageAlt: c.imageMeta?.alt,
+    })
     if (c.thingsToDo) {
       pages.push({
         path: cleanPath(thingsToDoPath(c.slug)),

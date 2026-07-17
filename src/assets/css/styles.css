@@ -466,6 +466,40 @@ section {
     );
   }
 }
+/* Mestia hero — per-page CSS background (same opt-in mechanism as .hero--juta).
+   Native ceiling is 1541, BELOW the usual 1600 rung, so the ladder is exactly
+   768/1200/1541 with the top breakpoint at min-width:1200 — there is NO 1600 or
+   2400 rung. `background-position: center center` (default): the towers span the
+   frame height and need no bias. The .coverme::after overlay already provides the
+   readable text layer, so the package's optional ::before scrim is NOT enabled.
+   plain url() line = fallback for browsers without image-set(). */
+.hero--mestia {
+  background-image: url("/images/files/mestia-svan-tower-houses-svaneti-georgia-1200.webp");
+  background-image: image-set(
+    url("/images/files/mestia-svan-tower-houses-svaneti-georgia-768.avif") type("image/avif"),
+    url("/images/files/mestia-svan-tower-houses-svaneti-georgia-768.webp") type("image/webp")
+  );
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+@media (min-width: 768px) {
+  .hero--mestia {
+    background-image: image-set(
+      url("/images/files/mestia-svan-tower-houses-svaneti-georgia-1200.avif") type("image/avif"),
+      url("/images/files/mestia-svan-tower-houses-svaneti-georgia-1200.webp") type("image/webp")
+    );
+  }
+}
+@media (min-width: 1200px) {
+  .hero--mestia {
+    background-image: image-set(
+      url("/images/files/mestia-svan-tower-houses-svaneti-georgia-1541.avif") type("image/avif"),
+      url("/images/files/mestia-svan-tower-houses-svaneti-georgia-1541.webp") type("image/webp")
+    );
+  }
+}
+/* No rung above 1541 exists. Do not add a 1600 or 2400 breakpoint. */
 .centerme {
   text-align: center !important;
 }

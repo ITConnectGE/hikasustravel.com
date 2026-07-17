@@ -57,6 +57,11 @@ export default function CityPage() {
   )
   const path = published ? cityPath(city.slug).replace(/^\//, '') : ''
   const heroImage = published ? city.image : null
+  // Localized alt for the hero when the city ships an `imageMeta` block (hero is a
+  // CSS background with no <img alt>): carried into the hero ImageObject caption
+  // and og:image:alt / twitter:image:alt per locale. Mirrors SitePage's imageMeta.
+  const heroImageMeta = published ? city.imageMeta : null
+  const heroAlt = heroImageMeta ? (heroImageMeta.alt[lang] || heroImageMeta.alt.en) : null
   // Only link the things-to-do guide when the city actually has one published.
   const hasThingsToDo = published && !!city.thingsToDo
 
@@ -197,6 +202,35 @@ export default function CityPage() {
             geo: { '@type': 'GeoCoordinates', latitude: img.geo.lat, longitude: img.geo.lng },
           },
         })),
+        // Hero ImageObject via the `imageMeta` block (for heroes whose file naming
+        // or single-variant ceiling doesn't fit the gallery/imageObjects builders).
+        // contentUrl points at the hero file itself (`city.image`); caption is the
+        // localized alt; the cover is representativeOfPage. Mirrors SitePage.
+        ...(heroImageMeta ? [{
+          '@type': 'ImageObject',
+          contentUrl: `${SITE_URL}${heroImage}`,
+          url: `${SITE_URL}${heroImage}`,
+          width: heroImageMeta.width,
+          height: heroImageMeta.height,
+          representativeOfPage: true,
+          name: heroImageMeta.name,
+          caption: heroAlt,
+          description: heroImageMeta.description,
+          creator: { '@type': 'Organization', name: BRAND },
+          creditText: BRAND,
+          copyrightNotice: `© ${BRAND}`,
+          contentLocation: {
+            '@type': 'Place',
+            name: heroImageMeta.locationName,
+            address: {
+              '@type': 'PostalAddress',
+              addressLocality: heroImageMeta.locality,
+              addressRegion: heroImageMeta.region,
+              addressCountry: heroImageMeta.country,
+            },
+            geo: { '@type': 'GeoCoordinates', latitude: heroImageMeta.geo.lat, longitude: heroImageMeta.geo.lng },
+          },
+        }] : []),
         {
           '@type': 'BreadcrumbList',
           itemListElement: trail.map((c, i) => ({
@@ -219,7 +253,17 @@ export default function CityPage() {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [published, lang, path, seo.description, heroImage, faqItems, gallery])
 
-  useSEO(published ? { ...seo, lang, path, image: heroImage, jsonLd } : {})
+  useSEO(published ? {
+    ...seo, lang, path,
+    image: heroImage,
+    imageAlt: heroAlt,
+    // Prefer a dedicated 1.91:1 social image (og:image/twitter:image) when the
+    // city defines one; otherwise useSEO falls back to the hero image.
+    ogImage: city.ogImage?.src,
+    ogImageWidth: city.ogImage?.width,
+    ogImageHeight: city.ogImage?.height,
+    jsonLd,
+  } : {})
 
   if (!published) {
     // Renamed-slug redirect (the SPA mirror of the static stubs emitted by
@@ -238,7 +282,7 @@ export default function CityPage() {
       <div className="dest-breadcrumbs">
         <Breadcrumbs trail={trail} />
       </div>
-      <HeroSection image={heroImage} imageAvif={city.imageAvif} title={city.name} />
+      <HeroSection image={heroImage} imageAvif={city.imageAvif} bgClass={city.heroClass} title={city.name} />
       <section className="page-items about-georgia">
         <EntityToursTag type="city" slug={city.slug} name={city.name} />
         <div ref={contentRef}>
