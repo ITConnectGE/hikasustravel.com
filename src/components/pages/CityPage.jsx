@@ -179,9 +179,12 @@ export default function CityPage() {
           name: img.name,
           caption: img.caption,
           description: img.description,
-          creator: { '@type': 'Organization', name: BRAND },
-          creditText: BRAND,
-          copyrightNotice: `© ${BRAND}`,
+          // Credit defaults to the brand (our own photos), but an image may
+          // override it — e.g. an unresolved/third-party origin left as a
+          // REPLACE-BRAND placeholder until attribution is confirmed.
+          creator: { '@type': 'Organization', name: img.creator || BRAND },
+          creditText: img.creditText || BRAND,
+          copyrightNotice: img.copyrightNotice || `© ${BRAND}`,
           contentLocation: {
             '@type': 'Place',
             name: img.locationName,

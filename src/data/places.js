@@ -646,7 +646,31 @@ export const cities = [
   },
   {
     slug: 'ushguli', name: 'Ushguli', region: 'svaneti', published: true,
-    seoKey: 'ushguli', contentKey: 'ushguli', image: '/images/files/georgia-home.jpg',
+    seoKey: 'ushguli', contentKey: 'ushguli',
+    // Cover/hero = Ushguli Svan-towers photo (13:8, native max 2000 — the source
+    // was fake-upscaled, so 2000 is the honest detail ceiling; no 2400 variant),
+    // replacing the generic georgia-home.jpg placeholder. Rendered as the
+    // CSS-background hero via HeroSection image-set (webp `image` + avif
+    // `imageAvif`); og:image/twitter auto-derive from `image`. Distinct from the
+    // Svaneti region page's own ushguli-village-shkhara-svaneti-georgia — both kept.
+    image: '/images/files/ushguli-svan-towers-village-svaneti-georgia-2000w.webp',
+    imageAvif: '/images/files/ushguli-svan-towers-village-svaneti-georgia-2000w.avif',
+    // Hero ImageObject → CityPage JSON-LD @graph (representativeOfPage:true; the
+    // hero is a CSS background with no <img alt>, so this carries the metadata).
+    // Verbatim from the image SEO package. ⚠️ CREDIT UNRESOLVED: the image shows
+    // signs of being an upscaled/stock file, not an owner original — creditText /
+    // copyrightNotice / creator are intentionally left as REPLACE-BRAND until the
+    // origin is confirmed. Do NOT set these to Hikasus Travel yet.
+    imageObjects: [
+      {
+        base: 'ushguli-svan-towers-village-svaneti-georgia', width: 2000, height: 1231, hero: true,
+        name: 'Svan tower-houses in Ushguli, Upper Svaneti, Georgia',
+        caption: 'Medieval Svan stone tower-houses in Ushguli village above the green Enguri valley, Upper Svaneti',
+        description: "Medieval Svan stone tower-houses in the Ushguli community at around 2,100 m at the head of the Enguri gorge, Upper Svaneti — a UNESCO World Heritage Site and one of Europe's highest continuously inhabited settlements, Georgia.",
+        creditText: 'REPLACE-BRAND', copyrightNotice: '© REPLACE-BRAND', creator: 'REPLACE-BRAND',
+        locationName: 'Ushguli', locality: 'Ushguli', region: 'Svaneti', geo: { lat: 42.9169, lng: 43.0136 },
+      },
+    ],
     thingsToDo: {
       seoKey: 'thingsToDoUshguli', contentKey: 'thingsToDoUshguli', image: '/images/files/georgia-home.jpg',
       address: { addressLocality: 'Ushguli' },
