@@ -2405,6 +2405,63 @@ export const sites = [
         pl: 'Hamaki na alpejskiej łące nad wsią Juta, na końcu doliny masyw Chaukhi, Kazbegi, Gruzja',
       },
     },
+    // Two contextual inline body photos (real <figure> in the per-locale body).
+    // Rendered via SitePage's inlineImageObjects @graph map: stable @id
+    // (#inline-image-1/2), contentUrl at the 1448 rung (no `w` suffix), localized
+    // name+caption, brand credit, NO representativeOfPage (that's the hero's).
+    // Verbatim from juta-inline-images-package.md. Image 2 is deliberately kept at
+    // Kazbegi-municipality level (the frame shows no verifiable Juta/Chaukhi
+    // feature) — no Juta/Chaukhi claim, coarse municipality geo.
+    inlineImageObjects: [
+      {
+        base: 'juta-valley-chaukhi-tents-camp-georgia', width: 1448, height: 1086, anchor: 'inline-image-1',
+        description: 'Trekking tents pitched on the grass valley floor above Juta, with a footpath crossing the meadow and the jagged peaks of the Chaukhi massif at the head of the valley under building cloud. Juta lies in Kazbegi Municipality, Mtskheta-Mtianeti, in the Greater Caucasus of Georgia (the country).',
+        locationName: 'Juta, Kazbegi Municipality, Mtskheta-Mtianeti, Georgia',
+        locality: 'Juta', region: 'Kazbegi', geo: { lat: 42.5236, lng: 44.7386 },
+        name: {
+          en: 'Trekking tents on the alpine meadow in Juta valley below the jagged Chaukhi peaks, Kazbegi, Georgia',
+          de: 'Trekkingzelte auf der Almwiese im Juta-Tal unterhalb der zerklüfteten Chaukhi-Gipfel, Kasbegi, Georgien',
+          fr: "Tentes de trek sur l'alpage de la vallée de Juta, sous les pics déchiquetés du Chaukhi, Kazbegi, Géorgie",
+          es: 'Tiendas de trekking en el prado alpino del valle de Juta, bajo los picos dentados del Chaukhi, Kazbegi, Georgia',
+          nl: 'Trekkingtenten op de alpenweide in de Juta-vallei onder de gekartelde Chaukhi-toppen, Kazbegi, Georgië',
+          cs: 'Trekové stany na alpské louce v údolí Juta pod rozeklanými vrcholy Chaukhi, Kazbegi, Gruzie',
+          pl: 'Namioty trekkingowe na alpejskiej łące w dolinie Juty pod poszarpanymi szczytami Chaukhi, Kazbegi, Gruzja',
+        },
+        caption: {
+          en: "The valley is the usual starting point for the walk up to the Chaukhi Pass, which is generally passable from the second half of June. The massif's highest summit reaches 3,842 metres.",
+          de: 'Das Tal ist der übliche Ausgangspunkt für den Aufstieg zum Chaukhi-Pass, der in der Regel ab der zweiten Junihälfte begehbar ist. Der höchste Gipfel des Massivs erreicht 3.842 Meter.',
+          fr: 'La vallée est le point de départ habituel de la montée vers le col de Chaukhi, généralement praticable à partir de la seconde moitié de juin. Le plus haut sommet du massif culmine à 3 842 mètres.',
+          es: 'El valle es el punto de partida habitual para subir al paso de Chaukhi, transitable por lo general desde la segunda mitad de junio. La cumbre más alta del macizo alcanza los 3.842 metros.',
+          nl: 'De vallei is het gebruikelijke vertrekpunt voor de tocht naar de Chaukhi-pas, die doorgaans vanaf de tweede helft van juni begaanbaar is. De hoogste top van het massief reikt tot 3.842 meter.',
+          cs: 'Údolí je obvyklým výchozím bodem pro výstup na průsmyk Chaukhi, který bývá schůdný od druhé poloviny června. Nejvyšší vrchol masivu dosahuje 3 842 metrů.',
+          pl: 'Dolina jest zwykłym punktem wyjścia na przełęcz Chaukhi, przejezdną zazwyczaj od drugiej połowy czerwca. Najwyższy szczyt masywu osiąga 3842 metry.',
+        },
+      },
+      {
+        base: 'kazbegi-winter-ridges-snow-georgia', width: 1448, height: 1086, anchor: 'inline-image-2',
+        description: 'Steep brown ridges streaked with snow above a shadowed valley in the Kazbegi mountains under a clear winter sky, with a small group of buildings on a spur and a track crossing the snow-covered slope in the foreground. Kazbegi Municipality lies in Mtskheta-Mtianeti, in the Greater Caucasus of Georgia (the country).',
+        locationName: 'Kazbegi Municipality, Mtskheta-Mtianeti, Georgia',
+        region: 'Kazbegi', geo: { lat: 42.6591, lng: 44.6414 },
+        name: {
+          en: 'Snow-streaked brown ridges above a valley in the Kazbegi mountains in winter, Greater Caucasus, Georgia',
+          de: 'Schneedurchzogene braune Bergrücken über einem Tal im Kasbegi-Gebirge im Winter, Großer Kaukasus, Georgien',
+          fr: "Crêtes brunes striées de neige au-dessus d'une vallée du massif de Kazbegi en hiver, Grand Caucase, Géorgie",
+          es: 'Crestas pardas veteadas de nieve sobre un valle de las montañas de Kazbegi en invierno, Gran Cáucaso, Georgia',
+          nl: 'Bruine bergruggen met sneeuwstrepen boven een vallei in het Kazbegi-gebergte in de winter, Grote Kaukasus, Georgië',
+          cs: 'Hnědé hřebeny protkané sněhem nad údolím v horách Kazbegi v zimě, Velký Kavkaz, Gruzie',
+          pl: 'Brązowe grzbiety poprzecinane śniegiem nad doliną w górach Kazbegi zimą, Wielki Kaukaz, Gruzja',
+        },
+        caption: {
+          en: 'Snow lingers on the Kazbegi ridges long past midwinter. The gravel roads into the side valleys of Khevi are dependable only in summer and early autumn.',
+          de: 'Auf den Kasbegi-Kämmen liegt weit über den Hochwinter hinaus Schnee. Die Schotterpisten in die Seitentäler von Chewi sind nur im Sommer und Frühherbst verlässlich befahrbar.',
+          fr: "La neige s'attarde sur les crêtes de Kazbegi bien après le cœur de l'hiver. Les pistes qui mènent aux vallées latérales de Khevi ne sont fiables qu'en été et au début de l'automne.",
+          es: 'La nieve permanece en las crestas de Kazbegi mucho después de pleno invierno. Las pistas de grava hacia los valles laterales de Khevi solo son fiables en verano y a principios de otoño.',
+          nl: 'Sneeuw blijft lang na midwinter op de kammen van Kazbegi liggen. De grindwegen naar de zijdalen van Chevi zijn alleen in de zomer en vroege herfst betrouwbaar.',
+          cs: 'Sníh se na hřebenech Kazbegi drží dlouho po vrcholu zimy. Šotolinové cesty do bočních údolí Khevi jsou spolehlivé jen v létě a na počátku podzimu.',
+          pl: 'Śnieg zalega na grzbietach Kazbegi długo po środku zimy. Szutrowe drogi w boczne doliny Chewi są przejezdne tylko latem i wczesną jesienią.',
+        },
+      },
+    ],
   },
   {
     slug: 'truso-valley', name: 'Truso Valley',

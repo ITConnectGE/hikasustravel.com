@@ -277,6 +277,36 @@ export default function SitePage() {
             geo: { '@type': 'GeoCoordinates', latitude: img.geo.lat, longitude: img.geo.lng },
           },
         })),
+        // Inline body images (real <figure> blocks in the per-locale content) that
+        // ship their variants WITHOUT the `w` filename suffix and need a stable
+        // per-image `@id` (e.g. #inline-image-1). Distinct from `imageObjects`
+        // above (which builds `-<width>w.webp` and flags the cover). name/caption
+        // are localized per locale; never representativeOfPage — that's the hero's.
+        ...(site.inlineImageObjects || []).map((img) => ({
+          '@type': 'ImageObject',
+          '@id': `${url}#${img.anchor}`,
+          contentUrl: `${SITE_URL}/images/files/${img.base}-${img.width}.webp`,
+          url: `${SITE_URL}/images/files/${img.base}-${img.width}.webp`,
+          width: img.width,
+          height: img.height,
+          name: (img.name && (img.name[lang] || img.name.en)) || '',
+          caption: (img.caption && (img.caption[lang] || img.caption.en)) || '',
+          description: img.description,
+          creator: { '@type': 'Organization', name: BRAND },
+          creditText: BRAND,
+          copyrightNotice: `© ${BRAND}`,
+          contentLocation: {
+            '@type': 'Place',
+            name: img.locationName,
+            address: {
+              '@type': 'PostalAddress',
+              addressLocality: img.locality,
+              addressRegion: img.region,
+              addressCountry: 'GE',
+            },
+            geo: { '@type': 'GeoCoordinates', latitude: img.geo.lat, longitude: img.geo.lng },
+          },
+        })),
         {
           '@type': 'BreadcrumbList',
           // Every ListItem must carry an `item` URL — Google flags a non-final

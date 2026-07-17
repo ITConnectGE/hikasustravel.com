@@ -15,6 +15,10 @@ export const SITE_URL = 'https://www.hikasustravel.com'
 export function withTrailingSlash(url) {
   if (typeof url !== 'string') return url
   if (url.endsWith('/')) return url
+  // A fragment identifier (e.g. a JSON-LD `@id` like `…/juta#inline-image-1`) must
+  // be left as-is — appending a slash would corrupt the fragment into
+  // `#inline-image-1/`, which is not the anchor it names.
+  if (url.includes('#')) return url
   // Only page paths get a slash — never the bare origin or a file asset.
   if (!url.startsWith(`${SITE_URL}/`)) return url
   const lastSegment = url.split('/').pop()
