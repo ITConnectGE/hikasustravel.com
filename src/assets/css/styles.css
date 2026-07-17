@@ -386,6 +386,46 @@ section {
   background: rgba(0, 0, 0, 0.35);
   pointer-events: none;
 }
+/* Juta hero — per-page CSS background. The package needs a responsive image-set()
+   ladder (768 → 2400) and a deliberate `background-position: center 40%` (keeps
+   the Chaukhi peaks framed on short desktop banners); neither is expressible via
+   HeroSection's inline single-width background, so it is defined here and opted
+   into with heroClass:'hero--juta'. size/repeat/overlay still come from .coverme;
+   the plain url() line is the fallback for browsers without image-set(). */
+.hero--juta {
+  background-image: url("/images/files/juta-valley-chaukhi-massif-hammocks-georgia-1600.webp");
+  background-image: image-set(
+    url("/images/files/juta-valley-chaukhi-massif-hammocks-georgia-768.avif") type("image/avif"),
+    url("/images/files/juta-valley-chaukhi-massif-hammocks-georgia-768.webp") type("image/webp")
+  );
+  background-position: center 40%;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+@media (min-width: 768px) {
+  .hero--juta {
+    background-image: image-set(
+      url("/images/files/juta-valley-chaukhi-massif-hammocks-georgia-1200.avif") type("image/avif"),
+      url("/images/files/juta-valley-chaukhi-massif-hammocks-georgia-1200.webp") type("image/webp")
+    );
+  }
+}
+@media (min-width: 1200px) {
+  .hero--juta {
+    background-image: image-set(
+      url("/images/files/juta-valley-chaukhi-massif-hammocks-georgia-1600.avif") type("image/avif"),
+      url("/images/files/juta-valley-chaukhi-massif-hammocks-georgia-1600.webp") type("image/webp")
+    );
+  }
+}
+@media (min-width: 1600px) {
+  .hero--juta {
+    background-image: image-set(
+      url("/images/files/juta-valley-chaukhi-massif-hammocks-georgia-2400.avif") type("image/avif"),
+      url("/images/files/juta-valley-chaukhi-massif-hammocks-georgia-2400.webp") type("image/webp")
+    );
+  }
+}
 .centerme {
   text-align: center !important;
 }

@@ -14,7 +14,7 @@ function heroBackground(image, imageAvif) {
   return webp
 }
 
-export default function HeroSection({ image, imageAvif, title, className = '', isTaxi = false }) {
+export default function HeroSection({ image, imageAvif, title, className = '', isTaxi = false, bgClass = '' }) {
   const sectionRef = useRef(null)
 
   const scrollToNext = () => {
@@ -22,11 +22,16 @@ export default function HeroSection({ image, imageAvif, title, className = '', i
     if (next) next.scrollIntoView({ behavior: 'smooth' })
   }
 
+  // A page may supply its own background via a CSS class (`bgClass`) — used when
+  // the hero needs a responsive image-set() ladder and/or a non-default
+  // background-position that an inline single-width background can't express
+  // (e.g. `.hero--juta`). In that case we omit the inline background-image so the
+  // class fully controls it; every other hero is unchanged (bgClass = '').
   return (
     <section
       ref={sectionRef}
-      className={`fullscreen coverme ${isTaxi ? 'taxi-item' : ''} ${className}`}
-      style={{ backgroundImage: heroBackground(image, imageAvif) }}
+      className={`fullscreen coverme ${isTaxi ? 'taxi-item' : ''} ${bgClass} ${className}`}
+      style={bgClass ? undefined : { backgroundImage: heroBackground(image, imageAvif) }}
     >
       <div className="hometop-item">
         <h1 className={isTaxi ? 'taxiH1' : ''}>{title}</h1>

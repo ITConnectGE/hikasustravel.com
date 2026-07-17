@@ -2336,7 +2336,42 @@ export const sites = [
     slug: 'juta', name: 'Juta & the Chaukhi Massif',
     parentType: 'city', parent: 'kazbegi', published: true,
     seoKey: 'juta', contentKey: 'juta',
-    image: '/images/files/georgia-home.jpg',
+    // Hero = owner's own Juta-valley photo (3:2, native 3140 → variants capped at
+    // 2400; NO 3140 variant), replacing the generic georgia-home.jpg placeholder.
+    // The visible hero background is defined by the `.hero--juta` CSS class
+    // (heroClass below) so the package's responsive image-set() ladder (768→2400)
+    // and the deliberate `background-position: center 40%` can be expressed;
+    // HeroSection then omits its inline background. `image`/`imageAvif` stay as the
+    // JSON-LD contentUrl + og-fallback references. First Kazbegi-cluster image —
+    // filename kept scoped to Juta (not genericised). Distinct from any future
+    // Kazbegi region-page image.
+    image: '/images/files/juta-valley-chaukhi-massif-hammocks-georgia-2400.webp',
+    imageAvif: '/images/files/juta-valley-chaukhi-massif-hammocks-georgia-2400.avif',
+    heroClass: 'hero--juta',
+    // Dedicated 1.91:1 social-share image (og:image / twitter:image) — the safe
+    // .jpg default for scrapers.
+    ogImage: { src: '/images/files/juta-valley-chaukhi-massif-hammocks-georgia-og.jpg', width: 1200, height: 630 },
+    // Image SEO/AEO metadata (owner's own photo → brand credit, set by SitePage).
+    // Hero is a CSS background (no <img alt>), so the localized alt lives here and
+    // is emitted as the ImageObject caption + og:image:alt/twitter:image:alt per
+    // locale. Verbatim from juta-hero-image-package.md. Region Kazbegi.
+    imageMeta: {
+      width: 2400, height: 1601,
+      name: 'Hammocks on an alpine meadow above Juta village, Chaukhi massif at the valley head, Kazbegi, Georgia',
+      description: 'View south up the Juta valley from a mountain camp above the village, with hammocks and deckchairs on the alpine meadow in the foreground and the jagged peaks of the Chaukhi massif at the head of the valley. Juta lies in Kazbegi Municipality, Mtskheta-Mtianeti, in the Greater Caucasus of Georgia (the country).',
+      locationName: 'Juta, Kazbegi Municipality, Mtskheta-Mtianeti, Georgia',
+      locality: 'Juta', region: 'Kazbegi', country: 'GE',
+      geo: { lat: 42.5236, lng: 44.7386 },
+      alt: {
+        en: 'Hammocks on an alpine meadow above Juta village, Chaukhi massif at the valley head, Kazbegi, Georgia',
+        de: 'Hängematten auf einer Almwiese oberhalb des Dorfes Juta, dahinter das Chaukhi-Massiv, Kasbegi, Georgien',
+        fr: 'Hamacs sur un alpage au-dessus du village de Juta, le massif de Chaukhi au fond de la vallée, Kazbegi, Géorgie',
+        es: 'Hamacas en un prado alpino sobre el pueblo de Juta, con el macizo de Chaukhi al fondo del valle, Kazbegi, Georgia',
+        nl: 'Hangmatten op een alpenweide boven het dorp Juta, met het Chaukhi-massief aan het einde van de vallei, Kazbegi, Georgië',
+        cs: 'Houpací sítě na alpské louce nad vesnicí Juta, v čele údolí masiv Chaukhi, Kazbegi, Gruzie',
+        pl: 'Hamaki na alpejskiej łące nad wsią Juta, na końcu doliny masyw Chaukhi, Kazbegi, Gruzja',
+      },
+    },
   },
   {
     slug: 'truso-valley', name: 'Truso Valley',

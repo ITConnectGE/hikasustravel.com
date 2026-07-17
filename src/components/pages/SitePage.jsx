@@ -325,7 +325,7 @@ export default function SitePage() {
       <div className="dest-breadcrumbs">
         <Breadcrumbs trail={trail} />
       </div>
-      <HeroSection image={heroImage} imageAvif={site.imageAvif} title={page.heroTitle || site.name} />
+      <HeroSection image={heroImage} imageAvif={site.imageAvif} bgClass={site.heroClass} title={page.heroTitle || site.name} />
       <section className="page-items about-georgia">
         <EntityToursTag type="site" slug={site.slug} name={site.name} />
         <div ref={contentRef}>
