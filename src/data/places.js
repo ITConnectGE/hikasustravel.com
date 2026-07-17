@@ -2377,7 +2377,42 @@ export const sites = [
     slug: 'truso-valley', name: 'Truso Valley',
     parentType: 'city', parent: 'kazbegi', published: true,
     seoKey: 'trusoValley', contentKey: 'trusoValley',
-    image: '/images/files/georgia-home.jpg',
+    // Hero = owner's own Truso-valley photo (3:2, native 6144 → variants capped at
+    // 2400; NO variant above 2400), replacing the generic georgia-home.jpg
+    // placeholder. Visible background is the `.hero--truso-valley` CSS class
+    // (heroClass below) so the package's responsive image-set() ladder (768→2400)
+    // and the deliberate `background-position: center 72%` (the tower + church sit
+    // low in a sky-less frame; a centred crop decapitates the church) can be
+    // expressed; HeroSection then omits its inline background. Second Kazbegi-
+    // cluster image — distinct from juta-valley-chaukhi-massif-hammocks-georgia
+    // (both kept). Village identity unresolved → valley-level naming, no village.
+    image: '/images/files/truso-valley-defensive-tower-church-georgia-2400.webp',
+    imageAvif: '/images/files/truso-valley-defensive-tower-church-georgia-2400.avif',
+    heroClass: 'hero--truso-valley',
+    // Dedicated 1.91:1 social-share image (og:image / twitter:image).
+    ogImage: { src: '/images/files/truso-valley-defensive-tower-church-georgia-og.jpg', width: 1200, height: 630 },
+    // Image SEO/AEO metadata (owner's own photo → brand credit, set by SitePage).
+    // Hero is a CSS background (no <img alt>), so the localized alt lives here and
+    // is emitted as the ImageObject caption + og:image:alt/twitter:image:alt per
+    // locale. Verbatim from truso-valley-hero-image-package.md — deliberately
+    // neutral-geographic (no village name, no border/access framing).
+    imageMeta: {
+      width: 2400, height: 1600,
+      name: 'Stone defensive tower and a small church below a ruined tower village, Truso Valley, Kazbegi, Georgia',
+      description: 'A tapering stone defensive tower and a small stone church with tiled roofs on the valley floor of Truso, with the ruins of an older tower village on the slope above. Truso Valley lies between the Greater Caucasus and Khokhi ranges in Kazbegi Municipality, Mtskheta-Mtianeti, in the high mountains of Georgia (the country).',
+      locationName: 'Truso Valley, Kazbegi Municipality, Mtskheta-Mtianeti, Georgia',
+      locality: 'Truso Valley', region: 'Kazbegi', country: 'GE',
+      geo: { lat: 42.5033, lng: 44.4497 },
+      alt: {
+        en: 'Stone defensive tower and a small church below a ruined tower village, Truso Valley, Kazbegi, Georgia',
+        de: 'Steinerner Wehrturm und kleine Kirche unterhalb eines verfallenen Turmdorfs, Truso-Tal, Kasbegi, Georgien',
+        fr: 'Tour de défense en pierre et petite église sous un village de tours en ruine, vallée de Truso, Kazbegi, Géorgie',
+        es: 'Torre defensiva de piedra e iglesia bajo un pueblo de torres en ruinas, valle de Truso, Kazbegi, Georgia',
+        nl: 'Stenen verdedigingstoren en kerkje onder een vervallen torendorp, Truso-vallei, Kazbegi, Georgië',
+        cs: 'Kamenná obranná věž a kostelík pod zříceninou věžové vesnice, údolí Truso, Kazbegi, Gruzie',
+        pl: 'Kamienna wieża obronna i kościół pod ruinami wieżowej wsi, dolina Truso, Kazbegi, Gruzja',
+      },
+    },
   },
   {
     slug: 'arsha-waterfall', name: 'Arsha Waterfall',

@@ -426,6 +426,46 @@ section {
     );
   }
 }
+/* Truso Valley hero — per-page CSS background (same opt-in mechanism as
+   .hero--juta). Ladder 768→2400 + deliberate `background-position: center 72%`:
+   the subject (tower + church) sits low in a sky-less frame, so a centred crop
+   decapitates the church. The .coverme::after overlay already provides the
+   readable text layer, so the package's optional ::before scrim is NOT enabled.
+   plain url() line = fallback for browsers without image-set(). */
+.hero--truso-valley {
+  background-image: url("/images/files/truso-valley-defensive-tower-church-georgia-1600.webp");
+  background-image: image-set(
+    url("/images/files/truso-valley-defensive-tower-church-georgia-768.avif") type("image/avif"),
+    url("/images/files/truso-valley-defensive-tower-church-georgia-768.webp") type("image/webp")
+  );
+  background-position: center 72%;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+@media (min-width: 768px) {
+  .hero--truso-valley {
+    background-image: image-set(
+      url("/images/files/truso-valley-defensive-tower-church-georgia-1200.avif") type("image/avif"),
+      url("/images/files/truso-valley-defensive-tower-church-georgia-1200.webp") type("image/webp")
+    );
+  }
+}
+@media (min-width: 1200px) {
+  .hero--truso-valley {
+    background-image: image-set(
+      url("/images/files/truso-valley-defensive-tower-church-georgia-1600.avif") type("image/avif"),
+      url("/images/files/truso-valley-defensive-tower-church-georgia-1600.webp") type("image/webp")
+    );
+  }
+}
+@media (min-width: 1600px) {
+  .hero--truso-valley {
+    background-image: image-set(
+      url("/images/files/truso-valley-defensive-tower-church-georgia-2400.avif") type("image/avif"),
+      url("/images/files/truso-valley-defensive-tower-church-georgia-2400.webp") type("image/webp")
+    );
+  }
+}
 .centerme {
   text-align: center !important;
 }
