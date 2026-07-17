@@ -415,7 +415,57 @@ export const cities = [
   },
   {
     slug: 'bakuriani', name: 'Bakuriani', region: 'samtskhe-javakheti', published: true,
-    seoKey: 'bakuriani', contentKey: 'bakuriani', image: '/images/files/georgia-home.jpg',
+    seoKey: 'bakuriani', contentKey: 'bakuriani',
+    // Cover/hero = our own Bakuriani ski-slope photo (16:9, native max 1600),
+    // replacing the generic georgia-home.jpg placeholder. Rendered as the
+    // CSS-background hero via HeroSection image-set (webp `image` + avif
+    // `imageAvif`); og:image/twitter auto-derive from `image`. No upscale.
+    image: '/images/files/bakuriani-ski-slope-georgia-1600w.webp',
+    imageAvif: '/images/files/bakuriani-ski-slope-georgia-1600w.avif',
+    // Contextual body photos (our own). The 4 non-hero images render as real
+    // inline <figure> blocks embedded in the per-locale body HTML (pages.json),
+    // matched to their descriptions. `imageObjects` feeds ONE ImageObject per
+    // photo into the CityPage JSON-LD @graph (brand credit Hikasus Travel; the
+    // cover is flagged hero → representativeOfPage). contentUrl uses the variant
+    // named by `width`. Region Samtskhe-Javakheti, locality Bakuriani.
+    // Verbatim from the image SEO package (REPLACE-BRAND → Hikasus Travel).
+    imageObjects: [
+      {
+        base: 'bakuriani-ski-slope-georgia', width: 1600, height: 900, hero: true,
+        name: 'Ski slope at Bakuriani, Samtskhe-Javakheti, Georgia',
+        caption: 'Skiers on a groomed piste beside a chairlift among snow-covered spruce forest at Bakuriani',
+        description: 'Skiers on a groomed piste beside a chairlift at Bakuriani ski resort, on the northern slope of the Trialeti Range at about 1,700 m, Borjomi municipality, Samtskhe-Javakheti, Georgia.',
+        locationName: 'Bakuriani', locality: 'Bakuriani', region: 'Samtskhe-Javakheti', geo: { lat: 41.7500, lng: 43.5330 },
+      },
+      {
+        base: 'bakuriani-chairlift-forest-georgia', width: 1600, height: 900,
+        name: 'Chairlift through spruce forest at Bakuriani, Georgia',
+        caption: 'A chairlift climbing through snow-laden spruce forest toward the summit at Bakuriani',
+        description: 'A chairlift rising through snow-covered spruce forest toward the summit at Bakuriani ski resort, Samtskhe-Javakheti, Georgia.',
+        locationName: 'Bakuriani', locality: 'Bakuriani', region: 'Samtskhe-Javakheti', geo: { lat: 41.7500, lng: 43.5330 },
+      },
+      {
+        base: 'bakuriani-mountain-panorama-georgia', width: 1200, height: 900,
+        name: 'Mountain panorama at Bakuriani, Georgia',
+        caption: 'Snow-covered ridges and open pistes seen from a summit at Bakuriani',
+        description: 'Snow-covered ridges and open pistes above the tree line at Bakuriani ski resort, looking across the Trialeti Range, Samtskhe-Javakheti, Georgia.',
+        locationName: 'Bakuriani', locality: 'Bakuriani', region: 'Samtskhe-Javakheti', geo: { lat: 41.7500, lng: 43.5330 },
+      },
+      {
+        base: 'bakuriani-chairlift-view-georgia', width: 2104, height: 1216,
+        name: 'View from a chairlift at Bakuriani, Georgia',
+        caption: 'View from a chairlift over snowy forest toward a distant peak at Bakuriani',
+        description: 'The view from a chairlift at Bakuriani over snow-covered forest toward the peaks of the Trialeti Range, Samtskhe-Javakheti, Georgia.',
+        locationName: 'Bakuriani', locality: 'Bakuriani', region: 'Samtskhe-Javakheti', geo: { lat: 41.7500, lng: 43.5330 },
+      },
+      {
+        base: 'bakuriani-slope-cafe-georgia', width: 1600, height: 2644,
+        name: 'Slope-side cafe on a snowy plateau at Bakuriani, Georgia',
+        caption: 'Skiers and a slope-side cafe on a snowy plateau with mountain views at Bakuriani',
+        description: 'Skiers and a slope-side cafe on a snowy plateau at Bakuriani ski resort, with the snow-covered ridges of the Trialeti Range beyond, Samtskhe-Javakheti, Georgia.',
+        locationName: 'Bakuriani', locality: 'Bakuriani', region: 'Samtskhe-Javakheti', geo: { lat: 41.7500, lng: 43.5330 },
+      },
+    ],
     thingsToDo: {
       seoKey: 'thingsToDoBakuriani', contentKey: 'thingsToDoBakuriani', image: '/images/files/georgia-home.jpg',
       address: { addressLocality: 'Bakuriani' },
