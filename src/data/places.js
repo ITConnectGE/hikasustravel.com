@@ -2035,7 +2035,50 @@ export const sites = [
     slug: 'uplistsikhe', name: 'Uplistsikhe',
     parentType: 'city', parent: 'gori', formerParent: 'shida-kartli', published: true,
     seoKey: 'uplistsikhe', contentKey: 'uplistsikhe',
-    image: '/images/files/georgia-home.jpg',
+    // Cover/hero = our own Prince's Church photo (16:9, native max 1600),
+    // replacing the generic georgia-home.jpg placeholder. Rendered as the
+    // CSS-background hero via HeroSection image-set (webp `image` + avif
+    // `imageAvif`); og:image/twitter auto-derive from `image`. No upscale.
+    // Distinct from the Gori page's own uplistsikhe-cave-town-georgia — both kept.
+    image: '/images/files/uplistsikhe-princes-church-basilica-georgia-1600w.webp',
+    imageAvif: '/images/files/uplistsikhe-princes-church-basilica-georgia-1600w.avif',
+    // Contextual body photos (our own). The 3 non-hero images render as real
+    // inline <figure> blocks embedded in the per-locale body HTML (pages.json),
+    // matched to their descriptions. `imageObjects` feeds ONE ImageObject per
+    // photo into the SitePage JSON-LD @graph (brand credit Hikasus Travel; the
+    // cover is flagged hero → representativeOfPage). contentUrl uses the variant
+    // named by `width`. Region Shida Kartli, locality Uplistsikhe.
+    // Verbatim from the image SEO package (REPLACE-BRAND → Hikasus Travel).
+    imageObjects: [
+      {
+        base: 'uplistsikhe-princes-church-basilica-georgia', width: 1600, height: 900, hero: true,
+        name: "Prince's Church basilica at Uplistsikhe, Shida Kartli, Georgia",
+        caption: "The 10th-century Prince's Church basilica above the rock-cut caves of Uplistsikhe",
+        description: "Uplistsulis Eklesia, the 10th-century triple-nave Prince's Church, standing above the rock-cut caves of Uplistsikhe cave town, built over what was probably the site's most important pagan temple, Shida Kartli, Georgia.",
+        locationName: 'Uplistsikhe', locality: 'Uplistsikhe', region: 'Shida Kartli', geo: { lat: 41.9686, lng: 44.2072 },
+      },
+      {
+        base: 'uplistsikhe-rock-cut-halls-georgia', width: 1600, height: 900,
+        name: 'Rock-cut halls at Uplistsikhe, Shida Kartli, Georgia',
+        caption: 'Large rock-cut halls with arched ceilings carved into the sandstone at Uplistsikhe',
+        description: 'Large rock-cut halls with arched ceilings on the central terraces of Uplistsikhe cave town, including chambers such as the Hall of Queen Tamar and the Temple of Makvliani, Shida Kartli, Georgia.',
+        locationName: 'Uplistsikhe', locality: 'Uplistsikhe', region: 'Shida Kartli', geo: { lat: 41.9686, lng: 44.2072 },
+      },
+      {
+        base: 'uplistsikhe-cave-dwellings-walls-georgia', width: 1600, height: 900,
+        name: 'Cave dwellings and walls at Uplistsikhe, Shida Kartli, Georgia',
+        caption: 'Cave dwellings and cobblestone retaining walls along the streets of Uplistsikhe',
+        description: 'Cave dwellings, terraces and cobblestone retaining walls in Uplistsikhe cave town, a rock-hewn settlement of some 40,000 square metres where around 150 of an estimated 700 caves survive, Shida Kartli, Georgia.',
+        locationName: 'Uplistsikhe', locality: 'Uplistsikhe', region: 'Shida Kartli', geo: { lat: 41.9686, lng: 44.2072 },
+      },
+      {
+        base: 'uplistsikhe-mtkvari-valley-view-georgia', width: 1600, height: 900,
+        name: 'View over the Mtkvari valley from Uplistsikhe, Shida Kartli, Georgia',
+        caption: 'The Mtkvari River and Kartli plain seen from the carved rock plateau of Uplistsikhe',
+        description: 'The Mtkvari (Kura) River and the Kartli plain seen from the rock plateau of Uplistsikhe; the river formed the cave town’s natural defence and its valley carried the Silk Road caravan route, Shida Kartli, Georgia.',
+        locationName: 'Uplistsikhe', locality: 'Uplistsikhe', region: 'Shida Kartli', geo: { lat: 41.9686, lng: 44.2072 },
+      },
+    ],
   },
   {
     slug: 'ateni-sioni', name: 'Ateni Sioni',
