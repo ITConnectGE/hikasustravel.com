@@ -1919,11 +1919,11 @@ export const tours = [
     "itinerary": [
       {
         "title": "Day 1 — Arrival in Tbilisi",
-        "content": "<p>Your driver meets you at Tbilisi International Airport and takes you to your hotel in the city. The rest of the day is free to settle in and rest after your flight, so you arrive at the mountains the next day feeling ready. If you're up for it, there's time for a short walk or a meal in town, but there's no plan today beyond a good night's sleep.</p><ul><li>Arrival and private airport transfer;</li><li>Overnight stay in Tbilisi;</li><li><strong>Driving duration:</strong> about 30 minutes</li></ul>"
+        "content": "<p>Your driver meets you at Tbilisi International Airport and takes you to your hotel in the city. The rest of the day is free to settle in and rest after your flight, so you arrive at the mountains the next day feeling ready. If you're up for it, there's time for a short walk or a meal in town, but there's no plan today beyond a good night's sleep.</p><ul><li>Arrival and private airport transfer;</li><li>Overnight stay in Tbilisi;</li><li><strong>Driving duration:</strong> 30 minutes</li></ul>"
       },
       {
         "title": "Day 2 — Tbilisi to Gudauri",
-        "content": "<p>After breakfast you leave the city and head north into the Greater Caucasus along the Georgian Military Highway. It's a scenic drive at any time of year, but in winter it's especially striking, with the landscape turning fully alpine as you climb toward the resort.</p><p>You'll reach Gudauri in the afternoon and check into your hotel. The rest of the day is yours — sort out your lift pass, have a look around the resort, or simply relax and get used to the mountain air before your first day on the slopes.</p><ul><li>Morning: scenic transfer from Tbilisi to Gudauri;</li><li>Afternoon: hotel check-in and free time;</li><li>Overnight stay in Gudauri;</li><li><strong>Driving duration:</strong> about 2.5 hours</li></ul>"
+        "content": "<p>After breakfast you leave the city and head north into the Greater Caucasus along the Georgian Military Highway. It's a scenic drive at any time of year, but in winter it's especially striking, with the landscape turning fully alpine as you climb toward the resort.</p><p>You'll reach Gudauri in the afternoon and check into your hotel. The rest of the day is yours — sort out your lift pass, have a look around the resort, or simply relax and get used to the mountain air before your first day on the slopes.</p><ul><li>Morning: scenic transfer from Tbilisi to Gudauri;</li><li>Afternoon: hotel check-in and free time;</li><li>Overnight stay in Gudauri;</li><li><strong>Driving duration:</strong> 2.5 hours</li></ul>"
       },
       {
         "title": "Day 3 — First day on the slopes",
@@ -1943,7 +1943,7 @@ export const tours = [
       },
       {
         "title": "Day 7 — Gudauri to Tbilisi Airport",
-        "content": "<p>After breakfast you check out of your hotel. Depending on your flight time, there may be a little of the morning left for a slow start or a short walk before your driver collects you. From there, it is the drive back down the Georgian Military Highway to Tbilisi International Airport for your departure.</p><p>In winter, the departure time should allow enough margin for mountain road and weather conditions.</p><ul><li>Hotel check-out and transfer to Tbilisi International Airport;</li><li>End of the tour;</li><li><strong>Driving duration:</strong> about 2.5 hours, subject to winter road and weather conditions</li></ul>"
+        "content": "<p>After breakfast you check out of your hotel. Depending on your flight time, there may be a little of the morning left for a slow start or a short walk before your driver collects you. From there, it is the drive back down the Georgian Military Highway to Tbilisi International Airport for your departure.</p><p>In winter, the departure time should allow enough margin for mountain road and weather conditions.</p><ul><li>Hotel check-out and transfer to Tbilisi International Airport;</li><li>End of the tour;</li><li><strong>Driving duration:</strong> 2.5 hours, subject to winter road and weather conditions</li></ul>"
       }
     ],
     "accommodations": [
