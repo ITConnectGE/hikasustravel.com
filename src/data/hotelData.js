@@ -175,12 +175,17 @@ const hotelData = {
       'Surrounded by cafés, restaurants & shops',
     ],
   },
-  // Hotels used by the 7-Day Gudauri Ski Tour. No hosted photos yet (images: []),
-  // so the modal shows its empty-hero state; add files to /public/images/hotels/
-  // and populate `images` later. Descriptions are our own wording; facts (stars,
-  // ski access, spa/pool, altitude, location) are from public hotel information.
+  // Hotels used by the 7-Day Gudauri Ski Tour. Photos are each hotel's own images
+  // (from their official sites / public listings). Descriptions are our own
+  // wording; facts (stars, ski access, spa/pool, altitude, location) are from
+  // public hotel information.
   'Ambassadori': {
-    images: [],
+    images: [
+      { src: '/images/hotels/ambassadori.jpg', alt: 'Ambassadori Tbilisi Hotel grand entrance and facade in the city centre, Georgia' },
+      { src: '/images/hotels/ambassadori-2.jpg', alt: 'Ambassadori Tbilisi Hotel lobby with chandelier and marble floor' },
+      { src: '/images/hotels/ambassadori-3.jpg', alt: 'Ambassadori Tbilisi Hotel elegant classic guest room' },
+      { src: '/images/hotels/ambassadori-4.jpg', alt: 'Ambassadori Tbilisi Hotel suite living room with city views' },
+    ],
     stars: 5,
     description: 'A polished five-star retreat on historic Shavteli Street, right in the heart of Tbilisi\'s Old Town. Ambassadori pairs elegant, spacious rooms with a full spa and indoor pool, two restaurants and a rooftop terrace — a refined, central base within easy walking distance of the sulfur baths, Narikala Fortress and the city\'s landmarks.',
     amenities: [
@@ -198,7 +203,12 @@ const hotelData = {
     ],
   },
   'Gudauri Lodge': {
-    images: [],
+    images: [
+      { src: '/images/hotels/gudauri-lodge.webp', alt: 'Gudauri Lodge modern hotel building in the snowy Caucasus mountains, Gudauri, Georgia' },
+      { src: '/images/hotels/gudauri-lodge-2.webp', alt: 'Gudauri Lodge suite living room with snowy mountain views' },
+      { src: '/images/hotels/gudauri-lodge-3.webp', alt: 'Gudauri Lodge contemporary twin guest room' },
+      { src: '/images/hotels/gudauri-lodge-4.webp', alt: 'Gudauri Lodge library and lounge area' },
+    ],
     stars: 5,
     description: 'A contemporary five-star mountain lodge set right beside the pistes in the center of Gudauri, with genuine ski-in, ski-out access. After a day on the snow you can unwind in the wellness center — indoor and outdoor pools, an outdoor hot tub, sauna and steam room — then dine in the signature Georgian restaurant. Spacious modern rooms, a ski depot and a sun terrace make it a comfortable, self-contained base for a ski week.',
     amenities: [
@@ -216,7 +226,12 @@ const hotelData = {
     ],
   },
   'Marco Polo': {
-    images: [],
+    images: [
+      { src: '/images/hotels/marco-polo.webp', alt: 'Marco Polo Hotel Gudauri illuminated at night in the winter mountains, Georgia' },
+      { src: '/images/hotels/marco-polo-2.webp', alt: 'Marco Polo Hotel Gudauri indoor swimming pool with mountain views' },
+      { src: '/images/hotels/marco-polo-3.webp', alt: 'Marco Polo Hotel Gudauri lobby lounge with sofas and staircase' },
+      { src: '/images/hotels/marco-polo-4.webp', alt: 'Marco Polo Hotel Gudauri comfortable guest room' },
+    ],
     stars: 5,
     description: 'Gudauri\'s original ski hotel, welcoming guests since 1988 and still one of the resort\'s landmarks. Marco Polo sits slope-side at around 2,000 metres with ski-in, ski-out access, backed by a large spa and wellness center — indoor and outdoor pools, saunas and a hot tub — plus a bowling alley, padel courts and the Soliko restaurant serving Georgian and European cuisine. A lively, full-service base in the middle of the resort.',
     amenities: [
@@ -234,7 +249,12 @@ const hotelData = {
     ],
   },
   'Gudauri Inn': {
-    images: [],
+    images: [
+      { src: '/images/hotels/gudauri-inn.webp', alt: 'Gudauri Inn mountain-view lounge with hanging chairs, Gudauri, Georgia' },
+      { src: '/images/hotels/gudauri-inn-2.webp', alt: 'Gudauri Inn comfortable double guest room' },
+      { src: '/images/hotels/gudauri-inn-3.webp', alt: 'Gudauri Inn bright twin guest room' },
+      { src: '/images/hotels/gudauri-inn-4.webp', alt: 'Gudauri Inn twin guest room with balcony and mountain views' },
+    ],
     stars: 4,
     description: 'A comfortable, easy-going hotel in the heart of Gudauri at 2,200 metres, with a relaxed mountain atmosphere and wide views over the surrounding peaks. It has its own wellness center with an indoor pool, jacuzzi and sauna, a restaurant serving Georgian and international dishes, and a bar for local wines. Good value and welcoming, it makes a solid classic-tier base for a Gudauri ski trip.',
     amenities: [
