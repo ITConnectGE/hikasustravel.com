@@ -606,6 +606,42 @@ section {
   }
 }
 /* No rung above 1448 exists. Do not add a 1600 or 2400 breakpoint. */
+/* Vardzia hero — per-page CSS background (same opt-in mechanism as
+   .hero--chronicles). Owner's own drone photo of the honeycombed cave-monastery
+   cliff face. Native ceiling is 1448, BELOW the usual 1600 rung, so the ladder is
+   exactly 768/1200/1448 with the top breakpoint at min-width:1200 — there is NO
+   1600 or 2400 rung. `background-position: center center` (default): the cliff
+   face fills the frame with sky top-right, so it stays framed at every crop and
+   needs no positioning bias. The .coverme::after overlay already provides the
+   readable text layer, so the package's optional ::before scrim is NOT enabled.
+   plain url() line = fallback for browsers without image-set(). */
+.hero--vardzia {
+  background-image: url("/images/files/vardzia-cave-monastery-cliff-face-georgia-1200.webp");
+  background-image: image-set(
+    url("/images/files/vardzia-cave-monastery-cliff-face-georgia-768.avif") type("image/avif"),
+    url("/images/files/vardzia-cave-monastery-cliff-face-georgia-768.webp") type("image/webp")
+  );
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+@media (min-width: 768px) {
+  .hero--vardzia {
+    background-image: image-set(
+      url("/images/files/vardzia-cave-monastery-cliff-face-georgia-1200.avif") type("image/avif"),
+      url("/images/files/vardzia-cave-monastery-cliff-face-georgia-1200.webp") type("image/webp")
+    );
+  }
+}
+@media (min-width: 1200px) {
+  .hero--vardzia {
+    background-image: image-set(
+      url("/images/files/vardzia-cave-monastery-cliff-face-georgia-1448.avif") type("image/avif"),
+      url("/images/files/vardzia-cave-monastery-cliff-face-georgia-1448.webp") type("image/webp")
+    );
+  }
+}
+/* No rung above 1448 exists (Vardzia). Do not add a 1600 or 2400 breakpoint. */
 .centerme {
   text-align: center !important;
 }

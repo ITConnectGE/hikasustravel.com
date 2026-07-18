@@ -2458,7 +2458,73 @@ export const sites = [
     slug: 'vardzia', name: 'Vardzia',
     parentType: 'region', parent: 'samtskhe-javakheti', published: true,
     seoKey: 'vardzia', contentKey: 'vardzia',
-    image: '/images/files/georgia-home.jpg',
+    // Hero = owner's own drone photo of the Vardzia cave-monastery cliff face,
+    // replacing the generic georgia-home.jpg placeholder. Landscape 4:3, native
+    // 1448 (BELOW the usual 1600 rung) → hero ladder 768/1200/1448 only; NO
+    // 1600/2400 variant is generated or referenced, ImageObject contentUrl points
+    // at the 1448 rung. Visible background is the `.hero--vardzia` CSS class
+    // (heroClass) so the image-set ladder + `background-position: center center`
+    // apply; HeroSection then omits its inline background. Region is Samtskhe-
+    // Javakheti (Aspindza Municipality), NOT any other region. Distinct from the
+    // unrelated `vardzia-cave-monastery.jpg` region/things-to-do image (untouched).
+    image: '/images/files/vardzia-cave-monastery-cliff-face-georgia-1448.webp',
+    imageAvif: '/images/files/vardzia-cave-monastery-cliff-face-georgia-1448.avif',
+    heroClass: 'hero--vardzia',
+    // Dedicated 1.91:1 social-share image (og:image / twitter:image) — hero only;
+    // the inline image gets NO OG variant.
+    ogImage: { src: '/images/files/vardzia-cave-monastery-cliff-face-georgia-og.jpg', width: 1200, height: 630 },
+    // Hero image SEO/AEO metadata (owner's own drone photo → brand credit, set by
+    // SitePage). Hero is a CSS background (no <img alt>), so the localized alt lives
+    // here and is emitted as the ImageObject caption + og:image:alt/twitter:image:alt
+    // per locale. Verbatim from vardzia-image-package.md. width/height = 1448 rung.
+    imageMeta: {
+      width: 1448, height: 1086,
+      name: 'The honeycombed cliff face of Vardzia cave monastery above the Mtkvari valley, Samtskhe-Javakheti, Georgia',
+      description: 'The cliff face of the Vardzia cave monastery, a 12th-century rock-cut complex of hundreds of chambers, tunnels and stairways carved into the tuff of Erusheti Mountain on the left bank of the Mtkvari River, with visitors on the walkways for scale and the river valley beyond. Vardzia lies in Aspindza Municipality, Samtskhe-Javakheti, in southern Georgia (the country).',
+      locationName: 'Vardzia, Aspindza Municipality, Samtskhe-Javakheti, Georgia',
+      locality: 'Vardzia', region: 'Samtskhe-Javakheti', country: 'GE',
+      geo: { lat: 41.3811, lng: 43.2847 },
+      alt: {
+        en: 'The honeycombed cliff face of Vardzia cave monastery above the Mtkvari valley, Samtskhe-Javakheti, Georgia',
+        de: 'Die wabenartige Felswand des Höhlenklosters Wardsia über dem Mtkwari-Tal, Samzche-Dschawachetien, Georgien',
+        fr: "La falaise en nid d'abeille du monastère troglodyte de Vardzia au-dessus de la vallée de la Mtkvari, Samtskhé-Djavakhétie, Géorgie",
+        es: 'El acantilado en forma de panal del monasterio rupestre de Vardzia sobre el valle del Mtkvari, Samtsje-Yavajeti, Georgia',
+        nl: 'De honingraatvormige rotswand van het grotklooster Vardzia boven het Mtkvari-dal, Samtsche-Dzjavacheti, Georgië',
+        cs: 'Voštinová skalní stěna jeskynního kláštera Vardzia nad údolím Mtkvari, Samcche-Džavacheti, Gruzie',
+        pl: 'Plastrowa ściana skalna klasztoru jaskiniowego Vardzia nad doliną Mtkwari, Samcche-Dżawachetia, Gruzja',
+      },
+    },
+    // One contextual inline body image (real <figure> in the per-locale body,
+    // placed after each locale's "The landscape" section). Rendered via SitePage's
+    // inlineImageObjects @graph map: stable @id (#inline-image-1), contentUrl at the
+    // 1448 rung (no `w` suffix), localized name+caption, brand credit, NO
+    // representativeOfPage (that's the hero's). Verbatim from vardzia-image-package.md.
+    inlineImageObjects: [
+      {
+        base: 'vardzia-cave-monastery-mtkvari-valley-georgia', width: 1448, height: 1086, anchor: 'inline-image-1',
+        description: 'A high view over the Mtkvari River valley from the Vardzia cave monastery, with the tuff cliff and its rock-cut chambers on the right, the river, approach road and visitor facilities on the valley floor, and the green highlands of Samtskhe-Javakheti beyond. Vardzia lies in Aspindza Municipality, southern Georgia (the country).',
+        locationName: 'Vardzia, Aspindza Municipality, Samtskhe-Javakheti, Georgia',
+        locality: 'Vardzia', region: 'Samtskhe-Javakheti', geo: { lat: 41.3811, lng: 43.2847 },
+        name: {
+          en: 'View over the Mtkvari valley from Vardzia, with the cave monastery in the cliff at right, Samtskhe-Javakheti, Georgia',
+          de: 'Blick über das Mtkwari-Tal von Wardsia aus, rechts das Höhlenkloster in der Felswand, Samzche-Dschawachetien, Georgien',
+          fr: 'Vue sur la vallée de la Mtkvari depuis Vardzia, le monastère troglodyte dans la falaise à droite, Samtskhé-Djavakhétie, Géorgie',
+          es: 'Vista del valle del Mtkvari desde Vardzia, con el monasterio rupestre en el acantilado a la derecha, Samtsje-Yavajeti, Georgia',
+          nl: 'Uitzicht over het Mtkvari-dal vanaf Vardzia, rechts het grotklooster in de rotswand, Samtsche-Dzjavacheti, Georgië',
+          cs: 'Pohled na údolí Mtkvari z Vardzie, vpravo jeskynní klášter ve skalní stěně, Samcche-Džavacheti, Gruzie',
+          pl: 'Widok na dolinę Mtkwari z Vardzii, po prawej klasztor jaskiniowy w ścianie skalnej, Samcche-Dżawachetia, Gruzja',
+        },
+        caption: {
+          en: 'The monastery overlooks the Mtkvari River as it cuts through the Samtskhe-Javakheti highlands. The road and visitor centre below mark the start of the climb up into the cave city.',
+          de: 'Das Kloster blickt auf den Fluss Mtkwari, der sich durch das Hochland von Samzche-Dschawachetien schneidet. Die Straße und das Besucherzentrum unten markieren den Beginn des Aufstiegs in die Höhlenstadt.',
+          fr: "Le monastère domine la Mtkvari, qui entaille les hautes terres de Samtskhé-Djavakhétie. La route et le centre d'accueil en contrebas marquent le début de la montée vers la cité troglodyte.",
+          es: 'El monasterio domina el río Mtkvari, que atraviesa las tierras altas de Samtsje-Yavajeti. La carretera y el centro de visitantes de abajo marcan el inicio del ascenso a la ciudad rupestre.',
+          nl: 'Het klooster kijkt uit over de rivier de Mtkvari, die zich door het hoogland van Samtsche-Dzjavacheti snijdt. De weg en het bezoekerscentrum beneden markeren het begin van de klim naar de grotstad.',
+          cs: 'Klášter shlíží na řeku Mtkvari, která se zařezává do vysočiny Samcche-Džavacheti. Silnice a návštěvnické centrum dole značí začátek výstupu do jeskynního města.',
+          pl: 'Klasztor góruje nad rzeką Mtkwari, która przecina wyżyny Samcche-Dżawachetii. Droga i centrum dla zwiedzających poniżej wyznaczają początek wejścia do jaskiniowego miasta.',
+        },
+      },
+    ],
   },
   {
     slug: 'gergeti-trinity-church', name: 'Gergeti Trinity Church',
