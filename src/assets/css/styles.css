@@ -5406,6 +5406,15 @@ select option:checked {
   .td-hero { min-height: 100svh; padding-top: 110px; }
   .th { height: 100svh; min-height: 500px; padding-top: 100px; padding-bottom: 60px; }
   .td-nav--fixed { top: 80px; }
+
+  /* Tours-hero filter bar: the 3 sort dropdowns (min-width 150px each) plus the
+     search box do not fit one row here and overflowed the viewport. Let the bar
+     wrap — search on its own row, dropdowns share the next — and drop the fixed
+     min-width so they shrink to fit. */
+  .th__actions { flex-wrap: wrap; justify-content: center; max-width: 560px; }
+  .th__search-wrap { flex: 1 1 100%; }
+  .th__sort-wrap { flex: 1 1 140px; }
+  .th__sort { width: 100%; min-width: 0; }
 }
 
 /* ── Tour card tablet ── */
