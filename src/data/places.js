@@ -1702,7 +1702,45 @@ export const sites = [
     slug: 'narikala-fortress', name: 'Narikala Fortress',
     parentType: 'city', parent: 'tbilisi', published: true,
     seoKey: 'narikalaFortress', contentKey: 'narikalaFortress',
-    image: '/images/files/georgia-home.jpg',
+    // Hero = owner's own Narikala gate-view photo (landscape, native 1537 →
+    // variants capped at 1537; NO 1600/2400 variant), replacing the generic
+    // georgia-home.jpg placeholder. Native ceiling 1537 (BELOW the usual 1600
+    // rung) → ladder 768/1200/1537 only, ImageObject contentUrl at the 1537 rung.
+    // Visible background is the `.hero--narikala` CSS class (heroClass below) so
+    // the image-set ladder + `background-position: center center` apply;
+    // HeroSection then omits its inline background. Slug scoped to the GATE view
+    // (`-gate-`) on purpose — a Tbilisi Old Town / things-to-do page may later
+    // want a different Narikala shot (panorama, cable car); NOT genericised, and
+    // distinct from the `narikala-fortress-tbilisi-georgia` inline image on the
+    // Tbilisi city page. Region is Tbilisi (Sololaki ridge), NOT any other region.
+    image: '/images/files/narikala-fortress-gate-tbilisi-georgia-1537.webp',
+    imageAvif: '/images/files/narikala-fortress-gate-tbilisi-georgia-1537.avif',
+    heroClass: 'hero--narikala',
+    // Dedicated 1.91:1 social-share image (og:image / twitter:image) — the safe
+    // .jpg default for scrapers.
+    ogImage: { src: '/images/files/narikala-fortress-gate-tbilisi-georgia-og.jpg', width: 1200, height: 630 },
+    // Image SEO/AEO metadata (owner's own photo → brand credit, set by SitePage).
+    // Hero is a CSS background (no <img alt>), so the localized alt lives here and
+    // is emitted as the ImageObject caption + og:image:alt/twitter:image:alt per
+    // locale. Verbatim from narikala-fortress-hero-image-package.md. width/height
+    // = 1537 rung. Coordinates approximate per package (verify if leaning on them).
+    imageMeta: {
+      width: 1537, height: 1023,
+      name: 'Cobbled ramp up to the stone gate of Narikala Fortress with St Nicholas Church behind, Tbilisi, Georgia',
+      description: "A cobbled ramp lined with ornamental lamp posts leads up to the stone gatehouse of Narikala Fortress, with the fortress's stone-and-brick walls and the conical dome of St Nicholas Church rising on the Sololaki ridge behind. Narikala stands above the Old Town of Tbilisi, the capital of Georgia (the country).",
+      locationName: 'Narikala Fortress, Sololaki ridge, Tbilisi, Georgia',
+      locality: 'Tbilisi', region: 'Tbilisi', country: 'GE',
+      geo: { lat: 41.6875, lng: 44.8090 },
+      alt: {
+        en: 'Cobbled ramp up to the stone gate of Narikala Fortress with St Nicholas Church behind, Tbilisi, Georgia',
+        de: 'Gepflasterte Rampe zum Steintor der Festung Narikala, dahinter die Nikolaikirche, Tiflis, Georgien',
+        fr: "Rampe pavée menant à la porte en pierre de la forteresse de Narikala, l'église Saint-Nicolas derrière, Tbilissi, Géorgie",
+        es: 'Rampa empedrada hasta la puerta de piedra de la fortaleza de Narikala, con la iglesia de San Nicolás detrás, Tiflis, Georgia',
+        nl: 'Geplaveide oprit naar de stenen poort van de Narikala-vesting, met de Sint-Nicolaaskerk erachter, Tbilisi, Georgië',
+        cs: 'Dlážděná rampa k kamenné bráně pevnosti Narikala, za ní kostel svatého Mikuláše, Tbilisi, Gruzie',
+        pl: 'Brukowany podjazd do kamiennej bramy twierdzy Narikala, za nią cerkiew św. Mikołaja, Tbilisi, Gruzja',
+      },
+    },
   },
   {
     slug: 'national-botanical-garden-of-georgia', name: 'National Botanical Garden of Georgia',
