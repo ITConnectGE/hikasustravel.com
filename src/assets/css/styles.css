@@ -570,6 +570,36 @@ section {
   }
 }
 /* No rung above 1537 exists. Do not add a 1600 or 2400 breakpoint. */
+/* Rezo Gabriadze Clock Tower hero — per-page CSS background (Option C from the
+   image package). PORTRAIT source (1086x1448, 0.75), so the ladder is exactly
+   768/1086 by WIDTH — native width 1086 is the ceiling; there is NO 1200/1600/
+   2400 rung. `background-position: center 32%` (deliberate, NOT center center):
+   biases the visible band upward so a short/wide desktop hero shows the clock and
+   decorated tower top rather than the mid-shaft. Portrait in a full-height hero
+   crops the tower base on desktop but keeps the whole tower on mobile (the frame
+   is mobile-good, desktop-compromised — package's Option A inline is the safer
+   alternative if the desktop crop is judged too weak). The .coverme::after
+   overlay already provides the readable text layer, so no ::before scrim is added.
+   plain url() line = fallback for browsers without image-set(). */
+.hero--gabriadze {
+  background-image: url("/images/files/gabriadze-clock-tower-tbilisi-georgia-1086.webp");
+  background-image: image-set(
+    url("/images/files/gabriadze-clock-tower-tbilisi-georgia-768.avif") type("image/avif"),
+    url("/images/files/gabriadze-clock-tower-tbilisi-georgia-768.webp") type("image/webp")
+  );
+  background-position: center 32%;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+@media (min-width: 768px) {
+  .hero--gabriadze {
+    background-image: image-set(
+      url("/images/files/gabriadze-clock-tower-tbilisi-georgia-1086.avif") type("image/avif"),
+      url("/images/files/gabriadze-clock-tower-tbilisi-georgia-1086.webp") type("image/webp")
+    );
+  }
+}
+/* No rung above 1086 exists (portrait, native width 1086). Do NOT add 1200/1600/2400. */
 .centerme {
   text-align: center !important;
 }

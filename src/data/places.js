@@ -1764,7 +1764,47 @@ export const sites = [
     slug: 'rezo-gabriadze-marionette-theatre', name: 'Rezo Gabriadze Marionette Theatre and Clock Tower',
     parentType: 'city', parent: 'tbilisi', published: true,
     seoKey: 'gabriadzeMarionetteTheatre', contentKey: 'gabriadzeMarionetteTheatre',
-    image: '/images/files/georgia-home.jpg',
+    // Hero = owner's own Gabriadze Clock Tower photo (Option C from the image
+    // package), replacing the generic georgia-home.jpg placeholder. PORTRAIT
+    // source (1086x1448, 0.75) → hero ladder is 768/1086 by WIDTH only; native
+    // width 1086 is the ceiling, so there is NO 1200/1600/2400 rung and the
+    // ImageObject contentUrl points at the 1086 rung. Visible background is the
+    // `.hero--gabriadze` CSS class (heroClass below) so the image-set ladder +
+    // deliberate `background-position: center 32%` (keeps clock + tower top in a
+    // short desktop band) apply; HeroSection then omits its inline background.
+    // Portrait crops the tower base on desktop but keeps the whole tower on mobile.
+    // Distinct from the same-image `gabriadze-clock-tower-tbilisi-georgia` INLINE
+    // photo on the Tbilisi city page (places.js ~L390, `-1086w/768w` files) — that
+    // is untouched; these hero files use the no-`w` `-1086/-768` naming. Region is
+    // Tbilisi (Old Town), NOT any other region.
+    image: '/images/files/gabriadze-clock-tower-tbilisi-georgia-1086.webp',
+    imageAvif: '/images/files/gabriadze-clock-tower-tbilisi-georgia-1086.avif',
+    heroClass: 'hero--gabriadze',
+    // Dedicated 1.91:1 social image — the CENTRE-crop -og.jpg (default), NOT the
+    // -og-topbias.jpg alternative.
+    ogImage: { src: '/images/files/gabriadze-clock-tower-tbilisi-georgia-og.jpg', width: 1200, height: 630 },
+    // Image SEO/AEO metadata (owner's own photo → brand credit, set by SitePage).
+    // Hero is a CSS background (no <img alt>), so the localized alt lives here and
+    // is emitted as the ImageObject caption + og:image:alt/twitter:image:alt per
+    // locale. Verbatim from gabriadze-clock-tower-image-package.md. width/height =
+    // 1086 rung (portrait). Coordinates approximate per package.
+    imageMeta: {
+      width: 1086, height: 1448,
+      name: 'The leaning Rezo Gabriadze Clock Tower with its gilded clock and tiled facade, Old Town, Tbilisi, Georgia',
+      description: 'The leaning clock tower of the Rezo Gabriadze Marionette Theatre in the Old Town of Tbilisi, a whimsical brick-and-stone tower propped by a diagonal steel beam, with a large gilded clock, hand-painted ceramic tile panels at its base and a cypress alongside. Built in 2010, it stands on Shavteli Street in Tbilisi, the capital of Georgia (the country).',
+      locationName: 'Rezo Gabriadze Clock Tower, Shavteli Street, Tbilisi, Georgia',
+      locality: 'Tbilisi', region: 'Tbilisi', country: 'GE',
+      geo: { lat: 41.6939, lng: 44.8074 },
+      alt: {
+        en: 'The leaning Rezo Gabriadze Clock Tower with its gilded clock and tiled facade, Old Town, Tbilisi, Georgia',
+        de: 'Der schiefe Uhrturm von Rezo Gabriadze mit vergoldeter Uhr und gekachelter Fassade, Altstadt, Tiflis, Georgien',
+        fr: "La tour de l'horloge penchée de Rezo Gabriadze, horloge dorée et façade de céramique, vieille ville, Tbilissi, Géorgie",
+        es: 'La torre del reloj inclinada de Rezo Gabriadze, con reloj dorado y fachada de azulejos, casco antiguo, Tiflis, Georgia',
+        nl: 'De scheve klokkentoren van Rezo Gabriadze met vergulde klok en betegelde gevel, oude stad, Tbilisi, Georgië',
+        cs: 'Nakloněná hodinová věž Rezo Gabriadzeho se zlacenými hodinami a kachlovou fasádou, staré město, Tbilisi, Gruzie',
+        pl: 'Pochylona wieża zegarowa Rezo Gabriadzego ze złoconym zegarem i kaflową fasadą, stare miasto, Tbilisi, Gruzja',
+      },
+    },
   },
   {
     slug: 'rike-park', name: 'Rike Park',
