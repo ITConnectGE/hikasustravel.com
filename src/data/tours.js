@@ -1799,6 +1799,248 @@ export const tours = [
     "tourFormTitle": "Georgia's Cultural Wonders: 7-Day Adventure from Kutaisi to Tbilisi and Beyond"
   },
   {
+    "slug": "7-day-gudauri-ski-tour-from-tbilisi",
+    "type": "private",
+    "title": "7-Day Gudauri Ski Tour from Tbilisi",
+    // PLACEHOLDER hero/tile/listing image — owner will supply a real Gudauri ski
+    // photo later. Using the generic georgia-home.jpg placeholder for now so the
+    // hero and listing card render; swap all three paths when the photo arrives.
+    "heroImage": "/images/files/georgia-home.jpg",
+    "tileImage": "/images/files/georgia-home.jpg",
+    "listingImage": "/images/files/georgia-home.jpg",
+    "days": 7,
+    "description": "The 7-Day Gudauri Ski Tour is a private winter holiday from Tbilisi to Gudauri, Georgia's flagship ski resort in the South Caucasus. Set on the Georgian Military Highway about two hours north of Tbilisi, Gudauri rises from roughly 2,000 m to 3,279 m, with terrain above the tree line that gives it reliable snow, open freeride slopes, and one of the longest, most affordable ski seasons in Europe. This tour gives you five nights at the resort and four to five full ski days, at a relaxed pace built around your own level and interests.\n\nThe structure is simple and low-stress: one recovery night in Tbilisi after your flight, a scenic transfer up the Military Highway, and then five nights based in one Gudauri hotel so you unpack once. Your ski days are free and flexible — ski independently, book an instructor, or take non-ski days for winter walks, spa, and mountain cafés. Because everything runs privately, the route, hotels and pace can all be adjusted to what you want.\n\nGudauri suits a wide range of skiers. Beginners have gentle, uncrowded blue and green runs and affordable English-speaking instructors; intermediates get long, varied pistes; and advanced skiers and freeriders have the open, above-the-treeline powder and off-piste terrain the resort is known for, with heli-skiing available in season. It works equally well as a dedicated ski week or as the winter centerpiece of a longer trip through Georgia.\n\nHikasus Travel is a local team based in Georgia, and we handle the airport transfers, the Military Highway drive, and the hotels, so you can focus on the skiing and the mountains rather than the logistics.\n\nGudauri is Georgia's largest and most modern ski resort, on the Georgian Military Highway near the Cross Pass, about 120 km (roughly two to two and a half hours) north of Tbilisi. The ski area runs from around 2,000 m up to 3,279 m, entirely above the tree line, which gives it open, sunny slopes, dependable snow, and the wide freeride terrain it's known for. There are tens of kilometers of marked pistes across green, blue, red and black runs served by modern lifts, plus extensive off-piste and heli-skiing in season. The season typically runs from December to April, with the best snow usually from mid-January to early March. Because the resort is relatively young, uncrowded and affordable, it's become one of the best-value quality ski destinations in Europe — well suited to beginners, intermediates and freeriders alike.",
+    "listingDescription": "A private 7-day ski holiday in Gudauri, Georgia's largest ski resort — five nights in the mountains, flexible ski days for all levels, from Tbilisi.",
+    "heroH1": "7-Day Gudauri Ski Tour from Tbilisi",
+    "heroSubtitle": "A private seven-day ski holiday in Gudauri, Georgia's largest and most modern ski resort, high in the Greater Caucasus. After an easy overnight in Tbilisi to recover from your flight, you spend five nights in the mountains with four to five flexible ski days — wide slopes and reliable snow for beginners, intermediates and freeriders alike. Transfers and hotels are handled for you; the pace is relaxed, with no rushing. Available as a private tour for your group, shaped around your dates and level.",
+    "seoTitle": "7-Day Gudauri Ski Tour from Tbilisi",
+    "metaDescription": "A private 7-day Gudauri ski tour from Tbilisi: five nights at Georgia's largest ski resort, 4–5 flexible ski days for all levels, transfers and hotels included.",
+    "heroFacts": [
+      "7 days / 6 nights",
+      "Private tour",
+      "Starts & ends in Tbilisi",
+      "Main resort: Gudauri",
+      "Five nights in Gudauri",
+      "Hotels included",
+      "4–5 flexible ski days",
+      "From €405 per person",
+      "Customizable route"
+    ],
+    "rightForYou": [
+      "Skiers who want a relaxed, well-organized ski week with transfers and hotels handled, then ski at their own pace rather than follow a rigid program",
+      "Beginners (gentle slopes and affordable instructors), intermediates and confident skiers (long, varied runs)",
+      "Freeriders and off-piste skiers (open, above-the-tree-line terrain and heli-skiing in season)",
+      "Couples, friends and small groups who want a private, flexible trip",
+      "Less suited to travelers looking for a packed sightseeing itinerary — the days are deliberately free for skiing and mountain time rather than guided touring"
+    ],
+    "faq": [
+      {
+        "title": "Where is Gudauri, and how do I get there from Tbilisi?",
+        "content": "<p>Gudauri is Georgia's largest ski resort, on the Georgian Military Highway near the Cross Pass, about 120 km (roughly two to two and a half hours) north of Tbilisi. On this tour a private driver handles all the transfers — from Tbilisi International Airport to your city hotel, up to Gudauri, and back to the airport at the end.</p>"
+      },
+      {
+        "title": "Is Gudauri good for beginners, or only for advanced skiers?",
+        "content": "<p>Both. Gudauri has gentle green and blue runs and affordable English-speaking instructors that make it a good place to learn, long varied pistes for intermediates, and extensive open, above-the-tree-line off-piste and freeride terrain (plus heli-skiing in season) for advanced skiers and snowboarders. This tour's ski days are free and flexible, so each person can ski to their own level.</p>"
+      },
+      {
+        "title": "When is the best time for this ski tour?",
+        "content": "<p>The Gudauri season typically runs from December to April, with the most reliable snow usually from mid-January to early March. Late season (into April) often brings sunny days and softer spring snow. Because the resort sits high and above the tree line, snow cover tends to be dependable across the season.</p>"
+      },
+      {
+        "title": "How many ski days does the tour include, and how is it structured?",
+        "content": "<p>Seven days in total: one recovery night in Tbilisi, a transfer day up to Gudauri, then five nights at the resort with four to five full, flexible ski days, and a transfer back to the airport on the last day. You're based in one Gudauri hotel throughout, so you only unpack once.</p>"
+      },
+      {
+        "title": "Is this a private tour, and what does the price include?",
+        "content": "<p>It runs privately for your own group, and the per-person price falls as more people share it. The price includes six nights' accommodation (one in Tbilisi, five in Gudauri) on a double/twin sharing basis with breakfast, and all transfers by comfortable vehicle. It does not include lunches and dinners, ski passes, equipment hire, lessons, or travel insurance — those are arranged locally, and we can help you organize them.</p>"
+      },
+      {
+        "title": "How much does a ski holiday in Gudauri cost?",
+        "content": "<p>Pricing is per person and depends on your group size and accommodation level, starting from €405 per person for the Classic package in a larger group. Gudauri is one of the most affordable quality ski destinations in Europe, and larger groups pay less per person. Send your dates and group size for an exact quote.</p>"
+      },
+      {
+        "title": "Do I need special insurance to ski in Georgia?",
+        "content": "<p>From 1 January 2026, health insurance is required to enter Georgia. For a ski trip we recommend choosing a policy that specifically covers winter sports (skiing, snowboarding and, if relevant, off-piste or heli-skiing), since standard travel insurance may exclude them.</p>"
+      }
+    ],
+    "enTouristTrip": {
+      "@context": "https://schema.org",
+      "@type": "TouristTrip",
+      "name": "7-Day Gudauri Ski Tour from Tbilisi",
+      "description": "A private seven-day ski holiday from Tbilisi to Gudauri, Georgia's largest ski resort in the Greater Caucasus, with five nights at the resort, four to five flexible ski days for all levels, and transfers and hotels included.",
+      "url": "https://www.hikasustravel.com/en/private-tours/7-day-gudauri-ski-tour-from-tbilisi/",
+      "touristType": ["Ski tourism", "Winter sports", "Adventure tourism"],
+      "provider": {
+        "@type": "TravelAgency",
+        "name": "Hikasus Travel",
+        "url": "https://www.hikasustravel.com/"
+      },
+      "itinerary": {
+        "@type": "ItemList",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "Day 1 — Arrival in Tbilisi" },
+          { "@type": "ListItem", "position": 2, "name": "Day 2 — Tbilisi to Gudauri over the Georgian Military Highway" },
+          { "@type": "ListItem", "position": 3, "name": "Day 3 — First ski day in Gudauri" },
+          { "@type": "ListItem", "position": 4, "name": "Day 4 — Ski day and freeride in Gudauri" },
+          { "@type": "ListItem", "position": 5, "name": "Day 5 — Flexible ski day in Gudauri" },
+          { "@type": "ListItem", "position": 6, "name": "Day 6 — Final ski day in Gudauri" },
+          { "@type": "ListItem", "position": 7, "name": "Day 7 — Gudauri to Tbilisi International Airport" }
+        ]
+      },
+      "offers": {
+        "@type": "AggregateOffer",
+        "priceCurrency": "EUR",
+        "lowPrice": "405",
+        "highPrice": "2255",
+        "offerCount": "3",
+        "url": "https://www.hikasustravel.com/en/private-tours/7-day-gudauri-ski-tour-from-tbilisi/"
+      }
+    },
+    "enBreadcrumb": {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.hikasustravel.com/en/" },
+        { "@type": "ListItem", "position": 2, "name": "Private Tours", "item": "https://www.hikasustravel.com/en/private-tours/" },
+        { "@type": "ListItem", "position": 3, "name": "7-Day Gudauri Ski Tour from Tbilisi", "item": "https://www.hikasustravel.com/en/private-tours/7-day-gudauri-ski-tour-from-tbilisi/" }
+      ]
+    },
+    "highlights": [
+      "Private seven-day ski holiday in Gudauri, Georgia's largest ski resort",
+      "Five nights in the mountains — unpack once, ski from your base",
+      "Four to five flexible ski days at your own pace",
+      "Terrain for every level: gentle beginner slopes to open freeride and off-piste",
+      "Reliable, above-the-tree-line snow and a long season (roughly December–April)",
+      "Scenic transfer up the Georgian Military Highway near the Cross Pass",
+      "Easy start with a recovery overnight in Tbilisi",
+      "Clean logistics: private transfers and accommodation handled for you",
+      "Excellent value — some of the most affordable quality skiing in Europe"
+    ],
+    "itinerary": [
+      {
+        "title": "Day 1 — Arrival in Tbilisi",
+        "content": "<blockquote>You land at Tbilisi International Airport, meet your driver, and transfer to your hotel for a recovery night in the city before the mountains.</blockquote><p>When you arrive at Tbilisi International Airport, your driver meets you and transfers you to your hotel in the city. This first day is for rest and recovery after your journey — time to settle in, relax, and get ready for the days in the mountains ahead. Overnight in Tbilisi.</p><ul><li>Arrival and private airport transfer;</li><li>Overnight stay in Tbilisi.</li></ul><p><i>Driving time: approx. 30 minutes</i></p>"
+      },
+      {
+        "title": "Day 2 — Tbilisi to Gudauri over the Georgian Military Highway",
+        "content": "<blockquote>After breakfast you drive north up the scenic Georgian Military Highway into the Greater Caucasus, arriving in Gudauri in the afternoon to check in for five nights.</blockquote><p>After breakfast you leave the city and travel north toward the mountains along the Georgian Military Highway. As you gain altitude the landscape turns alpine — especially beautiful in winter. You reach Gudauri in the afternoon; after checking into your ski hotel, the rest of the day is free to explore the resort, arrange lift passes, or relax and take in the mountain atmosphere.</p><ul><li>Morning transfer from Tbilisi to Gudauri;</li><li>Afternoon: hotel check-in and free time;</li><li>Overnight stay in Gudauri.</li></ul><p><i>Driving time: approx. 2.5 hours</i></p>"
+      },
+      {
+        "title": "Day 3 — First ski day in Gudauri",
+        "content": "<blockquote>Your first full ski day, with wide slopes for all levels, modern lifts and good snow — ski independently or with an instructor.</blockquote><p>Today is your first full ski day. Gudauri offers a wide range of slopes for different skill levels, along with modern lifts and good snow conditions. Ski independently or book an instructor if you'd like. Non-skiers can enjoy winter walks, cafés with mountain views, spa facilities, or simply relax in the fresh mountain air.</p><ul><li>Full free day for skiing and snow activities;</li><li>Overnight stay in Gudauri.</li></ul>"
+      },
+      {
+        "title": "Day 4 — Ski day and freeride in Gudauri",
+        "content": "<blockquote>Another full day on the slopes, with Gudauri's well-known freeride and off-piste terrain for more experienced skiers.</blockquote><p>Another day to explore the slopes and enjoy the winter setting. Gudauri is also known for its freeride and off-piste opportunities on the open, above-the-tree-line terrain that draws more experienced skiers and snowboarders.</p><ul><li>Free day for skiing, freeride, or leisure;</li><li>Overnight stay in Gudauri.</li></ul>"
+      },
+      {
+        "title": "Day 5 — Flexible ski day in Gudauri",
+        "content": "<blockquote>By now you know the resort — a flexible day to improve your skills, discover new runs, or take long lunches with mountain views.</blockquote><p>By now you'll feel comfortable in the resort and can settle into the rhythm of your ski holiday. Whether you want to improve your technique, discover new runs, or simply enjoy long lunches with mountain views, the day is yours.</p><ul><li>Flexible skiing and winter activities;</li><li>Overnight stay in Gudauri.</li></ul>"
+      },
+      {
+        "title": "Day 6 — Final ski day in Gudauri",
+        "content": "<blockquote>Your last full day in the mountains — revisit your favorite slopes, take photos, and enjoy the final hours of the trip.</blockquote><p>Your last full day in the mountains gives you time to revisit your favorite slopes or relax before departure. It's also a good moment to take photos and enjoy the final hours of your winter experience.</p><ul><li>Final ski day and leisure time;</li><li>Overnight stay in Gudauri.</li></ul>"
+      },
+      {
+        "title": "Day 7 — Gudauri to Tbilisi International Airport",
+        "content": "<blockquote>After breakfast you check out and transfer back down to Tbilisi International Airport for your departure.</blockquote><p>After breakfast it's time to check out. Your driver picks you up from the hotel and takes you to Tbilisi International Airport. Depending on your flight time, you may have a little free time in the morning to relax or take a short walk nearby before heading to the airport.</p><ul><li>Hotel check-out and transfer to Tbilisi International Airport;</li><li>End of the tour.</li></ul>"
+      }
+    ],
+    "accommodations": [
+      {
+        "city": "Tbilisi (1 night)",
+        "luxury": "Ambassadori",
+        "midRange": "Ibis Styles Tbilisi Center",
+        "economy": "Ginger Hotel"
+      },
+      {
+        "city": "Gudauri (5 nights)",
+        "luxury": "Gudauri Lodge",
+        "midRange": "Marco Polo",
+        "economy": "Gudauri Inn (not ski in / ski out)"
+      }
+    ],
+    "pricing": [
+      {
+        "travelers": "Single Supplement",
+        "luxury": "€950",
+        "midRange": "€540",
+        "economy": "€260"
+      },
+      {
+        "travelers": "1",
+        "luxury": "€2255",
+        "midRange": "€1470",
+        "economy": "€855"
+      },
+      {
+        "travelers": "2",
+        "luxury": "€1170",
+        "midRange": "€795",
+        "economy": "€465"
+      },
+      {
+        "travelers": "3",
+        "luxury": "€1140",
+        "midRange": "€765",
+        "economy": "€440"
+      },
+      {
+        "travelers": "4",
+        "luxury": "€1095",
+        "midRange": "€740",
+        "economy": "€415"
+      },
+      {
+        "travelers": "5",
+        "luxury": "€1175",
+        "midRange": "€795",
+        "economy": "€470"
+      },
+      {
+        "travelers": "6",
+        "luxury": "€1150",
+        "midRange": "€780",
+        "economy": "€450"
+      },
+      {
+        "travelers": "7",
+        "luxury": "€1135",
+        "midRange": "€760",
+        "economy": "€430"
+      },
+      {
+        "travelers": "8",
+        "luxury": "€1120",
+        "midRange": "€750",
+        "economy": "€420"
+      },
+      {
+        "travelers": "9",
+        "luxury": "€1110",
+        "midRange": "€740",
+        "economy": "€410"
+      },
+      {
+        "travelers": "10",
+        "luxury": "€1105",
+        "midRange": "€735",
+        "economy": "€405"
+      }
+    ],
+    "included": [
+      "Six nights' accommodation (1 in Tbilisi, 5 in Gudauri), double/twin room sharing, with breakfast;",
+      "All transfers as per the itinerary by comfortable vehicle (airport and Tbilisi–Gudauri–airport)."
+    ],
+    "notIncluded": [
+      "Lunches and dinners;",
+      "Additional hotel expenses;",
+      "Ski passes, ski hire, lessons and personal winter equipment;",
+      "Travel insurance (from 1 January 2026, health insurance is required to enter Georgia — we recommend a policy that covers winter sports)."
+    ],
+    "tourFormTitle": "7-Day Gudauri Ski Tour from Tbilisi"
+  },
+  {
     "slug": "8-day-georgia-private-tour-culture-nature-and-wine",
     "formerSlug": "experience-the-heart-of-georgia-8-day-journey-of-culture-nature-wine-tastings",
     "type": "private",

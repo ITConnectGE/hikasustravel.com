@@ -16,6 +16,7 @@ export const CATEGORY_IDS = [
   'adventure-hiking',
   'nature-mountain',
   'western-georgia-black-sea',
+  'winter-tours',
 ]
 
 // Stable id -> ui.json translation key (visible label per language).
@@ -26,6 +27,7 @@ export const CATEGORY_LABEL_KEYS = {
   'adventure-hiking': 'tour.catAdventureHiking',
   'nature-mountain': 'tour.catNatureMountain',
   'western-georgia-black-sea': 'tour.catWesternBlackSea',
+  'winter-tours': 'tour.catWinterTours',
 }
 
 // Per-tour assignments, keyed by stable slug (confirmed with the owner).
@@ -46,4 +48,5 @@ export const PRIVATE_TOUR_CATEGORIES = {
   '13-day-georgia-grand-tour-from-kutaisi-culture-and-nature': ['adventure-hiking', 'nature-mountain', 'cultural-heritage'],
   'ultimate-15-day-georgia-tour-from-tbilisi-to-svaneti--wine-culture-and-natural-beauty': ['nature-mountain', 'wine-food', 'cultural-heritage'],
   '20-day-georgia-grand-tour-wine-hiking-and-culture': ['wine-food', 'adventure-hiking', 'nature-mountain'],
+  '7-day-gudauri-ski-tour-from-tbilisi': ['winter-tours', 'nature-mountain', 'adventure-hiking'],
 }
