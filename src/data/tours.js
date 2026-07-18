@@ -1957,7 +1957,7 @@ export const tours = [
         "city": "Gudauri (5 nights)",
         "luxury": "Gudauri Lodge",
         "midRange": "Marco Polo",
-        "economy": "Gudauri Inn (not ski in / ski out)"
+        "economy": "Gudauri Inn"
       }
     ],
     "pricing": [

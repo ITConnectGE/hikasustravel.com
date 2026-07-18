@@ -175,6 +175,81 @@ const hotelData = {
       'Surrounded by cafés, restaurants & shops',
     ],
   },
+  // Hotels used by the 7-Day Gudauri Ski Tour. No hosted photos yet (images: []),
+  // so the modal shows its empty-hero state; add files to /public/images/hotels/
+  // and populate `images` later. Descriptions are our own wording; facts (stars,
+  // ski access, spa/pool, altitude, location) are from public hotel information.
+  'Ambassadori': {
+    images: [],
+    stars: 5,
+    description: 'A polished five-star retreat on historic Shavteli Street, right in the heart of Tbilisi\'s Old Town. Ambassadori pairs elegant, spacious rooms with a full spa and indoor pool, two restaurants and a rooftop terrace — a refined, central base within easy walking distance of the sulfur baths, Narikala Fortress and the city\'s landmarks.',
+    amenities: [
+      { icon: 'wifi', label: 'Free Wi-Fi' },
+      { icon: 'pool', label: 'Indoor Pool' },
+      { icon: 'spa', label: 'Spa & Sauna' },
+      { icon: 'restaurant', label: 'Two Restaurants' },
+      { icon: 'gym', label: 'Fitness Center' },
+      { icon: 'parking', label: 'Free Parking' },
+    ],
+    locationHighlights: [
+      'On Shavteli Street in the historic Old Town',
+      'Walking distance to the sulfur baths & Narikala Fortress',
+      'Rooftop terrace overlooking old Tbilisi',
+    ],
+  },
+  'Gudauri Lodge': {
+    images: [],
+    stars: 5,
+    description: 'A contemporary five-star mountain lodge set right beside the pistes in the center of Gudauri, with genuine ski-in, ski-out access. After a day on the snow you can unwind in the wellness center — indoor and outdoor pools, an outdoor hot tub, sauna and steam room — then dine in the signature Georgian restaurant. Spacious modern rooms, a ski depot and a sun terrace make it a comfortable, self-contained base for a ski week.',
+    amenities: [
+      { icon: 'pool', label: 'Indoor & Outdoor Pools' },
+      { icon: 'spa', label: 'Spa, Sauna & Hot Tub' },
+      { icon: 'gym', label: 'Fitness Center' },
+      { icon: 'restaurant', label: 'Restaurant & Bar' },
+      { icon: 'wifi', label: 'Free Wi-Fi' },
+      { icon: 'terrace', label: 'Sun Terrace' },
+    ],
+    locationHighlights: [
+      'Ski-in, ski-out — right beside the slopes',
+      'In the center of Gudauri, next to the lifts',
+      'Wellness center with indoor & outdoor pools',
+    ],
+  },
+  'Marco Polo': {
+    images: [],
+    stars: 5,
+    description: 'Gudauri\'s original ski hotel, welcoming guests since 1988 and still one of the resort\'s landmarks. Marco Polo sits slope-side at around 2,000 metres with ski-in, ski-out access, backed by a large spa and wellness center — indoor and outdoor pools, saunas and a hot tub — plus a bowling alley, padel courts and the Soliko restaurant serving Georgian and European cuisine. A lively, full-service base in the middle of the resort.',
+    amenities: [
+      { icon: 'pool', label: 'Indoor & Outdoor Pools' },
+      { icon: 'spa', label: 'Spa, Sauna & Hot Tub' },
+      { icon: 'restaurant', label: 'Soliko Restaurant' },
+      { icon: 'gym', label: 'Fitness Center' },
+      { icon: 'wifi', label: 'Free Wi-Fi' },
+      { icon: 'concierge', label: '24/7 Reception' },
+    ],
+    locationHighlights: [
+      'Ski-in, ski-out in central Gudauri',
+      'Slope-side at around 2,000 m',
+      'Bowling, padel courts & spa on site',
+    ],
+  },
+  'Gudauri Inn': {
+    images: [],
+    stars: 4,
+    description: 'A comfortable, easy-going hotel in the heart of Gudauri at 2,200 metres, with a relaxed mountain atmosphere and wide views over the surrounding peaks. It has its own wellness center with an indoor pool, jacuzzi and sauna, a restaurant serving Georgian and international dishes, and a bar for local wines. Good value and welcoming, it makes a solid classic-tier base for a Gudauri ski trip.',
+    amenities: [
+      { icon: 'wifi', label: 'Free Wi-Fi' },
+      { icon: 'pool', label: 'Indoor Pool' },
+      { icon: 'spa', label: 'Sauna & Jacuzzi' },
+      { icon: 'restaurant', label: 'Restaurant & Bar' },
+      { icon: 'parking', label: 'Free Parking' },
+    ],
+    locationHighlights: [
+      'In the center of Gudauri at 2,200 m',
+      'Wellness center with indoor pool, jacuzzi & sauna',
+      'Panoramic Greater Caucasus views',
+    ],
+  },
   'Rooms Hotel Kazbegi': {
     images: [
       { src: '/images/hotels/rooms-hotel-kazbegi.jpg', alt: 'Rooms Hotel Kazbegi striking modern building against the Greater Caucasus mountains, Stepantsminda' },
