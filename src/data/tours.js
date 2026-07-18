@@ -1804,8 +1804,7 @@ export const tours = [
     "title": "7-Day Gudauri Ski Tour from Tbilisi",
     // Hero: real Gudauri ski photo via the .hero--gudauri-ski image-set() ladder
     // (styles.css) + imageMeta/ogImage below. heroImage is the SEO fallback ref.
-    // tileImage/listingImage stay on the placeholder (card thumbnails — out of the
-    // hero-only scope; swap later when a card crop is provided).
+    // tileImage/listingImage use the 768 rung (4:3, matches the .tc__img card).
     "heroImage": "/images/files/gudauri-ski-slopes-caucasus-georgia-1200.webp",
     "heroBgClass": "hero--gudauri-ski",
     "ogImage": { "src": "/images/files/gudauri-ski-slopes-caucasus-georgia-og.jpg", "width": 1200, "height": 630 },
@@ -1835,8 +1834,8 @@ export const tours = [
         "pl": "Gudauri to największy ośrodek narciarski w Gruzji, położony w całości powyżej granicy lasu na południowych stokach Wielkiego Kaukazu. Wyciągi wznoszą się od około 2000 do niemal 3300 metrów, po otwartych, szerokich i słonecznych stokach oraz terenie poza trasami."
       }
     },
-    "tileImage": "/images/files/georgia-home.jpg",
-    "listingImage": "/images/files/georgia-home.jpg",
+    "tileImage": "/images/files/gudauri-ski-slopes-caucasus-georgia-768.webp",
+    "listingImage": "/images/files/gudauri-ski-slopes-caucasus-georgia-768.webp",
     "days": 7,
     "description": "This winter tour is for travelers who want a relaxed, well-organized ski holiday in Georgia, with the logistics handled and the mountain days left free. The shape of the week is simple. You arrive in Tbilisi and spend the first night in the city, giving yourself time to recover from the flight. The next morning you head north up the scenic Georgian Military Highway into the Greater Caucasus, reaching Gudauri — the largest and most popular ski resort in the region — by the afternoon.\n\nFrom there, the mountains take over. You stay five nights in one Gudauri hotel and get four to five flexible mountain days, including four full free ski days. With modern lifts, wide open slopes and high-altitude winter conditions, the resort suits different levels: gentle runs and instructors for beginners, long varied pistes for intermediates, and the freeride and off-piste terrain Gudauri is known for. Ski hard, take it easy, or use part of the week for winter walks, a spa and mountain cafés — the rhythm is yours. On the final morning, your driver takes you back down to Tbilisi International Airport.",
     "listingDescription": "A private 7-day ski holiday in Gudauri, Georgia's largest ski resort — five nights in the mountains, flexible ski days for all levels, from Tbilisi.",
