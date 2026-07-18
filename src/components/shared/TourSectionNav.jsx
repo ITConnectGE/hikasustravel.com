@@ -52,7 +52,15 @@ export default function TourSectionNav({ sections }) {
       if (observer) observer.disconnect()
       const topOffset = mq.matches ? 80 : 64
       observer = new IntersectionObserver(
-        ([entry]) => setIsFixed(!entry.isIntersecting),
+        ([entry]) =>
+          // Pin only once the nav has actually scrolled up to the offset line.
+          // The boundingClientRect.top guard prevents a boundary case: when the
+          // hero is ~one viewport tall the sentinel sits right at the fold and
+          // isIntersecting can read false at the very top of the page, which
+          // would pin the nav while the full-size site header/logo is still on
+          // screen — overlapping the nav (e.g. "Accommodation") at 601-900px
+          // widths where there is no compact sticky header bar.
+          setIsFixed(!entry.isIntersecting && entry.boundingClientRect.top <= topOffset),
         { threshold: 0, rootMargin: `-${topOffset}px 0px 0px 0px` }
       )
       observer.observe(sentinel)
