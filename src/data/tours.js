@@ -1809,12 +1809,12 @@ export const tours = [
     "tileImage": "/images/files/georgia-home.jpg",
     "listingImage": "/images/files/georgia-home.jpg",
     "days": 7,
-    "description": "The 7-Day Gudauri Ski Tour is a private winter holiday from Tbilisi to Gudauri, Georgia's flagship ski resort in the South Caucasus. Set on the Georgian Military Highway about two hours north of Tbilisi, Gudauri rises from roughly 2,000 m to 3,279 m, with terrain above the tree line that gives it reliable snow, open freeride slopes, and one of the longest, most affordable ski seasons in Europe. This tour gives you five nights at the resort and four to five full ski days, at a relaxed pace built around your own level and interests.\n\nThe structure is simple and low-stress: one recovery night in Tbilisi after your flight, a scenic transfer up the Military Highway, and then five nights based in one Gudauri hotel so you unpack once. Your ski days are free and flexible — ski independently, book an instructor, or take non-ski days for winter walks, spa, and mountain cafés. Because everything runs privately, the route, hotels and pace can all be adjusted to what you want.\n\nGudauri suits a wide range of skiers. Beginners have gentle, uncrowded blue and green runs and affordable English-speaking instructors; intermediates get long, varied pistes; and advanced skiers and freeriders have the open, above-the-treeline powder and off-piste terrain the resort is known for, with heli-skiing available in season. It works equally well as a dedicated ski week or as the winter centerpiece of a longer trip through Georgia.\n\nHikasus Travel is a local team based in Georgia, and we handle the airport transfers, the Military Highway drive, and the hotels, so you can focus on the skiing and the mountains rather than the logistics.\n\nGudauri is Georgia's largest and most modern ski resort, on the Georgian Military Highway near the Cross Pass, about 120 km (roughly two to two and a half hours) north of Tbilisi. The ski area runs from around 2,000 m up to 3,279 m, entirely above the tree line, which gives it open, sunny slopes, dependable snow, and the wide freeride terrain it's known for. There are tens of kilometers of marked pistes across green, blue, red and black runs served by modern lifts, plus extensive off-piste and heli-skiing in season. The season typically runs from December to April, with the best snow usually from mid-January to early March. Because the resort is relatively young, uncrowded and affordable, it's become one of the best-value quality ski destinations in Europe — well suited to beginners, intermediates and freeriders alike.",
+    "description": "The 7-Day Gudauri Ski Tour is a private winter holiday from Tbilisi to Gudauri, Georgia's flagship ski resort in the South Caucasus. Set on the Georgian Military Highway about two hours north of Tbilisi, Gudauri rises from roughly 2,000 m to 3,279 m, with terrain above the tree line that gives it reliable snow, open freeride slopes, and one of the longest, most affordable ski seasons in Europe. This tour gives you five nights at the resort and four full ski days, at a relaxed pace built around your own level and interests.\n\nThe structure is simple and low-stress: one recovery night in Tbilisi after your flight, a scenic transfer up the Military Highway, and then five nights based in one Gudauri hotel so you unpack once. Your ski days are free and flexible — ski independently, book an instructor, or take non-ski days for winter walks, spa, and mountain cafés. Because everything runs privately, the route, hotels and pace can all be adjusted to what you want.\n\nGudauri suits a wide range of skiers. Beginners have gentle, uncrowded blue and green runs and affordable English-speaking instructors; intermediates get long, varied pistes; and advanced skiers and freeriders have the open, above-the-treeline powder and off-piste terrain the resort is known for, with heli-skiing available in season. It works equally well as a dedicated ski week or as the winter centerpiece of a longer trip through Georgia.\n\nHikasus Travel is a local team based in Georgia, and we handle the airport transfers, the Military Highway drive, and the hotels, so you can focus on the skiing and the mountains rather than the logistics.\n\nGudauri is Georgia's largest and most modern ski resort, on the Georgian Military Highway near the Cross Pass, about 120 km (roughly two to two and a half hours) north of Tbilisi. The ski area runs from around 2,000 m up to 3,279 m, entirely above the tree line, which gives it open, sunny slopes, dependable snow, and the wide freeride terrain it's known for. There are tens of kilometers of marked pistes across green, blue, red and black runs served by modern lifts, plus extensive off-piste and heli-skiing in season. The season typically runs from December to April, with the best snow usually from mid-January to early March. Because the resort is relatively young, uncrowded and affordable, it's become one of the best-value quality ski destinations in Europe — well suited to beginners, intermediates and freeriders alike.",
     "listingDescription": "A private 7-day ski holiday in Gudauri, Georgia's largest ski resort — five nights in the mountains, flexible ski days for all levels, from Tbilisi.",
     "heroH1": "7-Day Gudauri Ski Tour from Tbilisi",
-    "heroSubtitle": "A private seven-day ski holiday in Gudauri, Georgia's largest and most modern ski resort, high in the Greater Caucasus. After an easy overnight in Tbilisi to recover from your flight, you spend five nights in the mountains with four to five flexible ski days — wide slopes and reliable snow for beginners, intermediates and freeriders alike. Transfers and hotels are handled for you; the pace is relaxed, with no rushing. Available as a private tour for your group, shaped around your dates and level.",
+    "heroSubtitle": "A private seven-day ski holiday in Gudauri, Georgia's largest and most modern ski resort, high in the Greater Caucasus. After an easy overnight in Tbilisi to recover from your flight, you spend five nights in the mountains with four flexible ski days — wide slopes and reliable snow for beginners, intermediates and freeriders alike. Transfers and hotels are handled for you; the pace is relaxed, with no rushing. Available as a private tour for your group, shaped around your dates and level.",
     "seoTitle": "7-Day Gudauri Ski Tour from Tbilisi",
-    "metaDescription": "A private 7-day Gudauri ski tour from Tbilisi: five nights at Georgia's largest ski resort, 4–5 flexible ski days for all levels, transfers and hotels included.",
+    "metaDescription": "A private 7-day Gudauri ski tour from Tbilisi: five nights at Georgia's largest ski resort, 4 flexible ski days for all levels, transfers and hotels included.",
     "heroFacts": [
       "7 days / 6 nights",
       "Private tour",
@@ -1822,7 +1822,7 @@ export const tours = [
       "Main resort: Gudauri",
       "Five nights in Gudauri",
       "Hotels included",
-      "4–5 flexible ski days",
+      "4 flexible ski days",
       "From €415 per person",
       "Customizable route"
     ],
@@ -1848,7 +1848,7 @@ export const tours = [
       },
       {
         "title": "How many ski days does the tour include, and how is it structured?",
-        "content": "<p>Seven days in total: one recovery night in Tbilisi, a transfer day up to Gudauri, then five nights at the resort with four to five full, flexible ski days, and a transfer back to the airport on the last day. You're based in one Gudauri hotel throughout, so you only unpack once.</p>"
+        "content": "<p>Seven days in total: one recovery night in Tbilisi, a transfer day up to Gudauri, then five nights at the resort with four full, flexible ski days, and a transfer back to the airport on the last day. You're based in one Gudauri hotel throughout, so you only unpack once.</p>"
       },
       {
         "title": "Is this a private tour, and what does the price include?",
@@ -1867,7 +1867,7 @@ export const tours = [
       "@context": "https://schema.org",
       "@type": "TouristTrip",
       "name": "7-Day Gudauri Ski Tour from Tbilisi",
-      "description": "A private seven-day ski holiday from Tbilisi to Gudauri, Georgia's largest ski resort in the Greater Caucasus, with five nights at the resort, four to five flexible ski days for all levels, and transfers and hotels included.",
+      "description": "A private seven-day ski holiday from Tbilisi to Gudauri, Georgia's largest ski resort in the Greater Caucasus, with five nights at the resort, four flexible ski days for all levels, and transfers and hotels included.",
       "url": "https://www.hikasustravel.com/en/private-tours/7-day-gudauri-ski-tour-from-tbilisi/",
       "touristType": ["Ski tourism", "Winter sports", "Adventure tourism"],
       "provider": {
@@ -1908,7 +1908,7 @@ export const tours = [
     "highlights": [
       "Private seven-day ski holiday in Gudauri, Georgia's largest ski resort",
       "Five nights in the mountains — unpack once, ski from your base",
-      "Four to five flexible ski days at your own pace",
+      "Four flexible ski days at your own pace",
       "Terrain for every level: gentle beginner slopes to open freeride and off-piste",
       "Reliable, above-the-tree-line snow and a long season (roughly December–April)",
       "Scenic transfer up the Georgian Military Highway near the Cross Pass",
