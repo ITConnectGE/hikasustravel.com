@@ -1906,6 +1906,17 @@ export const tours = [
         { "@type": "ListItem", "position": 3, "name": "7-Day Gudauri Ski Tour from Tbilisi", "item": "https://www.hikasustravel.com/en/private-tours/7-day-gudauri-ski-tour-from-tbilisi/" }
       ]
     },
+    "enRouteMapImage": {
+      "@context": "https://schema.org",
+      "@type": "ImageObject",
+      "@id": "https://www.hikasustravel.com/en/private-tours/7-day-gudauri-ski-tour-from-tbilisi/#route-map",
+      "contentUrl": "https://www.hikasustravel.com/images/files/gudauri-ski-tour-route-map-georgia.png",
+      "width": 642,
+      "height": 428,
+      "caption": "Route map of the 7-day Gudauri winter ski tour: Tbilisi to Gudauri via the Georgian Military Highway, with a scenic stop at Ananuri Fortress and the Russia–Georgia Friendship Monument; five nights in Gudauri and one in Tbilisi.",
+      "creditText": "Hikasus Travel",
+      "creator": { "@type": "Organization", "name": "Hikasus Travel" }
+    },
     "highlights": [
       "Private seven-day ski holiday in Gudauri, Georgia's largest ski resort",
       "Five nights in the mountains — unpack once, ski from your base",

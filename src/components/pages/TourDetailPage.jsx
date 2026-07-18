@@ -119,6 +119,7 @@ export default function TourDetailPage() {
       const nodes = [
         tour.enTouristTrip,
         ...(tour.enBreadcrumb ? [tour.enBreadcrumb] : []),
+        ...(tour.enRouteMapImage ? [tour.enRouteMapImage] : []),
         ...(faqNode ? [faqNode] : []),
       ]
       finalJsonLd = { '@context': 'https://schema.org', '@graph': nodes.map(stripCtx) }
@@ -198,6 +199,27 @@ export default function TourDetailPage() {
 
       <div className="td-layout">
         <main className="td-main">
+          {/* Route-map infographic — English only (baked-in English text) and
+              only on the Gudauri ski tour. Native 642x428, below the fold
+              (hero is 100vh) so lazy; hero owns LCP, no fetchpriority. */}
+          {lang === 'en' && slug === '7-day-gudauri-ski-tour-from-tbilisi' && (
+            <figure className="body-img body-img--wide">
+              <picture>
+                <source type="image/avif" srcSet="/images/files/gudauri-ski-tour-route-map-georgia.avif" />
+                <source type="image/webp" srcSet="/images/files/gudauri-ski-tour-route-map-georgia.webp" />
+                <img
+                  src="/images/files/gudauri-ski-tour-route-map-georgia.png"
+                  width="642"
+                  height="428"
+                  loading="lazy"
+                  decoding="async"
+                  alt="Route map of the 7-day Gudauri winter ski tour: Tbilisi to Gudauri via the Georgian Military Highway, with a scenic stop at Ananuri Fortress and the Russia–Georgia Friendship Monument; five nights in Gudauri and one in Tbilisi."
+                />
+              </picture>
+              <figcaption>The 7-day route: Tbilisi to Gudauri and back, via the Georgian Military Highway.</figcaption>
+            </figure>
+          )}
+
           {/* 1. Overview */}
           <section id="overview" className="td-section">
             <FadeUp>

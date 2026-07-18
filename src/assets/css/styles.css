@@ -6060,6 +6060,34 @@ select option:checked {
   text-align: center;
 }
 
+/* Body infographic (e.g. the Gudauri route map): a fixed-size graphic shown at
+   its native width and never upscaled or cropped, so baked-in text stays sharp
+   (unlike .city-body-figure, which fills 100% width and crops to 4:3). */
+.body-img {
+  margin: 2rem 0;
+  padding: 0;
+  text-align: center;
+}
+.body-img picture {
+  display: block;
+}
+.body-img img {
+  display: block;
+  max-width: 642px;
+  width: 100%;
+  height: auto;
+  margin: 0 auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+.body-img figcaption {
+  margin-top: 10px;
+  font-size: calc(var(--font-size) * 0.82);
+  color: #888;
+  font-style: italic;
+  text-align: center;
+}
+
 /* "<Entity> Tours" navigation tag shown near the top of destination pages. */
 .entity-tours-tag-row {
   margin: 0 0 calc(var(--indent) / 1.5);
