@@ -1944,7 +1944,41 @@ export const sites = [
     slug: 'chronicles-of-georgia', name: 'The Chronicles of Georgia',
     parentType: 'city', parent: 'tbilisi', published: true,
     seoKey: 'chroniclesOfGeorgia', contentKey: 'chroniclesOfGeorgia',
-    image: '/images/files/georgia-home.jpg',
+    // Hero = owner's own drone photo of the Chronicles of Georgia monument,
+    // replacing the generic georgia-home.jpg placeholder. Landscape 4:3, native
+    // 1448 (BELOW the usual 1600 rung) → hero ladder is 768/1200/1448 only; NO
+    // 1600/2400 variant is generated or referenced, and the ImageObject contentUrl
+    // points at the 1448 rung. Visible background is the `.hero--chronicles` CSS
+    // class (heroClass below) so the image-set ladder + `background-position:
+    // center center` apply; HeroSection then omits its inline background. Region is
+    // Tbilisi (Keeni Hill, above the Tbilisi Sea), NOT any other region.
+    image: '/images/files/chronicles-of-georgia-monument-tbilisi-georgia-1448.webp',
+    imageAvif: '/images/files/chronicles-of-georgia-monument-tbilisi-georgia-1448.avif',
+    heroClass: 'hero--chronicles',
+    // Dedicated 1.91:1 social-share image (og:image / twitter:image).
+    ogImage: { src: '/images/files/chronicles-of-georgia-monument-tbilisi-georgia-og.jpg', width: 1200, height: 630 },
+    // Image SEO/AEO metadata (owner's own drone photo → brand credit, set by
+    // SitePage). Hero is a CSS background (no <img alt>), so the localized alt lives
+    // here and is emitted as the ImageObject caption + og:image:alt/twitter:image:alt
+    // per locale. Verbatim from chronicles-of-georgia-hero-image-package.md.
+    // width/height = 1448 rung. Coordinates from Wikipedia infobox (well-sourced).
+    imageMeta: {
+      width: 1448, height: 1086,
+      name: 'The Chronicles of Georgia monument, giant relief-covered pillars above the Tbilisi Sea, Tbilisi, Georgia',
+      description: 'An aerial view of the Chronicles of Georgia (History Memorial of Georgia), a monumental ensemble of sixteen towering pillars covered in bronze and copper reliefs on Keeni Hill above the Tbilisi Sea, with a paved plaza, a monumental staircase and a small chapel on the grounds. Created by Zurab Tsereteli from 1985, it stands on the northern edge of Tbilisi, the capital of Georgia (the country).',
+      locationName: 'Chronicles of Georgia, Keeni Hill, Tbilisi, Georgia',
+      locality: 'Tbilisi', region: 'Tbilisi', country: 'GE',
+      geo: { lat: 41.770503, lng: 44.810438 },
+      alt: {
+        en: 'The Chronicles of Georgia monument, giant relief-covered pillars above the Tbilisi Sea, Tbilisi, Georgia',
+        de: 'Das Denkmal Chronik Georgiens, riesige reliefverzierte Säulen über dem Tifliser Meer, Tiflis, Georgien',
+        fr: 'Le monument des Chroniques de Géorgie, piliers géants couverts de reliefs au-dessus de la mer de Tbilissi, Tbilissi, Géorgie',
+        es: 'El monumento Crónicas de Georgia, pilares gigantes cubiertos de relieves sobre el mar de Tiflis, Tiflis, Georgia',
+        nl: 'Het monument Kronieken van Georgië, reusachtige met reliëfs bedekte pijlers boven de Tbilisi-zee, Tbilisi, Georgië',
+        cs: 'Památník Kroniky Gruzie, obří sloupy pokryté reliéfy nad Tbiliským mořem, Tbilisi, Gruzie',
+        pl: 'Pomnik Kroniki Gruzji, gigantyczne pokryte reliefami filary nad Morzem Tbiliskim, Tbilisi, Gruzja',
+      },
+    },
   },
   {
     slug: 'jvari-monastery', name: 'Jvari Monastery',

@@ -570,6 +570,42 @@ section {
   }
 }
 /* No rung above 1537 exists. Do not add a 1600 or 2400 breakpoint. */
+/* Chronicles of Georgia hero — per-page CSS background (same opt-in mechanism as
+   .hero--narikala). Native ceiling is 1448, BELOW the usual 1600 rung, so the
+   ladder is exactly 768/1200/1448 with the top breakpoint at min-width:1200 —
+   there is NO 1600 or 2400 rung. `background-position: center center` (default):
+   the monument sits centre-frame with a calm sky/water band up top, so it stays
+   in view at every crop and needs no positioning bias. The .coverme::after
+   overlay already provides the readable text layer, so the package's optional
+   ::before scrim is NOT enabled. plain url() line = fallback for browsers without
+   image-set(). */
+.hero--chronicles {
+  background-image: url("/images/files/chronicles-of-georgia-monument-tbilisi-georgia-1200.webp");
+  background-image: image-set(
+    url("/images/files/chronicles-of-georgia-monument-tbilisi-georgia-768.avif") type("image/avif"),
+    url("/images/files/chronicles-of-georgia-monument-tbilisi-georgia-768.webp") type("image/webp")
+  );
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+@media (min-width: 768px) {
+  .hero--chronicles {
+    background-image: image-set(
+      url("/images/files/chronicles-of-georgia-monument-tbilisi-georgia-1200.avif") type("image/avif"),
+      url("/images/files/chronicles-of-georgia-monument-tbilisi-georgia-1200.webp") type("image/webp")
+    );
+  }
+}
+@media (min-width: 1200px) {
+  .hero--chronicles {
+    background-image: image-set(
+      url("/images/files/chronicles-of-georgia-monument-tbilisi-georgia-1448.avif") type("image/avif"),
+      url("/images/files/chronicles-of-georgia-monument-tbilisi-georgia-1448.webp") type("image/webp")
+    );
+  }
+}
+/* No rung above 1448 exists. Do not add a 1600 or 2400 breakpoint. */
 .centerme {
   text-align: center !important;
 }
