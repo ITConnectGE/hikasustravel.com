@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import useT from '../../i18n/useT'
 import useWeb3Form from '../../hooks/useWeb3Form'
 import { WEB3FORMS_KEY, CONTACT_EMAIL } from '../../config'
@@ -7,7 +7,7 @@ import { getTurnstileToken } from '../../utils/turnstile'
 
 const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
 
-export default function TourInquiryForm({ tourTitle, isGroupTour }) {
+export default function TourInquiryForm({ tourTitle, isGroupTour, selectedPackage }) {
   const t = useT()
   const { status, submit } = useWeb3Form()
   const [form, setForm] = useState({
@@ -16,6 +16,17 @@ export default function TourInquiryForm({ tourTitle, isGroupTour }) {
     botcheck: '',
   })
   const [errors, setErrors] = useState([])
+
+  // Pre-select the Accommodation Type when a pricing card's "Book Now" button is
+  // clicked. Keyed on the click nonce so repeated clicks (even of the same
+  // package) re-apply, while a user's manual choice is preserved between clicks.
+  const packageNonce = selectedPackage?.nonce
+  useEffect(() => {
+    if (!packageNonce) return
+    const value = selectedPackage?.value
+    if (value) setForm((f) => ({ ...f, accommodation: value }))
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [packageNonce])
 
   // Fallback when no key is configured yet — identical to the site's current behaviour.
   if (!WEB3FORMS_KEY) {

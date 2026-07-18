@@ -122,12 +122,15 @@ function formatEuro(raw) {
   return `€${num.toLocaleString('en-US')}`
 }
 
-function PricingCards({ pricing }) {
+function PricingCards({ pricing, onSelectPackage }) {
   const t = useT()
+  // `accommodation` is the exact internal value of the booking form's
+  // Accommodation Type <select> for private tours (Classic / Mid-Range /
+  // Premium), so clicking a package pre-selects the matching option.
   const tiers = [
-    { key: 'economy', label: t('pricing.economy') },
-    { key: 'midRange', label: t('pricing.midRange'), featured: true },
-    { key: 'luxury', label: t('pricing.premium') },
+    { key: 'economy', label: t('pricing.economy'), accommodation: 'Classic' },
+    { key: 'midRange', label: t('pricing.midRange'), featured: true, accommodation: 'Mid-Range' },
+    { key: 'luxury', label: t('pricing.premium'), accommodation: 'Premium' },
   ]
 
   const numericRows = pricing.filter((r) => r.travelers !== 'Single Supplement')
@@ -192,8 +195,15 @@ function PricingCards({ pricing }) {
                 )}
               </div>
             )}
-            <a href="#book" onClick={scrollToBook} className="td-price-card__cta">
-              {t('tour.getExactPrice')}
+            <a
+              href="#book"
+              onClick={(e) => {
+                if (onSelectPackage) onSelectPackage(tier.accommodation)
+                scrollToBook(e)
+              }}
+              className="td-price-card__cta"
+            >
+              {t('tour.bookNow')}
             </a>
           </div>
         )
@@ -253,7 +263,7 @@ export function AccommodationSection({ accommodations, isGroup }) {
 
 // Price section (id="pricing"). Private tours show the per-tier pricing cards;
 // group tours show their fixed per-person price (existing data, unchanged).
-export function PriceSection({ isGroup, pricing, pricePerPerson, singleSupplement }) {
+export function PriceSection({ isGroup, pricing, pricePerPerson, singleSupplement, onSelectPackage }) {
   const t = useT()
   const hasPricing = pricing && pricing.length > 0
   const hasGroupPrice = isGroup && pricePerPerson
@@ -269,7 +279,7 @@ export function PriceSection({ isGroup, pricing, pricePerPerson, singleSupplemen
 
           <div className="td-pricing__block">
             {hasPricing ? (
-              <PricingCards pricing={pricing} />
+              <PricingCards pricing={pricing} onSelectPackage={onSelectPackage} />
             ) : (
               <div className="td-price-cards td-price-cards--single">
                 <div className="td-price-card td-price-card--featured">

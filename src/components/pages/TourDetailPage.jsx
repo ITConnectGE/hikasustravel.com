@@ -1,4 +1,4 @@
-import { useContext, useEffect, useMemo } from 'react'
+import { useCallback, useContext, useEffect, useMemo, useState } from 'react'
 import { useParams } from 'react-router-dom'
 import TourDetailHero from '../shared/TourDetailHero'
 import TourSectionNav from '../shared/TourSectionNav'
@@ -23,6 +23,15 @@ export default function TourDetailPage() {
   const t = useT()
   const { lang } = useLang()
   const { tourTranslations, loadTourTranslations, pages } = useContext(I18nContext)
+
+  // Package chosen from a pricing card's "Book Now" button. `nonce` increments on
+  // every click so the inquiry form re-applies the selection even when the same
+  // package is clicked again, while leaving the user's manual choice untouched
+  // between clicks. Kept here (shared parent of the price section and the form).
+  const [packageSelection, setPackageSelection] = useState({ value: '', nonce: 0 })
+  const handleSelectPackage = useCallback((value) => {
+    setPackageSelection((prev) => ({ value, nonce: prev.nonce + 1 }))
+  }, [])
 
   useEffect(() => {
     if (!tourTranslations) loadTourTranslations()
@@ -281,6 +290,7 @@ export default function TourDetailPage() {
             pricing={tour.pricing}
             pricePerPerson={tour.pricePerPerson}
             singleSupplement={tour.singleSupplement}
+            onSelectPackage={handleSelectPackage}
           />
 
           {/* 6. What's included and not included */}
@@ -353,7 +363,7 @@ export default function TourDetailPage() {
             <FadeUp>
               <h2 className="td-section__title">{t('tour.bookThisTour')}</h2>
               {!isGroup && <p className="td-section__subtitle">{t('form.privateIntro')}</p>}
-              <TourInquiryForm tourTitle={tour.tourFormTitle || tour.title} isGroupTour={isGroup} />
+              <TourInquiryForm tourTitle={tour.tourFormTitle || tour.title} isGroupTour={isGroup} selectedPackage={packageSelection} />
             </FadeUp>
           </section>
         </main>
