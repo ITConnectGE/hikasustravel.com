@@ -45,7 +45,9 @@ export default function TourSectionNav({ sections }) {
     const sentinel = sentinelRef.current
     if (!sentinel) return
 
-    const mq = window.matchMedia('(max-width: 600px)')
+    // <=900px uses the compact 80px fixed header (see styles.css); above that
+    // the section nav sits 64px below the ~51px sticky site bar.
+    const mq = window.matchMedia('(max-width: 900px)')
     let observer
 
     const setup = () => {

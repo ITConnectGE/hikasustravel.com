@@ -5284,6 +5284,130 @@ select option:checked {
   }
 }
 
+/* ── Compact hamburger header for the tablet band (601–900px) ──
+   Header.jsx skips the desktop sticky-bar logic at <=900 ("the header is
+   already position:fixed via CSS"), and the language switcher + hamburger are
+   already positioned for a compact bar at <=900 (see the block above). This
+   supplies the matching fixed header, compact logo, visible hamburger and
+   slide-in menu so the band no longer renders the full centred desktop
+   logo+menu (which wrapped and let the logo overlap the tour section nav).
+   Mirrors the <=600 mobile header. */
+@media (min-width: 601px) and (max-width: 900px) {
+  header {
+    height: 80px;
+    background: rgba(43, 78, 71, 0.9);
+    backdrop-filter: blur(10px);
+    position: fixed;
+  }
+  .logo {
+    position: absolute;
+    top: 15px;
+    left: 20px;
+    margin: 0;
+    height: 50px;
+    width: auto;
+    text-align: left;
+  }
+  .hamburger {
+    display: block;
+    border-bottom: 0 !important;
+  }
+  .hamburger span { background-color: var(--color-bg); }
+  .taxi-menu .hamburger span { background-color: var(--color-h3); }
+  .main-menu {
+    position: fixed;
+    top: 80px;
+    left: 0;
+    width: 100%;
+    height: 0;
+    background: rgba(43, 78, 71, 0.97);
+    backdrop-filter: blur(16px);
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: stretch;
+    padding-top: 0;
+    overflow: hidden;
+    transition: height 0.35s cubic-bezier(0.4, 0, 0.2, 1), padding-top 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+    text-align: center;
+    gap: 0;
+    box-shadow: none;
+    animation: none;
+  }
+  .main-menu.sticky, .main-menu { top: 80px; height: 0; overflow: hidden; padding: 0; }
+  .main-menu.active {
+    height: calc(100dvh - 80px);
+    padding-top: 20px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+  .main-menu span {
+    display: block;
+    width: 100%;
+    padding: 0;
+    opacity: 0;
+    transform: translateX(-20px);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+  }
+  .main-menu.active span { opacity: 1; transform: translateX(0); }
+  .main-menu.active span:nth-child(1) { transition-delay: 0.05s; }
+  .main-menu.active span:nth-child(2) { transition-delay: 0.1s; }
+  .main-menu.active span:nth-child(3) { transition-delay: 0.15s; }
+  .main-menu.active span:nth-child(4) { transition-delay: 0.2s; }
+  .main-menu.active span:nth-child(5) { transition-delay: 0.25s; }
+  .main-menu.active span:nth-child(6) { transition-delay: 0.3s; }
+  .main-menu span a {
+    display: block;
+    font-size: calc(var(--font-size) * 1.15);
+    margin: 0;
+    padding: 16px 24px;
+    color: var(--color-bg);
+    text-align: left;
+    border-radius: 0;
+    filter: none;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    transition: background-color 0.2s ease, padding-left 0.2s ease;
+  }
+  .main-menu a:hover { border-bottom: 2px solid var(--color-bg); border-radius: 0; color: var(--color-bg); }
+  .main-menu a.active { color: var(--color-bg) !important; border-left: 3px solid var(--color-h3); }
+  .nav-dropdown { display: block; width: 100%; }
+  .main-menu .nav-dropdown__toggle {
+    width: 100%;
+    justify-content: space-between;
+    font-size: calc(var(--font-size) * 1.15);
+    padding: 16px 24px;
+    text-align: left;
+    filter: none;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  }
+  .nav-dropdown__menu {
+    position: static;
+    transform: none;
+    margin: 0;
+    min-width: 0;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.18);
+    border: none;
+    border-radius: 0;
+    box-shadow: none;
+  }
+  .main-menu .nav-dropdown__menu a {
+    padding: 14px 40px;
+    font-size: var(--font-size);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+    white-space: normal;
+  }
+  .taxi-menu.main-menu { background: rgba(43, 78, 71, 0.97); }
+  .taxi-menu.main-menu a { color: var(--color-h3); }
+
+  /* Offset page content below the now-fixed 80px header (mirrors <=600). */
+  main { margin-top: 80px; }
+  .fullscreen { height: calc(100svh - 80px); }
+  .td-hero { min-height: 100svh; padding-top: 110px; }
+  .th { height: 100svh; min-height: 500px; padding-top: 100px; padding-bottom: 60px; }
+  .td-nav--fixed { top: 80px; }
+}
+
 /* ── Tour card tablet ── */
 @media (min-width: 601px) and (max-width: 900px) {
   .tc {
