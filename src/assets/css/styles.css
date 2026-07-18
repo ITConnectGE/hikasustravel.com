@@ -500,6 +500,41 @@ section {
   }
 }
 /* No rung above 1541 exists. Do not add a 1600 or 2400 breakpoint. */
+/* Svetitskhoveli Cathedral hero — per-page CSS background (same opt-in mechanism
+   as .hero--mestia). Native ceiling is 1540, BELOW the usual 1600 rung, so the
+   ladder is exactly 768/1200/1540 with the top breakpoint at min-width:1200 —
+   there is NO 1600 or 2400 rung. `background-position: center center` (default):
+   the frame has sky on the right and keeps the cathedral + dome in view at every
+   crop, so no positioning bias is needed. The .coverme::after overlay already
+   provides the readable text layer, so the package's optional ::before scrim is
+   NOT enabled. plain url() line = fallback for browsers without image-set(). */
+.hero--svetitskhoveli {
+  background-image: url("/images/files/svetitskhoveli-cathedral-mtskheta-georgia-1200.webp");
+  background-image: image-set(
+    url("/images/files/svetitskhoveli-cathedral-mtskheta-georgia-768.avif") type("image/avif"),
+    url("/images/files/svetitskhoveli-cathedral-mtskheta-georgia-768.webp") type("image/webp")
+  );
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+@media (min-width: 768px) {
+  .hero--svetitskhoveli {
+    background-image: image-set(
+      url("/images/files/svetitskhoveli-cathedral-mtskheta-georgia-1200.avif") type("image/avif"),
+      url("/images/files/svetitskhoveli-cathedral-mtskheta-georgia-1200.webp") type("image/webp")
+    );
+  }
+}
+@media (min-width: 1200px) {
+  .hero--svetitskhoveli {
+    background-image: image-set(
+      url("/images/files/svetitskhoveli-cathedral-mtskheta-georgia-1540.avif") type("image/avif"),
+      url("/images/files/svetitskhoveli-cathedral-mtskheta-georgia-1540.webp") type("image/webp")
+    );
+  }
+}
+/* No rung above 1540 exists. Do not add a 1600 or 2400 breakpoint. */
 .centerme {
   text-align: center !important;
 }

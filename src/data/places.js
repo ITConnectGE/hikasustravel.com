@@ -1930,7 +1930,42 @@ export const sites = [
     slug: 'svetitskhoveli-cathedral', name: 'Svetitskhoveli Cathedral',
     parentType: 'city', parent: 'mtskheta', published: true,
     seoKey: 'svetitskhoveliCathedral', contentKey: 'svetitskhoveliCathedral',
-    image: '/images/files/georgia-home.jpg',
+    // Hero = owner's own Svetitskhoveli photo (landscape, native 1540 → variants
+    // capped at 1540; NO 1600/2400 variant), replacing the generic georgia-home.jpg
+    // placeholder. Native ceiling is 1540 (BELOW the usual 1600 rung), so the ladder
+    // is 768/1200/1540 only and the ImageObject contentUrl points at the 1540 rung.
+    // Visible background is the `.hero--svetitskhoveli` CSS class (heroClass below)
+    // so the image-set ladder + `background-position: center center` apply; HeroSection
+    // then omits its inline background. First Mtskheta-cluster image — filename kept
+    // scoped to Svetitskhoveli (not genericised); a future Mtskheta town-page image
+    // gets a distinct suffix. Region is Mtskheta-Mtianeti (NOT Kakheti/Shida Kartli).
+    image: '/images/files/svetitskhoveli-cathedral-mtskheta-georgia-1540.webp',
+    imageAvif: '/images/files/svetitskhoveli-cathedral-mtskheta-georgia-1540.avif',
+    heroClass: 'hero--svetitskhoveli',
+    // Dedicated 1.91:1 social-share image (og:image / twitter:image) — the safe
+    // .jpg default for scrapers.
+    ogImage: { src: '/images/files/svetitskhoveli-cathedral-mtskheta-georgia-og.jpg', width: 1200, height: 630 },
+    // Image SEO/AEO metadata (owner's own photo → brand credit, set by SitePage).
+    // Hero is a CSS background (no <img alt>), so the localized alt lives here and
+    // is emitted as the ImageObject caption + og:image:alt/twitter:image:alt per
+    // locale. Verbatim from svetitskhoveli-hero-image-package.md. width/height = 1540 rung.
+    imageMeta: {
+      width: 1540, height: 1021,
+      name: 'Svetitskhoveli Cathedral in Mtskheta, stone cross-dome church with a conical dome and fortified wall, Georgia',
+      description: 'The 11th-century Svetitskhoveli Cathedral in Mtskheta, an elongated cross-in-square stone church of sandy tuff with a faceted drum and conical dome, its arcaded facades carved in relief, with the fortified stone wall, gatehouse and bell tower of the complex to the right. Mtskheta lies in Mtskheta-Mtianeti, in eastern Georgia (the country).',
+      locationName: 'Svetitskhoveli Cathedral, Mtskheta, Mtskheta-Mtianeti, Georgia',
+      locality: 'Mtskheta', region: 'Mtskheta-Mtianeti', country: 'GE',
+      geo: { lat: 41.8419, lng: 44.7211 },
+      alt: {
+        en: 'Svetitskhoveli Cathedral in Mtskheta, stone cross-dome church with a conical dome and fortified wall, Georgia',
+        de: 'Swetizchoweli-Kathedrale in Mzcheta, steinerne Kreuzkuppelkirche mit Kegeldach und Wehrmauer, Georgien',
+        fr: 'Cathédrale de Svétitskhovéli à Mtskheta, église en pierre à coupole conique et muraille fortifiée, Géorgie',
+        es: 'Catedral de Svetitsjoveli en Mtsjeta, iglesia de piedra con cúpula cónica y muralla fortificada, Georgia',
+        nl: 'Svetitskhoveli-kathedraal in Mtscheta, stenen kruiskoepelkerk met kegeldak en verdedigingsmuur, Georgië',
+        cs: 'Katedrála Sveticchoveli v Mccchetě, kamenný křížový chrám s kuželovou kupolí a hradbou, Gruzie',
+        pl: 'Katedra Sweticchoweli w Mcchecie, kamienny kościół z kopułą i murem obronnym, Gruzja',
+      },
+    },
   },
   {
     slug: 'gudauri-panorama', name: 'Gudauri Panorama',
