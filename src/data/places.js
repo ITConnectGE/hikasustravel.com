@@ -2634,6 +2634,40 @@ export const sites = [
           pl: 'Śnieg zalega na grzbietach Kazbegi długo po środku zimy. Szutrowe drogi w boczne doliny Chewi są przejezdne tylko latem i wczesną jesienią.',
         },
       },
+      // Third inline (added later): the Blue Abudelauri Lake, placed after each
+      // locale's Abudelauri-Lakes paragraph in the "Chaukhi Pass / route to Roshka"
+      // section. Distinct @id `#inline-abudelauri` (NOT #inline-image-3) so it never
+      // clashes with the numbered pair above. NO representativeOfPage (hero's).
+      // GEOGRAPHY: the lake is on the Khevsureti/Dusheti side of the Chaukhi massif,
+      // NOT in Juta/Kazbegi — contentLocation + alt/caption keep the "reached from
+      // Juta over the Chaukhi Pass" framing verbatim from the package; do NOT
+      // relabel it as a Juta/Kazbegi feature. contentUrl at the 1537 rung (native
+      // ceiling; no 1600/2400). Coordinates are the lake's, deliberately different
+      // from the Juta hero's village coordinate.
+      {
+        base: 'abudelauri-blue-lake-chaukhi-georgia', width: 1537, height: 1023, anchor: 'inline-abudelauri',
+        description: 'The blue glacial Abudelauri Lake, one of three coloured lakes at the foot of the Chaukhi massif, its water an intense blue from suspended glacial sediment, ringed by grassy alpine slopes, pale boulders and footpaths with hikers. The Abudelauri Lakes lie on the Khevsureti side of the Chaukhi massif and are reached from Juta over the Chaukhi Pass, in the Greater Caucasus of Georgia (the country).',
+        locationName: 'Abudelauri Lakes, Chaukhi massif, Khevsureti, Dusheti Municipality, Georgia',
+        locality: 'Khevsureti', region: 'Dusheti Municipality', geo: { lat: 42.5039, lng: 44.8383 },
+        name: {
+          en: 'The blue glacial Abudelauri Lake below the Chaukhi massif, with hikers on the surrounding trails, Georgia',
+          de: 'Der blaue Gletschersee Abudelauri unterhalb des Chaukhi-Massivs, mit Wanderern auf den umliegenden Pfaden, Georgien',
+          fr: "Le lac glaciaire bleu d'Abudelauri au pied du massif de Chaukhi, avec des randonneurs sur les sentiers, Géorgie",
+          es: 'El lago glaciar azul de Abudelauri bajo el macizo de Chaukhi, con senderistas en los caminos, Georgia',
+          nl: 'Het blauwe gletsjermeer Abudelauri onder het Chaukhi-massief, met wandelaars op de omliggende paden, Georgië',
+          cs: 'Modré ledovcové jezero Abudelauri pod masivem Chaukhi, s turisty na okolních stezkách, Gruzie',
+          pl: 'Niebieskie polodowcowe jezioro Abudelauri pod masywem Chaukhi, z turystami na okolicznych szlakach, Gruzja',
+        },
+        caption: {
+          en: 'The Blue Lake is one of the three Abudelauri glacial lakes at the foot of the Chaukhi massif; its colour comes from fine glacial sediment. From Juta the lakes are reached over the Chaukhi Pass, a two-day trek down into Khevsureti.',
+          de: 'Der Blaue See ist einer der drei Abudelauri-Gletscherseen am Fuß des Chaukhi-Massivs; seine Farbe stammt von feinem Gletschersediment. Von Juta aus erreicht man die Seen über den Chaukhi-Pass – eine zweitägige Wanderung hinab nach Chewsuretien.',
+          fr: "Le lac Bleu est l'un des trois lacs glaciaires d'Abudelauri, au pied du massif de Chaukhi ; sa couleur vient des fins sédiments glaciaires. Depuis Juta, on rejoint les lacs par le col de Chaukhi, deux jours de marche vers la Khevsourétie.",
+          es: 'El lago Azul es uno de los tres lagos glaciares de Abudelauri, al pie del macizo de Chaukhi; su color proviene del fino sedimento glaciar. Desde Juta se llega por el paso de Chaukhi, dos días de caminata hacia Khevsureti.',
+          nl: 'Het Blauwe Meer is een van de drie Abudelauri-gletsjermeren aan de voet van het Chaukhi-massief; de kleur komt van fijn gletsjersediment. Vanuit Juta bereik je de meren via de Chaukhi-pas, een tweedaagse tocht omlaag naar Chevsoeretië.',
+          cs: 'Modré jezero je jedním ze tří ledovcových jezer Abudelauri na úpatí masivu Chaukhi; jeho barvu způsobuje jemný ledovcový sediment. Z Juty se k jezerům dostanete přes průsmyk Chaukhi – dvoudenní trek dolů do Chevsuretie.',
+          pl: 'Niebieskie Jezioro to jedno z trzech polodowcowych jezior Abudelauri u stóp masywu Chaukhi; jego barwa pochodzi z drobnego osadu lodowcowego. Z Juty do jezior dochodzi się przez przełęcz Chaukhi – dwudniowy trek w dół do Chewsuretii.',
+        },
+      },
     ],
   },
   {
