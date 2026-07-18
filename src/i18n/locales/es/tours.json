@@ -1,4 +1,36 @@
 {
+    "7-day-gudauri-ski-tour-from-tbilisi": {
+        "itinerary": [
+            {
+                "title": "Día 1 — Llegada a Tiflis",
+                "content": "<blockquote>Un comienzo tranquilo del viaje: llega a Tiflis, se instala y descansa antes de subir a las montañas.</blockquote><p>El día de llegada es deliberadamente pausado. Un conductor de Hikasus Travel le recibe en el aeropuerto internacional de Tiflis y le lleva a su hotel, a una media hora de distancia. El resto del día es suyo: registrarse, recuperarse del vuelo y prepararse para el trayecto de mañana hacia Gudauri.</p><ul><li>Traslado privado del aeropuerto internacional de Tiflis a su hotel;</li><li>Tiempo libre para registrarse y descansar;</li><li>Noche en Tiflis.</li></ul><p><i>Tiempo de trayecto: aprox. 30 minutos</i></p>"
+            },
+            {
+                "title": "Día 2 — De Tiflis a Gudauri",
+                "content": "<blockquote>Tras el desayuno, un traslado privado le lleva hacia el norte, al Gran Cáucaso, por la Carretera Militar Georgiana; llega a Gudauri por la tarde para cinco noches.</blockquote><p>La salida de Tiflis sigue la Carretera Militar Georgiana, la ruta histórica que asciende de forma constante hacia la cresta principal del Cáucaso. Los valles y los pueblos dan paso a laderas abiertas y nevadas a medida que gana altura. Llega a Gudauri por la tarde y se registra; el resto del día queda libre para orientarse, conseguir forfaits o alquilar equipo si lo necesita, o simplemente instalarse. El clima invernal y el estado de la carretera pueden afectar al trayecto, por lo que el horario se mantiene flexible.</p><ul><li>Desayuno en su hotel de Tiflis;</li><li>Traslado privado a Gudauri por la Carretera Militar Georgiana;</li><li>Registro en el hotel y tiempo libre a la llegada;</li><li>Noche en Gudauri.</li></ul><p><i>Tiempo de trayecto: aprox. 2,5 horas, según el estado de la carretera y el clima invernal</i></p>"
+            },
+            {
+                "title": "Día 3 — Primer día completo de esquí en Gudauri",
+                "content": "<blockquote>Su primer día completo en Gudauri: conozca la estación a su propio ritmo, en la nieve o fuera de ella.</blockquote><p>Con cinco noches aquí, no hay prisa. Las pistas de Gudauri se sitúan por encima del límite de los árboles: amplias y abiertas, con remontes modernos. Esquiadores y practicantes de snowboard pueden empezar en terreno suave e ir progresando a medida que se acomodan; quien desee clases puede contratar directamente a un instructor local. Si no esquía, el día es igual de libre: un café con vistas a las cumbres, un paseo sencillo donde las condiciones lo permitan, o una mañana tranquila en el hotel.</p><ul><li>Día completo libre en Gudauri;</li><li>Noche en Gudauri.</li></ul>"
+            },
+            {
+                "title": "Día 4 — Esquí y freeride opcional en Gudauri",
+                "content": "<blockquote>Un segundo día completo para hacerse a la montaña: más tiempo en las pistas señalizadas, con el terreno abierto de freeride de Gudauri para los esquiadores experimentados que lo deseen.</blockquote><p>Al segundo día ya conoce los remontes y puede elegir las pistas que mejor le vayan: repetir las favoritas o probar algo más empinado. Gudauri es conocida por su terreno abierto por encima del límite de los árboles, más allá de las pistas señalizadas. El freeride y el fuera de pista son una opción solo para esquiadores y practicantes de snowboard realmente experimentados, y deben realizarse con un profesional de montaña local cualificado, siempre sujetos a las condiciones de clima, nieve y seguridad del día.</p><ul><li>Día completo libre en Gudauri;</li><li>Noche en Gudauri.</li></ul>"
+            },
+            {
+                "title": "Día 5 — Un día flexible de montaña en Gudauri",
+                "content": "<blockquote>Un día para organizar a su gusto: más esquí, un ritmo más pausado o una mezcla de ambos.</blockquote><p>Hoy no hay un plan fijo, y esa es la idea. Pase otro día completo en las pistas y trabaje su técnica, vuelva a las bajadas que más ha disfrutado, o tómeselo con calma con pausas largas y buenas vistas. Quien no esquíe puede seguir su propio ritmo por la estación. El programa es enteramente suyo.</p><ul><li>Día completo libre en Gudauri;</li><li>Noche en Gudauri.</li></ul>"
+            },
+            {
+                "title": "Día 6 — Último día completo en Gudauri",
+                "content": "<blockquote>Su último día completo en la montaña: una bajada más en Gudauri antes de que el viaje llegue a su fin.</blockquote><p>El último día completo es tan libre como los demás. Aproveche al máximo las pistas con una última jornada de esquí o snowboard, vuelva a las bajadas que más le han gustado, o baje el ritmo y disfrute del último aire de montaña antes del trayecto de vuelta a Tiflis de mañana.</p><ul><li>Último día completo libre en Gudauri;</li><li>Noche en Gudauri.</li></ul>"
+            },
+            {
+                "title": "Día 7 — De Gudauri al aeropuerto internacional de Tiflis",
+                "content": "<blockquote>Tras el desayuno y la salida del hotel, un traslado privado le lleva de vuelta al aeropuerto internacional de Tiflis para su vuelo de regreso.</blockquote><p>Después del desayuno realiza la salida del hotel, y un conductor de Hikasus Travel le lleva de Gudauri al aeropuerto internacional de Tiflis. La hora de salida se coordina con su vuelo; como las condiciones invernales de carretera y clima pueden ralentizar el descenso, el traslado se programa con margen suficiente para llegar al aeropuerto con tranquilidad. Aquí termina el circuito.</p><ul><li>Desayuno y salida del hotel;</li><li>Traslado privado de Gudauri al aeropuerto internacional de Tiflis;</li><li>El circuito termina a la llegada al aeropuerto.</li></ul>"
+            }
+        ]
+    },
     "3-day-kakheti-wine-and-food-tour-from-tbilisi": {
       "title": "Saborea los sabores de Kakheti: tour de 3 días de vino y cultura",
       "description": "Saborea los sabores de Kakheti es un tour privado de 3 días de vino y cultura desde Tbilisi hacia Kakheti, la célebre región vinícola de Georgia y la cuna de la elaboración del vino. Con base en Telavi durante dos noches, catarás tanto en bodegas familiares como en fincas consolidadas, conocerás el antiguo método qvevri que mereció el reconocimiento de la UNESCO y visitarás los hitos culturales que definen la región: la finca de Tsinandali, la medieval fortaleza de Gremi, Sighnaghi en lo alto de su colina y el apacible monasterio de Bodbe. El ritmo es equilibrado y las experiencias son prácticas, con comidas tradicionales georgianas maridadas con vinos locales a lo largo del camino. Hikasus Travel, un equipo local con base en Georgia, se encarga del transporte, los hoteles, el guía y la logística del día a día, y como el tour es privado la ruta y el ritmo se mantienen flexibles: funciona igual de bien como un viaje independiente y enfocado o como una breve extensión premium de un itinerario más largo por Georgia.",

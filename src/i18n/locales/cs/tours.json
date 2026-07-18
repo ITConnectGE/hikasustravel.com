@@ -1,4 +1,36 @@
 {
+    "7-day-gudauri-ski-tour-from-tbilisi": {
+        "itinerary": [
+            {
+                "title": "Den 1 — Přílet do Tbilisi",
+                "content": "<blockquote>Klidný začátek cesty — přiletíte do Tbilisi, zabydlíte se a odpočinete si, než vyrazíte do hor.</blockquote><p>Den příletu je záměrně poklidný. Řidič Hikasus Travel vás přivítá na mezinárodním letišti v Tbilisi a odveze vás do hotelu vzdáleného asi půl hodiny. Zbytek dne je jen váš — ubytovat se, zotavit se z letu a připravit se na zítřejší cestu do Gudauri.</p><ul><li>Soukromý transfer z mezinárodního letiště v Tbilisi do hotelu;</li><li>Volný čas na ubytování a odpočinek;</li><li>Nocleh v Tbilisi.</li></ul><p><i>Doba jízdy: cca 30 minut</i></p>"
+            },
+            {
+                "title": "Den 2 — Z Tbilisi do Gudauri",
+                "content": "<blockquote>Po snídani vás soukromý transfer poveze na sever do Velkého Kavkazu po Gruzínské vojenské silnici; do Gudauri dorazíte odpoledne na pět nocí.</blockquote><p>Cesta z Tbilisi vede po Gruzínské vojenské silnici, historické trase, která pozvolna stoupá k hlavnímu hřebeni Kavkazu. Údolí a vesnice s přibývající nadmořskou výškou střídají otevřené, zasněžené svahy. Do Gudauri dorazíte odpoledne a ubytujete se; zbytek dne je volný — rozkoukat se, v případě potřeby zařídit skipasy nebo zapůjčení vybavení, nebo se prostě usadit. Zimní počasí a stav silnic mohou cestu ovlivnit, proto zůstává časový plán flexibilní.</p><ul><li>Snídaně v hotelu v Tbilisi;</li><li>Soukromý transfer do Gudauri po Gruzínské vojenské silnici;</li><li>Ubytování v hotelu a volný čas po příjezdu;</li><li>Nocleh v Gudauri.</li></ul><p><i>Doba jízdy: cca 2,5 hodiny, v závislosti na zimním stavu silnic a počasí</i></p>"
+            },
+            {
+                "title": "Den 3 — První celý lyžařský den v Gudauri",
+                "content": "<blockquote>Váš první celý den v Gudauri — poznávejte středisko vlastním tempem, na sjezdovce i mimo ni.</blockquote><p>S pěti nocemi na místě není kam spěchat. Sjezdovky Gudauri leží nad hranicí lesa — široké a otevřené, obsluhované moderními vleky. Lyžaři a snowboardisté mohou začít na mírném terénu a postupně přidávat, jak si zvyknou; kdo chce výuku, může si přímo domluvit místního instruktora. Pokud nelyžujete, den je stejně volný: káva s výhledem na vrcholky, nenáročná procházka tam, kde to podmínky dovolí, nebo klidné dopoledne v hotelu.</p><ul><li>Celý volný den v Gudauri;</li><li>Nocleh v Gudauri.</li></ul>"
+            },
+            {
+                "title": "Den 4 — Lyžování a volitelný freeride v Gudauri",
+                "content": "<blockquote>Druhý celý den na sžití s horou — více času na značených sjezdovkách, s otevřeným freeridovým terénem Gudauri pro zkušené lyžaře, kteří o něj stojí.</blockquote><p>Druhý den už se ve vlecích vyznáte a můžete si vybírat sjezdovky, které vám sedí — vracet se k oblíbeným nebo zkusit něco strmějšího. Gudauri je známé otevřeným terénem nad hranicí lesa za značenými sjezdovkami. Freeride a jízda mimo sjezdovky jsou možností pouze pro skutečně zkušené lyžaře a snowboardisty a měly by se podnikat s kvalifikovaným místním horským profesionálem — vždy v závislosti na počasí, sněhu a bezpečnostních podmínkách daného dne.</p><ul><li>Celý volný den v Gudauri;</li><li>Nocleh v Gudauri.</li></ul>"
+            },
+            {
+                "title": "Den 5 — Flexibilní horský den v Gudauri",
+                "content": "<blockquote>Den, který si uspořádáte, jak chcete — více lyžování, pomalejší tempo, nebo obojí.</blockquote><p>Dnes není žádný pevný program, a o to právě jde. Strávte další celý den na sjezdovkách a pracujte na technice, vraťte se ke sjezdům, které jste si nejvíc užili, nebo si dopřejte klid s dlouhými pauzami a výhledem. Kdo nelyžuje, může si držet vlastní tempo po středisku. Program zůstává zcela na vás.</p><ul><li>Celý volný den v Gudauri;</li><li>Nocleh v Gudauri.</li></ul>"
+            },
+            {
+                "title": "Den 6 — Poslední celý den v Gudauri",
+                "content": "<blockquote>Váš poslední celý den v horách — ještě jeden sjezd v Gudauri, než se zájezd nachýlí ke konci.</blockquote><p>Poslední celý den je stejně volný jako ostatní. Vytěžte ze sjezdovek maximum ještě jedním dnem lyžování nebo snowboardingu, vraťte se ke sjezdům, které vás zaujaly, nebo zvolněte a užijte si poslední horský vzduch před zítřejší cestou zpět do Tbilisi.</p><ul><li>Poslední celý volný den v Gudauri;</li><li>Nocleh v Gudauri.</li></ul>"
+            },
+            {
+                "title": "Den 7 — Z Gudauri na mezinárodní letiště v Tbilisi",
+                "content": "<blockquote>Po snídani a odhlášení vás soukromý transfer odveze zpět na mezinárodní letiště v Tbilisi k odletu domů.</blockquote><p>Po snídani se odhlásíte a řidič Hikasus Travel vás odveze z Gudauri zpět na mezinárodní letiště v Tbilisi. Odjezd se řídí vaším letem; protože zimní stav silnic a počasí mohou sjezd zpomalit, je transfer naplánován s dostatečnou rezervou, abyste na letiště dorazili v klidu. Tady zájezd končí.</p><ul><li>Snídaně a odhlášení z hotelu;</li><li>Soukromý transfer z Gudauri na mezinárodní letiště v Tbilisi;</li><li>Zájezd končí příjezdem na letiště.</li></ul>"
+            }
+        ]
+    },
     "3-day-kakheti-wine-and-food-tour-from-tbilisi": {
       "title": "Vychutnejte si chutě Kachetie: 3denní zájezd za vínem a kulturou",
       "description": "Vychutnejte si chutě Kachetie je soukromý třídenní zájezd za vínem a kulturou z Tbilisi do Kachetie, proslulého vinařského regionu Gruzie a kolébky vinařství. S ubytováním na dvě noci v Telavi ochutnáváte vína jak v rodinných vinařstvích, tak na zavedených panstvích, poznáváte starobylou metodu qvevri, která si vysloužila uznání UNESCO, a navštěvujete kulturní památky, jež region definují — panství Tsinandali, středověkou pevnost Gremi, na kopci ležící Sighnaghi a poklidný klášter Bodbe. Tempo je vyvážené a zážitky praktické, cestou si vychutnáte tradiční gruzínské pokrmy v kombinaci s místními víny. Hikasus Travel, místní tým se sídlem v Gruzii, zajišťuje dopravu, hotely, průvodcovské služby a každodenní logistiku, a protože je zájezd soukromý, zůstává trasa i tempo flexibilní — funguje stejně dobře jako samostatný zaměřený výlet i jako krátké prémiové rozšíření delšího gruzínského itineráře.",

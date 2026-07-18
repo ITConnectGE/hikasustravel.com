@@ -1,4 +1,36 @@
 {
+    "7-day-gudauri-ski-tour-from-tbilisi": {
+        "itinerary": [
+            {
+                "title": "Dzień 1 — Przylot do Tbilisi",
+                "content": "<blockquote>Spokojny początek podróży — przylatujesz do Tbilisi, rozgaszczasz się i odpoczywasz, zanim ruszysz w góry.</blockquote><p>Dzień przylotu jest celowo spokojny. Kierowca Hikasus Travel wita Cię na międzynarodowym lotnisku w Tbilisi i zawozi do hotelu oddalonego o około pół godziny. Reszta dnia należy do Ciebie — zameldowanie, odpoczynek po locie i przygotowanie się do jutrzejszego przejazdu do Gudauri.</p><ul><li>Prywatny transfer z międzynarodowego lotniska w Tbilisi do hotelu;</li><li>Czas wolny na zameldowanie i odpoczynek;</li><li>Nocleg w Tbilisi.</li></ul><p><i>Czas przejazdu: ok. 30 minut</i></p>"
+            },
+            {
+                "title": "Dzień 2 — Z Tbilisi do Gudauri",
+                "content": "<blockquote>Po śniadaniu prywatny transfer zabiera Cię na północ w Wielki Kaukaz Gruzińską Drogą Wojskową; do Gudauri docierasz po południu na pięć nocy.</blockquote><p>Wyjazd z Tbilisi prowadzi Gruzińską Drogą Wojskową, historyczną trasą, która stopniowo wznosi się ku głównej grani Kaukazu. W miarę nabierania wysokości doliny i wsie ustępują miejsca otwartym, ośnieżonym stokom. Do Gudauri docierasz po południu i meldujesz się; reszta dnia jest wolna, aby się rozejrzeć, w razie potrzeby załatwić karnety lub wypożyczyć sprzęt, albo po prostu odpocząć. Zimowa pogoda i stan dróg mogą wpłynąć na przejazd, dlatego harmonogram pozostaje elastyczny.</p><ul><li>Śniadanie w hotelu w Tbilisi;</li><li>Prywatny transfer do Gudauri Gruzińską Drogą Wojskową;</li><li>Zameldowanie w hotelu i czas wolny po przyjeździe;</li><li>Nocleg w Gudauri.</li></ul><p><i>Czas przejazdu: ok. 2,5 godziny, w zależności od zimowego stanu dróg i pogody</i></p>"
+            },
+            {
+                "title": "Dzień 3 — Pierwszy pełny dzień na nartach w Gudauri",
+                "content": "<blockquote>Twój pierwszy pełny dzień w Gudauri — poznawaj ośrodek we własnym tempie, na stoku i poza nim.</blockquote><p>Przy pięciu nocach na miejscu nie ma pośpiechu. Stoki Gudauri leżą powyżej granicy lasu — szerokie i otwarte, obsługiwane przez nowoczesne wyciągi. Narciarze i snowboardziści mogą zacząć na łagodnym terenie i stopniowo dodawać, gdy się rozkręcą; kto chce lekcji, może bezpośrednio umówić lokalnego instruktora. Jeśli nie jeździsz na nartach, dzień jest równie otwarty: kawa z widokiem na szczyty, łatwy spacer tam, gdzie pozwalają warunki, albo spokojny poranek w hotelu.</p><ul><li>Cały wolny dzień w Gudauri;</li><li>Nocleg w Gudauri.</li></ul>"
+            },
+            {
+                "title": "Dzień 4 — Narty i opcjonalny freeride w Gudauri",
+                "content": "<blockquote>Drugi pełny dzień na oswojenie się z górą — więcej czasu na oznakowanych trasach, z otwartym terenem freeride’owym Gudauri dla doświadczonych narciarzy, którzy mają na to ochotę.</blockquote><p>Drugiego dnia znasz już wyciągi i możesz wybierać trasy, które Ci odpowiadają — wracać do ulubionych lub spróbować czegoś bardziej stromego. Gudauri słynie z otwartego terenu powyżej granicy lasu, poza oznakowanymi trasami. Freeride i jazda poza trasami to opcja wyłącznie dla naprawdę doświadczonych narciarzy i snowboardzistów i należy je podejmować z wykwalifikowanym lokalnym przewodnikiem górskim — zawsze w zależności od pogody, śniegu i warunków bezpieczeństwa danego dnia.</p><ul><li>Cały wolny dzień w Gudauri;</li><li>Nocleg w Gudauri.</li></ul>"
+            },
+            {
+                "title": "Dzień 5 — Elastyczny dzień w górach w Gudauri",
+                "content": "<blockquote>Dzień do ułożenia wedle uznania — więcej nart, wolniejsze tempo albo jedno i drugie.</blockquote><p>Dziś nie ma ustalonego planu i o to właśnie chodzi. Spędź kolejny pełny dzień na stokach i popracuj nad techniką, wróć do zjazdów, które sprawiły Ci najwięcej frajdy, albo zwolnij tempo, robiąc długie przerwy z widokiem. Kto nie jeździ na nartach, może trzymać własny rytm po ośrodku. Program pozostaje całkowicie w Twoich rękach.</p><ul><li>Cały wolny dzień w Gudauri;</li><li>Nocleg w Gudauri.</li></ul>"
+            },
+            {
+                "title": "Dzień 6 — Ostatni pełny dzień w Gudauri",
+                "content": "<blockquote>Twój ostatni pełny dzień w górach — jeszcze jeden zjazd w Gudauri, zanim wyjazd dobiegnie końca.</blockquote><p>Ostatni pełny dzień jest tak samo otwarty jak pozostałe. Wykorzystaj stoki do maksimum kolejnym dniem nart lub snowboardu, wróć do zjazdów, które najbardziej zapadły w pamięć, albo zwolnij i ciesz się ostatnim górskim powietrzem przed jutrzejszym przejazdem z powrotem do Tbilisi.</p><ul><li>Ostatni pełny wolny dzień w Gudauri;</li><li>Nocleg w Gudauri.</li></ul>"
+            },
+            {
+                "title": "Dzień 7 — Z Gudauri na międzynarodowe lotnisko w Tbilisi",
+                "content": "<blockquote>Po śniadaniu i wymeldowaniu prywatny transfer zawozi Cię z powrotem na międzynarodowe lotnisko w Tbilisi na lot powrotny.</blockquote><p>Po śniadaniu wymeldowujesz się, a kierowca Hikasus Travel zawozi Cię z Gudauri z powrotem na międzynarodowe lotnisko w Tbilisi. Godzina wyjazdu jest dopasowana do Twojego lotu; ponieważ zimowy stan dróg i pogoda mogą spowolnić zjazd, transfer planuje się z odpowiednim zapasem czasu, aby spokojnie dotrzeć na lotnisko. W tym miejscu wycieczka się kończy.</p><ul><li>Śniadanie i wymeldowanie z hotelu;</li><li>Prywatny transfer z Gudauri na międzynarodowe lotnisko w Tbilisi;</li><li>Wycieczka kończy się po przyjeździe na lotnisko.</li></ul>"
+            }
+        ]
+    },
     "3-day-kakheti-wine-and-food-tour-from-tbilisi": {
       "title": "Poczuj smaki Kakheti: 3-dniowy tour winny i kulturowy",
       "description": "Poczuj smaki Kakheti to prywatny, 3-dniowy tour winny i kulturowy z Tbilisi do Kakheti — słynnego gruzińskiego regionu winiarskiego i kolebki winiarstwa. Bazując przez dwie noce w Telavi, degustujesz wina zarówno w rodzinnych winiarniach, jak i w uznanych posiadłościach, poznajesz starożytną metodę qvevri, która zyskała uznanie UNESCO, oraz odwiedzasz zabytki kultury, które definiują region — posiadłość Tsinandali, średniowieczną twierdzę Gremi, położone na wzgórzu Sighnaghi i spokojny monaster Bodbe. Tempo jest wyważone, a doświadczenia praktyczne — po drodze czekają tradycyjne gruzińskie posiłki łączone z lokalnymi winami. Hikasus Travel, lokalny zespół z siedzibą w Gruzji, zajmuje się transportem, hotelami, przewodnictwem i codzienną logistyką, a ponieważ tour jest prywatny, trasa i tempo pozostają elastyczne — sprawdza się równie dobrze jako samodzielna, skupiona wyprawa, jak i jako krótkie, premium rozszerzenie dłuższego planu podróży po Gruzji.",
