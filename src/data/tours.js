@@ -1943,7 +1943,7 @@ export const tours = [
       },
       {
         "title": "Day 7 — Gudauri to Tbilisi Airport",
-        "content": "<p>After breakfast you check out of your hotel. Depending on your flight time, there may be a little of the morning left for a slow start or a short walk before your driver collects you. From there, it is the drive back down the Georgian Military Highway to Tbilisi International Airport for your departure.</p><p>In winter, the departure time should allow enough margin for mountain road and weather conditions.</p><ul><li>Hotel check-out and transfer to Tbilisi International Airport;</li><li>End of the tour;</li><li><strong>Driving duration:</strong> 2.5 hours, subject to winter road and weather conditions</li></ul>"
+        "content": "<p>After breakfast you check out of your hotel. Depending on your flight time, there may be a little of the morning left for a slow start or a short walk before your driver collects you. From there, it is the drive back down the Georgian Military Highway to Tbilisi International Airport for your departure.</p><p>In winter, the departure time should allow enough margin for mountain road and weather conditions.</p><ul><li>Hotel check-out and transfer to Tbilisi International Airport;</li><li>End of the tour;</li><li><strong>Driving duration:</strong> 2.5 hours</li></ul>"
       }
     ],
     "accommodations": [
