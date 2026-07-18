@@ -1823,6 +1823,7 @@ export const tours = [
       "Five nights in Gudauri",
       "Hotels included",
       "4 flexible ski days",
+      "Available December 15 – March 15",
       "From €415 per person",
       "Customizable route"
     ],
