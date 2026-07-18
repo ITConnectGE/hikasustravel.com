@@ -109,6 +109,34 @@ export default function TourDetailPage() {
         }
       : null
 
+    // Hero ImageObject (representativeOfPage) built from the tour's imageMeta,
+    // localized per locale; added to the @graph on every locale alongside the
+    // TouristTrip/AggregateOffer/BreadcrumbList, which stay untouched.
+    const SITE_URL = 'https://www.hikasustravel.com'
+    const BRAND = 'Hikasus Travel'
+    const im = tour.imageMeta
+    const heroAlt = im ? (im.alt[lang] || im.alt.en) : null
+    const heroImageObject = im ? {
+      '@type': 'ImageObject',
+      '@id': `${SITE_URL}/${lang}/${prefix}/${slug}#hero-image`,
+      contentUrl: `${SITE_URL}${im.contentUrl}`,
+      url: `${SITE_URL}${im.contentUrl}`,
+      width: im.width,
+      height: im.height,
+      representativeOfPage: true,
+      name: heroAlt,
+      caption: im.caption[lang] || im.caption.en,
+      description: im.description,
+      creditText: BRAND,
+      copyrightNotice: `© ${BRAND}`,
+      creator: { '@type': 'Organization', name: BRAND },
+      contentLocation: {
+        '@type': 'Place',
+        name: im.locationName,
+        geo: { '@type': 'GeoCoordinates', latitude: im.geo.lat, longitude: im.geo.lng },
+      },
+    } : null
+
     // English uses the finalized, hand-authored structured data shipped with the
     // content package (exact TouristTrip + AggregateOffer + BreadcrumbList). Every
     // other locale and every other tour keeps the generic `jsonLd` node above,
@@ -120,16 +148,26 @@ export default function TourDetailPage() {
         tour.enTouristTrip,
         ...(tour.enBreadcrumb ? [tour.enBreadcrumb] : []),
         ...(tour.enRouteMapImage ? [tour.enRouteMapImage] : []),
+        ...(heroImageObject ? [heroImageObject] : []),
         ...(faqNode ? [faqNode] : []),
       ]
       finalJsonLd = { '@context': 'https://schema.org', '@graph': nodes.map(stripCtx) }
     } else {
-      finalJsonLd = faqNode
-        ? { '@context': 'https://schema.org', '@graph': [jsonLd, faqNode] }
+      const extra = [
+        ...(heroImageObject ? [heroImageObject] : []),
+        ...(faqNode ? [faqNode] : []),
+      ]
+      finalJsonLd = extra.length
+        ? { '@context': 'https://schema.org', '@graph': [jsonLd, ...extra] }
         : jsonLd
     }
 
-    return { title, description, keywords, path: `${prefix}/${slug}`, image: tour.heroImage, jsonLd: finalJsonLd }
+    return {
+      title, description, keywords, path: `${prefix}/${slug}`,
+      image: tour.heroImage, imageAlt: heroAlt,
+      ogImage: tour.ogImage?.src, ogImageWidth: tour.ogImage?.width, ogImageHeight: tour.ogImage?.height,
+      jsonLd: finalJsonLd,
+    }
   }, [tour, tt, slug, lang])
   useSEO({ ...tourSeo, lang })
 

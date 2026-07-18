@@ -1802,10 +1802,39 @@ export const tours = [
     "slug": "7-day-gudauri-ski-tour-from-tbilisi",
     "type": "private",
     "title": "7-Day Gudauri Ski Tour from Tbilisi",
-    // PLACEHOLDER hero/tile/listing image — owner will supply a real Gudauri ski
-    // photo later. Using the generic georgia-home.jpg placeholder for now so the
-    // hero and listing card render; swap all three paths when the photo arrives.
-    "heroImage": "/images/files/georgia-home.jpg",
+    // Hero: real Gudauri ski photo via the .hero--gudauri-ski image-set() ladder
+    // (styles.css) + imageMeta/ogImage below. heroImage is the SEO fallback ref.
+    // tileImage/listingImage stay on the placeholder (card thumbnails — out of the
+    // hero-only scope; swap later when a card crop is provided).
+    "heroImage": "/images/files/gudauri-ski-slopes-caucasus-georgia-1200.webp",
+    "heroBgClass": "hero--gudauri-ski",
+    "ogImage": { "src": "/images/files/gudauri-ski-slopes-caucasus-georgia-og.jpg", "width": 1200, "height": 630 },
+    "imageMeta": {
+      "width": 1448,
+      "height": 1086,
+      "contentUrl": "/images/files/gudauri-ski-slopes-caucasus-georgia-1448.webp",
+      "description": "Wide, treeless snow slopes and chairlifts at Gudauri ski resort, with groomed piste and ski tracks in the foreground rising toward rounded snow-covered Greater Caucasus peaks under a clear blue sky. Gudauri lies on the Georgian Military Highway north of Tbilisi, in Georgia (the country).",
+      "locationName": "Gudauri, Kazbegi Municipality, Mtskheta-Mtianeti, Georgia",
+      "geo": { "lat": 42.4772, "lng": 44.4783 },
+      "alt": {
+        "en": "Open treeless ski slopes and chairlifts under snow-covered peaks at Gudauri ski resort, Greater Caucasus, Georgia",
+        "de": "Offene baumlose Skipisten und Sessellifte unter schneebedeckten Gipfeln im Skigebiet Gudauri, Großer Kaukasus, Georgien",
+        "fr": "Pistes de ski ouvertes et sans arbres et télésièges sous des sommets enneigés à la station de Gudauri, Grand Caucase, Géorgie",
+        "es": "Pistas de esquí abiertas y sin árboles y telesillas bajo cumbres nevadas en la estación de Gudauri, Gran Cáucaso, Georgia",
+        "nl": "Open boomloze skipistes en stoeltjesliften onder besneeuwde toppen in skigebied Gudauri, Grote Kaukasus, Georgië",
+        "cs": "Otevřené bezlesé sjezdovky a sedačkové lanovky pod zasněženými vrcholy ve středisku Gudauri, Velký Kavkaz, Gruzie",
+        "pl": "Otwarte bezleśne stoki narciarskie i wyciągi krzesełkowe pod ośnieżonymi szczytami w ośrodku Gudauri, Wielki Kaukaz, Gruzja"
+      },
+      "caption": {
+        "en": "Gudauri is Georgia's largest ski resort, set entirely above the tree line on the southern slopes of the Greater Caucasus. Its lifts rise from around 2,000 metres to nearly 3,300 metres, on open runs known for wide, sunny pistes and off-piste terrain.",
+        "de": "Gudauri ist Georgiens größtes Skigebiet, vollständig oberhalb der Baumgrenze an den Südhängen des Großen Kaukasus. Seine Lifte reichen von rund 2.000 bis fast 3.300 Meter, über offene Abfahrten mit weiten, sonnigen Pisten und Gelände abseits davon.",
+        "fr": "Gudauri est la plus grande station de ski de Géorgie, entièrement au-dessus de la limite des arbres sur le versant sud du Grand Caucase. Ses remontées s'élèvent d'environ 2 000 à près de 3 300 mètres, sur des pistes larges et ensoleillées et un terrain hors-piste réputé.",
+        "es": "Gudauri es la mayor estación de esquí de Georgia, situada por completo por encima del límite arbóreo en la vertiente sur del Gran Cáucaso. Sus remontes suben desde unos 2.000 hasta casi 3.300 metros, con pistas amplias y soleadas y terreno fuera de pista.",
+        "nl": "Gudauri is het grootste skigebied van Georgië, volledig boven de boomgrens op de zuidflank van de Grote Kaukasus. De liften stijgen van ongeveer 2.000 tot bijna 3.300 meter, over open afdalingen met brede, zonnige pistes en offpiste-terrein.",
+        "cs": "Gudauri je největší lyžařské středisko Gruzie, ležící zcela nad hranicí lesa na jižních svazích Velkého Kavkazu. Jeho vleky stoupají zhruba od 2 000 do téměř 3 300 metrů, po otevřených sjezdovkách známých širokými, slunnými pistami a terénem mimo ně.",
+        "pl": "Gudauri to największy ośrodek narciarski w Gruzji, położony w całości powyżej granicy lasu na południowych stokach Wielkiego Kaukazu. Wyciągi wznoszą się od około 2000 do niemal 3300 metrów, po otwartych, szerokich i słonecznych stokach oraz terenie poza trasami."
+      }
+    },
     "tileImage": "/images/files/georgia-home.jpg",
     "listingImage": "/images/files/georgia-home.jpg",
     "days": 7,

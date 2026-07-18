@@ -26,8 +26,12 @@ export default function TourDetailHero({ tour, translatedTitle, heroH1, heroSubt
   return (
     <section
       ref={sectionRef}
-      className="td-hero coverme"
-      style={{ backgroundImage: `url(${asset(tour.heroImage)})` }}
+      className={`td-hero coverme${tour.heroBgClass ? ` ${tour.heroBgClass}` : ''}`}
+      // A tour may supply a responsive image-set() background via a CSS class
+      // (`heroBgClass`, e.g. `.hero--gudauri-ski`) — same opt-in HeroSection uses.
+      // When present we omit the inline single-width background so the class fully
+      // controls it; every other tour keeps its inline background unchanged.
+      style={tour.heroBgClass ? undefined : { backgroundImage: `url(${asset(tour.heroImage)})` }}
     >
       <div className="td-hero__inner">
         <nav className="td-hero__breadcrumb" aria-label="Breadcrumb">

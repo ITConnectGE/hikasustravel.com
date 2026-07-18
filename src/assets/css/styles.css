@@ -426,6 +426,39 @@ section {
     );
   }
 }
+/* Gudauri ski tour hero — per-page CSS background (same opt-in mechanism as
+   .hero--juta), on the tour-page hero (.td-hero). Ladder 768/1200/1448 — native
+   ceiling 1448, no 1600/2400. Clean sky across the top with the H1 top-left, so
+   background-position: center center and no per-hero scrim (the shared
+   .coverme::after text layer is unchanged). plain url() = image-set() fallback. */
+.hero--gudauri-ski {
+  background-image: url("/images/files/gudauri-ski-slopes-caucasus-georgia-1200.webp");
+  background-image: image-set(
+    url("/images/files/gudauri-ski-slopes-caucasus-georgia-768.avif") type("image/avif"),
+    url("/images/files/gudauri-ski-slopes-caucasus-georgia-768.webp") type("image/webp")
+  );
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+@media (min-width: 768px) {
+  .hero--gudauri-ski {
+    background-image: image-set(
+      url("/images/files/gudauri-ski-slopes-caucasus-georgia-1200.avif") type("image/avif"),
+      url("/images/files/gudauri-ski-slopes-caucasus-georgia-1200.webp") type("image/webp")
+    );
+  }
+}
+@media (min-width: 1200px) {
+  .hero--gudauri-ski {
+    background-image: image-set(
+      url("/images/files/gudauri-ski-slopes-caucasus-georgia-1448.avif") type("image/avif"),
+      url("/images/files/gudauri-ski-slopes-caucasus-georgia-1448.webp") type("image/webp")
+    );
+  }
+}
+/* No rung above 1448 (native ceiling). */
+
 /* Truso Valley hero — per-page CSS background (same opt-in mechanism as
    .hero--juta). Ladder 768→2400 + deliberate `background-position: center 72%`:
    the subject (tower + church) sits low in a sky-less frame, so a centred crop
