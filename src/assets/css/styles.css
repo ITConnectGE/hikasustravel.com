@@ -588,6 +588,27 @@ section {
   padding-left: var(--indent);
   padding-right: var(--indent);
 }
+/* Tighten the hero H1 on small screens. Long localized hero titles (e.g. the
+   Svetitskhoveli page's "…Georgia's Mother Cathedral and the Robe of Christ")
+   otherwise render large and stack to five lines on a phone, crowding the hero.
+   Ease the size and trim the side padding so long titles read as three compact
+   lines; overflow-wrap/hyphens are a safety net for long compound words (de/nl/
+   pl). Hero-only (.hometop-item h1) — the global h1 size and body headings are
+   untouched, and short titles (most site pages) stay comfortably prominent. */
+@media (max-width: 600px) {
+  .hometop-item h1 {
+    font-size: calc(var(--font-size) * 1.7);
+    padding-left: calc(var(--indent) / 2);
+    padding-right: calc(var(--indent) / 2);
+    overflow-wrap: break-word;
+    hyphens: auto;
+  }
+}
+@media (max-width: 400px) {
+  .hometop-item h1 {
+    font-size: calc(var(--font-size) * 1.5);
+  }
+}
 /* About Us */
 .about-us > div {
   max-width: 800px;
