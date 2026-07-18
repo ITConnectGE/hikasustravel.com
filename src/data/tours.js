@@ -1823,7 +1823,7 @@ export const tours = [
       "Five nights in Gudauri",
       "Hotels included",
       "4–5 flexible ski days",
-      "From €405 per person",
+      "From €415 per person",
       "Customizable route"
     ],
     "rightForYou": [
@@ -1856,7 +1856,7 @@ export const tours = [
       },
       {
         "title": "How much does a ski holiday in Gudauri cost?",
-        "content": "<p>Pricing is per person and depends on your group size and accommodation level, starting from €405 per person for the Classic package in a larger group. Gudauri is one of the most affordable quality ski destinations in Europe, and larger groups pay less per person. Send your dates and group size for an exact quote.</p>"
+        "content": "<p>Pricing is per person and depends on your group size and accommodation level, starting from €415 per person for the Classic package. Gudauri is one of the most affordable quality ski destinations in Europe. Send your dates and group size for an exact quote.</p>"
       },
       {
         "title": "Do I need special insurance to ski in Georgia?",
@@ -1890,7 +1890,7 @@ export const tours = [
       "offers": {
         "@type": "AggregateOffer",
         "priceCurrency": "EUR",
-        "lowPrice": "405",
+        "lowPrice": "415",
         "highPrice": "2255",
         "offerCount": "3",
         "url": "https://www.hikasustravel.com/en/private-tours/7-day-gudauri-ski-tour-from-tbilisi/"
@@ -1990,42 +1990,6 @@ export const tours = [
         "luxury": "€1095",
         "midRange": "€740",
         "economy": "€415"
-      },
-      {
-        "travelers": "5",
-        "luxury": "€1175",
-        "midRange": "€795",
-        "economy": "€470"
-      },
-      {
-        "travelers": "6",
-        "luxury": "€1150",
-        "midRange": "€780",
-        "economy": "€450"
-      },
-      {
-        "travelers": "7",
-        "luxury": "€1135",
-        "midRange": "€760",
-        "economy": "€430"
-      },
-      {
-        "travelers": "8",
-        "luxury": "€1120",
-        "midRange": "€750",
-        "economy": "€420"
-      },
-      {
-        "travelers": "9",
-        "luxury": "€1110",
-        "midRange": "€740",
-        "economy": "€410"
-      },
-      {
-        "travelers": "10",
-        "luxury": "€1105",
-        "midRange": "€735",
-        "economy": "€405"
       }
     ],
     "included": [

@@ -34,17 +34,36 @@ export default function TourSectionNav({ sections }) {
     return () => window.removeEventListener('scroll', onScroll)
   }, [onScroll])
 
-  // Use IntersectionObserver on sentinel to toggle fixed positioning
+  // Use IntersectionObserver on sentinel to toggle fixed positioning.
+  // rootMargin offsets the root's top edge by the fixed-nav offset (matching
+  // .td-nav--fixed top: 64px desktop / 80px at <=600px) so the nav pins the
+  // instant it reaches the bottom of the sticky site bar instead of the top
+  // of the viewport. Without it the nav briefly slides up UNDER the site bar
+  // during scroll and its top edge (e.g. the "Accommodation" tab) is clipped
+  // before it snaps into place.
   useEffect(() => {
     const sentinel = sentinelRef.current
     if (!sentinel) return
 
-    const observer = new IntersectionObserver(
-      ([entry]) => setIsFixed(!entry.isIntersecting),
-      { threshold: 0 }
-    )
-    observer.observe(sentinel)
-    return () => observer.disconnect()
+    const mq = window.matchMedia('(max-width: 600px)')
+    let observer
+
+    const setup = () => {
+      if (observer) observer.disconnect()
+      const topOffset = mq.matches ? 80 : 64
+      observer = new IntersectionObserver(
+        ([entry]) => setIsFixed(!entry.isIntersecting),
+        { threshold: 0, rootMargin: `-${topOffset}px 0px 0px 0px` }
+      )
+      observer.observe(sentinel)
+    }
+
+    setup()
+    mq.addEventListener('change', setup)
+    return () => {
+      if (observer) observer.disconnect()
+      mq.removeEventListener('change', setup)
+    }
   }, [])
 
   // scroll active tab into view on mobile
