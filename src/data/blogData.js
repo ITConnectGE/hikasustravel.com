@@ -150,11 +150,6 @@ export const blogArticles = [
 
 <h2>Georgian Cuisine: Get Ready to Eat Everything</h2>
 
-<figure class="blog-img">
-<img src="/images/files/Kachka.jpg" alt="Traditional Georgian cuisine with khachapuri and fresh dishes" loading="lazy" />
-<figcaption>A traditional Georgian spread — where every meal is a feast</figcaption>
-</figure>
-
 <p>Georgian food is reason enough to visit. It's one of the world's great undiscovered cuisines — rich, diverse, and built around fresh ingredients, herbs, walnuts, and cheese. A lot of cheese.</p>
 
 <h3>Must-Try Dishes</h3>
@@ -171,11 +166,6 @@ export const blogArticles = [
 <p><strong>Budget eating tip:</strong> Look for a <em>sasadilo</em> (cafeteria-style restaurant). Locals eat here daily — you'll get a full meal (soup, main dish, bread, salad) for 8–15 GEL (€3–5). Don't judge by the décor. Judge by how full the place is at lunchtime.</p>
 
 <h2>Wine Culture: 8,000 Years and Still Pouring</h2>
-
-<figure class="blog-img">
-<img src="/images/files/wander-wonder-wine-tour.jpg" alt="Georgian qvevri wine cellar with traditional clay vessels" loading="lazy" />
-<figcaption>Georgian winemaking — an 8,000-year-old tradition recognized by UNESCO</figcaption>
-</figure>
 
 <p>Georgia is officially the oldest wine-producing country on Earth. Archaeological evidence of grape fermentation dates back 8,000 years. Wine isn't just a drink here — it's identity, religion, and family tradition rolled into one.</p>
 
@@ -247,11 +237,6 @@ export const blogArticles = [
 <p>Tipping is not mandatory but appreciated. In restaurants, 10% is generous. For tours and drivers, tip based on the quality of service. Nobody will be offended if you don't tip — but they'll definitely remember if you do.</p>
 
 <h2>Cultural Tips: The Georgian Supra</h2>
-
-<figure class="blog-img">
-<img src="/images/files/cultural-adventure-caucasus.jpg" alt="Georgian cultural traditions and hospitality" loading="lazy" />
-<figcaption>Georgian hospitality — where strangers become family around the table</figcaption>
-</figure>
 
 <p>If you're lucky enough to be invited to a <strong>supra</strong> (Georgian feast), say yes immediately. This is the cornerstone of Georgian hospitality — a long table laden with food, an endless flow of wine, and heartfelt toasts led by a <em>tamada</em> (toastmaster).</p>
 
