@@ -1984,7 +1984,38 @@ export const sites = [
     slug: 'jvari-monastery', name: 'Jvari Monastery',
     parentType: 'city', parent: 'mtskheta', published: true,
     seoKey: 'jvariMonastery', contentKey: 'jvariMonastery',
-    image: '/images/files/georgia-home.jpg',
+    // Hero: real Jvari Monastery (eastern-apse view, owner's own photo) via the
+    // .hero--jvari image-set() ladder (styles.css). `image`/`imageAvif` = the 1540
+    // top rung; the CSS class controls the visible background, and `image` feeds
+    // the ImageObject contentUrl (1540 rung, per package). Native ceiling 1540 —
+    // ladder 768/1200/1540, NO 1600/2400 rung.
+    image: '/images/files/jvari-monastery-mtskheta-georgia-1540.webp',
+    imageAvif: '/images/files/jvari-monastery-mtskheta-georgia-1540.avif',
+    heroClass: 'hero--jvari',
+    // Dedicated 1.91:1 social-share image (og:image / twitter:image), .jpg default.
+    ogImage: { src: '/images/files/jvari-monastery-mtskheta-georgia-og.jpg', width: 1200, height: 630 },
+    // Image SEO/AEO metadata (owner's own photo → brand credit, set by SitePage).
+    // Hero is a CSS background (no <img alt>), so the localized alt lives here and
+    // is emitted as the ImageObject caption + og:image:alt/twitter:image:alt per
+    // locale. Verbatim from jvari-monastery-hero-package.md. width/height = 1540
+    // rung. Coordinates approximate per package.
+    imageMeta: {
+      width: 1540, height: 1021,
+      name: 'The 6th-century Jvari Monastery, a domed stone tetraconch church with carved reliefs, on its hilltop above Mtskheta, Georgia',
+      description: 'The Jvari Monastery (Church of the Holy Cross) above Mtskheta, an early-medieval domed tetraconch of warm tuff stone with a single dome on an octagonal drum, figural bas-reliefs of its royal patrons on the eastern apse, and the ruins of the older Small Church and fortification walls beside it. Jvari stands on a hilltop over the confluence of the Aragvi and Mtkvari rivers in Mtskheta, Mtskheta-Mtianeti, Georgia (the country).',
+      locationName: 'Jvari Monastery, Mtskheta, Mtskheta-Mtianeti, Georgia',
+      locality: 'Mtskheta', region: 'Mtskheta-Mtianeti', country: 'GE',
+      geo: { lat: 41.8380, lng: 44.7328 },
+      alt: {
+        en: 'The 6th-century Jvari Monastery, a domed stone tetraconch church with carved reliefs, on its hilltop above Mtskheta, Georgia',
+        de: 'Das Kloster Dschwari aus dem 6. Jahrhundert, eine kuppelbekrönte steinerne Tetrakonchoskirche mit Reliefs, auf dem Hügel über Mzcheta, Georgien',
+        fr: 'Le monastère de Djvari, église tétraconque en pierre à coupole du VIe siècle ornée de reliefs, sur sa colline au-dessus de Mtskheta, Géorgie',
+        es: 'El monasterio de Yvari, iglesia tetracónica de piedra con cúpula del siglo VI y relieves tallados, sobre su colina junto a Mtsjeta, Georgia',
+        nl: 'Het 6e-eeuwse Jvari-klooster, een stenen tetraconch-kerk met koepel en reliëfs, op de heuvel boven Mtscheta, Georgië',
+        cs: 'Klášter Džvari ze 6. století, kamenný tetrakonchový kostel s kupolí a reliéfy, na kopci nad Mcchetou, Gruzie',
+        pl: 'VI-wieczny klasztor Dżwari, kamienny tetrakonchowy kościół z kopułą i reliefami, na wzgórzu nad Mcchetą, Gruzja',
+      },
+    },
   },
   {
     slug: 'samtavro-monastery', name: 'Samtavro Monastery',
