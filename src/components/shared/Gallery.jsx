@@ -8,7 +8,7 @@ import useT from '../../i18n/useT'
 const INITIAL_COUNT = 8
 const SWIPE_THRESHOLD = 50
 
-function GalleryLightbox({ images, startIndex, onClose }) {
+export function GalleryLightbox({ images, startIndex, onClose, label }) {
   const t = useT()
   const [index, setIndex] = useState(startIndex)
   const closeBtnRef = useRef(null)
@@ -54,7 +54,7 @@ function GalleryLightbox({ images, startIndex, onClose }) {
   }
 
   return createPortal(
-    <div className="gallery-lightbox-backdrop" onClick={onClose} role="dialog" aria-modal="true" aria-label={t('tour.gallery')}>
+    <div className="gallery-lightbox-backdrop" onClick={onClose} role="dialog" aria-modal="true" aria-label={label || t('tour.gallery')}>
       <button ref={closeBtnRef} className="gallery-lightbox__close" onClick={onClose} aria-label={t('hotel.close')}>
         <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
           <line x1="18" y1="6" x2="6" y2="18" /><line x1="6" y1="6" x2="18" y2="18" />

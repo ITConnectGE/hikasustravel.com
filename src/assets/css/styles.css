@@ -6120,6 +6120,17 @@ select option:checked {
   font-style: italic;
   text-align: center;
 }
+/* Clickable body infographic (opens the shared lightbox). Affordance only —
+   the <img> inside keeps its own sizing/rounding/shadow. */
+.body-img__btn {
+  display: block;
+  cursor: zoom-in;
+  border-radius: 10px;
+}
+.body-img__btn:focus-visible {
+  outline: 2px solid var(--color-h2);
+  outline-offset: 3px;
+}
 
 /* "<Entity> Tours" navigation tag shown near the top of destination pages. */
 .entity-tours-tag-row {
