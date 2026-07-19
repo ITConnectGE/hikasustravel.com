@@ -191,7 +191,19 @@ const blogArticles = [
     seoTitle: 'The Georgian Flag: History, Meaning & the Five Crosses | Hikasus Travel',
     excerpt: "Georgia's five-cross flag looks medieval and is — but it only became the national flag in 2004, carried first as a protest banner. The real story is stranger than the legend.",
     metaDescription: "Georgia's five-cross flag looks medieval and is — but it only became the national flag in 2004, carried first as a protest banner. The real story is stranger than the legend.",
-    heroImage: '/images/files/georgia-home.jpg',
+    heroImage: '/images/files/georgian-flag-five-cross-flag-georgia-1600.webp',
+    ogImage: '/images/files/georgian-flag-five-cross-flag-georgia-og.jpg',
+    ogImageWidth: 1200,
+    ogImageHeight: 630,
+    ogImageAlt: {
+      en: 'The national flag of Georgia, the Five Cross Flag, with a central red cross and four smaller crosses, waving against a blue sky',
+      de: 'Die Nationalflagge Georgiens, die Fünf-Kreuz-Flagge, mit einem zentralen roten Kreuz und vier kleineren Kreuzen, vor blauem Himmel',
+      fr: 'Le drapeau national de la Géorgie, le drapeau aux cinq croix, avec une grande croix rouge centrale et quatre petites croix, flottant sur un ciel bleu',
+      es: 'La bandera nacional de Georgia, la bandera de las cinco cruces, con una cruz roja central y cuatro cruces más pequeñas, ondeando contra un cielo azul',
+      nl: 'De nationale vlag van Georgië, de vijfkruisenvlag, met een centraal rood kruis en vier kleinere kruisen, wapperend tegen een blauwe lucht',
+      cs: 'Státní vlajka Gruzie, vlajka pěti křížů, s ústředním červeným křížem a čtyřmi menšími kříži, vlající proti modré obloze',
+      pl: 'Flaga narodowa Gruzji, flaga pięciu krzyży, z centralnym czerwonym krzyżem i czterema mniejszymi krzyżami, powiewająca na tle błękitnego nieba',
+    },
     tags: ['history', 'culture', 'flag'],
   },
 ]
@@ -528,6 +540,10 @@ for (const lang of LANGS) {
       keywords,
       canonical,
       image: article.heroImage,
+      ogImage: article.ogImage,
+      ogImageAlt: article.ogImageAlt?.[lang],
+      ogImageWidth: article.ogImageWidth,
+      ogImageHeight: article.ogImageHeight,
       ogLocale,
     })
   }

@@ -76,6 +76,21 @@ export default function BlogArticlePage() {
         ],
       },
     ]
+    // Hero image (added for posts that ship a dedicated hero image with metadata).
+    // AI-generated illustration → no creditText/creator/copyrightNotice.
+    if (article.heroImageMeta) {
+      const m = article.heroImageMeta
+      graph.push({
+        '@type': 'ImageObject',
+        '@id': `${url}#hero-image`,
+        contentUrl: `https://www.hikasustravel.com${article.heroImage}`,
+        width: m.width,
+        height: m.height,
+        name: m.alt?.[lang] || m.alt?.en,
+        caption: m.caption?.[lang] || m.caption?.en,
+        representativeOfPage: true,
+      })
+    }
     if (article.phrases?.length > 0) {
       graph.push({
         '@type': 'ItemList',
@@ -113,6 +128,10 @@ export default function BlogArticlePage() {
     lang,
     path: `blog/${slug}`,
     image: article.heroImage,
+    imageAlt: article.heroImageMeta?.alt?.[lang] || article.heroImageMeta?.alt?.en,
+    ogImage: article.heroImageMeta?.og?.src,
+    ogImageWidth: article.heroImageMeta?.og?.width,
+    ogImageHeight: article.heroImageMeta?.og?.height,
     jsonLd,
   } : { title: 'Blog — Hikasus Travel', lang, path: 'blog' })
 
@@ -137,7 +156,7 @@ export default function BlogArticlePage() {
 
   return (
     <>
-      <HeroSection image={article.heroImage} title={articleTitle} />
+      <HeroSection image={article.heroImage} title={articleTitle} bgClass={article.heroBgClass || ''} />
       <section className="blog-article">
         <nav className="blog-breadcrumb">
           <LocaleLink to="/">Home</LocaleLink>

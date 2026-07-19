@@ -677,6 +677,42 @@ section {
   }
 }
 /* 1600 is the top rung. Do not add a 2400 or 1672 breakpoint. */
+/* Georgian flag blog hero — per-page CSS background (same opt-in mechanism as
+   .hero--bagrati), on the Georgian-flag blog post. AI-generated illustration.
+   16:9 source (native 1672) exported to a top rung of 1600, so the ladder is
+   exactly 768/1200/1600 with the top breakpoint at min-width:1200. There is NO
+   2400 rung and NO separate native-1672 rung (dropped as redundant with 1600).
+   `background-position: center center`: the wide 16:9 flag fills the banner with
+   almost no crop. The shared .coverme::after overlay already provides the
+   readable text layer, so no extra scrim is added. plain url() line = image-set()
+   fallback for browsers without image-set(). */
+.hero--georgian-flag {
+  background-image: url("/images/files/georgian-flag-five-cross-flag-georgia-1200.webp");
+  background-image: image-set(
+    url("/images/files/georgian-flag-five-cross-flag-georgia-768.avif") type("image/avif"),
+    url("/images/files/georgian-flag-five-cross-flag-georgia-768.webp") type("image/webp")
+  );
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+@media (min-width: 768px) {
+  .hero--georgian-flag {
+    background-image: image-set(
+      url("/images/files/georgian-flag-five-cross-flag-georgia-1200.avif") type("image/avif"),
+      url("/images/files/georgian-flag-five-cross-flag-georgia-1200.webp") type("image/webp")
+    );
+  }
+}
+@media (min-width: 1200px) {
+  .hero--georgian-flag {
+    background-image: image-set(
+      url("/images/files/georgian-flag-five-cross-flag-georgia-1600.avif") type("image/avif"),
+      url("/images/files/georgian-flag-five-cross-flag-georgia-1600.webp") type("image/webp")
+    );
+  }
+}
+/* 1600 is the top rung. Do not add a 2400 or 1672 breakpoint. */
 /* Khertvisi Fortress hero — per-page CSS background (same opt-in mechanism as
    .hero--mestia). Native ceiling is 1448, BELOW the usual 1600 rung, so the
    ladder is exactly 768/1200/1448 with the top breakpoint at min-width:1200 —
