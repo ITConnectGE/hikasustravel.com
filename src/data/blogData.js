@@ -103,46 +103,46 @@ export const blogArticles = [
 
 <h2>Top Destinations You Absolutely Cannot Miss</h2>
 
+<h3>Tbilisi — The Capital That Defies Expectations</h3>
+
 <figure class="blog-img">
 <img src="/images/files/sulfur-baths-wine-tour.jpg" alt="Tbilisi Old Town with colorful houses and Narikala Fortress" loading="lazy" />
 <figcaption>Tbilisi's Old Town — where history meets vibrant street life</figcaption>
 </figure>
-
-<h3>Tbilisi — The Capital That Defies Expectations</h3>
 <p>Tbilisi is not just a city — it's a character. Pastel-colored houses lean over narrow streets in the Old Town. The Narikala Fortress watches over the Mtkvari River. Sulfur baths steam in the Abanotubani district (bring your bathing suit — it's a must-do experience). The Dry Bridge flea market sells everything from Soviet memorabilia to hand-painted icons.</p>
 <p>Don't miss: <strong>Fabrika</strong> (a converted Soviet factory turned creative hub), <strong>Leghvtakhevi waterfall</strong> (yes, there's a waterfall in the middle of the city), and the <strong>Chronicles of Georgia</strong> monument — a towering, surreal hilltop sculpture that almost nobody talks about but absolutely should.</p>
+
+<h3>Kazbegi (Stepantsminda) — The Iconic Mountain View</h3>
 
 <figure class="blog-img">
 <img src="/images/files/Gergeti-Church.jpg" alt="Gergeti Trinity Church with Mount Kazbek in the background" loading="lazy" />
 <figcaption>Gergeti Trinity Church — Georgia's most iconic view</figcaption>
 </figure>
-
-<h3>Kazbegi (Stepantsminda) — The Iconic Mountain View</h3>
 <p>The Gergeti Trinity Church, perched at 2,170 meters with Mount Kazbek (5,054m) towering behind it, is the most photographed spot in Georgia — and it earns every pixel. The drive from Tbilisi along the Georgian Military Highway is spectacular, passing through the Jvari Pass at 2,395 meters.</p>
 <p>The hike to the church takes about 1.5 hours, or you can take a 4x4. Either way, the view will ruin you for other mountain views forever.</p>
+
+<h3>Svaneti — Medieval Towers and Epic Trails</h3>
 
 <figure class="blog-img">
 <img src="/images/files/svaneti-wine-culture-tour.jpg" alt="Svaneti medieval towers in the Caucasus Mountains" loading="lazy" />
 <figcaption>Svaneti's ancient stone towers against the backdrop of the Caucasus</figcaption>
 </figure>
-
-<h3>Svaneti — Medieval Towers and Epic Trails</h3>
 <p>Svaneti feels like stepping into a medieval painting. The iconic stone defense towers of Mestia and Ushguli (one of the highest permanently inhabited villages in Europe) are UNESCO World Heritage Sites. This is Georgia's premier trekking destination — the 4-day hike from Mestia to Ushguli is legendary.</p>
+
+<h3>Kakheti — Where Wine Was Born</h3>
 
 <figure class="blog-img">
 <img src="/images/files/wine-caucasus-adventure.jpg" alt="Kakheti wine region with vineyards and mountain views" loading="lazy" />
 <figcaption>The Kakheti wine region — where 8,000 years of winemaking tradition lives on</figcaption>
 </figure>
-
-<h3>Kakheti — Where Wine Was Born</h3>
 <p>Kakheti is the heart of Georgian wine country. The Alazani Valley is framed by the Greater Caucasus mountains and dotted with vineyards, monasteries, and family-run wineries. Visit <strong>Sighnaghi</strong> (the "City of Love"), explore the <strong>Alaverdi Monastery</strong> (where monks still make wine in 8,000-year-old clay vessels called <em>qvevri</em>), and taste your way through the region.</p>
+
+<h3>Batumi — Black Sea Glamour</h3>
 
 <figure class="blog-img">
 <img src="/images/files/batumi-coastal-tour.jpg" alt="Batumi Black Sea coast with modern architecture and palm trees" loading="lazy" />
 <figcaption>Batumi — Georgia's subtropical Black Sea gem</figcaption>
 </figure>
-
-<h3>Batumi — Black Sea Glamour</h3>
 <p>Georgia's second city is a subtropical beach resort on the Black Sea. Think palm trees, a stunning boulevard, modern architecture (the Alphabet Tower, anyone?), and a lively nightlife scene. It's also the gateway to the stunning Adjara highlands.</p>
 
 <h3>Vardzia — A City Carved into a Cliff</h3>
@@ -194,11 +194,6 @@ export const blogArticles = [
 <p><strong>Pro tip:</strong> Visit a family winery in Kakheti. Many families have been making wine for generations and will host you for a tasting (and probably a feast) for little or nothing. It's one of the most authentic experiences Georgia offers.</p>
 
 <h2>Getting Around Georgia</h2>
-
-<figure class="blog-img">
-<img src="/images/files/Gveleti-Waterfall.jpg" alt="Scenic road through the Georgian Caucasus mountains" loading="lazy" />
-<figcaption>The journey is part of the adventure — Georgia's roads wind through dramatic landscapes</figcaption>
-</figure>
 
 <p>Georgia is compact — you can reach most destinations from Tbilisi in 2–6 hours. Here are your options:</p>
 
