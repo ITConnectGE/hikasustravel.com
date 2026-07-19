@@ -3080,7 +3080,38 @@ export const sites = [
     slug: 'chiatura-cable-cars', name: 'Chiatura Cable Cars',
     parentType: 'city', parent: 'chiatura', published: true,
     seoKey: 'chiaturaCableCars', contentKey: 'chiaturaCableCars',
-    image: '/images/files/georgia-home.jpg',
+    // Hero: real Chiatura cable car (NEW 2021 POMA gondola, owner's own photo) via
+    // the .hero--chiatura image-set() ladder (styles.css). `image`/`imageAvif` =
+    // the 1536 top rung; the CSS class controls the visible background, and
+    // `image` feeds the ImageObject contentUrl (1536 rung, per package). Native
+    // ceiling 1536 — ladder 768/1200/1536, NO 1600/2400 rung.
+    image: '/images/files/chiatura-cable-car-gondola-georgia-1536.webp',
+    imageAvif: '/images/files/chiatura-cable-car-gondola-georgia-1536.avif',
+    heroClass: 'hero--chiatura',
+    // Dedicated 1.91:1 social-share image (og:image / twitter:image), .jpg default.
+    ogImage: { src: '/images/files/chiatura-cable-car-gondola-georgia-og.jpg', width: 1200, height: 630 },
+    // Image SEO/AEO metadata (owner's own photo → brand credit, set by SitePage).
+    // Hero is a CSS background (no <img alt>), so the localized alt lives here and
+    // is emitted as the ImageObject caption + og:image:alt/twitter:image:alt per
+    // locale. Verbatim from chiatura-cable-car-hero-package.md. width/height =
+    // 1536 rung. Coordinates approximate per package.
+    imageMeta: {
+      width: 1536, height: 1024,
+      name: 'A cable-car gondola and tower above the forested hillside town of Chiatura, Imereti, Georgia',
+      description: "A modern enclosed cable-car gondola hangs from a galvanised-steel tower above the forested slopes of Chiatura, with the town's houses climbing the hillside behind and autumn trees around. Chiatura is a manganese-mining town in the Kvirila River gorge in the Imereti region of Georgia (the country); its Soviet-era ropeway network was rebuilt with new lines opened in 2021.",
+      locationName: 'Chiatura, Imereti, Georgia',
+      locality: 'Chiatura', region: 'Imereti', country: 'GE',
+      geo: { lat: 42.2897, lng: 43.2869 },
+      alt: {
+        en: 'A cable-car gondola and tower above the forested hillside town of Chiatura, Imereti, Georgia',
+        de: 'Eine Seilbahnkabine und ein Seilbahnmast über der bewaldeten Hangstadt Tschiatura, Imereti, Georgien',
+        fr: 'Une cabine de téléphérique et son pylône au-dessus de la ville en pente boisée de Tchiatoura, Iméréthie, Géorgie',
+        es: 'Una cabina de teleférico y su torre sobre la ciudad boscosa en ladera de Chiatura, Imereti, Georgia',
+        nl: 'Een kabelbaancabine en -mast boven het beboste heuvelstadje Chiatura, Imereti, Georgië',
+        cs: 'Kabina lanovky a stožár nad zalesněným svahovým městem Čiatura, Imereti, Gruzie',
+        pl: 'Kabina kolejki linowej i słup nad zalesionym, położonym na zboczu miastem Cziatura, Imeretia, Gruzja',
+      },
+    },
   },
   {
     slug: 'bagrati-cathedral', name: 'Bagrati Cathedral',
