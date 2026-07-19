@@ -1,5 +1,48 @@
 {
     "7-day-gudauri-ski-tour-from-tbilisi": {
+        "title": "7-dniowy tour narciarski do Gudauri z Tbilisi",
+        "heroH1": "7-dniowy tour narciarski do Gudauri z Tbilisi",
+        "listingDescription": "Prywatne 7-dniowe wakacje narciarskie w Gudauri, największym ośrodku narciarskim Gruzji — pięć nocy w górach, elastyczne dni na nartach dla wszystkich poziomów, z Tbilisi.",
+        "heroSubtitle": "Prywatne siedmiodniowe wakacje narciarskie w Gudauri, największym i najnowocześniejszym ośrodku narciarskim Gruzji, wysoko w Wielkim Kaukazie. Po spokojnym noclegu w Tbilisi, aby dojść do siebie po locie, spędzasz pięć nocy w górach z czterema elastycznymi dniami na nartach — szerokie stoki i pewny śnieg dla początkujących, średnio zaawansowanych i freeriderów. Transfery i hotele są załatwione za Ciebie; tempo jest spokojne, bez pośpiechu. Dostępny jako tour prywatny dla Twojej grupy, dopasowany do Twoich terminów i poziomu.",
+        "seoTitle": "7-dniowy tour narciarski do Gudauri z Tbilisi",
+        "metaDescription": "Prywatny 7-dniowy tour narciarski do Gudauri z Tbilisi: pięć nocy w największym ośrodku narciarskim Gruzji, 4 elastyczne dni na nartach dla wszystkich poziomów, transfery i hotele w cenie.",
+        "rightForYou": [
+            "Narciarze, którzy chcą spokojnego, dobrze zorganizowanego tygodnia na nartach z załatwionymi transferami i hotelami, a potem jeździć we własnym tempie, zamiast trzymać się sztywnego programu",
+            "Początkujący (łagodne stoki i niedrodzy instruktorzy), średnio zaawansowani i pewni siebie narciarze (długie, urozmaicone trasy)",
+            "Freeriderzy i narciarze poza trasami (otwarty teren powyżej granicy lasu i heliskiing w sezonie)",
+            "Pary, znajomi i małe grupy, które chcą prywatnej, elastycznej wyprawy",
+            "Mniej odpowiedni dla podróżnych szukających napiętego programu zwiedzania — dni są celowo wolne na narty i czas w górach, a nie na wycieczki z przewodnikiem"
+        ],
+        "faq": [
+            {
+                "title": "Gdzie leży Gudauri i jak się tam dostać z Tbilisi?",
+                "content": "<p>Gudauri to największy ośrodek narciarski Gruzji, położony przy Gruzińskiej Drodze Wojskowej w pobliżu Przełęczy Krzyżowej, około 120 km (mniej więcej dwie do dwóch i pół godziny) na północ od Tbilisi. Na tej wycieczce prywatny kierowca obsługuje wszystkie transfery — z międzynarodowego lotniska w Tbilisi do hotelu w mieście, w górę do Gudauri i na koniec z powrotem na lotnisko.</p>"
+            },
+            {
+                "title": "Czy Gudauri jest dobre dla początkujących, czy tylko dla zaawansowanych narciarzy?",
+                "content": "<p>Dla obu. Gudauri ma łagodne zielone i niebieskie trasy oraz niedrogich anglojęzycznych instruktorów, co czyni je dobrym miejscem do nauki, długie, urozmaicone trasy dla średnio zaawansowanych oraz rozległy otwarty teren poza trasami i do freeride'u powyżej granicy lasu (a w sezonie heliskiing) dla zaawansowanych narciarzy i snowboardzistów. Dni na nartach podczas tej wycieczki są wolne i elastyczne, więc każdy może jeździć na swoim poziomie.</p>"
+            },
+            {
+                "title": "Kiedy jest najlepszy czas na ten wyjazd narciarski?",
+                "content": "<p>Sezon w Gudauri trwa zwykle od grudnia do kwietnia, a najbardziej pewny śnieg zazwyczaj od połowy stycznia do początku marca. Późny sezon (do kwietnia) często przynosi słoneczne dni i bardziej miękki wiosenny śnieg. Ponieważ ośrodek leży wysoko i powyżej granicy lasu, pokrywa śnieżna jest zwykle niezawodna przez cały sezon.</p>"
+            },
+            {
+                "title": "Ile dni na nartach obejmuje wycieczka i jak jest zorganizowana?",
+                "content": "<p>Łącznie siedem dni: jedna noc na regenerację w Tbilisi, dzień przejazdu w górę do Gudauri, następnie pięć nocy w ośrodku z czterema pełnymi, elastycznymi dniami na nartach i w ostatnim dniu transfer z powrotem na lotnisko. Przez cały czas mieszkasz w jednym hotelu w Gudauri, więc rozpakowujesz się tylko raz.</p>"
+            },
+            {
+                "title": "Czy to jest tour prywatny i co obejmuje cena?",
+                "content": "<p>Odbywa się prywatnie dla Twojej własnej grupy, a cena za osobę spada wraz z liczbą osób, które ją dzielą. Cena obejmuje sześć nocy zakwaterowania (jedną w Tbilisi, pięć w Gudauri) w pokoju dwuosobowym/twin ze śniadaniem oraz wszystkie transfery komfortowym pojazdem. Nie obejmuje obiadów i kolacji, karnetów narciarskich, wypożyczenia sprzętu, lekcji ani ubezpieczenia podróżnego — te organizuje się na miejscu, a my chętnie pomożemy Ci je zorganizować.</p>"
+            },
+            {
+                "title": "Ile kosztują wakacje narciarskie w Gudauri?",
+                "content": "<p>Ceny są za osobę i zależą od wielkości grupy oraz poziomu zakwaterowania, od €415 za osobę za pakiet Classic. Gudauri to jedna z najtańszych wysokiej jakości destynacji narciarskich w Europie. Wyślij nam swoje terminy i wielkość grupy, aby otrzymać dokładną wycenę.</p>"
+            },
+            {
+                "title": "Czy do jazdy na nartach w Gruzji potrzebuję specjalnego ubezpieczenia?",
+                "content": "<p>Od 1 stycznia 2026 roku do wjazdu do Gruzji wymagane jest ubezpieczenie zdrowotne. Na wyjazd narciarski zalecamy wybór polisy, która wyraźnie obejmuje sporty zimowe (narciarstwo, snowboard oraz, jeśli dotyczy, jazdę poza trasami lub heliskiing), ponieważ standardowe ubezpieczenia podróżne mogą je wykluczać.</p>"
+            }
+        ],
         "heroFacts": [
             "7 dni / 6 nocy",
             "Tour prywatny",

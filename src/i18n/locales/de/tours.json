@@ -1,5 +1,48 @@
 {
     "7-day-gudauri-ski-tour-from-tbilisi": {
+        "title": "7-tägige Gudauri Skitour ab Tiflis",
+        "heroH1": "7-tägige Gudauri Skitour ab Tiflis",
+        "listingDescription": "Ein privater 7-tägiger Skiurlaub in Gudauri, Georgiens größtem Skigebiet — fünf Nächte in den Bergen, flexible Skitage für alle Niveaus, ab Tiflis.",
+        "heroSubtitle": "Ein privater siebentägiger Skiurlaub in Gudauri, Georgiens größtem und modernstem Skigebiet, hoch im Großen Kaukasus. Nach einer entspannten Übernachtung in Tiflis zur Erholung vom Flug verbringen Sie fünf Nächte in den Bergen mit vier flexiblen Skitagen — weite Hänge und verlässlicher Schnee für Anfänger, Fortgeschrittene und Freerider gleichermaßen. Transfers und Hotels werden für Sie organisiert; das Tempo ist entspannt, ganz ohne Hektik. Als Privattour für Ihre Gruppe verfügbar, abgestimmt auf Ihre Termine und Ihr Niveau.",
+        "seoTitle": "7-tägige Gudauri Skitour ab Tiflis",
+        "metaDescription": "Private 7-tägige Gudauri Skitour ab Tiflis: fünf Nächte in Georgiens größtem Skigebiet, 4 flexible Skitage für alle Niveaus, Transfers und Hotels inklusive.",
+        "rightForYou": [
+            "Skifahrer, die eine entspannte, gut organisierte Skiwoche mit erledigten Transfers und Hotels möchten und dann in ihrem eigenen Tempo Ski fahren, statt einem starren Programm zu folgen",
+            "Anfänger (sanfte Hänge und günstige Skilehrer), Fortgeschrittene und sichere Skifahrer (lange, abwechslungsreiche Abfahrten)",
+            "Freerider und Off-Piste-Skifahrer (offenes Gelände oberhalb der Baumgrenze und Heliskiing in der Saison)",
+            "Paare, Freunde und kleine Gruppen, die eine private, flexible Reise möchten",
+            "Weniger geeignet für Reisende, die ein vollgepacktes Sightseeing-Programm suchen — die Tage sind bewusst frei für das Skifahren und die Zeit in den Bergen statt für geführte Touren"
+        ],
+        "faq": [
+            {
+                "title": "Wo liegt Gudauri, und wie komme ich von Tiflis aus dorthin?",
+                "content": "<p>Gudauri ist Georgiens größtes Skigebiet und liegt an der Georgischen Heerstrasse nahe dem Kreuzpass, etwa 120 km (rund zwei bis zweieinhalb Stunden) nördlich von Tiflis. Auf dieser Tour übernimmt ein privater Fahrer alle Transfers — vom internationalen Flughafen Tiflis zu Ihrem Stadthotel, hinauf nach Gudauri und am Ende zurück zum Flughafen.</p>"
+            },
+            {
+                "title": "Ist Gudauri für Anfänger geeignet oder nur für fortgeschrittene Skifahrer?",
+                "content": "<p>Beides. Gudauri hat sanfte grüne und blaue Abfahrten und günstige englischsprachige Skilehrer, was es zu einem guten Ort zum Lernen macht, lange abwechslungsreiche Pisten für Fortgeschrittene sowie ausgedehntes offenes Off-Piste- und Freeride-Gelände oberhalb der Baumgrenze (dazu Heliskiing in der Saison) für fortgeschrittene Skifahrer und Snowboarder. Die Skitage dieser Tour sind frei und flexibel, sodass jeder auf seinem eigenen Niveau fahren kann.</p>"
+            },
+            {
+                "title": "Wann ist die beste Zeit für diese Skitour?",
+                "content": "<p>Die Saison in Gudauri läuft in der Regel von Dezember bis April, mit dem verlässlichsten Schnee meist von Mitte Januar bis Anfang März. Das Saisonende (bis in den April) bringt oft sonnige Tage und weicheren Frühjahrsschnee. Da das Gebiet hoch und oberhalb der Baumgrenze liegt, ist die Schneedecke über die Saison hinweg meist zuverlässig.</p>"
+            },
+            {
+                "title": "Wie viele Skitage umfasst die Tour, und wie ist sie aufgebaut?",
+                "content": "<p>Insgesamt sieben Tage: eine Erholungsnacht in Tiflis, ein Transfertag hinauf nach Gudauri, dann fünf Nächte im Skigebiet mit vier ganzen, flexiblen Skitagen und ein Transfer zurück zum Flughafen am letzten Tag. Sie wohnen durchgehend in einem Hotel in Gudauri, sodass Sie nur einmal auspacken.</p>"
+            },
+            {
+                "title": "Ist dies eine Privattour, und was ist im Preis enthalten?",
+                "content": "<p>Sie findet privat für Ihre eigene Gruppe statt, und der Preis pro Person sinkt, je mehr Personen ihn teilen. Im Preis enthalten sind sechs Übernachtungen (eine in Tiflis, fünf in Gudauri) im Doppel-/Zweibettzimmer mit Frühstück sowie alle Transfers in einem komfortablen Fahrzeug. Nicht enthalten sind Mittag- und Abendessen, Skipässe, Ausrüstungsverleih, Skikurse und Reiseversicherung — diese werden vor Ort organisiert, und wir helfen Ihnen gern dabei.</p>"
+            },
+            {
+                "title": "Wie viel kostet ein Skiurlaub in Gudauri?",
+                "content": "<p>Die Preise gelten pro Person und hängen von Ihrer Gruppengröße und der Unterkunftskategorie ab, ab €415 pro Person für das Classic-Paket. Gudauri ist eines der günstigsten Qualitäts-Skiziele Europas. Senden Sie uns Ihre Termine und Gruppengröße für ein genaues Angebot.</p>"
+            },
+            {
+                "title": "Benötige ich eine spezielle Versicherung, um in Georgien Ski zu fahren?",
+                "content": "<p>Seit dem 1. Januar 2026 ist für die Einreise nach Georgien eine Krankenversicherung erforderlich. Für eine Skireise empfehlen wir eine Police, die ausdrücklich Wintersport abdeckt (Skifahren, Snowboarden und, falls relevant, Off-Piste oder Heliskiing), da Standard-Reiseversicherungen diese ausschließen können.</p>"
+            }
+        ],
         "heroFacts": [
             "7 Tage / 6 Nächte",
             "Privattour",

@@ -1,5 +1,48 @@
 {
     "7-day-gudauri-ski-tour-from-tbilisi": {
+        "title": "Tour de esquí de 7 días en Gudauri desde Tiflis",
+        "heroH1": "Tour de esquí de 7 días en Gudauri desde Tiflis",
+        "listingDescription": "Unas vacaciones de esquí privadas de 7 días en Gudauri, la mayor estación de esquí de Georgia — cinco noches en la montaña, jornadas de esquí flexibles para todos los niveles, desde Tiflis.",
+        "heroSubtitle": "Unas vacaciones de esquí privadas de siete días en Gudauri, la estación de esquí más grande y moderna de Georgia, en plena altura del Gran Cáucaso. Tras una noche tranquila en Tiflis para recuperarse del vuelo, pasa cinco noches en la montaña con cuatro jornadas de esquí flexibles — amplias laderas y nieve fiable tanto para principiantes como para nivel intermedio y freeriders. Los traslados y los hoteles están resueltos; el ritmo es relajado, sin prisas. Disponible como tour privado para su grupo, adaptado a sus fechas y su nivel.",
+        "seoTitle": "Tour de esquí de 7 días en Gudauri desde Tiflis",
+        "metaDescription": "Tour de esquí privado de 7 días en Gudauri desde Tiflis: cinco noches en la mayor estación de esquí de Georgia, 4 jornadas de esquí flexibles para todos los niveles, traslados y hoteles incluidos.",
+        "rightForYou": [
+            "Esquiadores que quieren una semana de esquí relajada y bien organizada, con traslados y hoteles resueltos, y esquiar a su propio ritmo en lugar de seguir un programa rígido",
+            "Principiantes (laderas suaves e instructores asequibles), esquiadores de nivel intermedio y avanzado (pistas largas y variadas)",
+            "Freeriders y esquiadores de fuera de pista (terreno abierto por encima del límite arbóreo y heliesquí en temporada)",
+            "Parejas, amigos y grupos pequeños que buscan un viaje privado y flexible",
+            "Menos indicado para viajeros que buscan un itinerario turístico cargado — los días están deliberadamente libres para esquiar y disfrutar de la montaña en lugar de hacer visitas guiadas"
+        ],
+        "faq": [
+            {
+                "title": "¿Dónde está Gudauri y cómo llego desde Tiflis?",
+                "content": "<p>Gudauri es la mayor estación de esquí de Georgia, en la Carretera Militar Georgiana cerca del paso de la Cruz, a unos 120 km (aproximadamente dos horas o dos horas y media) al norte de Tiflis. En este tour, un conductor privado se encarga de todos los traslados — desde el aeropuerto internacional de Tiflis hasta su hotel en la ciudad, subiendo a Gudauri y de vuelta al aeropuerto al final.</p>"
+            },
+            {
+                "title": "¿Gudauri es bueno para principiantes o solo para esquiadores avanzados?",
+                "content": "<p>Ambos. Gudauri tiene pistas verdes y azules suaves e instructores de habla inglesa asequibles que lo convierten en un buen lugar para aprender, pistas largas y variadas para nivel intermedio, y un amplio terreno abierto fuera de pista y de freeride por encima del límite arbóreo (además de heliesquí en temporada) para esquiadores y snowboarders avanzados. Los días de esquí de este tour son libres y flexibles, para que cada persona esquíe según su nivel.</p>"
+            },
+            {
+                "title": "¿Cuál es la mejor época para este tour de esquí?",
+                "content": "<p>La temporada de Gudauri suele ir de diciembre a abril, con la nieve más fiable normalmente de mediados de enero a principios de marzo. El final de temporada (hasta abril) trae a menudo días soleados y nieve primaveral más blanda. Como la estación está en altura y por encima del límite arbóreo, la capa de nieve suele ser fiable durante toda la temporada.</p>"
+            },
+            {
+                "title": "¿Cuántos días de esquí incluye el tour y cómo está estructurado?",
+                "content": "<p>Siete días en total: una noche de recuperación en Tiflis, un día de traslado hasta Gudauri, luego cinco noches en la estación con cuatro días de esquí completos y flexibles, y un traslado de vuelta al aeropuerto el último día. Se aloja en un único hotel de Gudauri durante toda la estancia, así que solo deshace el equipaje una vez.</p>"
+            },
+            {
+                "title": "¿Es un tour privado y qué incluye el precio?",
+                "content": "<p>Se realiza en privado para su propio grupo, y el precio por persona baja cuantas más personas lo comparten. El precio incluye seis noches de alojamiento (una en Tiflis, cinco en Gudauri) en habitación doble/twin compartida con desayuno, y todos los traslados en un vehículo cómodo. No incluye almuerzos y cenas, forfaits, alquiler de equipo, clases ni seguro de viaje — esos se organizan localmente, y podemos ayudarle a gestionarlos.</p>"
+            },
+            {
+                "title": "¿Cuánto cuesta unas vacaciones de esquí en Gudauri?",
+                "content": "<p>Los precios son por persona y dependen del tamaño de su grupo y del nivel de alojamiento, desde €415 por persona para el paquete Classic. Gudauri es uno de los destinos de esquí de calidad más asequibles de Europa. Envíenos sus fechas y el tamaño de su grupo para un presupuesto exacto.</p>"
+            },
+            {
+                "title": "¿Necesito un seguro especial para esquiar en Georgia?",
+                "content": "<p>Desde el 1 de enero de 2026, se exige un seguro médico para entrar en Georgia. Para un viaje de esquí recomendamos elegir una póliza que cubra específicamente los deportes de invierno (esquí, snowboard y, si procede, fuera de pista o heliesquí), ya que los seguros de viaje estándar pueden excluirlos.</p>"
+            }
+        ],
         "heroFacts": [
             "7 días / 6 noches",
             "Tour privado",

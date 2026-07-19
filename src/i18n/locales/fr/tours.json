@@ -1,5 +1,48 @@
 {
     "7-day-gudauri-ski-tour-from-tbilisi": {
+        "title": "Séjour ski de 7 jours à Gudauri depuis Tbilissi",
+        "heroH1": "Séjour ski de 7 jours à Gudauri depuis Tbilissi",
+        "listingDescription": "Un séjour ski privé de 7 jours à Gudauri, la plus grande station de ski de Géorgie — cinq nuits en montagne, des journées de ski flexibles pour tous les niveaux, au départ de Tbilissi.",
+        "heroSubtitle": "Un séjour ski privé de sept jours à Gudauri, la plus grande et la plus moderne des stations de ski de Géorgie, en altitude dans le Grand Caucase. Après une nuit tranquille à Tbilissi pour récupérer du vol, vous passez cinq nuits en montagne avec quatre journées de ski flexibles — de larges pentes et une neige fiable pour les débutants, les skieurs intermédiaires comme les freeriders. Les transferts et les hôtels sont pris en charge ; le rythme est détendu, sans précipitation. Disponible en tour privé pour votre groupe, conçu selon vos dates et votre niveau.",
+        "seoTitle": "Séjour ski de 7 jours à Gudauri depuis Tbilissi",
+        "metaDescription": "Tour ski privé de 7 jours à Gudauri depuis Tbilissi : cinq nuits dans la plus grande station de ski de Géorgie, 4 journées de ski flexibles pour tous les niveaux, transferts et hôtels inclus.",
+        "rightForYou": [
+            "Les skieurs qui veulent une semaine de ski détendue et bien organisée, transferts et hôtels pris en charge, puis skier à leur propre rythme plutôt que suivre un programme rigide",
+            "Les débutants (pentes douces et moniteurs abordables), les skieurs intermédiaires et confirmés (pistes longues et variées)",
+            "Les freeriders et skieurs hors-piste (terrain ouvert au-dessus de la limite des arbres et héliski en saison)",
+            "Les couples, amis et petits groupes qui souhaitent un voyage privé et flexible",
+            "Moins adapté aux voyageurs en quête d'un programme de visites chargé — les journées sont délibérément libres pour le ski et la montagne plutôt que pour des excursions guidées"
+        ],
+        "faq": [
+            {
+                "title": "Où se trouve Gudauri, et comment s'y rendre depuis Tbilissi ?",
+                "content": "<p>Gudauri est la plus grande station de ski de Géorgie, sur la route militaire géorgienne près du col de la Croix, à environ 120 km (deux à deux heures et demie environ) au nord de Tbilissi. Sur ce circuit, un chauffeur privé assure tous les transferts — de l'aéroport international de Tbilissi à votre hôtel en ville, jusqu'à Gudauri, puis retour à l'aéroport à la fin.</p>"
+            },
+            {
+                "title": "Gudauri convient-il aux débutants, ou seulement aux skieurs confirmés ?",
+                "content": "<p>Les deux. Gudauri propose des pistes vertes et bleues faciles et des moniteurs anglophones abordables qui en font un bon endroit pour apprendre, de longues pistes variées pour les skieurs intermédiaires, ainsi qu'un vaste terrain ouvert de hors-piste et de freeride au-dessus de la limite des arbres (et de l'héliski en saison) pour les skieurs et snowboardeurs confirmés. Les journées de ski de ce circuit sont libres et flexibles, afin que chacun puisse skier à son niveau.</p>"
+            },
+            {
+                "title": "Quelle est la meilleure période pour ce séjour ski ?",
+                "content": "<p>La saison de Gudauri s'étend généralement de décembre à avril, avec la neige la plus fiable le plus souvent de la mi-janvier au début mars. La fin de saison (jusqu'en avril) apporte souvent des journées ensoleillées et une neige de printemps plus souple. Comme la station est située en altitude, au-dessus de la limite des arbres, l'enneigement est généralement fiable tout au long de la saison.</p>"
+            },
+            {
+                "title": "Combien de journées de ski le circuit comprend-il, et comment est-il structuré ?",
+                "content": "<p>Sept jours au total : une nuit de récupération à Tbilissi, une journée de transfert jusqu'à Gudauri, puis cinq nuits dans la station avec quatre journées de ski complètes et flexibles, et un transfert retour vers l'aéroport le dernier jour. Vous logez dans un seul hôtel de Gudauri tout au long du séjour, vous ne défaites donc vos bagages qu'une seule fois.</p>"
+            },
+            {
+                "title": "S'agit-il d'un tour privé, et qu'est-ce que le prix comprend ?",
+                "content": "<p>Il se déroule en privé pour votre propre groupe, et le prix par personne diminue à mesure que le nombre de participants augmente. Le prix comprend six nuits d'hébergement (une à Tbilissi, cinq à Gudauri) en chambre double/twin partagée avec petit-déjeuner, ainsi que tous les transferts en véhicule confortable. Il ne comprend pas les déjeuners et dîners, les forfaits de ski, la location de matériel, les cours ni l'assurance voyage — ceux-ci s'organisent sur place, et nous pouvons vous aider à les prévoir.</p>"
+            },
+            {
+                "title": "Combien coûte un séjour ski à Gudauri ?",
+                "content": "<p>Les tarifs sont par personne et dépendent de la taille de votre groupe et du niveau d'hébergement, à partir de €415 par personne pour le forfait Classic. Gudauri est l'une des destinations de ski de qualité les plus abordables d'Europe. Envoyez-nous vos dates et la taille de votre groupe pour un devis précis.</p>"
+            },
+            {
+                "title": "Ai-je besoin d'une assurance spéciale pour skier en Géorgie ?",
+                "content": "<p>Depuis le 1er janvier 2026, une assurance santé est exigée pour entrer en Géorgie. Pour un séjour ski, nous recommandons de choisir une police qui couvre spécifiquement les sports d'hiver (ski, snowboard et, le cas échéant, hors-piste ou héliski), car les assurances voyage standard peuvent les exclure.</p>"
+            }
+        ],
         "heroFacts": [
             "7 jours / 6 nuits",
             "Tour privé",
