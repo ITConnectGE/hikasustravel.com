@@ -63,7 +63,7 @@ export default function TourDetailPage() {
         url: 'https://www.hikasustravel.com',
       },
       ...(tour.gallery?.length > 0
-        ? { image: tour.gallery.map(img => `https://www.hikasustravel.com${img}`) }
+        ? { image: tour.gallery.map(img => `https://www.hikasustravel.com${img.src}`) }
         : tour.heroImage && { image: `https://www.hikasustravel.com${tour.heroImage}` }),
       ...(tour.days && { itinerary: {
         '@type': 'ItemList',
@@ -194,6 +194,18 @@ export default function TourDetailPage() {
     sections.push({ id: 'book', labelKey: 'tour.book' })
     return sections
   }, [tour, tourTranslations])
+
+  // Localize gallery alt/caption at the render boundary: the shared Gallery reads
+  // plain `caption`/`description` strings, so items that carry a per-locale `alt`
+  // object (e.g. the Gudauri gallery) resolve to the active language here —
+  // mirroring the hero's imageMeta.alt[lang]. Older galleries whose items have no
+  // `alt` pass through unchanged.
+  const localizedGallery = useMemo(
+    () => (tour?.gallery || []).map((img) =>
+      img.alt ? { ...img, description: img.alt[lang] || img.alt.en } : img
+    ),
+    [tour, lang]
+  )
 
   if (!tour) {
     return (
@@ -363,7 +375,7 @@ export default function TourDetailPage() {
                 <h2 className="td-section__title">{t('tour.gallery')}</h2>
                 <p className="td-section__subtitle">{t('tour.gallerySubtitle')}</p>
               </FadeUp>
-              <Gallery images={tour.gallery} />
+              <Gallery images={localizedGallery} />
             </section>
           )}
 

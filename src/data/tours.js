@@ -1892,6 +1892,48 @@ export const tours = [
         "content": "<p>From 1 January 2026, health insurance is required to enter Georgia. For a ski trip we recommend choosing a policy that specifically covers winter sports (skiing, snowboarding and, if relevant, off-piste or heli-skiing), since standard travel insurance may exclude them.</p>"
       }
     ],
+    // Gallery: owner's own Gudauri candids (credit = Hikasus Travel). Single-src
+    // per item like every other tour gallery; 1448 webp (native max, no upscale).
+    // `alt` is per-locale (resolved to the shown/lightbox text in TourDetailPage,
+    // mirroring the hero's imageMeta.alt[lang]). No captions supplied per locale.
+    "gallery": [
+      {
+        "src": "/images/files/gudauri-skier-above-clouds-caucasus-georgia-1448.webp",
+        "alt": {
+          "en": "A skier at the top of Gudauri above a sea of cloud, snow-covered Caucasus peaks behind, Georgia",
+          "de": "Ein Skifahrer am Gipfel von Gudauri über einem Wolkenmeer, dahinter verschneite Kaukasusgipfel, Georgien",
+          "fr": "Un skieur au sommet de Gudauri au-dessus d'une mer de nuages, sommets enneigés du Caucase derrière, Géorgie",
+          "es": "Un esquiador en lo alto de Gudauri sobre un mar de nubes, con cumbres nevadas del Cáucaso detrás, Georgia",
+          "nl": "Een skiër boven op Gudauri boven een wolkenzee, met besneeuwde Kaukasustoppen erachter, Georgië",
+          "cs": "Lyžař na vrcholu Gudauri nad mořem oblaků, v pozadí zasněžené vrcholy Kavkazu, Gruzie",
+          "pl": "Narciarz na szczycie Gudauri nad morzem chmur, w tle ośnieżone szczyty Kaukazu, Gruzja"
+        }
+      },
+      {
+        "src": "/images/files/gudauri-ski-piste-chairlift-caucasus-georgia-1448.webp",
+        "alt": {
+          "en": "A wide open ski piste and chairlift at Gudauri under a blue sky, distant Caucasus peaks, Georgia",
+          "de": "Eine weite offene Skipiste und ein Sessellift in Gudauri unter blauem Himmel, ferne Kaukasusgipfel, Georgien",
+          "fr": "Une large piste de ski ouverte et un télésiège à Gudauri sous un ciel bleu, sommets lointains du Caucase, Géorgie",
+          "es": "Una amplia pista de esquí abierta y un telesilla en Gudauri bajo un cielo azul, cumbres lejanas del Cáucaso, Georgia",
+          "nl": "Een brede open skipiste en stoeltjeslift in Gudauri onder een blauwe lucht, verre Kaukasustoppen, Georgië",
+          "cs": "Široká otevřená sjezdovka a sedačková lanovka v Gudauri pod modrou oblohou, vzdálené vrcholy Kavkazu, Gruzie",
+          "pl": "Szeroki otwarty stok narciarski i wyciąg krzesełkowy w Gudauri pod błękitnym niebem, odległe szczyty Kaukazu, Gruzja"
+        }
+      },
+      {
+        "src": "/images/files/gudauri-ski-lift-top-station-caucasus-georgia-1448.webp",
+        "alt": {
+          "en": "Skiers and snowboarders at a Gudauri lift top station above the clouds, Greater Caucasus, Georgia",
+          "de": "Skifahrer und Snowboarder an einer Bergstation in Gudauri über den Wolken, Großer Kaukasus, Georgien",
+          "fr": "Skieurs et snowboardeurs à la gare d'arrivée d'un téléski à Gudauri au-dessus des nuages, Grand Caucase, Géorgie",
+          "es": "Esquiadores y practicantes de snowboard en la estación superior de un remonte de Gudauri sobre las nubes, Gran Cáucaso, Georgia",
+          "nl": "Skiërs en snowboarders bij een bergstation in Gudauri boven de wolken, Grote Kaukasus, Georgië",
+          "cs": "Lyžaři a snowboardisté u horní stanice vleku v Gudauri nad oblaky, Velký Kavkaz, Gruzie",
+          "pl": "Narciarze i snowboardziści przy górnej stacji wyciągu w Gudauri nad chmurami, Wielki Kaukaz, Gruzja"
+        }
+      }
+    ],
     "enTouristTrip": {
       "@context": "https://schema.org",
       "@type": "TouristTrip",
