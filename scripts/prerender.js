@@ -183,6 +183,17 @@ const blogArticles = [
     heroImage: '/images/files/georgia-home.jpg',
     tags: ['history', 'culture', 'language'],
   },
+  {
+    slug: 'georgian-flag-history-meaning',
+    titleKey: 'blog.article4.title',
+    descKey: 'blog.article4.desc',
+    title: 'The Georgian Flag: Five Crosses, Eight Centuries, and One Revolution',
+    seoTitle: 'The Georgian Flag: History, Meaning & the Five Crosses | Hikasus Travel',
+    excerpt: "Georgia's five-cross flag looks medieval and is — but it only became the national flag in 2004, carried first as a protest banner. The real story is stranger than the legend.",
+    metaDescription: "Georgia's five-cross flag looks medieval and is — but it only became the national flag in 2004, carried first as a protest banner. The real story is stranger than the legend.",
+    heroImage: '/images/files/georgia-home.jpg',
+    tags: ['history', 'culture', 'flag'],
+  },
 ]
 
 // Blog title translation for a given article key from ui.json
