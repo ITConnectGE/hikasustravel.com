@@ -3002,7 +3002,38 @@ export const sites = [
     slug: 'khertvisi-fortress', name: 'Khertvisi Fortress',
     parentType: 'region', parent: 'samtskhe-javakheti', published: true,
     seoKey: 'khertvisiFortress', contentKey: 'khertvisiFortress',
-    image: '/images/files/khertvisi-fortress.jpg',
+    // Hero: real Khertvisi Fortress (towers over the Mtkvari–Paravani confluence,
+    // owner's own photo) via the .hero--khertvisi image-set() ladder (styles.css).
+    // `image`/`imageAvif` = the 1448 top rung; the CSS class controls the visible
+    // background, and `image` feeds the ImageObject contentUrl (1448 rung, per
+    // package). Native ceiling 1448 — ladder 768/1200/1448, NO 1600/2400 rung.
+    image: '/images/files/khertvisi-fortress-towers-georgia-1448.webp',
+    imageAvif: '/images/files/khertvisi-fortress-towers-georgia-1448.avif',
+    heroClass: 'hero--khertvisi',
+    // Dedicated 1.91:1 social-share image (og:image / twitter:image), .jpg default.
+    ogImage: { src: '/images/files/khertvisi-fortress-towers-georgia-og.jpg', width: 1200, height: 630 },
+    // Image SEO/AEO metadata (owner's own photo → brand credit, set by SitePage).
+    // Hero is a CSS background (no <img alt>), so the localized alt lives here and
+    // is emitted as the ImageObject caption + og:image:alt/twitter:image:alt per
+    // locale. Verbatim from khertvisi-fortress-hero-package.md. width/height =
+    // 1448 rung. Coordinates per package.
+    imageMeta: {
+      width: 1448, height: 1086,
+      name: 'The stone towers and crenellated walls of Khertvisi Fortress on its rocky hill, Samtskhe-Javakheti, Georgia',
+      description: 'Khertvisi Fortress, a medieval stronghold of round and rectangular stone towers and crenellated walls rising over a rocky hill above the confluence of the Mtkvari and Paravani rivers, with arid canyon slopes behind and a poplar in the foreground. Khertvisi lies in Aspindza Municipality, Samtskhe-Javakheti, in southern Georgia (the country).',
+      locationName: 'Khertvisi Fortress, Aspindza Municipality, Samtskhe-Javakheti, Georgia',
+      locality: 'Aspindza Municipality', region: 'Samtskhe-Javakheti', country: 'GE',
+      geo: { lat: 41.47778, lng: 43.28528 },
+      alt: {
+        en: 'The stone towers and crenellated walls of Khertvisi Fortress on its rocky hill, Samtskhe-Javakheti, Georgia',
+        de: 'Die Steintürme und Zinnenmauern der Festung Chertwisi auf ihrem Felshügel, Samzche-Dschawachetien, Georgien',
+        fr: 'Les tours de pierre et les murs crénelés de la forteresse de Khertvisi sur sa colline rocheuse, Samtskhé-Djavakhétie, Géorgie',
+        es: 'Las torres de piedra y murallas almenadas de la fortaleza de Khertvisi sobre su colina rocosa, Samtsje-Yavajeti, Georgia',
+        nl: 'De stenen torens en gekantelde muren van de Khertvisi-vesting op haar rotsheuvel, Samtsche-Dzjavacheti, Georgië',
+        cs: 'Kamenné věže a cimbuří pevnosti Chertvisi na skalnatém kopci, Samcche-Džavacheti, Gruzie',
+        pl: 'Kamienne wieże i blankowane mury twierdzy Chertwisi na skalistym wzgórzu, Samcche-Dżawachetia, Gruzja',
+      },
+    },
   },
   {
     slug: 'tmogvi-fortress', name: 'Tmogvi Fortress',
