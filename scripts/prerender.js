@@ -90,6 +90,17 @@ function parseTours(source) {
     const titleM = chunk.match(/"title":\s*"([^"]+)"/)
     const descM = chunk.match(/"description":\s*"([^"]+)"/)
     const heroM = chunk.match(/"heroImage":\s*"([^"]+)"/)
+    // Optional dedicated 1.91:1 social image + dimensions (e.g. the Gudauri ski
+    // tour). `ogImage` is `{ src, width, height }`; when absent, og:image falls
+    // back to the hero below.
+    const ogImageM = chunk.match(/"ogImage":\s*\{\s*"src":\s*"([^"]+)",\s*"width":\s*(\d+),\s*"height":\s*(\d+)/)
+    // Per-locale hero alt text from imageMeta.alt (the first "alt": {...} block in
+    // the tour object). Used as og:image:alt when a social image is defined.
+    const altBlockM = chunk.match(/"alt":\s*\{([\s\S]*?)\}/)
+    const imageAlt = {}
+    if (altBlockM) {
+      for (const m of altBlockM[1].matchAll(/"(\w+)":\s*"([^"]*)"/g)) imageAlt[m[1]] = m[2]
+    }
     const daysM = chunk.match(/"days":\s*(\d+)/)
     const seoTitleM = chunk.match(/"seoTitle":\s*"([^"]+)"/)
     const metaDescM = chunk.match(/"metaDescription":\s*"([^"]+)"/)
@@ -116,6 +127,10 @@ function parseTours(source) {
       seoTitle: seoTitleM?.[1] || '',
       metaDescription: metaDescM?.[1] || '',
       heroImage: heroM?.[1] || '',
+      ogImage: ogImageM?.[1] || '',
+      ogImageWidth: ogImageM?.[2] || '',
+      ogImageHeight: ogImageM?.[3] || '',
+      imageAlt,
       days: daysM ? parseInt(daysM[1]) : 0,
       formerSlugs,
       itineraryTitles,
@@ -447,6 +462,13 @@ for (const lang of LANGS) {
       keywords,
       canonical,
       image: tour.heroImage,
+      // When the tour ships a dedicated social image (1.91:1 og.jpg), use it for
+      // og:image with a per-locale alt; otherwise og:image falls back to the hero
+      // (no alt), matching the previous behaviour for every other tour.
+      ogImage: tour.ogImage || undefined,
+      ogImageAlt: tour.ogImage ? (tour.imageAlt?.[lang] || tour.imageAlt?.en || undefined) : undefined,
+      ogImageWidth: tour.ogImage ? tour.ogImageWidth : undefined,
+      ogImageHeight: tour.ogImage ? tour.ogImageHeight : undefined,
       ogLocale,
     })
 
