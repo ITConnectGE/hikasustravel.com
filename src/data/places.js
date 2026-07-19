@@ -3148,7 +3148,40 @@ export const sites = [
     slug: 'bagrati-cathedral', name: 'Bagrati Cathedral',
     parentType: 'city', parent: 'kutaisi', published: true,
     seoKey: 'bagratiCathedral', contentKey: 'bagratiCathedral',
-    image: '/images/files/bagrati-cathedral.jpg',
+    // Hero: real Bagrati Cathedral (post-2012 reconstruction, owner's own photo)
+    // via the .hero--bagrati image-set() ladder (styles.css). 16:9 source; `image`/
+    // `imageAvif` = the 1600 top rung; the CSS class controls the visible
+    // background, and `image` feeds the ImageObject contentUrl (1600 rung, per
+    // package). Ladder 768/1200/1600 — native is 1672 but the top rung is 1600;
+    // NO 2400 or 1672 rung. (The old bagrati-cathedral.jpg stays — still used by
+    // the Imereti region page.) No UNESCO claim in the schema (delisted 2017).
+    image: '/images/files/bagrati-cathedral-kutaisi-georgia-1600.webp',
+    imageAvif: '/images/files/bagrati-cathedral-kutaisi-georgia-1600.avif',
+    heroClass: 'hero--bagrati',
+    // Dedicated 1.91:1 social-share image (og:image / twitter:image), .jpg default.
+    ogImage: { src: '/images/files/bagrati-cathedral-kutaisi-georgia-og.jpg', width: 1200, height: 630 },
+    // Image SEO/AEO metadata (owner's own photo → brand credit, set by SitePage).
+    // Hero is a CSS background (no <img alt>), so the localized alt lives here and
+    // is emitted as the ImageObject caption + og:image:alt/twitter:image:alt per
+    // locale. Verbatim from bagrati-cathedral-hero-package.md. width/height = the
+    // 1600 rung (1600x900, not the native 1672). Coordinates per package.
+    imageMeta: {
+      width: 1600, height: 900,
+      name: 'Bagrati Cathedral in Kutaisi, a large stone cross-dome church with turquoise roofs on Ukimerioni Hill, Georgia',
+      description: 'Bagrati Cathedral on Ukimerioni Hill in Kutaisi, a large cross-in-square stone cathedral of pale limestone with turquoise metal roofs and dome, an arched entrance portico and a separate bell tower, shown in its reconstructed form. Founded by King Bagrat III in the early 11th century, it stands above the Rioni River in Kutaisi, in the Imereti region of Georgia (the country).',
+      locationName: 'Bagrati Cathedral, Ukimerioni Hill, Kutaisi, Imereti, Georgia',
+      locality: 'Kutaisi', region: 'Imereti', country: 'GE',
+      geo: { lat: 42.2773, lng: 42.7043 },
+      alt: {
+        en: 'Bagrati Cathedral in Kutaisi, a large stone cross-dome church with turquoise roofs on Ukimerioni Hill, Georgia',
+        de: 'Die Bagrati-Kathedrale in Kutaissi, eine große steinerne Kreuzkuppelkirche mit türkisen Dächern auf dem Ukimerioni-Hügel, Georgien',
+        fr: "La cathédrale de Bagrati à Koutaïssi, grande église en pierre à coupole aux toits turquoise, sur la colline d'Oukimérioni, Géorgie",
+        es: 'La catedral de Bagrati en Kutaisi, una gran iglesia de piedra con cúpula y tejados turquesa en la colina de Ukimerioni, Georgia',
+        nl: 'De Bagrati-kathedraal in Koetaisi, een grote stenen kruiskoepelkerk met turquoise daken op de Ukimerioni-heuvel, Georgië',
+        cs: 'Katedrála Bagrati v Kutaisi, velký kamenný křížový chrám s tyrkysovými střechami na kopci Ukimerioni, Gruzie',
+        pl: 'Katedra Bagrati w Kutaisi, duży kamienny kościół z kopułą i turkusowymi dachami na wzgórzu Ukimerioni, Gruzja',
+      },
+    },
   },
   {
     slug: 'colchis-fountain-kutaisi', name: 'Colchis Fountain',
