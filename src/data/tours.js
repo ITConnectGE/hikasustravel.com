@@ -1898,7 +1898,7 @@ export const tours = [
     // mirroring the hero's imageMeta.alt[lang]). No captions supplied per locale.
     "gallery": [
       {
-        "src": "/images/files/gudauri-skier-above-clouds-caucasus-georgia-1448.webp",
+        "src": "/images/files/gudauri-ski-view-1448.webp",
         "alt": {
           "en": "A skier at the top of Gudauri above a sea of cloud, snow-covered Caucasus peaks behind, Georgia",
           "de": "Ein Skifahrer am Gipfel von Gudauri über einem Wolkenmeer, dahinter verschneite Kaukasusgipfel, Georgien",
@@ -1910,7 +1910,7 @@ export const tours = [
         }
       },
       {
-        "src": "/images/files/gudauri-ski-piste-chairlift-caucasus-georgia-1448.webp",
+        "src": "/images/files/gudauri-ski-piste-1448.webp",
         "alt": {
           "en": "A wide open ski piste and chairlift at Gudauri under a blue sky, distant Caucasus peaks, Georgia",
           "de": "Eine weite offene Skipiste und ein Sessellift in Gudauri unter blauem Himmel, ferne Kaukasusgipfel, Georgien",
@@ -1922,7 +1922,7 @@ export const tours = [
         }
       },
       {
-        "src": "/images/files/gudauri-ski-lift-top-station-caucasus-georgia-1448.webp",
+        "src": "/images/files/gudauri-ski-lift-1448.webp",
         "alt": {
           "en": "Skiers and snowboarders at a Gudauri lift top station above the clouds, Greater Caucasus, Georgia",
           "de": "Skifahrer und Snowboarder an einer Bergstation in Gudauri über den Wolken, Großer Kaukasus, Georgien",
