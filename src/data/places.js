@@ -3104,7 +3104,38 @@ export const sites = [
     slug: 'green-bazaar-kutaisi', name: 'Green Bazaar (Mtsvane Bazari)',
     parentType: 'city', parent: 'kutaisi', published: true,
     seoKey: 'greenBazaar', contentKey: 'greenBazaar',
-    image: '/images/files/georgia-home.jpg',
+    // Hero: real Green Bazaar interior (owner's own photo) via the
+    // .hero--kutaisi-bazaar image-set() ladder (styles.css). `image`/`imageAvif`
+    // = the 1448 top rung; the CSS class controls the visible background, and
+    // `image` feeds the ImageObject contentUrl (1448 rung, per package). Native
+    // ceiling 1448 — ladder 768/1200/1448, NO 1600/2400 rung.
+    image: '/images/files/kutaisi-green-bazaar-produce-stalls-georgia-1448.webp',
+    imageAvif: '/images/files/kutaisi-green-bazaar-produce-stalls-georgia-1448.avif',
+    heroClass: 'hero--kutaisi-bazaar',
+    // Dedicated 1.91:1 social-share image (og:image / twitter:image), .jpg default.
+    ogImage: { src: '/images/files/kutaisi-green-bazaar-produce-stalls-georgia-og.jpg', width: 1200, height: 630 },
+    // Image SEO/AEO metadata (owner's own photo → brand credit, set by SitePage).
+    // Hero is a CSS background (no <img alt>), so the localized alt lives here and
+    // is emitted as the ImageObject caption + og:image:alt/twitter:image:alt per
+    // locale. Verbatim from kutaisi-green-bazaar-hero-package.md. width/height =
+    // 1448 rung. Coordinates approximate per package.
+    imageMeta: {
+      width: 1448, height: 1086,
+      name: 'Produce stalls under the yellow steel roof of the Kutaisi Green Bazaar covered market, Imereti, Georgia',
+      description: "Inside the Kutaisi Green Bazaar, the city's main covered agricultural market: produce stalls piled with vegetables and fruit line a stone-paved aisle beneath a yellow steel-truss roof, with vendors and shoppers among the stalls. The market stands on Paliashvili Street in Kutaisi, capital of the Imereti region of Georgia (the country).",
+      locationName: 'Kutaisi Green Bazaar, Paliashvili Street, Kutaisi, Imereti, Georgia',
+      locality: 'Kutaisi', region: 'Imereti', country: 'GE',
+      geo: { lat: 42.2662, lng: 42.7050 },
+      alt: {
+        en: 'Produce stalls under the yellow steel roof of the Kutaisi Green Bazaar covered market, Imereti, Georgia',
+        de: 'Gemüsestände unter dem gelben Stahldach der überdachten Markthalle des Grünen Basars von Kutaissi, Imereti, Georgien',
+        fr: 'Étals de produits frais sous la charpente d\'acier jaune du marché couvert du Bazar vert de Koutaïssi, Iméréthie, Géorgie',
+        es: 'Puestos de productos bajo la estructura de acero amarillo del mercado cubierto del Bazar Verde de Kutaisi, Imereti, Georgia',
+        nl: 'Groente- en fruitkramen onder het gele stalen dak van de overdekte markt Groene Bazaar van Koetaisi, Imereti, Georgië',
+        cs: 'Stánky s produkty pod žlutou ocelovou konstrukcí kryté tržnice Zelený bazar v Kutaisi, Imereti, Gruzie',
+        pl: 'Stoiska z produktami pod żółtą stalową konstrukcją zadaszonego targu Zielony Bazar w Kutaisi, Imeretia, Gruzja',
+      },
+    },
   },
   {
     slug: 'kutaisi-state-historical-museum', name: 'Kutaisi State Historical Museum',
