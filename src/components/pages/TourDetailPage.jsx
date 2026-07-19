@@ -184,9 +184,10 @@ export default function TourDetailPage() {
     const hasPrice = (tour.pricing?.length > 0) || (tour.type === 'group' && tour.pricePerPerson)
 
     // Order must mirror the on-page section order:
-    // Overview → Gallery → Itinerary → Accommodation → Pricing → Map → Book
-    const sections = [{ id: 'overview', labelKey: 'tour.overview' }]
+    // Gallery → Overview → Itinerary → Accommodation → Pricing → Map → Book
+    const sections = []
     if (tour.gallery?.length > 0) sections.push({ id: 'gallery', labelKey: 'tour.gallery' })
+    sections.push({ id: 'overview', labelKey: 'tour.overview' })
     if (itinerary?.length > 0) sections.push({ id: 'itinerary', labelKey: 'tour.itinerary' })
     if (tour.accommodations?.length > 0) sections.push({ id: 'accommodation', labelKey: 'pricing.accommodations' })
     if (hasPrice) sections.push({ id: 'pricing', labelKey: 'tour.pricing' })
@@ -305,6 +306,17 @@ export default function TourDetailPage() {
             </figure>
           )}
 
+          {/* Gallery — placed before Overview so photos lead the page. */}
+          {tour.gallery && tour.gallery.length > 0 && (
+            <section id="gallery" className="td-section">
+              <FadeUp>
+                <h2 className="td-section__title">{t('tour.gallery')}</h2>
+                <p className="td-section__subtitle">{t('tour.gallerySubtitle')}</p>
+              </FadeUp>
+              <Gallery images={localizedGallery} />
+            </section>
+          )}
+
           {/* 1. Overview */}
           <section id="overview" className="td-section">
             <FadeUp>
@@ -365,17 +377,6 @@ export default function TourDetailPage() {
                   ))}
                 </div>
               </FadeUp>
-            </section>
-          )}
-
-          {/* 2. Gallery */}
-          {tour.gallery && tour.gallery.length > 0 && (
-            <section id="gallery" className="td-section">
-              <FadeUp>
-                <h2 className="td-section__title">{t('tour.gallery')}</h2>
-                <p className="td-section__subtitle">{t('tour.gallerySubtitle')}</p>
-              </FadeUp>
-              <Gallery images={localizedGallery} />
             </section>
           )}
 
