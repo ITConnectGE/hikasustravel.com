@@ -39,11 +39,6 @@ export const blogArticles = [
 
 <h2>When Should You Visit? Every Season Has a Reason</h2>
 
-<figure class="blog-img">
-<img src="/images/files/georgia-tour-03.jpg" alt="Georgia landscape in spring with green valleys and mountains" loading="lazy" />
-<figcaption>Georgia's landscapes transform dramatically with each season</figcaption>
-</figure>
-
 <p>Georgia is a year-round destination, but the experience changes dramatically with the seasons:</p>
 
 <h3>Spring (April – June) — The Sweet Spot</h3>
@@ -106,7 +101,7 @@ export const blogArticles = [
 <h3>Tbilisi — The Capital That Defies Expectations</h3>
 
 <figure class="blog-img">
-<img src="/images/files/sulfur-baths-wine-tour.jpg" alt="Tbilisi Old Town with colorful houses and Narikala Fortress" loading="lazy" />
+<img src="/images/files/georgia-tour-03.jpg" alt="Cobbled street in Tbilisi’s Old Town with carved wooden balconies" loading="lazy" />
 <figcaption>Tbilisi's Old Town — where history meets vibrant street life</figcaption>
 </figure>
 <p>Tbilisi is not just a city — it's a character. Pastel-colored houses lean over narrow streets in the Old Town. The Narikala Fortress watches over the Mtkvari River. Sulfur baths steam in the Abanotubani district (bring your bathing suit — it's a must-do experience). The Dry Bridge flea market sells everything from Soviet memorabilia to hand-painted icons.</p>
@@ -166,6 +161,11 @@ export const blogArticles = [
 <p><strong>Budget eating tip:</strong> Look for a <em>sasadilo</em> (cafeteria-style restaurant). Locals eat here daily — you'll get a full meal (soup, main dish, bread, salad) for 8–15 GEL (€3–5). Don't judge by the décor. Judge by how full the place is at lunchtime.</p>
 
 <h2>Wine Culture: 8,000 Years and Still Pouring</h2>
+
+<figure class="blog-img">
+<img src="/images/files/sulfur-baths-wine-tour.jpg" alt="Georgian wine-harvest feast with clay qvevri jugs, grapes and grilled mtsvadi in a Kakheti vineyard" loading="lazy" />
+<figcaption>A Kakheti wine-harvest supra — grapes, qvevri jugs, and mtsvadi below Alaverdi Cathedral</figcaption>
+</figure>
 
 <p>Georgia is officially the oldest wine-producing country on Earth. Archaeological evidence of grape fermentation dates back 8,000 years. Wine isn't just a drink here — it's identity, religion, and family tradition rolled into one.</p>
 
