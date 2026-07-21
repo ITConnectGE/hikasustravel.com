@@ -713,6 +713,41 @@ section {
   }
 }
 /* 1600 is the top rung. Do not add a 2400 or 1672 breakpoint. */
+/* Gelati Monastery hero — per-page CSS background (same opt-in mechanism as
+   .hero--bagrati; the other Kutaisi/Imereti UNESCO subject). Native ~7:5
+   (1491x1055), just UNDER the usual 1600 rung, so the ladder is exactly
+   768/1200/1491 with the top breakpoint at min-width:1200 — there is NO 1600 or
+   2400 rung, no upscale. `background-position: center center`: the cloudy sky fills
+   the upper-left as the H1 zone, so no positioning bias or scrim is added (the
+   shared .coverme::after overlay provides the readable text layer). plain url()
+   line = image-set() fallback for browsers without image-set(). */
+.hero--gelati {
+  background-image: url("/images/files/gelati-monastery-kutaisi-georgia-1200.webp");
+  background-image: image-set(
+    url("/images/files/gelati-monastery-kutaisi-georgia-768.avif") type("image/avif"),
+    url("/images/files/gelati-monastery-kutaisi-georgia-768.webp") type("image/webp")
+  );
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+@media (min-width: 768px) {
+  .hero--gelati {
+    background-image: image-set(
+      url("/images/files/gelati-monastery-kutaisi-georgia-1200.avif") type("image/avif"),
+      url("/images/files/gelati-monastery-kutaisi-georgia-1200.webp") type("image/webp")
+    );
+  }
+}
+@media (min-width: 1200px) {
+  .hero--gelati {
+    background-image: image-set(
+      url("/images/files/gelati-monastery-kutaisi-georgia-1491.avif") type("image/avif"),
+      url("/images/files/gelati-monastery-kutaisi-georgia-1491.webp") type("image/webp")
+    );
+  }
+}
+/* Native ceiling 1491 is the top rung. Do not add a 1600 or 2400 breakpoint. */
 /* Georgian flag blog hero — per-page CSS background (same opt-in mechanism as
    .hero--bagrati), on the Georgian-flag blog post. AI-generated illustration.
    16:9 source (native 1672) exported to a top rung of 1600, so the ladder is

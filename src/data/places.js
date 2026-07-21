@@ -2733,7 +2733,50 @@ export const sites = [
     slug: 'gelati-monastery', name: 'Gelati Monastery',
     parentType: 'city', parent: 'kutaisi', published: true,
     seoKey: 'gelatiMonastery', contentKey: 'gelatiMonastery',
-    image: '/images/files/georgia-home.jpg',
+    // Hero: real Gelati Monastery (owner's own photo) via the .hero--gelati
+    // image-set() ladder (styles.css), replacing the georgia-home.jpg placeholder.
+    // Native ~7:5 (1491x1055) — just under the usual 1600 rung, so the ladder is
+    // exactly 768/1200/1491 with the top breakpoint at min-width:1200. NO 1600/2400
+    // rung, no upscale. The CSS class controls the visible background
+    // (`background-position: center center`, cloudy sky upper-left = H1 zone, no
+    // scrim). `image`/`imageAvif` = the 1491 top rung, feeding the ImageObject
+    // contentUrl (1491) + the og fallback reference.
+    image: '/images/files/gelati-monastery-kutaisi-georgia-1491.webp',
+    imageAvif: '/images/files/gelati-monastery-kutaisi-georgia-1491.avif',
+    heroClass: 'hero--gelati',
+    // Dedicated 1.91:1 social-share image (og:image / twitter:image), .jpg default.
+    ogImage: { src: '/images/files/gelati-monastery-kutaisi-georgia-og.jpg', width: 1200, height: 630 },
+    // Hero image SEO/AEO metadata (owner's own photo → brand credit, set by
+    // SitePage). Hero is a CSS background (no <img alt>), so the localized alt lives
+    // here and is emitted as og:image:alt/twitter:image:alt per locale; the `caption`
+    // map feeds the hero ImageObject caption. Verbatim from gelati-monastery-hero-
+    // package.md. width/height = 1491 rung; coordinates per package. Region Imereti.
+    imageMeta: {
+      width: 1491, height: 1055,
+      name: 'The medieval Gelati Monastery near Kutaisi, its domed cathedral and bell tower in stone, under a cloudy sky, Georgia',
+      description: 'The Gelati Monastery near Kutaisi, a medieval Georgian monastic complex of honey-coloured stone, with the domed Church of the Virgin, a bell tower with a green-tiled roof, subsidiary churches and a cobbled path across the lawn, under a dramatic cloudy sky. Founded in 1106 by King David the Builder, Gelati is a UNESCO World Heritage Site in the Imereti region of Georgia (the country).',
+      locationName: 'Gelati Monastery, Kutaisi, Imereti, Georgia',
+      locality: 'Kutaisi', region: 'Imereti', country: 'GE',
+      geo: { lat: 42.29472, lng: 42.76806 },
+      alt: {
+        en: 'The medieval Gelati Monastery near Kutaisi, its domed cathedral and bell tower in stone, under a cloudy sky, Georgia',
+        de: 'Das mittelalterliche Kloster Gelati bei Kutaissi, seine kuppelbekrönte Kathedrale und der Glockenturm aus Stein, unter bewölktem Himmel, Georgien',
+        fr: 'Le monastère médiéval de Ghélati près de Koutaïssi, sa cathédrale à coupole et son clocher de pierre, sous un ciel nuageux, Géorgie',
+        es: 'El monasterio medieval de Gelati cerca de Kutaisi, su catedral con cúpula y su campanario de piedra, bajo un cielo nublado, Georgia',
+        nl: 'Het middeleeuwse Gelati-klooster bij Koetaisi, met zijn koepelkathedraal en stenen klokkentoren, onder een bewolkte lucht, Georgië',
+        cs: 'Středověký klášter Gelati u Kutaisi, jeho kupolová katedrála a kamenná zvonice pod zataženou oblohou, Gruzie',
+        pl: 'Średniowieczny klasztor Gelati koło Kutaisi, jego kopułowa katedra i kamienna dzwonnica pod zachmurzonym niebem, Gruzja',
+      },
+      caption: {
+        en: "Gelati Monastery was founded in 1106 by King David the Builder and became one of medieval Georgia's great centres of learning. A UNESCO World Heritage Site, it holds the tomb of King David and famous 12th-century mosaics inside its main church.",
+        de: 'Das Kloster Gelati wurde 1106 von König David dem Erbauer gegründet und zu einem der großen Bildungszentren des mittelalterlichen Georgien. Als UNESCO-Welterbe birgt es das Grab König Davids und berühmte Mosaiken aus dem 12. Jahrhundert in seiner Hauptkirche.',
+        fr: "Le monastère de Ghélati fut fondé en 1106 par le roi David le Bâtisseur et devint l'un des grands foyers de savoir de la Géorgie médiévale. Inscrit au patrimoine mondial de l'UNESCO, il abrite le tombeau du roi David et de célèbres mosaïques du XIIe siècle dans son église principale.",
+        es: 'El monasterio de Gelati fue fundado en 1106 por el rey David el Constructor y se convirtió en uno de los grandes centros de saber de la Georgia medieval. Patrimonio de la Humanidad de la UNESCO, alberga la tumba del rey David y célebres mosaicos del siglo XII en su iglesia principal.',
+        nl: 'Het Gelati-klooster werd in 1106 gesticht door koning David de Bouwer en groeide uit tot een van de grote leercentra van middeleeuws Georgië. Als UNESCO-werelderfgoed herbergt het het graf van koning David en beroemde 12e-eeuwse mozaïeken in de hoofdkerk.',
+        cs: 'Klášter Gelati založil roku 1106 král David Stavitel a stal se jedním z velkých vzdělávacích center středověké Gruzie. Jako památka UNESCO ukrývá hrob krále Davida a slavné mozaiky z 12. století ve své hlavní kostele.',
+        pl: 'Klasztor Gelati założył w 1106 roku król Dawid Budowniczy i stał się jednym z wielkich ośrodków nauki średniowiecznej Gruzji. Wpisany na listę UNESCO, kryje grób króla Dawida i słynne XII-wieczne mozaiki w swojej głównej świątyni.',
+      },
+    },
   },
   {
     slug: 'motsameta-monastery', name: 'Motsameta Monastery',
