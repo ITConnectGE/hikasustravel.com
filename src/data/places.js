@@ -1967,7 +1967,80 @@ export const sites = [
     slug: 'mother-of-georgia-kartlis-deda', name: 'Mother of Georgia (Kartlis Deda)',
     parentType: 'city', parent: 'tbilisi', published: true,
     seoKey: 'motherOfGeorgia', contentKey: 'motherOfGeorgia',
-    image: '/images/files/georgia-home.jpg',
+    // Hero: real Kartlis Deda / Mother of Georgia statue (owner's own drone photo)
+    // via the .hero--kartlis-deda image-set() ladder (styles.css), replacing the
+    // georgia-home.jpg placeholder. `image`/`imageAvif` = the 1448 top rung (native
+    // 1448x1086, 4:3 — no crop); the CSS class controls the visible background with
+    // the deliberate `background-position: center 40%` (statue is tall). Ladder is
+    // 768/1200/1448 — NO 1600/2400 rung. `image` feeds the ImageObject contentUrl.
+    image: '/images/files/kartlis-deda-statue-tbilisi-georgia-1448.webp',
+    imageAvif: '/images/files/kartlis-deda-statue-tbilisi-georgia-1448.avif',
+    heroClass: 'hero--kartlis-deda',
+    // Dedicated 1.91:1 social-share image (og:image / twitter:image), .jpg default.
+    ogImage: { src: '/images/files/kartlis-deda-statue-tbilisi-georgia-og.jpg', width: 1200, height: 630 },
+    // Hero image SEO/AEO metadata (owner's own photo → brand credit, set by
+    // SitePage). Hero is a CSS background (no <img alt>), so the localized alt lives
+    // here and is emitted as og:image:alt/twitter:image:alt per locale; the `caption`
+    // map feeds the hero ImageObject caption. Verbatim from kartlis-deda-hero-package.md.
+    // width/height = 1448 rung; coordinates per package (distinct from Narikala's).
+    imageMeta: {
+      width: 1448, height: 1086,
+      name: 'The Kartlis Deda (Mother of Georgia) aluminium statue on Sololaki Hill, holding a bowl of wine and a sword, Tbilisi, Georgia',
+      description: 'The Kartlis Deda (Mother of Georgia) monument on Sololaki Hill above Tbilisi, a 20-metre aluminium statue of a woman in Georgian national dress holding a bowl of wine in her left hand and a sword in her right, seen in warm evening light above the wooded hillside. Erected in 1958 by sculptor Elguja Amashukeli, it overlooks the Old Town of Tbilisi, capital of Georgia (the country).',
+      locationName: 'Kartlis Deda, Sololaki Hill, Tbilisi, Georgia',
+      locality: 'Tbilisi', region: 'Tbilisi', country: 'GE',
+      geo: { lat: 41.688056, lng: 44.804583 },
+      alt: {
+        en: 'The Kartlis Deda (Mother of Georgia) aluminium statue on Sololaki Hill, holding a bowl of wine and a sword, Tbilisi, Georgia',
+        de: 'Die Aluminiumstatue Kartlis Deda (Mutter Georgiens) auf dem Sololaki-Hügel, mit Weinschale und Schwert, Tiflis, Georgien',
+        fr: 'La statue en aluminium Kartlis Deda (Mère de la Géorgie) sur la colline de Sololaki, tenant une coupe de vin et une épée, Tbilissi, Géorgie',
+        es: 'La estatua de aluminio Kartlis Deda (Madre de Georgia) en la colina de Sololaki, con un cuenco de vino y una espada, Tiflis, Georgia',
+        nl: 'Het aluminium standbeeld Kartlis Deda (Moeder van Georgië) op de Sololaki-heuvel, met een schaal wijn en een zwaard, Tbilisi, Georgië',
+        cs: 'Hliníková socha Kartlis Deda (Matka Gruzie) na kopci Sololaki, s miskou vína a mečem, Tbilisi, Gruzie',
+        pl: 'Aluminiowy pomnik Kartlis Deda (Matka Gruzji) na wzgórzu Sololaki, z czarą wina i mieczem, Tbilisi, Gruzja',
+      },
+      caption: {
+        en: "Kartlis Deda, the Mother of Georgia, was raised on Sololaki Hill in 1958 for Tbilisi's 1,500th anniversary. The 20-metre aluminium figure by Elguja Amashukeli holds a bowl of wine for friends in one hand and a sword for enemies in the other.",
+        de: 'Kartlis Deda, die Mutter Georgiens, wurde 1958 zum 1500-jährigen Jubiläum von Tiflis auf dem Sololaki-Hügel errichtet. Die 20 Meter hohe Aluminiumfigur von Elguja Amaschukeli hält in der einen Hand eine Weinschale für Freunde und in der anderen ein Schwert für Feinde.',
+        fr: "Kartlis Deda, la Mère de la Géorgie, fut érigée sur la colline de Sololaki en 1958 pour le 1500e anniversaire de Tbilissi. La figure en aluminium de 20 mètres d'Elguja Amachoukeli tient d'une main une coupe de vin pour les amis et de l'autre une épée pour les ennemis.",
+        es: 'Kartlis Deda, la Madre de Georgia, se erigió en la colina de Sololaki en 1958 por el 1500 aniversario de Tiflis. La figura de aluminio de 20 metros de Elguja Amashukeli sostiene en una mano un cuenco de vino para los amigos y en la otra una espada para los enemigos.',
+        nl: 'Kartlis Deda, de Moeder van Georgië, werd in 1958 op de Sololaki-heuvel opgericht voor het 1500-jarig bestaan van Tbilisi. Het 20 meter hoge aluminium beeld van Elguja Amasjoekeli houdt in de ene hand een schaal wijn voor vrienden en in de andere een zwaard voor vijanden.',
+        cs: 'Kartlis Deda, Matka Gruzie, byla na kopci Sololaki vztyčena roku 1958 k 1500. výročí Tbilisi. Dvacetimetrová hliníková socha od Elgudži Amašukeliho drží v jedné ruce misku vína pro přátele a ve druhé meč pro nepřátele.',
+        pl: 'Kartlis Deda, Matkę Gruzji, wzniesiono na wzgórzu Sololaki w 1958 roku z okazji 1500-lecia Tbilisi. Dwudziestometrowa aluminiowa figura autorstwa Elguji Amaszukeli trzyma w jednej ręce czarę wina dla przyjaciół, a w drugiej miecz dla wrogów.',
+      },
+    },
+    // One contextual inline body image (real <figure class="body-img"> in the
+    // per-locale body, placed right after each locale's "The symbolism" paragraph).
+    // Rendered via SitePage's inlineImageObjects @graph map: stable @id
+    // (#inline-bowl-sword), contentUrl at the 1600 rung (no `w` suffix), localized
+    // name (=alt) + caption, brand credit, NO representativeOfPage (that's the
+    // hero's). Verbatim from kartlis-deda-inline-package.md.
+    inlineImageObjects: [
+      {
+        base: 'kartlis-deda-bowl-and-sword-tbilisi-georgia', width: 1600, height: 900, anchor: 'inline-bowl-sword',
+        description: "A close-up of the Kartlis Deda (Mother of Georgia) statue on Sololaki Hill against a clear blue sky, showing the aluminium figure's crowned head, the bowl of wine raised in her left hand and the sword held across her body in her right hand. The monument stands above Tbilisi, capital of Georgia (the country).",
+        locationName: 'Kartlis Deda, Sololaki Hill, Tbilisi, Georgia',
+        locality: 'Tbilisi', region: 'Tbilisi', geo: { lat: 41.688056, lng: 44.804583 },
+        name: {
+          en: 'Close-up of the Kartlis Deda statue against a blue sky, holding a bowl of wine in her left hand and a sword in her right, Tbilisi, Georgia',
+          de: 'Nahaufnahme der Statue Kartlis Deda vor blauem Himmel, mit einer Weinschale in der linken und einem Schwert in der rechten Hand, Tiflis, Georgien',
+          fr: 'Gros plan de la statue Kartlis Deda sur ciel bleu, tenant une coupe de vin dans la main gauche et une épée dans la droite, Tbilissi, Géorgie',
+          es: 'Primer plano de la estatua Kartlis Deda contra un cielo azul, con un cuenco de vino en la mano izquierda y una espada en la derecha, Tiflis, Georgia',
+          nl: 'Close-up van het standbeeld Kartlis Deda tegen een blauwe lucht, met een schaal wijn in de linkerhand en een zwaard in de rechter, Tbilisi, Georgië',
+          cs: 'Detail sochy Kartlis Deda proti modré obloze, s miskou vína v levé ruce a mečem v pravé, Tbilisi, Gruzie',
+          pl: 'Zbliżenie pomnika Kartlis Deda na tle błękitnego nieba, z czarą wina w lewej dłoni i mieczem w prawej, Tbilisi, Gruzja',
+        },
+        caption: {
+          en: 'The two objects Kartlis Deda holds sum up her meaning: a bowl of wine for those who come as friends, and a sword for those who come as enemies.',
+          de: 'Die beiden Gegenstände in den Händen von Kartlis Deda fassen ihre Bedeutung zusammen: eine Weinschale für alle, die als Freunde kommen, und ein Schwert für alle, die als Feinde kommen.',
+          fr: "Les deux objets que tient Kartlis Deda résument son sens : une coupe de vin pour ceux qui viennent en amis, et une épée pour ceux qui viennent en ennemis.",
+          es: 'Los dos objetos que sostiene Kartlis Deda resumen su significado: un cuenco de vino para quienes vienen como amigos y una espada para quienes vienen como enemigos.',
+          nl: 'De twee voorwerpen die Kartlis Deda vasthoudt vatten haar betekenis samen: een schaal wijn voor wie als vriend komt, en een zwaard voor wie als vijand komt.',
+          cs: 'Dva předměty, které Kartlis Deda drží, vystihují její smysl: miska vína pro ty, kdo přicházejí jako přátelé, a meč pro ty, kdo přicházejí jako nepřátelé.',
+          pl: 'Dwa przedmioty, które trzyma Kartlis Deda, streszczają jej znaczenie: czara wina dla tych, którzy przychodzą jako przyjaciele, i miecz dla tych, którzy przychodzą jako wrogowie.',
+        },
+      },
+    ],
   },
   {
     slug: 'mtatsminda-park', name: 'Mtatsminda Park',

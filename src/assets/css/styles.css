@@ -855,6 +855,41 @@ section {
   }
 }
 /* No rung above 1537 exists. Do not add a 1600 or 2400 breakpoint. */
+/* Kartlis Deda (Mother of Georgia) hero — per-page CSS background (same opt-in
+   mechanism as .hero--narikala; the other Sololaki-Hill hero). 4:3 source (native
+   1448x1086), so the ladder is exactly 768/1200/1448 with the top breakpoint at
+   min-width:1200. There is NO 1600/2400 rung. `background-position: center 40%` is
+   deliberate: the statue is tall, so center center would trim the crown (top) and
+   plinth (bottom) — 40% keeps the face, bowl and torso in a short desktop banner,
+   with the sky (upper-left) as the H1 zone. plain url() line = image-set()
+   fallback for browsers without image-set(). */
+.hero--kartlis-deda {
+  background-image: url("/images/files/kartlis-deda-statue-tbilisi-georgia-1200.webp");
+  background-image: image-set(
+    url("/images/files/kartlis-deda-statue-tbilisi-georgia-768.avif") type("image/avif"),
+    url("/images/files/kartlis-deda-statue-tbilisi-georgia-768.webp") type("image/webp")
+  );
+  background-position: center 40%;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+@media (min-width: 768px) {
+  .hero--kartlis-deda {
+    background-image: image-set(
+      url("/images/files/kartlis-deda-statue-tbilisi-georgia-1200.avif") type("image/avif"),
+      url("/images/files/kartlis-deda-statue-tbilisi-georgia-1200.webp") type("image/webp")
+    );
+  }
+}
+@media (min-width: 1200px) {
+  .hero--kartlis-deda {
+    background-image: image-set(
+      url("/images/files/kartlis-deda-statue-tbilisi-georgia-1448.avif") type("image/avif"),
+      url("/images/files/kartlis-deda-statue-tbilisi-georgia-1448.webp") type("image/webp")
+    );
+  }
+}
+/* No rung above 1448 exists. Do not add a 1600 or 2400 breakpoint. */
 /* Chronicles of Georgia hero — per-page CSS background (same opt-in mechanism as
    .hero--narikala). Native ceiling is 1448, BELOW the usual 1600 rung, so the
    ladder is exactly 768/1200/1448 with the top breakpoint at min-width:1200 —
