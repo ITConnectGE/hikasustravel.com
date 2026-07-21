@@ -926,6 +926,51 @@ section {
   }
 }
 /* No rung above 1600 exists. Do not add a 1672 or 2400 breakpoint. */
+/* Bridge of Peace hero — per-page CSS background (same opt-in mechanism as
+   .hero--narikala; another Tbilisi landmark). This is the FIRST full 4-rung ladder:
+   the source is native 4096x2730 (3:2), big enough for a true retina-desktop rung,
+   so the ladder is 768/1200/1600/2400 with the top breakpoint at min-width:1600 →
+   2400 rung. The native 4096 is deliberately NOT a rung (2400 is the hero ceiling);
+   there is NO upscale. `background-position: center center`: the 3:2 frame fills the
+   banner with the bridge mid-frame and bright sky across the top third as the H1
+   zone, so no positioning bias or scrim is added (the shared .coverme::after overlay
+   provides the readable text layer). plain url() line = image-set() fallback for
+   browsers without image-set(). */
+.hero--bridge-of-peace {
+  background-image: url("/images/files/bridge-of-peace-tbilisi-georgia-1200.webp");
+  background-image: image-set(
+    url("/images/files/bridge-of-peace-tbilisi-georgia-768.avif") type("image/avif"),
+    url("/images/files/bridge-of-peace-tbilisi-georgia-768.webp") type("image/webp")
+  );
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+@media (min-width: 768px) {
+  .hero--bridge-of-peace {
+    background-image: image-set(
+      url("/images/files/bridge-of-peace-tbilisi-georgia-1200.avif") type("image/avif"),
+      url("/images/files/bridge-of-peace-tbilisi-georgia-1200.webp") type("image/webp")
+    );
+  }
+}
+@media (min-width: 1200px) {
+  .hero--bridge-of-peace {
+    background-image: image-set(
+      url("/images/files/bridge-of-peace-tbilisi-georgia-1600.avif") type("image/avif"),
+      url("/images/files/bridge-of-peace-tbilisi-georgia-1600.webp") type("image/webp")
+    );
+  }
+}
+@media (min-width: 1600px) {
+  .hero--bridge-of-peace {
+    background-image: image-set(
+      url("/images/files/bridge-of-peace-tbilisi-georgia-2400.avif") type("image/avif"),
+      url("/images/files/bridge-of-peace-tbilisi-georgia-2400.webp") type("image/webp")
+    );
+  }
+}
+/* Full ladder tops at 2400 (retina/wide desktops). Do NOT add a native-4096 rung. */
 /* Chronicles of Georgia hero — per-page CSS background (same opt-in mechanism as
    .hero--narikala). Native ceiling is 1448, BELOW the usual 1600 rung, so the
    ladder is exactly 768/1200/1448 with the top breakpoint at min-width:1200 —

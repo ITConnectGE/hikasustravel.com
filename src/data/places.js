@@ -2151,7 +2151,50 @@ export const sites = [
     slug: 'bridge-of-peace', name: 'The Bridge of Peace',
     parentType: 'city', parent: 'tbilisi', published: true,
     seoKey: 'bridgeOfPeace', contentKey: 'bridgeOfPeace',
-    image: '/images/files/georgia-home.jpg',
+    // Hero: real Bridge of Peace (owner's own photo) via the .hero--bridge-of-peace
+    // image-set() ladder (styles.css), replacing the georgia-home.jpg placeholder.
+    // First FULL 4-rung ladder (native 4096x2730, 3:2): 768/1200/1600/2400, top
+    // breakpoint at min-width:1600 → 2400 rung. NO native-4096 rung, NO upscale.
+    // The CSS class controls the visible background (`background-position: center
+    // center`, no scrim). `image`/`imageAvif` = the 2400 top rung, feeding the
+    // ImageObject contentUrl (2400) + the og fallback reference.
+    image: '/images/files/bridge-of-peace-tbilisi-georgia-2400.webp',
+    imageAvif: '/images/files/bridge-of-peace-tbilisi-georgia-2400.avif',
+    heroClass: 'hero--bridge-of-peace',
+    // Dedicated 1.91:1 social-share image (og:image / twitter:image), .jpg default.
+    ogImage: { src: '/images/files/bridge-of-peace-tbilisi-georgia-og.jpg', width: 1200, height: 630 },
+    // Hero image SEO/AEO metadata (owner's own photo → brand credit, set by
+    // SitePage). Hero is a CSS background (no <img alt>), so the localized alt lives
+    // here and is emitted as og:image:alt/twitter:image:alt per locale; the `caption`
+    // map feeds the hero ImageObject caption. Verbatim from bridge-of-peace-hero-
+    // package.md. width/height = 2400 rung; coordinates per package (the bridge over
+    // the Mtkvari — distinct from the other Tbilisi pages).
+    imageMeta: {
+      width: 2400, height: 1600,
+      name: 'The Bridge of Peace, a curved glass-and-steel pedestrian bridge over the Mtkvari, with the Tbilisi skyline behind, Georgia',
+      description: 'The Bridge of Peace in Tbilisi, a bow-shaped pedestrian bridge with an undulating steel-and-glass canopy spanning the Mtkvari River between Rike Park and the Old Town, with the landscaped park in the foreground and the city skyline, including a modern glass tower, behind. Designed by Michele De Lucchi and opened in 2010, it stands in central Tbilisi, capital of Georgia (the country).',
+      locationName: 'Bridge of Peace, Mtkvari River, Tbilisi, Georgia',
+      locality: 'Tbilisi', region: 'Tbilisi', country: 'GE',
+      geo: { lat: 41.6929, lng: 44.8082 },
+      alt: {
+        en: 'The Bridge of Peace, a curved glass-and-steel pedestrian bridge over the Mtkvari, with the Tbilisi skyline behind, Georgia',
+        de: 'Die Friedensbrücke, eine geschwungene Fußgängerbrücke aus Glas und Stahl über die Mtkwari, mit der Skyline von Tiflis dahinter, Georgien',
+        fr: 'Le pont de la Paix, passerelle piétonne courbe en verre et acier au-dessus de la Mtkvari, avec la silhouette de Tbilissi en arrière-plan, Géorgie',
+        es: 'El puente de la Paz, una pasarela peatonal curva de vidrio y acero sobre el Mtkvari, con el perfil urbano de Tiflis detrás, Georgia',
+        nl: 'De Vredesbrug, een gebogen voetgangersbrug van glas en staal over de Mtkvari, met de skyline van Tbilisi erachter, Georgië',
+        cs: 'Most míru, zakřivená pěší lávka ze skla a oceli přes Mtkvari, s panoramatem Tbilisi v pozadí, Gruzie',
+        pl: 'Most Pokoju, wygięta kładka piesza ze szkła i stali nad Mtkwari, z panoramą Tbilisi w tle, Gruzja',
+      },
+      caption: {
+        en: 'The Bridge of Peace, designed by Italian architect Michele De Lucchi and opened in 2010, links Rike Park with the Old Town across the Mtkvari. Its glass canopy carries thousands of LEDs that light up in the evening.',
+        de: 'Die Friedensbrücke, entworfen vom italienischen Architekten Michele De Lucchi und 2010 eröffnet, verbindet den Rike-Park über die Mtkwari mit der Altstadt. Ihr Glasdach trägt Tausende LEDs, die abends aufleuchten.',
+        fr: "Le pont de la Paix, conçu par l'architecte italien Michele De Lucchi et inauguré en 2010, relie le parc Rike à la vieille ville par-dessus la Mtkvari. Sa verrière porte des milliers de LED qui s'illuminent le soir.",
+        es: 'El puente de la Paz, diseñado por el arquitecto italiano Michele De Lucchi e inaugurado en 2010, une el parque Rike con el casco antiguo sobre el Mtkvari. Su cubierta de vidrio lleva miles de LED que se encienden al anochecer.',
+        nl: "De Vredesbrug, ontworpen door de Italiaanse architect Michele De Lucchi en geopend in 2010, verbindt het Rike-park over de Mtkvari met de oude stad. Haar glazen kap draagt duizenden leds die 's avonds oplichten.",
+        cs: 'Most míru, navržený italským architektem Michelem De Lucchim a otevřený v roce 2010, spojuje park Rike se Starým Městem přes řeku Mtkvari. Jeho skleněné zastřešení nese tisíce LED, které se večer rozzáří.',
+        pl: 'Most Pokoju, zaprojektowany przez włoskiego architekta Michele De Lucchiego i otwarty w 2010 roku, łączy park Rike ze Starym Miastem nad Mtkwari. Jego szklane zadaszenie kryje tysiące diod LED, które rozświetlają się wieczorem.',
+      },
+    },
   },
   {
     slug: 'chronicles-of-georgia', name: 'The Chronicles of Georgia',
