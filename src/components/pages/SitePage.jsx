@@ -185,7 +185,12 @@ export default function SitePage() {
           url: `${SITE_URL}${heroImage}`,
           width: heroImageMeta.width,
           height: heroImageMeta.height,
-          caption: heroAlt,
+          // Prefer a richer per-locale `caption` map when the image SEO package
+          // ships one (e.g. Alaverdi); otherwise fall back to the localized alt,
+          // keeping every existing hero (which has no imageMeta.caption) unchanged.
+          caption: heroImageMeta.caption
+            ? (heroImageMeta.caption[lang] || heroImageMeta.caption.en)
+            : heroAlt,
           name: heroImageMeta.name,
           description: heroImageMeta.description,
           representativeOfPage: true,

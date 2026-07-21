@@ -1576,7 +1576,48 @@ export const sites = [
     slug: 'alaverdi-monastery', name: 'Alaverdi Cathedral',
     parentType: 'city', parent: 'telavi', published: true,
     seoKey: 'alaverdiMonastery', contentKey: 'alaverdiMonastery',
-    image: '/images/files/georgia-home.jpg',
+    // Hero: real Alaverdi Cathedral (owner's own photo) via the .hero--alaverdi
+    // image-set() ladder (styles.css). `image`/`imageAvif` = the 1448 top rung
+    // (native 1448×1086, 4:3 — no crop); the CSS class controls the visible
+    // background, and `image` feeds the ImageObject contentUrl. Ladder is
+    // 768/1200/1448 — NO 640/1280/1600/2400 rung (would upscale past native).
+    // Files live under /images/kakheti/ (per the image SEO package).
+    image: '/images/kakheti/alaverdi-cathedral-georgia-1448.webp',
+    imageAvif: '/images/kakheti/alaverdi-cathedral-georgia-1448.avif',
+    heroClass: 'hero--alaverdi',
+    // Dedicated 1.91:1 social-share image (og:image / twitter:image), .jpg default.
+    ogImage: { src: '/images/kakheti/alaverdi-cathedral-georgia-og.jpg', width: 1200, height: 630 },
+    // Image SEO/AEO metadata (owner's own photo → brand credit, set by SitePage).
+    // Hero is a CSS background (no <img alt>), so the localized alt lives here and
+    // is emitted as og:image:alt/twitter:image:alt per locale; the richer `caption`
+    // map feeds the ImageObject caption. Verbatim from the image SEO package.
+    // width/height = 1448 rung. Coordinates per package.
+    imageMeta: {
+      width: 1448, height: 1086,
+      name: 'Alaverdi Cathedral, an 11th-century Georgian Orthodox church with a tall conical dome and stone defensive walls, before the Caucasus mountains in Kakheti, Georgia',
+      description: 'Alaverdi Cathedral (Alaverdi Monastery), an 11th-century Georgian Orthodox cathedral built by King Kvirike III of Kakheti, with a tall conical dome rising over 50 metres and encircled by stone defensive walls. For centuries it was the tallest church in Georgia; it stands over the Alazani Valley against the Greater Caucasus in Kakheti, Georgia (the country).',
+      locationName: 'Alaverdi Cathedral (Alaverdi Monastery), Kakheti, Georgia',
+      region: 'Kakheti', country: 'GE',
+      geo: { lat: 42.032497, lng: 45.377108 },
+      alt: {
+        en: 'Alaverdi Cathedral, an 11th-century Georgian Orthodox church with a tall conical dome and stone defensive walls, before the Caucasus mountains in Kakheti, Georgia',
+        de: 'Kathedrale von Alaverdi, eine georgisch-orthodoxe Kirche aus dem 11. Jahrhundert mit hoher Kegelkuppel und steinernen Wehrmauern, vor dem Kaukasus in Kachetien, Georgien',
+        fr: 'Cathédrale d\'Alaverdi, église orthodoxe géorgienne du XIᵉ siècle à haute coupole conique et murailles de pierre, devant les montagnes du Caucase en Kakhétie, Géorgie',
+        es: 'Catedral de Alaverdi, iglesia ortodoxa georgiana del siglo XI con alta cúpula cónica y murallas de piedra, ante las montañas del Cáucaso en Kajetia, Georgia',
+        nl: 'Kathedraal van Alaverdi, een 11e-eeuwse Georgisch-orthodoxe kerk met hoge kegelvormige koepel en stenen verdedigingsmuren, voor de Kaukasus in Kachetië, Georgië',
+        cs: 'Katedrála Alaverdi, gruzínský pravoslavný kostel z 11. století s vysokou kuželovou kupolí a kamennými hradbami, před pohořím Kavkaz v Kachetii, Gruzie',
+        pl: 'Katedra Alaverdi, gruziński prawosławny kościół z XI wieku z wysoką stożkową kopułą i kamiennymi murami obronnymi, na tle Kaukazu w Kachetii, Gruzja',
+      },
+      caption: {
+        en: 'Alaverdi Cathedral in Kakheti — built in the 11th century by King Kvirike III, its 50-metre dome made it Georgia\'s tallest church for centuries, rising over the Alazani Valley against the Greater Caucasus.',
+        de: 'Die Kathedrale von Alaverdi in Kachetien — im 11. Jahrhundert von König Kwirike III. erbaut; ihre 50 m hohe Kuppel machte sie jahrhundertelang zur höchsten Kirche Georgiens, über dem Alasani-Tal vor dem Großen Kaukasus.',
+        fr: 'La cathédrale d\'Alaverdi en Kakhétie — édifiée au XIᵉ siècle par le roi Kvirike III, sa coupole de 50 m en fit longtemps la plus haute église de Géorgie, dominant la vallée de l\'Alazani face au Grand Caucase.',
+        es: 'La catedral de Alaverdi en Kajetia — construida en el siglo XI por el rey Kvirike III, su cúpula de 50 m la convirtió durante siglos en la iglesia más alta de Georgia, sobre el valle del Alazani frente al Gran Cáucaso.',
+        nl: 'De kathedraal van Alaverdi in Kachetië — in de 11e eeuw gebouwd door koning Kvirike III; haar 50 meter hoge koepel maakte haar eeuwenlang de hoogste kerk van Georgië, boven de Alazani-vallei tegen de Grote Kaukasus.',
+        cs: 'Katedrála Alaverdi v Kachetii — postavená v 11. století králem Kvirikem III.; její 50metrová kupole z ní po staletí činila nejvyšší kostel Gruzie, tyčící se nad Alazanským údolím proti Velkému Kavkazu.',
+        pl: 'Katedra Alaverdi w Kachetii — wzniesiona w XI wieku przez króla Kwirike III; jej 50-metrowa kopuła przez wieki czyniła ją najwyższym kościołem Gruzji, górując nad doliną Alazani na tle Wielkiego Kaukazu.',
+      },
+    },
   },
   {
     slug: 'ali-and-nino-statue', name: 'Ali & Nino Statue',

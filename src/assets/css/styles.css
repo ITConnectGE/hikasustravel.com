@@ -640,6 +640,42 @@ section {
   }
 }
 /* No rung above 1540 exists. Do not add a 1600 or 2400 breakpoint. */
+/* Alaverdi Cathedral hero — per-page CSS background (same opt-in mechanism as
+   .hero--jvari). 4:3 source (native 1448×1086), so the ladder is exactly
+   768/1200/1448 with the top breakpoint at min-width:1200. There is NO
+   640/1280/1600/2400 rung. Files live under /images/kakheti/ (per the image SEO
+   package). `background-position: center center`: keeps the church, conical dome
+   and defensive walls framed. The project's H1 is centre-anchored and the shared
+   .coverme::after overlay already provides the readable text layer, so no extra
+   ::before scrim is added (no duplicate overlay). plain url() line = image-set()
+   fallback for browsers without image-set(). */
+.hero--alaverdi {
+  background-image: url("/images/kakheti/alaverdi-cathedral-georgia-1200.webp");
+  background-image: image-set(
+    url("/images/kakheti/alaverdi-cathedral-georgia-768.avif") type("image/avif"),
+    url("/images/kakheti/alaverdi-cathedral-georgia-768.webp") type("image/webp")
+  );
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+@media (min-width: 768px) {
+  .hero--alaverdi {
+    background-image: image-set(
+      url("/images/kakheti/alaverdi-cathedral-georgia-1200.avif") type("image/avif"),
+      url("/images/kakheti/alaverdi-cathedral-georgia-1200.webp") type("image/webp")
+    );
+  }
+}
+@media (min-width: 1200px) {
+  .hero--alaverdi {
+    background-image: image-set(
+      url("/images/kakheti/alaverdi-cathedral-georgia-1448.avif") type("image/avif"),
+      url("/images/kakheti/alaverdi-cathedral-georgia-1448.webp") type("image/webp")
+    );
+  }
+}
+/* No rung above 1448 exists. Do not add a 1600 or 2400 breakpoint. */
 /* Bagrati Cathedral hero — per-page CSS background (same opt-in mechanism as
    .hero--mestia). 16:9 source (native 1672) exported to a top rung of 1600, so
    the ladder is exactly 768/1200/1600 with the top breakpoint at min-width:1200.
