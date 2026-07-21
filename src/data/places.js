@@ -1949,7 +1949,106 @@ export const sites = [
     slug: 'holy-trinity-cathedral-sameba', name: 'Holy Trinity Cathedral (Sameba)',
     parentType: 'city', parent: 'tbilisi', published: true,
     seoKey: 'holyTrinityCathedral', contentKey: 'holyTrinityCathedral',
-    image: '/images/files/georgia-home.jpg',
+    // Hero: real Holy Trinity Cathedral / Sameba (owner's own photo) via the
+    // .hero--sameba image-set() ladder (styles.css), replacing the georgia-home.jpg
+    // placeholder. `image`/`imageAvif` = the 1600 top rung (native 1672x941, 16:9;
+    // 1672 dropped as redundant with 1600). Ladder 768/1200/1600 — NO 1672/2400
+    // rung. The CSS class controls the visible background with `background-position:
+    // center center`. `image` feeds the ImageObject contentUrl (1600 rung).
+    image: '/images/files/sameba-holy-trinity-cathedral-tbilisi-georgia-1600.webp',
+    imageAvif: '/images/files/sameba-holy-trinity-cathedral-tbilisi-georgia-1600.avif',
+    heroClass: 'hero--sameba',
+    // Dedicated 1.91:1 social-share image (og:image / twitter:image), .jpg default.
+    ogImage: { src: '/images/files/sameba-holy-trinity-cathedral-tbilisi-georgia-og.jpg', width: 1200, height: 630 },
+    // Hero image SEO/AEO metadata (owner's own photo → brand credit, set by
+    // SitePage). Hero is a CSS background (no <img alt>), so the localized alt lives
+    // here and is emitted as og:image:alt/twitter:image:alt per locale; the `caption`
+    // map feeds the hero ImageObject caption. Verbatim from sameba-cathedral-images-
+    // package.md. width/height = 1600 rung; coordinates per package (Elia Hill/
+    // Avlabari — distinct from Narikala/Kartlis Deda across the river on Sololaki).
+    imageMeta: {
+      width: 1600, height: 900,
+      name: 'The Holy Trinity Cathedral (Sameba) in Tbilisi, a large tiered stone church with a gilded dome, under dramatic clouds, Georgia',
+      description: 'The Holy Trinity Cathedral of Tbilisi, known as Sameba, a large modern cross-dome cathedral of pale stone rising in tiers to a gilded central dome and cross, seen from the plaza under a dramatic cloudy sky. Consecrated in 2004, it stands on Elia Hill in the Avlabari district of Tbilisi, capital of Georgia (the country).',
+      locationName: 'Holy Trinity Cathedral (Sameba), Elia Hill, Avlabari, Tbilisi, Georgia',
+      locality: 'Tbilisi', region: 'Tbilisi', country: 'GE',
+      geo: { lat: 41.6975, lng: 44.8171 },
+      alt: {
+        en: 'The Holy Trinity Cathedral (Sameba) in Tbilisi, a large tiered stone church with a gilded dome, under dramatic clouds, Georgia',
+        de: 'Die Dreifaltigkeitskathedrale (Sameba) in Tiflis, eine große gestufte Steinkirche mit vergoldeter Kuppel, unter dramatischen Wolken, Georgien',
+        fr: "La cathédrale de la Sainte-Trinité (Sameba) à Tbilissi, grande église de pierre à étages coiffée d'une coupole dorée, sous des nuages spectaculaires, Géorgie",
+        es: 'La catedral de la Santísima Trinidad (Sameba) en Tiflis, una gran iglesia de piedra escalonada con cúpula dorada, bajo nubes espectaculares, Georgia',
+        nl: 'De Heilige-Drie-eenheidskathedraal (Sameba) in Tbilisi, een grote getrapte stenen kerk met een vergulde koepel, onder dramatische wolken, Georgië',
+        cs: 'Katedrála Nejsvětější Trojice (Sameba) v Tbilisi, velký stupňovitý kamenný chrám se zlacenou kupolí, pod dramatickými mraky, Gruzie',
+        pl: 'Katedra Trójcy Świętej (Sameba) w Tbilisi, wielki schodkowy kamienny kościół ze złoconą kopułą, pod dramatycznymi chmurami, Gruzja',
+      },
+      caption: {
+        en: 'Sameba, the Holy Trinity Cathedral, was built between 1995 and 2004 on Elia Hill above Avlabari. The third-tallest Orthodox cathedral in the world, its gilded dome and cross are visible across the city.',
+        de: 'Sameba, die Dreifaltigkeitskathedrale, wurde zwischen 1995 und 2004 auf dem Elia-Hügel über Awlabari erbaut. Als dritthöchste orthodoxe Kathedrale der Welt sind ihre vergoldete Kuppel und ihr Kreuz in der ganzen Stadt zu sehen.',
+        fr: "Sameba, la cathédrale de la Sainte-Trinité, fut bâtie entre 1995 et 2004 sur la colline d'Elia, au-dessus d'Avlabari. Troisième plus haute cathédrale orthodoxe du monde, sa coupole et sa croix dorées se voient de toute la ville.",
+        es: 'Sameba, la catedral de la Santísima Trinidad, se construyó entre 1995 y 2004 en la colina de Elia, sobre Avlabari. Tercera catedral ortodoxa más alta del mundo, su cúpula y su cruz doradas se ven desde toda la ciudad.',
+        nl: 'Sameba, de Heilige-Drie-eenheidskathedraal, werd tussen 1995 en 2004 gebouwd op de Elia-heuvel boven Avlabari. Als op twee na hoogste orthodoxe kathedraal ter wereld zijn haar vergulde koepel en kruis in de hele stad te zien.',
+        cs: 'Sameba, katedrála Nejsvětější Trojice, byla postavena v letech 1995–2004 na kopci Elia nad Avlabari. Jako třetí nejvyšší pravoslavná katedrála na světě jsou její zlacená kupole a kříž vidět z celého města.',
+        pl: 'Sameba, katedra Trójcy Świętej, powstała w latach 1995–2004 na wzgórzu Elia nad Avlabari. Jako trzecia najwyższa cerkiew prawosławna na świecie, jej złocona kopuła i krzyż są widoczne z całego miasta.',
+      },
+    },
+    // Two contextual inline body images (real <figure> in the per-locale body):
+    // (1) blue-hour landscape after the "A landmark…" section, (2) portrait facade
+    // after the "Architecture and exterior" section. Rendered via SitePage's
+    // inlineImageObjects @graph map: stable @id (#inline-blue-hour / #inline-facade),
+    // contentUrl at each image's top rung (no `w` suffix), localized name (=alt) +
+    // caption, brand credit, NO representativeOfPage (that's the hero's). Verbatim
+    // from sameba-cathedral-images-package.md.
+    inlineImageObjects: [
+      {
+        base: 'sameba-cathedral-blue-hour-tbilisi-georgia', width: 1600, height: 900, anchor: 'inline-blue-hour',
+        description: 'A blue-hour view of the floodlit Holy Trinity Cathedral of Tbilisi, its lit stone facade and gilded dome glowing above a lamplit plaza lined with carved stone crosses, on Elia Hill in the Avlabari district of Tbilisi, capital of Georgia (the country).',
+        locationName: 'Holy Trinity Cathedral (Sameba), Elia Hill, Avlabari, Tbilisi, Georgia',
+        locality: 'Tbilisi', region: 'Tbilisi', geo: { lat: 41.6975, lng: 44.8171 },
+        name: {
+          en: 'The floodlit Holy Trinity Cathedral of Tbilisi at blue hour, with its lamplit plaza and stone crosses, Georgia',
+          de: 'Die angestrahlte Dreifaltigkeitskathedrale von Tiflis zur blauen Stunde, mit beleuchtetem Vorplatz und Steinkreuzen, Georgien',
+          fr: "La cathédrale de la Sainte-Trinité de Tbilissi illuminée à l'heure bleue, avec son parvis éclairé et ses croix de pierre, Géorgie",
+          es: 'La catedral de la Santísima Trinidad de Tiflis iluminada a la hora azul, con su explanada alumbrada y cruces de piedra, Georgia',
+          nl: 'De aangelichte Heilige-Drie-eenheidskathedraal van Tbilisi tijdens het blauwe uur, met verlicht plein en stenen kruisen, Georgië',
+          cs: 'Nasvícená katedrála Nejsvětější Trojice v Tbilisi za modré hodiny, s osvětleným náměstím a kamennými kříži, Gruzie',
+          pl: 'Podświetlona katedra Trójcy Świętej w Tbilisi o niebieskiej godzinie, z oświetlonym placem i kamiennymi krzyżami, Gruzja',
+        },
+        caption: {
+          en: 'At dusk the cathedral and its avenue of carved stone crosses are floodlit, and the gilded dome glows above Avlabari.',
+          de: 'In der Dämmerung werden die Kathedrale und ihre Allee gemeißelter Steinkreuze angestrahlt, und die vergoldete Kuppel leuchtet über Awlabari.',
+          fr: "Au crépuscule, la cathédrale et son allée de croix de pierre sculptées sont illuminées, et la coupole dorée rayonne au-dessus d'Avlabari.",
+          es: 'Al anochecer, la catedral y su avenida de cruces de piedra talladas se iluminan, y la cúpula dorada brilla sobre Avlabari.',
+          nl: 'Bij schemering worden de kathedraal en haar laan met gebeeldhouwde stenen kruisen aangelicht, en gloeit de vergulde koepel boven Avlabari.',
+          cs: 'Za soumraku jsou katedrála a její alej tesaných kamenných křížů nasvíceny a zlacená kupole září nad Avlabari.',
+          pl: 'O zmierzchu katedra i jej aleja rzeźbionych kamiennych krzyży są podświetlone, a złocona kopuła jaśnieje nad Avlabari.',
+        },
+      },
+      {
+        base: 'sameba-cathedral-facade-tbilisi-georgia', width: 1024, height: 1536, anchor: 'inline-facade',
+        description: 'The main west facade of the Holy Trinity Cathedral of Tbilisi seen from below, rising in receding tiers of arches toward the gilded central dome and cross, on Elia Hill in the Avlabari district of Tbilisi, capital of Georgia (the country).',
+        locationName: 'Holy Trinity Cathedral (Sameba), Elia Hill, Avlabari, Tbilisi, Georgia',
+        locality: 'Tbilisi', region: 'Tbilisi', geo: { lat: 41.6975, lng: 44.8171 },
+        name: {
+          en: 'The main facade of the Holy Trinity Cathedral of Tbilisi seen from below, rising in tiers to its gilded dome, Georgia',
+          de: 'Die Hauptfassade der Dreifaltigkeitskathedrale von Tiflis von unten gesehen, in Stufen zur vergoldeten Kuppel aufsteigend, Georgien',
+          fr: "La façade principale de la cathédrale de la Sainte-Trinité de Tbilissi vue d'en bas, s'élevant en étages vers sa coupole dorée, Géorgie",
+          es: 'La fachada principal de la catedral de la Santísima Trinidad de Tiflis vista desde abajo, ascendiendo en niveles hasta su cúpula dorada, Georgia',
+          nl: 'De hoofdgevel van de Heilige-Drie-eenheidskathedraal van Tbilisi van onderaf gezien, in trappen oplopend naar de vergulde koepel, Georgië',
+          cs: 'Hlavní průčelí katedrály Nejsvětější Trojice v Tbilisi při pohledu zdola, stupňovitě se zvedající k zlacené kupoli, Gruzie',
+          pl: 'Główna fasada katedry Trójcy Świętej w Tbilisi widziana z dołu, wznosząca się stopniowo ku złoconej kopule, Gruzja',
+        },
+        caption: {
+          en: "The west front rises in receding tiers of arches toward the dome — the cathedral's design emphasises height, drawing the eye upward to the gilded cupola and cross.",
+          de: 'Die Westfront steigt in zurückweichenden Bogenstufen zur Kuppel auf – der Bau betont die Höhe und lenkt den Blick hinauf zur vergoldeten Kuppel und zum Kreuz.',
+          fr: "La façade ouest s'élève en gradins d'arcs successifs vers la coupole : l'édifice met l'accent sur la hauteur, attirant le regard vers la coupole et la croix dorées.",
+          es: 'La fachada oeste se eleva en niveles escalonados de arcos hacia la cúpula: el diseño enfatiza la altura y dirige la mirada hacia la cúpula y la cruz doradas.',
+          nl: 'De westgevel stijgt in terugwijkende boogtrappen naar de koepel — het ontwerp benadrukt hoogte en trekt de blik omhoog naar de vergulde koepel en het kruis.',
+          cs: 'Západní průčelí se zvedá v ustupujících stupních oblouků ke kupoli – stavba zdůrazňuje výšku a vede pohled vzhůru ke zlacené kupoli a kříži.',
+          pl: 'Fasada zachodnia wznosi się cofającymi się kondygnacjami łuków ku kopule — bryła podkreśla wysokość, kierując wzrok ku złoconej kopule i krzyżowi.',
+        },
+      },
+    ],
   },
   {
     slug: 'leghvtakhevi-waterfall', name: 'Leghvtakhevi Waterfall',

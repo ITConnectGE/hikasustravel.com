@@ -890,6 +890,42 @@ section {
   }
 }
 /* No rung above 1448 exists. Do not add a 1600 or 2400 breakpoint. */
+/* Holy Trinity Cathedral (Sameba) hero — per-page CSS background (same opt-in
+   mechanism as .hero--narikala; another Tbilisi landmark). 16:9 source (native
+   1672x941), so the ladder is exactly 768/1200/1600 with the top breakpoint at
+   min-width:1200 (1672 dropped as redundant with 1600). There is NO 1672/2400 rung.
+   `background-position: center center`: the 16:9 frame fills the banner with the
+   cathedral right-of-centre and sky/clouds upper-left as the H1 zone, so no
+   positioning bias or extra scrim is needed (the shared .coverme::after overlay
+   provides the readable text layer). plain url() line = image-set() fallback for
+   browsers without image-set(). */
+.hero--sameba {
+  background-image: url("/images/files/sameba-holy-trinity-cathedral-tbilisi-georgia-1200.webp");
+  background-image: image-set(
+    url("/images/files/sameba-holy-trinity-cathedral-tbilisi-georgia-768.avif") type("image/avif"),
+    url("/images/files/sameba-holy-trinity-cathedral-tbilisi-georgia-768.webp") type("image/webp")
+  );
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+@media (min-width: 768px) {
+  .hero--sameba {
+    background-image: image-set(
+      url("/images/files/sameba-holy-trinity-cathedral-tbilisi-georgia-1200.avif") type("image/avif"),
+      url("/images/files/sameba-holy-trinity-cathedral-tbilisi-georgia-1200.webp") type("image/webp")
+    );
+  }
+}
+@media (min-width: 1200px) {
+  .hero--sameba {
+    background-image: image-set(
+      url("/images/files/sameba-holy-trinity-cathedral-tbilisi-georgia-1600.avif") type("image/avif"),
+      url("/images/files/sameba-holy-trinity-cathedral-tbilisi-georgia-1600.webp") type("image/webp")
+    );
+  }
+}
+/* No rung above 1600 exists. Do not add a 1672 or 2400 breakpoint. */
 /* Chronicles of Georgia hero — per-page CSS background (same opt-in mechanism as
    .hero--narikala). Native ceiling is 1448, BELOW the usual 1600 rung, so the
    ladder is exactly 768/1200/1448 with the top breakpoint at min-width:1200 —
@@ -6406,6 +6442,15 @@ select option:checked {
   color: #888;
   font-style: italic;
   text-align: center;
+}
+/* Portrait variant of a body image (e.g. the tall Sameba facade). A portrait
+   frame at the default 642px landscape cap would tower over the column, so cap it
+   narrower and keep it centred. Scoped to .body-img--portrait only — landscape
+   .body-img images are unaffected. Placed after `.body-img img` so it wins on
+   source order (equal specificity). */
+.body-img--portrait img {
+  max-width: 560px;
+  margin-inline: auto;
 }
 /* Clickable body infographic (opens the shared lightbox). Affordance only —
    the <img> inside keeps its own sizing/rounding/shadow. */
