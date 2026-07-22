@@ -2330,7 +2330,53 @@ export const sites = [
     slug: 'gudauri-panorama', name: 'Gudauri Panorama',
     parentType: 'city', parent: 'gudauri', published: true,
     seoKey: 'russiaGeorgiaFriendshipMonument', contentKey: 'russiaGeorgiaFriendshipMonument',
-    image: '/images/files/georgia-home.jpg',
+    // Hero: real Gudauri Panorama / Russia-Georgia Friendship Monument (owner's own
+    // photo, faces pre-blurred) via the .hero--gudauri-panorama image-set() ladder
+    // (styles.css), replacing the georgia-home.jpg placeholder. Native 4:3
+    // (1448x1086) — just under the usual 1600 rung, so the ladder is exactly
+    // 768/1200/1448 with the top breakpoint at min-width:1200. NO 1600/2400 rung,
+    // no upscale. The CSS class controls the visible background (`background-
+    // position: center center`; no scrim beyond the shared .coverme::after). H1 is
+    // centre-anchored by the shared HeroSection (not changed here). `image`/
+    // `imageAvif` = the 1448 top rung, feeding the ImageObject contentUrl (1448).
+    image: '/images/files/gudauri-panorama-friendship-monument-georgia-1448.webp',
+    imageAvif: '/images/files/gudauri-panorama-friendship-monument-georgia-1448.avif',
+    heroClass: 'hero--gudauri-panorama',
+    // Dedicated 1.91:1 social-share image (og:image / twitter:image), .jpg default.
+    ogImage: { src: '/images/files/gudauri-panorama-friendship-monument-georgia-og.jpg', width: 1200, height: 630 },
+    // Hero image SEO/AEO metadata (owner's own photo, faces pre-blurred → brand
+    // credit, set by SitePage). Hero is a CSS background (no <img alt>), so the
+    // localized alt lives here and is emitted as og:image:alt/twitter:image:alt per
+    // locale; the `caption` map feeds the hero ImageObject caption. Verbatim from
+    // gudauri-panorama-hero-package.md. width/height = 1448 rung; coordinates per
+    // package. Region Mtskheta-Mtianeti. Metadata frames the site as a viewpoint /
+    // Soviet-era mural, not a current celebration of "friendship".
+    imageMeta: {
+      width: 1448, height: 1086,
+      name: "The Gudauri Panorama, a curved Soviet-era monument with a colourful mosaic mural above the Devil's Valley on the Georgian Military Highway, Georgia",
+      description: "The Gudauri Panorama, officially the Russia-Georgia Friendship Monument, a large semicircular stone-and-concrete structure on the Georgian Military Highway above the Devil's Valley, its inner wall covered by a colourful tile mosaic of Georgian and Russian historical scenes, with a paved viewing terrace and arches opening to the Caucasus mountains. Built in 1983 near Gudauri in the Mtskheta-Mtianeti region of Georgia (the country).",
+      locationName: 'Gudauri Panorama (Russia-Georgia Friendship Monument), Georgian Military Highway, Gudauri, Georgia',
+      locality: 'Gudauri', region: 'Mtskheta-Mtianeti', country: 'GE',
+      geo: { lat: 42.4920, lng: 44.4527 },
+      alt: {
+        en: "The Gudauri Panorama, a curved Soviet-era monument with a colourful mosaic mural above the Devil's Valley on the Georgian Military Highway, Georgia",
+        de: 'Das Gudauri-Panorama, ein geschwungenes Denkmal aus der Sowjetzeit mit buntem Mosaik über dem Teufelstal an der Georgischen Heerstraße, Georgien',
+        fr: "Le panorama de Gudauri, monument incurvé de l'époque soviétique orné d'une mosaïque colorée au-dessus de la vallée du Diable, sur la route militaire géorgienne, Géorgie",
+        es: 'El panorama de Gudauri, un monumento curvo de la era soviética con un colorido mosaico sobre el valle del Diablo, en la carretera militar georgiana, Georgia',
+        nl: 'Het Gudauri-panorama, een gebogen monument uit de Sovjettijd met een kleurrijk mozaïek boven de Duivelsvallei aan de Georgische Militaire Weg, Georgië',
+        cs: 'Gudauri Panorama, zakřivený památník ze sovětské éry s barevnou mozaikou nad Ďáblovým údolím na Gruzínské vojenské cestě, Gruzie',
+        pl: 'Panorama Gudauri, wygięty pomnik z czasów sowieckich z barwną mozaiką nad Diablą Doliną przy Gruzińskiej Drodze Wojennej, Gruzja',
+      },
+      caption: {
+        en: "Built in 1983 to mark the bicentennial of the 1783 Treaty of Georgievsk, this semicircular monument on the Georgian Military Highway is lined with a mosaic mural of Georgian and Russian history. Today it is best known as a viewpoint over the Devil's Valley.",
+        de: '1983 zum 200. Jahrestag des Vertrags von Georgijewsk (1783) errichtet, ist dieses halbrunde Denkmal an der Georgischen Heerstraße innen mit einem Mosaik zur georgischen und russischen Geschichte ausgekleidet. Heute ist es vor allem als Aussichtspunkt über das Teufelstal bekannt.',
+        fr: "Édifié en 1983 pour le bicentenaire du traité de Guéorguievsk (1783), ce monument semi-circulaire de la route militaire géorgienne est tapissé d'une mosaïque retraçant l'histoire géorgienne et russe. On le connaît aujourd'hui surtout comme belvédère sur la vallée du Diable.",
+        es: 'Construido en 1983 por el bicentenario del Tratado de Gueórguievsk (1783), este monumento semicircular de la carretera militar georgiana está revestido con un mosaico de historia georgiana y rusa. Hoy se conoce sobre todo como mirador sobre el valle del Diablo.',
+        nl: 'Gebouwd in 1983 voor het tweehonderdjarig bestaan van het Verdrag van Georgijevsk (1783), is dit halfronde monument aan de Georgische Militaire Weg vanbinnen bekleed met een mozaïek over de Georgische en Russische geschiedenis. Nu vooral bekend als uitzichtpunt over de Duivelsvallei.',
+        cs: 'Postaven roku 1983 ke dvoustému výročí Georgijevské smlouvy (1783), tento půlkruhový památník na Gruzínské vojenské cestě je uvnitř vyzdoben mozaikou gruzínských a ruských dějin. Dnes je znám hlavně jako vyhlídka na Ďáblovo údolí.',
+        pl: 'Zbudowany w 1983 roku z okazji dwustulecia traktatu w Georgijewsku (1783), ten półkolisty pomnik przy Gruzińskiej Drodze Wojennej wyłożony jest mozaiką przedstawiającą historię Gruzji i Rosji. Dziś znany głównie jako punkt widokowy na Diablą Dolinę.',
+      },
+    },
   },
   {
     // On the Georgian Military Highway between Mtskheta and Gudauri; not inside
