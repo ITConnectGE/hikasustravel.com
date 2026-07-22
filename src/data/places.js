@@ -3265,7 +3265,51 @@ export const sites = [
     slug: 'elia-hill-kazbegi', name: 'Elia Hill (St. Elias Church)',
     parentType: 'city', parent: 'kazbegi', published: true,
     seoKey: 'eliaHill', contentKey: 'eliaHill',
-    image: '/images/files/georgia-home.jpg',
+    // Hero: real St Elias Church / Elia Hill at sunset (owner's own photo) via the
+    // .hero--elia-hill image-set() ladder (styles.css), replacing the georgia-home.jpg
+    // placeholder. Native 4:3 (1448x1086), just under the usual 1600 rung, so the
+    // ladder is exactly 768/1200/1448 with the top breakpoint at min-width:1200. NO
+    // 1600/2400 rung, no upscale. The CSS class controls the visible background
+    // (`background-position: center center`; sunset sky upper-left is the H1 zone; no
+    // scrim). `image`/`imageAvif` = the 1448 top rung, feeding the ImageObject
+    // contentUrl (1448).
+    image: '/images/files/elia-church-hill-kazbegi-georgia-1448.webp',
+    imageAvif: '/images/files/elia-church-hill-kazbegi-georgia-1448.avif',
+    heroClass: 'hero--elia-hill',
+    // Dedicated 1.91:1 social-share image (og:image / twitter:image), .jpg default.
+    ogImage: { src: '/images/files/elia-church-hill-kazbegi-georgia-og.jpg', width: 1200, height: 630 },
+    // Hero image SEO/AEO metadata (owner's own photo → brand credit, set by
+    // SitePage). Hero is a CSS background (no <img alt>), so the localized alt lives
+    // here and is emitted as og:image:alt/twitter:image:alt per locale; the `caption`
+    // map feeds the hero ImageObject caption. Verbatim from elia-hill-hero-package.md.
+    // width/height = 1448 rung. ⚠️ DELIBERATELY name-only contentLocation: NO geo and
+    // NO locality/region/country — there is no reliable coordinate for the Elia church
+    // itself (per package). Do not add coordinates. SitePage omits address+geo when
+    // absent, so the ImageObject contentLocation carries the place name only.
+    imageMeta: {
+      width: 1448, height: 1086,
+      name: 'The small stone St Elias Church and its bell tower on Elia Hill above Stepantsminda at sunset, Kazbegi, Georgia',
+      description: 'The small stone Church of St Elias the Prophet and its separate bell tower on the grassy Elia Hill above Stepantsminda (Kazbegi) at sunset, with a stone retaining wall in the foreground and the ridges of the Greater Caucasus layered behind. The hill faces Gergeti Trinity Church across the valley, in the Kazbegi Municipality of Mtskheta-Mtianeti, Georgia (the country).',
+      locationName: 'St Elias Church, Elia Hill, Stepantsminda (Kazbegi), Mtskheta-Mtianeti, Georgia',
+      alt: {
+        en: 'The small stone St Elias Church and its bell tower on Elia Hill above Stepantsminda at sunset, Kazbegi, Georgia',
+        de: 'Die kleine steinerne Eliaskirche mit ihrem Glockenturm auf dem Elia-Hügel über Stepanzminda bei Sonnenuntergang, Kasbegi, Georgien',
+        fr: "La petite église Saint-Élie et son clocher sur la colline d'Elia au-dessus de Stepantsminda au coucher du soleil, Kazbegi, Géorgie",
+        es: 'La pequeña iglesia de piedra de San Elías y su campanario en la colina de Elia sobre Stepantsminda al atardecer, Kazbegi, Georgia',
+        nl: 'De kleine stenen Sint-Eliaskerk met haar klokkentoren op de Elia-heuvel boven Stepantsminda bij zonsondergang, Kazbegi, Georgië',
+        cs: 'Malý kamenný kostel svatého Eliáše se zvonicí na kopci Elia nad Stepancmindou při západu slunce, Kazbegi, Gruzie',
+        pl: 'Mały kamienny kościół św. Eliasza z dzwonnicą na wzgórzu Elia nad Stepancmindą o zachodzie słońca, Kazbegi, Gruzja',
+      },
+      caption: {
+        en: "On the hill east of Stepantsminda, the small St Elias Church looks across the valley toward Gergeti Trinity and Mount Kazbek. The easy walk up — or the ride on horseback — is one of Kazbegi's quietest short hikes, best saved for sunset.",
+        de: 'Auf dem Hügel östlich von Stepanzminda blickt die kleine Eliaskirche über das Tal zur Gergeti-Dreifaltigkeitskirche und zum Kasbek. Der leichte Aufstieg – oder der Ritt zu Pferd – ist eine der ruhigsten kurzen Wanderungen in Kasbegi, am schönsten zum Sonnenuntergang.',
+        fr: "Sur la colline à l'est de Stepantsminda, la petite église Saint-Élie regarde par-delà la vallée vers la Trinité de Guerguéti et le mont Kazbek. La montée facile — ou la balade à cheval — est l'une des randonnées courtes les plus paisibles de Kazbegi, à réserver au coucher du soleil.",
+        es: 'En la colina al este de Stepantsminda, la pequeña iglesia de San Elías mira a través del valle hacia la Trinidad de Guergueti y el monte Kazbek. La subida fácil —o el paseo a caballo— es una de las caminatas cortas más tranquilas de Kazbegi, ideal al atardecer.',
+        nl: 'Op de heuvel ten oosten van Stepantsminda kijkt de kleine Sint-Eliaskerk over het dal naar de Gergeti-Drievuldigheidskerk en de Kazbek. De gemakkelijke klim — of de tocht te paard — is een van de rustigste korte wandelingen van Kazbegi, op zijn mooist bij zonsondergang.',
+        cs: 'Na kopci východně od Stepancmindy hledí malý kostel svatého Eliáše přes údolí ke gergetské Trojici a hoře Kazbek. Snadný výstup – nebo vyjížďka na koni – patří k nejklidnějším krátkým túrám v Kazbegi, nejkrásnější při západu slunce.',
+        pl: 'Na wzgórzu na wschód od Stepancmindy mały kościół św. Eliasza spogląda przez dolinę ku cerkwi Trójcy w Gergeti i górze Kazbek. Łatwe podejście — lub przejażdżka konno — to jedna z najspokojniejszych krótkich wędrówek w Kazbegi, najpiękniejsza o zachodzie słońca.',
+      },
+    },
   },
   {
     slug: 'gergeti-glacier', name: 'Gergeti Glacier',

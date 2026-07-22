@@ -200,17 +200,30 @@ export default function SitePage() {
           contentLocation: {
             '@type': 'Place',
             name: heroImageMeta.locationName,
-            address: {
-              '@type': 'PostalAddress',
-              addressLocality: heroImageMeta.locality,
-              addressRegion: heroImageMeta.region,
-              addressCountry: heroImageMeta.country,
-            },
-            geo: {
-              '@type': 'GeoCoordinates',
-              latitude: heroImageMeta.geo.lat,
-              longitude: heroImageMeta.geo.lng,
-            },
+            // Address + geo are optional: a hero package may ship a name-only
+            // contentLocation when there is no reliable coordinate/address for the
+            // exact point (e.g. Elia Hill's St Elias church). Every existing hero
+            // supplies locality+geo, so their output is unchanged; only a geo-less
+            // imageMeta omits these blocks (rather than crashing on `geo.lat`).
+            ...((heroImageMeta.locality || heroImageMeta.region || heroImageMeta.country)
+              ? {
+                  address: {
+                    '@type': 'PostalAddress',
+                    addressLocality: heroImageMeta.locality,
+                    addressRegion: heroImageMeta.region,
+                    addressCountry: heroImageMeta.country,
+                  },
+                }
+              : {}),
+            ...(heroImageMeta.geo
+              ? {
+                  geo: {
+                    '@type': 'GeoCoordinates',
+                    latitude: heroImageMeta.geo.lat,
+                    longitude: heroImageMeta.geo.lng,
+                  },
+                }
+              : {}),
           },
         }
       : null
