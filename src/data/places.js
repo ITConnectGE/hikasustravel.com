@@ -3390,7 +3390,51 @@ export const sites = [
     slug: 'lake-paravani', name: 'Lake Paravani',
     parentType: 'region', parent: 'samtskhe-javakheti', published: true,
     seoKey: 'lakeParavani', contentKey: 'lakeParavani',
-    image: '/images/files/georgia-home.jpg',
+    // Hero: real Lake Paravani (owner's own photo) via the .hero--paravani
+    // image-set() ladder (styles.css), replacing the georgia-home.jpg placeholder.
+    // Native 4:3 (1448x1086), just under the usual 1600 rung, so the ladder is
+    // exactly 768/1200/1448 with the top breakpoint at min-width:1200. NO 1600/2400
+    // rung, no upscale. The CSS class controls the visible background (`background-
+    // position: center center`; big clear sky top ~45% = H1 zone; no scrim beyond
+    // the shared .coverme::after). `image`/`imageAvif` = the 1448 top rung, feeding
+    // the ImageObject contentUrl (1448) + the og fallback reference.
+    image: '/images/files/lake-paravani-javakheti-georgia-1448.webp',
+    imageAvif: '/images/files/lake-paravani-javakheti-georgia-1448.avif',
+    heroClass: 'hero--paravani',
+    // Dedicated 1.91:1 social-share image (og:image / twitter:image), .jpg default.
+    ogImage: { src: '/images/files/lake-paravani-javakheti-georgia-og.jpg', width: 1200, height: 630 },
+    // Hero image SEO/AEO metadata (owner's own photo → brand credit, set by
+    // SitePage). Hero is a CSS background (no <img alt>), so the localized alt lives
+    // here and is emitted as og:image:alt/twitter:image:alt per locale; the `caption`
+    // map feeds the hero ImageObject caption. Verbatim from lake-paravani-hero-
+    // package.md. width/height = 1448 rung; coordinates per package (approx).
+    // Region-parented site — locality is the municipality. Region Samtskhe-Javakheti.
+    imageMeta: {
+      width: 1448, height: 1086,
+      name: "Lake Paravani, Georgia's largest lake, blue water ringed by the treeless golden hills of the Javakheti plateau",
+      description: 'Lake Paravani on the Javakheti volcanic plateau in southern Georgia, a broad shallow blue lake ringed by treeless golden-grass hills, with a volcanic cone rising on the far shore and a dirt track through basalt-strewn steppe in the foreground. The largest lake in Georgia (the country), it lies at about 2,073 metres in Ninotsminda Municipality, Samtskhe-Javakheti.',
+      locationName: 'Lake Paravani, Ninotsminda Municipality, Samtskhe-Javakheti, Georgia',
+      locality: 'Ninotsminda Municipality', region: 'Samtskhe-Javakheti', country: 'GE',
+      geo: { lat: 41.4500, lng: 43.7833 },
+      alt: {
+        en: "Lake Paravani, Georgia's largest lake, blue water ringed by the treeless golden hills of the Javakheti plateau",
+        de: 'Der Parawani-See, Georgiens größter See, blaues Wasser umgeben von den baumlosen goldenen Hügeln des Dschawachetien-Plateaus',
+        fr: 'Le lac Paravani, plus grand lac de Géorgie, aux eaux bleues cerclées par les collines dorées et dénudées du plateau de Djavakhétie',
+        es: 'El lago Paravani, el mayor lago de Georgia, de aguas azules rodeadas por las colinas doradas y sin árboles de la meseta de Yavajeti',
+        nl: 'Het Paravani-meer, het grootste meer van Georgië, blauw water omringd door de boomloze gouden heuvels van het Javakheti-plateau',
+        cs: 'Jezero Paravani, největší jezero Gruzie, modrá hladina obklopená bezlesými zlatavými kopci Javachetské plošiny',
+        pl: 'Jezioro Parawani, największe jezioro Gruzji, błękitna tafla otoczona bezleśnymi złocistymi wzgórzami płaskowyżu Dżawachetia',
+      },
+      caption: {
+        en: 'Lake Paravani is the largest lake in Georgia, a shallow volcanic-tectonic lake of about 37 square kilometres lying at over 2,000 metres on the Javakheti plateau. Despite its size it is no deeper than a few metres, and in the harsh highland winters it freezes solid enough to walk on.',
+        de: 'Der Parawani-See ist der größte See Georgiens, ein flacher vulkanisch-tektonischer See von rund 37 Quadratkilometern auf über 2.000 Metern im Dschawachetien-Plateau. Trotz seiner Größe ist er nur wenige Meter tief, und in den strengen Hochlandwintern friert er begehbar zu.',
+        fr: "Le lac Paravani est le plus grand lac de Géorgie : un lac volcano-tectonique peu profond d'environ 37 kilomètres carrés, à plus de 2 000 mètres sur le plateau de Djavakhétie. Malgré sa taille, il ne dépasse pas quelques mètres de profondeur et gèle entièrement lors des rudes hivers d'altitude.",
+        es: 'El lago Paravani es el mayor lago de Georgia: un lago volcánico-tectónico poco profundo de unos 37 kilómetros cuadrados, a más de 2.000 metros en la meseta de Yavajeti. Pese a su tamaño, apenas alcanza unos metros de profundidad y en los duros inviernos de montaña se congela por completo.',
+        nl: "Het Paravani-meer is het grootste meer van Georgië: een ondiep vulkanisch-tektonisch meer van zo'n 37 vierkante kilometer, op ruim 2.000 meter op het Javakheti-plateau. Ondanks zijn omvang is het maar enkele meters diep, en in de strenge hooglandwinters vriest het volledig dicht.",
+        cs: 'Jezero Paravani je největší jezero Gruzie: mělké vulkanicko-tektonické jezero o rozloze asi 37 kilometrů čtverečních, ležící ve výšce přes 2 000 metrů na Javachetské plošině. Navzdory rozloze je hluboké jen několik metrů a v drsných horských zimách zcela zamrzá.',
+        pl: 'Jezioro Parawani to największe jezioro Gruzji: płytkie jezioro wulkaniczno-tektoniczne o powierzchni około 37 kilometrów kwadratowych, położone ponad 2000 metrów n.p.m. na płaskowyżu Dżawachetia. Mimo rozmiarów ma zaledwie kilka metrów głębokości, a w surowe górskie zimy zamarza całkowicie.',
+      },
+    },
   },
   {
     slug: 'poka-nunnery', name: 'Poka Nunnery (St. Nino Monastery of Poka)',
