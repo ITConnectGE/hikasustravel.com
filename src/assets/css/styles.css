@@ -713,6 +713,41 @@ section {
   }
 }
 /* No rung above 1448 exists. Do not add a 1600 or 2400 breakpoint. */
+/* Gremi (Archangels' Complex) hero — per-page CSS background (same opt-in mechanism
+   as .hero--alaverdi; another Kakheti site). Native 4:3 (1448x1086), just UNDER the
+   usual 1600 rung, so the ladder is exactly 768/1200/1448 with the top breakpoint at
+   min-width:1200 — there is NO 1600 or 2400 rung, no upscale. `background-position:
+   center center`: the walls sweep up to the buildings with blue sky upper-left/centre
+   as the H1 zone, so no positioning bias or scrim is added (the shared .coverme::after
+   overlay provides the readable text layer). plain url() line = image-set() fallback
+   for browsers without image-set(). */
+.hero--gremi {
+  background-image: url("/images/files/gremi-archangels-complex-kakheti-georgia-1200.webp");
+  background-image: image-set(
+    url("/images/files/gremi-archangels-complex-kakheti-georgia-768.avif") type("image/avif"),
+    url("/images/files/gremi-archangels-complex-kakheti-georgia-768.webp") type("image/webp")
+  );
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+@media (min-width: 768px) {
+  .hero--gremi {
+    background-image: image-set(
+      url("/images/files/gremi-archangels-complex-kakheti-georgia-1200.avif") type("image/avif"),
+      url("/images/files/gremi-archangels-complex-kakheti-georgia-1200.webp") type("image/webp")
+    );
+  }
+}
+@media (min-width: 1200px) {
+  .hero--gremi {
+    background-image: image-set(
+      url("/images/files/gremi-archangels-complex-kakheti-georgia-1448.avif") type("image/avif"),
+      url("/images/files/gremi-archangels-complex-kakheti-georgia-1448.webp") type("image/webp")
+    );
+  }
+}
+/* No rung above 1448 exists. Do not add a 1600 or 2400 breakpoint. */
 /* Bagrati Cathedral hero — per-page CSS background (same opt-in mechanism as
    .hero--mestia). 16:9 source (native 1672) exported to a top rung of 1600, so
    the ladder is exactly 768/1200/1600 with the top breakpoint at min-width:1200.

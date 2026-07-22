@@ -1495,7 +1495,83 @@ export const sites = [
     slug: 'gremi-archangels-complex', name: 'Gremi Archangels\' Complex',
     parentType: 'region', parent: 'kakheti', published: true,
     seoKey: 'gremiArchangelsComplex', contentKey: 'gremiArchangelsComplex',
-    image: '/images/files/gremi-archangels-complex.jpg',
+    // Hero: real Gremi citadel (owner's own photo) via the .hero--gremi image-set()
+    // ladder (styles.css), replacing the legacy single gremi-archangels-complex.jpg.
+    // Native 4:3 (1448x1086), just under the usual 1600 rung, so the ladder is
+    // exactly 768/1200/1448 with the top breakpoint at min-width:1200. NO 1600/2400
+    // rung, no upscale. The CSS class controls the visible background (`background-
+    // position: center center`; sky upper-left/centre is the H1 zone; no scrim).
+    // `image`/`imageAvif` = the 1448 top rung, feeding the ImageObject contentUrl.
+    image: '/images/files/gremi-archangels-complex-kakheti-georgia-1448.webp',
+    imageAvif: '/images/files/gremi-archangels-complex-kakheti-georgia-1448.avif',
+    heroClass: 'hero--gremi',
+    // Dedicated 1.91:1 social-share image (og:image / twitter:image), .jpg default.
+    ogImage: { src: '/images/files/gremi-archangels-complex-kakheti-georgia-og.jpg', width: 1200, height: 630 },
+    // Hero image SEO/AEO metadata (owner's own photo → brand credit, set by
+    // SitePage). Hero is a CSS background (no <img alt>), so the localized alt lives
+    // here and is emitted as og:image:alt/twitter:image:alt per locale; the `caption`
+    // map feeds the hero ImageObject caption. Verbatim from gremi-images-package.md.
+    // width/height = 1448 rung; coordinates per package. First Kakheti coordinate.
+    imageMeta: {
+      width: 1448, height: 1086,
+      name: 'The Gremi citadel on its hill in Kakheti, with defensive walls, the tower-palace and the Church of the Archangels, Georgia',
+      description: 'The Gremi citadel in Kakheti seen from below its hill: rubble-stone defensive walls climb the grassy slope to the brick tower-palace and the Church of the Archangels Michael and Gabriel with their turquoise conical roofs. Gremi, in Kvareli Municipality about 115 km east of Tbilisi, was the royal capital of the Kingdom of Kakheti in the 16th and 17th centuries, in Georgia (the country).',
+      locationName: "Gremi Archangels' Complex, Kvareli Municipality, Kakheti, Georgia",
+      locality: 'Gremi', region: 'Kakheti', country: 'GE',
+      geo: { lat: 42.002047, lng: 45.660031 },
+      alt: {
+        en: 'The Gremi citadel on its hill in Kakheti, with defensive walls, the tower-palace and the Church of the Archangels, Georgia',
+        de: 'Die Zitadelle von Gremi auf ihrem Hügel in Kachetien, mit Wehrmauern, dem Turmpalast und der Erzengelkirche, Georgien',
+        fr: "La citadelle de Gremi sur sa colline en Kakhétie, avec ses murs défensifs, le palais-tour et l'église des Archanges, Géorgie",
+        es: 'La ciudadela de Gremi en su colina de Kajetia, con murallas defensivas, el palacio-torre y la iglesia de los Arcángeles, Georgia',
+        nl: 'De citadel van Gremi op haar heuvel in Kacheti, met verdedigingsmuren, het torenpaleis en de Aartsengelenkerk, Georgië',
+        cs: 'Citadela Gremi na kopci v Kachetii, s obrannými hradbami, věžovým palácem a kostelem Archandělů, Gruzie',
+        pl: 'Cytadela Gremi na wzgórzu w Kachetii, z murami obronnymi, pałacem-wieżą i kościołem Archaniołów, Gruzja',
+      },
+      caption: {
+        en: "Gremi was the capital of the Kingdom of Kakheti in the 16th and 17th centuries, a thriving Silk Road town below this royal citadel. The Church of the Archangels, built in 1565 by King Levan, survived Shah Abbas's destruction of the town in 1615 — the capital later moved to Telavi.",
+        de: 'Gremi war im 16. und 17. Jahrhundert die Hauptstadt des Königreichs Kachetien, eine blühende Seidenstraßenstadt unterhalb dieser königlichen Zitadelle. Die 1565 von König Lewan erbaute Erzengelkirche überstand die Zerstörung der Stadt durch Schah Abbas 1615 – die Hauptstadt zog später nach Telawi.',
+        fr: "Gremi fut la capitale du royaume de Kakhétie aux XVIe et XVIIe siècles, ville prospère de la route de la Soie au pied de cette citadelle royale. L'église des Archanges, bâtie en 1565 par le roi Levan, survécut à la destruction de la ville par Chah Abbas en 1615 — la capitale fut ensuite transférée à Télavi.",
+        es: 'Gremi fue la capital del reino de Kajetia en los siglos XVI y XVII, una próspera ciudad de la Ruta de la Seda al pie de esta ciudadela real. La iglesia de los Arcángeles, construida en 1565 por el rey Levan, sobrevivió a la destrucción de la ciudad por el sah Abás en 1615; la capital se trasladó después a Telavi.',
+        nl: 'Gremi was in de 16e en 17e eeuw de hoofdstad van het koninkrijk Kacheti, een bloeiende zijderoutestad onder deze koninklijke citadel. De Aartsengelenkerk, in 1565 gebouwd door koning Levan, overleefde de verwoesting van de stad door sjah Abbas in 1615 — de hoofdstad verhuisde later naar Telavi.',
+        cs: 'Gremi bylo v 16. a 17. století hlavním městem Kachetského království, kvetoucím městem na Hedvábné stezce pod touto královskou citadelou. Kostel Archandělů, postavený roku 1565 králem Levanem, přežil zničení města šáhem Abbásem roku 1615 – hlavní město se později přesunulo do Telavi.',
+        pl: 'Gremi było w XVI i XVII wieku stolicą Królestwa Kachetii, kwitnącym miastem Jedwabnego Szlaku u stóp tej królewskiej cytadeli. Kościół Archaniołów, zbudowany w 1565 roku przez króla Lewana, przetrwał zniszczenie miasta przez szacha Abbasa w 1615 roku — stolicę przeniesiono później do Telavi.',
+      },
+    },
+    // One contextual inline body image (real <figure class="body-img"> in the
+    // per-locale body, placed at the end of each locale's "The Church of the
+    // Archangels" architecture section — the from-below close-up shows the stone-
+    // below / brick-above construction it describes). Rendered via SitePage's
+    // inlineImageObjects @graph map: stable @id (#inline-bell-tower), contentUrl at
+    // the 1448 rung (no `w` suffix), localized name (=alt) + caption, brand credit,
+    // contentLocation matching the hero, NO representativeOfPage. Verbatim from
+    // gremi-images-package.md.
+    inlineImageObjects: [
+      {
+        base: 'gremi-church-bell-tower-kakheti-georgia', width: 1448, height: 1086, anchor: 'inline-bell-tower',
+        description: 'A from-below close-up of the bell tower and the Church of the Archangels Michael and Gabriel at Gremi, showing the two-layer construction — carefully cut stone below and ornamental brickwork above — with turquoise conical roofs against a blue sky. Gremi lies in Kvareli Municipality, Kakheti, Georgia (the country).',
+        locationName: "Gremi Archangels' Complex, Kvareli Municipality, Kakheti, Georgia",
+        locality: 'Gremi', region: 'Kakheti', geo: { lat: 42.002047, lng: 45.660031 },
+        name: {
+          en: 'The bell tower and Church of the Archangels at Gremi seen from below, stone walls and ornamental brickwork against a blue sky, Georgia',
+          de: 'Der Glockenturm und die Erzengelkirche von Gremi von unten gesehen, Steinmauern und Zierziegelwerk vor blauem Himmel, Georgien',
+          fr: "Le clocher et l'église des Archanges de Gremi vus d'en bas, murs de pierre et briques ornementales sur ciel bleu, Géorgie",
+          es: 'El campanario y la iglesia de los Arcángeles de Gremi vistos desde abajo, muros de piedra y ladrillo ornamental contra un cielo azul, Georgia',
+          nl: 'De klokkentoren en de Aartsengelenkerk van Gremi van onderaf gezien, stenen muren en sier-metselwerk tegen een blauwe lucht, Georgië',
+          cs: 'Zvonice a kostel Archandělů v Gremi při pohledu zdola, kamenné zdi a ozdobné cihlové zdivo proti modré obloze, Gruzie',
+          pl: 'Dzwonnica i kościół Archaniołów w Gremi widziane z dołu, kamienne mury i ozdobna cegła na tle błękitnego nieba, Gruzja',
+        },
+        caption: {
+          en: "Up close, Gremi's construction shows its two layers: carefully cut stone below and ornamental brickwork above, a blend of Georgian building tradition with Persian-influenced detail. The tower-palace beside the church now houses a small museum.",
+          de: 'Aus der Nähe zeigt Gremis Bauweise ihre zwei Schichten: sorgfältig behauener Stein unten und Zierziegelwerk oben – georgische Bautradition mit persisch beeinflussten Details. Der Turmpalast neben der Kirche beherbergt heute ein kleines Museum.',
+          fr: "De près, la construction de Gremi révèle ses deux strates : pierre taillée en bas, briques ornementales en haut — tradition géorgienne mêlée de détails d'influence persane. Le palais-tour voisin de l'église abrite aujourd'hui un petit musée.",
+          es: 'De cerca, la construcción de Gremi muestra sus dos capas: piedra tallada abajo y ladrillo ornamental arriba, tradición georgiana con detalles de influencia persa. El palacio-torre junto a la iglesia alberga hoy un pequeño museo.',
+          nl: "Van dichtbij toont Gremi's bouw haar twee lagen: zorgvuldig gehouwen steen onderaan en sier-metselwerk daarboven — Georgische bouwtraditie met Perzisch beïnvloede details. Het torenpaleis naast de kerk herbergt nu een klein museum.",
+          cs: 'Zblízka ukazuje stavba Gremi své dvě vrstvy: pečlivě tesaný kámen dole a ozdobné cihlové zdivo nahoře – gruzínská stavební tradice s persky ovlivněnými detaily. Věžový palác vedle kostela dnes ukrývá malé muzeum.',
+          pl: 'Z bliska budowla Gremi ukazuje dwie warstwy: starannie ciosany kamień u dołu i ozdobną cegłę u góry — gruzińską tradycję budowlaną z detalami o perskich wpływach. Pałac-wieża obok kościoła mieści dziś małe muzeum.',
+        },
+      },
+    ],
   },
   {
     slug: 'gombori-pass', name: 'The Gombori Pass',
