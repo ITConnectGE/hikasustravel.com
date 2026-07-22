@@ -893,6 +893,41 @@ section {
   }
 }
 /* Native ceiling 1448 is the top rung. Do not add a 1600 or 2400 breakpoint. */
+/* Alphabetic Tower hero — per-page CSS background (same opt-in mechanism as
+   .hero--paravani; first Batumi/Adjara hero). Native 4:3 (1448x1086), just UNDER
+   the usual 1600 rung, so the ladder is exactly 768/1200/1448 with the top
+   breakpoint at min-width:1200 — there is NO 1600 or 2400 rung, no upscale.
+   `background-position: center center`: the tower is centre-frame with open sky at
+   left (H1 zone), so no positioning bias or scrim is added (the shared
+   .coverme::after overlay provides the readable text layer). plain url() line =
+   image-set() fallback for browsers without image-set(). */
+.hero--alphabetic-tower {
+  background-image: url("/images/files/alphabetic-tower-batumi-georgia-1200.webp");
+  background-image: image-set(
+    url("/images/files/alphabetic-tower-batumi-georgia-768.avif") type("image/avif"),
+    url("/images/files/alphabetic-tower-batumi-georgia-768.webp") type("image/webp")
+  );
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+@media (min-width: 768px) {
+  .hero--alphabetic-tower {
+    background-image: image-set(
+      url("/images/files/alphabetic-tower-batumi-georgia-1200.avif") type("image/avif"),
+      url("/images/files/alphabetic-tower-batumi-georgia-1200.webp") type("image/webp")
+    );
+  }
+}
+@media (min-width: 1200px) {
+  .hero--alphabetic-tower {
+    background-image: image-set(
+      url("/images/files/alphabetic-tower-batumi-georgia-1448.avif") type("image/avif"),
+      url("/images/files/alphabetic-tower-batumi-georgia-1448.webp") type("image/webp")
+    );
+  }
+}
+/* Native ceiling 1448 is the top rung. Do not add a 1600 or 2400 breakpoint. */
 /* Svetitskhoveli Cathedral hero — per-page CSS background (same opt-in mechanism
    as .hero--mestia). Native ceiling is 1540, BELOW the usual 1600 rung, so the
    ladder is exactly 768/1200/1540 with the top breakpoint at min-width:1200 —

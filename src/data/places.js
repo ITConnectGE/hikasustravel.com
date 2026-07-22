@@ -1629,7 +1629,83 @@ export const sites = [
     slug: 'alphabetic-tower', name: 'Alphabetic Tower',
     parentType: 'city', parent: 'batumi', published: true,
     seoKey: 'alphabeticTower', contentKey: 'alphabeticTower',
-    image: '/images/files/Batumi.jpg',
+    // Hero: real Alphabetic Tower (owner's own photo) via the .hero--alphabetic-
+    // tower image-set() ladder (styles.css), replacing the reused generic Batumi.jpg
+    // city photo. Native 4:3 (1448x1086), just under the usual 1600 rung, so the
+    // ladder is exactly 768/1200/1448 with the top breakpoint at min-width:1200. NO
+    // 1600/2400 rung, no upscale. The CSS class controls the visible background
+    // (`background-position: center center`; open sky left = H1 zone; no scrim).
+    // `image`/`imageAvif` = the 1448 top rung, feeding the ImageObject contentUrl.
+    image: '/images/files/alphabetic-tower-batumi-georgia-1448.webp',
+    imageAvif: '/images/files/alphabetic-tower-batumi-georgia-1448.avif',
+    heroClass: 'hero--alphabetic-tower',
+    // Dedicated 1.91:1 social-share image (og:image / twitter:image), .jpg default.
+    ogImage: { src: '/images/files/alphabetic-tower-batumi-georgia-og.jpg', width: 1200, height: 630 },
+    // Hero image SEO/AEO metadata (owner's own photo → brand credit, set by
+    // SitePage). Hero is a CSS background (no <img alt>), so the localized alt lives
+    // here and is emitted as og:image:alt/twitter:image:alt per locale; the `caption`
+    // map feeds the hero ImageObject caption. Verbatim from alphabetic-tower-images-
+    // package.md. width/height = 1448 rung; coordinates per package. First Batumi/
+    // Adjara hero.
+    imageMeta: {
+      width: 1448, height: 1086,
+      name: 'The Alphabetic Tower in Batumi, a steel double-helix tower carrying Georgian alphabet letters, topped by a glass sphere, Georgia',
+      description: 'The Alphabetic Tower in Batumi, a 130-metre openwork steel tower whose two helical bands rise like a DNA strand carrying the 33 aluminium letters of the Georgian alphabet, crowned by a geodesic glass sphere, seen in evening light with a modern high-rise beside it. The tower stands in Miracle Park on the Batumi Boulevard, in the Adjara region of Georgia (the country).',
+      locationName: 'Alphabetic Tower, Miracle Park, Batumi, Adjara, Georgia',
+      locality: 'Batumi', region: 'Adjara', country: 'GE',
+      geo: { lat: 41.65594, lng: 41.63944 },
+      alt: {
+        en: 'The Alphabetic Tower in Batumi, a steel double-helix tower carrying Georgian alphabet letters, topped by a glass sphere, Georgia',
+        de: 'Der Alphabet-Turm in Batumi, ein stählerner Doppelhelix-Turm mit georgischen Buchstaben und einer Glaskugel an der Spitze, Georgien',
+        fr: "La tour de l'Alphabet à Batoumi, tour d'acier en double hélice portant les lettres de l'alphabet géorgien, coiffée d'une sphère de verre, Géorgie",
+        es: 'La Torre del Alfabeto en Batumi, una torre de acero en doble hélice con letras del alfabeto georgiano, coronada por una esfera de cristal, Georgia',
+        nl: 'De Alfabettoren in Batoemi, een stalen dubbele-helixtoren met Georgische letters, bekroond door een glazen bol, Georgië',
+        cs: 'Věž abecedy v Batumi, ocelová věž ve tvaru dvojité šroubovice s písmeny gruzínské abecedy, zakončená skleněnou koulí, Gruzie',
+        pl: 'Wieża Alfabetu w Batumi, stalowa wieża w kształcie podwójnej helisy z literami gruzińskiego alfabetu, zwieńczona szklaną kulą, Gruzja',
+      },
+      caption: {
+        en: 'The 130-metre Alphabetic Tower on Batumi Boulevard celebrates the Georgian script: two steel bands spiral up like a strand of DNA, carrying all 33 letters of the alphabet in four-metre aluminium. A glass sphere with a rotating restaurant and viewing deck crowns the top.',
+        de: 'Der 130 Meter hohe Alphabet-Turm am Boulevard von Batumi feiert die georgische Schrift: Zwei Stahlbänder winden sich wie ein DNA-Strang empor und tragen alle 33 Buchstaben des Alphabets aus vier Meter hohem Aluminium. Eine Glaskugel mit Drehrestaurant und Aussichtsdeck krönt die Spitze.',
+        fr: "La tour de l'Alphabet, haute de 130 mètres sur le boulevard de Batoumi, célèbre l'écriture géorgienne : deux bandes d'acier s'enroulent comme un brin d'ADN, portant les 33 lettres de l'alphabet en aluminium de quatre mètres. Une sphère de verre avec restaurant tournant et terrasse panoramique couronne le sommet.",
+        es: 'La Torre del Alfabeto, de 130 metros, en el bulevar de Batumi celebra la escritura georgiana: dos bandas de acero se enroscan como una hebra de ADN portando las 33 letras del alfabeto en aluminio de cuatro metros. Una esfera de cristal con restaurante giratorio y mirador corona la cima.',
+        nl: 'De 130 meter hoge Alfabettoren aan de boulevard van Batoemi eert het Georgische schrift: twee stalen banden winden zich omhoog als een DNA-streng en dragen alle 33 letters van het alfabet in vier meter hoog aluminium. Een glazen bol met draaiend restaurant en uitzichtdek bekroont de top.',
+        cs: 'Stotřicetimetrová Věž abecedy na batumském bulváru oslavuje gruzínské písmo: dva ocelové pásy se vinou vzhůru jako vlákno DNA a nesou všech 33 písmen abecedy ze čtyřmetrového hliníku. Vrchol korunuje skleněná koule s otočnou restaurací a vyhlídkou.',
+        pl: 'Licząca 130 metrów Wieża Alfabetu przy bulwarze w Batumi sławi gruzińskie pismo: dwie stalowe wstęgi wiją się w górę jak nić DNA, niosąc wszystkie 33 litery alfabetu z czterometrowego aluminium. Szczyt wieńczy szklana kula z obrotową restauracją i tarasem widokowym.',
+      },
+    },
+    // One contextual inline body image (real <figure class="body-img body-img--
+    // portrait"> in the per-locale body, placed at the end of each locale's "The
+    // structure" section — the full base-to-sphere portrait complements the
+    // structural description). Rendered via SitePage's inlineImageObjects @graph
+    // map: stable @id (#inline-full-height), contentUrl at the 941 rung (portrait
+    // ceiling; no `w` suffix), localized name (=alt) + caption, brand credit, NO
+    // representativeOfPage (that's the hero's). Verbatim from the image package.
+    inlineImageObjects: [
+      {
+        base: 'alphabetic-tower-full-height-batumi-georgia', width: 941, height: 1672, anchor: 'inline-full-height',
+        description: "A full-height view of the Alphabetic Tower in Batumi from its base to the crowning glass sphere, the two helical steel bands lined with the aluminium letters of the Georgian alphabet against a clear sky, with street-level surroundings at the foot. The tower stands in Miracle Park on the Batumi Boulevard, in the Adjara region of Georgia (the country).",
+        locationName: 'Alphabetic Tower, Miracle Park, Batumi, Adjara, Georgia',
+        locality: 'Batumi', region: 'Adjara', geo: { lat: 41.65594, lng: 41.63944 },
+        name: {
+          en: 'Full view of the Alphabetic Tower in Batumi from base to glass sphere, its helix bands lined with Georgian letters, Georgia',
+          de: 'Gesamtansicht des Alphabet-Turms in Batumi vom Fuß bis zur Glaskugel, die Helixbänder mit georgischen Buchstaben besetzt, Georgien',
+          fr: "Vue complète de la tour de l'Alphabet à Batoumi, de la base à la sphère de verre, ses bandes hélicoïdales bordées de lettres géorgiennes, Géorgie",
+          es: 'Vista completa de la Torre del Alfabeto en Batumi, desde la base hasta la esfera de cristal, con sus bandas helicoidales llenas de letras georgianas, Georgia',
+          nl: 'Volledig zicht op de Alfabettoren in Batoemi van voet tot glazen bol, met helixbanden vol Georgische letters, Georgië',
+          cs: 'Celkový pohled na Věž abecedy v Batumi od paty po skleněnou kouli, s šroubovicovými pásy plnými gruzínských písmen, Gruzie',
+          pl: 'Pełny widok Wieży Alfabetu w Batumi od podstawy po szklaną kulę, z helisami pełnymi gruzińskich liter, Gruzja',
+        },
+        caption: {
+          en: "Seen in full, the tower's DNA form is unmistakable — the designers' idea was that language is the genetic code of the Georgian nation, written here letter by letter into the structure itself.",
+          de: 'In der Gesamtansicht ist die DNA-Form des Turms unverkennbar – die Idee der Entwerfer war, dass die Sprache der genetische Code der georgischen Nation ist, hier Buchstabe für Buchstabe in das Bauwerk selbst geschrieben.',
+          fr: "Vue en entier, la forme d'ADN de la tour est incontestable : pour ses concepteurs, la langue est le code génétique de la nation géorgienne, inscrit ici lettre par lettre dans la structure même.",
+          es: 'Vista por completo, la forma de ADN de la torre es inconfundible: la idea de sus diseñadores era que la lengua es el código genético de la nación georgiana, escrito aquí letra a letra en la propia estructura.',
+          nl: 'In volle lengte is de DNA-vorm van de toren onmiskenbaar — het idee van de ontwerpers was dat taal de genetische code van de Georgische natie is, hier letter voor letter in het bouwwerk zelf geschreven.',
+          cs: 'V celkovém pohledu je tvar DNA věže nezaměnitelný – myšlenkou návrhářů bylo, že jazyk je genetickým kódem gruzínského národa, zde vepsaným písmeno po písmenu do samotné stavby.',
+          pl: 'Widziana w całości, forma DNA wieży jest nie do pomylenia — ideą projektantów było, że język to kod genetyczny gruzińskiego narodu, zapisany tu litera po literze w samej konstrukcji.',
+        },
+      },
+    ],
   },
   {
     slug: 'argo-cable-car', name: 'Argo Cable Car',
