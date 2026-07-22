@@ -2569,6 +2569,41 @@ export const sites = [
         pl: 'Katedra Sweticchoweli w Mcchecie, kamienny kościół z kopułą i murem obronnym, Gruzja',
       },
     },
+    // One contextual inline body image (real <figure class="body-img"> in the
+    // per-locale body, placed at the end of each locale's "The architecture" section
+    // — right after the sentence about the fortified wall built under Erekle II,
+    // which this courtyard view of the bell tower + defensive wall shows). Rendered
+    // via SitePage's inlineImageObjects @graph map: stable @id (#inline-wall-bell-
+    // tower), contentUrl at the 1448 rung (no `w` suffix), localized name (=alt) +
+    // caption, brand credit, contentLocation matching the hero, NO representativeOf-
+    // Page (that's the hero's). Verbatim from svetitskhoveli-inline-package.md. Hero
+    // above is untouched — inline-only addition.
+    inlineImageObjects: [
+      {
+        base: 'svetitskhoveli-bell-tower-wall-mtskheta-georgia', width: 1448, height: 1086, anchor: 'inline-wall-bell-tower',
+        description: 'The bell tower over the entrance gate and the long crenellated 18th-century defensive wall of Svetitskhoveli Cathedral, seen from the courtyard with one of the wall\'s cylindrical towers in the distance and the Saguramo hills behind. The wall was built in 1787 under King Erekle II. Svetitskhoveli stands in Mtskheta, Mtskheta-Mtianeti, Georgia (the country).',
+        locationName: 'Svetitskhoveli Cathedral, Mtskheta, Mtskheta-Mtianeti, Georgia',
+        locality: 'Mtskheta', region: 'Mtskheta-Mtianeti', geo: { lat: 41.8419, lng: 44.7211 },
+        name: {
+          en: 'The bell tower and crenellated 18th-century defensive wall of Svetitskhoveli Cathedral seen from the courtyard, Mtskheta, Georgia',
+          de: 'Der Glockenturm und die zinnenbewehrte Wehrmauer der Swetizchoweli-Kathedrale aus dem 18. Jahrhundert, vom Innenhof gesehen, Mzcheta, Georgien',
+          fr: 'Le clocher et le mur défensif crénelé du XVIIIe siècle de la cathédrale de Svetitskhoveli, vus de la cour, Mtskheta, Géorgie',
+          es: 'El campanario y la muralla defensiva almenada del siglo XVIII de la catedral de Svetitsjoveli, vistos desde el patio, Mtsjeta, Georgia',
+          nl: 'De klokkentoren en de gekanteelde 18e-eeuwse verdedigingsmuur van de Svetitschoveli-kathedraal, gezien vanaf de binnenplaats, Mtscheta, Georgië',
+          cs: 'Zvonice a cimbuřím opatřená obranná zeď katedrály Svetícchoveli z 18. století při pohledu z nádvoří, Mccheta, Gruzie',
+          pl: 'Dzwonnica i blankowany XVIII-wieczny mur obronny katedry Sweticchoweli widziane z dziedzińca, Mccheta, Gruzja',
+        },
+        caption: {
+          en: 'The wall around Svetitskhoveli was built in 1787 under King Erekle II — stone and brick, with eight towers and a fighting top storey. The bell tower over the gate, ruined for two centuries, was restored in the 2000s; Erekle himself is buried inside the cathedral his wall protects.',
+          de: 'Die Mauer um Swetizchoweli entstand 1787 unter König Erekle II. – Stein und Ziegel, mit acht Türmen und einem Wehrgeschoss. Der Glockenturm über dem Tor, zwei Jahrhunderte lang Ruine, wurde in den 2000er-Jahren restauriert; Erekle selbst liegt in der Kathedrale begraben, die seine Mauer schützt.',
+          fr: "Le mur qui entoure Svetitskhoveli fut élevé en 1787 sous le roi Erekle II — pierre et brique, huit tours et un étage de combat. Le clocher au-dessus de la porte, ruiné pendant deux siècles, fut restauré dans les années 2000 ; Erekle lui-même repose dans la cathédrale que son mur protège.",
+          es: 'La muralla de Svetitsjoveli se levantó en 1787 bajo el rey Erekle II: piedra y ladrillo, ocho torres y un piso superior de combate. El campanario sobre la puerta, en ruinas durante dos siglos, se restauró en los años 2000; el propio Erekle está enterrado en la catedral que su muralla protege.',
+          nl: 'De muur rond Svetitschoveli werd in 1787 gebouwd onder koning Erekle II — steen en baksteen, met acht torens en een weergang. De klokkentoren boven de poort, twee eeuwen lang een ruïne, werd in de jaren 2000 gerestaureerd; Erekle zelf ligt begraven in de kathedraal die zijn muur beschermt.',
+          cs: 'Zeď kolem Svetícchoveli vznikla roku 1787 za krále Erekleho II. – kámen a cihla, osm věží a bojové horní patro. Zvonice nad branou, dvě století v ruinách, byla obnovena v prvním desetiletí 21. století; sám Erekle je pohřben v katedrále, kterou jeho zeď chrání.',
+          pl: 'Mur wokół Sweticchoweli wzniesiono w 1787 roku za króla Erekle II — kamień i cegła, osiem wież i bojowa górna kondygnacja. Dzwonnicę nad bramą, przez dwa wieki w ruinie, odrestaurowano w latach 2000.; sam Erekle spoczywa w katedrze, którą chroni jego mur.',
+        },
+      },
+    ],
   },
   {
     slug: 'gudauri-panorama', name: 'Gudauri Panorama',
