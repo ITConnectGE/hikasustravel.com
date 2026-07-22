@@ -2382,6 +2382,64 @@ export const sites = [
         pl: 'VI-wieczny klasztor Dżwari, kamienny tetrakonchowy kościół z kopułą i reliefami, na wzgórzu nad Mcchetą, Gruzja',
       },
     },
+    // Two contextual inline body images (real <figure class="body-img"> in the
+    // per-locale body): (1) hilltop context view after the "History and sacred
+    // significance" section, (2) walls/apse-reliefs close-up after "The architecture"
+    // section. Rendered via SitePage's inlineImageObjects @graph map: stable @id
+    // (#inline-hilltop / #inline-walls), contentUrl at the 1448 rung (no `w` suffix),
+    // localized name (=alt) + caption, brand credit, contentLocation matching the
+    // hero, NO representativeOfPage (that's the hero's). Verbatim from jvari-inline-
+    // images-package.md. Hero above is untouched — inlines-only addition.
+    inlineImageObjects: [
+      {
+        base: 'jvari-monastery-hilltop-mtskheta-georgia', width: 1448, height: 1086, anchor: 'inline-hilltop',
+        description: 'Jvari Monastery standing alone on its hilltop above Mtskheta, the domed Great Church with the ruins of the older Small Church and its gate in front and the wooded mountains of the Saguramo range behind, with visitors on the paths for scale. Jvari overlooks the confluence of the Aragvi and Mtkvari rivers in Mtskheta, Mtskheta-Mtianeti, Georgia (the country).',
+        locationName: 'Jvari Monastery, Mtskheta, Mtskheta-Mtianeti, Georgia',
+        locality: 'Mtskheta', region: 'Mtskheta-Mtianeti', geo: { lat: 41.8380, lng: 44.7328 },
+        name: {
+          en: 'Jvari Monastery on its hilltop above Mtskheta, with the ruins of its walls and wooded mountains behind, Georgia',
+          de: 'Das Kloster Dschwari auf seinem Hügel über Mzcheta, mit den Ruinen seiner Mauern und bewaldeten Bergen dahinter, Georgien',
+          fr: 'Le monastère de Djvari sur sa colline au-dessus de Mtskheta, avec les ruines de ses murs et des montagnes boisées derrière, Géorgie',
+          es: 'El monasterio de Yvari en su colina sobre Mtsjeta, con las ruinas de sus muros y montañas boscosas detrás, Georgia',
+          nl: 'Het Jvari-klooster op zijn heuvel boven Mtscheta, met de ruïnes van zijn muren en beboste bergen erachter, Georgië',
+          cs: 'Klášter Džvari na kopci nad Mcchetou, s ruinami hradeb a zalesněnými horami v pozadí, Gruzie',
+          pl: 'Klasztor Dżwari na wzgórzu nad Mcchetą, z ruinami murów i zalesionymi górami w tle, Gruzja',
+        },
+        caption: {
+          en: 'Jvari stands alone on its hilltop above the meeting of the Aragvi and Mtkvari — the site where, by tradition, St Nino raised her cross in the 4th century. Beside the Great Church lie the ruins of the older Small Church and its gate.',
+          de: 'Dschwari steht allein auf seinem Hügel über dem Zusammenfluss von Aragwi und Mtkwari – dort, wo der Überlieferung nach die hl. Nino im 4. Jahrhundert ihr Kreuz aufrichtete. Neben der Großen Kirche liegen die Ruinen der älteren Kleinen Kirche und ihres Tores.',
+          fr: "Djvari se dresse seul sur sa colline, au-dessus du confluent de l'Aragvi et de la Mtkvari — là où, selon la tradition, sainte Nino planta sa croix au IVe siècle. Près de la Grande Église subsistent les ruines de la Petite Église, plus ancienne, et de sa porte.",
+          es: 'Yvari se alza solo en su colina sobre la confluencia del Aragvi y el Mtkvari, donde según la tradición santa Nino plantó su cruz en el siglo IV. Junto a la Gran Iglesia quedan las ruinas de la Pequeña Iglesia, más antigua, y de su puerta.',
+          nl: 'Jvari staat alleen op zijn heuvel boven de samenvloeiing van de Aragvi en de Mtkvari — de plek waar de heilige Nino volgens de overlevering in de 4e eeuw haar kruis oprichtte. Naast de Grote Kerk liggen de ruïnes van de oudere Kleine Kerk en haar poort.',
+          cs: 'Džvari stojí osaměle na kopci nad soutokem Aragvi a Mtkvari – tam, kde podle tradice vztyčila svatá Nino ve 4. století svůj kříž. Vedle Velkého kostela leží ruiny staršího Malého kostela a jeho brány.',
+          pl: 'Dżwari stoi samotnie na wzgórzu nad ujściem Aragwi do Mtkwari — tam, gdzie według tradycji święta Nino zatknęła swój krzyż w IV wieku. Obok Wielkiego Kościoła leżą ruiny starszego Małego Kościoła i jego bramy.',
+        },
+      },
+      {
+        base: 'jvari-monastery-walls-mtskheta-georgia', width: 1448, height: 1086, anchor: 'inline-walls',
+        description: 'The Great Church of Jvari seen from below its rubble stone fortification walls, the faceted eastern apse carrying figural bas-reliefs and rising to the octagonal drum and tiled dome, with an arched gate at the left. Jvari stands on its hilltop above Mtskheta, Mtskheta-Mtianeti, Georgia (the country).',
+        locationName: 'Jvari Monastery, Mtskheta, Mtskheta-Mtianeti, Georgia',
+        locality: 'Mtskheta', region: 'Mtskheta-Mtianeti', geo: { lat: 41.8380, lng: 44.7328 },
+        name: {
+          en: 'The Great Church of Jvari seen from below its stone fortification walls, carved reliefs on the apse facets, Mtskheta, Georgia',
+          de: 'Die Große Kirche von Dschwari, gesehen von unterhalb ihrer steinernen Wehrmauern, mit Reliefs an den Apsisflächen, Mzcheta, Georgien',
+          fr: "La Grande Église de Djvari vue d'en dessous de ses murs de fortification, avec des reliefs sculptés sur les pans de l'abside, Mtskheta, Géorgie",
+          es: 'La Gran Iglesia de Yvari vista desde debajo de sus murallas de piedra, con relieves tallados en los paños del ábside, Mtsjeta, Georgia',
+          nl: 'De Grote Kerk van Jvari gezien van onder haar stenen vestingmuren, met reliëfs op de apsisvlakken, Mtscheta, Georgië',
+          cs: 'Velký kostel Džvari při pohledu zpod kamenných hradeb, s reliéfy na plochách apsidy, Mccheta, Gruzie',
+          pl: 'Wielki Kościół Dżwari widziany spod kamiennych murów obronnych, z reliefami na ścianach apsydy, Mccheta, Gruzja',
+        },
+        caption: {
+          en: 'From below the rubble fortification walls, the Great Church shows the features that made it a model for Georgian architecture: the faceted apse with its carved reliefs, rising to the octagonal drum and tiled dome.',
+          de: 'Von unterhalb der Bruchstein-Wehrmauern zeigt die Große Kirche die Merkmale, die sie zum Vorbild der georgischen Architektur machten: die facettierte Apsis mit ihren Reliefs, aufsteigend zum achteckigen Tambour und zur ziegelgedeckten Kuppel.',
+          fr: "Vue d'en dessous des murs de moellons, la Grande Église révèle ce qui en fit un modèle de l'architecture géorgienne : l'abside à pans ornée de reliefs, s'élevant vers le tambour octogonal et la coupole de tuiles.",
+          es: 'Desde debajo de las murallas de mampostería, la Gran Iglesia muestra los rasgos que la convirtieron en modelo de la arquitectura georgiana: el ábside facetado con sus relieves, que asciende hacia el tambor octogonal y la cúpula de tejas.',
+          nl: 'Van onder de muren van breuksteen toont de Grote Kerk de kenmerken die haar tot voorbeeld van de Georgische architectuur maakten: de gefacetteerde apsis met reliëfs, oprijzend naar de achthoekige tamboer en de pannenkoepel.',
+          cs: 'Zpod hradeb z lomového kamene ukazuje Velký kostel rysy, které z něj učinily vzor gruzínské architektury: fasetovanou apsidu s reliéfy, stoupající k osmibokému tamburu a taškové kupoli.',
+          pl: 'Spod murów z łamanego kamienia Wielki Kościół ukazuje cechy, które uczyniły go wzorem gruzińskiej architektury: fasetowaną apsydę z reliefami, wznoszącą się ku ośmiobocznemu bębnowi i krytej dachówką kopule.',
+        },
+      },
+    ],
   },
   {
     slug: 'samtavro-monastery', name: 'Samtavro Monastery',
