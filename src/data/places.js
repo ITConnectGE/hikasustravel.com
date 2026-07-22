@@ -2311,6 +2311,40 @@ export const sites = [
         pl: 'Pomnik Kroniki Gruzji, gigantyczne pokryte reliefami filary nad Morzem Tbiliskim, Tbilisi, Gruzja',
       },
     },
+    // One contextual inline body image (real <figure class="body-img"> in the
+    // per-locale body, placed at the end of each locale's "The monument" section —
+    // the stairway-approach view showing the two relief registers it describes).
+    // Rendered via SitePage's inlineImageObjects @graph map: stable @id
+    // (#inline-stairway), contentUrl at the 1448 rung (no `w` suffix), localized
+    // name (=alt) + caption, brand credit, contentLocation matching the hero, NO
+    // representativeOfPage (that's the hero's). Verbatim from chronicles-inline-
+    // package.md. Hero above is untouched — inline-only addition.
+    inlineImageObjects: [
+      {
+        base: 'chronicles-of-georgia-pillars-stairway-georgia', width: 1448, height: 1086, anchor: 'inline-stairway',
+        description: 'The grand staircase of the Chronicles of Georgia monument climbing up to the colossal relief-covered pillars, the upper registers carrying the kings, queens and heroes of Georgia and the lower band scenes from the life of Christ, under a clear blue sky. The monument stands on Keeni Hill above the Tbilisi Sea, on the northern edge of Tbilisi, capital of Georgia (the country).',
+        locationName: 'Chronicles of Georgia, Keeni Hill, Tbilisi, Georgia',
+        locality: 'Tbilisi', region: 'Tbilisi', geo: { lat: 41.770503, lng: 44.810438 },
+        name: {
+          en: 'The grand stairway leading up to the colossal carved pillars of the Chronicles of Georgia monument, Tbilisi, Georgia',
+          de: 'Die große Freitreppe hinauf zu den kolossalen Reliefpfeilern des Denkmals Chronik Georgiens, Tiflis, Georgien',
+          fr: 'Le grand escalier menant aux piliers sculptés colossaux du monument des Chroniques de la Géorgie, Tbilissi, Géorgie',
+          es: 'La gran escalinata que sube hacia los colosales pilares tallados del monumento Crónicas de Georgia, Tiflis, Georgia',
+          nl: 'De grote trap omhoog naar de kolossale gebeeldhouwde pijlers van het monument Kronieken van Georgië, Tbilisi, Georgië',
+          cs: 'Velké schodiště stoupající ke kolosálním tesaným pilířům památníku Kroniky Gruzie, Tbilisi, Gruzie',
+          pl: 'Wielkie schody prowadzące do kolosalnych rzeźbionych filarów pomnika Kroniki Gruzji, Tbilisi, Gruzja',
+        },
+        caption: {
+          en: "The stairway approach shows the monument's two worlds at once: Georgia's kings, queens and heroes tower on the upper registers, while scenes from the life of Christ run along the lower band.",
+          de: 'Der Aufgang über die Treppe zeigt die zwei Welten des Denkmals zugleich: Auf den oberen Registern ragen Georgiens Könige, Königinnen und Helden auf, während das untere Band Szenen aus dem Leben Christi zeigt.',
+          fr: "L'approche par l'escalier révèle d'un coup les deux mondes du monument : rois, reines et héros de Géorgie dominent les registres supérieurs, tandis que la bande inférieure déroule des scènes de la vie du Christ.",
+          es: 'La subida por la escalinata muestra a la vez los dos mundos del monumento: los reyes, reinas y héroes de Georgia se alzan en los registros superiores, mientras la banda inferior recorre escenas de la vida de Cristo.',
+          nl: 'De trap toont in één blik de twee werelden van het monument: Georgiës koningen, koninginnen en helden torenen op de bovenste registers, terwijl de onderste band scènes uit het leven van Christus toont.',
+          cs: 'Pohled od schodiště ukazuje oba světy památníku najednou: v horních registrech se tyčí gruzínští králové, královny a hrdinové, zatímco spodní pás nese výjevy ze života Krista.',
+          pl: 'Podejście schodami ukazuje naraz dwa światy pomnika: w górnych rejestrach górują królowie, królowe i bohaterowie Gruzji, a dolny pas przedstawia sceny z życia Chrystusa.',
+        },
+      },
+    ],
   },
   {
     slug: 'jvari-monastery', name: 'Jvari Monastery',
