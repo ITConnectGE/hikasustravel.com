@@ -671,6 +671,68 @@ export const cities = [
         locationName: 'Ushguli', locality: 'Ushguli', region: 'Svaneti', geo: { lat: 42.9169, lng: 43.0136 },
       },
     ],
+    // Two PORTRAIT inline body photos (our own), rendered as real crawlable
+    // <figure class="body-img body-img--portrait"> BETWEEN body sections via their
+    // `afterChunk` index — never the hero, never OG. The Ushguli page-content block
+    // exists ONLY in English (the other 6 locales fall back to it all-or-nothing),
+    // so these strings live here as 7-language `alt`/`caption` maps to guarantee
+    // localized figure text on every locale (the same reason Telavi's gallery does).
+    // Portrait ladder is 768/1024 only (native 1024×1536, no upscale, no 1200/1600/
+    // 2400), display capped at 560px by `.body-img--portrait`. CityPage renders the
+    // <picture> and builds one inline ImageObject each (contentUrl = -1024.webp,
+    // stable @id via `anchor`, brand credit, own contentLocation, never
+    // representativeOfPage — the hero stays the representative image). Strings
+    // verbatim from ushguli-inline-images-package.md.
+    portraitInlines: [
+      {
+        base: 'ushguli-village-lane-svaneti-georgia', width: 1024, height: 1536, afterChunk: 3,
+        anchor: 'inline-village-lane',
+        locationName: 'Ushguli, Mestia Municipality, Samegrelo-Zemo Svaneti, Georgia',
+        locality: 'Ushguli', region: 'Samegrelo-Zemo Svaneti', geo: { lat: 42.9169, lng: 43.0136 },
+        alt: {
+          en: 'A lane in Ushguli with a balconied stone house and a Svan tower, the snow-covered wall of Shkhara behind, Svaneti, Georgia',
+          de: 'Eine Gasse in Uschguli mit einem Steinhaus mit Balkon und einem swanischen Turm, dahinter die Schneewand des Schchara, Swanetien, Georgien',
+          fr: "Une ruelle d'Ouchgouli avec une maison de pierre à balcon et une tour svane, la muraille enneigée du Chkhara derrière, Svanétie, Géorgie",
+          es: 'Una calleja de Ushguli con una casa de piedra con balcón y una torre esvana, con la pared nevada del Shjara detrás, Esvanetia, Georgia',
+          nl: 'Een steegje in Oesjgoeli met een stenen huis met balkon en een Svanische toren, daarachter de besneeuwde wand van de Sjchara, Svanetië, Georgië',
+          cs: 'Ulička v Ušguli s kamenným domem s balkonem a svanskou věží, za nimi zasněžená stěna Šchary, Svanetie, Gruzie',
+          pl: 'Uliczka w Uszguli z kamiennym domem z balkonem i swańską wieżą, w tle ośnieżona ściana Szchary, Swanetia, Gruzja',
+        },
+        caption: {
+          en: "Ushguli's lanes wind between slate-stone houses with weathered wooden balconies and the defensive towers that gave Svaneti its skyline — with the snow wall of Shkhara, Georgia's highest peak, closing the valley behind.",
+          de: 'Die Gassen von Uschguli winden sich zwischen Schieferhäusern mit verwitterten Holzbalkonen und den Wehrtürmen, die Swanetien seine Silhouette gaben – dahinter schließt die Schneewand des Schchara, Georgiens höchstem Gipfel, das Tal ab.',
+          fr: "Les ruelles d'Ouchgouli serpentent entre maisons de schiste aux balcons de bois patinés et tours défensives qui ont donné à la Svanétie sa silhouette — la muraille neigeuse du Chkhara, plus haut sommet de Géorgie, fermant la vallée.",
+          es: 'Las callejas de Ushguli serpentean entre casas de pizarra con balcones de madera curtida y las torres defensivas que dieron a Esvanetia su silueta, con la pared nevada del Shjara, la cumbre más alta de Georgia, cerrando el valle.',
+          nl: 'De steegjes van Oesjgoeli slingeren tussen leistenen huizen met verweerde houten balkons en de verdedigingstorens die Svanetië zijn silhouet gaven — met de sneeuwwand van de Sjchara, Georgiës hoogste top, die het dal afsluit.',
+          cs: 'Uličky Ušguli se vinou mezi břidlicovými domy s ošlehanými dřevěnými balkony a obrannými věžemi, které daly Svanetii její siluetu – údolí v pozadí uzavírá sněhová stěna Šchary, nejvyšší hory Gruzie.',
+          pl: 'Uliczki Uszguli wiją się między łupkowymi domami z wysłużonymi drewnianymi balkonami a wieżami obronnymi, które dały Swanetii jej sylwetkę — dolinę zamyka śnieżna ściana Szchary, najwyższego szczytu Gruzji.',
+        },
+      },
+      {
+        base: 'ushguli-towers-stream-svaneti-georgia', width: 1024, height: 1536, afterChunk: 5,
+        anchor: 'inline-towers-stream',
+        locationName: 'Ushguli, Mestia Municipality, Samegrelo-Zemo Svaneti, Georgia',
+        locality: 'Ushguli', region: 'Samegrelo-Zemo Svaneti', geo: { lat: 42.9169, lng: 43.0136 },
+        alt: {
+          en: 'Svan towers and stone houses of Ushguli above a rushing mountain stream, with autumn forest on the hillside, Svaneti, Georgia',
+          de: 'Swanische Türme und Steinhäuser von Uschguli über einem reißenden Gebirgsbach, mit Herbstwald am Hang, Swanetien, Georgien',
+          fr: "Tours svanes et maisons de pierre d'Ouchgouli au-dessus d'un torrent de montagne, forêt d'automne sur le versant, Svanétie, Géorgie",
+          es: 'Torres esvanas y casas de piedra de Ushguli sobre un torrente de montaña, con bosque otoñal en la ladera, Esvanetia, Georgia',
+          nl: 'Svanische torens en stenen huizen van Oesjgoeli boven een kolkende bergbeek, met herfstbos op de helling, Svanetië, Georgië',
+          cs: 'Svanské věže a kamenné domy Ušguli nad divokým horským potokem, s podzimním lesem na svahu, Svanetie, Gruzie',
+          pl: 'Swańskie wieże i kamienne domy Uszguli nad rwącym górskim potokiem, z jesiennym lasem na zboczu, Swanetia, Gruzja',
+        },
+        caption: {
+          en: "A headwater stream of the Enguri rushes past Ushguli's medieval towers. The village of Chazhashi here forms the core of the Upper Svaneti World Heritage Site, inscribed by UNESCO in 1996 for its preserved tower-houses.",
+          de: "Ein Quellbach des Enguri rauscht an Uschgulis mittelalterlichen Türmen vorbei. Das Dorf Tschaschaschi bildet hier den Kern des Welterbes Ober-Swanetien, das die UNESCO 1996 für seine erhaltenen Turmhäuser eintrug.",
+          fr: "Un torrent des sources de l'Engouri dévale devant les tours médiévales d'Ouchgouli. Le village de Tchajachi forme ici le cœur du site du patrimoine mondial de Haute-Svanétie, inscrit par l'UNESCO en 1996 pour ses maisons-tours préservées.",
+          es: "Un arroyo de las fuentes del Enguri baja impetuoso ante las torres medievales de Ushguli. La aldea de Chazhashi forma aquí el núcleo del sitio del Patrimonio Mundial de la Alta Esvanetia, inscrito por la UNESCO en 1996 por sus casas-torre conservadas.",
+          nl: "Een bronbeek van de Enguri stroomt langs de middeleeuwse torens van Oesjgoeli. Het dorp Chazhashi vormt hier de kern van het werelderfgoed Boven-Svanetië, in 1996 door UNESCO ingeschreven om zijn bewaarde torenhuizen.",
+          cs: "Pramenný potok Enguri se žene kolem středověkých věží Ušguli. Vesnice Čažaši zde tvoří jádro památky světového dědictví Horní Svanetie, zapsané UNESCO v roce 1996 za dochované věžové domy.",
+          pl: "Źródłowy potok Enguri pędzi obok średniowiecznych wież Uszguli. Wieś Czażaszi tworzy tu rdzeń wpisanego przez UNESCO w 1996 roku obiektu światowego dziedzictwa Górna Swanetia, chronionego za zachowane domy-wieże.",
+        },
+      },
+    ],
     thingsToDo: {
       seoKey: 'thingsToDoUshguli', contentKey: 'thingsToDoUshguli', image: '/images/files/georgia-home.jpg',
       address: { addressLocality: 'Ushguli' },

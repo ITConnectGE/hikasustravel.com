@@ -86,6 +86,21 @@ export default function CityPage() {
     () => (linkedContent ? linkedContent.split(/(?=<h2)/) : []),
     [linkedContent],
   )
+  // Portrait inline body photos (city.portraitInlines) — real <figure> figures
+  // placed between sections via `afterChunk`, with a 768/1024 ladder capped at
+  // 560px by `.body-img--portrait`. Distinct from the landscape `gallery` above:
+  // these ship variants WITHOUT the `w` filename suffix and never flag the cover.
+  // alt/caption resolve to the current locale from their 7-language maps (English
+  // is a crash-guard only), so figures stay localized even when the body content
+  // itself falls back to English.
+  const portraitInlines = useMemo(() => {
+    if (!published || !city.portraitInlines) return []
+    return city.portraitInlines.map((img) => ({
+      ...img,
+      altText: (img.alt && (img.alt[lang] || img.alt.en)) || '',
+      captionText: (img.caption && (img.caption[lang] || img.caption.en)) || '',
+    }))
+  }, [published, city, lang])
 
   // Most entries here are cities, but a few are reclassified as a place to visit
   // (e.g. Gomismta) while keeping this /georgia/<slug> detail page — their
@@ -202,6 +217,37 @@ export default function CityPage() {
             geo: { '@type': 'GeoCoordinates', latitude: img.geo.lat, longitude: img.geo.lng },
           },
         })),
+        // Portrait inline body images (real <figure> blocks rendered below) that
+        // ship their variants WITHOUT the `w` filename suffix and need a stable
+        // per-image `@id`. Mirrors SitePage's `inlineImageObjects` convention:
+        // contentUrl at the largest shipped variant (-<width>.webp), brand credit,
+        // own contentLocation, and never representativeOfPage — the hero stays the
+        // representative image. name/caption are localized per locale.
+        ...portraitInlines.map((img) => ({
+          '@type': 'ImageObject',
+          '@id': `${url}#${img.anchor}`,
+          contentUrl: `${SITE_URL}/images/files/${img.base}-${img.width}.webp`,
+          url: `${SITE_URL}/images/files/${img.base}-${img.width}.webp`,
+          width: img.width,
+          height: img.height,
+          name: img.altText,
+          caption: img.captionText,
+          description: (img.caption && img.caption.en) || img.captionText,
+          creator: { '@type': 'Organization', name: BRAND },
+          creditText: BRAND,
+          copyrightNotice: `© ${BRAND}`,
+          contentLocation: {
+            '@type': 'Place',
+            name: img.locationName,
+            address: {
+              '@type': 'PostalAddress',
+              addressLocality: img.locality,
+              addressRegion: img.region,
+              addressCountry: 'GE',
+            },
+            geo: { '@type': 'GeoCoordinates', latitude: img.geo.lat, longitude: img.geo.lng },
+          },
+        })),
         // Hero ImageObject via the `imageMeta` block (for heroes whose file naming
         // or single-variant ceiling doesn't fit the gallery/imageObjects builders).
         // contentUrl points at the hero file itself (`city.image`); caption is the
@@ -251,7 +297,7 @@ export default function CityPage() {
       ],
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [published, lang, path, seo.description, heroImage, faqItems, gallery])
+  }, [published, lang, path, seo.description, heroImage, faqItems, gallery, portraitInlines])
 
   useSEO(published ? {
     ...seo, lang, path,
@@ -288,11 +334,43 @@ export default function CityPage() {
         <div ref={contentRef}>
           {bodyChunks.map((chunk, i) => {
             const img = bodyImages.find((im) => im.afterChunk === i)
+            const portrait = portraitInlines.find((im) => im.afterChunk === i)
             return (
               <Fragment key={`chunk-${i}`}>
                 <FadeUp>
                   <div dangerouslySetInnerHTML={{ __html: chunk }} />
                 </FadeUp>
+                {portrait && (
+                  /* Portrait body image between sections — real, crawlable, lazy
+                     responsive <picture>/<img>. Ladder 768/1024 only (native
+                     1024×1536, no upscale); display capped at 560px and centred by
+                     `.body-img--portrait`. */
+                  <FadeUp>
+                    <figure className="body-img body-img--portrait">
+                      <picture>
+                        <source
+                          type="image/avif"
+                          srcSet={`${asset(`/images/files/${portrait.base}-768.avif`)} 768w, ${asset(`/images/files/${portrait.base}-1024.avif`)} 1024w`}
+                          sizes="(min-width: 768px) 560px, 100vw"
+                        />
+                        <source
+                          type="image/webp"
+                          srcSet={`${asset(`/images/files/${portrait.base}-768.webp`)} 768w, ${asset(`/images/files/${portrait.base}-1024.webp`)} 1024w`}
+                          sizes="(min-width: 768px) 560px, 100vw"
+                        />
+                        <img
+                          src={asset(`/images/files/${portrait.base}-768.webp`)}
+                          width={portrait.width}
+                          height={portrait.height}
+                          alt={portrait.altText}
+                          loading="lazy"
+                          decoding="async"
+                        />
+                      </picture>
+                      {portrait.captionText && <figcaption>{portrait.captionText}</figcaption>}
+                    </figure>
+                  </FadeUp>
+                )}
                 {img && (
                   /* Body image between content sections — real, crawlable, lazy
                      responsive <picture>/<img> (not the hero, not a CSS background). */
