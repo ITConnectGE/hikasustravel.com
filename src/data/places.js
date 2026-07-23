@@ -2031,7 +2031,57 @@ export const sites = [
     slug: 'rike-narikala-cable-car', name: 'Rike–Narikala Cable Car',
     parentType: 'city', parent: 'tbilisi', published: true,
     seoKey: 'rikeNarikalaCableCar', contentKey: 'rikeNarikalaCableCar',
-    image: '/images/files/georgia-home.jpg',
+    // Hero = owner's own PORTRAIT photo of a gondola over the Old Town (native
+    // 1024×1536, 2:3). Native width ceiling is only 1024, so the ladder is
+    // 768/1024 ONLY — no 1200/1448/1600/2400 rung is generated or referenced, and
+    // the ImageObject contentUrl points at the 1024 rung. Rendered as the CSS
+    // background hero via `.hero--rike-cable-car` (heroClass) so the image-set
+    // ladder + deliberate `background-position: center 30%` apply (portrait crop:
+    // center 30% keeps gondola + skyline + Metekhi tip in the wide banner; center
+    // center would cut the gondola out). `image`/`imageAvif` feed the JSON-LD/OG
+    // fallback (the visible background comes from the class). Replaced the generic
+    // georgia-home.jpg placeholder.
+    image: '/images/files/rike-narikala-cable-car-tbilisi-georgia-1024.webp',
+    imageAvif: '/images/files/rike-narikala-cable-car-tbilisi-georgia-1024.avif',
+    heroClass: 'hero--rike-cable-car',
+    // Dedicated OG/twitter social image — a 1024×537 no-upscale crop of the same
+    // frame (canonical is 1200×630; this source only reaches 1024 wide, so it is
+    // NOT upscaled — accepted per the image package). useSEO emits og:image +
+    // og:image:width/height and derives twitter:image from the same source.
+    ogImage: { src: '/images/files/rike-narikala-cable-car-tbilisi-georgia-og.jpg', width: 1024, height: 537 },
+    // Hero ImageObject → SitePage JSON-LD @graph (representativeOfPage:true; the
+    // hero is a CSS background with no <img alt>, so this carries the metadata).
+    // Owner's own photo → brand credit (set by SitePage's BRAND constant). Verbatim
+    // from rike-narikala-cable-car-hero-package.md: name = EN alt, description =
+    // EN description, per-locale `alt` (→ og:image:alt + ImageObject caption
+    // fallback) and per-locale `caption`. contentLocation is name+geo only (no
+    // reliable locality/region address for the line midpoint) — the geo is the
+    // midpoint of the two documented station coordinates.
+    imageMeta: {
+      width: 1024, height: 1536,
+      name: 'A Rike–Narikala cable car gondola above the Old Town of Tbilisi, with Metekhi Church on its cliff below, Georgia',
+      description: 'A gondola of the Rike-Narikala aerial cable car on its cables above the Old Town of Tbilisi on an overcast winter day, with the stone Metekhi Church and the equestrian statue of King Vakhtang Gorgasali on their cliff below, old tiled and tin-roofed houses in the foreground and the modern skyline behind. The cable car, opened in 2012, links Rike Park with the Narikala fortress hill in Tbilisi, capital of Georgia (the country).',
+      locationName: 'Rike-Narikala Cable Car, Tbilisi, Georgia',
+      geo: { lat: 41.68999, lng: 44.80900 },
+      alt: {
+        en: 'A Rike–Narikala cable car gondola above the Old Town of Tbilisi, with Metekhi Church on its cliff below, Georgia',
+        de: 'Eine Gondel der Seilbahn Rike–Narikala über der Altstadt von Tiflis, darunter die Metechi-Kirche auf ihrem Felsen, Georgien',
+        fr: "Une cabine du téléphérique Rike–Narikala au-dessus de la vieille ville de Tbilissi, l'église Metekhi sur sa falaise en contrebas, Géorgie",
+        es: 'Una cabina del teleférico Rike–Narikala sobre el casco antiguo de Tiflis, con la iglesia de Metejí en su risco abajo, Georgia',
+        nl: 'Een gondel van de kabelbaan Rike–Narikala boven de oude stad van Tbilisi, met de Metekhi-kerk op haar rots eronder, Georgië',
+        cs: 'Kabina lanovky Rike–Narikala nad Starým Městem Tbilisi, dole kostel Metechi na skále, Gruzie',
+        pl: 'Gondola kolejki Rike–Narikala nad Starym Miastem Tbilisi, poniżej kościół Metechi na skale, Gruzja',
+      },
+      caption: {
+        en: "Since 2012 the Rike–Narikala cable car has linked Rike Park with the fortress hill in a ride of barely two minutes, its glass cabins floating over the Old Town past Metekhi Church. At the top, Narikala lies to the left and the Kartlis Deda statue to the right.",
+        de: 'Seit 2012 verbindet die Seilbahn Rike–Narikala den Rike-Park in kaum zwei Minuten mit dem Festungshügel; ihre Glaskabinen schweben über die Altstadt an der Metechi-Kirche vorbei. Oben liegt Narikala links, die Statue Kartlis Deda rechts.',
+        fr: "Depuis 2012, le téléphérique Rike–Narikala relie le parc Rike à la colline de la forteresse en à peine deux minutes, ses cabines vitrées survolant la vieille ville devant l'église Metekhi. En haut, Narikala est à gauche et la statue Kartlis Deda à droite.",
+        es: 'Desde 2012, el teleférico Rike–Narikala une el parque Rike con la colina de la fortaleza en apenas dos minutos; sus cabinas acristaladas sobrevuelan el casco antiguo ante la iglesia de Metejí. Arriba, Narikala queda a la izquierda y la estatua Kartlis Deda a la derecha.',
+        nl: 'Sinds 2012 verbindt de kabelbaan Rike–Narikala het Rike-park in amper twee minuten met de vestingheuvel; de glazen cabines zweven over de oude stad langs de Metekhi-kerk. Boven ligt Narikala links en het standbeeld Kartlis Deda rechts.',
+        cs: 'Od roku 2012 spojuje lanovka Rike–Narikala park Rike s pevnostním kopcem za necelé dvě minuty; její prosklené kabiny plují nad Starým Městem kolem kostela Metechi. Nahoře leží Narikala vlevo a socha Kartlis Deda vpravo.',
+        pl: 'Od 2012 roku kolejka Rike–Narikala łączy park Rike ze wzgórzem twierdzy w zaledwie dwie minuty; jej przeszklone gondole suną nad Starym Miastem obok kościoła Metechi. Na górze Narikala jest po lewej, a pomnik Kartlis Deda po prawej.',
+      },
+    },
   },
   {
     slug: 'rustaveli-avenue', name: 'Rustaveli Avenue',

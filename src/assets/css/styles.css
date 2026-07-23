@@ -570,6 +570,37 @@ section {
   }
 }
 /* No rung above 1541 exists. Do not add a 1600 or 2400 breakpoint. */
+/* Rike–Narikala Cable Car hero — per-page CSS background (same opt-in mechanism
+   as .hero--mestia). PORTRAIT source (native 1024×1536, 2:3): native WIDTH ceiling
+   is only 1024, so the ladder is exactly 768/1024 with the top breakpoint at
+   min-width:768 — there is NO 1200/1448/1600/2400 rung (do not add one; expect
+   softness on very wide desktops, flagged in the package). `background-position:
+   center 30%` is DELIBERATE: the wide banner shows only ~30% of the portrait's
+   height, and center 30% keeps the gondola + cables + skyline + the tip of
+   Metekhi in frame — center center would cut the gondola out of a cable-car hero,
+   so do NOT normalise it. The shared .coverme::after overlay already provides the
+   readable text layer over the pale overcast sky, so the package's optional scrim
+   is NOT enabled. plain url() line = image-set() fallback for browsers without
+   image-set(). */
+.hero--rike-cable-car {
+  background-image: url("/images/files/rike-narikala-cable-car-tbilisi-georgia-768.webp");
+  background-image: image-set(
+    url("/images/files/rike-narikala-cable-car-tbilisi-georgia-768.avif") type("image/avif"),
+    url("/images/files/rike-narikala-cable-car-tbilisi-georgia-768.webp") type("image/webp")
+  );
+  background-position: center 30%;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+@media (min-width: 768px) {
+  .hero--rike-cable-car {
+    background-image: image-set(
+      url("/images/files/rike-narikala-cable-car-tbilisi-georgia-1024.avif") type("image/avif"),
+      url("/images/files/rike-narikala-cable-car-tbilisi-georgia-1024.webp") type("image/webp")
+    );
+  }
+}
+/* Native width 1024 — no rung above it. Do not add a 1200/1448/1600/2400 breakpoint. */
 /* Kutaisi Green Bazaar hero — per-page CSS background (same opt-in mechanism as
    .hero--mestia). Native ceiling is 1448, BELOW the usual 1600 rung, so the
    ladder is exactly 768/1200/1448 with the top breakpoint at min-width:1200 —
