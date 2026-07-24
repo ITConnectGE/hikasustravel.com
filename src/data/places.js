@@ -2940,6 +2940,41 @@ export const sites = [
         pl: 'Zbudowany w 1983 roku z okazji dwustulecia traktatu w Georgijewsku (1783), ten półkolisty pomnik przy Gruzińskiej Drodze Wojennej wyłożony jest mozaiką przedstawiającą historię Gruzji i Rosji. Dziś znany głównie jako punkt widokowy na Diablą Dolinę.',
       },
     },
+    // One contextual inline body image (real <figure class="body-img body-img--
+    // portrait"> in the per-locale body, placed after the first paragraph of each
+    // locale's "The panoramic view" section — the view down into the Devil's Valley
+    // that the caption describes). HERO UNTOUCHED. Rendered via SitePage's
+    // inlineImageObjects @graph map: stable @id (#inline-devils-valley), contentUrl
+    // at the 1024 rung (portrait, no `w` suffix), localized name (=alt) + caption,
+    // brand credit, NO representativeOfPage (hero stays representative). contentLocation
+    // matches the hero (the viewpoint, geo 42.4920/44.4527). Verbatim from
+    // devils-valley-inline-package.md.
+    inlineImageObjects: [
+      {
+        base: 'devils-valley-view-gudauri-georgia', width: 1024, height: 1536, anchor: 'inline-devils-valley',
+        description: "The view down into the Devil's Valley from the Gudauri Panorama viewpoint, forested slopes falling to the river and the Georgian Military Highway, Georgia",
+        locationName: 'Gudauri Panorama (Russia-Georgia Friendship Monument), Georgian Military Highway, Gudauri, Georgia',
+        locality: 'Gudauri', region: 'Mtskheta-Mtianeti', geo: { lat: 42.4920, lng: 44.4527 },
+        name: {
+          en: "The view down into the Devil's Valley from the Gudauri Panorama viewpoint, forested slopes falling to the river and the Georgian Military Highway, Georgia",
+          de: 'Der Blick hinab ins Teufelstal vom Aussichtspunkt Gudauri-Panorama, bewaldete Hänge fallen zum Fluss und zur Georgischen Heerstraße ab, Georgien',
+          fr: 'La vue plongeante sur la vallée du Diable depuis le belvédère du panorama de Gudauri, versants boisés descendant vers la rivière et la route militaire géorgienne, Géorgie',
+          es: 'La vista hacia el valle del Diablo desde el mirador del panorama de Gudauri, laderas boscosas que caen hacia el río y la carretera militar georgiana, Georgia',
+          nl: 'Het uitzicht neerwaarts in de Duivelsvallei vanaf het uitzichtpunt Gudauri-panorama, beboste hellingen die afdalen naar de rivier en de Georgische Militaire Weg, Georgië',
+          cs: 'Pohled dolů do Ďáblova údolí z vyhlídky Gudauri Panorama, zalesněné svahy klesající k řece a Gruzínské vojenské cestě, Gruzie',
+          pl: 'Widok w dół na Diablą Dolinę z punktu widokowego Panorama Gudauri, zalesione zbocza opadające ku rzece i Gruzińskiej Drodze Wojennej, Gruzja',
+        },
+        caption: {
+          en: "This is the view the monument was built to frame: the ground drops away from the terrace into the Devil's Valley, where the Georgian Military Highway threads the braided riverbed far below.",
+          de: 'Das ist der Blick, für den das Denkmal gebaut wurde: Von der Terrasse fällt der Boden ins Teufelstal ab, wo sich die Georgische Heerstraße tief unten durch das verzweigte Flussbett zieht.',
+          fr: "C'est la vue que le monument a été bâti pour encadrer : le sol s'effondre depuis la terrasse dans la vallée du Diable, où la route militaire géorgienne se faufile tout en bas dans le lit tressé de la rivière.",
+          es: 'Esta es la vista que el monumento fue construido para enmarcar: el terreno se desploma desde la terraza hacia el valle del Diablo, donde la carretera militar georgiana serpentea muy abajo por el lecho trenzado del río.',
+          nl: 'Dit is het uitzicht waarvoor het monument werd gebouwd: vanaf het terras valt de grond weg in de Duivelsvallei, waar de Georgische Militaire Weg diep beneden langs de vertakte rivierbedding loopt.',
+          cs: 'Tohle je výhled, kvůli kterému byl památník postaven: od terasy se terén propadá do Ďáblova údolí, kde se hluboko dole Gruzínská vojenská cesta vine podél rozvětveného koryta řeky.',
+          pl: 'To widok, dla którego zbudowano pomnik: teren opada z tarasu w Diablą Dolinę, gdzie daleko w dole Gruzińska Droga Wojenna wije się wzdłuż rozgałęzionego koryta rzeki.',
+        },
+      },
+    ],
   },
   {
     // On the Georgian Military Highway between Mtskheta and Gudauri; not inside
