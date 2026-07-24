@@ -9,7 +9,7 @@ import useSEO from '../../hooks/useSEO'
 import { getSEO } from '../../data/seoData'
 import enPages from '../../i18n/locales/en/pages.json'
 
-const HERO_IMAGE = '/images/files/tbilisi.jpg'
+const HERO_IMAGE = '/images/files/tbilisi-old-town-narikala-mtkvari-georgia-1200.webp'
 const SITE_URL = 'https://www.hikasustravel.com'
 const PATH = 'tbilisi-international-airport'
 

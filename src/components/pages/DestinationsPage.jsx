@@ -12,14 +12,14 @@ import { getSEO } from '../../data/seoData'
 import { cities, cityPath } from '../../data/places'
 import enPages from '../../i18n/locales/en/pages.json'
 
-const HERO_IMAGE = '/images/files/tbilisi.jpg'
+const HERO_IMAGE = '/images/files/tbilisi-old-town-narikala-mtkvari-georgia-1200.webp'
 const SITE_URL = 'https://www.hikasustravel.com'
 
 // The four ways into the Destinations section. Wineries are intentionally
 // omitted until winery pages are published.
 const SUBHUBS = [
   { to: '/georgia/regions', image: '/images/files/georgia-home.jpg', labelKey: 'nav.regions' },
-  { to: '/georgia/cities', image: '/images/files/tbilisi.jpg', labelKey: 'nav.cities' },
+  { to: '/georgia/cities', image: '/images/files/tbilisi-old-town-narikala-mtkvari-georgia-1200.webp', labelKey: 'nav.cities' },
   { to: '/georgia/places-to-visit', image: '/images/files/georgia-home.jpg', labelKey: 'nav.placesToVisit' },
 ]
 

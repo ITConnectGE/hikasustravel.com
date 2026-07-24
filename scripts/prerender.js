@@ -264,7 +264,7 @@ const seoPageMap = {
 // Per-path og:image overrides for static pages (default is georgia-home.jpg).
 const staticPageImages = {
   'kutaisi-international-airport': '/images/files/kutaisi-airport.jpg',
-  'tbilisi-international-airport': '/images/files/tbilisi.jpg',
+  'tbilisi-international-airport': '/images/files/tbilisi-old-town-narikala-mtkvari-georgia-1200.webp',
   'tbilisi-metro': '/images/files/tbilisi-metekhi-mtatsminda.jpg',
   'tbilisi-railway-station': '/images/files/old-tbilisi.jpg',
 }

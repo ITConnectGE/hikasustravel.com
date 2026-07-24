@@ -9,7 +9,7 @@ import {
   siteLocation,
 } from '../../data/places'
 
-const HERO_IMAGE = '/images/files/tbilisi.jpg'
+const HERO_IMAGE = '/images/files/tbilisi-old-town-narikala-mtkvari-georgia-1200.webp'
 
 export function RegionsHubPage() {
   // `hideFromHub` entries (e.g. the combined Racha-Lechkhumi, kept for its

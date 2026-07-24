@@ -447,7 +447,7 @@ export const cities = [
       },
     },
     thingsToDo: {
-      seoKey: 'thingsToDoTbilisi', contentKey: 'thingsToDoTbilisi', image: '/images/files/tbilisi.jpg',
+      seoKey: 'thingsToDoTbilisi', contentKey: 'thingsToDoTbilisi', image: '/images/files/tbilisi-old-town-narikala-mtkvari-georgia-1200.webp',
       address: { addressLocality: 'Tbilisi' },
       attractions: [
         'Old Town (Dzveli Tbilisi)', 'Abanotubani Sulfur Baths', 'Narikala Fortress',
