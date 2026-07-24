@@ -732,6 +732,89 @@ export const cities = [
           pl: "Źródłowy potok Enguri pędzi obok średniowiecznych wież Uszguli. Wieś Czażaszi tworzy tu rdzeń wpisanego przez UNESCO w 1996 roku obiektu światowego dziedzictwa Górna Swanetia, chronionego za zachowane domy-wieże.",
         },
       },
+      // Three more own-photo inlines (added later). Same data-driven CityPage
+      // mechanism as the two above (7-language alt/caption maps, `afterChunk`
+      // placement, one inline ImageObject each via `anchor`, never
+      // representativeOfPage). The waterfall is PORTRAIT (768/1086, .body-img--
+      // portrait, 560px); the valley-trail and meadow are LANDSCAPE 4:3 (`portrait:
+      // false`, 768/1200/1448, plain .body-img, 642px). No 1600/2400, no upscale, no
+      // OG. Slots: waterfall after "The setting and Mount Shkhara" (nature),
+      // valley-trail after "How to get to Ushguli" (hiking), meadow after "Best time
+      // to visit Ushguli" (seasons). Strings verbatim from ushguli-more-inlines-
+      // package.md. contentLocation matches the two existing inlines. (The held
+      // panorama is deliberately NOT here — provenance unresolved.)
+      {
+        base: 'ushguli-forest-waterfall-svaneti-georgia', width: 1086, height: 1448, afterChunk: 2,
+        anchor: 'inline-waterfall', widths: [768, 1086],
+        locationName: 'Ushguli, Mestia Municipality, Samegrelo-Zemo Svaneti, Georgia',
+        locality: 'Ushguli', region: 'Samegrelo-Zemo Svaneti', geo: { lat: 42.9169, lng: 43.0136 },
+        alt: {
+          en: 'A thin waterfall tumbling down a steep forested slope above Ushguli, Svaneti, Georgia',
+          de: 'Ein schmaler Wasserfall stürzt einen steilen bewaldeten Hang über Uschguli hinab, Swanetien, Georgien',
+          fr: "Une fine cascade dévalant une pente boisée escarpée au-dessus d'Ouchgouli, Svanétie, Géorgie",
+          es: 'Una fina cascada que cae por una empinada ladera boscosa sobre Ushguli, Esvanetia, Georgia',
+          nl: 'Een dunne waterval die langs een steile beboste helling boven Oesjgoeli naar beneden stort, Svanetië, Georgië',
+          cs: 'Tenký vodopád padající po strmém zalesněném svahu nad Ušguli, Svanetie, Gruzie',
+          pl: 'Cienki wodospad spadający po stromym zalesionym zboczu nad Uszguli, Swanetia, Gruzja',
+        },
+        caption: {
+          en: 'The steep slopes around Ushguli are laced with meltwater streams that fall in thin ribbons through the forest — the same snowmelt that feeds the Enguri below.',
+          de: 'Die steilen Hänge um Uschguli sind von Schmelzwasserbächen durchzogen, die in dünnen Bändern durch den Wald fallen – dasselbe Schmelzwasser, das unten den Enguri speist.',
+          fr: "Les pentes abruptes autour d'Ouchgouli sont parcourues de ruisseaux d'eau de fonte qui tombent en fins rubans à travers la forêt — la neige fondue qui alimente l'Engouri en contrebas.",
+          es: 'Las empinadas laderas de Ushguli están surcadas por arroyos de deshielo que caen en finas cintas por el bosque: el mismo deshielo que alimenta el Enguri más abajo.',
+          nl: 'De steile hellingen rond Oesjgoeli zijn dooraderd met smeltwaterbeken die in dunne linten door het bos vallen — hetzelfde smeltwater dat beneden de Enguri voedt.',
+          cs: 'Strmé svahy kolem Ušguli protkávají potoky z tající vody, které padají tenkými stuhami lesem – tatáž voda, jež dole napájí Enguri.',
+          pl: 'Strome zbocza wokół Uszguli poprzecinane są strumieniami wody z topniejącego śniegu, które spadają cienkimi wstęgami przez las — tym samym, co w dole zasila Enguri.',
+        },
+      },
+      {
+        base: 'ushguli-valley-trail-svaneti-georgia', width: 1448, height: 1086, afterChunk: 6,
+        anchor: 'inline-valley-trail', portrait: false, widths: [768, 1200, 1448],
+        locationName: 'Ushguli, Mestia Municipality, Samegrelo-Zemo Svaneti, Georgia',
+        locality: 'Ushguli', region: 'Samegrelo-Zemo Svaneti', geo: { lat: 42.9169, lng: 43.0136 },
+        alt: {
+          en: 'A footpath through green alpine meadows in the Enguri valley near Ushguli, forested mountainsides and blue sky, Svaneti, Georgia',
+          de: 'Ein Fußpfad durch grüne Almwiesen im Enguri-Tal bei Uschguli, bewaldete Berghänge und blauer Himmel, Swanetien, Georgien',
+          fr: "Un sentier à travers les prairies alpines verdoyantes de la vallée de l'Engouri près d'Ouchgouli, versants boisés et ciel bleu, Svanétie, Géorgie",
+          es: 'Un sendero entre verdes praderas alpinas en el valle del Enguri cerca de Ushguli, laderas boscosas y cielo azul, Esvanetia, Georgia',
+          nl: 'Een voetpad door groene alpenweiden in het Enguri-dal bij Oesjgoeli, beboste berghellingen en blauwe lucht, Svanetië, Georgië',
+          cs: 'Pěšina zelenými alpskými loukami v údolí Enguri u Ušguli, zalesněné svahy a modré nebe, Svanetie, Gruzie',
+          pl: 'Ścieżka przez zielone alpejskie łąki w dolinie Enguri koło Uszguli, zalesione zbocza i błękitne niebo, Swanetia, Gruzja',
+        },
+        caption: {
+          en: 'Beyond the village, trails climb through summer pastures into the Enguri valley toward the Shkhara massif — the walking that draws hikers to Ushguli once the snow clears.',
+          de: 'Hinter dem Dorf steigen Pfade durch Sommerweiden ins Enguri-Tal zum Schchara-Massiv hinauf – die Wanderungen, die Ushguli nach der Schneeschmelze zum Ziel machen.',
+          fr: "Au-delà du village, les sentiers montent à travers les pâturages d'été dans la vallée de l'Engouri vers le massif du Chkhara — les randonnées qui attirent les marcheurs à Ouchgouli une fois la neige partie.",
+          es: 'Más allá de la aldea, los senderos ascienden por los pastos de verano hacia el valle del Enguri y el macizo del Shjara: las caminatas que atraen a Ushguli cuando se va la nieve.',
+          nl: 'Voorbij het dorp klimmen paden door zomerweiden het Enguri-dal in richting het Sjchara-massief — de wandelingen die Oesjgoeli aantrekkelijk maken zodra de sneeuw weg is.',
+          cs: 'Za vesnicí stoupají stezky letními pastvinami do údolí Enguri k masivu Šchara – túry, které do Ušguli lákají poté, co roztaje sníh.',
+          pl: 'Za wsią ścieżki wspinają się przez letnie pastwiska w dolinę Enguri ku masywowi Szchary — wędrówki, które ściągają turystów do Uszguli, gdy zejdzie śnieg.',
+        },
+      },
+      {
+        base: 'ushguli-alpine-meadow-flowers-svaneti-georgia', width: 1448, height: 1086, afterChunk: 7,
+        anchor: 'inline-meadow', portrait: false, widths: [768, 1200, 1448],
+        locationName: 'Ushguli, Mestia Municipality, Samegrelo-Zemo Svaneti, Georgia',
+        locality: 'Ushguli', region: 'Samegrelo-Zemo Svaneti', geo: { lat: 42.9169, lng: 43.0136 },
+        alt: {
+          en: 'An alpine meadow of pink wildflowers on a green hillside above Ushguli under a blue summer sky, Svaneti, Georgia',
+          de: 'Eine Almwiese mit rosa Wildblumen an einem grünen Hang über Uschguli unter blauem Sommerhimmel, Swanetien, Georgien',
+          fr: "Une prairie alpine de fleurs sauvages roses sur un versant vert au-dessus d'Ouchgouli sous un ciel d'été bleu, Svanétie, Géorgie",
+          es: 'Un prado alpino de flores silvestres rosadas en una ladera verde sobre Ushguli bajo un cielo azul de verano, Esvanetia, Georgia',
+          nl: 'Een alpenweide met roze wilde bloemen op een groene helling boven Oesjgoeli onder een blauwe zomerhemel, Svanetië, Georgië',
+          cs: 'Alpská louka růžových divokých květin na zeleném svahu nad Ušguli pod modrou letní oblohou, Svanetie, Gruzie',
+          pl: 'Alpejska łąka różowych dzikich kwiatów na zielonym zboczu nad Uszguli pod błękitnym letnim niebem, Swanetia, Gruzja',
+        },
+        caption: {
+          en: 'For a few short weeks in summer the pastures above Ushguli fill with wildflowers — a brief, vivid season at over 2,000 metres before the long winter returns.',
+          de: 'Für wenige Sommerwochen füllen sich die Weiden über Uschguli mit Wildblumen – eine kurze, leuchtende Saison auf über 2.000 Metern, ehe der lange Winter zurückkehrt.',
+          fr: "Quelques brèves semaines d'été, les pâturages au-dessus d'Ouchgouli se couvrent de fleurs sauvages — une saison courte et éclatante à plus de 2 000 mètres avant le retour du long hiver.",
+          es: 'Durante unas pocas semanas de verano, los pastos sobre Ushguli se llenan de flores silvestres: una estación breve e intensa a más de 2.000 metros antes de que vuelva el largo invierno.',
+          nl: 'Enkele korte zomerweken vullen de weiden boven Oesjgoeli zich met wilde bloemen — een kort, fel seizoen op ruim 2.000 meter voordat de lange winter terugkeert.',
+          cs: 'Několik krátkých letních týdnů se pastviny nad Ušguli plní divokými květinami – krátká, zářivá sezona ve výšce přes 2 000 metrů, než se vrátí dlouhá zima.',
+          pl: 'Przez kilka krótkich letnich tygodni pastwiska nad Uszguli wypełniają się dzikimi kwiatami — krótki, żywy sezon na ponad 2000 metrów, zanim wróci długa zima.',
+        },
+      },
     ],
     thingsToDo: {
       seoKey: 'thingsToDoUshguli', contentKey: 'thingsToDoUshguli', image: '/images/files/georgia-home.jpg',

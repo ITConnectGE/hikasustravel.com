@@ -340,28 +340,43 @@ export default function CityPage() {
                 <FadeUp>
                   <div dangerouslySetInnerHTML={{ __html: chunk }} />
                 </FadeUp>
-                {portrait && (
-                  /* Portrait body image between sections — real, crawlable, lazy
-                     responsive <picture>/<img>. Ladder 768/1024 only (native
-                     1024×1536, no upscale); display capped at 560px and centred by
-                     `.body-img--portrait`. */
+                {portrait && (() => {
+                  /* Inline body image between sections — real, crawlable, lazy
+                     responsive <picture>/<img>. Data-driven ladder: `widths`
+                     defaults to 768/1024 (the original two portrait inlines, native
+                     1024×1536, unchanged). A landscape inline sets `portrait:false`
+                     + its own `widths` (e.g. 768/1200/1448) and renders plain
+                     `.body-img` (capped 642px); a portrait renders
+                     `.body-img--portrait` (capped 560px). Files ship WITHOUT the `w`
+                     suffix. No upscale, no 1600/2400, no fetchpriority, no OG. */
+                  const widths = portrait.widths || [768, 1024]
+                  const isPortrait = portrait.portrait !== false
+                  const cap = isPortrait ? '560px' : '642px'
+                  const sizes = `(min-width: 768px) ${cap}, 100vw`
+                  // Portrait keeps its native-dimensioned <img> + smallest-rung src
+                  // (byte-identical to the original inlines); landscape falls back to
+                  // the 1200 rung at 1200×(scaled) to match the body-img convention.
+                  const fbW = isPortrait ? widths[0] : (portrait.fallbackWidth || 1200)
+                  const imgW = isPortrait ? portrait.width : fbW
+                  const imgH = isPortrait ? portrait.height : Math.round(fbW * portrait.height / portrait.width)
+                  return (
                   <FadeUp>
-                    <figure className="body-img body-img--portrait">
+                    <figure className={isPortrait ? 'body-img body-img--portrait' : 'body-img'}>
                       <picture>
                         <source
                           type="image/avif"
-                          srcSet={`${asset(`/images/files/${portrait.base}-768.avif`)} 768w, ${asset(`/images/files/${portrait.base}-1024.avif`)} 1024w`}
-                          sizes="(min-width: 768px) 560px, 100vw"
+                          srcSet={widths.map((w) => `${asset(`/images/files/${portrait.base}-${w}.avif`)} ${w}w`).join(', ')}
+                          sizes={sizes}
                         />
                         <source
                           type="image/webp"
-                          srcSet={`${asset(`/images/files/${portrait.base}-768.webp`)} 768w, ${asset(`/images/files/${portrait.base}-1024.webp`)} 1024w`}
-                          sizes="(min-width: 768px) 560px, 100vw"
+                          srcSet={widths.map((w) => `${asset(`/images/files/${portrait.base}-${w}.webp`)} ${w}w`).join(', ')}
+                          sizes={sizes}
                         />
                         <img
-                          src={asset(`/images/files/${portrait.base}-768.webp`)}
-                          width={portrait.width}
-                          height={portrait.height}
+                          src={asset(`/images/files/${portrait.base}-${fbW}.webp`)}
+                          width={imgW}
+                          height={imgH}
                           alt={portrait.altText}
                           loading="lazy"
                           decoding="async"
@@ -370,7 +385,8 @@ export default function CityPage() {
                       {portrait.captionText && <figcaption>{portrait.captionText}</figcaption>}
                     </figure>
                   </FadeUp>
-                )}
+                  )
+                })()}
                 {img && (
                   /* Body image between content sections — real, crawlable, lazy
                      responsive <picture>/<img> (not the hero, not a CSS background). */
