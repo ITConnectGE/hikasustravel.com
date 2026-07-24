@@ -806,6 +806,39 @@ section {
   }
 }
 /* Native width 1024 — no rung above it. Do not add a 1200/1448/1600/2400 breakpoint. */
+/* Rabati Fortress hero — per-page CSS background (same opt-in mechanism as
+   .hero--gremi). Akhaltsikhe Castle, native 4:3 (1448x1086), just under the 1600
+   rung, so the ladder is exactly 768/1200/1448 with the top breakpoint at
+   min-width:1200. NO 1600/2400 rung, no upscale. `background-position: center
+   center`. The cloud band across the top is the H1 zone; the shared .coverme::after
+   overlay (rgba(0,0,0,0.35)) provides the readable text layer, so no extra scrim. */
+.hero--rabati {
+  background-image: url("/images/files/rabati-fortress-akhaltsikhe-georgia-1200.webp");
+  background-image: image-set(
+    url("/images/files/rabati-fortress-akhaltsikhe-georgia-768.avif") type("image/avif"),
+    url("/images/files/rabati-fortress-akhaltsikhe-georgia-768.webp") type("image/webp")
+  );
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+@media (min-width: 768px) {
+  .hero--rabati {
+    background-image: image-set(
+      url("/images/files/rabati-fortress-akhaltsikhe-georgia-1200.avif") type("image/avif"),
+      url("/images/files/rabati-fortress-akhaltsikhe-georgia-1200.webp") type("image/webp")
+    );
+  }
+}
+@media (min-width: 1200px) {
+  .hero--rabati {
+    background-image: image-set(
+      url("/images/files/rabati-fortress-akhaltsikhe-georgia-1448.avif") type("image/avif"),
+      url("/images/files/rabati-fortress-akhaltsikhe-georgia-1448.webp") type("image/webp")
+    );
+  }
+}
+/* No rung above 1448 exists. Do not add a 1600 or 2400 breakpoint. */
 /* Gudauri (ski-resort/town hub) hero — per-page CSS background (same opt-in
    mechanism as .hero--gremi). PORTRAIT 2:3 source (native 1024x1536), so the ladder
    is exactly 768/1024 with the top breakpoint at min-width:768. NO rung above 1024

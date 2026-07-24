@@ -4333,7 +4333,59 @@ export const sites = [
     slug: 'rabati-fortress', name: 'Rabati Fortress',
     parentType: 'city', parent: 'akhaltsikhe', published: true,
     seoKey: 'rabatiFortress', contentKey: 'rabatiFortress',
-    image: '/images/files/georgia-home.jpg',
+    // Hero: real Rabati Fortress / Akhaltsikhe Castle (owner's own photo) via the
+    // .hero--rabati image-set() ladder (styles.css), replacing the shared
+    // georgia-home.jpg placeholder. Native 4:3 (1448x1086), just under the 1600
+    // rung, so the ladder is exactly 768/1200/1448 with the top breakpoint at
+    // min-width:1200. NO 1600/2400 rung, no upscale. The CSS class controls the
+    // visible background (`background-position: center center`); no extra scrim — the
+    // shared .coverme::after overlay (rgba(0,0,0,0.35)) already provides the readable
+    // text layer for the H1 in the cloud band across the top. `image`/`imageAvif` =
+    // the 1448 top rung, feeding the ImageObject contentUrl. First Akhaltsikhe /
+    // Samtskhe-Javakheti fortress coordinate.
+    image: '/images/files/rabati-fortress-akhaltsikhe-georgia-1448.webp',
+    imageAvif: '/images/files/rabati-fortress-akhaltsikhe-georgia-1448.avif',
+    heroClass: 'hero--rabati',
+    // LCP hero preload — the 1200 AVIF (the rung the ladder serves at 768-1199px),
+    // fetchpriority=high. Page-scoped (only entries with heroPreload emit a
+    // <link rel=preload> via SitePage/useSEO + prerender.js).
+    heroPreload: '/images/files/rabati-fortress-akhaltsikhe-georgia-1200.avif',
+    // Dedicated 1.91:1 social-share image (og:image / twitter:image), .jpg default.
+    ogImage: { src: '/images/files/rabati-fortress-akhaltsikhe-georgia-og.jpg', width: 1200, height: 630 },
+    // Hero image SEO/AEO metadata (owner's own photo → brand credit, set by
+    // SitePage). Hero is a CSS background (no <img alt>), so the localized alt lives
+    // here and is emitted as og:image:alt/twitter:image:alt per locale; the `caption`
+    // map feeds the hero ImageObject caption. Verbatim from rabati-fortress-hero-
+    // package.md. width/height = 1448 rung; coordinates per package (the castle).
+    // The caption/description note the 2011–2012 reconstruction (not implying
+    // untouched antiquity). contentLocation is name + geo (Wikipedia castle coord
+    // 41.64267/42.97706), NO address block — SitePage omits address when locality/
+    // region/country are absent, emits geo when present. Region Samtskhe-Javakheti.
+    imageMeta: {
+      width: 1448, height: 1086,
+      name: 'Rabati Fortress in Akhaltsikhe, its stone ramparts and citadel rising beside the golden dome of the Ahmediye Mosque, Georgia',
+      description: 'Rabati Fortress (Akhaltsikhe Castle) in southern Georgia: crenellated stone ramparts and a flag-topped citadel climbing a hill, the golden dome of the Ahmediye Mosque, grey domes and the Jakeli palace with wooden balconies, above a courtyard. A 9th-century fortress of the Jakeli dynasty, later Ottoman and Russian, extensively reconstructed in 2011–2012, in Akhaltsikhe, Samtskhe-Javakheti, Georgia (the country).',
+      locationName: 'Rabati Fortress (Akhaltsikhe Castle), Akhaltsikhe, Samtskhe-Javakheti, Georgia',
+      geo: { lat: 41.64267, lng: 42.97706 },
+      alt: {
+        en: 'Rabati Fortress in Akhaltsikhe, its stone ramparts and citadel rising beside the golden dome of the Ahmediye Mosque, Georgia',
+        de: 'Die Festung Rabati in Achalziche, ihre steinernen Wälle und die Zitadelle neben der goldenen Kuppel der Ahmediye-Moschee, Georgien',
+        fr: 'La forteresse de Rabati à Akhaltsikhe, ses remparts de pierre et sa citadelle près de la coupole dorée de la mosquée Ahmediye, Géorgie',
+        es: 'La fortaleza de Rabati en Ajaltsije, con sus murallas de piedra y su ciudadela junto a la cúpula dorada de la mezquita Ahmediye, Georgia',
+        nl: 'De Rabati-vesting in Achaltsiche, met stenen wallen en citadel naast de gouden koepel van de Ahmediye-moskee, Georgië',
+        cs: 'Pevnost Rabati v Achalciche, její kamenné hradby a citadela vedle zlaté kupole mešity Ahmediye, Gruzie',
+        pl: 'Twierdza Rabati w Achalcyche, jej kamienne mury i cytadela obok złotej kopuły meczetu Ahmediye, Gruzja',
+      },
+      caption: {
+        en: 'Rabati Fortress guards the town of Akhaltsikhe from a hill first fortified in the 9th century. Seat of the Jakeli princes, then an Ottoman stronghold, it was extensively rebuilt in 2011–2012 and today gathers a mosque, an Orthodox church and a synagogue within one set of walls.',
+        de: 'Die Festung Rabati bewacht die Stadt Achalziche von einem im 9. Jahrhundert erstmals befestigten Hügel. Sitz der Jakeli-Fürsten, dann osmanische Bastion, wurde sie 2011–2012 umfassend wiederaufgebaut und vereint heute Moschee, orthodoxe Kirche und Synagoge in einer Mauer.',
+        fr: "La forteresse de Rabati veille sur la ville d'Akhaltsikhe depuis une colline fortifiée dès le IXe siècle. Siège des princes Jakeli puis bastion ottoman, elle a été largement reconstruite en 2011–2012 et réunit aujourd'hui une mosquée, une église orthodoxe et une synagogue dans une même enceinte.",
+        es: 'La fortaleza de Rabati vigila la ciudad de Ajaltsije desde una colina fortificada ya en el siglo IX. Sede de los príncipes Jakeli y luego bastión otomano, fue reconstruida a fondo en 2011–2012 y hoy reúne una mezquita, una iglesia ortodoxa y una sinagoga dentro de un mismo recinto.',
+        nl: 'De Rabati-vesting bewaakt de stad Achaltsiche vanaf een heuvel die al in de 9e eeuw werd versterkt. Zetel van de Jakeli-vorsten en later een Ottomaans bolwerk, werd ze in 2011–2012 grondig herbouwd en verenigt nu een moskee, een orthodoxe kerk en een synagoge binnen één muur.',
+        cs: 'Pevnost Rabati střeží město Achalciche z kopce opevněného již v 9. století. Sídlo knížat Jakeli, poté osmanská bašta, byla v letech 2011–2012 rozsáhle přestavěna a dnes spojuje mešitu, pravoslavný kostel a synagogu za jedněmi hradbami.',
+        pl: 'Twierdza Rabati strzeże miasta Achalcyche ze wzgórza ufortyfikowanego już w IX wieku. Siedziba książąt Jakeli, później osmańska warownia, została gruntownie odbudowana w latach 2011–2012 i dziś łączy meczet, cerkiew prawosławną i synagogę w obrębie jednych murów.',
+      },
+    },
   },
   {
     slug: 'borjomi-central-park', name: 'Borjomi Central Park',
