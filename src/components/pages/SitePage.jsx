@@ -316,13 +316,25 @@ export default function SitePage() {
           contentLocation: {
             '@type': 'Place',
             name: img.locationName,
-            address: {
-              '@type': 'PostalAddress',
-              addressLocality: img.locality,
-              addressRegion: img.region,
-              addressCountry: 'GE',
-            },
-            geo: { '@type': 'GeoCoordinates', latitude: img.geo.lat, longitude: img.geo.lng },
+            // Address + geo are optional (same conditional path as the hero
+            // imageNode): an inline package may ship a name-only contentLocation
+            // when there is no reliable coordinate for the exact point (e.g. the
+            // Bolnisi Museum — sourced street address but no sourced coordinate).
+            // Every existing inline supplies locality+geo, so their output is
+            // unchanged; only a geo-less inline omits these blocks.
+            ...((img.locality || img.region)
+              ? {
+                  address: {
+                    '@type': 'PostalAddress',
+                    addressLocality: img.locality,
+                    addressRegion: img.region,
+                    addressCountry: 'GE',
+                  },
+                }
+              : {}),
+            ...(img.geo
+              ? { geo: { '@type': 'GeoCoordinates', latitude: img.geo.lat, longitude: img.geo.lng } }
+              : {}),
           },
         })),
         {

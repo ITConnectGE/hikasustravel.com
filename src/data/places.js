@@ -1307,7 +1307,179 @@ export const sites = [
     slug: 'bolnisi-museum', name: 'The Bolnisi Museum',
     parentType: 'city', parent: 'bolnisi', published: true,
     seoKey: 'bolnisiMuseum', contentKey: 'bolnisiMuseum',
-    image: '/images/files/georgia-home.jpg',
+    // Hero: the museum's blue medieval hall (owner's own interior photo) via the
+    // .hero--bolnisi-museum image-set() ladder (styles.css), replacing the shared
+    // georgia-home.jpg placeholder. Native 4:3 (1448x1086), just under the 1600
+    // rung, so the ladder is exactly 768/1200/1448 with the top breakpoint at
+    // min-width:1200. NO 1600/2400 rung, no upscale. The CSS class controls the
+    // visible background (`background-position: center center`; the dark ceiling
+    // band across the top is the H1 zone; no scrim needed). `image`/`imageAvif`
+    // = the 1448 top rung, feeding the ImageObject contentUrl. No hero preload:
+    // these CSS-background heroes have no per-page preload mechanism (same as
+    // every recent hero). First Kvemo Kartli SitePage hero. First Kvemo Kartli.
+    image: '/images/files/bolnisi-museum-medieval-hall-georgia-1448.webp',
+    imageAvif: '/images/files/bolnisi-museum-medieval-hall-georgia-1448.avif',
+    heroClass: 'hero--bolnisi-museum',
+    // Dedicated 1.91:1 social-share image (og:image / twitter:image), .jpg default.
+    ogImage: { src: '/images/files/bolnisi-museum-medieval-hall-georgia-og.jpg', width: 1200, height: 630 },
+    // Hero image SEO/AEO metadata (owner's own photo -> brand credit, set by
+    // SitePage). Hero is a CSS background (no <img alt>), so the localized alt lives
+    // here and is emitted as og:image:alt/twitter:image:alt per locale; the `caption`
+    // map feeds the hero ImageObject caption. Verbatim from bolnisi-museum-images-
+    // package.md. contentLocation is NAME-ONLY (no geo/address): the package has a
+    // sourced street address but NO sourced coordinate, so locality/region/country
+    // and geo are omitted and the SitePage builder emits a name-only Place (same
+    // conditional path used by Elia Hill). Do not add coordinates.
+    imageMeta: {
+      width: 1448, height: 1086,
+      name: 'The medieval hall of the Bolnisi Museum, with carved stone stelae, a cross stone and a reconstructed church arcade, Georgia',
+      description: 'Opened in 2020 in a striking building by architect Gaga Kiknadze, the Bolnisi Museum walks visitors from the Dmanisi hominins to the Middle Ages. Its medieval hall gathers carved stelae, cross stones and church fragments from across Kvemo Kartli.',
+      locationName: 'Bolnisi Museum, 48a David Agmashenebeli Street, Bolnisi, Kvemo Kartli, Georgia',
+      alt: {
+        en: 'The medieval hall of the Bolnisi Museum, with carved stone stelae, a cross stone and a reconstructed church arcade, Georgia',
+        de: 'Der Mittelaltersaal des Bolnisi-Museums mit behauenen Steinstelen, einem Kreuzstein und einer rekonstruierten Kirchenarkade, Georgien',
+        fr: "La salle médiévale du musée de Bolnisi, avec stèles de pierre sculptées, une pierre à croix et une arcade d'église reconstituée, Géorgie",
+        es: 'La sala medieval del Museo de Bolnisi, con estelas de piedra talladas, una piedra con cruz y una arcada de iglesia reconstruida, Georgia',
+        nl: 'De middeleeuwse zaal van het Bolnisi-museum, met gebeeldhouwde stenen stèles, een kruissteen en een gereconstrueerde kerkarcade, Georgië',
+        cs: 'Středověký sál Bolnisského muzea s tesanými kamennými stélami, křížovým kamenem a rekonstruovanou kostelní arkádou, Gruzie',
+        pl: 'Sala średniowieczna Muzeum w Bolnisi z rzeźbionymi kamiennymi stelami, kamieniem z krzyżem i zrekonstruowaną arkadą kościelną, Gruzja',
+      },
+      caption: {
+        en: 'Opened in 2020 in a striking building by architect Gaga Kiknadze, the Bolnisi Museum walks visitors from the Dmanisi hominins to the Middle Ages. Its medieval hall gathers carved stelae, cross stones and church fragments from across Kvemo Kartli.',
+        de: 'Das 2020 in einem markanten Bau des Architekten Gaga Kiknadze eröffnete Bolnisi-Museum führt von den Dmanisi-Homininen bis ins Mittelalter. Sein Mittelaltersaal versammelt behauene Stelen, Kreuzsteine und Kirchenfragmente aus ganz Kwemo Kartli.',
+        fr: "Ouvert en 2020 dans un bâtiment remarquable de l'architecte Gaga Kiknadze, le musée de Bolnisi mène des hominines de Dmanissi au Moyen Âge. Sa salle médiévale rassemble stèles sculptées, pierres à croix et fragments d'églises de toute la Kvemo Kartli.",
+        es: 'Inaugurado en 2020 en un llamativo edificio del arquitecto Gaga Kiknadze, el Museo de Bolnisi conduce de los homíninos de Dmanisi a la Edad Media. Su sala medieval reúne estelas talladas, piedras con cruces y fragmentos de iglesias de toda Kvemo Kartli.',
+        nl: 'Het in 2020 geopende Bolnisi-museum, in een opvallend gebouw van architect Gaga Kiknadze, voert bezoekers van de Dmanisi-homininen naar de middeleeuwen. De middeleeuwse zaal verzamelt gebeeldhouwde stèles, kruisstenen en kerkfragmenten uit heel Kvemo Kartli.',
+        cs: 'Bolnisské muzeum, otevřené roku 2020 v nápadné budově architekta Gagy Kiknadzeho, provází návštěvníky od homininů z Dmanisi po středověk. Jeho středověký sál shromažďuje tesané stély, křížové kameny a fragmenty kostelů z celého Kvemo Kartli.',
+        pl: 'Otwarte w 2020 roku w wyrazistym budynku architekta Gagi Kiknadzego Muzeum w Bolnisi prowadzi zwiedzających od homininów z Dmanisi po średniowiecze. Sala średniowieczna gromadzi rzeźbione stele, kamienie z krzyżami i fragmenty kościołów z całego Kwemo Kartli.',
+      },
+    },
+    // Five contextual inline body images (real <figure class="body-img"> in each
+    // locale's body HTML, placed at the section slots below). Rendered via
+    // SitePage's inlineImageObjects @graph map: stable @id (#inline-hominin etc.),
+    // contentUrl at the largest rung (no `w` suffix), localized name (=alt) +
+    // caption, brand credit, NO representativeOfPage. contentLocation is NAME-ONLY
+    // to match the hero (no sourced coordinate) — SitePage omits address/geo when
+    // locality/region/geo are absent. Verbatim from bolnisi-museum-images-package.md.
+    // Slots: hominin=after collection P1 (Dmanisi), querns=after intro h2, bronze=
+    // after collection P4, jars=after collection P5, gallery=after "The presentation".
+    inlineImageObjects: [
+      {
+        base: 'bolnisi-museum-dmanisi-hominin-georgia', width: 1086, height: 1448, anchor: 'inline-hominin',
+        locationName: 'Bolnisi Museum, 48a David Agmashenebeli Street, Bolnisi, Kvemo Kartli, Georgia',
+        description: 'Life-size reconstruction of a Dmanisi hominin holding a stone tool, in the Bolnisi Museum, Georgia',
+        name: {
+          en: 'Life-size reconstruction of a Dmanisi hominin holding a stone tool, in the Bolnisi Museum, Georgia',
+          de: 'Lebensgroße Rekonstruktion eines Dmanisi-Homininen mit einem Steinwerkzeug im Bolnisi-Museum, Georgien',
+          fr: "Reconstitution grandeur nature d'un hominine de Dmanissi tenant un outil de pierre, au musée de Bolnisi, Géorgie",
+          es: 'Reconstrucción a tamaño natural de un homínino de Dmanisi con una herramienta de piedra, en el Museo de Bolnisi, Georgia',
+          nl: 'Levensgrote reconstructie van een Dmanisi-hominine met een stenen werktuig, in het Bolnisi-museum, Georgië',
+          cs: 'Rekonstrukce hominina z Dmanisi v životní velikosti s kamenným nástrojem, v Bolnisském muzeu, Gruzie',
+          pl: 'Naturalnej wielkości rekonstrukcja hominina z Dmanisi z kamiennym narzędziem, w Muzeum w Bolnisi, Gruzja',
+        },
+        caption: {
+          en: 'The museum is the main showcase for Dmanisi, where the earliest hominins outside Africa — some 1.8 million years old — were unearthed. This life-size reconstruction puts a face on Georgia’s "first Europeans".',
+          de: 'Das Museum ist das Schaufenster für Dmanisi, wo die ältesten Homininen außerhalb Afrikas – rund 1,8 Millionen Jahre alt – ausgegraben wurden. Diese lebensgroße Rekonstruktion gibt Georgiens „ersten Europäern" ein Gesicht.',
+          fr: 'Le musée est la vitrine de Dmanissi, où furent exhumés les plus anciens hominines hors d’Afrique — vieux d’environ 1,8 million d’années. Cette reconstitution grandeur nature donne un visage aux « premiers Européens » de Géorgie.',
+          es: 'El museo es el gran escaparate de Dmanisi, donde se desenterraron los homíninos más antiguos fuera de África, de unos 1,8 millones de años. Esta reconstrucción a tamaño natural pone rostro a los «primeros europeos» de Georgia.',
+          nl: 'Het museum is hét podium voor Dmanisi, waar de oudste homininen buiten Afrika — zo’n 1,8 miljoen jaar oud — werden opgegraven. Deze levensgrote reconstructie geeft Georgiës "eerste Europeanen" een gezicht.',
+          cs: 'Muzeum je hlavní výkladní skříní Dmanisi, kde byli objeveni nejstarší homininé mimo Afriku – staří asi 1,8 milionu let. Tato rekonstrukce v životní velikosti dává tvář „prvním Evropanům" Gruzie.',
+          pl: 'Muzeum to główna wizytówka Dmanisi, gdzie odkopano najstarszych homininów poza Afryką — sprzed około 1,8 miliona lat. Ta naturalnej wielkości rekonstrukcja nadaje twarz „pierwszym Europejczykom" Gruzji.',
+        },
+      },
+      {
+        base: 'bolnisi-museum-neolithic-querns-georgia', width: 1448, height: 1086, anchor: 'inline-querns',
+        locationName: 'Bolnisi Museum, 48a David Agmashenebeli Street, Bolnisi, Kvemo Kartli, Georgia',
+        description: 'Neolithic grinding stones and large clay vessels displayed on a round platform in the Bolnisi Museum, Georgia',
+        name: {
+          en: 'Neolithic grinding stones and large clay vessels displayed on a round platform in the Bolnisi Museum, Georgia',
+          de: 'Neolithische Mahlsteine und große Tongefäße auf einer runden Plattform im Bolnisi-Museum, Georgien',
+          fr: "Meules néolithiques et grands vases d'argile présentés sur une plateforme ronde au musée de Bolnisi, Géorgie",
+          es: 'Molinos de mano neolíticos y grandes vasijas de arcilla en una plataforma redonda del Museo de Bolnisi, Georgia',
+          nl: 'Neolithische maalstenen en grote kleivaten op een rond platform in het Bolnisi-museum, Georgië',
+          cs: 'Neolitické drtiče obilí a velké hliněné nádoby na kruhové platformě v Bolnisském muzeu, Gruzie',
+          pl: 'Neolityczne żarna i wielkie gliniane naczynia na okrągłej platformie w Muzeum w Bolnisi, Gruzja',
+        },
+        caption: {
+          en: 'Grinding stones and vessels from the Neolithic Shulaveri-Shomu settlements — among the region’s first farmers — anchor the museum’s story of how agriculture began here some 8,000 years ago.',
+          de: 'Mahlsteine und Gefäße der neolithischen Schulaweri-Schomu-Siedlungen – der ersten Bauern der Region – verankern die Erzählung des Museums, wie hier vor rund 8.000 Jahren der Ackerbau begann.',
+          fr: 'Meules et récipients des villages néolithiques de Choulavéri-Chomou — parmi les premiers agriculteurs de la région — ancrent le récit du musée sur les débuts de l’agriculture ici, il y a quelque 8 000 ans.',
+          es: 'Molinos y recipientes de los asentamientos neolíticos de Shulaveri-Shomu —entre los primeros agricultores de la región— anclan el relato del museo sobre el inicio de la agricultura aquí hace unos 8.000 años.',
+          nl: 'Maalstenen en vaten van de neolithische Shulaveri-Shomu-nederzettingen — bij de eerste boeren van de regio — verankeren het museumverhaal over het begin van de landbouw hier, zo’n 8.000 jaar geleden.',
+          cs: 'Drtiče a nádoby z neolitických sídlišť kultury Šulaveri-Šomu – jedněch z prvních zemědělců regionu – ukotvují vyprávění muzea o počátcích zemědělství zdejšího kraje před asi 8 000 lety.',
+          pl: 'Żarna i naczynia z neolitycznych osad kultury Szulaweri-Szomu — jednych z pierwszych rolników regionu — osadzają opowieść muzeum o początkach rolnictwa sprzed około 8000 lat.',
+        },
+      },
+      {
+        base: 'bolnisi-museum-bronze-age-case-georgia', width: 1448, height: 1086, anchor: 'inline-bronze',
+        locationName: 'Bolnisi Museum, 48a David Agmashenebeli Street, Bolnisi, Kvemo Kartli, Georgia',
+        description: 'Display case of Bronze Age finds in the Bolnisi Museum: axes, spearheads, bracelets and rows of dark pottery, Georgia',
+        name: {
+          en: 'Display case of Bronze Age finds in the Bolnisi Museum: axes, spearheads, bracelets and rows of dark pottery, Georgia',
+          de: 'Vitrine mit bronzezeitlichen Funden im Bolnisi-Museum: Äxte, Speerspitzen, Armreifen und Reihen dunkler Keramik, Georgien',
+          fr: "Vitrine de trouvailles de l'âge du bronze au musée de Bolnisi : haches, fers de lance, bracelets et rangées de céramique sombre, Géorgie",
+          es: 'Vitrina de hallazgos de la Edad del Bronce en el Museo de Bolnisi: hachas, puntas de lanza, brazaletes y filas de cerámica oscura, Georgia',
+          nl: 'Vitrine met vondsten uit de bronstijd in het Bolnisi-museum: bijlen, speerpunten, armbanden en rijen donker aardewerk, Georgië',
+          cs: 'Vitrína s nálezy z doby bronzové v Bolnisském muzeu: sekery, hroty kopí, náramky a řady tmavé keramiky, Gruzie',
+          pl: 'Gablota ze znaleziskami z epoki brązu w Muzeum w Bolnisi: topory, groty włóczni, bransolety i rzędy ciemnej ceramiki, Gruzja',
+        },
+        caption: {
+          en: 'Kvemo Kartli’s Bronze Age in one case: patinated axes and spearheads, bracelets and belt fragments, with rows of burnished dark pottery below.',
+          de: 'Die Bronzezeit Kwemo Kartlis in einer Vitrine: patinierte Äxte und Speerspitzen, Armreifen und Gürtelfragmente, darunter Reihen polierter dunkler Keramik.',
+          fr: 'L’âge du bronze de Kvemo Kartli en une vitrine : haches et fers de lance patinés, bracelets et fragments de ceintures, avec des rangées de céramique sombre polie en dessous.',
+          es: 'La Edad del Bronce de Kvemo Kartli en una vitrina: hachas y puntas de lanza patinadas, brazaletes y fragmentos de cinturones, con filas de cerámica oscura bruñida debajo.',
+          nl: 'De bronstijd van Kvemo Kartli in één vitrine: gepatineerde bijlen en speerpunten, armbanden en gordelfragmenten, met rijen gepolijst donker aardewerk eronder.',
+          cs: 'Doba bronzová Kvemo Kartli v jediné vitríně: patinované sekery a hroty kopí, náramky a fragmenty opasků, dole řady leštěné tmavé keramiky.',
+          pl: 'Epoka brązu Kwemo Kartli w jednej gablocie: pokryte patyną topory i groty, bransolety i fragmenty pasów, a poniżej rzędy wygładzanej ciemnej ceramiki.',
+        },
+      },
+      {
+        base: 'bolnisi-museum-storage-jars-georgia', width: 1448, height: 1086, anchor: 'inline-jars',
+        locationName: 'Bolnisi Museum, 48a David Agmashenebeli Street, Bolnisi, Kvemo Kartli, Georgia',
+        description: 'Spotlit large clay storage vessels and carved stone fragments in a dark hall of the Bolnisi Museum, Georgia',
+        name: {
+          en: 'Spotlit large clay storage vessels and carved stone fragments in a dark hall of the Bolnisi Museum, Georgia',
+          de: 'Angestrahlte große Tonvorratsgefäße und behauene Steinfragmente in einem dunklen Saal des Bolnisi-Museums, Georgien',
+          fr: 'Grandes jarres de stockage en argile et fragments de pierre sculptée sous les projecteurs, dans une salle sombre du musée de Bolnisi, Géorgie',
+          es: 'Grandes vasijas de almacenamiento de arcilla y fragmentos de piedra tallada iluminados en una sala oscura del Museo de Bolnisi, Georgia',
+          nl: 'Uitgelichte grote kleien voorraadvaten en gebeeldhouwde steenfragmenten in een donkere zaal van het Bolnisi-museum, Georgië',
+          cs: 'Nasvícené velké hliněné zásobnice a tesané kamenné fragmenty v temném sále Bolnisského muzea, Gruzie',
+          pl: 'Podświetlone wielkie gliniane naczynia zasobowe i rzeźbione fragmenty kamienne w ciemnej sali Muzeum w Bolnisi, Gruzja',
+        },
+        caption: {
+          en: 'Spotlit like sculpture, these large clay storage vessels stand beside carved stone fragments — everyday containers that fed households here for centuries.',
+          de: 'Wie Skulpturen angestrahlt, stehen diese großen Tonvorratsgefäße neben behauenen Steinfragmenten – Alltagsbehälter, die hier über Jahrhunderte Haushalte versorgten.',
+          fr: 'Éclairées comme des sculptures, ces grandes jarres d’argile voisinent avec des fragments de pierre sculptée — récipients du quotidien qui nourrirent les foyers d’ici pendant des siècles.',
+          es: 'Iluminadas como esculturas, estas grandes vasijas de almacenamiento conviven con fragmentos de piedra tallada: recipientes cotidianos que abastecieron hogares durante siglos.',
+          nl: 'Uitgelicht als sculpturen staan deze grote kleien voorraadvaten naast gebeeldhouwde steenfragmenten — alledaagse vaten die hier eeuwenlang huishoudens voedden.',
+          cs: 'Nasvíceny jako sochy stojí tyto velké hliněné zásobnice vedle tesaných kamenných fragmentů – všední nádoby, jež zde po staletí živily domácnosti.',
+          pl: 'Podświetlone jak rzeźby, te wielkie gliniane naczynia zasobowe stoją obok rzeźbionych fragmentów kamienia — codzienne pojemniki, które przez wieki żywiły tutejsze domy.',
+        },
+      },
+      {
+        base: 'bolnisi-museum-pottery-gallery-georgia', width: 1448, height: 1086, anchor: 'inline-gallery',
+        locationName: 'Bolnisi Museum, 48a David Agmashenebeli Street, Bolnisi, Kvemo Kartli, Georgia',
+        description: 'Curved gallery of the Bolnisi Museum with a long sweeping case of prehistoric pottery, Georgia',
+        name: {
+          en: 'Curved gallery of the Bolnisi Museum with a long sweeping case of prehistoric pottery, Georgia',
+          de: 'Geschwungene Galerie des Bolnisi-Museums mit einer langen Vitrine prähistorischer Keramik, Georgien',
+          fr: 'Galerie incurvée du musée de Bolnisi avec une longue vitrine de céramiques préhistoriques, Géorgie',
+          es: 'Galería curva del Museo de Bolnisi con una larga vitrina de cerámica prehistórica, Georgia',
+          nl: 'Gebogen galerij van het Bolnisi-museum met een lange vitrine vol prehistorisch aardewerk, Georgië',
+          cs: 'Zakřivená galerie Bolnisského muzea s dlouhou vitrínou pravěké keramiky, Gruzie',
+          pl: 'Zakrzywiona galeria Muzeum w Bolnisi z długą gablotą prehistorycznej ceramiki, Gruzja',
+        },
+        caption: {
+          en: 'The museum’s sweeping dark galleries, designed to international standards, carry thousands of years of pottery in a single curve — one reason it was nominated for European Museum of the Year in 2022.',
+          de: 'Die geschwungenen dunklen Galerien des Museums, nach internationalen Standards gestaltet, tragen Jahrtausende von Keramik in einer einzigen Kurve – ein Grund für die Nominierung zum Europäischen Museum des Jahres 2022.',
+          fr: 'Les vastes galeries sombres du musée, conçues aux normes internationales, déroulent des millénaires de céramique en une seule courbe — l’une des raisons de sa nomination au titre de Musée européen de l’année 2022.',
+          es: 'Las amplias galerías oscuras del museo, diseñadas según estándares internacionales, despliegan milenios de cerámica en una sola curva: una de las razones de su nominación a Museo Europeo del Año 2022.',
+          nl: 'De weidse donkere galerijen van het museum, ontworpen naar internationale maatstaven, dragen duizenden jaren aardewerk in één curve — een reden voor de nominatie als Europees Museum van het Jaar 2022.',
+          cs: 'Rozmáchlé temné galerie muzea, navržené podle mezinárodních standardů, nesou tisíce let keramiky v jediné křivce – jeden z důvodů nominace na Evropské muzeum roku 2022.',
+          pl: 'Rozległe ciemne galerie muzeum, zaprojektowane według międzynarodowych standardów, mieszczą tysiące lat ceramiki w jednym łuku — jeden z powodów nominacji do tytułu Europejskiego Muzeum Roku 2022.',
+        },
+      },
+    ],
   },
   {
     slug: 'bolnisi-sioni-cathedral', name: 'Bolnisi Sioni Cathedral',
