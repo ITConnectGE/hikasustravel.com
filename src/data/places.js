@@ -1243,7 +1243,64 @@ export const cities = [
   },
   {
     slug: 'gudauri', name: 'Gudauri', region: 'mtskheta-mtianeti', published: true,
-    seoKey: 'gudauri', contentKey: 'gudauri', image: '/images/files/georgia-home.jpg',
+    seoKey: 'gudauri', contentKey: 'gudauri',
+    // Hero: real Gudauri ski-resort base area (owner's own photo) via the
+    // .hero--gudauri image-set() ladder (styles.css), replacing the shared
+    // georgia-home.jpg placeholder. PORTRAIT 2:3 (1024×1536), native width 1024 →
+    // ladder is exactly 768/1024. NO 1200/1448/1600/2400 rung, no upscale. The CSS
+    // class controls the visible background (`background-position: center 52%` —
+    // deliberate, keeps the slopes + gondola + base huts in a wide banner with a sky
+    // strip above for the H1; center center drifts into empty upper sky). No extra
+    // scrim — the shared .coverme::after overlay (rgba(0,0,0,0.35)) is the scrim, and
+    // the H1 sits in the blue sky strip, never on the bright snow. `image`/`imageAvif`
+    // = the 1024 top rung, feeding the ImageObject contentUrl.
+    image: '/images/files/gudauri-ski-resort-caucasus-georgia-1024.webp',
+    imageAvif: '/images/files/gudauri-ski-resort-caucasus-georgia-1024.avif',
+    heroClass: 'hero--gudauri',
+    // LCP hero preload — the site's preload is a single fixed URL, and the package
+    // specifies "1024 if single-URL preload", so preload the 1024 AVIF (the desktop
+    // rung) with fetchpriority=high. Page-scoped (only entries with heroPreload emit
+    // a <link rel=preload> via CityPage/useSEO + prerender.js).
+    heroPreload: '/images/files/gudauri-ski-resort-caucasus-georgia-1024.avif',
+    // Dedicated social image. NOTE: this OG is 1024x537 (a no-upscale crop, below the
+    // 1200x630 canonical — platforms accept it); do NOT upscale to 1200x630.
+    ogImage: { src: '/images/files/gudauri-ski-resort-caucasus-georgia-og.jpg', width: 1024, height: 537 },
+    // Hero image SEO/AEO metadata (owner's own photo → brand credit, set by
+    // CityPage). Hero is a CSS background (no <img alt>), so the localized alt lives
+    // here and is emitted as og:image:alt/twitter:image:alt per locale; the `caption`
+    // map feeds the hero ImageObject caption. Verbatim from gudauri-ski-resort-hero-
+    // package.md. width/height = 1024 rung. NO numeric resort specs asserted (pistes/
+    // lifts/elevations conflict across sources). contentLocation is name + geo pinned
+    // to the Gudauri SETTLEMENT (42.47583/44.47861, Wikipedia), with NO address block
+    // — deliberately DISTINCT from the Gudauri Panorama page's Friendship-Monument
+    // coordinate (42.4920/44.4527) so the two Gudauri pages don't share a point.
+    // CityPage omits address when locality/region/country are absent, emits geo when
+    // present. Region Mtskheta-Mtianeti.
+    imageMeta: {
+      width: 1024, height: 1536,
+      name: 'The Gudauri ski resort: snowy pistes, a gondola line and slopeside cafés below the Greater Caucasus under a blue winter sky, Georgia',
+      description: 'The Gudauri ski resort in the Greater Caucasus of northern Georgia: groomed snow pistes with a gondola line and chairlift climbing the south-facing slopes, a top-station building on the ridge and slopeside café huts with folded parasols in the foreground, under a deep blue winter sky. Gudauri lies in the Kazbegi Municipality along the Georgian Military Highway, in Georgia (the country).',
+      locationName: 'Gudauri, Kazbegi Municipality, Mtskheta-Mtianeti, Georgia',
+      geo: { lat: 42.47583, lng: 44.47861 },
+      alt: {
+        en: 'The Gudauri ski resort: snowy pistes, a gondola line and slopeside cafés below the Greater Caucasus under a blue winter sky, Georgia',
+        de: 'Das Skigebiet Gudauri: verschneite Pisten, eine Gondelbahn und Cafés am Hang unter dem Großen Kaukasus bei blauem Winterhimmel, Georgien',
+        fr: "La station de ski de Gudauri : pistes enneigées, télécabine et cafés au pied des pistes sous le Grand Caucase par ciel d'hiver bleu, Géorgie",
+        es: 'La estación de esquí de Gudauri: pistas nevadas, una telecabina y cafés a pie de pista bajo el Gran Cáucaso con cielo invernal azul, Georgia',
+        nl: 'Het skigebied Gudauri: besneeuwde pistes, een gondelbaan en cafés langs de piste onder de Grote Kaukasus bij blauwe winterlucht, Georgië',
+        cs: 'Lyžařský areál Gudauri: zasněžené sjezdovky, kabinková lanovka a kavárny u sjezdovky pod Velkým Kavkazem za modré zimní oblohy, Gruzie',
+        pl: 'Ośrodek narciarski Gudauri: ośnieżone stoki, kolej gondolowa i kawiarnie przy stoku pod Wielkim Kaukazem w błękitne zimowe niebo, Gruzja',
+      },
+      caption: {
+        en: "Gudauri is Georgia's largest ski resort, spread across the treeless south-facing slopes of the Greater Caucasus on the Georgian Military Highway. Its base sits around 2,000 metres and the lifts climb above 3,200, with wide groomed pistes and some of the country's best freeride terrain.",
+        de: 'Gudauri ist Georgiens größtes Skigebiet, verteilt über die baumlosen, südexponierten Hänge des Großen Kaukasus an der Georgischen Heerstraße. Die Talstation liegt um 2.000 Meter, die Lifte reichen über 3.200 – mit breiten präparierten Pisten und einigem der besten Freeride-Geländes des Landes.',
+        fr: "Gudauri est la plus grande station de ski de Géorgie, étalée sur les versants sud dénudés du Grand Caucase, le long de la route militaire géorgienne. Sa base se situe autour de 2 000 mètres et les remontées grimpent au-delà de 3 200, avec de larges pistes damées et l'un des meilleurs terrains de freeride du pays.",
+        es: 'Gudauri es la mayor estación de esquí de Georgia, extendida por las laderas sur y sin árboles del Gran Cáucaso, junto a la carretera militar georgiana. Su base está en torno a los 2.000 metros y los remontes suben por encima de los 3.200, con amplias pistas pisadas y algunos de los mejores terrenos de freeride del país.',
+        nl: 'Gudauri is het grootste skigebied van Georgië, uitgespreid over de boomloze, op het zuiden gerichte hellingen van de Grote Kaukasus langs de Georgische Militaire Weg. De basis ligt rond 2.000 meter en de liften klimmen boven 3.200, met brede geprepareerde pistes en enkele van de beste freeride-terreinen van het land.',
+        cs: 'Gudauri je největší lyžařský areál Gruzie, rozprostřený po bezlesých, k jihu obrácených svazích Velkého Kavkazu podél Gruzínské vojenské cesty. Jeho základna leží kolem 2 000 metrů a vleky stoupají nad 3 200, se širokými upravenými sjezdovkami a jedním z nejlepších freeridových terénů v zemi.',
+        pl: 'Gudauri to największy ośrodek narciarski Gruzji, rozłożony na bezleśnych, południowych stokach Wielkiego Kaukazu przy Gruzińskiej Drodze Wojennej. Baza leży około 2000 metrów, a wyciągi wznoszą się powyżej 3200, z szerokimi ratrakowanymi stokami i jednym z najlepszych terenów freeride w kraju.',
+      },
+    },
     thingsToDo: {
       seoKey: 'thingsToDoGudauri', contentKey: 'thingsToDoGudauri', image: '/images/files/georgia-home.jpg',
       address: { addressLocality: 'Gudauri' },

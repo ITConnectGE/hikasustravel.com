@@ -806,6 +806,34 @@ section {
   }
 }
 /* Native width 1024 — no rung above it. Do not add a 1200/1448/1600/2400 breakpoint. */
+/* Gudauri (ski-resort/town hub) hero — per-page CSS background (same opt-in
+   mechanism as .hero--gremi). PORTRAIT 2:3 source (native 1024x1536), so the ladder
+   is exactly 768/1024 with the top breakpoint at min-width:768. NO rung above 1024
+   (no 1200/1448/1600/2400), no upscale. `background-position: center 52%` is
+   DELIBERATE — it keeps the slopes + gondola + base huts in a wide banner with a sky
+   strip above for the H1; center center drifts into empty upper sky. Do NOT
+   normalise. Expect softness on very wide desktops (native width 1024, flagged). The
+   snow is bright: the shared .coverme::after overlay (rgba(0,0,0,0.35)) is the scrim;
+   keep the H1 in the blue sky strip, never on the snow. */
+.hero--gudauri {
+  background-image: url("/images/files/gudauri-ski-resort-caucasus-georgia-768.webp");
+  background-image: image-set(
+    url("/images/files/gudauri-ski-resort-caucasus-georgia-768.avif") type("image/avif"),
+    url("/images/files/gudauri-ski-resort-caucasus-georgia-768.webp") type("image/webp")
+  );
+  background-position: center 52%;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+@media (min-width: 768px) {
+  .hero--gudauri {
+    background-image: image-set(
+      url("/images/files/gudauri-ski-resort-caucasus-georgia-1024.avif") type("image/avif"),
+      url("/images/files/gudauri-ski-resort-caucasus-georgia-1024.webp") type("image/webp")
+    );
+  }
+}
+/* Native width 1024 — no rung above it. Do not add a 1200/1448/1600/2400 breakpoint. */
 /* Kazbegi (region hub) hero — per-page CSS background (same opt-in mechanism as
    .hero--gremi). PORTRAIT 2:3 source (native 1024x1536), so the ladder is exactly
    768/1024 with the top breakpoint at min-width:768. NO rung above 1024 (no
