@@ -239,13 +239,25 @@ export default function CityPage() {
           contentLocation: {
             '@type': 'Place',
             name: img.locationName,
-            address: {
-              '@type': 'PostalAddress',
-              addressLocality: img.locality,
-              addressRegion: img.region,
-              addressCountry: 'GE',
-            },
-            geo: { '@type': 'GeoCoordinates', latitude: img.geo.lat, longitude: img.geo.lng },
+            // Address + geo are optional (same conditional path as SitePage/RegionPage
+            // and the hero imageNode): a generic inline may ship a name+geo
+            // contentLocation with no postal address (e.g. the Batumi parasailing
+            // shot — "Batumi, Adjara, Georgia" + an approximate city geo, no street).
+            // Every existing portraitInline (Ushguli) supplies locality+region, so its
+            // output is unchanged; a locality-less inline omits the address block.
+            ...((img.locality || img.region)
+              ? {
+                  address: {
+                    '@type': 'PostalAddress',
+                    addressLocality: img.locality,
+                    addressRegion: img.region,
+                    addressCountry: 'GE',
+                  },
+                }
+              : {}),
+            ...(img.geo
+              ? { geo: { '@type': 'GeoCoordinates', latitude: img.geo.lat, longitude: img.geo.lng } }
+              : {}),
           },
         })),
         // Hero ImageObject via the `imageMeta` block (for heroes whose file naming

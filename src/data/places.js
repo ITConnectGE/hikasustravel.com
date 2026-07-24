@@ -770,7 +770,91 @@ export const cities = [
   },
   {
     slug: 'batumi', name: 'Batumi', region: 'adjara', published: true,
-    seoKey: 'batumi', contentKey: 'batumi', image: '/images/files/georgia-home.jpg',
+    seoKey: 'batumi', contentKey: 'batumi',
+    // Hero: real Batumi Black Sea harbour (owner's own photo) via the .hero--batumi
+    // image-set() ladder (styles.css), replacing the shared georgia-home.jpg
+    // placeholder. Native 4:3 (1448x1086), just under the 1600 rung, so the ladder is
+    // exactly 768/1200/1448 with the top breakpoint at min-width:1200. NO 1600/2400
+    // rung, no upscale. `background-position: center center`; the blue-sky upper band
+    // is the H1 zone. No extra scrim — the shared .coverme::after overlay
+    // (rgba(0,0,0,0.35)) keeps the centre-anchored H1 legible. `image`/`imageAvif` =
+    // the 1448 top rung → ImageObject contentUrl. (Hero is the WORKING PORT view —
+    // cranes/cargo alongside the sailing boat — a conscious editorial choice.)
+    image: '/images/files/batumi-black-sea-port-georgia-1448.webp',
+    imageAvif: '/images/files/batumi-black-sea-port-georgia-1448.avif',
+    heroClass: 'hero--batumi',
+    // LCP hero preload — the 1200 AVIF (the rung the ladder serves at 768-1199px),
+    // fetchpriority=high (via CityPage/useSEO + prerender.js).
+    heroPreload: '/images/files/batumi-black-sea-port-georgia-1200.avif',
+    // Dedicated 1.91:1 social-share image (og:image / twitter:image), .jpg default.
+    ogImage: { src: '/images/files/batumi-black-sea-port-georgia-og.jpg', width: 1200, height: 630 },
+    // Hero image SEO/AEO metadata (owner's own photo → brand credit, set by CityPage).
+    // Hero is a CSS background, so the localized alt lives here and feeds og:image:alt/
+    // twitter:image:alt per locale; the `caption` map feeds the hero ImageObject
+    // caption. Verbatim from batumi-black-sea-images-package.md. `imageId: 'hero-image'`
+    // makes CityPage emit the ImageObject `@id` …#hero-image (page-scoped). width/height
+    // = 1448 rung. contentLocation = name + geo (approx Batumi city 41.6500/41.6367),
+    // NO address block. Region Adjara.
+    imageMeta: {
+      width: 1448, height: 1086, imageId: 'hero-image',
+      name: "Batumi's Black Sea harbour with a sailing tour boat and port cranes, the green hills of Adjara behind, Georgia",
+      description: "The Black Sea harbour of Batumi: a white three-masted sailing tour boat on the water, port cranes, a storage tank and a cargo ship along the quay, with the green cloud-topped hills of Adjara behind. Batumi is the capital of the Adjara region and Georgia's main Black Sea port and resort city, in Georgia (the country).",
+      locationName: 'Batumi, Adjara, Georgia',
+      geo: { lat: 41.6500, lng: 41.6367 },
+      alt: {
+        en: "Batumi's Black Sea harbour with a sailing tour boat and port cranes, the green hills of Adjara behind, Georgia",
+        de: 'Der Schwarzmeerhafen von Batumi mit einem Segel-Ausflugsschiff und Hafenkränen, dahinter die grünen Hügel Adschariens, Georgien',
+        fr: "Le port de Batoumi sur la mer Noire avec un voilier d'excursion et des grues portuaires, les collines vertes d'Adjarie derrière, Géorgie",
+        es: 'El puerto de Batumi en el mar Negro con un velero de excursión y grúas portuarias, las verdes colinas de Adjaria detrás, Georgia',
+        nl: 'De Zwarte-Zeehaven van Batoemi met een zeilexcursieboot en havenkranen, daarachter de groene heuvels van Adzjarië, Georgië',
+        cs: 'Černomořský přístav Batumi s plachetní výletní lodí a přístavními jeřáby, v pozadí zelené kopce Adžárie, Gruzie',
+        pl: 'Czarnomorski port w Batumi z żaglową łodzią wycieczkową i dźwigami portowymi, w tle zielone wzgórza Adżarii, Gruzja',
+      },
+      caption: {
+        en: "Batumi is Georgia's Black Sea capital — a working port and summer resort in one. Tour boats and cargo ships share the harbour, while the green hills of Adjara rise straight from the coast behind the city.",
+        de: 'Batumi ist Georgiens Hauptstadt am Schwarzen Meer – Arbeitshafen und Sommerresort zugleich. Ausflugsboote und Frachter teilen sich den Hafen, während sich hinter der Stadt die grünen Hügel Adschariens direkt aus der Küste erheben.',
+        fr: "Batoumi est la capitale géorgienne de la mer Noire — à la fois port actif et station estivale. Bateaux d'excursion et cargos se partagent le port, tandis que les collines vertes d'Adjarie s'élèvent droit depuis la côte derrière la ville.",
+        es: 'Batumi es la capital georgiana del mar Negro: puerto de trabajo y centro veraniego a la vez. Barcos de excursión y cargueros comparten el puerto, mientras las verdes colinas de Adjaria se alzan desde la costa tras la ciudad.',
+        nl: 'Batoemi is Georgiës hoofdstad aan de Zwarte Zee — tegelijk werkhaven en zomerbadplaats. Excursieboten en vrachtschepen delen de haven, terwijl de groene heuvels van Adzjarië achter de stad recht uit de kust oprijzen.',
+        cs: 'Batumi je gruzínská metropole u Černého moře – zároveň funkční přístav i letní letovisko. Výletní lodě a nákladní plavidla sdílejí přístav, zatímco za městem se přímo z pobřeží zvedají zelené kopce Adžárie.',
+        pl: 'Batumi to gruzińska stolica nad Morzem Czarnym — jednocześnie port i letni kurort. Łodzie wycieczkowe i statki towarowe dzielą port, a za miastem wprost z wybrzeża wznoszą się zielone wzgórza Adżarii.',
+      },
+    },
+    // One contextual inline body photo (own): sunset parasailing off the Batumi
+    // seafront, rendered by CityPage's data-driven portraitInlines mechanism as a real
+    // <figure class="body-img"> (landscape via `portrait: false`) placed after the
+    // "Batumi Boulevard and the seafront" section (afterChunk 3 — the beach/activities
+    // text). LANDSCAPE 3:2 (1448x965), ladder 768/1200/1448 (NO 1600/2400, no upscale),
+    // fallback <img> = -1448.webp at 1448x965 (fallbackWidth). Emits one inline
+    // ImageObject each: stable @id #inline-parasailing, brand credit, NO
+    // representativeOfPage (hero stays representative), contentLocation name+geo (no
+    // address, via the conditional builder). loading=lazy, decoding=async, no
+    // fetchpriority, no OG. Verbatim from batumi-black-sea-images-package.md.
+    portraitInlines: [
+      {
+        base: 'batumi-sunset-parasailing-black-sea-georgia', width: 1448, height: 965, afterChunk: 3,
+        anchor: 'inline-parasailing', portrait: false, widths: [768, 1200, 1448], fallbackWidth: 1448,
+        locationName: 'Batumi, Adjara, Georgia', geo: { lat: 41.6500, lng: 41.6367 },
+        alt: {
+          en: 'Parasailing over the Black Sea at sunset off Batumi, a boat towing a parachute against a pink and purple sky, Georgia',
+          de: 'Parasailing über dem Schwarzen Meer bei Sonnenuntergang vor Batumi, ein Boot zieht einen Fallschirm vor rosa-violettem Himmel, Georgien',
+          fr: "Parachute ascensionnel au-dessus de la mer Noire au coucher du soleil au large de Batoumi, un bateau tractant une voile sur un ciel rose et violet, Géorgie",
+          es: 'Parasailing sobre el mar Negro al atardecer frente a Batumi, una lancha remolcando un paracaídas ante un cielo rosa y violeta, Georgia',
+          nl: 'Parasailing boven de Zwarte Zee bij zonsondergang voor Batoemi, een boot trekt een parachute tegen een roze-paarse lucht, Georgië',
+          cs: 'Parasailing nad Černým mořem při západu slunce u Batumi, člun táhne padák proti růžovo-fialové obloze, Gruzie',
+          pl: 'Parasailing nad Morzem Czarnym o zachodzie słońca u wybrzeży Batumi, łódź holująca spadochron na tle różowo-fioletowego nieba, Gruzja',
+        },
+        caption: {
+          en: 'On summer evenings the Batumi seafront turns to play: boats tow parasailers out over the Black Sea as the sun drops into the water and the sky flushes pink and violet.',
+          de: 'An Sommerabenden wird die Uferpromenade von Batumi zum Spielplatz: Boote ziehen Parasailer hinaus über das Schwarze Meer, während die Sonne im Wasser versinkt und der Himmel sich rosa und violett färbt.',
+          fr: "Les soirs d'été, le front de mer de Batoumi passe aux loisirs : les bateaux tractent les parachutistes ascensionnels au-dessus de la mer Noire tandis que le soleil plonge dans l'eau et que le ciel s'empourpre de rose et de violet.",
+          es: 'En las tardes de verano, el paseo marítimo de Batumi se entrega al ocio: las lanchas remolcan a los parasailers sobre el mar Negro mientras el sol se hunde en el agua y el cielo se tiñe de rosa y violeta.',
+          nl: 'Op zomeravonden wordt de boulevard van Batoemi speels: boten trekken parasailers uit over de Zwarte Zee terwijl de zon in het water zakt en de lucht roze en violet kleurt.',
+          cs: 'Za letních večerů se batumské nábřeží mění v hřiště: čluny táhnou parasailery nad Černým mořem, zatímco slunce zapadá do vody a obloha rudne do růžova a fialova.',
+          pl: 'Latem wieczorami nadmorska promenada Batumi zamienia się w plac zabaw: łodzie holują parasailerów nad Morzem Czarnym, gdy słońce zapada w wodę, a niebo różowieje i fioletowieje.',
+        },
+      },
+    ],
     thingsToDo: {
       seoKey: 'thingsToDoBatumi', contentKey: 'thingsToDoBatumi', image: '/images/files/georgia-home.jpg',
       address: { addressLocality: 'Batumi' },

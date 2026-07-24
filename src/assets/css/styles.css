@@ -806,6 +806,39 @@ section {
   }
 }
 /* Native width 1024 — no rung above it. Do not add a 1200/1448/1600/2400 breakpoint. */
+/* Batumi (city hub) hero — per-page CSS background (same opt-in mechanism as
+   .hero--gremi). Black Sea harbour, native 4:3 (1448x1086), just under the 1600 rung,
+   so the ladder is exactly 768/1200/1448 with the top breakpoint at min-width:1200. NO
+   1600/2400 rung, no upscale. `background-position: center center`; the blue-sky upper
+   band is the H1 zone, kept legible by the shared .coverme::after overlay
+   (rgba(0,0,0,0.35)), so no extra scrim. */
+.hero--batumi {
+  background-image: url("/images/files/batumi-black-sea-port-georgia-1200.webp");
+  background-image: image-set(
+    url("/images/files/batumi-black-sea-port-georgia-768.avif") type("image/avif"),
+    url("/images/files/batumi-black-sea-port-georgia-768.webp") type("image/webp")
+  );
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+@media (min-width: 768px) {
+  .hero--batumi {
+    background-image: image-set(
+      url("/images/files/batumi-black-sea-port-georgia-1200.avif") type("image/avif"),
+      url("/images/files/batumi-black-sea-port-georgia-1200.webp") type("image/webp")
+    );
+  }
+}
+@media (min-width: 1200px) {
+  .hero--batumi {
+    background-image: image-set(
+      url("/images/files/batumi-black-sea-port-georgia-1448.avif") type("image/avif"),
+      url("/images/files/batumi-black-sea-port-georgia-1448.webp") type("image/webp")
+    );
+  }
+}
+/* No rung above 1448 exists. Do not add a 1600 or 2400 breakpoint. */
 /* Tbilisi (city) hero — per-page CSS background (same opt-in mechanism as
    .hero--gremi), REPLACING the old inline single-JPG hero (tbilisi.jpg). Old-Town/
    Narikala/Mtkvari panorama, native 4:3 (1448x1086), just under the 1600 rung, so
