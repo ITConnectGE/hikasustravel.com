@@ -1179,7 +1179,62 @@ export const cities = [
   },
   {
     slug: 'kazbegi', name: 'Kazbegi (Stepantsminda)', region: 'mtskheta-mtianeti', published: true,
-    seoKey: 'kazbegiStepantsminda', contentKey: 'kazbegiStepantsminda', image: '/images/files/georgia-home.jpg',
+    seoKey: 'kazbegiStepantsminda', contentKey: 'kazbegiStepantsminda',
+    // Hero: real Kazbegi-area village below the Greater Caucasus (owner's own photo)
+    // via the .hero--kazbegi image-set() ladder (styles.css), replacing the shared
+    // georgia-home.jpg placeholder. PORTRAIT 2:3 (1024×1536), native width 1024 →
+    // ladder is exactly 768/1024. NO 1200/1448/1600/2400 rung, no upscale. The CSS
+    // class controls the visible background (`background-position: center 48%` —
+    // deliberate, keeps the peaks + village with sky above for the H1; center center
+    // leans to empty sky, lower buries the peaks in the dark forest). No extra scrim
+    // — the shared .coverme::after overlay (rgba(0,0,0,0.35)) already provides the
+    // light scrim, and the H1 sits in the blue sky, never over the dark forest foot.
+    // `image`/`imageAvif` = the 1024 top rung, feeding the ImageObject contentUrl.
+    image: '/images/files/kazbegi-mountains-village-georgia-1024.webp',
+    imageAvif: '/images/files/kazbegi-mountains-village-georgia-1024.avif',
+    heroClass: 'hero--kazbegi',
+    // LCP hero preload — the site's preload is a single fixed URL, and the package
+    // specifies "1024 if single-URL preload", so preload the 1024 AVIF (the desktop
+    // rung) with fetchpriority=high. Page-scoped (only entries with heroPreload emit
+    // a <link rel=preload> via CityPage/useSEO + prerender.js).
+    heroPreload: '/images/files/kazbegi-mountains-village-georgia-1024.avif',
+    // Dedicated social image. NOTE: this OG is 1024x537 (a no-upscale crop, below the
+    // 1200x630 canonical — platforms accept it); do NOT upscale to 1200x630.
+    ogImage: { src: '/images/files/kazbegi-mountains-village-georgia-og.jpg', width: 1024, height: 537 },
+    // Hero image SEO/AEO metadata (owner's own photo → brand credit, set by
+    // CityPage). Hero is a CSS background (no <img alt>), so the localized alt lives
+    // here and is emitted as og:image:alt/twitter:image:alt per locale; the `caption`
+    // map feeds the hero ImageObject caption. Verbatim from kazbegi-hero-package.md.
+    // width/height = 1024 rung. DELIBERATELY names NO summit (the peak reads as a
+    // serrated ridge, NOT the Kazbek cone) and NO specific village. contentLocation
+    // is name + geo pinned to Stepantsminda town (42.6572/44.6415) as the REGIONAL
+    // anchor, with NO address block — CityPage omits address when locality/region/
+    // country are absent and emits geo when present. Region Mtskheta-Mtianeti.
+    imageMeta: {
+      width: 1024, height: 1536,
+      name: 'A village on green terraces below the snow-capped peaks of the Greater Caucasus in the Kazbegi region, Georgia',
+      description: 'A village of red- and metal-roofed houses on green mountain terraces in the Kazbegi (Stepantsminda) region of northern Georgia, below a serrated wall of snow-capped Greater Caucasus peaks under a deep blue sky with towering clouds, and dark conifer forest in the foreground. Kazbegi lies on the Georgian Military Highway in the Mtskheta-Mtianeti region of Georgia (the country).',
+      locationName: 'Kazbegi (Stepantsminda) region, Mtskheta-Mtianeti, Georgia',
+      geo: { lat: 42.6572, lng: 44.6415 },
+      alt: {
+        en: 'A village on green terraces below the snow-capped peaks of the Greater Caucasus in the Kazbegi region, Georgia',
+        de: 'Ein Dorf auf grünen Terrassen unterhalb der schneebedeckten Gipfel des Großen Kaukasus in der Region Kasbegi, Georgien',
+        fr: 'Un village sur des terrasses verdoyantes sous les sommets enneigés du Grand Caucase dans la région de Kazbegi, Géorgie',
+        es: 'Una aldea en terrazas verdes bajo los picos nevados del Gran Cáucaso en la región de Kazbegi, Georgia',
+        nl: 'Een dorp op groene terrassen onder de besneeuwde toppen van de Grote Kaukasus in de regio Kazbegi, Georgië',
+        cs: 'Vesnice na zelených terasách pod zasněženými vrcholy Velkého Kavkazu v regionu Kazbegi, Gruzie',
+        pl: 'Wieś na zielonych tarasach pod ośnieżonymi szczytami Wielkiego Kaukazu w regionie Kazbegi, Gruzja',
+      },
+      caption: {
+        en: 'The Kazbegi region — reached by the Georgian Military Highway north of Tbilisi — gathers green valleys, stone villages and the snow-capped wall of the Greater Caucasus along the Russian border. Nearby stands its most famous sight, the Gergeti Trinity Church beneath Mount Kazbek.',
+        de: 'Die Region Kasbegi – über die Georgische Heerstraße nördlich von Tiflis erreichbar – vereint grüne Täler, Steindörfer und die schneebedeckte Wand des Großen Kaukasus entlang der russischen Grenze. Ganz in der Nähe liegt ihr berühmtestes Wahrzeichen, die Gergeti-Dreifaltigkeitskirche unter dem Kasbek.',
+        fr: "La région de Kazbegi — accessible par la route militaire géorgienne au nord de Tbilissi — réunit vallées verdoyantes, villages de pierre et la muraille enneigée du Grand Caucase le long de la frontière russe. Tout près se dresse son site le plus célèbre, l'église de la Trinité de Guerguéti sous le mont Kazbek.",
+        es: 'La región de Kazbegi —a la que se llega por la carretera militar georgiana al norte de Tiflis— reúne valles verdes, aldeas de piedra y la muralla nevada del Gran Cáucaso junto a la frontera rusa. Cerca se alza su lugar más célebre, la iglesia de la Trinidad de Guergueti bajo el monte Kazbek.',
+        nl: 'De regio Kazbegi — bereikbaar via de Georgische Militaire Weg ten noorden van Tbilisi — verenigt groene valleien, stenen dorpen en de besneeuwde wand van de Grote Kaukasus langs de Russische grens. Vlakbij staat haar beroemdste bezienswaardigheid, de Gergeti-Drie-eenheidskerk onder de Kazbek.',
+        cs: 'Region Kazbegi – dostupný Gruzínskou vojenskou cestou severně od Tbilisi – spojuje zelená údolí, kamenné vesnice a zasněženou stěnu Velkého Kavkazu podél ruské hranice. Nedaleko stojí jeho nejslavnější památka, gergetský kostel Nejsvětější Trojice pod horou Kazbek.',
+        pl: 'Region Kazbegi — dostępny Gruzińską Drogą Wojenną na północ od Tbilisi — łączy zielone doliny, kamienne wsie i ośnieżoną ścianę Wielkiego Kaukazu wzdłuż granicy z Rosją. Nieopodal wznosi się jego najsłynniejszy zabytek, cerkiew Trójcy Świętej w Gergeti pod górą Kazbek.',
+      },
+    },
     thingsToDo: {
       seoKey: 'thingsToDoKazbegiStepantsminda', contentKey: 'thingsToDoKazbegiStepantsminda', image: '/images/files/georgia-home.jpg',
       address: { addressLocality: 'Stepantsminda' },
@@ -4657,6 +4712,9 @@ export function publishedDestinationPages() {
       // og:image / og:image:alt tags. Mirrors the sites branch below.
       ogImage: c.ogImage?.src, ogImageWidth: c.ogImage?.width, ogImageHeight: c.ogImage?.height,
       imageAlt: c.imageMeta?.alt,
+      // Optional LCP hero preload rung — prerender.js emits a static <link
+      // rel=preload as=image> for it (only cities that set heroPreload).
+      heroPreload: c.heroPreload,
     })
     if (c.thingsToDo) {
       pages.push({

@@ -268,13 +268,24 @@ export default function CityPage() {
           contentLocation: {
             '@type': 'Place',
             name: heroImageMeta.locationName,
-            address: {
-              '@type': 'PostalAddress',
-              addressLocality: heroImageMeta.locality,
-              addressRegion: heroImageMeta.region,
-              addressCountry: heroImageMeta.country,
-            },
-            geo: { '@type': 'GeoCoordinates', latitude: heroImageMeta.geo.lat, longitude: heroImageMeta.geo.lng },
+            // Address + geo are optional (same conditional path as SitePage): a hero
+            // package may ship a name+geo contentLocation with no postal address
+            // (e.g. Kazbegi's regional anchor). Every existing imageMeta hero (Mestia)
+            // supplies locality/region, so its output is unchanged; a geo-only or
+            // address-less meta omits the missing block rather than emitting empties.
+            ...((heroImageMeta.locality || heroImageMeta.region || heroImageMeta.country)
+              ? {
+                  address: {
+                    '@type': 'PostalAddress',
+                    addressLocality: heroImageMeta.locality,
+                    addressRegion: heroImageMeta.region,
+                    addressCountry: heroImageMeta.country,
+                  },
+                }
+              : {}),
+            ...(heroImageMeta.geo
+              ? { geo: { '@type': 'GeoCoordinates', latitude: heroImageMeta.geo.lat, longitude: heroImageMeta.geo.lng } }
+              : {}),
           },
         }] : []),
         {
@@ -308,6 +319,11 @@ export default function CityPage() {
     ogImage: city.ogImage?.src,
     ogImageWidth: city.ogImage?.width,
     ogImageHeight: city.ogImage?.height,
+    // Optional LCP hero preload (page-scoped): only cities that set `heroPreload`
+    // emit a <link rel=preload as=image> for that rung. Others pass undefined.
+    preload: city.heroPreload
+      ? { href: city.heroPreload, type: 'image/avif', fetchpriority: 'high' }
+      : undefined,
     jsonLd,
   } : {})
 
