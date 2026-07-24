@@ -397,7 +397,62 @@ export const cities = [
   },
   {
     slug: 'akhaltsikhe', name: 'Akhaltsikhe', region: 'samtskhe-javakheti', published: true,
-    seoKey: 'akhaltsikhe', contentKey: 'akhaltsikhe', image: '/images/files/georgia-home.jpg',
+    seoKey: 'akhaltsikhe', contentKey: 'akhaltsikhe',
+    // Hero: the Rabati fortress ramparts above Akhaltsikhe town in evening light
+    // (owner's own photo, deliberately a DIFFERENT from-the-walls view than the
+    // /akhaltsikhe/rabati-fortress page's head-on citadel hero), via the
+    // .hero--akhaltsikhe image-set() ladder (styles.css), replacing the shared
+    // georgia-home.jpg placeholder. Native 4:3 (1448x1086), just under the 1600 rung,
+    // so the ladder is exactly 768/1200/1448 with the top breakpoint at min-width:
+    // 1200. NO 1600/2400 rung, no upscale. `background-position: center center`; the
+    // bright cloudy sky upper-left is the H1 zone. No extra scrim — the shared
+    // .coverme::after overlay (rgba(0,0,0,0.35)) keeps the white H1 legible off the
+    // golden sun-break. `image`/`imageAvif` = the 1448 top rung → ImageObject
+    // contentUrl.
+    image: '/images/files/akhaltsikhe-rabati-fortress-ramparts-georgia-1448.webp',
+    imageAvif: '/images/files/akhaltsikhe-rabati-fortress-ramparts-georgia-1448.avif',
+    heroClass: 'hero--akhaltsikhe',
+    // LCP hero preload — the 1200 AVIF (the rung the ladder serves at 768-1199px),
+    // fetchpriority=high. Page-scoped (only entries with heroPreload emit a
+    // <link rel=preload> via CityPage/useSEO + prerender.js).
+    heroPreload: '/images/files/akhaltsikhe-rabati-fortress-ramparts-georgia-1200.avif',
+    // Dedicated 1.91:1 social-share image (og:image / twitter:image), .jpg default.
+    ogImage: { src: '/images/files/akhaltsikhe-rabati-fortress-ramparts-georgia-og.jpg', width: 1200, height: 630 },
+    // Hero image SEO/AEO metadata (owner's own photo → brand credit, set by
+    // CityPage). Hero is a CSS background (no <img alt>), so the localized alt lives
+    // here and is emitted as og:image:alt/twitter:image:alt per locale; the `caption`
+    // map feeds the hero ImageObject caption. Verbatim from akhaltsikhe-town-hero-
+    // package.md. width/height = 1448 rung. contentLocation is name + geo pinned to
+    // the Akhaltsikhe TOWN CENTRE (41.63889/42.98528), with NO address block —
+    // DELIBERATELY the town, distinct from the Rabati Fortress page's coordinate
+    // (41.64267/42.97706) so the two Akhaltsikhe pages stay on separate points.
+    // CityPage omits address when locality/region/country are absent, emits geo when
+    // present. Region Samtskhe-Javakheti.
+    imageMeta: {
+      width: 1448, height: 1086,
+      name: 'The ramparts of Rabati fortress above Akhaltsikhe, a round stone tower and the citadel beyond in evening light, Georgia',
+      description: 'A view along the crenellated ramparts of Rabati fortress above the town of Akhaltsikhe, with a round stone watchtower in the foreground and the flag-topped citadel and Jakeli palace beyond, in warm evening light with green hills to the left. Akhaltsikhe is the capital of the Samtskhe-Javakheti region of southern Georgia (the country).',
+      locationName: 'Akhaltsikhe, Samtskhe-Javakheti, Georgia',
+      geo: { lat: 41.63889, lng: 42.98528 },
+      alt: {
+        en: 'The ramparts of Rabati fortress above Akhaltsikhe, a round stone tower and the citadel beyond in evening light, Georgia',
+        de: 'Die Wälle der Festung Rabati über Achalziche, ein runder Steinturm und dahinter die Zitadelle im Abendlicht, Georgien',
+        fr: "Les remparts de la forteresse de Rabati au-dessus d'Akhaltsikhe, une tour ronde en pierre et la citadelle au loin dans la lumière du soir, Géorgie",
+        es: 'Las murallas de la fortaleza de Rabati sobre Ajaltsije, una torre redonda de piedra y la ciudadela al fondo con luz del atardecer, Georgia',
+        nl: 'De wallen van de Rabati-vesting boven Achaltsiche, een ronde stenen toren en daarachter de citadel in het avondlicht, Georgië',
+        cs: 'Hradby pevnosti Rabati nad Achalciche, kulatá kamenná věž a v pozadí citadela ve večerním světle, Gruzie',
+        pl: 'Mury twierdzy Rabati nad Achalcyche, okrągła kamienna wieża i cytadela w tle w wieczornym świetle, Gruzja',
+      },
+      caption: {
+        en: 'Akhaltsikhe, the capital of Samtskhe-Javakheti, grew up beneath the walls of Rabati. From the fortress ramparts the round watchtowers and the flag-topped citadel look out over the Potskhovi valley — and make the town a natural base for Vardzia and the wider region.',
+        de: 'Achalziche, die Hauptstadt von Samzche-Dschawachetien, entstand unterhalb der Mauern von Rabati. Von den Festungswällen blicken die runden Wachtürme und die fahnengekrönte Zitadelle über das Potskhovi-Tal – und machen die Stadt zum idealen Ausgangspunkt für Wardsia und die Region.',
+        fr: "Akhaltsikhe, capitale de la Samtskhé-Djavakhétie, s'est développée au pied des murs de Rabati. Depuis les remparts, les tours de guet rondes et la citadelle surmontée d'un drapeau dominent la vallée de la Potskhovi — faisant de la ville une base idéale pour Vardzia et la région.",
+        es: 'Ajaltsije, capital de Samtsje-Yavajeti, creció al pie de las murallas de Rabati. Desde los adarves, las torres de vigilancia redondas y la ciudadela coronada por una bandera dominan el valle del Potskhovi, y hacen de la ciudad una base natural para Vardzia y la región.',
+        nl: 'Achaltsiche, de hoofdstad van Samtsche-Dzjavacheti, groeide onder de muren van Rabati. Vanaf de vestingwallen kijken de ronde wachttorens en de met een vlag bekroonde citadel uit over het Potskhovi-dal — en maken de stad tot een natuurlijke uitvalsbasis voor Vardzia en de regio.',
+        cs: 'Achalciche, hlavní město Samcche-Džavachetie, vyrostlo pod hradbami Rabati. Z hradeb pevnosti shlížejí kulaté strážní věže a praporem korunovaná citadela na údolí Potskhovi – a činí z města přirozené východisko pro Vardzii a celý region.',
+        pl: 'Achalcyche, stolica Samcche-Dżawachetii, wyrosło u stóp murów Rabati. Z blanków twierdzy okrągłe wieże strażnicze i zwieńczona flagą cytadela spoglądają na dolinę Potskhovi — czyniąc miasto naturalną bazą dla Vardzii i regionu.',
+      },
+    },
     thingsToDo: {
       seoKey: 'thingsToDoAkhaltsikhe', contentKey: 'thingsToDoAkhaltsikhe', image: '/images/files/georgia-home.jpg',
       address: { addressRegion: 'Samtskhe-Javakheti' },
