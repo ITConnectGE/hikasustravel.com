@@ -286,7 +286,7 @@ function setOrAppendMeta($, name, content, attr = 'property') {
   else $('head').append(`<meta ${attr}="${name}" content="${escAttr(String(content))}">`)
 }
 
-function writeHtml(filePath, lang, { title, description, keywords, canonical, image, ogImage, ogImageAlt, ogImageWidth, ogImageHeight, ogLocale }) {
+function writeHtml(filePath, lang, { title, description, keywords, canonical, image, ogImage, ogImageAlt, ogImageWidth, ogImageHeight, heroPreload, ogLocale }) {
   // Use the trailing-slash form the host serves at 200; this also flows through
   // to the hreflang/x-default alternates and og:url derived from it below.
   canonical = withTrailingSlash(canonical)
@@ -312,6 +312,16 @@ function writeHtml(filePath, lang, { title, description, keywords, canonical, im
 
   // canonical
   $('link[rel="canonical"]').attr('href', canonical)
+
+  // Optional LCP hero preload (only pages that set heroPreload) — a static
+  // <link rel=preload as=image> so the browser fetches the hero (a CSS
+  // background, discovered late) from the initial HTML. Tagged data-seo-preload
+  // so the client-side useSEO reuses this element instead of appending a second.
+  if (heroPreload) {
+    $('head').append(
+      `<link rel="preload" as="image" href="${escAttr(heroPreload)}" type="image/avif" fetchpriority="high" data-seo-preload>`,
+    )
+  }
 
   // OG tags
   $('meta[property="og:title"]').attr('content', title)
@@ -431,6 +441,7 @@ for (const lang of LANGS) {
       ogImageAlt: dest.imageAlt?.[lang],
       ogImageWidth: dest.ogImageWidth,
       ogImageHeight: dest.ogImageHeight,
+      heroPreload: dest.heroPreload,
       ogLocale,
     })
   }

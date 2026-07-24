@@ -34,7 +34,7 @@ function setLink(rel, href, attrs = {}) {
   el.setAttribute('href', href)
 }
 
-export default function useSEO({ title, description, keywords, lang = 'en', path = '', image, imageAlt, ogImage, ogImageWidth, ogImageHeight, jsonLd } = {}) {
+export default function useSEO({ title, description, keywords, lang = 'en', path = '', image, imageAlt, ogImage, ogImageWidth, ogImageHeight, preload, jsonLd } = {}) {
   useEffect(() => {
     // Title
     if (title) document.title = title
@@ -79,6 +79,27 @@ export default function useSEO({ title, description, keywords, lang = 'en', path
       setMeta('twitter:image:alt', imageAlt)
     }
 
+    // Hero preload (optional) — a page may preload its LCP hero rung so the
+    // browser starts fetching it from the initial HTML (the hero is a CSS
+    // background, which browsers discover late). Page-scoped: only pages that pass
+    // `preload` emit the tag; it's tagged data-seo-preload so it's found/removed
+    // reliably regardless of its attrs, and cleared when a page passes no preload.
+    let preloadEl = document.querySelector('link[data-seo-preload]')
+    if (preload && preload.href) {
+      if (!preloadEl) {
+        preloadEl = document.createElement('link')
+        preloadEl.setAttribute('rel', 'preload')
+        preloadEl.setAttribute('as', 'image')
+        preloadEl.setAttribute('data-seo-preload', '')
+        document.head.appendChild(preloadEl)
+      }
+      preloadEl.setAttribute('href', preload.href)
+      if (preload.type) preloadEl.setAttribute('type', preload.type)
+      if (preload.fetchpriority) preloadEl.setAttribute('fetchpriority', preload.fetchpriority)
+    } else {
+      preloadEl?.remove()
+    }
+
     // JSON-LD
     let scriptEl = document.querySelector('script[data-seo-jsonld]')
     if (jsonLd) {
@@ -94,8 +115,9 @@ export default function useSEO({ title, description, keywords, lang = 'en', path
     }
 
     return () => {
-      // Clean up JSON-LD on unmount
+      // Clean up JSON-LD + hero preload on unmount
       document.querySelector('script[data-seo-jsonld]')?.remove()
+      document.querySelector('link[data-seo-preload]')?.remove()
     }
-  }, [title, description, keywords, lang, path, image, imageAlt, ogImage, ogImageWidth, ogImageHeight, jsonLd])
+  }, [title, description, keywords, lang, path, image, imageAlt, ogImage, ogImageWidth, ogImageHeight, preload, jsonLd])
 }

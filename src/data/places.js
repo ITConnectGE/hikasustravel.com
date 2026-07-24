@@ -3504,7 +3504,60 @@ export const sites = [
     slug: 'gergeti-trinity-church', name: 'Gergeti Trinity Church',
     parentType: 'city', parent: 'kazbegi', published: true,
     seoKey: 'gergetiTrinityChurch', contentKey: 'gergetiTrinityChurch',
-    image: '/images/files/georgia-home.jpg',
+    // Hero: real Gergeti Trinity Church + bell tower on the ridge below Mount Kazbek
+    // (owner's own photo) via the .hero--gergeti image-set() ladder (styles.css),
+    // replacing the shared georgia-home.jpg placeholder. Native 4:3 (1448x1086),
+    // just under the 1600 rung, so the ladder is exactly 768/1200/1448 with the top
+    // breakpoint at min-width:1200. NO 1600/2400 rung, no upscale. The CSS class
+    // controls the visible background (`background-position: center center`); no
+    // extra scrim — the shared .coverme::after overlay (rgba(0,0,0,0.35)) already
+    // provides the readable text layer for the centre-anchored H1 over this
+    // sky-less scree frame (same as .hero--gremi). `image`/`imageAvif` = the 1448
+    // top rung, feeding the ImageObject contentUrl.
+    image: '/images/files/gergeti-trinity-church-kazbegi-georgia-1448.webp',
+    imageAvif: '/images/files/gergeti-trinity-church-kazbegi-georgia-1448.avif',
+    heroClass: 'hero--gergeti',
+    // This image is the page's LCP hero — preload the 1200 AVIF (the rung the
+    // ladder serves at 768-1199px) with fetchpriority=high. Page-scoped: only
+    // entries that set `heroPreload` emit a <link rel=preload> (via SitePage →
+    // useSEO); every other hero is unchanged.
+    heroPreload: '/images/files/gergeti-trinity-church-kazbegi-georgia-1200.avif',
+    // Dedicated 1.91:1 social-share image (og:image / twitter:image), .jpg default.
+    ogImage: { src: '/images/files/gergeti-trinity-church-kazbegi-georgia-og.jpg', width: 1200, height: 630 },
+    // Hero image SEO/AEO metadata (owner's own photo → brand credit, set by
+    // SitePage). Hero is a CSS background (no <img alt>), so the localized alt lives
+    // here and is emitted as og:image:alt/twitter:image:alt per locale; the `caption`
+    // map feeds the hero ImageObject caption. Verbatim from gergeti-trinity-hero-
+    // package.md. width/height = 1448 rung; coordinates per package (the church).
+    // NO elevation asserted in name/description/contentLocation (the "2,170 m" figure
+    // is disputed/single-sourced); the caption's soft "over 2,100 metres" is the
+    // package's deliberate, non-precise phrasing, kept verbatim. Region Mtskheta-Mtianeti.
+    imageMeta: {
+      width: 1448, height: 1086,
+      name: 'Gergeti Trinity Church and its bell tower on a ridge above Stepantsminda, against the vast scree slopes of the Kazbek massif, Georgia',
+      description: 'The Gergeti Trinity Church (Tsminda Sameba), a 14th-century Georgian Orthodox cross-cupola church with a separate stone bell tower, standing on a grassy ridge above the town of Stepantsminda beneath the immense scree slopes of the Mount Kazbek massif, with visitors on the path up. An active monastery in the Kazbegi (Stepantsminda) area of the Mtskheta-Mtianeti region, it is one of the most iconic landmarks of Georgia (the country).',
+      locationName: 'Gergeti Trinity Church, Stepantsminda (Kazbegi), Mtskheta-Mtianeti, Georgia',
+      locality: 'Stepantsminda', region: 'Mtskheta-Mtianeti', country: 'GE',
+      geo: { lat: 42.66253, lng: 44.62072 },
+      alt: {
+        en: 'Gergeti Trinity Church and its bell tower on a ridge above Stepantsminda, against the vast scree slopes of the Kazbek massif, Georgia',
+        de: 'Die Gergeti-Dreifaltigkeitskirche und ihr Glockenturm auf einem Bergrücken über Stepanzminda, vor den gewaltigen Geröllhängen des Kasbek-Massivs, Georgien',
+        fr: "L'église de la Trinité de Guerguéti et son clocher sur une crête au-dessus de Stepantsminda, devant les immenses pentes d'éboulis du massif du Kazbek, Géorgie",
+        es: 'La iglesia de la Trinidad de Guergueti y su campanario en una cresta sobre Stepantsminda, ante las enormes laderas de pedregal del macizo del Kazbek, Georgia',
+        nl: 'De Gergeti-Drie-eenheidskerk en haar klokkentoren op een bergkam boven Stepantsminda, tegen de enorme puinhellingen van het Kazbek-massief, Georgië',
+        cs: 'Gergetský kostel Nejsvětější Trojice a jeho zvonice na hřebeni nad Stepancmindou, před obrovskými sutinovými svahy masivu Kazbek, Gruzie',
+        pl: 'Cerkiew Trójcy Świętej w Gergeti i jej dzwonnica na grani nad Stepancmindą, na tle rozległych piarżystych zboczy masywu Kazbek, Gruzja',
+      },
+      caption: {
+        en: "Gergeti Trinity Church, built in the 14th century at over 2,100 metres beneath Mount Kazbek, is one of Georgia's most iconic sights. Its ridge was so hard to reach that in times of invasion the nation's holiest relics — including St Nino's Cross — were hidden here for safekeeping.",
+        de: 'Die im 14. Jahrhundert auf über 2.100 Metern unter dem Kasbek erbaute Gergeti-Dreifaltigkeitskirche ist eines der bekanntesten Wahrzeichen Georgiens. Ihr Bergrücken war so schwer erreichbar, dass in Zeiten der Invasion die heiligsten Reliquien des Landes – darunter das Kreuz der hl. Nino – hier in Sicherheit gebracht wurden.',
+        fr: "Bâtie au XIVe siècle à plus de 2 100 mètres sous le mont Kazbek, l'église de la Trinité de Guerguéti est l'un des sites les plus emblématiques de Géorgie. Sa crête était si difficile d'accès qu'en temps d'invasion les reliques les plus sacrées du pays — dont la croix de sainte Nino — y étaient cachées.",
+        es: 'Construida en el siglo XIV a más de 2.100 metros bajo el monte Kazbek, la iglesia de la Trinidad de Guergueti es uno de los lugares más emblemáticos de Georgia. Su cresta era tan difícil de alcanzar que en tiempos de invasión las reliquias más sagradas del país —entre ellas la cruz de santa Nino— se ocultaban aquí.',
+        nl: 'De in de 14e eeuw op ruim 2.100 meter onder de Kazbek gebouwde Gergeti-Drie-eenheidskerk is een van Georgiës meest iconische bezienswaardigheden. Haar bergkam was zo moeilijk bereikbaar dat in tijden van invasie de heiligste relieken van het land — waaronder het kruis van de heilige Nino — hier veilig werden verborgen.',
+        cs: 'Gergetský kostel Nejsvětější Trojice, postavený ve 14. století ve výšce přes 2 100 metrů pod horou Kazbek, patří k nejikoničtějším místům Gruzie. Jeho hřeben byl tak nedostupný, že se sem v dobách nájezdů ukrývaly nejposvátnější relikvie země – včetně kříže svaté Nino.',
+        pl: 'Zbudowana w XIV wieku na ponad 2100 metrach u stóp Kazbeku cerkiew Trójcy Świętej w Gergeti to jeden z najbardziej ikonicznych widoków Gruzji. Jej grań była tak trudno dostępna, że w czasach najazdów ukrywano tu najświętsze relikwie kraju — w tym krzyż świętej Nino.',
+      },
+    },
   },
   {
     slug: 'gveleti-waterfalls', name: 'Gveleti Waterfalls',
@@ -4399,6 +4452,9 @@ export function publishedDestinationPages() {
     // og:image / og:image:alt tags emitted by prerender.js.
     ogImage: s.ogImage?.src, ogImageWidth: s.ogImage?.width, ogImageHeight: s.ogImage?.height,
     imageAlt: s.imageMeta?.alt,
+    // Optional LCP hero preload rung — prerender.js emits a static <link
+    // rel=preload as=image> for it (only sites that set heroPreload).
+    heroPreload: s.heroPreload,
   })
   return pages
 }

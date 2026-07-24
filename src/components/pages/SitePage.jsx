@@ -374,6 +374,11 @@ export default function SitePage() {
     ogImage: site.ogImage?.src,
     ogImageWidth: site.ogImage?.width,
     ogImageHeight: site.ogImage?.height,
+    // Optional LCP hero preload (page-scoped): only sites that set `heroPreload`
+    // emit a <link rel=preload as=image> for that rung. Others pass undefined.
+    preload: site.heroPreload
+      ? { href: site.heroPreload, type: 'image/avif', fetchpriority: 'high' }
+      : undefined,
     jsonLd,
   } : {})
 

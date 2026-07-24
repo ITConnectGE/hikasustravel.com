@@ -779,6 +779,40 @@ section {
   }
 }
 /* No rung above 1448 exists. Do not add a 1600 or 2400 breakpoint. */
+/* Gergeti Trinity Church hero — per-page CSS background (same opt-in mechanism as
+   .hero--gremi). The church + bell tower on the ridge below Mount Kazbek, native
+   4:3 (1448x1086), just under the 1600 rung, so the ladder is exactly 768/1200/1448
+   with the top breakpoint at min-width:1200. NO 1600/2400 rung, no upscale.
+   `background-position: center center`. NO open sky in this frame — but the shared
+   .coverme::after overlay (rgba(0,0,0,0.35)) already provides the readable text
+   layer for the centre-anchored H1 (same as .hero--gremi), so no extra scrim. */
+.hero--gergeti {
+  background-image: url("/images/files/gergeti-trinity-church-kazbegi-georgia-1200.webp");
+  background-image: image-set(
+    url("/images/files/gergeti-trinity-church-kazbegi-georgia-768.avif") type("image/avif"),
+    url("/images/files/gergeti-trinity-church-kazbegi-georgia-768.webp") type("image/webp")
+  );
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+@media (min-width: 768px) {
+  .hero--gergeti {
+    background-image: image-set(
+      url("/images/files/gergeti-trinity-church-kazbegi-georgia-1200.avif") type("image/avif"),
+      url("/images/files/gergeti-trinity-church-kazbegi-georgia-1200.webp") type("image/webp")
+    );
+  }
+}
+@media (min-width: 1200px) {
+  .hero--gergeti {
+    background-image: image-set(
+      url("/images/files/gergeti-trinity-church-kazbegi-georgia-1448.avif") type("image/avif"),
+      url("/images/files/gergeti-trinity-church-kazbegi-georgia-1448.webp") type("image/webp")
+    );
+  }
+}
+/* No rung above 1448 exists. Do not add a 1600 or 2400 breakpoint. */
 /* Bolnisi Museum hero — per-page CSS background (same opt-in mechanism as
    .hero--gremi). The museum's blue medieval hall, native 4:3 (1448x1086), just
    under the 1600 rung, so the ladder is exactly 768/1200/1448 with the top
