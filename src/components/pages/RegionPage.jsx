@@ -128,6 +128,45 @@ export default function RegionPage() {
             geo: { '@type': 'GeoCoordinates', latitude: img.geo.lat, longitude: img.geo.lng },
           },
         })),
+        // Inline body images (real <figure class="body-img"> blocks in the per-locale
+        // content) that ship variants WITHOUT the `w` filename suffix and need a
+        // stable per-image `@id` (e.g. #inline-landscape). Distinct from `imageObjects`
+        // above (which builds `-<width>w.webp` city-body-figure inlines with geo).
+        // name/caption are localized per locale; never representativeOfPage — that's
+        // the hero's. contentLocation address/geo are conditional, so a generic
+        // landscape can ship a NAME-ONLY Place ("Svaneti, Georgia", no geo). Mirrors
+        // SitePage/CityPage's inlineImageObjects convention.
+        ...(region.inlineImageObjects || []).map((img) => ({
+          '@type': 'ImageObject',
+          '@id': `${url}#${img.anchor}`,
+          contentUrl: `${SITE_URL}/images/files/${img.base}-${img.width}.webp`,
+          url: `${SITE_URL}/images/files/${img.base}-${img.width}.webp`,
+          width: img.width,
+          height: img.height,
+          name: (img.name && (img.name[lang] || img.name.en)) || '',
+          caption: (img.caption && (img.caption[lang] || img.caption.en)) || '',
+          description: img.description,
+          creator: { '@type': 'Organization', name: BRAND },
+          creditText: BRAND,
+          copyrightNotice: `© ${BRAND}`,
+          contentLocation: {
+            '@type': 'Place',
+            name: img.locationName,
+            ...((img.locality || img.region)
+              ? {
+                  address: {
+                    '@type': 'PostalAddress',
+                    addressLocality: img.locality,
+                    addressRegion: img.region,
+                    addressCountry: 'GE',
+                  },
+                }
+              : {}),
+            ...(img.geo
+              ? { geo: { '@type': 'GeoCoordinates', latitude: img.geo.lat, longitude: img.geo.lng } }
+              : {}),
+          },
+        })),
         {
           '@type': 'BreadcrumbList',
           itemListElement: trail.map((c, i) => ({

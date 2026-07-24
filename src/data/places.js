@@ -342,6 +342,42 @@ export const regions = [
         locationName: 'Mestia (Koruldi trail)', locality: 'Mestia', region: 'Svaneti', geo: { lat: 43.07, lng: 42.71 },
       },
     ],
+    // One additional inline body image (own photo) added later, as a real
+    // <figure class="body-img"> spliced into each locale's body HTML (in the
+    // "Geography and the mountain environment" section). Distinct from the
+    // `imageObjects` block above (which ships `-<width>w.webp` gallery-style
+    // `city-body-figure` inlines with geo): this one ships variants WITHOUT the `w`
+    // suffix (768/1200/1448) and is a generic Svaneti landscape with NO identifiable
+    // spot, so its ImageObject uses a stable `@id` (#inline-landscape) and a NAME-ONLY
+    // contentLocation ("Svaneti, Georgia", no geo). Rendered via RegionPage's
+    // `inlineImageObjects` @graph map (mirrors SitePage/CityPage): localized name
+    // (=alt) + caption per locale, brand credit, never representativeOfPage — the hero
+    // stays the representative image. Verbatim from svaneti-landscape-inline-package.md.
+    inlineImageObjects: [
+      {
+        base: 'svaneti-caucasus-mountains-georgia', width: 1448, height: 1086, anchor: 'inline-landscape',
+        description: 'Forested ridges of the Greater Caucasus falling to a wooded valley below snow-streaked peaks in Svaneti, Georgia',
+        locationName: 'Svaneti, Georgia',
+        name: {
+          en: 'Forested ridges of the Greater Caucasus falling to a wooded valley below snow-streaked peaks in Svaneti, Georgia',
+          de: 'Bewaldete Bergrücken des Großen Kaukasus, die zu einem waldigen Tal unter schneegestreiften Gipfeln in Swanetien abfallen, Georgien',
+          fr: 'Crêtes boisées du Grand Caucase descendant vers une vallée forestière sous des sommets striés de neige en Svanétie, Géorgie',
+          es: 'Cordales boscosos del Gran Cáucaso que descienden hacia un valle arbolado bajo picos veteados de nieve en Esvanetia, Georgia',
+          nl: 'Beboste bergkammen van de Grote Kaukasus die afdalen naar een bebost dal onder met sneeuw doorstreepte toppen in Svanetië, Georgië',
+          cs: 'Zalesněné hřebeny Velkého Kavkazu klesající k zalesněnému údolí pod sněhem prokládanými vrcholy ve Svanetii, Gruzie',
+          pl: 'Zalesione grzbiety Wielkiego Kaukazu opadające ku zalesionej dolinie pod śniegiem pręgowanymi szczytami w Swanetii, Gruzja',
+        },
+        caption: {
+          en: "Svaneti is Georgia's high mountain heart: forested ridges climb to snow-streaked peaks along the crest of the Greater Caucasus, and deep green valleys hide the stone villages and towers the region is famous for.",
+          de: 'Swanetien ist Georgiens hohes Bergherz: Bewaldete Kämme steigen zu schneegestreiften Gipfeln entlang des Kamms des Großen Kaukasus, und tiefgrüne Täler verbergen die Steindörfer und Türme, für die die Region berühmt ist.',
+          fr: 'La Svanétie est le cœur montagneux de la Géorgie : des crêtes boisées s\'élèvent vers des sommets striés de neige le long de la ligne de faîte du Grand Caucase, et des vallées d\'un vert profond cachent les villages de pierre et les tours qui font la renommée de la région.',
+          es: 'Esvanetia es el corazón montañoso de Georgia: cordales boscosos ascienden hacia picos veteados de nieve a lo largo de la cresta del Gran Cáucaso, y valles de un verde intenso ocultan las aldeas de piedra y las torres que dan fama a la región.',
+          nl: 'Svanetië is het hoge berghart van Georgië: beboste kammen klimmen naar met sneeuw doorstreepte toppen langs de kam van de Grote Kaukasus, en diepgroene dalen verbergen de stenen dorpen en torens waarom de regio beroemd is.',
+          cs: 'Svanetie je vysoké horské srdce Gruzie: zalesněné hřebeny stoupají ke sněhem prokládaným vrcholům podél hřebene Velkého Kavkazu a temně zelená údolí ukrývají kamenné vesnice a věže, jimiž je region proslulý.',
+          pl: 'Swanetia to wysokie górskie serce Gruzji: zalesione grzbiety wznoszą się ku śniegiem pręgowanym szczytom wzdłuż grani Wielkiego Kaukazu, a głęboko zielone doliny kryją kamienne wsie i wieże, z których słynie region.',
+        },
+      },
+    ],
   },
 ]
 
