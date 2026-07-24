@@ -3989,7 +3989,93 @@ export const sites = [
     slug: 'shkhara-glacier', name: 'Shkhara Glacier',
     parentType: 'city', parent: 'ushguli', formerParent: 'svaneti', published: true,
     seoKey: 'shkharaGlacier', contentKey: 'shkharaGlacier',
-    image: '/images/files/georgia-home.jpg',
+    // Hero: real Shkhara Glacier above Ushguli (owner's own photo) via the
+    // .hero--shkhara-glacier image-set() ladder (styles.css), replacing the shared
+    // georgia-home.jpg placeholder. PORTRAIT 1086×1448, native width 1086 → ladder
+    // is exactly 768/1086. NO 1200/1448/1600/2400 rung, no upscale. The CSS class
+    // controls the visible background (`background-position: center 40%` —
+    // deliberate, keeps the glacier tongue + peaks in a wide banner; center center
+    // over-favours the forested lower valley). No extra scrim — the shared
+    // .coverme::after overlay (rgba(0,0,0,0.35)) already provides the light scrim
+    // over the pale sky for the H1. `image`/`imageAvif` = the 1086 top rung,
+    // feeding the ImageObject contentUrl (1086).
+    image: '/images/files/shkhara-glacier-ushguli-svaneti-georgia-1086.webp',
+    imageAvif: '/images/files/shkhara-glacier-ushguli-svaneti-georgia-1086.avif',
+    heroClass: 'hero--shkhara-glacier',
+    // LCP hero preload — the 768 AVIF (per package), fetchpriority=high. Page-scoped
+    // (only entries with heroPreload emit a <link rel=preload> via SitePage/useSEO +
+    // prerender).
+    heroPreload: '/images/files/shkhara-glacier-ushguli-svaneti-georgia-768.avif',
+    // Dedicated social image. NOTE: this OG is 1086x570 (a no-upscale crop, below
+    // the 1200x630 canonical — platforms accept it); do NOT upscale to 1200x630.
+    ogImage: { src: '/images/files/shkhara-glacier-ushguli-svaneti-georgia-og.jpg', width: 1086, height: 570 },
+    // Hero image SEO/AEO metadata (owner's own photo → brand credit, set by
+    // SitePage). Hero is a CSS background (no <img alt>), so the localized alt lives
+    // here and is emitted as og:image:alt/twitter:image:alt per locale; the `caption`
+    // map feeds the hero ImageObject caption. Verbatim from shkhara-glacier-images-
+    // package.md. width/height = 1086 rung. NO Shkhara height asserted anywhere in
+    // the schema. contentLocation is name + APPROXIMATE geo (glacier-viewpoint area,
+    // ~42.9550/43.1170 per package) and NO address — SitePage omits the address
+    // block when locality/region/country are absent, and emits geo when present.
+    // Region Upper Svaneti (Samegrelo-Zemo Svaneti).
+    imageMeta: {
+      width: 1086, height: 1448,
+      name: "The Shkhara Glacier descending between snow peaks above a green forested valley near Ushguli, Svaneti, Georgia",
+      description: "The Shkhara Glacier spills from the flanks of Mount Shkhara, Georgia's highest peak, at the head of the valley above Ushguli. From the meltwater at its snout the Enguri River is born — the same river the village sits beside far below.",
+      locationName: 'Shkhara Glacier, Enguri valley above Ushguli, Upper Svaneti, Georgia',
+      geo: { lat: 42.9550, lng: 43.1170 },
+      alt: {
+        en: 'The Shkhara Glacier descending between snow peaks above a green forested valley near Ushguli, Svaneti, Georgia',
+        de: 'Der Schchara-Gletscher, der zwischen Schneegipfeln über ein grünes bewaldetes Tal bei Uschguli herabzieht, Swanetien, Georgien',
+        fr: "Le glacier du Chkhara descendant entre les sommets enneigés au-dessus d'une vallée boisée près d'Ouchgouli, Svanétie, Géorgie",
+        es: 'El glaciar del Shjara descendiendo entre picos nevados sobre un valle verde y boscoso cerca de Ushguli, Esvanetia, Georgia',
+        nl: 'De Sjchara-gletsjer die tussen sneeuwtoppen afdaalt boven een groen bebost dal bij Oesjgoeli, Svanetië, Georgië',
+        cs: 'Ledovec Šchara sestupující mezi zasněženými vrcholy nad zeleným zalesněným údolím u Ušguli, Svanetie, Gruzie',
+        pl: 'Lodowiec Szchara schodzący między ośnieżonymi szczytami nad zieloną zalesioną doliną koło Uszguli, Swanetia, Gruzja',
+      },
+      caption: {
+        en: "The Shkhara Glacier spills from the flanks of Mount Shkhara, Georgia's highest peak, at the head of the valley above Ushguli. From the meltwater at its snout the Enguri River is born — the same river the village sits beside far below.",
+        de: 'Der Schchara-Gletscher stürzt von den Flanken des Schchara, Georgiens höchstem Gipfel, am Talschluss über Uschguli herab. Aus dem Schmelzwasser an seiner Zunge entspringt der Enguri – derselbe Fluss, an dem das Dorf weit unten liegt.',
+        fr: "Le glacier du Chkhara dévale les flancs du Chkhara, plus haut sommet de Géorgie, en tête de la vallée au-dessus d'Ouchgouli. De l'eau de fonte à son front naît l'Engouri — la rivière même que borde le village, loin en contrebas.",
+        es: 'El glaciar del Shjara se derrama por las laderas del Shjara, la cumbre más alta de Georgia, en la cabecera del valle sobre Ushguli. Del agua de deshielo de su frente nace el río Enguri, el mismo junto al que se asienta la aldea, mucho más abajo.',
+        nl: 'De Sjchara-gletsjer stort van de flanken van de Sjchara, Georgiës hoogste top, aan het einde van het dal boven Oesjgoeli. Uit het smeltwater bij zijn tong ontspringt de Enguri — dezelfde rivier waaraan het dorp ver beneden ligt.',
+        cs: 'Ledovec Šchara se řítí ze svahů hory Šchara, nejvyššího vrcholu Gruzie, v závěru údolí nad Ušguli. Z tající vody na jeho čele se rodí řeka Enguri – tatáž, u níž leží vesnice hluboko dole.',
+        pl: 'Lodowiec Szchara spływa ze zboczy Szchary, najwyższego szczytu Gruzji, u szczytu doliny nad Uszguli. Z wody z topniejącego lodu u jego czoła rodzi się Enguri — ta sama rzeka, nad którą leży wieś daleko w dole.',
+      },
+    },
+    // One contextual inline body image (real <figure class="body-img"> in each
+    // locale's body, placed after the first paragraph of "The walk" section — the
+    // wildflower-meadow approach the caption describes). Rendered via SitePage's
+    // inlineImageObjects @graph map: stable @id (#inline-meadow), contentUrl at the
+    // 1448 rung (no `w` suffix), localized name (=alt) + caption, brand credit, NO
+    // representativeOfPage. contentLocation = name + approximate glacier geo (same as
+    // the hero), no address. Verbatim from shkhara-glacier-images-package.md.
+    inlineImageObjects: [
+      {
+        base: 'shkhara-glacier-meadow-svaneti-georgia', width: 1448, height: 1086, anchor: 'inline-meadow',
+        description: 'A summer meadow of white wildflowers below the Shkhara Glacier and snow-capped peaks near Ushguli, Svaneti, Georgia',
+        locationName: 'Shkhara Glacier, Enguri valley above Ushguli, Upper Svaneti, Georgia',
+        geo: { lat: 42.9550, lng: 43.1170 },
+        name: {
+          en: 'A summer meadow of white wildflowers below the Shkhara Glacier and snow-capped peaks near Ushguli, Svaneti, Georgia',
+          de: 'Eine sommerliche Wiese mit weißen Wildblumen unterhalb des Schchara-Gletschers und schneebedeckter Gipfel bei Uschguli, Swanetien, Georgien',
+          fr: 'Une prairie estivale de fleurs sauvages blanches sous le glacier du Chkhara et les sommets enneigés près d\'Ouchgouli, Svanétie, Géorgie',
+          es: 'Un prado veraniego de flores silvestres blancas bajo el glaciar del Shjara y picos nevados cerca de Ushguli, Esvanetia, Georgia',
+          nl: 'Een zomerse weide met witte wilde bloemen onder de Sjchara-gletsjer en besneeuwde toppen bij Oesjgoeli, Svanetië, Georgië',
+          cs: 'Letní louka bílých divokých květin pod ledovcem Šchara a zasněženými vrcholy u Ušguli, Svanetie, Gruzie',
+          pl: 'Letnia łąka białych dzikich kwiatów pod lodowcem Szchara i ośnieżonymi szczytami koło Uszguli, Swanetia, Gruzja',
+        },
+        caption: {
+          en: 'In summer the approach to the glacier crosses meadows in full flower, the ice wall of Shkhara rising straight ahead — the reward at the end of the valley walk from Ushguli.',
+          de: 'Im Sommer führt der Weg zum Gletscher über blühende Wiesen, die Eiswand des Schchara steigt geradeaus auf – der Lohn am Ende der Talwanderung von Uschguli.',
+          fr: "En été, l'approche du glacier traverse des prairies en pleine floraison, la muraille de glace du Chkhara se dressant droit devant — la récompense au bout de la marche dans la vallée depuis Ouchgouli.",
+          es: 'En verano, la aproximación al glaciar cruza prados en plena floración, con la pared de hielo del Shjara alzándose de frente: la recompensa al final de la caminata por el valle desde Ushguli.',
+          nl: 'In de zomer voert de nadering van de gletsjer door bloeiende weiden, met de ijswand van de Sjchara recht vooruit — de beloning aan het eind van de dalwandeling vanaf Oesjgoeli.',
+          cs: 'V létě vede přístup k ledovci rozkvetlými loukami, ledová stěna Šchary se tyčí přímo vpředu – odměna na konci údolní túry z Ušguli.',
+          pl: 'Latem podejście do lodowca wiedzie przez kwitnące łąki, a lodowa ściana Szchary wznosi się wprost przed nami — nagroda na końcu dolinnej wędrówki z Uszguli.',
+        },
+      },
+    ],
   },
   {
     slug: 'svan-towers', name: 'Svan Towers',

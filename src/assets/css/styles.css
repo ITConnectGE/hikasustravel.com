@@ -806,6 +806,34 @@ section {
   }
 }
 /* Native width 1024 — no rung above it. Do not add a 1200/1448/1600/2400 breakpoint. */
+/* Shkhara Glacier hero — per-page CSS background (same opt-in mechanism as
+   .hero--gremi). PORTRAIT 1086x1448 source, native width 1086, so the ladder is
+   exactly 768/1086 with the top breakpoint at min-width:768. NO rung above 1086
+   (no 1200/1448/1600/2400), no upscale. `background-position: center 40%` is
+   DELIBERATE — it keeps the glacier tongue + peaks in a wide banner; center center
+   would over-favour the forested lower valley. Do NOT normalise. Expect softness on
+   very wide desktops (native width 1086, flagged). The shared .coverme::after
+   overlay (rgba(0,0,0,0.35)) is the light scrim for the H1 over the pale sky, so no
+   extra scrim. */
+.hero--shkhara-glacier {
+  background-image: url("/images/files/shkhara-glacier-ushguli-svaneti-georgia-768.webp");
+  background-image: image-set(
+    url("/images/files/shkhara-glacier-ushguli-svaneti-georgia-768.avif") type("image/avif"),
+    url("/images/files/shkhara-glacier-ushguli-svaneti-georgia-768.webp") type("image/webp")
+  );
+  background-position: center 40%;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+@media (min-width: 768px) {
+  .hero--shkhara-glacier {
+    background-image: image-set(
+      url("/images/files/shkhara-glacier-ushguli-svaneti-georgia-1086.avif") type("image/avif"),
+      url("/images/files/shkhara-glacier-ushguli-svaneti-georgia-1086.webp") type("image/webp")
+    );
+  }
+}
+/* Native width 1086 — no rung above it. Do not add a 1200/1448/1600/2400 breakpoint. */
 /* Gergeti Trinity Church hero — per-page CSS background (same opt-in mechanism as
    .hero--gremi). The church + bell tower on the ridge below Mount Kazbek, native
    4:3 (1448x1086), just under the 1600 rung, so the ladder is exactly 768/1200/1448
