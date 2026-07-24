@@ -3912,7 +3912,59 @@ export const sites = [
     slug: 'svan-towers', name: 'Svan Towers',
     parentType: 'region', parent: 'svaneti', published: true,
     seoKey: 'svanTowers', contentKey: 'svanTowers',
-    image: '/images/files/georgia-home.jpg',
+    // Hero: real Svan tower-houses (owner's own photo) via the .hero--svan-towers
+    // image-set() ladder (styles.css), replacing the shared georgia-home.jpg
+    // placeholder. PORTRAIT 2:3 (1024x1536), native width 1024 → ladder is exactly
+    // 768/1024. NO 1200/1448/1600/2400 rung, no upscale. The CSS class controls the
+    // visible background (`background-position: center 35%` — deliberate, keeps the
+    // machicolated tower crowns + snow peak + sky in a wide banner; center center
+    // would cut the tops, the feature the page is about). No extra scrim — the
+    // shared .coverme::after overlay (rgba(0,0,0,0.35)) already provides the light
+    // scrim over the blue sky for the H1. `image`/`imageAvif` = the 1024 top rung,
+    // feeding the ImageObject contentUrl (1024).
+    image: '/images/files/svan-towers-svaneti-georgia-1024.webp',
+    imageAvif: '/images/files/svan-towers-svaneti-georgia-1024.avif',
+    heroClass: 'hero--svan-towers',
+    // LCP hero preload — single-URL, so preload the 1024 AVIF (the rung the ladder
+    // serves at >=768px) with fetchpriority=high. Page-scoped (only entries with
+    // heroPreload emit a <link rel=preload> via SitePage/useSEO + prerender).
+    heroPreload: '/images/files/svan-towers-svaneti-georgia-1024.avif',
+    // Dedicated social image. NOTE: this OG is 1024x537 (a no-upscale crop, below
+    // the 1200x630 canonical — platforms accept >=600x315); do NOT upscale to 1200.
+    ogImage: { src: '/images/files/svan-towers-svaneti-georgia-og.jpg', width: 1024, height: 537 },
+    // Hero image SEO/AEO metadata (owner's own photo → brand credit, set by
+    // SitePage). Hero is a CSS background (no <img alt>), so the localized alt lives
+    // here and is emitted as og:image:alt/twitter:image:alt per locale; the `caption`
+    // map feeds the hero ImageObject caption. Verbatim from svan-towers-hero-
+    // package.md. width/height = 1024 rung. contentLocation is NAME-ONLY and
+    // deliberately generalised to "Upper Svaneti" (the village is NOT asserted): no
+    // geo, no locality — this is a thematic page, and naming a village wrongly would
+    // be worse than leaving it general (SitePage omits address/geo when absent).
+    // No hard tower count, no single construction date, no UNESCO claim in metadata.
+    imageMeta: {
+      width: 1024, height: 1536,
+      name: 'Two medieval Svan stone tower-houses with machicolated tops in a village in Upper Svaneti, snow-capped Caucasus behind, Georgia',
+      description: 'Two medieval Svan defensive tower-houses (koshki) of drystone with machicolated parapets, attached to slate-roofed machubi dwellings in a village of Upper Svaneti, with a green mountain slope and a snow-capped Caucasus peak behind and ploughed ground in the foreground. Svan towers are an emblem of the Svaneti region of Georgia (the country).',
+      locationName: 'Upper Svaneti, Mestia Municipality, Samegrelo-Zemo Svaneti, Georgia',
+      alt: {
+        en: 'Two medieval Svan stone tower-houses with machicolated tops in a village in Upper Svaneti, snow-capped Caucasus behind, Georgia',
+        de: 'Zwei mittelalterliche swanische Wehrtürme mit Maschikuli-Kränzen in einem Dorf in Ober-Swanetien, dahinter der schneebedeckte Kaukasus, Georgien',
+        fr: 'Deux maisons-tours svanes médiévales à couronnement de mâchicoulis dans un village de Haute-Svanétie, le Caucase enneigé derrière, Géorgie',
+        es: 'Dos casas-torre esvanas medievales con remates de matacanes en una aldea de la Alta Esvanetia, el Cáucaso nevado detrás, Georgia',
+        nl: 'Twee middeleeuwse Svanische stenen torenhuizen met machicoulis-kronen in een dorp in Boven-Svanetië, de besneeuwde Kaukasus erachter, Georgië',
+        cs: 'Dva středověké svanské kamenné věžové domy s krakorcovými korunami ve vesnici v Horní Svanetii, v pozadí zasněžený Kavkaz, Gruzie',
+        pl: 'Dwa średniowieczne swańskie kamienne domy-wieże z machikułami we wsi w Górnej Swanetii, w tle ośnieżony Kaukaz, Gruzja',
+      },
+      caption: {
+        en: 'Svan tower-houses — koshki — rise three to five storeys of tapering stone above the machubi dwellings they guard. Built in the Middle Ages, they gave families a refuge from raids and, above all, from the blood feuds that ran through Svan society for centuries.',
+        de: 'Swanische Wehrtürme – koshki – erheben sich in drei bis fünf Geschossen aus sich verjüngendem Stein über den Machubi-Wohnhäusern, die sie schützen. Im Mittelalter erbaut, boten sie Familien Zuflucht vor Überfällen und vor allem vor den Blutfehden, die die swanische Gesellschaft über Jahrhunderte durchzogen.',
+        fr: "Les maisons-tours svanes — koshki — s'élèvent sur trois à cinq étages de pierre qui se rétrécissent, au-dessus des habitations machubi qu'elles gardent. Bâties au Moyen Âge, elles offraient aux familles un refuge contre les raids et, surtout, contre les vendettas qui traversèrent la société svane pendant des siècles.",
+        es: 'Las casas-torre esvanas —koshki— se alzan tres a cinco pisos de piedra que se estrecha sobre las viviendas machubi que protegen. Construidas en la Edad Media, daban a las familias refugio ante las incursiones y, sobre todo, ante las venganzas de sangre que recorrieron la sociedad esvana durante siglos.',
+        nl: 'Svanische torenhuizen — koshki — verrijzen drie tot vijf verdiepingen van taps toelopende steen boven de machubi-woningen die ze bewaken. Gebouwd in de middeleeuwen, boden ze families een toevlucht voor rooftochten en vooral voor de bloedvetes die de Svanische samenleving eeuwenlang doortrokken.',
+        cs: 'Svanské věžové domy – koshki – se zvedají do tří až pěti pater zužujícího se kamene nad obytnými domy machubi, které střeží. Postaveny ve středověku, poskytovaly rodinám útočiště před nájezdy a především před krevními mstami, jež po staletí provázely svanskou společnost.',
+        pl: 'Swańskie domy-wieże — koshki — wznoszą się na trzy do pięciu kondygnacji zwężającego się kamienia nad domami machubi, których strzegą. Wzniesione w średniowieczu, dawały rodzinom schronienie przed najazdami, a przede wszystkim przed krwawymi waśniami, które przez wieki przenikały swańskie społeczeństwo.',
+      },
+    },
   },
   {
     slug: 'lamaria-church', name: 'Lamaria Church',
