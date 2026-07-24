@@ -391,7 +391,61 @@ export const regions = [
 export const cities = [
   {
     slug: 'tbilisi', name: 'Tbilisi', region: null, published: true,
-    seoKey: 'tbilisi', contentKey: 'tbilisi', image: '/images/files/tbilisi.jpg',
+    seoKey: 'tbilisi', contentKey: 'tbilisi',
+    // Hero REPLACEMENT: the old single georgia-home-style hero (/images/files/
+    // tbilisi.jpg) is swapped for the owner's own Old-Town/Narikala/Mtkvari panorama
+    // via the .hero--tbilisi image-set() ladder (styles.css). Native 4:3 (1448x1086),
+    // just under the 1600 rung, so the ladder is exactly 768/1200/1448 with the top
+    // breakpoint at min-width:1200. NO 1600/2400 rung, no upscale.
+    // `background-position: center center`; the shared .coverme::after overlay
+    // (rgba(0,0,0,0.35)) provides the readable text layer for the centre-anchored H1.
+    // OLD FILE tbilisi.jpg is LEFT ON DISK — still referenced by DestinationHubs.jsx,
+    // DestinationsPage.jsx (+ Cities-hub card) and TbilisiAirportGuidePage.jsx, and by
+    // this entry's `thingsToDo.image` below (the separate Things-to-Do page hero),
+    // none of which change here. `image`/`imageAvif` = the 1448 top rung.
+    image: '/images/files/tbilisi-old-town-narikala-mtkvari-georgia-1448.webp',
+    imageAvif: '/images/files/tbilisi-old-town-narikala-mtkvari-georgia-1448.avif',
+    heroClass: 'hero--tbilisi',
+    // LCP hero preload — the 1200 AVIF (the rung the ladder serves at 768-1199px),
+    // fetchpriority=high (via CityPage/useSEO + prerender.js).
+    heroPreload: '/images/files/tbilisi-old-town-narikala-mtkvari-georgia-1200.avif',
+    // Dedicated 1.91:1 social-share image (og:image / twitter:image), .jpg default,
+    // replacing the old og:image (which fell back to tbilisi.jpg).
+    ogImage: { src: '/images/files/tbilisi-old-town-narikala-mtkvari-georgia-og.jpg', width: 1200, height: 630 },
+    // Hero image SEO/AEO metadata (owner's own photo → brand credit, set by CityPage).
+    // Hero is a CSS background, so the localized alt lives here and feeds og:image:alt/
+    // twitter:image:alt per locale; the `caption` map feeds the hero ImageObject
+    // caption. Verbatim from tbilisi-city-hero-package.md. `imageId: 'hero-image'`
+    // makes CityPage emit the ImageObject `@id` …#hero-image (page-scoped: only
+    // entries that set imageId get an @id — a clean replacement for a page that had
+    // no prior hero ImageObject). contentLocation = name + geo (Old Town area
+    // 41.6883/44.8090), NO address block. There is NO other representativeOfPage
+    // ImageObject on this page (the 3 imageObjects are inline body photos).
+    imageMeta: {
+      width: 1448, height: 1086, imageId: 'hero-image',
+      name: "Tbilisi's Old Town below Narikala Fortress and the Kartlis Deda statue, with the cable car and the Mtkvari River, Georgia",
+      description: 'A panorama of the Old Town of Tbilisi from across the Mtkvari (Kura) River: Narikala Fortress and St Nicholas Church on the ridge, the Kartlis Deda (Mother of Georgia) statue on the skyline, the Rike-Narikala cable car in mid-span, and tiered pastel houses and church domes above the river and the Metekhi Bridge. Tbilisi is the capital of Georgia (the country).',
+      locationName: 'Old Town, Tbilisi, Georgia',
+      geo: { lat: 41.6883, lng: 44.8090 },
+      alt: {
+        en: "Tbilisi's Old Town below Narikala Fortress and the Kartlis Deda statue, with the cable car and the Mtkvari River, Georgia",
+        de: 'Die Altstadt von Tiflis unterhalb der Festung Naryqala und der Statue Kartlis Deda, mit Seilbahn und dem Fluss Mtkwari, Georgien',
+        fr: 'La vieille ville de Tbilissi sous la forteresse Narikala et la statue Kartlis Deda, avec le téléphérique et la rivière Mtkvari, Géorgie',
+        es: 'El casco antiguo de Tiflis bajo la fortaleza de Narikala y la estatua Kartlis Deda, con el teleférico y el río Mtkvari, Georgia',
+        nl: 'De oude stad van Tbilisi onder de Narikala-vesting en het standbeeld Kartlis Deda, met de kabelbaan en de rivier de Mtkvari, Georgië',
+        cs: 'Staré Město Tbilisi pod pevností Narikala a sochou Kartlis Deda, s lanovkou a řekou Mtkvari, Gruzie',
+        pl: 'Stare Miasto Tbilisi pod twierdzą Narikala i pomnikiem Kartlis Deda, z kolejką linową i rzeką Mtkwari, Gruzja',
+      },
+      caption: {
+        en: "Tbilisi's Old Town climbs the slope below Narikala Fortress, watched over by the Kartlis Deda statue, with the cable car crossing overhead and the Mtkvari River flowing past below — the whole layered history of the Georgian capital in one view.",
+        de: 'Die Altstadt von Tiflis zieht sich den Hang unterhalb der Festung Naryqala hinauf, überblickt von der Statue Kartlis Deda, während die Seilbahn darüber schwebt und der Mtkwari unten vorbeifließt – die ganze vielschichtige Geschichte der georgischen Hauptstadt in einem Blick.',
+        fr: "La vieille ville de Tbilissi grimpe le versant sous la forteresse Narikala, veillée par la statue Kartlis Deda, tandis que le téléphérique passe au-dessus et que la Mtkvari coule en contrebas — toute l'histoire en strates de la capitale géorgienne en une seule vue.",
+        es: 'El casco antiguo de Tiflis trepa la ladera bajo la fortaleza de Narikala, vigilado por la estatua Kartlis Deda, mientras el teleférico cruza por encima y el Mtkvari fluye abajo: toda la historia estratificada de la capital georgiana en una sola vista.',
+        nl: 'De oude stad van Tbilisi klimt tegen de helling onder de Narikala-vesting, bewaakt door het standbeeld Kartlis Deda, terwijl de kabelbaan erboven passeert en de Mtkvari beneden voorbijstroomt — de hele gelaagde geschiedenis van de Georgische hoofdstad in één blik.',
+        cs: 'Staré Město Tbilisi stoupá po svahu pod pevností Narikala, střeženo sochou Kartlis Deda, zatímco nad ním přejíždí lanovka a dole plyne řeka Mtkvari – celá vrstevnatá historie gruzínské metropole v jediném pohledu.',
+        pl: 'Stare Miasto Tbilisi wspina się po zboczu pod twierdzą Narikala, pilnowane przez pomnik Kartlis Deda, gdy nad nim przejeżdża kolejka linowa, a w dole płynie Mtkwari — cała warstwowa historia gruzińskiej stolicy w jednym ujęciu.',
+      },
+    },
     thingsToDo: {
       seoKey: 'thingsToDoTbilisi', contentKey: 'thingsToDoTbilisi', image: '/images/files/tbilisi.jpg',
       address: { addressLocality: 'Tbilisi' },

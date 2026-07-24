@@ -254,6 +254,11 @@ export default function CityPage() {
         // localized alt; the cover is representativeOfPage. Mirrors SitePage.
         ...(heroImageMeta ? [{
           '@type': 'ImageObject',
+          // Optional stable @id for the hero node (page-scoped): a hero package may
+          // ask the replacement node to reuse `#hero-image` so the swap is clean.
+          // Only entries that set imageMeta.imageId emit an @id; every other city
+          // hero is unchanged (no @id, as before).
+          ...(heroImageMeta.imageId ? { '@id': `${url}#${heroImageMeta.imageId}` } : {}),
           contentUrl: `${SITE_URL}${heroImage}`,
           url: `${SITE_URL}${heroImage}`,
           width: heroImageMeta.width,
