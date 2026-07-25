@@ -40,12 +40,15 @@ export function RegionsHubPage() {
 }
 
 export function CitiesHubPage() {
-  // Cities are shown alphabetically on the hub (registry order is unaffected).
-  // Entries reclassified as a place to visit (e.g. the highland resort Gomismta)
-  // are excluded here and listed on the Places to Visit hub instead.
+  // Cities are shown with the capital first, then alphabetically (registry order
+  // is unaffected). The A–Z pass happens in DestinationHub via `sortByName`,
+  // because that is where the visible localized card name is resolved — sorting
+  // here could only order by the English registry name, which left the list out
+  // of order in every other language. Entries reclassified as a place to visit
+  // (e.g. the highland resort Gomismta) are excluded here and listed on the
+  // Places to Visit hub instead.
   const entries = cities
     .filter((c) => c.classifyAs !== 'place')
-    .sort((a, b) => a.name.localeCompare(b.name))
     .map((c) => ({
       slug: c.slug,
       fallbackName: c.name,
@@ -61,6 +64,8 @@ export function CitiesHubPage() {
       entries={entries}
       currentLabelKey="nav.cities"
       ctaKey="destinations.exploreCity"
+      sortByName
+      pinFirst="tbilisi"
     />
   )
 }

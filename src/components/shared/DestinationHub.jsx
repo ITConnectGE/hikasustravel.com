@@ -35,6 +35,7 @@ export default function DestinationHub({
   currentLabelKey,
   ctaKey,
   sortByName = false,
+  pinFirst = null,
   seoFallback = false,
 }) {
   const t = useT()
@@ -76,9 +77,17 @@ export default function DestinationHub({
       if (sortByName) {
         list.sort((a, b) => a.name.localeCompare(b.name, lang, { sensitivity: 'base' }))
       }
+      // One entry may be pinned ahead of the alphabetical run — the Cities hub
+      // leads with the capital. Matched on the stable slug, never the label,
+      // which is localized (Tbilisi / Tiflis / Tbilissi). A no-op if the slug
+      // isn't in this list, so it can never drop or duplicate a card.
+      if (pinFirst) {
+        const i = list.findIndex((e) => e.slug === pinFirst)
+        if (i > 0) list.unshift(list.splice(i, 1)[0])
+      }
       return list
     },
-    [entries, page, pageKey, sortByName, seoFallback, lang],
+    [entries, page, pageKey, sortByName, pinFirst, seoFallback, lang],
   )
 
   const trail = [
