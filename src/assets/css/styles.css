@@ -1776,7 +1776,12 @@ div.taxi-arrow {
 }
 .page-items {
   padding: var(--indent);
-  text-align: justify;
+  /* Left, not justified. Justification stretches the word spaces to force a
+     flush right edge, which on a narrow measure opens visible rivers of
+     whitespace mid-sentence — worst on long editorial pages and on mobile,
+     where the column is narrowest. A ragged right reads better and keeps
+     word spacing even. */
+  text-align: left;
   line-height: 1.6em;
 }
 .page-items h2 {
@@ -5511,9 +5516,6 @@ select option:checked {
     height: calc(100svh - 80px);
   }
 
-  .page-items {
-    text-align: justify;
-  }
   .home-items p,
   .page-items p {
     max-width: 100%;
