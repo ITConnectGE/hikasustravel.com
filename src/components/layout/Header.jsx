@@ -115,24 +115,23 @@ export default function Header({ variant = 'default' }) {
     searchTrigger.current = null
   }, [])
 
-  // Fetch the search chunk once the page is idle. It stays off the critical
-  // path, but is in cache long before anyone clicks, so opening the panel is
-  // instant instead of waiting on a request (the hover/focus preload on the
-  // button only helps a mouse; this covers touch and the keyboard shortcut).
-  useEffect(() => {
-    const idle = window.requestIdleCallback
-    if (idle) {
-      const id = idle(() => importSearchOverlay(), { timeout: 4000 })
-      return () => window.cancelIdleCallback?.(id)
-    }
-    const id = setTimeout(importSearchOverlay, 2500)
-    return () => clearTimeout(id)
-  }, [])
+  // The search chunk used to be fetched on idle for every visitor. It pulls in
+  // the search index, which derives from seoData and blogData — about 410 kB
+  // gzipped on every page load, for a panel most visitors never open. It is now
+  // fetched on intent instead, early enough that opening still feels instant:
+  //   - mouse: onMouseEnter / onFocus on the button (SearchButton)
+  //   - touch: onPointerDown / onTouchStart, which fire before the click
+  //   - keyboard: the modifier handler below, on Ctrl/Cmd down before the K
 
   // Ctrl/Cmd+K opens search from anywhere, unless the visitor is typing in a
   // field (contact forms, the tour filters) where the browser/OS shortcut wins.
+  // Holding the modifier warms the chunk so the shortcut opens without a wait.
   useEffect(() => {
     const onKey = (e) => {
+      // Ctrl/Cmd goes down before the K does, so warming here means the chunk is
+      // already in flight by the time the combo completes. It also fires for
+      // other Ctrl combos, which is harmless — the import promise is cached.
+      if (e.key === 'Control' || e.key === 'Meta') importSearchOverlay()
       if (!(e.metaKey || e.ctrlKey) || e.key.toLowerCase() !== 'k') return
       const el = document.activeElement
       const tag = el?.tagName

@@ -37,10 +37,14 @@ export default function SearchButton({ variant = 'nav', onOpen, onPreload, expan
       aria-haspopup="dialog"
       aria-expanded={expanded}
       onClick={(e) => onOpen(e.currentTarget)}
-      // Warm the lazy overlay chunk before it is needed, so the first open is
-      // instant rather than waiting on a round trip.
+      // Warm the lazy overlay chunk on intent, so the first open is instant
+      // rather than waiting on a round trip. Hover and focus cover mouse and
+      // keyboard; pointer/touch-down cover touch, firing before the click so
+      // the request is already in flight when the panel opens.
       onMouseEnter={onPreload}
       onFocus={onPreload}
+      onPointerDown={onPreload}
+      onTouchStart={onPreload}
     >
       <SearchIcon />
       <span className="nav-search__label">{label}</span>
