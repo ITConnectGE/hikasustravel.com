@@ -40,13 +40,18 @@ export default function DestinationsPage() {
     { name: t('nav.allDestinations') },
   ]
 
-  // The label a visitor actually reads: the localized nav label when one exists,
-  // otherwise the registry's real display name — never the raw key.
-  const cityTitle = (c) => {
-    const navKey = `nav.${c.slug}`
-    const navLabel = t(navKey)
-    return navLabel === navKey ? c.name : navLabel
-  }
+  // The label a visitor actually reads. This resolves through exactly the same
+  // chain as the Cities hub (DestinationHub): the curated localized card name,
+  // then the English one, then the registry's display name — so a city is named
+  // identically on /georgia and /georgia/cities in every language. Reading the
+  // ui.json `nav.<slug>` keys instead, as this used to, left the strip showing
+  // English names ("Kutaisi", "Mtskheta") where the hub had proper localizations
+  // ("Kutaissi", "Mzcheta"). Only Bakhmaro has no curated entry, and it falls
+  // back to the registry name on both pages.
+  const cityItems = pages.destinationsCities?.items || {}
+  const enCityItems = enPages.destinationsCities?.items || {}
+  const cityTitle = (c) =>
+    cityItems[c.slug]?.name || enCityItems[c.slug]?.name || c.name
 
   // Tbilisi first (matched on its stable slug, not its label — it renders as
   // Tiflis/Tbilissi in some locales), then the rest A–Z by that visible label.
