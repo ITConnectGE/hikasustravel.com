@@ -8,7 +8,6 @@ import useLang from '../../i18n/useLang'
 import { I18nContext } from '../../i18n/I18nContext'
 import useSEO from '../../hooks/useSEO'
 import { getSEO } from '../../data/seoData'
-import enPages from '../../i18n/locales/en/pages.json'
 
 const SITE_URL = 'https://www.hikasustravel.com'
 
@@ -40,7 +39,7 @@ export default function DestinationHub({
 }) {
   const t = useT()
   const { lang } = useLang()
-  const { pages } = useContext(I18nContext)
+  const { pages, enPages } = useContext(I18nContext)
   const page = pages[pageKey] || enPages[pageKey]
   const seo = getSEO(seoKey, lang)
 
@@ -87,7 +86,7 @@ export default function DestinationHub({
       }
       return list
     },
-    [entries, page, pageKey, sortByName, pinFirst, seoFallback, lang],
+    [entries, page, pageKey, enPages, sortByName, pinFirst, seoFallback, lang],
   )
 
   const trail = [

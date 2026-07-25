@@ -7,14 +7,13 @@ import useLang from '../../i18n/useLang'
 import { useLinkedHtml, useLinkedFaq } from '../../utils/autolinkReact'
 import useSEO from '../../hooks/useSEO'
 import { getSEO } from '../../data/seoData'
-import enPages from '../../i18n/locales/en/pages.json'
 
 const HERO_IMAGE = '/images/files/tbilisi-old-town-narikala-mtkvari-georgia-1200.webp'
 const SITE_URL = 'https://www.hikasustravel.com'
 const PATH = 'tbilisi-international-airport'
 
 export default function TbilisiAirportGuidePage() {
-  const { pages } = useContext(I18nContext)
+  const { pages, enPages } = useContext(I18nContext)
   const { lang } = useLang()
   // Fall back to English content until per-language translations are added.
   const page = pages.tbilisiAirportGuide || enPages.tbilisiAirportGuide

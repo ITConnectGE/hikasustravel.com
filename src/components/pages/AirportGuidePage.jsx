@@ -7,7 +7,6 @@ import useLang from '../../i18n/useLang'
 import { useLinkedHtml, useLinkedFaq } from '../../utils/autolinkReact'
 import useSEO from '../../hooks/useSEO'
 import { getSEO } from '../../data/seoData'
-import enPages from '../../i18n/locales/en/pages.json'
 
 // Hero photo of the terminal interior (Wizz Air check-in area).
 // Source: Wikimedia Commons, by Andrew Milligan Sumo, licensed CC BY 2.0 —
@@ -18,7 +17,7 @@ const SITE_URL = 'https://www.hikasustravel.com'
 const PATH = 'kutaisi-international-airport'
 
 export default function AirportGuidePage() {
-  const { pages } = useContext(I18nContext)
+  const { pages, enPages } = useContext(I18nContext)
   const { lang } = useLang()
   // Fall back to English content until per-language translations are added.
   const page = pages.airportGuide || enPages.airportGuide

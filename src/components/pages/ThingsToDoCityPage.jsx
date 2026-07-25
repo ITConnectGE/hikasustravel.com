@@ -12,7 +12,6 @@ import useSEO from '../../hooks/useSEO'
 import { getSEO } from '../../data/seoData'
 import { getCity, getRegion, cityPath, regionPath, thingsToDoPath } from '../../data/places'
 import { autolinkHtml } from '../../utils/autolink'
-import enPages from '../../i18n/locales/en/pages.json'
 import NotFoundPage from './NotFoundPage'
 
 const SITE_URL = 'https://www.hikasustravel.com'
@@ -34,7 +33,7 @@ export default function ThingsToDoCityPage() {
   const isCity = !!city
   const placePath = isCity ? cityPath(citySlug) : regionPath(citySlug)
   const t = useT()
-  const { pages } = useContext(I18nContext)
+  const { pages, enPages } = useContext(I18nContext)
   const { lang } = useLang()
   const navigate = useNavigate()
   const contentRef = useRef(null)

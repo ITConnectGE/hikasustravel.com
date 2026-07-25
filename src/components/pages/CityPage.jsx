@@ -14,7 +14,6 @@ import { getSEO } from '../../data/seoData'
 import { getCity, cityPath, thingsToDoPath, legacyRedirects } from '../../data/places'
 import { autolinkHtml } from '../../utils/autolink'
 import asset from '../../utils/basePath'
-import enPages from '../../i18n/locales/en/pages.json'
 import NotFoundPage from './NotFoundPage'
 
 const SITE_URL = 'https://www.hikasustravel.com'
@@ -33,7 +32,7 @@ export default function CityPage() {
   const { citySlug } = useParams()
   const city = getCity(citySlug)
   const t = useT()
-  const { pages } = useContext(I18nContext)
+  const { pages, enPages } = useContext(I18nContext)
   const { lang } = useLang()
   const navigate = useNavigate()
   const location = useLocation()

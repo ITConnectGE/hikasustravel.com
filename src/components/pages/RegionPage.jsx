@@ -13,7 +13,6 @@ import useSEO from '../../hooks/useSEO'
 import { getSEO } from '../../data/seoData'
 import { getRegion, regionPath, thingsToDoPath } from '../../data/places'
 import { autolinkHtml } from '../../utils/autolink'
-import enPages from '../../i18n/locales/en/pages.json'
 import NotFoundPage from './NotFoundPage'
 
 const SITE_URL = 'https://www.hikasustravel.com'
@@ -29,7 +28,7 @@ export default function RegionPage() {
   const { regionSlug } = useParams()
   const region = getRegion(regionSlug)
   const t = useT()
-  const { pages } = useContext(I18nContext)
+  const { pages, enPages } = useContext(I18nContext)
   const { lang } = useLang()
   const navigate = useNavigate()
   const contentRef = useRef(null)

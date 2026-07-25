@@ -7,7 +7,6 @@ import useLang from '../../i18n/useLang'
 import { useLinkedHtml, useLinkedFaq } from '../../utils/autolinkReact'
 import useSEO from '../../hooks/useSEO'
 import { getSEO } from '../../data/seoData'
-import enPages from '../../i18n/locales/en/pages.json'
 
 // Placeholder hero — swap for a money/markets image if desired.
 const HERO_IMAGE = '/images/files/georgia-home.jpg'
@@ -15,7 +14,7 @@ const SITE_URL = 'https://www.hikasustravel.com'
 const PATH = 'georgian-lari-currency-guide'
 
 export default function CurrencyGuidePage() {
-  const { pages } = useContext(I18nContext)
+  const { pages, enPages } = useContext(I18nContext)
   const { lang } = useLang()
   // Fall back to English content until per-language translations are added.
   const page = pages.lariGuide || enPages.lariGuide

@@ -10,7 +10,6 @@ import { I18nContext } from '../../i18n/I18nContext'
 import useSEO from '../../hooks/useSEO'
 import { getSEO } from '../../data/seoData'
 import { cities, cityPath } from '../../data/places'
-import enPages from '../../i18n/locales/en/pages.json'
 
 const HERO_IMAGE = '/images/files/tbilisi-old-town-narikala-mtkvari-georgia-1200.webp'
 const SITE_URL = 'https://www.hikasustravel.com'
@@ -31,7 +30,7 @@ const FEATURED_CITIES = cities.filter((c) => c.published && c.classifyAs !== 'pl
 export default function DestinationsPage() {
   const t = useT()
   const { lang } = useLang()
-  const { pages } = useContext(I18nContext)
+  const { pages, enPages } = useContext(I18nContext)
   const page = pages.destinations || enPages.destinations
   const seo = getSEO('destinations', lang)
 

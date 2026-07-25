@@ -8,16 +8,23 @@ const translationCache = {}
 async function loadLocale(lang) {
   if (translationCache[lang]) return translationCache[lang]
 
-  const [ui, pages, faq] = await Promise.all([
+  // `en-fallback.json` carries only what a translated locale actually needs from
+  // English — the keys it has no translation for, plus the destination-hub keys
+  // whose English item names are used as a per-card fallback. English itself
+  // needs none of it: its own pages.json already is the fallback. See
+  // scripts/generate-en-fallback.js.
+  const [ui, pages, faq, enFallback] = await Promise.all([
     import(`./locales/${lang}/ui.json`),
     import(`./locales/${lang}/pages.json`),
     import(`./locales/${lang}/faq.json`),
+    lang === defaultLang ? null : import('./locales/en-fallback.json'),
   ])
 
   const result = {
     ui: ui.default,
     pages: pages.default,
     faq: faq.default,
+    enPages: enFallback ? enFallback.default : pages.default,
   }
   translationCache[lang] = result
   return result
@@ -65,6 +72,7 @@ export default function I18nProvider({ children }) {
   const translations = useMemo(() => (data ? data.ui : {}), [data])
   const pages = useMemo(() => (data ? data.pages : {}), [data])
   const faq = useMemo(() => (data ? data.faq : []), [data])
+  const enPages = useMemo(() => (data ? data.enPages : {}), [data])
 
   const value = useMemo(() => ({
     lang,
@@ -72,9 +80,10 @@ export default function I18nProvider({ children }) {
     translations,
     pages,
     faq,
+    enPages,
     tourTranslations,
     loadTourTranslations,
-  }), [lang, setLang, translations, pages, faq, tourTranslations, loadTourTranslations])
+  }), [lang, setLang, translations, pages, faq, enPages, tourTranslations, loadTourTranslations])
 
   if (!data) return null
 

@@ -8,7 +8,6 @@ import { useLinkedHtml, useLinkedFaq } from '../../utils/autolinkReact'
 import useT from '../../i18n/useT'
 import useSEO from '../../hooks/useSEO'
 import { getSEO } from '../../data/seoData'
-import enPages from '../../i18n/locales/en/pages.json'
 
 // Placeholder hero — swap for a passport/border image if desired.
 const HERO_IMAGE = '/images/files/georgia-home.jpg'
@@ -24,7 +23,7 @@ function formatDate(dateStr, lang) {
 }
 
 export default function VisaPage() {
-  const { pages } = useContext(I18nContext)
+  const { pages, enPages } = useContext(I18nContext)
   const { lang } = useLang()
   const t = useT()
   // Fall back to English content until per-language translations are added.
