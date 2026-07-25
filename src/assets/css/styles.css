@@ -7925,3 +7925,17 @@ select option:checked {
 @media (prefers-reduced-motion: reduce) {
   .site-search { animation: none; }
 }
+
+/* Destinations hub (/georgia) intro.
+   .home-items sets text-align:center for the whole section, which is right for
+   the headings and tiles but not for a multi-line paragraph: each line gets a
+   different indent, so a mid-sentence line break reads as a large gap between
+   the last word of one line and the first of the next (at 1366px the break
+   falls between "what to" and "see,"). Left-aligning the text gives an even
+   rag. Scoped to this one paragraph — the sibling hubs and the homepage share
+   .home-items and are intentionally left centred. The block stays centred:
+   width/max-width/margin from `.home-items p` are untouched, so nothing moves. */
+.dest-intro {
+  text-align: left;
+  text-wrap: pretty;
+}

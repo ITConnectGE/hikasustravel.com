@@ -40,6 +40,27 @@ export default function DestinationsPage() {
     { name: t('nav.allDestinations') },
   ]
 
+  // The label a visitor actually reads: the localized nav label when one exists,
+  // otherwise the registry's real display name — never the raw key.
+  const cityTitle = (c) => {
+    const navKey = `nav.${c.slug}`
+    const navLabel = t(navKey)
+    return navLabel === navKey ? c.name : navLabel
+  }
+
+  // Tbilisi first (matched on its stable slug, not its label — it renders as
+  // Tiflis/Tbilissi in some locales), then the rest A–Z by that visible label.
+  // Sorted here rather than on the module-level constant because the label is
+  // locale-dependent, so the order legitimately differs per language (Czech, for
+  // instance, collates "Ch" after "H").
+  const titled = FEATURED_CITIES.map((c) => ({ city: c, title: cityTitle(c) }))
+  const orderedCities = [
+    ...titled.filter((x) => x.city.slug === 'tbilisi'),
+    ...titled
+      .filter((x) => x.city.slug !== 'tbilisi')
+      .sort((a, b) => a.title.localeCompare(b.title, lang, { sensitivity: 'base' })),
+  ]
+
   const jsonLd = useMemo(() => {
     const url = `${SITE_URL}/${lang}/georgia`
     return {
@@ -78,7 +99,11 @@ export default function DestinationsPage() {
             <Breadcrumbs trail={trail} />
           </FadeUp>
           <FadeUp>
-            <p>{page.intro}</p>
+            {/* Left-aligned inside the centred section: centred body copy makes a
+                mid-sentence line break read as a large gap between the last word
+                of one line and the first of the next. The block itself stays
+                centred (width/max-width/margin are unchanged), so nothing moves. */}
+            <p className="dest-intro">{page.intro}</p>
           </FadeUp>
           <FadeUp>
             <div className="tours-grid">
@@ -105,12 +130,7 @@ export default function DestinationsPage() {
               </FadeUp>
               <FadeUp>
                 <div className="tours-grid">
-                  {FEATURED_CITIES.map((c) => {
-                    // Use the localized nav label when one exists, otherwise the
-                    // registry's real display name — never the raw key.
-                    const navKey = `nav.${c.slug}`
-                    const navLabel = t(navKey)
-                    const title = navLabel === navKey ? c.name : navLabel
+                  {orderedCities.map(({ city: c, title }) => {
                     return (
                       <div className="tour-tile" key={c.slug}>
                         <LocaleLink to={cityPath(c.slug)} className="tour-tile-link" aria-label={title}>
