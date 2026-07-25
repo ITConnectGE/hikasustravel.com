@@ -1,4 +1,4 @@
-import { useEffect } from 'react'
+import { Suspense, useEffect } from 'react'
 import { Outlet, useLocation, useParams, useNavigate } from 'react-router-dom'
 import Header from './Header'
 import Footer from './Footer'
@@ -41,7 +41,13 @@ export default function Layout() {
       <ScrollToTop />
       <Header variant={isTaxiPage ? 'taxi' : 'default'} />
       <main>
-        <Outlet />
+        {/* Page components are code-split (see App.jsx). The boundary sits here
+            rather than around <Routes> so the header and footer stay mounted
+            while a chunk loads; the fallback is deliberately empty so nothing
+            flashes in and out of the page area. */}
+        <Suspense fallback={null}>
+          <Outlet />
+        </Suspense>
       </main>
       <BackToTop />
       <WhatsAppButton />

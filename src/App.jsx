@@ -1,39 +1,55 @@
+import { lazy } from 'react'
 import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom'
 import I18nProvider from './i18n/I18nProvider'
 import Layout from './components/layout/Layout'
-import HomePage from './components/pages/HomePage'
-import AboutUsPage from './components/pages/AboutUsPage'
-import AboutGeorgiaPage from './components/pages/AboutGeorgiaPage'
-import CurrencyGuidePage from './components/pages/CurrencyGuidePage'
-import VisaPage from './components/pages/VisaPage'
-import LanguagesPage from './components/pages/LanguagesPage'
-import AirportGuidePage from './components/pages/AirportGuidePage'
-import TbilisiAirportGuidePage from './components/pages/TbilisiAirportGuidePage'
-import TbilisiMetroPage from './components/pages/TbilisiMetroPage'
-import TbilisiRailwayStationPage from './components/pages/TbilisiRailwayStationPage'
-import AbkhaziaPage from './components/pages/AbkhaziaPage'
-import DestinationsPage from './components/pages/DestinationsPage'
-import { RegionsHubPage, CitiesHubPage, PlacesToVisitHubPage } from './components/pages/DestinationHubs'
-import CityPage from './components/pages/CityPage'
-import RegionPage from './components/pages/RegionPage'
-import CitySubPage from './components/pages/CitySubPage'
-import BorderCrossingPage from './components/pages/BorderCrossingPage'
-import { DestinationsRedirect, ThingsToDoRedirect, RegionSiteRedirect, TourSlugRedirect } from './components/pages/LegacyRedirects'
 import { cities, regions } from './data/places'
 import { tours } from './data/tours'
-import PrivateToursPage from './components/pages/PrivateToursPage'
-import GroupToursPage from './components/pages/GroupToursPage'
-import TourDetailPage from './components/pages/TourDetailPage'
-import EntityToursPage from './components/pages/EntityToursPage'
-import FaqPage from './components/pages/FaqPage'
-import ContactPage from './components/pages/ContactPage'
-import ShuttleServicePage from './components/pages/ShuttleServicePage'
-import PrivacyPolicyPage from './components/pages/PrivacyPolicyPage'
-import TermsPage from './components/pages/TermsPage'
-import EmbassiesPage from './components/pages/EmbassiesPage'
-import BlogPage from './components/pages/BlogPage'
-import BlogArticlePage from './components/pages/BlogArticlePage'
-import NotFoundPage from './components/pages/NotFoundPage'
+
+// Every page is code-split: a route now downloads its own component (and any
+// data module only it needs — blog articles, dish data, embassy records) rather
+// than all ~30 pages arriving in the entry bundle. Layout renders the Suspense
+// boundary, so the header and footer stay put while a chunk loads.
+//
+// `places` and `tours` stay eagerly imported above because the route table
+// itself is generated from them (legacy things-to-do URLs and renamed tour
+// slugs), so they are needed before any route can match.
+const HomePage = lazy(() => import('./components/pages/HomePage'))
+const AboutUsPage = lazy(() => import('./components/pages/AboutUsPage'))
+const AboutGeorgiaPage = lazy(() => import('./components/pages/AboutGeorgiaPage'))
+const CurrencyGuidePage = lazy(() => import('./components/pages/CurrencyGuidePage'))
+const VisaPage = lazy(() => import('./components/pages/VisaPage'))
+const LanguagesPage = lazy(() => import('./components/pages/LanguagesPage'))
+const AirportGuidePage = lazy(() => import('./components/pages/AirportGuidePage'))
+const TbilisiAirportGuidePage = lazy(() => import('./components/pages/TbilisiAirportGuidePage'))
+const TbilisiMetroPage = lazy(() => import('./components/pages/TbilisiMetroPage'))
+const TbilisiRailwayStationPage = lazy(() => import('./components/pages/TbilisiRailwayStationPage'))
+const AbkhaziaPage = lazy(() => import('./components/pages/AbkhaziaPage'))
+const DestinationsPage = lazy(() => import('./components/pages/DestinationsPage'))
+// Named exports need unwrapping — React.lazy resolves the `default` binding.
+const RegionsHubPage = lazy(() => import('./components/pages/DestinationHubs').then((m) => ({ default: m.RegionsHubPage })))
+const CitiesHubPage = lazy(() => import('./components/pages/DestinationHubs').then((m) => ({ default: m.CitiesHubPage })))
+const PlacesToVisitHubPage = lazy(() => import('./components/pages/DestinationHubs').then((m) => ({ default: m.PlacesToVisitHubPage })))
+const CityPage = lazy(() => import('./components/pages/CityPage'))
+const RegionPage = lazy(() => import('./components/pages/RegionPage'))
+const CitySubPage = lazy(() => import('./components/pages/CitySubPage'))
+const BorderCrossingPage = lazy(() => import('./components/pages/BorderCrossingPage'))
+const DestinationsRedirect = lazy(() => import('./components/pages/LegacyRedirects').then((m) => ({ default: m.DestinationsRedirect })))
+const ThingsToDoRedirect = lazy(() => import('./components/pages/LegacyRedirects').then((m) => ({ default: m.ThingsToDoRedirect })))
+const RegionSiteRedirect = lazy(() => import('./components/pages/LegacyRedirects').then((m) => ({ default: m.RegionSiteRedirect })))
+const TourSlugRedirect = lazy(() => import('./components/pages/LegacyRedirects').then((m) => ({ default: m.TourSlugRedirect })))
+const PrivateToursPage = lazy(() => import('./components/pages/PrivateToursPage'))
+const GroupToursPage = lazy(() => import('./components/pages/GroupToursPage'))
+const TourDetailPage = lazy(() => import('./components/pages/TourDetailPage'))
+const EntityToursPage = lazy(() => import('./components/pages/EntityToursPage'))
+const FaqPage = lazy(() => import('./components/pages/FaqPage'))
+const ContactPage = lazy(() => import('./components/pages/ContactPage'))
+const ShuttleServicePage = lazy(() => import('./components/pages/ShuttleServicePage'))
+const PrivacyPolicyPage = lazy(() => import('./components/pages/PrivacyPolicyPage'))
+const TermsPage = lazy(() => import('./components/pages/TermsPage'))
+const EmbassiesPage = lazy(() => import('./components/pages/EmbassiesPage'))
+const BlogPage = lazy(() => import('./components/pages/BlogPage'))
+const BlogArticlePage = lazy(() => import('./components/pages/BlogArticlePage'))
+const NotFoundPage = lazy(() => import('./components/pages/NotFoundPage'))
 
 export default function App() {
   return (
