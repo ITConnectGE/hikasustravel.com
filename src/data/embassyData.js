@@ -413,15 +413,27 @@ export const embassies = [
     id: 'hr',
     countryCode: 'HR',
     countryName: 'Croatia',
-    embassyName: 'Embassy of the Republic of Croatia',
-    address: '35 Ilia Chavchavadze Avenue, Tbilisi 0179',
-    phone: '+995 322 38 46 50',
-    emergencyPhone: '+995 322 38 46 50',
-    email: 'croemb.tbilisi@mvep.hr',
-    website: 'https://mvep.gov.hr/embassy-tbilisi',
-    workingHours: 'Mon-Fri 9:00-16:00',
-    googleMapsUrl: 'https://maps.google.com/?q=35+Ilia+Chavchavadze+Avenue,+Tbilisi,+Georgia',
-    coordinates: [44.7549, 41.7093],
+    // Croatia has NO resident embassy in Georgia. The mission accredited to
+    // Georgia is the Croatian Embassy in Athens; the only Croatian
+    // representation in Tbilisi is this honorary consulate. Every field below
+    // comes from the Croatian MFA's own listing (the `website` URL), which
+    // covers the honorary consulates in Armenia, Georgia and Cyprus under the
+    // Athens embassy. The previous entry claimed an "Embassy of the Republic of
+    // Croatia" at 35 Ilia Chavchavadze Avenue — that is the TURKISH embassy's
+    // address, duplicated here, with a phone and a croemb.tbilisi@mvep.hr
+    // address that no Croatian source lists.
+    embassyName: 'Honorary Consulate of the Republic of Croatia',
+    address: '4 Sarajishvili Avenue, Tbilisi 0153',
+    phone: '+995 32 65 33 33',
+    emergencyPhone: '+995 32 65 33 33',
+    // No email: the MFA publishes none for this post, and the only addresses
+    // floating around aggregator sites are the honorary consul's private ones.
+    website: 'https://mvep.gov.hr/consular-information-99594/consular-office/179943',
+    // Honorary consulates keep no published counter hours.
+    workingHours: 'By appointment',
+    googleMapsUrl: 'https://maps.google.com/?q=4+Sarajishvili+Avenue,+Tbilisi,+Georgia',
+    // No `coordinates`: the field is unused by the embassies page, and an
+    // invented pin is worse than none.
   },
   {
     id: 'sa',
