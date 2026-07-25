@@ -29,7 +29,10 @@ export function withTrailingSlash(url) {
 // Keys in a JSON-LD graph that hold a navigable page URL (as opposed to an image
 // or other asset). Used to normalise breadcrumb/entity URLs to the trailing-slash
 // canonical form without touching `image`/`logo` asset URLs.
-const PAGE_URL_KEYS = new Set(['item', 'url', '@id'])
+// `mainEntityOfPage` names the page an Article node describes, so it is a page
+// URL like the others — without it the Article nodes on city, things-to-do and
+// border pages pointed at the slashless form, which 301-redirects.
+const PAGE_URL_KEYS = new Set(['item', 'url', '@id', 'mainEntityOfPage'])
 
 // Recursively return a copy of a JSON-LD value with every page URL normalised to
 // the trailing-slash form. Non-URL values and asset URLs are left unchanged.
