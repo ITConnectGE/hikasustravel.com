@@ -33,7 +33,7 @@ export const blogArticles = [
 
 <p>If your country isn't on the visa-free list, Georgia offers a straightforward <strong>e-Visa</strong> system. You can apply online, and it typically takes 5 business days. The cost is around $20 USD.</p>
 
-<p><strong>Official resource:</strong> Always check the latest requirements on the <a href="https://www.geoconsul.gov.ge/HtmlPage/Html/View?id=956&lang=Eng" target="_blank" rel="noopener noreferrer">Georgian Ministry of Foreign Affairs visa portal</a> before booking your flights. Visa policies can change, and this is the only source you should trust.</p>
+<p><strong>Official resource:</strong> Always check the latest requirements on the <a href="https://www.evisa.gov.ge/GeoVisa/" target="_blank" rel="noopener noreferrer">Georgian Ministry of Foreign Affairs visa portal</a> before booking your flights. Visa policies can change, and this is the only source you should trust.</p>
 
 <p><strong>Pro tip:</strong> Your passport must be valid for the duration of your stay. Georgia doesn't require the typical "6 months validity" rule that many countries enforce. However, some airlines might — so check with your carrier.</p>
 
