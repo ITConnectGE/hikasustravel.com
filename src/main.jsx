@@ -5,7 +5,8 @@ import { initFirstTouchAttribution } from './utils/attribution'
 import './assets/css/reset_plus.css'
 import './assets/css/styles.css'
 import './assets/css/blur-up.css'
-import 'mapbox-gl/dist/mapbox-gl.css'
+// mapbox-gl.css now travels with the lazily-loaded MapboxMap component instead
+// of the entry bundle, so pages without a map ship neither its JS nor its CSS.
 import 'swiper/css'
 import 'swiper/css/navigation'
 

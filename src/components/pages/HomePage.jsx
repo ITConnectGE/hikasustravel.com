@@ -1,8 +1,11 @@
-import { useContext } from 'react'
+import { lazy, Suspense, useContext } from 'react'
 import HeroSection from '../shared/HeroSection'
 import FadeUp from '../shared/FadeUp'
 import BlurUpBackground from '../shared/BlurUpBackground'
-import MapboxMap from '../shared/MapboxMap'
+// mapbox-gl is ~450 kB gzipped. Loading it lazily keeps it out of the main
+// bundle, so it no longer downloads on the ~370 routes that render no map at
+// all, and here it arrives after the page itself rather than blocking it.
+const MapboxMap = lazy(() => import('../shared/MapboxMap'))
 import Testimonials from '../shared/Testimonials'
 import ContactForm from '../shared/ContactForm'
 import { tours } from '../../data/tours'
@@ -163,21 +166,25 @@ export default function HomePage() {
         </div>
       </section>
 
-      <MapboxMap
-        id="map"
-        center={[43.402090536365975, 42.22342174308285]}
-        zoom={7}
-        showGeorgiaBorders
-        markers={[{
-          coordinates: [43.402090536365975, 42.22342174308285],
-          svgUrl: '/img/pennant.svg',
-          width: 30,
-          height: 36,
-          offsetX: 20,
-          offsetY: 5,
-        }]}
-        isHomePage
-      />
+      {/* Fallback mirrors MapboxMap's own wrapper so the slot keeps its height
+          (.page-map is 70vh) and nothing shifts when the map arrives. */}
+      <Suspense fallback={<section><div className="page-map" /></section>}>
+        <MapboxMap
+          id="map"
+          center={[43.402090536365975, 42.22342174308285]}
+          zoom={7}
+          showGeorgiaBorders
+          markers={[{
+            coordinates: [43.402090536365975, 42.22342174308285],
+            svgUrl: '/img/pennant.svg',
+            width: 30,
+            height: 36,
+            offsetX: 20,
+            offsetY: 5,
+          }]}
+          isHomePage
+        />
+      </Suspense>
 
       {/* Testimonials */}
       <section className="td-testimonials-section">

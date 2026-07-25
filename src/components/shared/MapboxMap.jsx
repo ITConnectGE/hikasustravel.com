@@ -1,4 +1,7 @@
 import { useEffect, useRef, useState } from 'react'
+// Moved here from main.jsx: as part of this lazily-loaded chunk, the stylesheet
+// is fetched only by pages that actually render a map.
+import 'mapbox-gl/dist/mapbox-gl.css'
 import {
   initializeTourMap,
   initializeMap,

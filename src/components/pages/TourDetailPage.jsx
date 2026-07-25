@@ -1,4 +1,4 @@
-import { useCallback, useContext, useEffect, useMemo, useRef, useState } from 'react'
+import { lazy, Suspense, useCallback, useContext, useEffect, useMemo, useRef, useState } from 'react'
 import { useParams } from 'react-router-dom'
 import TourDetailHero from '../shared/TourDetailHero'
 import TourSectionNav from '../shared/TourSectionNav'
@@ -9,7 +9,9 @@ import { getStartingPrice } from '../shared/pricingUtils'
 import IncludedNotIncluded from '../shared/IncludedNotIncluded'
 import TourInquiryForm from '../shared/TourInquiryForm'
 import Gallery, { GalleryLightbox } from '../shared/Gallery'
-import MapboxMap from '../shared/MapboxMap'
+// Lazy so mapbox-gl stays out of the main bundle — see HomePage. Only tours
+// that actually define `tour.map` reach the Suspense boundary below.
+const MapboxMap = lazy(() => import('../shared/MapboxMap'))
 import { tours } from '../../data/tours'
 import useT from '../../i18n/useT'
 import useLang from '../../i18n/useLang'
@@ -439,14 +441,16 @@ export default function TourDetailPage() {
         <section id="tour-map" className="td-map-section">
           <div className="td-map-card">
             <h2 className="td-section__title">{t('tour.routeMap')}</h2>
-            <MapboxMap
-              id="tour-map-canvas"
-              center={tour.map.center}
-              zoom={tour.map.zoom || 8}
-              markers={tour.map.markers || []}
-              routeCoordinates={tour.map.routeCoordinates || []}
-              className="td-map"
-            />
+            <Suspense fallback={<section><div className="td-map" /></section>}>
+              <MapboxMap
+                id="tour-map-canvas"
+                center={tour.map.center}
+                zoom={tour.map.zoom || 8}
+                markers={tour.map.markers || []}
+                routeCoordinates={tour.map.routeCoordinates || []}
+                className="td-map"
+              />
+            </Suspense>
           </div>
         </section>
       )}
