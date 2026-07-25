@@ -147,18 +147,25 @@ export const embassies = [
     id: 'gr',
     countryCode: 'GR',
     countryName: 'Greece',
+    // Address, phone, emergency line and email per the EU's official consular
+    // protection directory (consular-protection.ec.europa.eu) cross-checked
+    // against the mission's own contact page. The previous entry gave 40
+    // Razmadze St, which is the separate CONSULAR OFFICE, not the embassy, and
+    // an email (gremb.tif@) that appears in no source.
     embassyName: 'Embassy of Greece in Georgia',
-    address: '40 Razmadze St, Tbilisi',
-    phone: '+995 322 91 53 70',
-    emergencyPhone: '+995 322 91 53 70',
-    email: 'gremb.tif@mfa.gr',
+    address: '37d Tabidze St, Tbilisi 0179',
+    phone: '+995 322 91 49 70',
+    emergencyPhone: '+995 595 339 299',
+    email: 'gremb.tbi@mfa.gr',
     // mfa.gr blocks automated clients on EVERY path, so this could not be
     // fetch-verified from any network. Chosen because search engines have the
     // mission page indexed with real titles, while /tbilisi appears nowhere.
+    // (The EU directory lists the shorter vanity form www.mfa.gr/georgia.)
     website: 'https://www.mfa.gr/missionsabroad/en/georgia-en/',
     workingHours: 'Mon-Fri 9:00-15:00',
-    googleMapsUrl: 'https://maps.google.com/?q=40+Razmadze+St,+Tbilisi,+Georgia',
-    coordinates: [44.7850, 41.7100],
+    googleMapsUrl: 'https://maps.google.com/?q=37d+Tabidze+St,+Tbilisi,+Georgia',
+    // No `coordinates`: the old pair pointed at the consular office on Razmadze
+    // and the field is unused by the embassies page — better absent than wrong.
   },
   {
     id: 'ch',
@@ -404,15 +411,20 @@ export const embassies = [
     countryName: 'Ireland',
     // Ireland has NO resident embassy in Georgia — the mission accredited here is
     // the Embassy of Ireland in Ankara, and Tbilisi has only an honorary
-    // consulate. `website` points at the Department of Foreign Affairs mission
-    // directory (verified 200); the old /en/georgia path 403s while the rest of
-    // ireland.ie serves normally, so it was a dead URL rather than a bot block.
-    // No email: the previous tbilisiembassy@dfa.ie was a mailbox for an embassy
-    // that does not exist, and no Irish source publishes one for this post.
+    // consulate. Every field below is what Ireland's own Department of Foreign
+    // Affairs publishes in its mission directory (the `website` URL, verified
+    // 200), which lists "Honorary Consul of Ireland, Georgia — Jeffrey Kent, 11
+    // Ioseb Grishashvili Street, Tbilisi 0105". The old /en/georgia path 403s
+    // while the rest of ireland.ie serves normally, so it was a dead URL rather
+    // than a bot block. The previous phone (+995 322 74 99 90) and email
+    // (tbilisiembassy@dfa.ie — a mailbox for an embassy that does not exist)
+    // appear in no Irish source; aggregator sites also list a different street,
+    // 48 Mirza Shafi, which the DFA does not.
     embassyName: 'Honorary Consulate of Ireland',
-    address: '11 Ioseb Grishashvili St, Tbilisi',
-    phone: '+995 322 74 99 90',
-    emergencyPhone: '+995 322 74 99 90',
+    address: '11 Ioseb Grishashvili St, Tbilisi 0105',
+    phone: '+995 595 276 624',
+    emergencyPhone: '+995 595 276 624',
+    email: 'jeffrey.kent@honoraryconsul.ie',
     website: 'https://www.ireland.ie/en/dfa/embassies/',
     workingHours: 'By appointment',
     googleMapsUrl: 'https://maps.google.com/?q=11+Ioseb+Grishashvili+St,+Tbilisi,+Georgia',
