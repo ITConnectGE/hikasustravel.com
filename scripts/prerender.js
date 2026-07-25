@@ -73,21 +73,13 @@ const langNames = {
 // 1. Load data sources
 // ---------------------------------------------------------------------------
 
-// --- seoData.js (static page SEO) ---
-// Parse the JS object manually since it uses `export function`
-const seoFile = readFileSync(join(__dirname, '../src/data/seoData.js'), 'utf-8')
-
-// Extract the seo object by evaluating it in a controlled way
-function parseSeoData(source) {
-  // Remove the export function at the bottom
-  const objMatch = source.match(/const seo = (\{[\s\S]*?\n\})\s*\n/)
-  if (!objMatch) throw new Error('Could not parse seoData.js')
-  // Use Function constructor to evaluate the object literal
-  const fn = new Function(`return ${objMatch[1]}`)
-  return fn()
-}
-
-const seo = parseSeoData(seoFile)
+// --- Page SEO (title / description / keywords, per locale) ---
+// Imported straight from the authoring source, which now exports the object.
+// This replaces a regex-and-new-Function parse of the old seoData.js — the
+// runtime file no longer holds the data, only the per-locale lookup.
+const { seo } = await import(
+  pathToFileURL(join(__dirname, '../src/data/seoData.source.js')).href
+)
 
 function getSEO(pageKey, lang = 'en') {
   const page = seo[pageKey]
