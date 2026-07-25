@@ -174,9 +174,10 @@ for (const lang of LANGS) {
   }
 }
 if (simFailures.length) {
-  console.error(`\nREFUSING TO WRITE — ${simFailures.length} simulation failures:`)
   simFailures.slice(0, 20).forEach((f) => console.error('  ' + f))
-  process.exit(1)
+  // Throw rather than exit: nothing is written, and a non-zero exit with the
+  // reason attached is what a build step should surface.
+  throw new Error(`Refusing to write redirect config — ${simFailures.length} simulation failures (first 20 above)`)
 }
 console.log(`simulation: ${FAMILIES.length} regex rules verified against `
   + `${(pairs.length + livePaths.length) * LANGS.length} paths (legacy + live) — no mis-rewrites\n`)
