@@ -63,7 +63,11 @@ export default function ShuttleServicePage() {
       <section className="taxi-items">
         <div>
           <FadeUp>
-            <h2>{t('shuttle.title')}</h2>
+            {/* The page's main heading. The hero above is a bare background
+                image with no text, so this was the only candidate — it was an
+                h2, leaving the page with no h1 at all. Styled to render exactly
+                as it did (see `.taxi-items h1` in styles.css). */}
+            <h1>{t('shuttle.title')}</h1>
           </FadeUp>
           <p>{autolinkNodes(t('shuttle.description'), lang, pages)}</p>
         </div>

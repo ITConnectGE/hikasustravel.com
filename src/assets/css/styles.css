@@ -4067,11 +4067,21 @@ footer {
   text-align: center;
 }
 
+/* The shuttle page's title is an h1 (it is the page's main heading), but it
+   must look exactly like the h2s beside it: the global h1 rule is 2x font-size
+   and color:var(--color-bg), which on the light even-numbered band would put
+   near-white text on a near-white background. Match the h2 instead. */
+.taxi-items h1 {
+  font-size: calc(var(--font-size) * 1.5);
+  color: inherit;
+}
+
 /* Odd items (1st, 3rd, 5th, etc.) */
 .taxi-items:nth-child(odd) {
   background-color: var(--color-h2);
   color: var(--color-bg);
 }
+.taxi-items:nth-child(odd) h1,
 .taxi-items:nth-child(odd) h2 {
   color: var(--color-h3);
 }
@@ -5710,6 +5720,7 @@ select option:checked {
   .taxi-items {
     text-align: justify;
   }
+  .taxi-items h1,
   .taxi-items h2 {
     text-align: center;
   }
