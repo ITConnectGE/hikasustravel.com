@@ -152,7 +152,10 @@ export const embassies = [
     phone: '+995 322 91 53 70',
     emergencyPhone: '+995 322 91 53 70',
     email: 'gremb.tif@mfa.gr',
-    website: 'https://www.mfa.gr/tbilisi',
+    // mfa.gr blocks automated clients on EVERY path, so this could not be
+    // fetch-verified from any network. Chosen because search engines have the
+    // mission page indexed with real titles, while /tbilisi appears nowhere.
+    website: 'https://www.mfa.gr/missionsabroad/en/georgia-en/',
     workingHours: 'Mon-Fri 9:00-15:00',
     googleMapsUrl: 'https://maps.google.com/?q=40+Razmadze+St,+Tbilisi,+Georgia',
     coordinates: [44.7850, 41.7100],
@@ -399,13 +402,19 @@ export const embassies = [
     id: 'ie',
     countryCode: 'IE',
     countryName: 'Ireland',
-    embassyName: 'Embassy of Ireland in Georgia',
+    // Ireland has NO resident embassy in Georgia — the mission accredited here is
+    // the Embassy of Ireland in Ankara, and Tbilisi has only an honorary
+    // consulate. `website` points at the Department of Foreign Affairs mission
+    // directory (verified 200); the old /en/georgia path 403s while the rest of
+    // ireland.ie serves normally, so it was a dead URL rather than a bot block.
+    // No email: the previous tbilisiembassy@dfa.ie was a mailbox for an embassy
+    // that does not exist, and no Irish source publishes one for this post.
+    embassyName: 'Honorary Consulate of Ireland',
     address: '11 Ioseb Grishashvili St, Tbilisi',
     phone: '+995 322 74 99 90',
     emergencyPhone: '+995 322 74 99 90',
-    email: 'tbilisiembassy@dfa.ie',
-    website: 'https://www.ireland.ie/en/georgia',
-    workingHours: 'Mon-Fri 9:30-12:30, 14:00-16:00',
+    website: 'https://www.ireland.ie/en/dfa/embassies/',
+    workingHours: 'By appointment',
     googleMapsUrl: 'https://maps.google.com/?q=11+Ioseb+Grishashvili+St,+Tbilisi,+Georgia',
     coordinates: [44.8090, 41.6920],
   },
