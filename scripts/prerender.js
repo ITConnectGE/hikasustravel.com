@@ -43,6 +43,17 @@ const { entityTourPages } = await import(
 const { createLinkGraph } = await import(
   pathToFileURL(join(__dirname, 'seo-links.js')).href
 )
+
+// Build-time structured data (entity nodes, hero ImageObject, breadcrumbs) —
+// see scripts/seo-jsonld.js. Runtime useSEO() overwrites this same element.
+const { createJsonLdBuilder } = await import(
+  pathToFileURL(join(__dirname, 'seo-jsonld.js')).href
+)
+
+// Trailing-slash normaliser for JSON-LD item/url/@id keys, shared with useSEO.
+const { normalizeJsonLdUrls } = await import(
+  pathToFileURL(join(__dirname, '../src/utils/url.js')).href
+)
 const DIST = join(__dirname, '..', 'dist')
 const SITE_URL = 'https://www.hikasustravel.com'
 const LANGS = ['en', 'es', 'fr', 'de', 'pl', 'cs', 'nl']
@@ -297,6 +308,17 @@ const linkGraph = createLinkGraph({
   blogTitle: (lang, article) => loadBlogTitle(lang, article.titleKey) || article.title,
 })
 
+const jsonLdBuilder = createJsonLdBuilder({ seoFor: getSEO })
+
+// Page-specific structured data, tagged data-seo-jsonld so the runtime hook
+// replaces this element's contents instead of appending a second block. `<` is
+// escaped so a description containing "</script>" cannot close the tag early.
+function renderJsonLd(graph) {
+  if (!graph) return ''
+  const json = JSON.stringify(normalizeJsonLdUrls(graph)).replace(/</g, '\\u003c')
+  return `<script type="application/ld+json" data-seo-jsonld>${json}</script>`
+}
+
 // Fallback navigation rendered inside #root. React mounts with createRoot(),
 // which empties the container on first render, so this is only ever seen by a
 // client that does not run JavaScript — which is exactly the client that
@@ -403,6 +425,11 @@ function writeHtml(filePath, lang, { title, description, keywords, canonical, im
   }
   // x-default points to English version
   $('head').append(`<link rel="alternate" hreflang="x-default" href="${SITE_URL}/en${canonicalPath}">`)
+
+  // Page-specific JSON-LD (see renderJsonLd). The generic TravelAgency block
+  // from the template stays; this adds the entity/breadcrumb/image nodes.
+  const ldHtml = renderJsonLd(jsonLdBuilder.forRoute(lang, canonicalPath))
+  if (ldHtml) $('head').append(ldHtml)
 
   // Crawlable links (see renderCrawlLinks). Written into #root so React drops
   // them on mount; a crawler that does not execute JS still gets a real link
