@@ -37,6 +37,12 @@ const { publishedBorderPages } = await import(
 const { entityTourPages } = await import(
   pathToFileURL(join(__dirname, '../src/data/entityTours.js')).href
 )
+
+// Crawlable internal-link graph (parent / children / siblings / translations)
+// written into #root as fallback content — see scripts/seo-links.js.
+const { createLinkGraph } = await import(
+  pathToFileURL(join(__dirname, 'seo-links.js')).href
+)
 const DIST = join(__dirname, '..', 'dist')
 const SITE_URL = 'https://www.hikasustravel.com'
 const LANGS = ['en', 'es', 'fr', 'de', 'pl', 'cs', 'nl']
@@ -44,6 +50,12 @@ const LANGS = ['en', 'es', 'fr', 'de', 'pl', 'cs', 'nl']
 const localeMap = {
   en: 'en_US', es: 'es_ES', fr: 'fr_FR',
   de: 'de_DE', pl: 'pl_PL', cs: 'cs_CZ', nl: 'nl_NL',
+}
+
+// Native language names — anchor text for the root document's locale links.
+const langNames = {
+  en: 'English', es: 'Español', fr: 'Français',
+  de: 'Deutsch', pl: 'Polski', cs: 'Čeština', nl: 'Nederlands',
 }
 
 // ---------------------------------------------------------------------------
@@ -273,6 +285,30 @@ const staticPageImages = {
 // 3. Build per-route HTML
 // ---------------------------------------------------------------------------
 
+// Internal-link graph, keyed by locale + route path. Built from the same
+// registries as the routes above, so it can only ever reference pages this
+// script actually emits.
+const linkGraph = createLinkGraph({
+  tours,
+  blogArticles,
+  langs: LANGS,
+  seoTitle: getSEO,
+  tourTitle: (lang, tour) => loadTourTranslations(lang)[tour.slug]?.title || tour.title,
+  blogTitle: (lang, article) => loadBlogTitle(lang, article.titleKey) || article.title,
+})
+
+// Fallback navigation rendered inside #root. React mounts with createRoot(),
+// which empties the container on first render, so this is only ever seen by a
+// client that does not run JavaScript — which is exactly the client that
+// otherwise sees a blank page and no links at all.
+function renderCrawlLinks(links) {
+  if (!links.length) return ''
+  const items = links
+    .map(({ href, text }) => `<li><a href="${escAttr(href)}">${escHtml(text)}</a></li>`)
+    .join('')
+  return `<nav class="prerender-nav" aria-label="Site navigation"><ul>${items}</ul></nav>`
+}
+
 const template = readFileSync(join(DIST, 'index.html'), 'utf-8')
 let fileCount = 0
 
@@ -368,6 +404,11 @@ function writeHtml(filePath, lang, { title, description, keywords, canonical, im
   // x-default points to English version
   $('head').append(`<link rel="alternate" hreflang="x-default" href="${SITE_URL}/en${canonicalPath}">`)
 
+  // Crawlable links (see renderCrawlLinks). Written into #root so React drops
+  // them on mount; a crawler that does not execute JS still gets a real link
+  // graph instead of an empty document.
+  $('#root').html(renderCrawlLinks(linkGraph.linksFor(lang, canonicalPath)))
+
   // Write file
   const dir = dirname(filePath)
   mkdirSync(dir, { recursive: true })
@@ -377,6 +418,10 @@ function writeHtml(filePath, lang, { title, description, keywords, canonical, im
 
 function escAttr(str) {
   return str.replace(/"/g, '&quot;').replace(/</g, '&lt;').replace(/>/g, '&gt;')
+}
+
+function escHtml(str) {
+  return String(str).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;')
 }
 
 // Static redirect stub for an old URL -> its new canonical location. Crawlers
@@ -389,6 +434,9 @@ function writeRedirectStub(filePath, target) {
   $('link[rel="canonical"]').attr('href', target)
   $('meta[name="robots"]').remove()
   $('head').append('<meta name="robots" content="noindex, follow">')
+  // `follow` needs something to follow: give the stub a real anchor to its
+  // destination, not only the meta-refresh and the canonical.
+  $('#root').html(renderCrawlLinks([{ href: target, text: target }]))
   mkdirSync(dirname(filePath), { recursive: true })
   writeFileSync(filePath, $.html(), 'utf-8')
   fileCount++
@@ -565,5 +613,20 @@ for (const lang of LANGS) {
 // ---------------------------------------------------------------------------
 copyFileSync(join(DIST, 'index.html'), join(DIST, '404.html'))
 console.log('Created dist/404.html (SPA fallback)')
+
+// ---------------------------------------------------------------------------
+// 6. Root document — canonicalises to /en/ and is deliberately absent from the
+//    sitemap, but it is the URL the domain resolves to, so it must offer a
+//    crawl path into the seven locale home pages rather than an empty body.
+//    Written after the 404 copy so the fallback keeps its previous content.
+// ---------------------------------------------------------------------------
+{
+  const $ = load(readFileSync(join(DIST, 'index.html'), 'utf-8'))
+  $('#root').html(renderCrawlLinks(
+    LANGS.map((l) => ({ href: `/${l}/`, text: langNames[l] || l })),
+  ))
+  writeFileSync(join(DIST, 'index.html'), $.html(), 'utf-8')
+  console.log('Added locale links to dist/index.html')
+}
 
 console.log(`Pre-render complete: ${fileCount} HTML files generated.`)
