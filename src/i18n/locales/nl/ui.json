@@ -245,5 +245,21 @@
   "tours.entityToursCta": "{name} Tours",
   "tours.listIntro": "Ontdek tours die {name} in de route opnemen. Deze privé- en groepsreizen bezoeken {name} als onderdeel van een grotere route door Georgië.",
   "tours.listMetaTitle": "{name} Tours | Hikasus Travel",
-  "tours.listMetaDescription": "Vind privé- en groepsreizen die {name} in Georgië bezoeken, met routes samengesteld door Hikasus Travel."
+  "tours.listMetaDescription": "Vind privé- en groepsreizen die {name} in Georgië bezoeken, met routes samengesteld door Hikasus Travel.",
+  "search.open": "Zoeken",
+  "search.title": "Zoek op de website",
+  "search.placeholder": "Typ om te zoeken",
+  "search.hint": "Typ om reizen, bestemmingen en reisinformatie te vinden.",
+  "search.noResults": "Geen resultaten gevonden voor ‘{query}’",
+  "search.noResultsHint": "Probeer een plaatsnaam zoals Tbilisi of Svaneti, of een woord zoals wijn of wandelen.",
+  "search.close": "Zoeken sluiten",
+  "search.viewResult": "Resultaat bekijken",
+  "search.results": "{count} resultaten",
+  "search.typeTour": "Reis",
+  "search.typeRegion": "Regio",
+  "search.typeCity": "Stad",
+  "search.typePlace": "Bezienswaardigheid",
+  "search.typeGuide": "Wat te doen",
+  "search.typeBlog": "Blog",
+  "search.typeInfo": "Reisinfo"
 }

@@ -1,4 +1,4 @@
-import { useState, useEffect, useRef } from 'react'
+import { useState, useEffect, useRef, useCallback, lazy, Suspense } from 'react'
 import { useLocation } from 'react-router-dom'
 import { navLinks } from '../../data/siteData'
 import asset from '../../utils/basePath'
@@ -6,6 +6,13 @@ import useT from '../../i18n/useT'
 import useLang from '../../i18n/useLang'
 import LocaleLink from '../../i18n/LocaleLink'
 import LanguageSwitcher from './LanguageSwitcher'
+import SearchButton from './SearchButton'
+
+// The search panel and its index builder are only needed once someone actually
+// searches, so they stay out of the main bundle and are fetched separately —
+// warmed on button hover/focus and again when the page goes idle (see below).
+const importSearchOverlay = () => import('./SearchOverlay')
+const SearchOverlay = lazy(importSearchOverlay)
 
 function Caret() {
   return (
@@ -80,12 +87,62 @@ function NavDropdown({ item, t, lang, pathname }) {
 export default function Header({ variant = 'default' }) {
   const [menuOpen, setMenuOpen] = useState(false)
   const [isSticky, setIsSticky] = useState(false)
+  const [searchOpen, setSearchOpen] = useState(false)
+  const searchTrigger = useRef(null)
   const menuRef = useRef(null)
   const stickyThreshold = useRef(0)
   const [menuHeight, setMenuHeight] = useState(0)
   const location = useLocation()
   const t = useT()
   const { lang } = useLang()
+
+  const openSearch = useCallback((trigger) => {
+    searchTrigger.current = trigger || null
+    setMenuOpen(false)
+    setSearchOpen(true)
+  }, [])
+
+  // Hand focus back to the button that opened the panel. When search was opened
+  // from the keyboard shortcut there is no such button, so fall back to whichever
+  // search button the current breakpoint actually shows.
+  const closeSearch = useCallback(() => {
+    setSearchOpen(false)
+    const stored = searchTrigger.current
+    const target = stored && document.contains(stored) && stored.offsetParent !== null
+      ? stored
+      : Array.from(document.querySelectorAll('.nav-search')).find((n) => n.offsetParent !== null)
+    target?.focus()
+    searchTrigger.current = null
+  }, [])
+
+  // Fetch the search chunk once the page is idle. It stays off the critical
+  // path, but is in cache long before anyone clicks, so opening the panel is
+  // instant instead of waiting on a request (the hover/focus preload on the
+  // button only helps a mouse; this covers touch and the keyboard shortcut).
+  useEffect(() => {
+    const idle = window.requestIdleCallback
+    if (idle) {
+      const id = idle(() => importSearchOverlay(), { timeout: 4000 })
+      return () => window.cancelIdleCallback?.(id)
+    }
+    const id = setTimeout(importSearchOverlay, 2500)
+    return () => clearTimeout(id)
+  }, [])
+
+  // Ctrl/Cmd+K opens search from anywhere, unless the visitor is typing in a
+  // field (contact forms, the tour filters) where the browser/OS shortcut wins.
+  useEffect(() => {
+    const onKey = (e) => {
+      if (!(e.metaKey || e.ctrlKey) || e.key.toLowerCase() !== 'k') return
+      const el = document.activeElement
+      const tag = el?.tagName
+      if (tag === 'INPUT' || tag === 'TEXTAREA' || tag === 'SELECT' || el?.isContentEditable) return
+      e.preventDefault()
+      openSearch(null)
+    }
+    document.addEventListener('keydown', onKey)
+    return () => document.removeEventListener('keydown', onKey)
+  }, [openSearch])
 
   // Close the mobile menu on navigation. Adjusting state during render (instead
   // of in an effect) avoids an extra render pass — see React's "you might not
@@ -133,6 +190,16 @@ export default function Header({ variant = 'default' }) {
 
       <LanguageSwitcher />
 
+      {/* Compact search button for the mobile/tablet header bar (<=900px).
+          A direct child of <header> so it sits in the fixed bar next to the
+          language switcher and the hamburger — see the pointer-events note above. */}
+      <SearchButton
+        variant="bar"
+        onOpen={openSearch}
+        onPreload={importSearchOverlay}
+        expanded={searchOpen}
+      />
+
       <button
         className={`hamburger${menuOpen ? ' active' : ''}`}
         onClick={() => setMenuOpen(!menuOpen)}
@@ -164,8 +231,22 @@ export default function Header({ variant = 'default' }) {
             </span>
           )
         )}
+        {/* Desktop nav search (>900px). Appended last so it never shifts the
+            nth-child stagger the mobile drawer applies to the links above. */}
+        <SearchButton
+          variant="nav"
+          onOpen={openSearch}
+          onPreload={importSearchOverlay}
+          expanded={searchOpen}
+        />
       </nav>
       {isSticky && <div style={{ height: menuHeight }} />}
+
+      {searchOpen && (
+        <Suspense fallback={null}>
+          <SearchOverlay onClose={closeSearch} />
+        </Suspense>
+      )}
     </header>
   )
 }

@@ -245,5 +245,21 @@
   "tours.entityToursCta": "Zájezdy s {name}",
   "tours.listIntro": "Objevte zájezdy, které zahrnují {name} v itineráři. Tyto soukromé a skupinové zájezdy navštěvují {name} jako součást širší trasy po Gruzii.",
   "tours.listMetaTitle": "Zájezdy s {name} | Hikasus Travel",
-  "tours.listMetaDescription": "Najděte soukromé a skupinové zájezdy, které zahrnují {name} v Gruzii, s trasami od Hikasus Travel."
+  "tours.listMetaDescription": "Najděte soukromé a skupinové zájezdy, které zahrnují {name} v Gruzii, s trasami od Hikasus Travel.",
+  "search.open": "Hledat",
+  "search.title": "Hledat na webu",
+  "search.placeholder": "Začněte psát pro vyhledávání",
+  "search.hint": "Pište a najděte zájezdy, destinace a cestovní informace.",
+  "search.noResults": "Pro „{query}“ nebyly nalezeny žádné výsledky",
+  "search.noResultsHint": "Zkuste název místa jako Tbilisi nebo Svaneti, případně slovo jako víno nebo turistika.",
+  "search.close": "Zavřít vyhledávání",
+  "search.viewResult": "Zobrazit výsledek",
+  "search.results": "Počet výsledků: {count}",
+  "search.typeTour": "Zájezd",
+  "search.typeRegion": "Region",
+  "search.typeCity": "Město",
+  "search.typePlace": "Místo k návštěvě",
+  "search.typeGuide": "Co dělat",
+  "search.typeBlog": "Blog",
+  "search.typeInfo": "Cestovní info"
 }

@@ -245,5 +245,21 @@
   "tours.entityToursCta": "{name} Tours",
   "tours.listIntro": "Explore tours that include {name} in the itinerary. These private and group tours visit {name} as part of a wider route through Georgia.",
   "tours.listMetaTitle": "{name} Tours | Hikasus Travel",
-  "tours.listMetaDescription": "Find private and group tours that include {name} in Georgia, with routes planned by Hikasus Travel."
+  "tours.listMetaDescription": "Find private and group tours that include {name} in Georgia, with routes planned by Hikasus Travel.",
+  "search.open": "Search",
+  "search.title": "Search the website",
+  "search.placeholder": "Start typing to search",
+  "search.hint": "Start typing to search tours, destinations and travel information.",
+  "search.noResults": "No results found for “{query}”",
+  "search.noResultsHint": "Try a place name such as Tbilisi or Svaneti, or a word like wine or hiking.",
+  "search.close": "Close search",
+  "search.viewResult": "View result",
+  "search.results": "{count} results",
+  "search.typeTour": "Tour",
+  "search.typeRegion": "Region",
+  "search.typeCity": "City",
+  "search.typePlace": "Place to Visit",
+  "search.typeGuide": "Things to Do",
+  "search.typeBlog": "Blog",
+  "search.typeInfo": "Travel Info"
 }

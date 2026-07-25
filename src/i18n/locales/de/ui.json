@@ -245,5 +245,21 @@
   "tours.entityToursCta": "{name} Touren",
   "tours.listIntro": "Entdecken Sie Touren, die {name} in der Reiseroute enthalten. Diese privaten Touren und Gruppenreisen besuchen {name} als Teil einer größeren Rundreise durch Georgien.",
   "tours.listMetaTitle": "{name} Touren | Hikasus Travel",
-  "tours.listMetaDescription": "Finden Sie private Touren und Gruppenreisen, die {name} in Georgien besuchen – mit Routen von Hikasus Travel."
+  "tours.listMetaDescription": "Finden Sie private Touren und Gruppenreisen, die {name} in Georgien besuchen – mit Routen von Hikasus Travel.",
+  "search.open": "Suche",
+  "search.title": "Website durchsuchen",
+  "search.placeholder": "Zum Suchen tippen",
+  "search.hint": "Tippen Sie, um Reisen, Reiseziele und Reiseinformationen zu finden.",
+  "search.noResults": "Keine Ergebnisse für „{query}“",
+  "search.noResultsHint": "Versuchen Sie einen Ortsnamen wie Tiflis oder Swanetien oder ein Wort wie Wein oder Wandern.",
+  "search.close": "Suche schließen",
+  "search.viewResult": "Ergebnis öffnen",
+  "search.results": "{count} Ergebnisse",
+  "search.typeTour": "Reise",
+  "search.typeRegion": "Region",
+  "search.typeCity": "Stadt",
+  "search.typePlace": "Sehenswürdigkeit",
+  "search.typeGuide": "Aktivitäten",
+  "search.typeBlog": "Blog",
+  "search.typeInfo": "Reiseinfos"
 }

@@ -245,5 +245,21 @@
   "tours.entityToursCta": "Wycieczki z {name}",
   "tours.listIntro": "Odkryj wycieczki, które obejmują {name} w programie. Te prywatne i grupowe wycieczki odwiedzają {name} jako część szerszej trasy po Gruzji.",
   "tours.listMetaTitle": "Wycieczki z {name} | Hikasus Travel",
-  "tours.listMetaDescription": "Znajdź prywatne i grupowe wycieczki, które obejmują {name} w Gruzji, z trasami zaplanowanymi przez Hikasus Travel."
+  "tours.listMetaDescription": "Znajdź prywatne i grupowe wycieczki, które obejmują {name} w Gruzji, z trasami zaplanowanymi przez Hikasus Travel.",
+  "search.open": "Szukaj",
+  "search.title": "Szukaj w serwisie",
+  "search.placeholder": "Zacznij pisać, aby wyszukać",
+  "search.hint": "Pisz, aby znaleźć wycieczki, kierunki i informacje praktyczne.",
+  "search.noResults": "Brak wyników dla „{query}”",
+  "search.noResultsHint": "Spróbuj nazwy miejsca, np. Tbilisi lub Swanetia, albo słowa takiego jak wino czy trekking.",
+  "search.close": "Zamknij wyszukiwanie",
+  "search.viewResult": "Zobacz wynik",
+  "search.results": "Liczba wyników: {count}",
+  "search.typeTour": "Wycieczka",
+  "search.typeRegion": "Region",
+  "search.typeCity": "Miasto",
+  "search.typePlace": "Miejsce do zwiedzania",
+  "search.typeGuide": "Co robić",
+  "search.typeBlog": "Blog",
+  "search.typeInfo": "Info praktyczne"
 }

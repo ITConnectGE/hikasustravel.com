@@ -245,5 +245,21 @@
   "tours.entityToursCta": "Tours con {name}",
   "tours.listIntro": "Descubre los tours que incluyen {name} en el itinerario. Estos tours privados y en grupo visitan {name} como parte de una ruta más amplia por Georgia.",
   "tours.listMetaTitle": "Tours con {name} | Hikasus Travel",
-  "tours.listMetaDescription": "Encuentra tours privados y en grupo que incluyen {name} en Georgia, con rutas planificadas por Hikasus Travel."
+  "tours.listMetaDescription": "Encuentra tours privados y en grupo que incluyen {name} en Georgia, con rutas planificadas por Hikasus Travel.",
+  "search.open": "Buscar",
+  "search.title": "Buscar en el sitio web",
+  "search.placeholder": "Empieza a escribir para buscar",
+  "search.hint": "Escribe para encontrar tours, destinos e información práctica.",
+  "search.noResults": "No se encontraron resultados para «{query}»",
+  "search.noResultsHint": "Prueba con un nombre de lugar como Tiflis o Svaneti, o una palabra como vino o senderismo.",
+  "search.close": "Cerrar búsqueda",
+  "search.viewResult": "Ver resultado",
+  "search.results": "{count} resultados",
+  "search.typeTour": "Tour",
+  "search.typeRegion": "Región",
+  "search.typeCity": "Ciudad",
+  "search.typePlace": "Lugar que visitar",
+  "search.typeGuide": "Qué hacer",
+  "search.typeBlog": "Blog",
+  "search.typeInfo": "Info de viaje"
 }
