@@ -190,6 +190,10 @@ export default function CityPage() {
         // never the hardcoded Telavi/Kakheti of the gallery block above.
         ...(city.imageObjects || []).map((img) => ({
           '@type': 'ImageObject',
+          // Optional page-scoped @id, opt-in per image (mirrors the hero's
+          // imageMeta.imageId). Only entries that set `imageId` emit one, so
+          // every existing imageObject stays byte-identical.
+          ...(img.imageId ? { '@id': `${url}#${img.imageId}` } : {}),
           contentUrl: `${SITE_URL}/images/files/${img.base}-${img.width}w.webp`,
           url: `${SITE_URL}/images/files/${img.base}-${img.width}w.webp`,
           width: img.width,

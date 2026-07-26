@@ -761,6 +761,23 @@ export const cities = [
         description: 'Snow-capped peaks of the Greater Caucasus rising beyond the autumn-coloured hills and cliffs around Chiatura, Imereti, Georgia.',
         locationName: 'Chiatura', locality: 'Chiatura', region: 'Imereti', geo: { lat: 42.2900, lng: 43.2833 },
       },
+      {
+        // Town-square inline (owner's own photo), placed in the "Manganese and
+        // the making of the town" section — NOT the cable-car section, since the
+        // ropeway is not in this frame. No `hero`, so representativeOfPage stays
+        // false and the town panorama remains the representative image.
+        // The building is deliberately NOT named: it resembles the Akaki Tsereteli
+        // Drama Theatre but the image package does not hard-assert it, so the
+        // wording stays "a grand early-20th-century building".
+        base: 'chiatura-town-square-imereti-georgia', width: 1448, height: 1086,
+        imageId: 'inline-town-square',
+        name: 'Town square in Chiatura at sunset, Imereti, Georgia',
+        caption: 'A town square in Chiatura at sunset below the wooded cliffs of the Qvirila gorge',
+        description: 'A town square in Chiatura at sunset, with a grand early-20th-century building below the wooded cliffs of the Qvirila gorge, Imereti, Georgia.',
+        // Geo is the approximate town-centre point given by the image package.
+        // Not refined — no more precise coordinate was available or invented.
+        locationName: 'Chiatura', locality: 'Chiatura', region: 'Imereti', geo: { lat: 42.2903, lng: 43.2925 },
+      },
     ],
     thingsToDo: {
       seoKey: 'thingsToDoChiatura', contentKey: 'thingsToDoChiatura', image: '/images/files/georgia-home.jpg',
