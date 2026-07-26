@@ -2768,7 +2768,9 @@ tour-info h2 a,
 .td-overview__text {
   max-width: 720px;
   margin: 0 auto;
-  text-align: justify;
+  /* Left, not justified — matching .page-items. At this 720px measure
+     justification stretched the word spaces hardest of anywhere on the site. */
+  text-align: left;
   line-height: 1.8;
   color: #444;
   width: auto;
@@ -2872,7 +2874,10 @@ tour-info h2 a,
   padding: 0 8px calc(var(--indent) * 1.2) 8px;
   color: #444;
   line-height: 1.75;
-  text-align: justify;
+  /* Left, not justified. The Accordion is shared by 16 page types, and its
+     panels sit inside the same pages whose body copy .page-items already
+     left-aligns — justified answers under ragged-right prose read as a bug. */
+  text-align: left;
 }
 .acc__panel-inner ul {
   padding-left: calc(var(--indent) * 1.5);
@@ -4349,12 +4354,16 @@ select option:checked {
   transform: scale(1.1);
 }
 
+/* Dead rule: `.itinerary-content` is not emitted by any component (the tour
+   itinerary renders through Accordion). Left here rather than deleted so the
+   removal stays a separate decision, but aligned with the rest so nobody
+   re-introduces `justify` by copying it. */
 .itinerary-content {
   transition: max-height 0.3s ease, padding 0.3s ease;
   overflow: hidden;
   max-height: 0px;
   padding: 0;
-  text-align: justify;
+  text-align: left;
 }
 .itinerary-content ul {
   max-width: 800px;
