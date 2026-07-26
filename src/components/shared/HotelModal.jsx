@@ -47,24 +47,53 @@ function LocationIcon() {
 export default function HotelModal({ hotel, onClose }) {
   const t = useT()
   const galleryRef = useRef(null)
+  const dialogRef = useRef(null)
+  const closeRef = useRef(null)
   const [activeSlide, setActiveSlide] = useState(0)
 
   // Guard against a null hotel here (not via early return) so every Hook below
   // is still called unconditionally on every render.
   const images = hotel?.images || (hotel?.image ? [{ src: hotel.image, alt: hotel.name }] : [])
+  const amenities = hotel?.amenities || []
+  const locationHighlights = hotel?.locationHighlights || []
 
   useEffect(() => {
     const prev = document.body.style.overflow
     document.body.style.overflow = 'hidden'
 
+    // Remember whatever opened the modal so focus can go back there on close —
+    // otherwise a keyboard user is dropped at the top of the document.
+    const opener = document.activeElement
+    closeRef.current?.focus()
+
     function handleKey(e) {
-      if (e.key === 'Escape') onClose()
+      if (e.key === 'Escape') {
+        onClose()
+        return
+      }
+      if (e.key !== 'Tab') return
+
+      // Keep Tab inside the dialog while it is open.
+      const focusable = dialogRef.current?.querySelectorAll(
+        'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])'
+      )
+      if (!focusable || focusable.length === 0) return
+      const first = focusable[0]
+      const last = focusable[focusable.length - 1]
+      if (e.shiftKey && document.activeElement === first) {
+        e.preventDefault()
+        last.focus()
+      } else if (!e.shiftKey && document.activeElement === last) {
+        e.preventDefault()
+        first.focus()
+      }
     }
     document.addEventListener('keydown', handleKey)
 
     return () => {
       document.body.style.overflow = prev
       document.removeEventListener('keydown', handleKey)
+      if (opener instanceof HTMLElement) opener.focus()
     }
   }, [onClose])
 
@@ -90,7 +119,7 @@ export default function HotelModal({ hotel, onClose }) {
 
   return createPortal(
     <div className="hotel-modal-backdrop" onClick={onClose}>
-      <div className="hotel-modal" onClick={(e) => e.stopPropagation()} role="dialog" aria-modal="true" aria-label={hotel.name}>
+      <div className="hotel-modal" ref={dialogRef} onClick={(e) => e.stopPropagation()} role="dialog" aria-modal="true" aria-label={hotel.name}>
         <div className={`hotel-modal__hero${images.length === 0 ? ' hotel-modal__hero--empty' : ''}`}>
           <div className="hotel-modal__gallery" ref={galleryRef}>
             {images.map((img, i) => (
@@ -106,20 +135,27 @@ export default function HotelModal({ hotel, onClose }) {
           </div>
           {images.length > 1 && (
             <>
-              <button className="hotel-modal__arrow hotel-modal__arrow--prev" onClick={() => scrollTo(activeSlide - 1)} onMouseEnter={() => scrollTo(activeSlide - 1)} aria-label="Previous photo" style={{ display: activeSlide === 0 ? 'none' : undefined }}>
+              <button type="button" className="hotel-modal__arrow hotel-modal__arrow--prev" onClick={() => scrollTo(activeSlide - 1)} onMouseEnter={() => scrollTo(activeSlide - 1)} aria-label={t('hotel.prevPhoto')} style={{ display: activeSlide === 0 ? 'none' : undefined }}>
                 <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><polyline points="15 18 9 12 15 6"/></svg>
               </button>
-              <button className="hotel-modal__arrow hotel-modal__arrow--next" onClick={() => scrollTo(activeSlide + 1)} onMouseEnter={() => scrollTo(activeSlide + 1)} aria-label="Next photo" style={{ display: activeSlide === images.length - 1 ? 'none' : undefined }}>
+              <button type="button" className="hotel-modal__arrow hotel-modal__arrow--next" onClick={() => scrollTo(activeSlide + 1)} onMouseEnter={() => scrollTo(activeSlide + 1)} aria-label={t('hotel.nextPhoto')} style={{ display: activeSlide === images.length - 1 ? 'none' : undefined }}>
                 <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
               </button>
               <div className="hotel-modal__dots">
                 {images.map((_, i) => (
-                  <span key={i} className={`hotel-modal__dot${i === activeSlide ? ' hotel-modal__dot--active' : ''}`} onClick={() => scrollTo(i)} />
+                  <button
+                    key={i}
+                    type="button"
+                    className={`hotel-modal__dot${i === activeSlide ? ' hotel-modal__dot--active' : ''}`}
+                    onClick={() => scrollTo(i)}
+                    aria-label={t('hotel.goToPhoto', { n: i + 1 })}
+                    aria-current={i === activeSlide ? 'true' : undefined}
+                  />
                 ))}
               </div>
             </>
           )}
-          <button className="hotel-modal__close" onClick={onClose} aria-label={t('hotel.close')}>
+          <button type="button" ref={closeRef} className="hotel-modal__close" onClick={onClose} aria-label={t('hotel.close')}>
             <CloseIcon />
           </button>
         </div>
@@ -138,29 +174,33 @@ export default function HotelModal({ hotel, onClose }) {
 
           <p className="hotel-modal__desc">{hotel.description}</p>
 
-          <div className="hotel-modal__section">
-            <h4 className="hotel-modal__section-title">{t('hotel.amenities')}</h4>
-            <div className="hotel-modal__amenities">
-              {hotel.amenities.map((a, i) => (
-                <div key={i} className="hotel-modal__amenity">
-                  <AmenityIcon type={a.icon} />
-                  <span>{a.label}</span>
-                </div>
-              ))}
+          {amenities.length > 0 && (
+            <div className="hotel-modal__section">
+              <h4 className="hotel-modal__section-title">{t('hotel.amenities')}</h4>
+              <div className="hotel-modal__amenities">
+                {amenities.map((a, i) => (
+                  <div key={i} className="hotel-modal__amenity">
+                    <AmenityIcon type={a.icon} />
+                    <span>{a.label}</span>
+                  </div>
+                ))}
+              </div>
             </div>
-          </div>
+          )}
 
-          <div className="hotel-modal__section">
-            <h4 className="hotel-modal__section-title">{t('hotel.location')}</h4>
-            <ul className="hotel-modal__locations">
-              {hotel.locationHighlights.map((loc, i) => (
-                <li key={i} className="hotel-modal__location">
-                  <LocationIcon />
-                  <span>{loc}</span>
-                </li>
-              ))}
-            </ul>
-          </div>
+          {locationHighlights.length > 0 && (
+            <div className="hotel-modal__section">
+              <h4 className="hotel-modal__section-title">{t('hotel.location')}</h4>
+              <ul className="hotel-modal__locations">
+                {locationHighlights.map((loc, i) => (
+                  <li key={i} className="hotel-modal__location">
+                    <LocationIcon />
+                    <span>{loc}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          )}
         </div>
       </div>
     </div>,

@@ -261,5 +261,11 @@
   "search.typePlace": "Sehenswürdigkeit",
   "search.typeGuide": "Aktivitäten",
   "search.typeBlog": "Blog",
-  "search.typeInfo": "Reiseinfos"
+  "search.typeInfo": "Reiseinfos",
+  "hotel.prevPhoto": "Vorheriges Foto",
+  "hotel.nextPhoto": "Nächstes Foto",
+  "hotel.goToPhoto": "Zu Foto {n}",
+  "pricing.nightsOne": "Nacht",
+  "pricing.nightsFew": "Nächte",
+  "pricing.nightsMany": "Nächte"
 }

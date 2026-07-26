@@ -261,5 +261,11 @@
   "search.typePlace": "Bezienswaardigheid",
   "search.typeGuide": "Wat te doen",
   "search.typeBlog": "Blog",
-  "search.typeInfo": "Reisinfo"
+  "search.typeInfo": "Reisinfo",
+  "hotel.prevPhoto": "Vorige foto",
+  "hotel.nextPhoto": "Volgende foto",
+  "hotel.goToPhoto": "Ga naar foto {n}",
+  "pricing.nightsOne": "nacht",
+  "pricing.nightsFew": "nachten",
+  "pricing.nightsMany": "nachten"
 }

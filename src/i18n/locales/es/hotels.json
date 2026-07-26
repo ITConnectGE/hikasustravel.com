@@ -1,0 +1,368 @@
+{
+  "Sandali Metekhi By Old Hospitality": {
+    "description": "Un hotel boutique art déco situado en el histórico barrio de Metekhi de Tiflis. Con un bar en la azotea que ofrece vistas panorámicas de la fortaleza de Narikala y el casco antiguo, el Sandali Metekhi combina el encanto georgiano con la comodidad moderna.",
+    "amenities": ["Wi-Fi gratuito", "Bar y restaurante en la azotea", "Aire acondicionado", "Aparcamiento privado", "Conserjería 24 h"],
+    "locationHighlights": ["A poca distancia del puente Metekhi y el casco antiguo", "Vistas de la fortaleza de Narikala desde la terraza", "A unos pasos del barrio de los baños de azufre"],
+    "imageAlts": [
+      "Fachada del hotel Sandali Metekhi By Old Hospitality en el casco antiguo de Tiflis, Georgia",
+      "Vestíbulo y recepción del Sandali Metekhi con interiorismo art déco, Tiflis",
+      "Habitación del hotel Sandali Metekhi con mobiliario elegante, Tiflis",
+      "Baño del hotel Sandali Metekhi con bañera y equipamiento moderno, Tiflis"
+    ]
+  },
+  "Best View Kazbegi": {
+    "description": "Situado en lo alto del Gran Cáucaso, el Best View Kazbegi hace honor a su nombre. Despertarás ante un amplio panorama del monte Kazbek y la iglesia de la Trinidad de Guergueti, desde la comodidad de un acogedor refugio de montaña.",
+    "amenities": ["Wi-Fi gratuito", "Restaurante con vistas a la montaña", "Aparcamiento gratuito", "Terraza panorámica", "Calefacción central"],
+    "locationHighlights": ["Vistas directas a la iglesia de la Trinidad de Guergueti", "Puerta de entrada a las rutas del parque nacional de Kazbegi", "A pocos minutos del centro de Stepantsminda"],
+    "imageAlts": [
+      "Fachada del hotel Best View Kazbegi en Stepantsminda con el Cáucaso de fondo",
+      "Vestíbulo y zona común del Best View Kazbegi con asientos cómodos, Stepantsminda",
+      "Habitación del Best View Kazbegi con vistas a la montaña en Stepantsminda, Georgia",
+      "Baño con ducha del Best View Kazbegi en Stepantsminda, Georgia"
+    ]
+  },
+  "Hotel West Way": {
+    "description": "Un hotel acogedor en el corazón de Kutaisi, con jardines frondosos y una zona de barbacoa ideal para veladas tranquilas. El Hotel West Way es una base perfecta para conocer la cueva de Prometeo, la reserva natural de Sataplia y el monasterio de Gelati.",
+    "amenities": ["Wi-Fi gratuito", "Restaurante propio", "Jardín y zona de barbacoa", "Aparcamiento gratuito", "Aire acondicionado"],
+    "locationHighlights": ["Base para la cueva de Prometeo y el cañón de Martvili", "Cerca del monasterio de Gelati, Patrimonio de la Humanidad", "A poca distancia del centro de Kutaisi"],
+    "imageAlts": [
+      "Fachada del Hotel West Way en Kutaisi, Georgia",
+      "Vestíbulo y recepción del Hotel West Way en Kutaisi, Georgia",
+      "Habitación cómoda del Hotel West Way en Kutaisi, Georgia",
+      "Baño con ducha del Hotel West Way en Kutaisi, Georgia"
+    ]
+  },
+  "Hotel Phaliashvili": {
+    "description": "Un encantador hotel junto al mar en Batumi, con una agradable terraza en la azotea y vistas al mar Negro. A unos pasos del conocido bulevar de Batumi, es un buen punto de partida para explorar la vibrante ciudad costera de Georgia.",
+    "amenities": ["Wi-Fi gratuito", "Terraza en la azotea", "Aire acondicionado", "Recepción 24 h", "Desayuno diario"],
+    "locationHighlights": ["A unos pasos del bulevar de Batumi y la playa", "Cerca de la plaza Piazza", "A poca distancia del casco antiguo de Batumi"],
+    "imageAlts": [
+      "Fachada con balcones del Hotel Phaliashvili en Batumi, Georgia",
+      "Vestíbulo y escalera interior del Hotel Phaliashvili con barandillas ornamentadas, Batumi",
+      "Habitación cómoda del Hotel Phaliashvili cerca del bulevar de Batumi",
+      "Baño con ducha y grifería moderna del Hotel Phaliashvili, Batumi"
+    ]
+  },
+  "Hotel & Wine Cellar ARGE": {
+    "description": "Un hotel entre viñedos en la aldea de Ruispiri, a pocos kilómetros de Telavi, que recibe huéspedes desde 2018. El Hotel Arge cuenta con bodega propia para catas, piscina exterior y restaurante en el jardín; la mayoría de las habitaciones se abren a balcones con vistas al valle del Alazani y al Gran Cáucaso.",
+    "amenities": ["Bodega y catas de vino", "Piscina", "Viñedos privados", "Restaurante en el jardín", "Wi-Fi gratuito", "Aparcamiento gratuito"],
+    "locationHighlights": ["Aldea de Ruispiri, a unos 3 km de Telavi", "Vistas al valle del Alazani y al Cáucaso", "En el corazón de la región vinícola de Kajetia"],
+    "imageAlts": [
+      "Fachada y jardín del Hotel and Wine Cellar ARGE en Telavi, región vinícola de Kajetia, Georgia",
+      "Vestíbulo y sala de estar del hotel ARGE en Telavi, Georgia",
+      "Habitación del hotel ARGE con vistas a los viñedos en Kajetia, Georgia",
+      "Baño con equipamiento moderno del hotel ARGE en Telavi, Georgia"
+    ]
+  },
+  "Rooms Hotel Tbilisi": {
+    "description": "Un hotel boutique de diseño ubicado en una antigua editorial de la época soviética a orillas del río Mtkvari. El Rooms Hotel Tbilisi combina la estética industrial con la cálida hospitalidad georgiana, un animado bar en el vestíbulo y un restaurante muy valorado.",
+    "amenities": ["Wi-Fi gratuito", "Restaurante y bar en el vestíbulo", "Aire acondicionado", "Conserjería 24 h", "Gimnasio"],
+    "locationHighlights": ["Junto al río Mtkvari, en el barrio de Vera", "A poca distancia de la avenida Rustaveli y la Ópera", "Cerca de Fabrika y la escena de cafés de Tiflis"],
+    "imageAlts": [
+      "Fachada del Rooms Hotel Tbilisi a orillas del río Mtkvari, Georgia",
+      "Vestíbulo y sala de estar del Rooms Hotel Tbilisi con mobiliario de diseño",
+      "Habitación del Rooms Hotel Tbilisi con diseño contemporáneo y vistas a la ciudad",
+      "Baño con grifería moderna del Rooms Hotel Tbilisi, Tiflis"
+    ]
+  },
+  "Ibis Styles Tbilisi Center": {
+    "description": "Un hotel colorido y contemporáneo situado directamente en la avenida Rustaveli de Tiflis. El Ibis Styles Tbilisi Center ofrece la comodidad fiable de un estándar internacional con un diseño desenfadado, desayuno incluido y una ubicación céntrica inmejorable para descubrir la capital.",
+    "amenities": ["Wi-Fi gratuito", "Desayuno incluido", "Aire acondicionado", "Recepción 24 h", "Aparcamiento disponible"],
+    "locationHighlights": ["Directamente en la avenida Rustaveli", "A unos pasos del Museo Nacional de Georgia", "Fácil acceso a la plaza de la Libertad y el casco antiguo"],
+    "imageAlts": [
+      "Edificio moderno del Ibis Styles Tbilisi Center en la avenida Rustaveli, Georgia",
+      "Vestíbulo y recepción del Ibis Styles Tbilisi Center",
+      "Habitación luminosa con mobiliario moderno del Ibis Styles Tbilisi Center",
+      "Baño de diseño contemporáneo del Ibis Styles Tbilisi Center"
+    ]
+  },
+  "Ginger Hotel": {
+    "description": "Un hotel económico y agradable situado en las callejuelas del casco antiguo de Tiflis. El Ginger Hotel ofrece habitaciones limpias y cómodas en un ambiente cálido, una buena base para viajeros que quieran alojarse en pleno centro.",
+    "amenities": ["Wi-Fi gratuito", "Desayuno diario", "Aire acondicionado", "Recepción 24 h", "Servicio de lavandería"],
+    "locationHighlights": ["En el corazón del casco antiguo de Tiflis", "A poca distancia de los baños de azufre y la fortaleza de Narikala", "Rodeado de cafés, restaurantes y tiendas"],
+    "imageAlts": [
+      "Fachada del Ginger Hotel en el casco antiguo de Tiflis, Georgia",
+      "Vestíbulo y zona común del Ginger Hotel en Tiflis",
+      "Habitación limpia y cómoda del Ginger Hotel en Tiflis",
+      "Baño con equipamiento moderno del Ginger Hotel en Tiflis"
+    ]
+  },
+  "Ambassadori": {
+    "description": "Un cuidado establecimiento de cinco estrellas en la histórica calle Shavteli, en pleno casco antiguo de Tiflis. El Ambassadori combina habitaciones elegantes y amplias con spa y piscina cubierta, dos restaurantes y una terraza en la azotea: una base céntrica a poca distancia de los baños de azufre y la fortaleza de Narikala.",
+    "amenities": ["Wi-Fi gratuito", "Piscina cubierta", "Spa y sauna", "Dos restaurantes", "Gimnasio", "Aparcamiento gratuito"],
+    "locationHighlights": ["En la calle Shavteli, en el casco antiguo histórico", "A poca distancia de los baños de azufre y la fortaleza de Narikala", "Terraza en la azotea con vistas al viejo Tiflis"],
+    "imageAlts": [
+      "Entrada y fachada del Ambassadori Tbilisi Hotel en el centro de la ciudad, Georgia",
+      "Vestíbulo del Ambassadori Tbilisi Hotel con lámpara de araña y suelo de mármol",
+      "Elegante habitación clásica del Ambassadori Tbilisi Hotel",
+      "Salón de una suite del Ambassadori Tbilisi Hotel con vistas a la ciudad"
+    ]
+  },
+  "Gudauri Lodge": {
+    "description": "Un moderno lodge de montaña de cinco estrellas situado junto a las pistas en el centro de Gudauri, con auténtico acceso a pie de pista. Tras un día en la nieve puedes relajarte en el centro de bienestar —piscinas cubierta y exterior, bañera de hidromasaje al aire libre, sauna y baño de vapor— y después cenar en el restaurante georgiano. Habitaciones amplias y modernas, guardaesquís y terraza solárium lo convierten en una base cómoda y autosuficiente para una semana de esquí.",
+    "amenities": ["Piscinas cubierta y exterior", "Spa, sauna y jacuzzi", "Gimnasio", "Restaurante y bar", "Wi-Fi gratuito", "Terraza solárium"],
+    "locationHighlights": ["A pie de pista, junto a las laderas", "En el centro de Gudauri, junto a los remontes", "Centro de bienestar con piscinas cubierta y exterior"],
+    "imageAlts": [
+      "Edificio moderno del Gudauri Lodge en el Cáucaso nevado, Gudauri, Georgia",
+      "Salón de una suite del Gudauri Lodge con vistas a las montañas nevadas",
+      "Habitación doble contemporánea del Gudauri Lodge",
+      "Biblioteca y sala de estar del Gudauri Lodge"
+    ]
+  },
+  "Marco Polo": {
+    "description": "El primer hotel de esquí de Gudauri, que recibe huéspedes desde 1988 y sigue siendo uno de los emblemas de la estación. El Marco Polo se encuentra junto a las pistas, a unos 2.000 metros, con acceso a pie de pista, y cuenta con un amplio spa y centro de bienestar —piscinas cubierta y exterior, saunas y jacuzzi—, además de bolera, pistas de pádel y el restaurante Soliko, de cocina georgiana y europea.",
+    "amenities": ["Piscinas cubierta y exterior", "Spa, sauna y jacuzzi", "Restaurante Soliko", "Gimnasio", "Wi-Fi gratuito", "Recepción 24 h"],
+    "locationHighlights": ["A pie de pista en el centro de Gudauri", "Junto a las pistas, a unos 2.000 m", "Bolera, pistas de pádel y spa en el hotel"],
+    "imageAlts": [
+      "Marco Polo Hotel Gudauri iluminado de noche en las montañas invernales, Georgia",
+      "Piscina cubierta con vistas a la montaña del Marco Polo Hotel Gudauri",
+      "Sala de estar del vestíbulo con sofás y escalera del Marco Polo Hotel Gudauri",
+      "Habitación cómoda del Marco Polo Hotel Gudauri"
+    ]
+  },
+  "Gudauri Inn": {
+    "description": "Un hotel cómodo y sin complicaciones en el corazón de Gudauri, a 2.200 metros, con un ambiente de montaña relajado y amplias vistas de los picos circundantes. Dispone de centro de bienestar propio con piscina cubierta, jacuzzi y sauna, un restaurante con platos georgianos e internacionales y un bar con vinos locales.",
+    "amenities": ["Wi-Fi gratuito", "Piscina cubierta", "Sauna y jacuzzi", "Restaurante y bar", "Aparcamiento gratuito"],
+    "locationHighlights": ["En el centro de Gudauri, a 2.200 m", "Centro de bienestar con piscina cubierta, jacuzzi y sauna", "Vistas panorámicas del Gran Cáucaso"],
+    "imageAlts": [
+      "Sala con vistas a la montaña y sillas colgantes del Gudauri Inn, Gudauri, Georgia",
+      "Habitación doble cómoda del Gudauri Inn",
+      "Habitación luminosa con dos camas del Gudauri Inn",
+      "Habitación con dos camas, balcón y vistas a la montaña del Gudauri Inn"
+    ]
+  },
+  "Rooms Hotel Kazbegi": {
+    "description": "Una obra maestra del diseño ante el espectacular telón de fondo del monte Kazbek. El Rooms Hotel Kazbegi es uno de los refugios más emblemáticos de Georgia, con ventanales de suelo a techo abiertos a la montaña, un salón con chimenea, piscina cubierta y spa.",
+    "amenities": ["Wi-Fi gratuito", "Restaurante y bar", "Piscina cubierta", "Spa y sauna", "Aparcamiento gratuito"],
+    "locationHighlights": ["Vistas del monte Kazbek y la iglesia de la Trinidad de Guergueti", "Puerta de entrada a las rutas del parque nacional de Kazbegi", "En el centro del pueblo de Stepantsminda"],
+    "imageAlts": [
+      "Llamativo edificio moderno del Rooms Hotel Kazbegi frente al Gran Cáucaso, Stepantsminda",
+      "Vestíbulo y recepción del Rooms Hotel Kazbegi con vistas a la montaña",
+      "Amplia habitación del Rooms Hotel Kazbegi con vistas al monte Kazbek",
+      "Baño con grifería moderna del Rooms Hotel Kazbegi, Stepantsminda"
+    ]
+  },
+  "Northgate Hotel": {
+    "description": "Un cómodo hotel de gama media en el corazón de Stepantsminda, con trato cercano y vistas a la montaña. El Northgate Hotel ofrece un refugio agradable tras un día por el Cáucaso, con un restaurante acogedor de cocina georgiana contundente y habitaciones bien equipadas.",
+    "amenities": ["Wi-Fi gratuito", "Restaurante propio", "Calefacción central", "Aparcamiento gratuito", "Terraza con vistas a la montaña"],
+    "locationHighlights": ["Ubicación céntrica en Stepantsminda", "Cerca del inicio de la ruta a la iglesia de Guergueti", "Vistas al Gran Cáucaso"],
+    "imageAlts": [
+      "Fachada del Northgate Hotel en Stepantsminda, región de Kazbegi, Georgia",
+      "Vestíbulo y zona de descanso del Northgate Hotel con vistas a la montaña en Kazbegi",
+      "Habitación cómoda con balcón del Northgate Hotel en Stepantsminda",
+      "Baño con equipamiento moderno del Northgate Hotel en Stepantsminda"
+    ]
+  },
+  "Hotel Horizon": {
+    "description": "Un hotel económico de estilo casa de huéspedes en Stepantsminda, con habitaciones sencillas y limpias y una hospitalidad georgiana genuina. El Hotel Horizon es ideal para viajeros que quieran explorar la región de Kazbegi sin gastar de más, con comida casera y un ambiente cercano.",
+    "amenities": ["Wi-Fi gratuito", "Comidas caseras", "Calefacción central", "Aparcamiento gratuito", "Terraza ajardinada"],
+    "locationHighlights": ["Ubicación tranquila en Stepantsminda", "Fácil acceso a las rutas de Kazbegi", "Vistas a los picos circundantes del Cáucaso"],
+    "imageAlts": [
+      "Fachada del Hotel Horizon en Stepantsminda con paisaje de montaña, Kazbegi",
+      "Vestíbulo y zona común del Hotel Horizon en Kazbegi",
+      "Habitación con vistas del Hotel Horizon en Stepantsminda, Georgia",
+      "Baño con ducha del Hotel Horizon en Stepantsminda, Georgia"
+    ]
+  },
+  "Newport Hotel Kutaisi": {
+    "description": "Un hotel elegante y moderno en el centro de Kutaisi, la segunda ciudad de Georgia. El Newport Hotel ofrece habitaciones amplias de interiorismo contemporáneo, un excelente restaurante y una ubicación privilegiada para descubrir los sitios Patrimonio de la Humanidad y las maravillas naturales de la región.",
+    "amenities": ["Wi-Fi gratuito", "Restaurante y bar", "Aire acondicionado", "Aparcamiento gratuito", "Recepción 24 h"],
+    "locationHighlights": ["Centro de Kutaisi, cerca del Puente Blanco", "Base para la cueva de Prometeo y el cañón de Martvili", "Cerca de la catedral de Bagrati, Patrimonio de la Humanidad"],
+    "imageAlts": [
+      "Elegante fachada del Newport Hotel Kutaisi en el centro de Kutaisi, Georgia",
+      "Vestíbulo y recepción del Newport Hotel Kutaisi",
+      "Habitación amplia de diseño contemporáneo del Newport Hotel Kutaisi",
+      "Baño con grifería moderna del Newport Hotel Kutaisi"
+    ]
+  },
+  "Boutique Hotel Argo": {
+    "description": "Un encantador hotel boutique en el centro de Kutaisi, bautizado en honor a los legendarios argonautas que navegaron hasta la antigua Cólquide. El Boutique Hotel Argo ofrece habitaciones cómodas, un trato cercano y una buena ubicación para descubrir la historia de Kutaisi y la naturaleza de Imericia.",
+    "amenities": ["Wi-Fi gratuito", "Desayuno diario", "Aire acondicionado", "Aparcamiento gratuito", "Asistencia con excursiones"],
+    "locationHighlights": ["Ubicación céntrica en Kutaisi", "Cerca del mercado de Kutaisi y la fuente de Cólquide", "Fácil acceso al monasterio de Gelati y la reserva de Sataplia"],
+    "imageAlts": [
+      "Fachada del Boutique Hotel Argo en el centro de Kutaisi, Georgia",
+      "Recepción y vestíbulo del Boutique Hotel Argo en Kutaisi",
+      "Habitación bien equipada del Boutique Hotel Argo en Kutaisi",
+      "Baño con equipamiento moderno del Boutique Hotel Argo en Kutaisi"
+    ]
+  },
+  "Rooms Hotel": {
+    "description": "La joya del paseo marítimo de Batumi, el Rooms Hotel Batumi es un hotel de diseño con una espectacular piscina en la azotea sobre el mar Negro. Con una cocina de primer nivel, un servicio impecable e interiores que mezclan el estilo industrial con la elegancia costera, es una de las mejores direcciones del litoral georgiano.",
+    "amenities": ["Wi-Fi gratuito", "Restaurante de alta cocina", "Piscina en la azotea", "Spa y bienestar", "Conserjería 24 h"],
+    "locationHighlights": ["Ubicación privilegiada en el paseo del bulevar de Batumi", "A unos pasos de la playa del mar Negro", "Cerca de la vida nocturna y el casco antiguo de Batumi"],
+    "imageAlts": [
+      "Llamativa fachada del Rooms Hotel Batumi en el paseo marítimo del mar Negro, Georgia",
+      "Sala de estar del vestíbulo del Rooms Hotel Batumi con interiorismo elegante",
+      "Elegante suite con vistas al mar del Rooms Hotel Batumi",
+      "Baño con grifería y equipamiento de alta gama del Rooms Hotel Batumi"
+    ]
+  },
+  "Hotel Monarch": {
+    "description": "Un cuidado hotel de gama media en el corazón de Batumi, con habitaciones modernas, muchas de ellas con balcón y vistas al mar. El Hotel Monarch combina comodidad y buena relación calidad-precio con una ubicación práctica cerca del bulevar de Batumi.",
+    "amenities": ["Wi-Fi gratuito", "Desayuno incluido", "Aire acondicionado", "Recepción 24 h", "Servicio de lavandería"],
+    "locationHighlights": ["A poca distancia del bulevar de Batumi y la playa", "Cerca de la plaza Piazza y la plaza de Europa", "Cerca de los restaurantes y la vida nocturna de Batumi"],
+    "imageAlts": [
+      "Edificio moderno del Hotel Monarch en Batumi, Georgia",
+      "Vestíbulo y recepción del Hotel Monarch en Batumi",
+      "Habitación cómoda con vistas desde el balcón del Hotel Monarch en Batumi",
+      "Baño con equipamiento moderno del Hotel Monarch en Batumi"
+    ]
+  },
+  "Boutique Hotel 32": {
+    "description": "Un acogedor y asequible hotel boutique en una calle tranquila de Batumi. El Boutique Hotel 32 aporta un toque personal con habitaciones decoradas con gusto, personal atento y una ubicación a solo unos minutos del paseo marítimo y del casco antiguo.",
+    "amenities": ["Wi-Fi gratuito", "Desayuno diario", "Aire acondicionado", "Recepción 24 h", "Servicio de lavandería"],
+    "locationHighlights": ["Calle tranquila cerca del casco antiguo de Batumi", "A poca distancia de la playa del mar Negro", "Cerca de restaurantes y mercados locales"],
+    "imageAlts": [
+      "Fachada del Boutique Hotel 32 en Batumi, Georgia",
+      "Entrada y recepción del Boutique Hotel 32 en Batumi",
+      "Habitación de decoración cálida del Boutique Hotel 32 en Batumi",
+      "Baño con grifería moderna del Boutique Hotel 32 en Batumi"
+    ]
+  },
+  "Tsinandali Estate, A Radisson Collection Hotel": {
+    "description": "Ubicado en la histórica finca Tsinandali del siglo XIX, este establecimiento de Radisson Collection es una de las direcciones más selectas de la región vinícola georgiana. Rodeado de jardines históricos, una bodega reconocida y las estribaciones del Cáucaso, combina patrimonio, cultura del vino y una hospitalidad de primer nivel.",
+    "amenities": ["Wi-Fi gratuito", "Restaurante de alta cocina", "Piscina exterior", "Spa y centro de bienestar", "Bodega histórica"],
+    "locationHighlights": ["Dentro del recinto histórico de la finca Tsinandali", "En el corazón de la región vinícola de Kajetia", "Cerca del casco antiguo de Telavi y la fortaleza Batonis Tsikhe"],
+    "imageAlts": [
+      "Imponente fachada del Tsinandali Estate, A Radisson Collection Hotel, rodeada de jardines históricos, Telavi",
+      "Vestíbulo y sala de estar del Tsinandali Estate con interiorismo elegante",
+      "Lujosa habitación con decoración georgiana del Tsinandali Estate",
+      "Baño de mármol con equipamiento de alta gama del Tsinandali Estate"
+    ]
+  },
+  "Park Hotel Tsinandali": {
+    "description": "Un hotel moderno y cómodo rodeado de vegetación en la zona de Tsinandali, en Kajetia. El Park Hotel Tsinandali ofrece un retiro tranquilo con habitaciones bien equipadas, una agradable terraza ajardinada y fácil acceso a las célebres bodegas y fincas históricas de la región.",
+    "amenities": ["Wi-Fi gratuito", "Restaurante propio", "Jardín y terraza", "Aparcamiento gratuito", "Aire acondicionado"],
+    "locationHighlights": ["Cerca de la célebre finca Tsinandali", "Rodeado de viñedos y bodegas de Kajetia", "Fácil acceso al centro de Telavi"],
+    "imageAlts": [
+      "Fachada del Park Hotel Tsinandali rodeada de vegetación en Kajetia, Georgia",
+      "Vestíbulo y zona común interior del Park Hotel Tsinandali",
+      "Habitación cómoda con mobiliario contemporáneo del Park Hotel Tsinandali",
+      "Baño con equipamiento moderno del Park Hotel Tsinandali"
+    ]
+  },
+  "Akhaltsikhe Inn (Junior Suite Room)": {
+    "description": "Un hotel boutique con habitaciones Junior Suite a unos pasos del magnífico castillo de Rabati. El Akhaltsikhe Inn combina interiores elegantes con vistas a la fortaleza histórica y al valle circundante.",
+    "amenities": ["Wi-Fi gratuito", "Desayuno cuidado", "Aire acondicionado", "Terraza panorámica", "Conserjería 24 h"],
+    "locationHighlights": ["A unos pasos del castillo de Rabati", "Punto de partida hacia el monasterio rupestre de Vardzia", "Vistas al valle del río Potskhovi"],
+    "imageAlts": [
+      "Fachada del Akhaltsikhe Inn cerca del castillo de Rabati, Ajaltsije, Georgia",
+      "Vestíbulo y recepción del Akhaltsikhe Inn en Ajaltsije",
+      "Amplia Junior Suite con mobiliario de calidad del Akhaltsikhe Inn",
+      "Baño con equipamiento moderno del Akhaltsikhe Inn"
+    ]
+  },
+  "Hotel Gino Wellness Rabati": {
+    "description": "Un moderno hotel de bienestar junto al histórico castillo de Rabati, en Ajaltsije. El Hotel Gino cuenta con piscina cubierta, sauna y un completo centro de bienestar, ideal para relajarse tras visitar el monasterio rupestre de Vardzia y los paisajes del sur de Georgia.",
+    "amenities": ["Wi-Fi gratuito", "Piscina cubierta", "Sauna y bienestar", "Restaurante propio", "Aparcamiento gratuito"],
+    "locationHighlights": ["Junto al castillo de Rabati", "Base para excursiones a Vardzia y la fortaleza de Khertvisi", "En el centro de Ajaltsije"],
+    "imageAlts": [
+      "Fachada del Hotel Gino Wellness Rabati cerca del castillo de Rabati, Ajaltsije, Georgia",
+      "Vestíbulo y recepción del Hotel Gino Wellness Rabati en Ajaltsije",
+      "Habitación cómoda del Hotel Gino Wellness Rabati en Ajaltsije",
+      "Baño con equipamiento moderno del Hotel Gino Wellness Rabati"
+    ]
+  },
+  "Hotel Beni": {
+    "description": "Un hotel cercano y asequible en Ajaltsije, con habitaciones limpias y cómodas y la hospitalidad genuina del sur de Georgia. El Hotel Beni es una base económica para conocer el castillo de Rabati, la ciudad rupestre de Vardzia y la región de Samtsje-Yavajeti.",
+    "amenities": ["Wi-Fi gratuito", "Desayuno diario", "Aire acondicionado", "Aparcamiento gratuito", "Asistencia con excursiones"],
+    "locationHighlights": ["A poca distancia del castillo de Rabati", "Fácil acceso al monasterio rupestre de Vardzia", "En el corazón de Ajaltsije"],
+    "imageAlts": [
+      "Fachada del Hotel Beni en Ajaltsije, sur de Georgia",
+      "Vestíbulo y zona común interior del Hotel Beni en Ajaltsije",
+      "Habitación limpia y cómoda del Hotel Beni en Ajaltsije",
+      "Baño con equipamiento moderno del Hotel Beni en Ajaltsije"
+    ]
+  },
+  "Crowne Plaza Borjomi": {
+    "description": "Un hotel resort en la célebre ciudad balneario de Borjomi, rodeado de montañas boscosas bien conservadas. El Crowne Plaza Borjomi ofrece tratamientos de spa con agua mineral, piscina cubierta, varios restaurantes y habitaciones amplias: una escapada de bienestar en pleno Cáucaso.",
+    "amenities": ["Wi-Fi gratuito", "Varios restaurantes", "Piscina cubierta", "Spa de agua mineral", "Gimnasio"],
+    "locationHighlights": ["En la conocida ciudad balneario de Borjomi", "Puerta de entrada al parque nacional Borjomi-Kharagauli", "Cerca de los manantiales de agua mineral de Borjomi"],
+    "imageAlts": [
+      "Gran hotel resort Crowne Plaza Borjomi rodeado de montañas boscosas, Georgia",
+      "Vestíbulo y recepción del Crowne Plaza Borjomi con interiorismo elegante",
+      "Habitación del Crowne Plaza Borjomi con vistas al parque nacional Borjomi-Kharagauli",
+      "Baño con equipamiento de alta gama del Crowne Plaza Borjomi"
+    ]
+  },
+  "Bridge Hotel": {
+    "description": "Un hotel bien equipado en el centro de Borjomi, junto al río y con bonitas vistas a la montaña. El Bridge Hotel ofrece habitaciones cómodas, un restaurante acogedor y una ubicación perfecta para pasear hasta el famoso parque de aguas minerales y explorar el parque nacional cercano.",
+    "amenities": ["Wi-Fi gratuito", "Restaurante junto al río", "Aire acondicionado", "Aparcamiento gratuito", "Recepción 24 h"],
+    "locationHighlights": ["Centro de Borjomi, junto al río", "A poca distancia del parque central de Borjomi", "Cerca de los manantiales de agua mineral"],
+    "imageAlts": [
+      "Fachada del Bridge Hotel junto al río en Borjomi, Georgia",
+      "Vestíbulo y recepción del Bridge Hotel en Borjomi",
+      "Habitación cómoda del Bridge Hotel en el corazón de Borjomi",
+      "Baño con ducha y grifería moderna del Bridge Hotel en Borjomi"
+    ]
+  },
+  "Boutique Hotel Borjomi Verde": {
+    "description": "Un encantador hotel boutique económico en Borjomi, rodeado de vegetación exuberante. El Borjomi Verde ofrece un entorno ajardinado tranquilo, habitaciones limpias y cómodas y un ambiente cálido que refleja el espíritu relajado de esta célebre ciudad balneario georgiana.",
+    "amenities": ["Wi-Fi gratuito", "Desayuno diario", "Terraza ajardinada", "Aparcamiento gratuito", "Calefacción central"],
+    "locationHighlights": ["Entorno verde y tranquilo en Borjomi", "Cerca del parque central y los manantiales minerales", "Acceso a las rutas del parque nacional Borjomi-Kharagauli"],
+    "imageAlts": [
+      "Fachada del Boutique Hotel Borjomi Verde rodeada de vegetación, Borjomi, Georgia",
+      "Terraza y zona exterior del Boutique Hotel Borjomi Verde",
+      "Habitación limpia y acogedora del Boutique Hotel Borjomi Verde",
+      "Baño con equipamiento moderno del Boutique Hotel Borjomi Verde"
+    ]
+  },
+  "Hotel Posta": {
+    "description": "El hotel de referencia en Mestia, capital de la legendaria región de Svanetia. El Hotel Posta ofrece una hospitalidad de montaña cuidada, con vistas panorámicas a las torres svanas medievales y a los picos nevados del Cáucaso, un excelente restaurante y un salón con chimenea perfecto tras un día de aventura alpina.",
+    "amenities": ["Wi-Fi gratuito", "Restaurante de cocina svana", "Calefacción central", "Aparcamiento gratuito", "Terraza con vistas a la montaña"],
+    "locationHighlights": ["Centro de Mestia con vistas a las torres svanas", "Punto de partida hacia Ushguli y el glaciar Chalaadi", "Cerca del museo de Mestia y los remontes"],
+    "imageAlts": [
+      "Fachada del Hotel Posta en el corazón de Mestia, Svanetia, Georgia",
+      "Recepción y vestíbulo del Hotel Posta en Mestia",
+      "Habitación con vistas a la montaña del Hotel Posta en Mestia",
+      "Baño con equipamiento moderno del Hotel Posta en Mestia"
+    ]
+  },
+  "Mestia Inn": {
+    "description": "Un acogedor alojamiento de gama media en Mestia, con habitaciones cómodas de interiores tradicionales de madera y vistas a la montaña. El Mestia Inn sirve contundente cocina svana y ofrece un ambiente familiar que encarna la legendaria hospitalidad de las tierras altas de Svanetia.",
+    "amenities": ["Wi-Fi gratuito", "Comida svana tradicional", "Calefacción central", "Aparcamiento gratuito", "Balcón con vistas"],
+    "locationHighlights": ["En el corazón del pueblo de Mestia", "Cerca de las torres svanas medievales", "Base para Ushguli y las rutas por el glaciar"],
+    "imageAlts": [
+      "Fachada del Mestia Inn en Mestia, Svanetia, Georgia",
+      "Vestíbulo y zona común del Mestia Inn con vistas a la montaña",
+      "Habitación cómoda con interiores de madera del Mestia Inn en Mestia",
+      "Baño con equipamiento moderno del Mestia Inn en Mestia"
+    ]
+  },
+  "Lileo Inn": {
+    "description": "Una auténtica casa de huéspedes familiar svana en Mestia. El Lileo Inn sirve deliciosos platos svanos caseros, ofrece habitaciones sencillas pero limpias y permite a los huéspedes vivir la cálida hospitalidad familiar por la que Svanetia es famosa.",
+    "amenities": ["Wi-Fi gratuito", "Comida svana casera", "Calefacción central", "Aparcamiento gratuito", "Zona ajardinada"],
+    "locationHighlights": ["Auténtico entorno rural svano en Mestia", "A poca distancia del centro de Mestia", "Cerca del inicio de las rutas a los lagos Koruldi y Ushguli"],
+    "imageAlts": [
+      "Fachada del Lileo Inn en Mestia, Svanetia, Georgia",
+      "Vestíbulo y zona común del Lileo Inn en Mestia",
+      "Habitación con decoración svana tradicional del Lileo Inn en Mestia",
+      "Baño con equipamiento moderno del Lileo Inn en Mestia"
+    ]
+  },
+  "Communal Hotel Telavi": {
+    "description": "Un hotel boutique instalado en una villa histórica restaurada en el centro de Telavi, con arcos moriscos, un solárium en la azotea y una piscina en el patio. Parte de la familia Communal Hotels, combina la arquitectura de época conservada con un animado bar junto a la piscina y un ambiente relajado en pleno corazón de la región vinícola de Kajetia.",
+    "amenities": ["Piscina en el patio", "Restaurante y bar", "Aire acondicionado", "Wi-Fi gratuito", "Aparcamiento gratuito", "Terraza en la azotea"],
+    "locationHighlights": ["Centro de Telavi, cerca de cafés y tiendas", "A 7 minutos a pie de la fortaleza Batonistsikhe", "A 10 minutos a pie del parque Nadikvari"]
+  },
+  "Boutique Hotel Kviria": {
+    "description": "Un elegante hotel boutique ecológico inaugurado en 2021, que combina la tradición georgiana con el diseño contemporáneo en 14 habitaciones decoradas individualmente. El Kviria cuenta con bodega propia y bar junto a la piscina, un jardín paisajístico y una piscina exterior de temporada, a pocos minutos en coche del centro de Telavi.",
+    "amenities": ["Bodega propia", "Piscina exterior", "Jardín", "Restaurante", "Desayuno incluido", "Wi-Fi gratuito", "Aparcamiento gratuito"],
+    "locationHighlights": ["Calle Gogebashvili 51, Telavi", "A unos 10 minutos del centro de Telavi", "Rodeado del campo de Kajetia"]
+  },
+  "Seventeen Rooms": {
+    "description": "Un hotel íntimo en el centro de Telavi con diecisiete habitaciones cómodas, una piscina exterior de temporada y un jardín frondoso. El restaurante sirve platos georgianos y europeos acompañados de vinos locales de Kajetia, y su relajado salón común lo convierte en una base práctica para recorrer el casco antiguo.",
+    "amenities": ["Piscina exterior de temporada", "Jardín", "Restaurante y bar", "Aire acondicionado", "Wi-Fi gratuito", "Aparcamiento privado gratuito"],
+    "locationHighlights": ["Calle Leonidze, centro de Telavi", "A 10 minutos a pie del palacio de Erekle II (Batonistsikhe)", "Cerca del casco antiguo de Telavi"]
+  },
+  "Villa Lapa": {
+    "description": "Una acogedora villa de gestión familiar en un entorno tranquilo y verde, a unos cinco minutos del centro de Telavi. Las habitaciones se abren a balcones con amplias vistas al valle del Alazani y a los picos del Cáucaso, y los huéspedes pueden relajarse junto a la piscina exterior, en el jardín o en la terraza tras un día entre viñedos.",
+    "amenities": ["Piscina exterior", "Jardín", "Restaurante y bar", "Terraza y galerías", "Wi-Fi gratuito", "Aparcamiento privado gratuito"],
+    "locationHighlights": ["A unos 5 minutos del centro de Telavi", "Vistas desde el balcón al valle del Alazani y al Cáucaso", "Entorno tranquilo y ajardinado a las afueras"]
+  },
+  "Chateau Orberi": {
+    "description": "Una pequeña casa de huéspedes entre viñedos en la aldea de Ikalto, cerca de Telavi, donde la familia anfitriona elabora su propio vino ecológico en un marani tradicional. Rodeado de viñas, con jardín y piscina exterior, el Chateau Orberi ofrece la cálida hospitalidad casera de Kajetia a pocos minutos en coche del histórico monasterio de Ikalto.",
+    "amenities": ["Bodega familiar (marani)", "Piscina exterior", "Jardín y viñedos"],
+    "locationHighlights": ["Aldea de Ikalto, a pocos minutos de Telavi", "Rodeado de sus propios viñedos", "Cerca del monasterio y la academia de Ikalto"]
+  }
+}

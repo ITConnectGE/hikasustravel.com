@@ -261,5 +261,11 @@
   "search.typePlace": "Place to Visit",
   "search.typeGuide": "Things to Do",
   "search.typeBlog": "Blog",
-  "search.typeInfo": "Travel Info"
+  "search.typeInfo": "Travel Info",
+  "hotel.prevPhoto": "Previous photo",
+  "hotel.nextPhoto": "Next photo",
+  "hotel.goToPhoto": "Go to photo {n}",
+  "pricing.nightsOne": "night",
+  "pricing.nightsFew": "nights",
+  "pricing.nightsMany": "nights"
 }

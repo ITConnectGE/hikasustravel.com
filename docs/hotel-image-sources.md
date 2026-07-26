@@ -1,0 +1,197 @@
+# Hotel image sources and licence manifest
+
+Internal record of every photo shown in the tour **Accommodation** sections
+(`src/data/hotelData.js` → `HotelModal`). One row per image file.
+
+**Rules this manifest exists to enforce**
+
+- No photos scraped or reused from Booking.com, Google, TripAdvisor, Expedia, Instagram, Facebook or any other third-party platform.
+- No watermark removal, no stripping of legally required attribution, no obscuring of a source.
+- Safe sources, in priority order: (1) images already in this project, (2) hotel-supplied images, (3) hotel official site / press kit where reuse is permitted, (4) written permission from the hotel, (5) properly licensed stock that genuinely represents the property.
+- If rights are unclear, **no image is added** — the hotel is listed in the missing-image report instead.
+
+---
+
+## ⚠️ Provenance status of the pre-existing library
+
+**No images were added, replaced or removed in this change.** All 124 files below
+predate it. They are documented here for the first time, and the honest position is:
+
+- **108 files — `UNVERIFIED — no source recorded`.** The repository contains no record
+  of where these came from or under what licence. That is not evidence of a problem, but
+  it is not clearance either, and it cannot be reconstructed after the fact.
+- **16 files (4 hotels) — `UNVERIFIED — comment claims official site / public listing`.**
+  `hotelData.js` carries one note saying these are "each hotel's own images (from their
+  official sites / public listings)". "Public listings" is too vague to treat as a licence.
+
+**Recommended follow-up:** confirm in writing with each property that we may use its
+photos on hikasustravel.com, and record the reply date in the Source column below.
+Until then treat the library as unverified rather than cleared.
+
+---
+
+## Missing-image report
+
+Hotels shown on a live tour page that have **no** usable photos. No safe, licensed
+imagery for these exists anywhere in the project (checked: `public/images/hotels/`,
+`Images for tours/` incl. `telavi-images-package/`, `Packages/`), so nothing was added.
+
+| Tour | Hotel name | Accommodation package | Required images missing | Suggested official contact/source | Permission needed |
+|---|---|---|---|---|---|
+| 3-day-kakheti-wine-and-food-tour-from-tbilisi | Boutique Hotel Kviria | Mid-Range | exterior, lobby/common area, room, bathroom (4 of 4) | Contact the property directly and request its own photos plus written permission for hikasustravel.com | **Yes** — written permission before any image is added |
+| 3-day-kakheti-wine-and-food-tour-from-tbilisi | Chateau Orberi | Classic | exterior, lobby/common area, room, bathroom (4 of 4) | Contact the property directly and request its own photos plus written permission for hikasustravel.com | **Yes** — written permission before any image is added |
+| 3-day-kakheti-wine-and-food-tour-from-tbilisi | Communal Hotel Telavi | Premium | exterior, lobby/common area, room, bathroom (4 of 4) | Contact the property directly and request its own photos plus written permission for hikasustravel.com | **Yes** — written permission before any image is added |
+| 3-day-kakheti-wine-and-food-tour-from-tbilisi | Seventeen Rooms | Mid-Range | exterior, lobby/common area, room, bathroom (4 of 4) | Contact the property directly and request its own photos plus written permission for hikasustravel.com | **Yes** — written permission before any image is added |
+| 3-day-kakheti-wine-and-food-tour-from-tbilisi | Villa Lapa | Classic | exterior, lobby/common area, room, bathroom (4 of 4) | Contact the property directly and request its own photos plus written permission for hikasustravel.com | **Yes** — written permission before any image is added |
+
+Also flagged, not an image issue: the **8-Day Georgia Culture and Adventure Tour**
+lists `Local Cottage or Guesthouse` for Lagodekhi across all three packages. No property
+is named, so there is nothing to photograph or link. Needs a decision: name the
+property, or keep it deliberately generic.
+
+---
+
+## Manifest — every image currently referenced
+
+`Source` and `Permission/licence status` record what the repository can actually
+evidence. Do not upgrade a row to "cleared" without a written reply on file.
+
+| Tour(s) | Hotel name | Filename | Type | Source | Permission/licence status | Date checked | Notes |
+|---|---|---|---|---|---|---|---|
+| 1 tour(s) | Sandali Metekhi By Old Hospitality | `sandali-metekhi.jpg` | exterior | Not recorded | UNVERIFIED — no source recorded | 2026-07-26 | 434 KB |
+| 1 tour(s) | Sandali Metekhi By Old Hospitality | `sandali-metekhi-2.jpg` | lobby/common | Not recorded | UNVERIFIED — no source recorded | 2026-07-26 | 473 KB |
+| 1 tour(s) | Sandali Metekhi By Old Hospitality | `sandali-metekhi-3.jpg` | room | Not recorded | UNVERIFIED — no source recorded | 2026-07-26 | 534 KB |
+| 1 tour(s) | Sandali Metekhi By Old Hospitality | `sandali-metekhi-4.jpg` | bathroom | Not recorded | UNVERIFIED — no source recorded | 2026-07-26 | 715 KB |
+| 1 tour(s) | Best View Kazbegi | `best-view-kazbegi.jpg` | exterior | Not recorded | UNVERIFIED — no source recorded | 2026-07-26 | 72 KB |
+| 1 tour(s) | Best View Kazbegi | `best-view-kazbegi-2.jpg` | lobby/common | Not recorded | UNVERIFIED — no source recorded | 2026-07-26 | 111 KB |
+| 1 tour(s) | Best View Kazbegi | `best-view-kazbegi-3.jpg` | room | Not recorded | UNVERIFIED — no source recorded | 2026-07-26 | 175 KB |
+| 1 tour(s) | Best View Kazbegi | `best-view-kazbegi-4.jpg` | bathroom | Not recorded | UNVERIFIED — no source recorded | 2026-07-26 | 56 KB |
+| 12 tour(s) | Hotel West Way | `hotel-west-way.jpg` | exterior | Not recorded | UNVERIFIED — no source recorded | 2026-07-26 | 121 KB |
+| 12 tour(s) | Hotel West Way | `hotel-west-way-2.jpg` | lobby/common | Not recorded | UNVERIFIED — no source recorded | 2026-07-26 | 115 KB |
+| 12 tour(s) | Hotel West Way | `hotel-west-way-3.jpg` | room | Not recorded | UNVERIFIED — no source recorded | 2026-07-26 | 81 KB |
+| 12 tour(s) | Hotel West Way | `hotel-west-way-4.jpg` | bathroom | Not recorded | UNVERIFIED — no source recorded | 2026-07-26 | 77 KB |
+| 1 tour(s) | Hotel Phaliashvili | `hotel-phaliashvili.jpg` | exterior | Not recorded | UNVERIFIED — no source recorded | 2026-07-26 | 217 KB |
+| 1 tour(s) | Hotel Phaliashvili | `hotel-phaliashvili-2.jpg` | lobby/common | Not recorded | UNVERIFIED — no source recorded | 2026-07-26 | 109 KB |
+| 1 tour(s) | Hotel Phaliashvili | `hotel-phaliashvili-3.jpg` | room | Not recorded | UNVERIFIED — no source recorded | 2026-07-26 | 108 KB |
+| 1 tour(s) | Hotel Phaliashvili | `hotel-phaliashvili-4.jpg` | bathroom | Not recorded | UNVERIFIED — no source recorded | 2026-07-26 | 214 KB |
+| 8 tour(s) | Hotel & Wine Cellar ARGE | `hotel-arge.jpg` | exterior | Not recorded | UNVERIFIED — no source recorded | 2026-07-26 | 92 KB |
+| 8 tour(s) | Hotel & Wine Cellar ARGE | `hotel-arge-2.jpg` | lobby/common | Not recorded | UNVERIFIED — no source recorded | 2026-07-26 | 199 KB |
+| 8 tour(s) | Hotel & Wine Cellar ARGE | `hotel-arge-3.jpg` | room | Not recorded | UNVERIFIED — no source recorded | 2026-07-26 | 158 KB |
+| 8 tour(s) | Hotel & Wine Cellar ARGE | `hotel-arge-4.jpg` | bathroom | Not recorded | UNVERIFIED — no source recorded | 2026-07-26 | 142 KB |
+| 14 tour(s) | Rooms Hotel Tbilisi | `rooms-hotel-tbilisi.jpg` | room | Not recorded | UNVERIFIED — no source recorded | 2026-07-26 | 192 KB |
+| 14 tour(s) | Rooms Hotel Tbilisi | `rooms-hotel-tbilisi-2.jpg` | lobby/common | Not recorded | UNVERIFIED — no source recorded | 2026-07-26 | 236 KB |
+| 14 tour(s) | Rooms Hotel Tbilisi | `rooms-hotel-tbilisi-3.jpg` | room | Not recorded | UNVERIFIED — no source recorded | 2026-07-26 | 163 KB |
+| 14 tour(s) | Rooms Hotel Tbilisi | `rooms-hotel-tbilisi-4.jpg` | bathroom | Not recorded | UNVERIFIED — no source recorded | 2026-07-26 | 156 KB |
+| 15 tour(s) | Ibis Styles Tbilisi Center | `ibis-styles-tbilisi.jpg` | exterior | Not recorded | UNVERIFIED — no source recorded | 2026-07-26 | 344 KB |
+| 15 tour(s) | Ibis Styles Tbilisi Center | `ibis-styles-tbilisi-2.jpg` | lobby/common | Not recorded | UNVERIFIED — no source recorded | 2026-07-26 | 52 KB |
+| 15 tour(s) | Ibis Styles Tbilisi Center | `ibis-styles-tbilisi-3.jpg` | room | Not recorded | UNVERIFIED — no source recorded | 2026-07-26 | 171 KB |
+| 15 tour(s) | Ibis Styles Tbilisi Center | `ibis-styles-tbilisi-4.jpg` | bathroom | Not recorded | UNVERIFIED — no source recorded | 2026-07-26 | 143 KB |
+| 15 tour(s) | Ginger Hotel | `ginger-hotel.jpg` | exterior | Not recorded | UNVERIFIED — no source recorded | 2026-07-26 | 229 KB |
+| 15 tour(s) | Ginger Hotel | `ginger-hotel-2.jpg` | lobby/common | Not recorded | UNVERIFIED — no source recorded | 2026-07-26 | 177 KB |
+| 15 tour(s) | Ginger Hotel | `ginger-hotel-3.jpg` | room | Not recorded | UNVERIFIED — no source recorded | 2026-07-26 | 130 KB |
+| 15 tour(s) | Ginger Hotel | `ginger-hotel-4.jpg` | bathroom | Not recorded | UNVERIFIED — no source recorded | 2026-07-26 | 127 KB |
+| 1 tour(s) | Ambassadori | `ambassadori.jpg` | lobby/common | Hotel's own photos per `hotelData.js` comment (official site / public listing) | UNVERIFIED — comment is not a licence | 2026-07-26 | 201 KB |
+| 1 tour(s) | Ambassadori | `ambassadori-2.jpg` | lobby/common | Hotel's own photos per `hotelData.js` comment (official site / public listing) | UNVERIFIED — comment is not a licence | 2026-07-26 | 155 KB |
+| 1 tour(s) | Ambassadori | `ambassadori-3.jpg` | room | Hotel's own photos per `hotelData.js` comment (official site / public listing) | UNVERIFIED — comment is not a licence | 2026-07-26 | 160 KB |
+| 1 tour(s) | Ambassadori | `ambassadori-4.jpg` | room | Hotel's own photos per `hotelData.js` comment (official site / public listing) | UNVERIFIED — comment is not a licence | 2026-07-26 | 150 KB |
+| 1 tour(s) | Gudauri Lodge | `gudauri-lodge.webp` | exterior | Hotel's own photos per `hotelData.js` comment (official site / public listing) | UNVERIFIED — comment is not a licence | 2026-07-26 | 144 KB |
+| 1 tour(s) | Gudauri Lodge | `gudauri-lodge-2.webp` | room | Hotel's own photos per `hotelData.js` comment (official site / public listing) | UNVERIFIED — comment is not a licence | 2026-07-26 | 305 KB |
+| 1 tour(s) | Gudauri Lodge | `gudauri-lodge-3.webp` | room | Hotel's own photos per `hotelData.js` comment (official site / public listing) | UNVERIFIED — comment is not a licence | 2026-07-26 | 237 KB |
+| 1 tour(s) | Gudauri Lodge | `gudauri-lodge-4.webp` | lobby/common | Hotel's own photos per `hotelData.js` comment (official site / public listing) | UNVERIFIED — comment is not a licence | 2026-07-26 | 297 KB |
+| 1 tour(s) | Marco Polo | `marco-polo.webp` | exterior | Hotel's own photos per `hotelData.js` comment (official site / public listing) | UNVERIFIED — comment is not a licence | 2026-07-26 | 93 KB |
+| 1 tour(s) | Marco Polo | `marco-polo-2.webp` | pool/facility | Hotel's own photos per `hotelData.js` comment (official site / public listing) | UNVERIFIED — comment is not a licence | 2026-07-26 | 360 KB |
+| 1 tour(s) | Marco Polo | `marco-polo-3.webp` | lobby/common | Hotel's own photos per `hotelData.js` comment (official site / public listing) | UNVERIFIED — comment is not a licence | 2026-07-26 | 373 KB |
+| 1 tour(s) | Marco Polo | `marco-polo-4.webp` | room | Hotel's own photos per `hotelData.js` comment (official site / public listing) | UNVERIFIED — comment is not a licence | 2026-07-26 | 173 KB |
+| 1 tour(s) | Gudauri Inn | `gudauri-inn.webp` | lobby/common | Hotel's own photos per `hotelData.js` comment (official site / public listing) | UNVERIFIED — comment is not a licence | 2026-07-26 | 458 KB |
+| 1 tour(s) | Gudauri Inn | `gudauri-inn-2.webp` | room | Hotel's own photos per `hotelData.js` comment (official site / public listing) | UNVERIFIED — comment is not a licence | 2026-07-26 | 38 KB |
+| 1 tour(s) | Gudauri Inn | `gudauri-inn-3.webp` | room | Hotel's own photos per `hotelData.js` comment (official site / public listing) | UNVERIFIED — comment is not a licence | 2026-07-26 | 67 KB |
+| 1 tour(s) | Gudauri Inn | `gudauri-inn-4.webp` | room | Hotel's own photos per `hotelData.js` comment (official site / public listing) | UNVERIFIED — comment is not a licence | 2026-07-26 | 31 KB |
+| 11 tour(s) | Rooms Hotel Kazbegi | `rooms-hotel-kazbegi.jpg` | room | Not recorded | UNVERIFIED — no source recorded | 2026-07-26 | 143 KB |
+| 11 tour(s) | Rooms Hotel Kazbegi | `rooms-hotel-kazbegi-2.jpg` | lobby/common | Not recorded | UNVERIFIED — no source recorded | 2026-07-26 | 197 KB |
+| 11 tour(s) | Rooms Hotel Kazbegi | `rooms-hotel-kazbegi-3.jpg` | room | Not recorded | UNVERIFIED — no source recorded | 2026-07-26 | 100 KB |
+| 11 tour(s) | Rooms Hotel Kazbegi | `rooms-hotel-kazbegi-4.jpg` | bathroom | Not recorded | UNVERIFIED — no source recorded | 2026-07-26 | 200 KB |
+| 11 tour(s) | Northgate Hotel | `northgate-hotel.jpg` | exterior | Not recorded | UNVERIFIED — no source recorded | 2026-07-26 | 186 KB |
+| 11 tour(s) | Northgate Hotel | `northgate-hotel-2.jpg` | lobby/common | Not recorded | UNVERIFIED — no source recorded | 2026-07-26 | 119 KB |
+| 11 tour(s) | Northgate Hotel | `northgate-hotel-3.jpg` | room | Not recorded | UNVERIFIED — no source recorded | 2026-07-26 | 60 KB |
+| 11 tour(s) | Northgate Hotel | `northgate-hotel-4.jpg` | bathroom | Not recorded | UNVERIFIED — no source recorded | 2026-07-26 | 129 KB |
+| 11 tour(s) | Hotel Horizon | `hotel-horizon.jpg` | exterior | Not recorded | UNVERIFIED — no source recorded | 2026-07-26 | 143 KB |
+| 11 tour(s) | Hotel Horizon | `hotel-horizon-2.jpg` | lobby/common | Not recorded | UNVERIFIED — no source recorded | 2026-07-26 | 83 KB |
+| 11 tour(s) | Hotel Horizon | `hotel-horizon-3.jpg` | room | Not recorded | UNVERIFIED — no source recorded | 2026-07-26 | 89 KB |
+| 11 tour(s) | Hotel Horizon | `hotel-horizon-4.jpg` | bathroom | Not recorded | UNVERIFIED — no source recorded | 2026-07-26 | 88 KB |
+| 11 tour(s) | Newport Hotel Kutaisi | `newport-hotel-kutaisi.jpg` | exterior | Not recorded | UNVERIFIED — no source recorded | 2026-07-26 | 210 KB |
+| 11 tour(s) | Newport Hotel Kutaisi | `newport-hotel-kutaisi-2.jpg` | lobby/common | Not recorded | UNVERIFIED — no source recorded | 2026-07-26 | 131 KB |
+| 11 tour(s) | Newport Hotel Kutaisi | `newport-hotel-kutaisi-3.jpg` | room | Not recorded | UNVERIFIED — no source recorded | 2026-07-26 | 110 KB |
+| 11 tour(s) | Newport Hotel Kutaisi | `newport-hotel-kutaisi-4.jpg` | bathroom | Not recorded | UNVERIFIED — no source recorded | 2026-07-26 | 96 KB |
+| 11 tour(s) | Boutique Hotel Argo | `boutique-hotel-argo.jpg` | exterior | Not recorded | UNVERIFIED — no source recorded | 2026-07-26 | 63 KB |
+| 11 tour(s) | Boutique Hotel Argo | `boutique-hotel-argo-2.jpg` | lobby/common | Not recorded | UNVERIFIED — no source recorded | 2026-07-26 | 45 KB |
+| 11 tour(s) | Boutique Hotel Argo | `boutique-hotel-argo-3.jpg` | room | Not recorded | UNVERIFIED — no source recorded | 2026-07-26 | 148 KB |
+| 11 tour(s) | Boutique Hotel Argo | `boutique-hotel-argo-4.jpg` | bathroom | Not recorded | UNVERIFIED — no source recorded | 2026-07-26 | 172 KB |
+| 8 tour(s) | Rooms Hotel | `rooms-hotel-batumi.jpg` | room | Not recorded | UNVERIFIED — no source recorded | 2026-07-26 | 319 KB |
+| 8 tour(s) | Rooms Hotel | `rooms-hotel-batumi-2.jpg` | lobby/common | Not recorded | UNVERIFIED — no source recorded | 2026-07-26 | 116 KB |
+| 8 tour(s) | Rooms Hotel | `rooms-hotel-batumi-3.jpg` | room | Not recorded | UNVERIFIED — no source recorded | 2026-07-26 | 292 KB |
+| 8 tour(s) | Rooms Hotel | `rooms-hotel-batumi-4.jpg` | bathroom | Not recorded | UNVERIFIED — no source recorded | 2026-07-26 | 179 KB |
+| 8 tour(s) | Hotel Monarch | `hotel-monarch.jpg` | exterior | Not recorded | UNVERIFIED — no source recorded | 2026-07-26 | 423 KB |
+| 8 tour(s) | Hotel Monarch | `hotel-monarch-2.jpg` | lobby/common | Not recorded | UNVERIFIED — no source recorded | 2026-07-26 | 346 KB |
+| 8 tour(s) | Hotel Monarch | `hotel-monarch-3.jpg` | room | Not recorded | UNVERIFIED — no source recorded | 2026-07-26 | 533 KB |
+| 8 tour(s) | Hotel Monarch | `hotel-monarch-4.jpg` | bathroom | Not recorded | UNVERIFIED — no source recorded | 2026-07-26 | 327 KB |
+| 8 tour(s) | Boutique Hotel 32 | `boutique-hotel-32.jpg` | exterior | Not recorded | UNVERIFIED — no source recorded | 2026-07-26 | 87 KB |
+| 8 tour(s) | Boutique Hotel 32 | `boutique-hotel-32-2.jpg` | lobby/common | Not recorded | UNVERIFIED — no source recorded | 2026-07-26 | 113 KB |
+| 8 tour(s) | Boutique Hotel 32 | `boutique-hotel-32-3.jpg` | room | Not recorded | UNVERIFIED — no source recorded | 2026-07-26 | 57 KB |
+| 8 tour(s) | Boutique Hotel 32 | `boutique-hotel-32-4.jpg` | bathroom | Not recorded | UNVERIFIED — no source recorded | 2026-07-26 | 38 KB |
+| 6 tour(s) | Tsinandali Estate, A Radisson Collection Hotel | `tsinandali-estate.jpg` | exterior | Not recorded | UNVERIFIED — no source recorded | 2026-07-26 | 693 KB |
+| 6 tour(s) | Tsinandali Estate, A Radisson Collection Hotel | `tsinandali-estate-2.jpg` | lobby/common | Not recorded | UNVERIFIED — no source recorded | 2026-07-26 | 373 KB |
+| 6 tour(s) | Tsinandali Estate, A Radisson Collection Hotel | `tsinandali-estate-3.jpg` | room | Not recorded | UNVERIFIED — no source recorded | 2026-07-26 | 642 KB |
+| 6 tour(s) | Tsinandali Estate, A Radisson Collection Hotel | `tsinandali-estate-4.jpg` | bathroom | Not recorded | UNVERIFIED — no source recorded | 2026-07-26 | 607 KB |
+| 6 tour(s) | Park Hotel Tsinandali | `park-hotel-tsinandali.jpg` | exterior | Not recorded | UNVERIFIED — no source recorded | 2026-07-26 | 146 KB |
+| 6 tour(s) | Park Hotel Tsinandali | `park-hotel-tsinandali-2.jpg` | lobby/common | Not recorded | UNVERIFIED — no source recorded | 2026-07-26 | 114 KB |
+| 6 tour(s) | Park Hotel Tsinandali | `park-hotel-tsinandali-3.jpg` | room | Not recorded | UNVERIFIED — no source recorded | 2026-07-26 | 62 KB |
+| 6 tour(s) | Park Hotel Tsinandali | `park-hotel-tsinandali-4.jpg` | bathroom | Not recorded | UNVERIFIED — no source recorded | 2026-07-26 | 81 KB |
+| 2 tour(s) | Akhaltsikhe Inn (Junior Suite Room) | `akhaltsikhe-inn.jpg` | exterior | Not recorded | UNVERIFIED — no source recorded | 2026-07-26 | 111 KB |
+| 2 tour(s) | Akhaltsikhe Inn (Junior Suite Room) | `akhaltsikhe-inn-2.jpg` | lobby/common | Not recorded | UNVERIFIED — no source recorded | 2026-07-26 | 155 KB |
+| 2 tour(s) | Akhaltsikhe Inn (Junior Suite Room) | `akhaltsikhe-inn-3.jpg` | room | Not recorded | UNVERIFIED — no source recorded | 2026-07-26 | 68 KB |
+| 2 tour(s) | Akhaltsikhe Inn (Junior Suite Room) | `akhaltsikhe-inn-4.jpg` | bathroom | Not recorded | UNVERIFIED — no source recorded | 2026-07-26 | 408 KB |
+| 2 tour(s) | Hotel Gino Wellness Rabati | `hotel-gino-wellness-rabati.jpg` | exterior | Not recorded | UNVERIFIED — no source recorded | 2026-07-26 | 104 KB |
+| 2 tour(s) | Hotel Gino Wellness Rabati | `hotel-gino-wellness-rabati-2.jpg` | lobby/common | Not recorded | UNVERIFIED — no source recorded | 2026-07-26 | 117 KB |
+| 2 tour(s) | Hotel Gino Wellness Rabati | `hotel-gino-wellness-rabati-3.jpg` | room | Not recorded | UNVERIFIED — no source recorded | 2026-07-26 | 68 KB |
+| 2 tour(s) | Hotel Gino Wellness Rabati | `hotel-gino-wellness-rabati-4.jpg` | bathroom | Not recorded | UNVERIFIED — no source recorded | 2026-07-26 | 55 KB |
+| 2 tour(s) | Hotel Beni | `hotel-beni.jpg` | exterior | Not recorded | UNVERIFIED — no source recorded | 2026-07-26 | 69 KB |
+| 2 tour(s) | Hotel Beni | `hotel-beni-2.jpg` | lobby/common | Not recorded | UNVERIFIED — no source recorded | 2026-07-26 | 65 KB |
+| 2 tour(s) | Hotel Beni | `hotel-beni-3.jpg` | room | Not recorded | UNVERIFIED — no source recorded | 2026-07-26 | 24 KB |
+| 2 tour(s) | Hotel Beni | `hotel-beni-4.jpg` | bathroom | Not recorded | UNVERIFIED — no source recorded | 2026-07-26 | 257 KB |
+| 1 tour(s) | Crowne Plaza Borjomi | `crowne-plaza-borjomi.jpg` | other | Not recorded | UNVERIFIED — no source recorded | 2026-07-26 | 167 KB |
+| 1 tour(s) | Crowne Plaza Borjomi | `crowne-plaza-borjomi-2.jpg` | lobby/common | Not recorded | UNVERIFIED — no source recorded | 2026-07-26 | 133 KB |
+| 1 tour(s) | Crowne Plaza Borjomi | `crowne-plaza-borjomi-3.jpg` | room | Not recorded | UNVERIFIED — no source recorded | 2026-07-26 | 116 KB |
+| 1 tour(s) | Crowne Plaza Borjomi | `crowne-plaza-borjomi-4.jpg` | bathroom | Not recorded | UNVERIFIED — no source recorded | 2026-07-26 | 111 KB |
+| 1 tour(s) | Bridge Hotel | `bridge-hotel.jpg` | exterior | Not recorded | UNVERIFIED — no source recorded | 2026-07-26 | 172 KB |
+| 1 tour(s) | Bridge Hotel | `bridge-hotel-2.jpg` | lobby/common | Not recorded | UNVERIFIED — no source recorded | 2026-07-26 | 116 KB |
+| 1 tour(s) | Bridge Hotel | `bridge-hotel-3.jpg` | room | Not recorded | UNVERIFIED — no source recorded | 2026-07-26 | 82 KB |
+| 1 tour(s) | Bridge Hotel | `bridge-hotel-4.jpg` | bathroom | Not recorded | UNVERIFIED — no source recorded | 2026-07-26 | 84 KB |
+| 1 tour(s) | Boutique Hotel Borjomi Verde | `borjomi-verde.jpg` | exterior | Not recorded | UNVERIFIED — no source recorded | 2026-07-26 | 191 KB |
+| 1 tour(s) | Boutique Hotel Borjomi Verde | `borjomi-verde-2.jpg` | lobby/common | Not recorded | UNVERIFIED — no source recorded | 2026-07-26 | 165 KB |
+| 1 tour(s) | Boutique Hotel Borjomi Verde | `borjomi-verde-3.jpg` | room | Not recorded | UNVERIFIED — no source recorded | 2026-07-26 | 71 KB |
+| 1 tour(s) | Boutique Hotel Borjomi Verde | `borjomi-verde-4.jpg` | bathroom | Not recorded | UNVERIFIED — no source recorded | 2026-07-26 | 103 KB |
+| 4 tour(s) | Hotel Posta | `hotel-posta.jpg` | exterior | Not recorded | UNVERIFIED — no source recorded | 2026-07-26 | 44 KB |
+| 4 tour(s) | Hotel Posta | `hotel-posta-2.jpg` | lobby/common | Not recorded | UNVERIFIED — no source recorded | 2026-07-26 | 46 KB |
+| 4 tour(s) | Hotel Posta | `hotel-posta-3.jpg` | room | Not recorded | UNVERIFIED — no source recorded | 2026-07-26 | 21 KB |
+| 4 tour(s) | Hotel Posta | `hotel-posta-4.jpg` | bathroom | Not recorded | UNVERIFIED — no source recorded | 2026-07-26 | 82 KB |
+| 4 tour(s) | Mestia Inn | `mestia-inn.jpg` | exterior | Not recorded | UNVERIFIED — no source recorded | 2026-07-26 | 142 KB |
+| 4 tour(s) | Mestia Inn | `mestia-inn-2.jpg` | lobby/common | Not recorded | UNVERIFIED — no source recorded | 2026-07-26 | 78 KB |
+| 4 tour(s) | Mestia Inn | `mestia-inn-3.jpg` | room | Not recorded | UNVERIFIED — no source recorded | 2026-07-26 | 67 KB |
+| 4 tour(s) | Mestia Inn | `mestia-inn-4.jpg` | bathroom | Not recorded | UNVERIFIED — no source recorded | 2026-07-26 | 131 KB |
+| 4 tour(s) | Lileo Inn | `lileo-inn.jpg` | exterior | Not recorded | UNVERIFIED — no source recorded | 2026-07-26 | 60 KB |
+| 4 tour(s) | Lileo Inn | `lileo-inn-2.jpg` | lobby/common | Not recorded | UNVERIFIED — no source recorded | 2026-07-26 | 357 KB |
+| 4 tour(s) | Lileo Inn | `lileo-inn-3.jpg` | room | Not recorded | UNVERIFIED — no source recorded | 2026-07-26 | 80 KB |
+| 4 tour(s) | Lileo Inn | `lileo-inn-4.jpg` | bathroom | Not recorded | UNVERIFIED — no source recorded | 2026-07-26 | 64 KB |
+
+**Total: 124 image files across 31 hotels.**
+
+---
+
+## Adding a new hotel image
+
+1. Confirm the source is safe (see priority list above). If unclear — stop, and add the hotel to the missing-image report.
+2. Drop the file in `public/images/hotels/` using a descriptive name: `hotel-arge-exterior-georgia.webp`.
+3. Add it to the hotel's `images[]` in `src/data/hotelData.js` with English alt text.
+4. Add the matching alt string to `imageAlts` in **all six** `src/i18n/locales/<lang>/hotels.json` files. Array lengths must match `images[]` exactly, or that locale falls back to English for the whole hotel (see `src/i18n/useHotel.js`).
+5. Add a row here with a real source and licence status.
+6. If the licence requires visible credit, raise it before publishing — the modal has no credit slot today.

@@ -491,7 +491,7 @@ export const tours = [
       {
         "city": "Telavi (2 nights)",
         "luxury": "Communal Hotel Telavi",
-        "midRange": "Boutique Hotel Kviria, Hotel Arge, Seventeen Rooms or similar",
+        "midRange": "Boutique Hotel Kviria, Hotel & Wine Cellar ARGE, Seventeen Rooms or similar",
         "economy": "Villa Lapa, Chateau Orberi or similar"
       }
     ],

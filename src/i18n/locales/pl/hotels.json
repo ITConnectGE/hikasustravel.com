@@ -1,0 +1,368 @@
+{
+  "Sandali Metekhi By Old Hospitality": {
+    "description": "Butikowy hotel w stylu art déco w historycznej dzielnicy Metechi w Tbilisi. Z barem na dachu oferującym panoramiczny widok na twierdzę Narikala i Stare Miasto, Sandali Metekhi łączy gruziński urok z nowoczesnym komfortem.",
+    "amenities": ["Bezpłatne Wi-Fi", "Bar i restauracja na dachu", "Klimatyzacja", "Parking prywatny", "Konsjerż 24/7"],
+    "locationHighlights": ["Spacerem do mostu Metechi i na Stare Miasto", "Widok na twierdzę Narikala z tarasu na dachu", "Kilka kroków od dzielnicy łaźni siarkowych"],
+    "imageAlts": [
+      "Elewacja hotelu Sandali Metekhi By Old Hospitality na Starym Mieście w Tbilisi, Gruzja",
+      "Lobby i recepcja hotelu Sandali Metekhi z wnętrzem w stylu art déco, Tbilisi",
+      "Pokój gościnny w hotelu Sandali Metekhi z eleganckim wyposażeniem, Tbilisi",
+      "Łazienka w hotelu Sandali Metekhi z wanną i nowoczesnym wyposażeniem, Tbilisi"
+    ]
+  },
+  "Best View Kazbegi": {
+    "description": "Położony wysoko w Wielkim Kaukazie Best View Kazbegi w pełni zasługuje na swoją nazwę. Budzisz się z szeroką panoramą góry Kazbek i kościoła Trójcy Świętej w Gergeti, w komforcie przytulnego górskiego schronienia.",
+    "amenities": ["Bezpłatne Wi-Fi", "Restauracja z widokiem na góry", "Bezpłatny parking", "Taras panoramiczny", "Ogrzewanie centralne"],
+    "locationHighlights": ["Bezpośredni widok na kościół Trójcy Świętej w Gergeti", "Punkt wyjścia na szlaki Parku Narodowego Kazbegi", "Kilka minut od centrum Stepancmindy"],
+    "imageAlts": [
+      "Elewacja hotelu Best View Kazbegi w Stepancmindzie na tle Kaukazu",
+      "Lobby i część wspólna hotelu Best View Kazbegi z wygodnymi siedziskami, Stepancminda",
+      "Pokój gościnny w hotelu Best View Kazbegi z widokiem na góry w Stepancmindzie, Gruzja",
+      "Łazienka z prysznicem w hotelu Best View Kazbegi w Stepancmindzie, Gruzja"
+    ]
+  },
+  "Hotel West Way": {
+    "description": "Przyjazny hotel w sercu Kutaisi z bujnymi ogrodami i miejscem na grilla, idealnym na spokojne wieczory. Hotel West Way to doskonała baza wypadowa do Jaskini Prometeusza, rezerwatu przyrody Sataplia i klasztoru Gelati.",
+    "amenities": ["Bezpłatne Wi-Fi", "Własna restauracja", "Ogród i miejsce na grilla", "Bezpłatny parking", "Klimatyzacja"],
+    "locationHighlights": ["Baza do Jaskini Prometeusza i kanionu Martwili", "Blisko wpisanego na listę UNESCO klasztoru Gelati", "Spacerem do centrum Kutaisi"],
+    "imageAlts": [
+      "Elewacja hotelu West Way w Kutaisi, Gruzja",
+      "Lobby i recepcja hotelu West Way w Kutaisi, Gruzja",
+      "Wygodny pokój gościnny w hotelu West Way w Kutaisi, Gruzja",
+      "Łazienka z prysznicem w hotelu West Way w Kutaisi, Gruzja"
+    ]
+  },
+  "Hotel Phaliashvili": {
+    "description": "Urokliwy nadmorski hotel w Batumi z przyjemnym tarasem na dachu i widokiem na Morze Czarne. Położony kilka kroków od znanego bulwaru w Batumi, stanowi dobrą bazę do zwiedzania tętniącego życiem nadmorskiego miasta Gruzji.",
+    "amenities": ["Bezpłatne Wi-Fi", "Taras na dachu", "Klimatyzacja", "Recepcja 24/7", "Codzienne śniadanie"],
+    "locationHighlights": ["Kilka kroków od bulwaru w Batumi i plaży", "Blisko placu Piazza", "Spacerem na Stare Miasto w Batumi"],
+    "imageAlts": [
+      "Elewacja hotelu Phaliashvili z balkonami w Batumi, Gruzja",
+      "Lobby i klatka schodowa hotelu Phaliashvili z ozdobnymi balustradami, Batumi",
+      "Wygodny pokój gościnny w hotelu Phaliashvili blisko bulwaru w Batumi",
+      "Łazienka z prysznicem i nowoczesną armaturą w hotelu Phaliashvili, Batumi"
+    ]
+  },
+  "Hotel & Wine Cellar ARGE": {
+    "description": "Hotel wśród winnic we wsi Ruispiri, kilka kilometrów od Telawi, przyjmujący gości od 2018 roku. Hotel Arge ma własną piwnicę winiarską do degustacji, basen odkryty i restaurację ogrodową, a większość pokoi wychodzi na balkony z widokiem na Dolinę Alazani i Wielki Kaukaz.",
+    "amenities": ["Piwnica winiarska i degustacje", "Basen", "Własne winnice", "Restauracja ogrodowa", "Bezpłatne Wi-Fi", "Bezpłatny parking"],
+    "locationHighlights": ["Wieś Ruispiri, około 3 km od Telawi", "Widok na Dolinę Alazani i Kaukaz", "W sercu regionu winiarskiego Kachetia"],
+    "imageAlts": [
+      "Elewacja i ogród hotelu Hotel and Wine Cellar ARGE w Telawi, region winiarski Kachetia, Gruzja",
+      "Lobby i strefa wypoczynkowa hotelu ARGE w Telawi, Gruzja",
+      "Pokój gościnny w hotelu ARGE z widokiem na winnice w Kachetii, Gruzja",
+      "Łazienka z nowoczesnym wyposażeniem w hotelu ARGE w Telawi, Gruzja"
+    ]
+  },
+  "Rooms Hotel Tbilisi": {
+    "description": "Butikowy hotel o wyrazistym designie w dawnym wydawnictwie z czasów radzieckich nad brzegiem rzeki Mtkwari. Rooms Hotel Tbilisi łączy industrialną estetykę z ciepłą gruzińską gościnnością, tętniącym życiem barem w lobby i cenioną restauracją.",
+    "amenities": ["Bezpłatne Wi-Fi", "Restauracja i bar w lobby", "Klimatyzacja", "Konsjerż 24/7", "Siłownia"],
+    "locationHighlights": ["Nad rzeką Mtkwari w dzielnicy Wera", "Spacerem do alei Rustawelego i Opery", "Blisko Fabriki i tbiliskich kawiarni"],
+    "imageAlts": [
+      "Elewacja hotelu Rooms Hotel Tbilisi nad brzegiem rzeki Mtkwari, Gruzja",
+      "Stylowe lobby i strefa wypoczynkowa hotelu Rooms Hotel Tbilisi z designerskimi meblami",
+      "Pokój gościnny w hotelu Rooms Hotel Tbilisi o nowoczesnym designie z widokiem na miasto",
+      "Łazienka z nowoczesną armaturą w hotelu Rooms Hotel Tbilisi, Tbilisi"
+    ]
+  },
+  "Ibis Styles Tbilisi Center": {
+    "description": "Kolorowy i nowoczesny hotel przy samej alei Rustawelego w Tbilisi. Ibis Styles Tbilisi Center oferuje niezawodny międzynarodowy standard komfortu z żywiołowym designem, śniadaniem w cenie i doskonałą centralną lokalizacją do zwiedzania stolicy.",
+    "amenities": ["Bezpłatne Wi-Fi", "Śniadanie w cenie", "Klimatyzacja", "Recepcja 24/7", "Parking dostępny"],
+    "locationHighlights": ["Bezpośrednio przy alei Rustawelego", "Kilka kroków od Gruzińskiego Muzeum Narodowego", "Łatwy dostęp do placu Wolności i Starego Miasta"],
+    "imageAlts": [
+      "Nowoczesny budynek hotelu Ibis Styles Tbilisi Center przy alei Rustawelego, Gruzja",
+      "Lobby i recepcja hotelu Ibis Styles Tbilisi Center",
+      "Jasny pokój gościnny z nowoczesnym wyposażeniem w hotelu Ibis Styles Tbilisi Center",
+      "Łazienka o nowoczesnym designie w hotelu Ibis Styles Tbilisi Center"
+    ]
+  },
+  "Ginger Hotel": {
+    "description": "Przyjazny, niedrogi hotel ukryty w krętych uliczkach Starego Miasta w Tbilisi. Ginger Hotel oferuje czyste i wygodne pokoje w ciepłej atmosferze i jest dobrą bazą dla podróżnych, którzy chcą mieszkać w samym centrum wydarzeń.",
+    "amenities": ["Bezpłatne Wi-Fi", "Codzienne śniadanie", "Klimatyzacja", "Recepcja 24/7", "Usługa prania"],
+    "locationHighlights": ["W sercu Starego Miasta w Tbilisi", "Spacerem do łaźni siarkowych i twierdzy Narikala", "W otoczeniu kawiarni, restauracji i sklepów"],
+    "imageAlts": [
+      "Elewacja hotelu Ginger Hotel na Starym Mieście w Tbilisi, Gruzja",
+      "Lobby i część wspólna hotelu Ginger Hotel w Tbilisi",
+      "Czysty i wygodny pokój gościnny w hotelu Ginger Hotel w Tbilisi",
+      "Łazienka z nowoczesnym wyposażeniem w hotelu Ginger Hotel w Tbilisi"
+    ]
+  },
+  "Ambassadori": {
+    "description": "Dopracowany pięciogwiazdkowy hotel przy historycznej ulicy Szawteli, w samym sercu Starego Miasta w Tbilisi. Ambassadori łączy eleganckie, przestronne pokoje ze spa i basenem krytym, dwiema restauracjami i tarasem na dachu — centralna baza w zasięgu spaceru od łaźni siarkowych i twierdzy Narikala.",
+    "amenities": ["Bezpłatne Wi-Fi", "Basen kryty", "Spa i sauna", "Dwie restauracje", "Siłownia", "Bezpłatny parking"],
+    "locationHighlights": ["Przy ulicy Szawteli na historycznym Starym Mieście", "Spacerem do łaźni siarkowych i twierdzy Narikala", "Taras na dachu z widokiem na stare Tbilisi"],
+    "imageAlts": [
+      "Wejście i fasada hotelu Ambassadori Tbilisi Hotel w centrum miasta, Gruzja",
+      "Lobby hotelu Ambassadori Tbilisi Hotel z żyrandolem i marmurową podłogą",
+      "Elegancki klasyczny pokój gościnny w hotelu Ambassadori Tbilisi Hotel",
+      "Salon apartamentu w hotelu Ambassadori Tbilisi Hotel z widokiem na miasto"
+    ]
+  },
+  "Gudauri Lodge": {
+    "description": "Nowoczesny pięciogwiazdkowy górski lodge tuż przy stokach w centrum Gudauri, z prawdziwym dostępem ski-in, ski-out. Po dniu na śniegu można odpocząć w strefie wellness — baseny kryty i odkryty, jacuzzi na zewnątrz, sauna i łaźnia parowa — a potem zjeść kolację w gruzińskiej restauracji. Przestronne nowoczesne pokoje, narciarnia i taras słoneczny czynią z niego wygodną, samowystarczalną bazę na tydzień na nartach.",
+    "amenities": ["Baseny kryty i odkryty", "Spa, sauna i jacuzzi", "Siłownia", "Restauracja i bar", "Bezpłatne Wi-Fi", "Taras słoneczny"],
+    "locationHighlights": ["Ski-in, ski-out — tuż przy stokach", "W centrum Gudauri, obok wyciągów", "Strefa wellness z basenem krytym i odkrytym"],
+    "imageAlts": [
+      "Nowoczesny budynek Gudauri Lodge w ośnieżonym Kaukazie, Gudauri, Gruzja",
+      "Salon apartamentu w Gudauri Lodge z widokiem na ośnieżone góry",
+      "Nowoczesny pokój dwuosobowy w Gudauri Lodge",
+      "Biblioteka i strefa wypoczynkowa w Gudauri Lodge"
+    ]
+  },
+  "Marco Polo": {
+    "description": "Pierwszy hotel narciarski w Gudauri, przyjmujący gości od 1988 roku i wciąż jeden z symboli kurortu. Marco Polo stoi przy samym stoku na wysokości około 2000 metrów z dostępem ski-in, ski-out i oferuje duże spa oraz strefę wellness — baseny kryty i odkryty, sauny i jacuzzi — a także kręgielnię, korty do padla i restaurację Soliko z kuchnią gruzińską i europejską.",
+    "amenities": ["Baseny kryty i odkryty", "Spa, sauna i jacuzzi", "Restauracja Soliko", "Siłownia", "Bezpłatne Wi-Fi", "Recepcja 24/7"],
+    "locationHighlights": ["Ski-in, ski-out w centrum Gudauri", "Przy samym stoku na wysokości około 2000 m", "Kręgielnia, korty do padla i spa na miejscu"],
+    "imageAlts": [
+      "Marco Polo Hotel Gudauri oświetlony nocą w zimowych górach, Gruzja",
+      "Basen kryty z widokiem na góry w hotelu Marco Polo Hotel Gudauri",
+      "Strefa wypoczynkowa w lobby z sofami i schodami w hotelu Marco Polo Hotel Gudauri",
+      "Wygodny pokój gościnny w hotelu Marco Polo Hotel Gudauri"
+    ]
+  },
+  "Gudauri Inn": {
+    "description": "Wygodny i bezpretensjonalny hotel w sercu Gudauri na wysokości 2200 metrów, o swobodnej górskiej atmosferze i szerokich widokach na okoliczne szczyty. Ma własną strefę wellness z basenem krytym, jacuzzi i sauną, restaurację z daniami gruzińskimi i międzynarodowymi oraz bar z lokalnymi winami.",
+    "amenities": ["Bezpłatne Wi-Fi", "Basen kryty", "Sauna i jacuzzi", "Restauracja i bar", "Bezpłatny parking"],
+    "locationHighlights": ["W centrum Gudauri na wysokości 2200 m", "Strefa wellness z basenem krytym, jacuzzi i sauną", "Panoramiczne widoki na Wielki Kaukaz"],
+    "imageAlts": [
+      "Strefa wypoczynkowa z widokiem na góry i wiszącymi fotelami w Gudauri Inn, Gudauri, Gruzja",
+      "Wygodny pokój dwuosobowy w Gudauri Inn",
+      "Jasny pokój z dwoma łóżkami w Gudauri Inn",
+      "Pokój z dwoma łóżkami, balkonem i widokiem na góry w Gudauri Inn"
+    ]
+  },
+  "Rooms Hotel Kazbegi": {
+    "description": "Perła designu na tle imponującej góry Kazbek. Rooms Hotel Kazbegi to jedno z najbardziej rozpoznawalnych miejsc w Gruzji, z przeszkleniami od podłogi do sufitu z widokiem na góry, strefą wypoczynkową z kominkiem, basenem krytym i spa.",
+    "amenities": ["Bezpłatne Wi-Fi", "Restauracja i bar", "Basen kryty", "Spa i sauna", "Bezpłatny parking"],
+    "locationHighlights": ["Widok na górę Kazbek i kościół Trójcy Świętej w Gergeti", "Punkt wyjścia na szlaki Parku Narodowego Kazbegi", "W centrum wsi Stepancminda"],
+    "imageAlts": [
+      "Charakterystyczny nowoczesny budynek hotelu Rooms Hotel Kazbegi na tle Wielkiego Kaukazu, Stepancminda",
+      "Lobby i recepcja hotelu Rooms Hotel Kazbegi z widokiem na góry",
+      "Przestronny pokój gościnny w hotelu Rooms Hotel Kazbegi z widokiem na górę Kazbek",
+      "Łazienka z nowoczesną armaturą w hotelu Rooms Hotel Kazbegi, Stepancminda"
+    ]
+  },
+  "Northgate Hotel": {
+    "description": "Wygodny hotel średniej klasy w sercu Stepancmindy z serdeczną gościnnością i widokiem na góry. Northgate Hotel zapewnia przytulne miejsce po dniu w Kaukazie, z przyjazną restauracją serwującą sycącą kuchnię gruzińską i dobrze wyposażonymi pokojami.",
+    "amenities": ["Bezpłatne Wi-Fi", "Własna restauracja", "Ogrzewanie centralne", "Bezpłatny parking", "Taras z widokiem na góry"],
+    "locationHighlights": ["Centralna lokalizacja w Stepancmindzie", "Blisko początku szlaku do kościoła w Gergeti", "Widok na Wielki Kaukaz"],
+    "imageAlts": [
+      "Elewacja hotelu Northgate Hotel w Stepancmindzie, region Kazbegi, Gruzja",
+      "Lobby i strefa wypoczynkowa hotelu Northgate Hotel z widokiem na góry w Kazbegi",
+      "Wygodny pokój gościnny z balkonem w hotelu Northgate Hotel w Stepancmindzie",
+      "Łazienka z nowoczesnym wyposażeniem w hotelu Northgate Hotel w Stepancmindzie"
+    ]
+  },
+  "Hotel Horizon": {
+    "description": "Niedrogi hotel w stylu pensjonatu w Stepancmindzie, z prostymi, czystymi pokojami i szczerą gruzińską serdecznością. Hotel Horizon sprawdzi się u podróżnych, którzy chcą zwiedzić region Kazbegi bez dużych wydatków, z domowymi posiłkami i przyjazną atmosferą.",
+    "amenities": ["Bezpłatne Wi-Fi", "Posiłki domowe", "Ogrzewanie centralne", "Bezpłatny parking", "Taras ogrodowy"],
+    "locationHighlights": ["Spokojna lokalizacja w Stepancmindzie", "Łatwy dostęp do szlaków w Kazbegi", "Widok na okoliczne szczyty Kaukazu"],
+    "imageAlts": [
+      "Elewacja hotelu Horizon w Stepancmindzie z górskim krajobrazem, Kazbegi",
+      "Lobby i część wspólna hotelu Horizon w Kazbegi",
+      "Pokój gościnny z widokiem w hotelu Horizon w Stepancmindzie, Gruzja",
+      "Łazienka z prysznicem w hotelu Horizon w Stepancmindzie, Gruzja"
+    ]
+  },
+  "Newport Hotel Kutaisi": {
+    "description": "Stylowy, nowoczesny hotel w centrum Kutaisi, drugiego co do wielkości miasta Gruzji. Newport Hotel oferuje przestronne pokoje o nowoczesnych wnętrzach, doskonałą restaurację i świetną lokalizację do zwiedzania obiektów UNESCO i cudów natury regionu.",
+    "amenities": ["Bezpłatne Wi-Fi", "Restauracja i bar", "Klimatyzacja", "Bezpłatny parking", "Recepcja 24/7"],
+    "locationHighlights": ["Centrum Kutaisi, blisko Białego Mostu", "Baza do Jaskini Prometeusza i kanionu Martwili", "Blisko wpisanej na listę UNESCO katedry Bagrati"],
+    "imageAlts": [
+      "Elegancka elewacja hotelu Newport Hotel Kutaisi w centrum Kutaisi, Gruzja",
+      "Lobby i recepcja hotelu Newport Hotel Kutaisi",
+      "Przestronny pokój gościnny o nowoczesnym designie w hotelu Newport Hotel Kutaisi",
+      "Łazienka z nowoczesną armaturą w hotelu Newport Hotel Kutaisi"
+    ]
+  },
+  "Boutique Hotel Argo": {
+    "description": "Urokliwy butikowy hotel w centrum Kutaisi, nazwany na cześć legendarnych Argonautów, którzy popłynęli do starożytnej Kolchidy. Boutique Hotel Argo oferuje wygodne pokoje, serdeczną obsługę i dobrą lokalizację do odkrywania historii Kutaisi i przyrody Imeretii.",
+    "amenities": ["Bezpłatne Wi-Fi", "Codzienne śniadanie", "Klimatyzacja", "Bezpłatny parking", "Pomoc w organizacji wycieczek"],
+    "locationHighlights": ["Centralna lokalizacja w Kutaisi", "Blisko bazaru w Kutaisi i Fontanny Kolchidzkiej", "Łatwy dostęp do klasztoru Gelati i rezerwatu Sataplia"],
+    "imageAlts": [
+      "Elewacja hotelu Boutique Hotel Argo w centrum Kutaisi, Gruzja",
+      "Recepcja i lobby hotelu Boutique Hotel Argo w Kutaisi",
+      "Dobrze wyposażony pokój gościnny w hotelu Boutique Hotel Argo w Kutaisi",
+      "Łazienka z nowoczesnym wyposażeniem w hotelu Boutique Hotel Argo w Kutaisi"
+    ]
+  },
+  "Rooms Hotel": {
+    "description": "Perła nadmorskiego bulwaru w Batumi — Rooms Hotel Batumi to designerski hotel z basenem na dachu z widokiem na Morze Czarne. Ze znakomitą kuchnią, nienaganną obsługą i wnętrzami łączącymi industrialny szyk z nadmorską elegancją należy do najlepszych adresów na gruzińskim wybrzeżu.",
+    "amenities": ["Bezpłatne Wi-Fi", "Restauracja fine dining", "Basen na dachu", "Spa i wellness", "Konsjerż 24/7"],
+    "locationHighlights": ["Doskonała lokalizacja przy nadmorskim bulwarze w Batumi", "Kilka kroków od plaży nad Morzem Czarnym", "Blisko życia nocnego i Starego Miasta w Batumi"],
+    "imageAlts": [
+      "Charakterystyczna elewacja hotelu Rooms Hotel Batumi przy nadmorskim bulwarze nad Morzem Czarnym, Gruzja",
+      "Strefa wypoczynkowa w lobby hotelu Rooms Hotel Batumi ze stylowym wnętrzem",
+      "Elegancki apartament z widokiem na morze w hotelu Rooms Hotel Batumi",
+      "Łazienka z wysokiej klasy armaturą i wyposażeniem w hotelu Rooms Hotel Batumi"
+    ]
+  },
+  "Hotel Monarch": {
+    "description": "Dopracowany hotel średniej klasy w sercu Batumi z nowoczesnymi pokojami, z których wiele ma balkon i widok na morze. Hotel Monarch łączy komfort i dobry stosunek jakości do ceny z wygodną lokalizacją blisko bulwaru w Batumi.",
+    "amenities": ["Bezpłatne Wi-Fi", "Śniadanie w cenie", "Klimatyzacja", "Recepcja 24/7", "Usługa prania"],
+    "locationHighlights": ["Krótki spacer do bulwaru w Batumi i na plażę", "Blisko placu Piazza i placu Europy", "Blisko restauracji i życia nocnego Batumi"],
+    "imageAlts": [
+      "Nowoczesny budynek hotelu Monarch w Batumi, Gruzja",
+      "Lobby i recepcja hotelu Monarch w Batumi",
+      "Wygodny pokój gościnny z widokiem z balkonu w hotelu Monarch w Batumi",
+      "Łazienka z nowoczesnym wyposażeniem w hotelu Monarch w Batumi"
+    ]
+  },
+  "Boutique Hotel 32": {
+    "description": "Przytulny i niedrogi butikowy hotel przy spokojnej ulicy w Batumi. Boutique Hotel 32 zapewnia osobiste podejście, gustownie urządzone pokoje, życzliwy personel i lokalizację zaledwie kilka minut od nadmorskiej promenady i Starego Miasta.",
+    "amenities": ["Bezpłatne Wi-Fi", "Codzienne śniadanie", "Klimatyzacja", "Recepcja 24/7", "Usługa prania"],
+    "locationHighlights": ["Spokojna ulica blisko Starego Miasta w Batumi", "Spacerem na plażę nad Morzem Czarnym", "Blisko lokalnych restauracji i bazarów"],
+    "imageAlts": [
+      "Elewacja hotelu Boutique Hotel 32 w Batumi, Gruzja",
+      "Wejście i recepcja hotelu Boutique Hotel 32 w Batumi",
+      "Pokój gościnny w ciepłej kolorystyce w hotelu Boutique Hotel 32 w Batumi",
+      "Łazienka z nowoczesną armaturą w hotelu Boutique Hotel 32 w Batumi"
+    ]
+  },
+  "Tsinandali Estate, A Radisson Collection Hotel": {
+    "description": "Położony w historycznej posiadłości Cinandali z XIX wieku, ten obiekt marki Radisson Collection należy do najbardziej wykwintnych adresów w gruzińskim kraju wina. Otoczony historycznymi ogrodami, słynną piwnicą winiarską i podnóżem Kaukazu, łączy dziedzictwo, kulturę wina i gościnność światowej klasy.",
+    "amenities": ["Bezpłatne Wi-Fi", "Restauracja fine dining", "Basen odkryty", "Spa i centrum wellness", "Historyczna piwnica winiarska"],
+    "locationHighlights": ["Na terenie historycznej posiadłości Cinandali", "W sercu regionu winiarskiego Kachetia", "Blisko starego Telawi i twierdzy Batonis Cyche"],
+    "imageAlts": [
+      "Okazała elewacja hotelu Tsinandali Estate, A Radisson Collection Hotel, otoczona historycznymi ogrodami, Telawi",
+      "Lobby i strefa wypoczynkowa hotelu Tsinandali Estate z eleganckim wnętrzem",
+      "Luksusowy pokój gościnny z gruzińskim wystrojem w hotelu Tsinandali Estate",
+      "Marmurowa łazienka z wysokiej klasy wyposażeniem w hotelu Tsinandali Estate"
+    ]
+  },
+  "Park Hotel Tsinandali": {
+    "description": "Nowoczesny i wygodny hotel pośród zieleni w okolicy Cinandali w Kachetii. Park Hotel Tsinandali oferuje spokojne schronienie z dobrze wyposażonymi pokojami, uroczym tarasem ogrodowym i łatwym dostępem do słynnych winiarni i historycznych posiadłości regionu.",
+    "amenities": ["Bezpłatne Wi-Fi", "Własna restauracja", "Ogród i taras", "Bezpłatny parking", "Klimatyzacja"],
+    "locationHighlights": ["Blisko słynnej posiadłości Cinandali", "Otoczony winnicami i winiarniami Kachetii", "Łatwy dostęp do centrum Telawi"],
+    "imageAlts": [
+      "Elewacja hotelu Park Hotel Tsinandali otoczona zielenią w Kachetii, Gruzja",
+      "Lobby i wewnętrzna część wspólna hotelu Park Hotel Tsinandali",
+      "Wygodny pokój gościnny z nowoczesnymi meblami w hotelu Park Hotel Tsinandali",
+      "Łazienka z nowoczesnym wyposażeniem w hotelu Park Hotel Tsinandali"
+    ]
+  },
+  "Akhaltsikhe Inn (Junior Suite Room)": {
+    "description": "Butikowy hotel z pokojami typu Junior Suite zaledwie kilka kroków od wspaniałego zamku Rabati. Akhaltsikhe Inn łączy eleganckie wnętrza z widokiem na historyczną twierdzę i okoliczną dolinę.",
+    "amenities": ["Bezpłatne Wi-Fi", "Obfite śniadanie", "Klimatyzacja", "Taras panoramiczny", "Konsjerż 24/7"],
+    "locationHighlights": ["Kilka kroków od zamku Rabati", "Punkt wypadowy do klasztoru jaskiniowego Wardzia", "Widok na dolinę rzeki Poschowi"],
+    "imageAlts": [
+      "Elewacja hotelu Akhaltsikhe Inn blisko zamku Rabati, Achalciche, Gruzja",
+      "Lobby i recepcja hotelu Akhaltsikhe Inn w Achalciche",
+      "Przestronny pokój Junior Suite z luksusowym wyposażeniem w hotelu Akhaltsikhe Inn",
+      "Łazienka z nowoczesnym wyposażeniem w hotelu Akhaltsikhe Inn"
+    ]
+  },
+  "Hotel Gino Wellness Rabati": {
+    "description": "Nowoczesny hotel wellness tuż obok historycznego zamku Rabati w Achalciche. Hotel Gino ma basen kryty, saunę i pełne centrum wellness, idealne do odpoczynku po zwiedzaniu klasztoru jaskiniowego Wardzia i krajobrazów południowej Gruzji.",
+    "amenities": ["Bezpłatne Wi-Fi", "Basen kryty", "Sauna i wellness", "Własna restauracja", "Bezpłatny parking"],
+    "locationHighlights": ["Bezpośrednio przy zamku Rabati", "Baza do wypraw do Wardzii i twierdzy Chertwisi", "W centrum Achalciche"],
+    "imageAlts": [
+      "Elewacja hotelu Gino Wellness Rabati blisko zamku Rabati, Achalciche, Gruzja",
+      "Lobby i recepcja hotelu Gino Wellness Rabati w Achalciche",
+      "Wygodny pokój gościnny w hotelu Gino Wellness Rabati w Achalciche",
+      "Łazienka z nowoczesnym wyposażeniem w hotelu Gino Wellness Rabati"
+    ]
+  },
+  "Hotel Beni": {
+    "description": "Przyjazny i niedrogi hotel w Achalciche z czystymi, wygodnymi pokojami i szczerą południowogruzińską gościnnością. Hotel Beni to korzystna cenowo baza do zwiedzania zamku Rabati, jaskiniowego miasta Wardzia i regionu Samcche-Dżawachetia.",
+    "amenities": ["Bezpłatne Wi-Fi", "Codzienne śniadanie", "Klimatyzacja", "Bezpłatny parking", "Pomoc w organizacji wycieczek"],
+    "locationHighlights": ["Spacerem do zamku Rabati", "Łatwy dostęp do klasztoru jaskiniowego Wardzia", "W sercu Achalciche"],
+    "imageAlts": [
+      "Elewacja hotelu Beni w Achalciche, południowa Gruzja",
+      "Lobby i wewnętrzna część wspólna hotelu Beni w Achalciche",
+      "Czysty i wygodny pokój gościnny w hotelu Beni w Achalciche",
+      "Łazienka z nowoczesnym wyposażeniem w hotelu Beni w Achalciche"
+    ]
+  },
+  "Crowne Plaza Borjomi": {
+    "description": "Hotel typu resort w słynnym uzdrowisku Bordżomi, otoczony dziewiczymi zalesionymi górami. Crowne Plaza Borjomi oferuje zabiegi spa z wodą mineralną, basen kryty, kilka restauracji i przestronne pokoje — wellnessowy wypoczynek w sercu Kaukazu.",
+    "amenities": ["Bezpłatne Wi-Fi", "Kilka restauracji", "Basen kryty", "Spa z wodą mineralną", "Siłownia"],
+    "locationHighlights": ["W znanym uzdrowisku Bordżomi", "Brama do Parku Narodowego Bordżomi-Charagauli", "Blisko źródeł wody mineralnej w Bordżomi"],
+    "imageAlts": [
+      "Duży hotel resort Crowne Plaza Borjomi otoczony zalesionymi górami, Gruzja",
+      "Lobby i recepcja hotelu Crowne Plaza Borjomi z eleganckim wnętrzem",
+      "Pokój gościnny w hotelu Crowne Plaza Borjomi z widokiem na Park Narodowy Bordżomi-Charagauli",
+      "Łazienka z wysokiej klasy wyposażeniem w hotelu Crowne Plaza Borjomi"
+    ]
+  },
+  "Bridge Hotel": {
+    "description": "Dobrze wyposażony hotel w centrum Bordżomi, położony nad rzeką z ładnym widokiem na góry. Bridge Hotel oferuje wygodne pokoje, przyjazną restaurację i doskonałą lokalizację na spacer do słynnego parku wód mineralnych i zwiedzanie okolicznego parku narodowego.",
+    "amenities": ["Bezpłatne Wi-Fi", "Restauracja nad rzeką", "Klimatyzacja", "Bezpłatny parking", "Recepcja 24/7"],
+    "locationHighlights": ["Centrum Bordżomi, nad rzeką", "Spacerem do parku centralnego w Bordżomi", "Blisko źródeł wody mineralnej"],
+    "imageAlts": [
+      "Elewacja hotelu Bridge Hotel nad rzeką w Bordżomi, Gruzja",
+      "Lobby i recepcja hotelu Bridge Hotel w Bordżomi",
+      "Wygodny pokój gościnny w hotelu Bridge Hotel w sercu Bordżomi",
+      "Łazienka z prysznicem i nowoczesną armaturą w hotelu Bridge Hotel w Bordżomi"
+    ]
+  },
+  "Boutique Hotel Borjomi Verde": {
+    "description": "Urokliwy, niedrogi butikowy hotel w Bordżomi otoczony bujną zielenią. Borjomi Verde oferuje spokojne otoczenie ogrodu, czyste i wygodne pokoje oraz ciepłą atmosferę, która oddaje swobodnego ducha tego znanego gruzińskiego uzdrowiska.",
+    "amenities": ["Bezpłatne Wi-Fi", "Codzienne śniadanie", "Taras ogrodowy", "Bezpłatny parking", "Ogrzewanie centralne"],
+    "locationHighlights": ["Spokojne, zielone otoczenie w Bordżomi", "Blisko parku centralnego i źródeł mineralnych", "Dostęp do szlaków Parku Narodowego Bordżomi-Charagauli"],
+    "imageAlts": [
+      "Elewacja hotelu Boutique Hotel Borjomi Verde otoczona zielenią, Bordżomi, Gruzja",
+      "Taras i przestrzeń zewnętrzna hotelu Boutique Hotel Borjomi Verde",
+      "Czysty i przytulny pokój gościnny w hotelu Boutique Hotel Borjomi Verde",
+      "Łazienka z nowoczesnym wyposażeniem w hotelu Boutique Hotel Borjomi Verde"
+    ]
+  },
+  "Hotel Posta": {
+    "description": "Czołowy hotel w Mestii, stolicy legendarnego regionu Swanetia. Hotel Posta oferuje wyrafinowaną górską gościnność z panoramicznym widokiem na średniowieczne wieże swańskie i ośnieżone szczyty Kaukazu, znakomitą restaurację i strefę wypoczynkową z kominkiem, idealną po dniu w górach.",
+    "amenities": ["Bezpłatne Wi-Fi", "Restauracja z kuchnią swańską", "Ogrzewanie centralne", "Bezpłatny parking", "Taras z widokiem na góry"],
+    "locationHighlights": ["Centrum Mestii z widokiem na wieże swańskie", "Punkt wypadowy do Uszguli i lodowca Chalaadi", "Blisko muzeum w Mestii i wyciągów narciarskich"],
+    "imageAlts": [
+      "Elewacja hotelu Posta w sercu Mestii, Swanetia, Gruzja",
+      "Recepcja i lobby hotelu Posta w Mestii",
+      "Pokój gościnny z widokiem na góry w hotelu Posta w Mestii",
+      "Łazienka z nowoczesnym wyposażeniem w hotelu Posta w Mestii"
+    ]
+  },
+  "Mestia Inn": {
+    "description": "Przyjazny pensjonat średniej klasy w Mestii z wygodnymi pokojami o tradycyjnych drewnianych wnętrzach i widokiem na góry. Mestia Inn serwuje sycącą kuchnię swańską i zapewnia ciepłą, rodzinną atmosferę, która ucieleśnia legendarną gościnność wyżyn Swanetii.",
+    "amenities": ["Bezpłatne Wi-Fi", "Tradycyjne dania swańskie", "Ogrzewanie centralne", "Bezpłatny parking", "Balkon z widokiem"],
+    "locationHighlights": ["W sercu wsi Mestia", "Blisko średniowiecznych wież swańskich", "Baza do Uszguli i wędrówek lodowcowych"],
+    "imageAlts": [
+      "Elewacja hotelu Mestia Inn w Mestii, Swanetia, Gruzja",
+      "Lobby i część wspólna hotelu Mestia Inn z widokiem na góry",
+      "Wygodny pokój gościnny z drewnianymi wnętrzami w hotelu Mestia Inn w Mestii",
+      "Łazienka z nowoczesnym wyposażeniem w hotelu Mestia Inn w Mestii"
+    ]
+  },
+  "Lileo Inn": {
+    "description": "Autentyczny swański pensjonat rodzinny w Mestii. Lileo Inn serwuje pyszne domowe dania swańskie, oferuje proste, ale czyste pokoje i pozwala gościom poznać ciepłą rodzinną gościnność, z której słynie Swanetia.",
+    "amenities": ["Bezpłatne Wi-Fi", "Domowe dania swańskie", "Ogrzewanie centralne", "Bezpłatny parking", "Ogród"],
+    "locationHighlights": ["Autentyczne swańskie otoczenie wiejskie w Mestii", "Spacerem do centrum Mestii", "Blisko początków szlaków do jezior Koruldi i Uszguli"],
+    "imageAlts": [
+      "Elewacja hotelu Lileo Inn w Mestii, Swanetia, Gruzja",
+      "Lobby i część wspólna hotelu Lileo Inn w Mestii",
+      "Pokój gościnny z tradycyjnym swańskim wystrojem w hotelu Lileo Inn w Mestii",
+      "Łazienka z nowoczesnym wyposażeniem w hotelu Lileo Inn w Mestii"
+    ]
+  },
+  "Communal Hotel Telavi": {
+    "description": "Butikowy hotel w odrestaurowanej zabytkowej willi w centrum Telawi, z maurytańskimi łukami, przeszkloną altaną na dachu i basenem na dziedzińcu. Jako część rodziny Communal Hotels łączy zachowaną architekturę epoki z tętniącym życiem barem przy basenie i swobodną atmosferą w sercu regionu winiarskiego Kachetia.",
+    "amenities": ["Basen na dziedzińcu", "Restauracja i bar", "Klimatyzacja", "Bezpłatne Wi-Fi", "Bezpłatny parking", "Taras na dachu"],
+    "locationHighlights": ["Centrum Telawi, blisko kawiarni i sklepów", "7 minut spacerem do twierdzy Batoniscyche", "10 minut spacerem do parku Nadikwari"]
+  },
+  "Boutique Hotel Kviria": {
+    "description": "Elegancki, ekologiczny butikowy hotel otwarty w 2021 roku, łączący gruzińską tradycję z nowoczesnym designem w 14 indywidualnie urządzonych pokojach. Kviria ma własną winiarnię i bar przy basenie, zaaranżowany ogród i sezonowy basen odkryty, kilka minut jazdy od centrum Telawi.",
+    "amenities": ["Własna winiarnia", "Basen odkryty", "Ogród", "Restauracja", "Śniadanie w cenie", "Bezpłatne Wi-Fi", "Bezpłatny parking"],
+    "locationHighlights": ["Ulica Gogebaszwilego 51, Telawi", "Około 10 minut od centrum Telawi", "Otoczony krajobrazem Kachetii"]
+  },
+  "Seventeen Rooms": {
+    "description": "Kameralny hotel w centrum Telawi z siedemnastoma wygodnymi pokojami, sezonowym basenem odkrytym i zielonym ogrodem. Własna restauracja serwuje dania gruzińskie i europejskie w towarzystwie lokalnych win kachetyjskich, a swobodny wspólny salon czyni z niego wygodną bazę do zwiedzania starego miasta.",
+    "amenities": ["Sezonowy basen odkryty", "Ogród", "Restauracja i bar", "Klimatyzacja", "Bezpłatne Wi-Fi", "Bezpłatny parking prywatny"],
+    "locationHighlights": ["Ulica Leonidzego, centrum Telawi", "10 minut spacerem do pałacu Herakliusza II (Batoniscyche)", "Blisko starego miasta w Telawi"]
+  },
+  "Villa Lapa": {
+    "description": "Przyjazna, rodzinna willa w spokojnym, zielonym otoczeniu około pięciu minut od centrum Telawi. Pokoje wychodzą na balkony z rozległym widokiem na Dolinę Alazani i szczyty Kaukazu, a goście mogą odpocząć przy basenie odkrytym, w ogrodzie lub na tarasie po dniu spędzonym wśród winnic.",
+    "amenities": ["Basen odkryty", "Ogród", "Restauracja i bar", "Taras i werandy", "Bezpłatne Wi-Fi", "Bezpłatny parking prywatny"],
+    "locationHighlights": ["Około 5 minut od centrum Telawi", "Widok z balkonu na Dolinę Alazani i Kaukaz", "Spokojne, ogrodowe otoczenie na skraju miasta"]
+  },
+  "Chateau Orberi": {
+    "description": "Mały pensjonat wśród winnic we wsi Ikalto koło Telawi, gdzie rodzina gospodarzy wytwarza własne wino ekologiczne w tradycyjnym marani. Otoczony winoroślą, z ogrodem i basenem odkrytym, Chateau Orberi oferuje ciepłą, domową kachetyjską gościnność kilka minut jazdy od zabytkowego klasztoru Ikalto.",
+    "amenities": ["Rodzinna piwnica winiarska (marani)", "Basen odkryty", "Ogród i winnice"],
+    "locationHighlights": ["Wieś Ikalto, kilka minut jazdy od Telawi", "Pośród własnych winnic", "Blisko klasztoru i akademii Ikalto"]
+  }
+}

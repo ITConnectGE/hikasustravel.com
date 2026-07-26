@@ -4998,9 +4998,15 @@ select option:checked {
   z-index: 1;
 }
 
+/* Real <button>s so the gallery can be paged from the keyboard. Sized and
+   spaced exactly as the previous <span> dots, so nothing shifts. */
 .hotel-modal__dot {
+  appearance: none;
+  -webkit-appearance: none;
   width: 7px;
   height: 7px;
+  padding: 0;
+  border: 0;
   border-radius: 50%;
   background: rgba(255, 255, 255, 0.45);
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
@@ -5009,6 +5015,10 @@ select option:checked {
 }
 .hotel-modal__dot--active {
   background: #fff;
+}
+.hotel-modal__dot:focus-visible {
+  outline: 2px solid #fff;
+  outline-offset: 2px;
 }
 
 .hotel-modal__close {

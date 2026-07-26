@@ -261,5 +261,11 @@
   "search.typePlace": "Místo k návštěvě",
   "search.typeGuide": "Co dělat",
   "search.typeBlog": "Blog",
-  "search.typeInfo": "Cestovní info"
+  "search.typeInfo": "Cestovní info",
+  "hotel.prevPhoto": "Předchozí fotka",
+  "hotel.nextPhoto": "Další fotka",
+  "hotel.goToPhoto": "Přejít na fotku {n}",
+  "pricing.nightsOne": "noc",
+  "pricing.nightsFew": "noci",
+  "pricing.nightsMany": "nocí"
 }

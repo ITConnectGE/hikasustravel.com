@@ -42,9 +42,21 @@ const tourCache = {}
 
 async function loadTours(lang) {
   if (tourCache[lang]) return tourCache[lang]
-  const mod = await import(`./locales/${lang}/tours.json`)
-  tourCache[lang] = mod.default
-  return mod.default
+
+  // `hotels.json` carries the translated hotel copy shown in the accommodation
+  // modal (description, amenity labels, location highlights, image alt text).
+  // English reads straight from hotelData.js, so it has no file of its own; a
+  // locale that has not been translated yet simply falls back to English.
+  const [tours, hotels] = await Promise.all([
+    import(`./locales/${lang}/tours.json`),
+    lang === defaultLang
+      ? null
+      : import(`./locales/${lang}/hotels.json`).catch(() => null),
+  ])
+
+  const result = { tours: tours.default, hotels: hotels ? hotels.default : null }
+  tourCache[lang] = result
+  return result
 }
 
 export default function I18nProvider({ children }) {
@@ -57,8 +69,9 @@ export default function I18nProvider({ children }) {
   const [data, setData] = useState(null)
   // Store the loaded tour translations together with the language they belong to,
   // so a language change drops stale translations during render (no reset effect).
-  const [tourState, setTourState] = useState({ lang: null, data: null })
-  const tourTranslations = tourState.lang === lang ? tourState.data : null
+  const [tourState, setTourState] = useState({ lang: null, tours: null, hotels: null })
+  const tourTranslations = tourState.lang === lang ? tourState.tours : null
+  const hotelTranslations = tourState.lang === lang ? tourState.hotels : null
 
   useEffect(() => {
     loadLocale(lang).then(setData)
@@ -71,9 +84,9 @@ export default function I18nProvider({ children }) {
   }, [location, navigate])
 
   const loadTourTranslations = useCallback(() => {
-    return loadTours(lang).then((t) => {
-      setTourState({ lang, data: t })
-      return t
+    return loadTours(lang).then(({ tours, hotels }) => {
+      setTourState({ lang, tours, hotels })
+      return tours
     })
   }, [lang])
 
@@ -90,8 +103,9 @@ export default function I18nProvider({ children }) {
     faq,
     enPages,
     tourTranslations,
+    hotelTranslations,
     loadTourTranslations,
-  }), [lang, setLang, translations, pages, faq, enPages, tourTranslations, loadTourTranslations])
+  }), [lang, setLang, translations, pages, faq, enPages, tourTranslations, hotelTranslations, loadTourTranslations])
 
   if (!data) return null
 

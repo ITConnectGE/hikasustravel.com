@@ -261,5 +261,11 @@
   "search.typePlace": "Site à visiter",
   "search.typeGuide": "À faire",
   "search.typeBlog": "Blog",
-  "search.typeInfo": "Infos pratiques"
+  "search.typeInfo": "Infos pratiques",
+  "hotel.prevPhoto": "Photo précédente",
+  "hotel.nextPhoto": "Photo suivante",
+  "hotel.goToPhoto": "Aller à la photo {n}",
+  "pricing.nightsOne": "nuit",
+  "pricing.nightsFew": "nuits",
+  "pricing.nightsMany": "nuits"
 }
