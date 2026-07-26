@@ -36,13 +36,48 @@ Hotels shown on a live tour page that have **no** usable photos. No safe, licens
 imagery for these exists anywhere in the project (checked: `public/images/hotels/`,
 `Images for tours/` incl. `telavi-images-package/`, `Packages/`), so nothing was added.
 
-| Tour | Hotel name | Accommodation package | Required images missing | Suggested official contact/source | Permission needed |
+All five are on `3-day-kakheti-wine-and-food-tour-from-tbilisi`, and all five need the same
+four shots: **exterior, lobby/common area, room, bathroom.**
+
+| Hotel | Package | Official site | Email | Phone | Address |
 |---|---|---|---|---|---|
-| 3-day-kakheti-wine-and-food-tour-from-tbilisi | Boutique Hotel Kviria | Mid-Range | exterior, lobby/common area, room, bathroom (4 of 4) | Contact the property directly and request its own photos plus written permission for hikasustravel.com | **Yes** — written permission before any image is added |
-| 3-day-kakheti-wine-and-food-tour-from-tbilisi | Chateau Orberi | Classic | exterior, lobby/common area, room, bathroom (4 of 4) | Contact the property directly and request its own photos plus written permission for hikasustravel.com | **Yes** — written permission before any image is added |
-| 3-day-kakheti-wine-and-food-tour-from-tbilisi | Communal Hotel Telavi | Premium | exterior, lobby/common area, room, bathroom (4 of 4) | Contact the property directly and request its own photos plus written permission for hikasustravel.com | **Yes** — written permission before any image is added |
-| 3-day-kakheti-wine-and-food-tour-from-tbilisi | Seventeen Rooms | Mid-Range | exterior, lobby/common area, room, bathroom (4 of 4) | Contact the property directly and request its own photos plus written permission for hikasustravel.com | **Yes** — written permission before any image is added |
-| 3-day-kakheti-wine-and-food-tour-from-tbilisi | Villa Lapa | Classic | exterior, lobby/common area, room, bathroom (4 of 4) | Contact the property directly and request its own photos plus written permission for hikasustravel.com | **Yes** — written permission before any image is added |
+| Communal Hotel Telavi | Premium | communalhotels.com/home/telavi-2/ | via site form | +995 599 66 99 77 | 11 Kakutsa Cholokashvili St, Telavi 2200 |
+| Boutique Hotel Kviria | Mid-Range | kviria.ge | info@kviria.ge | +995 599 44 22 66 | 51 Gogebashvili St, Telavi |
+| Seventeen Rooms | Mid-Range | none found — OTA listings only | — | +995 514 17 17 11 | 3 Giorgi Leonidze St, Telavi 2200 |
+| Villa Lapa | Classic | villalapa.com | ask@villalapa.com | +995 551 08 89 85 / +995 511 22 11 03 | Tbilisi St (Mere), Vardisubani, Telavi |
+| Chateau Orberi | Classic | none found — OTA listings only | — | +995 599 87 69 88 | Building 6, 2 Ikalto Lane, Ikalto 2200 |
+
+**Licence check performed 2026-07-26.** No Creative Commons or otherwise openly licensed
+photographs of any of these five properties exist (Wikimedia Commons and general search).
+Every available image sits on the hotel's own site, an OTA (Booking.com, TripAdvisor,
+Expedia, Agoda, Hotels.com) or Facebook. Communal Hotels' site carries `© Communal 2023`
+with no media kit and no reuse grant; the others state no reuse terms either. **Silence is
+not permission**, so none of these are usable and nothing was taken from them.
+
+The properties themselves are the fix. A hotel that receives bookings from a tour operator
+almost always says yes, and usually sends better originals than anything on a listing page.
+
+### Ready-to-send permission request
+
+> **Subject:** Photo permission request — Hikasus Travel tour page
+>
+> Dear [hotel name] team,
+>
+> We are Hikasus Travel, a tour operator based in Georgia. We feature your property as the
+> accommodation on our 3-Day Kakheti Wine and Food Tour, and we would like to show your
+> hotel properly on the tour page at www.hikasustravel.com.
+>
+> Could you send us 4–6 photographs we may publish — ideally the exterior, a common area or
+> lobby, a guest room and a bathroom — together with written confirmation that Hikasus
+> Travel may use them on our website and in related promotional material?
+>
+> Please tell us if you require a specific photo credit, and we will display it.
+>
+> Thank you,
+> Hikasus Travel
+
+Log each reply date in the Source column of the manifest below, then follow the
+"Adding a new hotel image" checklist at the end of this document.
 
 Also flagged, not an image issue: the **8-Day Georgia Culture and Adventure Tour**
 lists `Local Cottage or Guesthouse` for Lagodekhi across all three packages. No property
