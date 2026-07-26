@@ -772,8 +772,8 @@ export const cities = [
         base: 'chiatura-town-square-imereti-georgia', width: 1448, height: 1086,
         imageId: 'inline-town-square',
         name: 'Town square in Chiatura at sunset, Imereti, Georgia',
-        caption: 'A town square in Chiatura at sunset below the wooded cliffs of the Qvirila gorge',
-        description: 'A town square in Chiatura at sunset, with a grand early-20th-century building below the wooded cliffs of the Qvirila gorge, Imereti, Georgia.',
+        caption: 'A town square in Chiatura at sunset below the wooded cliffs of the Kvirila gorge',
+        description: 'A town square in Chiatura at sunset, with a grand early-20th-century building below the wooded cliffs of the Kvirila gorge, Imereti, Georgia.',
         // Geo is the approximate town-centre point given by the image package.
         // Not refined — no more precise coordinate was available or invented.
         locationName: 'Chiatura', locality: 'Chiatura', region: 'Imereti', geo: { lat: 42.2903, lng: 43.2925 },
