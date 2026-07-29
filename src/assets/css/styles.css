@@ -1600,6 +1600,44 @@ section {
   }
 }
 /* No rung above 1448 exists (Vardzia). Do not add a 1600 or 2400 breakpoint. */
+/* Ureki Beach hero — per-page CSS background (same opt-in mechanism as
+   .hero--vardzia; first Guria hero). Owner's own photo of the black
+   magnetite-sand beach with sun umbrellas and loungers along the Black Sea.
+   Native ceiling is 1448, BELOW the usual 1600 rung, so the ladder is exactly
+   768/1200/1448 with the top breakpoint at min-width:1200 — there is NO 1600 or
+   2400 rung, no upscale. `background-position: center center`: the sea/sky band
+   fills the top ~55% of the frame (the H1 zone) at every crop, so no positioning
+   bias is needed. The shared .coverme::after overlay (rgba(0,0,0,0.35)) already
+   provides the light scrim the package asks for over the bright sky, so NO extra
+   per-hero ::before scrim is added (a second layer would double-darken the sand).
+   plain url() line = image-set() fallback for browsers without image-set(). */
+.hero--ureki {
+  background-image: url("/images/files/ureki-black-magnetic-sand-beach-guria-georgia-1200.webp");
+  background-image: image-set(
+    url("/images/files/ureki-black-magnetic-sand-beach-guria-georgia-768.avif") type("image/avif"),
+    url("/images/files/ureki-black-magnetic-sand-beach-guria-georgia-768.webp") type("image/webp")
+  );
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+@media (min-width: 768px) {
+  .hero--ureki {
+    background-image: image-set(
+      url("/images/files/ureki-black-magnetic-sand-beach-guria-georgia-1200.avif") type("image/avif"),
+      url("/images/files/ureki-black-magnetic-sand-beach-guria-georgia-1200.webp") type("image/webp")
+    );
+  }
+}
+@media (min-width: 1200px) {
+  .hero--ureki {
+    background-image: image-set(
+      url("/images/files/ureki-black-magnetic-sand-beach-guria-georgia-1448.avif") type("image/avif"),
+      url("/images/files/ureki-black-magnetic-sand-beach-guria-georgia-1448.webp") type("image/webp")
+    );
+  }
+}
+/* No rung above 1448 exists (Ureki). Do not add a 1600 or 2400 breakpoint. */
 .centerme {
   text-align: center !important;
 }

@@ -2564,7 +2564,151 @@ export const sites = [
     slug: 'ureki-beach', name: 'Ureki Beach',
     parentType: 'region', parent: 'guria', published: true,
     seoKey: 'urekiBeach', contentKey: 'urekiBeach',
-    image: '/images/files/georgia-home.jpg',
+    // Hero: the owner's own photo of Ureki's black magnetite-sand beach — sun
+    // umbrellas and loungers on the dark sand with the Black Sea beyond —
+    // replacing the generic georgia-home.jpg placeholder. FIRST Guria hero.
+    // Landscape 4:3, native 1448 (BELOW the usual 1600 rung) → hero ladder
+    // 768/1200/1448 only; NO 1600/2400 variant is generated or referenced, and
+    // the ImageObject contentUrl points at the 1448 rung. The visible background
+    // is the `.hero--ureki` CSS class (heroClass) so the image-set ladder +
+    // `background-position: center center` apply; HeroSection then omits its
+    // inline background. Region is Guria (Ozurgeti Municipality) on the Black
+    // Sea coast, NOT Adjara — this is the coast north of Batumi.
+    image: '/images/files/ureki-black-magnetic-sand-beach-guria-georgia-1448.webp',
+    imageAvif: '/images/files/ureki-black-magnetic-sand-beach-guria-georgia-1448.avif',
+    heroClass: 'hero--ureki',
+    // Dedicated 1.91:1 social-share image (og:image / twitter:image) — hero only;
+    // the three inline images get NO OG variant.
+    ogImage: { src: '/images/files/ureki-black-magnetic-sand-beach-guria-georgia-og.jpg', width: 1200, height: 630 },
+    // LCP hero preload: the 1200 AVIF rung (the desktop/tablet rung) with
+    // fetchpriority=high. Page-scoped — only entries with heroPreload emit a
+    // <link rel=preload as=image> via SitePage/useSEO + prerender.
+    heroPreload: '/images/files/ureki-black-magnetic-sand-beach-guria-georgia-1200.avif',
+    // Hero image SEO/AEO metadata (owner's own photo → brand credit, set by
+    // SitePage). The hero is a CSS background (no <img alt>), so the localized alt
+    // lives here and is emitted as og:image:alt / twitter:image:alt per locale,
+    // while the `caption` map feeds the hero ImageObject caption. Verbatim from
+    // ureki-beach-images-package.md. width/height = the 1448 rung. Coordinates
+    // per the package (approximate — Ureki village); region-parented site, so
+    // locality is the village and region is Guria.
+    // NOTE (health claims): the package's captions deliberately say the sands are
+    // "reputed"/"believed" healing, never asserting medical fact — kept verbatim.
+    imageMeta: {
+      width: 1448, height: 1086,
+      name: 'The black magnetic-sand beach at Ureki with sun umbrellas along the Black Sea and pine woods behind, Guria, Georgia',
+      description: "The wide black magnetite-sand beach at Ureki on the Black Sea coast of Guria, western Georgia, with rows of colourful sun umbrellas and loungers, holidaymakers by the calm shallow sea, and pine woods lining the shore under a bright summer sky. Ureki is Georgia's only true sand beach and a family resort known for its magnetic black sand, in Georgia (the country).",
+      locationName: 'Ureki, Ozurgeti Municipality, Guria, Georgia',
+      locality: 'Ureki', region: 'Guria', country: 'GE',
+      geo: { lat: 41.9903, lng: 41.7681 },
+      alt: {
+        en: 'The black magnetic-sand beach at Ureki with sun umbrellas along the Black Sea and pine woods behind, Guria, Georgia',
+        de: 'Der schwarze Magnetsandstrand von Ureki mit Sonnenschirmen am Schwarzen Meer und Pinienwäldern dahinter, Gurien, Georgien',
+        fr: "La plage de sable noir magnétique d'Ouréki avec ses parasols le long de la mer Noire et des pinèdes derrière, Gourie, Géorgie",
+        es: 'La playa de arena negra magnética de Ureki con sombrillas junto al mar Negro y pinares detrás, Guria, Georgia',
+        nl: 'Het zwarte magnetische zandstrand van Ureki met parasols langs de Zwarte Zee en dennenbossen erachter, Guria, Georgië',
+        cs: 'Černá magnetická písečná pláž v Ureki se slunečníky u Černého moře a borovými lesy v pozadí, Gurie, Gruzie',
+        pl: 'Czarna magnetyczna piaszczysta plaża w Ureki z parasolami nad Morzem Czarnym i lasami sosnowymi w tle, Guria, Gruzja',
+      },
+      caption: {
+        en: "Ureki is Georgia's only true sand beach — and its sand is black, rich in magnetite. Backed by pine woods on the warm, shallow Guria coast, it draws families for its calm sea and its reputed healing sands, long used for warm-sand therapy.",
+        de: 'Ureki ist Georgiens einziger echter Sandstrand – und sein Sand ist schwarz, reich an Magnetit. Von Pinienwäldern gesäumt, an der warmen, flachen Küste Guriens, zieht er Familien an: wegen des ruhigen Meeres und der als heilsam geltenden Sande, die seit Langem für warme Sandtherapie genutzt werden.',
+        fr: "Ouréki est la seule vraie plage de sable de Géorgie — et son sable est noir, riche en magnétite. Adossée à des pinèdes sur la côte chaude et peu profonde de Gourie, elle attire les familles pour sa mer calme et ses sables réputés curatifs, utilisés de longue date en thérapie par le sable chaud.",
+        es: 'Ureki es la única playa de arena verdadera de Georgia, y su arena es negra, rica en magnetita. Respaldada por pinares en la cálida y poco profunda costa de Guria, atrae a las familias por su mar tranquilo y sus arenas de reputados efectos curativos, usadas desde antiguo para la terapia de arena caliente.',
+        nl: 'Ureki is het enige echte zandstrand van Georgië — en zijn zand is zwart, rijk aan magnetiet. Omzoomd door dennenbossen aan de warme, ondiepe kust van Guria, trekt het gezinnen vanwege de rustige zee en het zand dat als helend geldt en al lang voor warme-zandtherapie wordt gebruikt.',
+        cs: 'Ureki je jediná opravdová písečná pláž Gruzie – a její písek je černý, bohatý na magnetit. Lemována borovými lesy na teplém a mělkém pobřeží Gurie láká rodiny klidným mořem a pískem, jemuž se připisují léčivé účinky a který se odedávna používá k terapii teplým pískem.',
+        pl: 'Ureki to jedyna prawdziwa piaszczysta plaża Gruzji — a jej piasek jest czarny, bogaty w magnetyt. Otoczona lasami sosnowymi na ciepłym, płytkim wybrzeżu Gurii, przyciąga rodziny spokojnym morzem i piaskiem o rzekomych właściwościach leczniczych, od dawna używanym do terapii ciepłym piaskiem.',
+      },
+    },
+    // Three contextual inline body images (real <figure class="body-img"> blocks
+    // in the per-locale body HTML). Rendered via SitePage's inlineImageObjects
+    // @graph map: stable @id (#inline-loungers / #inline-summer /
+    // #inline-shoreline, per the package), contentUrl at the 1448 rung (files ship
+    // WITHOUT the `w` suffix), localized name+caption, brand credit, and NEVER
+    // representativeOfPage — that stays the hero's. Same contentLocation + geo as
+    // the hero, matching the closest inline pattern (Vardzia/Gremi). Ladder
+    // 768/1200/1448, no 1600/2400, no upscale, no OG. Slots follow the package:
+    // loungers after "The magnetic sand" (the sand-therapy/relaxation text),
+    // summer after "The beach and the sea" (the beach/swimming text), shoreline
+    // after "The resort town" (the setting/pine-forest text).
+    // NOTE (people/privacy): all alt/caption text is scene-focused per the
+    // package — umbrellas, loungers, sand and sea — and never describes
+    // individuals, bodies, swimwear or children.
+    inlineImageObjects: [
+      {
+        base: 'ureki-beach-umbrellas-loungers-georgia', width: 1448, height: 1086, anchor: 'inline-loungers',
+        locationName: 'Ureki, Ozurgeti Municipality, Guria, Georgia',
+        locality: 'Ureki', region: 'Guria', geo: { lat: 41.9903, lng: 41.7681 },
+        // Alt/caption ADJUSTED from the package: visual QC showed this frame is a
+        // busy midday beach, not the "quiet"/"beach empties" scene the package
+        // text described. The false clause was dropped; the true half (warm sands
+        // since Soviet sanatorium days) is kept verbatim. Everything else in the
+        // package is used as issued.
+        name: {
+          en: 'Sun umbrellas and loungers on the black-sand beach at Ureki by a calm Black Sea, Guria, Georgia',
+          de: 'Sonnenschirme und Liegen am schwarzen Sandstrand von Ureki an einem stillen Schwarzen Meer, Gurien, Georgien',
+          fr: "Parasols et transats sur la plage de sable noir d'Ouréki au bord d'une mer Noire calme, Gourie, Géorgie",
+          es: 'Sombrillas y tumbonas en la playa de arena negra de Ureki junto a un mar Negro en calma, Guria, Georgia',
+          nl: 'Parasols en ligbedden op het zwarte zandstrand van Ureki bij een kalme Zwarte Zee, Guria, Georgië',
+          cs: 'Slunečníky a lehátka na černé písečné pláži v Ureki u tichého Černého moře, Gurie, Gruzie',
+          pl: 'Parasole i leżaki na czarnej piaszczystej plaży w Ureki nad spokojnym Morzem Czarnym, Guria, Gruzja',
+        },
+        caption: {
+          en: 'Umbrellas and loungers line the black sand within a few steps of the water — Ureki has drawn people to its warm sands since Soviet sanatorium days.',
+          de: 'Sonnenschirme und Liegen säumen den schwarzen Sand nur wenige Schritte vom Wasser entfernt – Ureki zieht seit den Zeiten der Sowjet-Sanatorien Menschen an seine warmen Sande.',
+          fr: "Parasols et transats bordent le sable noir à quelques pas de l'eau — Ouréki attire les visiteurs vers ses sables chauds depuis l'époque des sanatoriums soviétiques.",
+          es: 'Sombrillas y tumbonas bordean la arena negra a pocos pasos del agua: Ureki atrae a la gente a sus arenas cálidas desde los tiempos de los sanatorios soviéticos.',
+          nl: 'Parasols en ligbedden zomen het zwarte zand op enkele passen van het water — Ureki trekt sinds de Sovjet-sanatoriumtijd mensen naar zijn warme zand.',
+          cs: 'Slunečníky a lehátka lemují černý písek pár kroků od vody – Ureki láká lidi ke svým teplým pískům už od dob sovětských sanatorií.',
+          pl: 'Parasole i leżaki ciągną się wzdłuż czarnego piasku kilka kroków od wody — Ureki przyciąga ludzi do swojego ciepłego piasku od czasów radzieckich sanatoriów.',
+        },
+      },
+      {
+        base: 'ureki-beach-summer-black-sea-georgia', width: 1448, height: 1086, anchor: 'inline-summer',
+        locationName: 'Ureki, Ozurgeti Municipality, Guria, Georgia',
+        locality: 'Ureki', region: 'Guria', geo: { lat: 41.9903, lng: 41.7681 },
+        name: {
+          en: 'Holidaymakers and sun umbrellas on the black-sand beach at Ureki on a summer day, Black Sea, Georgia',
+          de: 'Urlauber und Sonnenschirme am schwarzen Sandstrand von Ureki an einem Sommertag, Schwarzes Meer, Georgien',
+          fr: "Vacanciers et parasols sur la plage de sable noir d'Ouréki un jour d'été, mer Noire, Géorgie",
+          es: 'Veraneantes y sombrillas en la playa de arena negra de Ureki un día de verano, mar Negro, Georgia',
+          nl: 'Vakantiegangers en parasols op het zwarte zandstrand van Ureki op een zomerdag, Zwarte Zee, Georgië',
+          cs: 'Rekreanti a slunečníky na černé písečné pláži v Ureki v letním dni, Černé moře, Gruzie',
+          pl: 'Wczasowicze i parasole na czarnej piaszczystej plaży w Ureki w letni dzień, Morze Czarne, Gruzja',
+        },
+        caption: {
+          en: 'In high summer the Ureki shore fills with umbrellas and swimmers — the shallow water warms quickly and stays calm, which is why the resort is so popular with families.',
+          de: 'Im Hochsommer füllt sich das Ufer von Ureki mit Sonnenschirmen und Badenden – das flache Wasser erwärmt sich rasch und bleibt ruhig, weshalb das Resort bei Familien so beliebt ist.',
+          fr: "En plein été, le rivage d'Ouréki se couvre de parasols et de baigneurs — l'eau peu profonde se réchauffe vite et reste calme, d'où la popularité de la station auprès des familles.",
+          es: 'En pleno verano la orilla de Ureki se llena de sombrillas y bañistas: el agua poco profunda se calienta pronto y permanece tranquila, por eso el balneario gusta tanto a las familias.',
+          nl: 'In de hoogzomer vult de kust van Ureki zich met parasols en zwemmers — het ondiepe water warmt snel op en blijft rustig, waardoor de badplaats zo geliefd is bij gezinnen.',
+          cs: 'Vrcholné léto zaplní pobřeží Ureki slunečníky a plavci – mělká voda se rychle ohřeje a zůstává klidná, proto je letovisko mezi rodinami tak oblíbené.',
+          pl: 'W pełni lata wybrzeże Ureki wypełnia się parasolami i pływakami — płytka woda szybko się nagrzewa i pozostaje spokojna, dlatego kurort jest tak lubiany przez rodziny.',
+        },
+      },
+      {
+        base: 'ureki-beach-shoreline-guria-georgia', width: 1448, height: 1086, anchor: 'inline-shoreline',
+        locationName: 'Ureki, Ozurgeti Municipality, Guria, Georgia',
+        locality: 'Ureki', region: 'Guria', geo: { lat: 41.9903, lng: 41.7681 },
+        name: {
+          en: 'The shoreline at Ureki with beach umbrellas and a line of pines along the black sand, Guria, Georgia',
+          de: 'Die Uferlinie von Ureki mit Sonnenschirmen und einer Pinienreihe entlang des schwarzen Sandes, Gurien, Georgien',
+          fr: "Le rivage d'Ouréki avec des parasols et une rangée de pins le long du sable noir, Gourie, Géorgie",
+          es: 'La orilla de Ureki con sombrillas y una hilera de pinos a lo largo de la arena negra, Guria, Georgia',
+          nl: 'De kustlijn van Ureki met parasols en een rij dennen langs het zwarte zand, Guria, Georgië',
+          cs: 'Pobřeží Ureki se slunečníky a řadou borovic podél černého písku, Gurie, Gruzie',
+          pl: 'Wybrzeże Ureki z parasolami i rzędem sosen wzdłuż czarnego piasku, Guria, Gruzja',
+        },
+        caption: {
+          en: 'The black sand runs for some five kilometres along the Guria coast, with pine woods giving shade just behind the beach — a legacy of the forests that gave Ureki its name, "deep forest".',
+          de: 'Der schwarze Sand zieht sich etwa fünf Kilometer entlang der Küste Guriens, mit Pinienwäldern, die gleich hinter dem Strand Schatten spenden – ein Erbe der Wälder, die Ureki seinen Namen „tiefer Wald" gaben.',
+          fr: "Le sable noir s'étire sur quelque cinq kilomètres le long de la côte de Gourie, les pinèdes offrant de l'ombre juste derrière la plage — héritage des forêts qui donnèrent à Ouréki son nom, « forêt profonde ».",
+          es: 'La arena negra se extiende unos cinco kilómetros por la costa de Guria, con pinares que dan sombra justo detrás de la playa: herencia de los bosques que dieron a Ureki su nombre, «bosque profundo».',
+          nl: 'Het zwarte zand loopt zo\'n vijf kilometer langs de kust van Guria, met dennenbossen die vlak achter het strand schaduw geven — een erfenis van de bossen die Ureki zijn naam "diep woud" gaven.',
+          cs: 'Černý písek se táhne asi pět kilometrů podél pobřeží Gurie, borové lesy dávají stín hned za pláží – dědictví lesů, které daly Ureki jméno „hluboký les".',
+          pl: 'Czarny piasek ciągnie się około pięciu kilometrów wzdłuż wybrzeża Gurii, a lasy sosnowe dają cień tuż za plażą — spuścizna lasów, od których Ureki wzięło nazwę „głęboki las".',
+        },
+      },
+    ],
   },
   {
     slug: 'narikala-fortress', name: 'Narikala Fortress',
