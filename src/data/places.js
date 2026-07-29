@@ -2546,7 +2546,175 @@ export const sites = [
     slug: 'musicians-park-shekvetili', name: 'Musicians Park',
     parentType: 'region', parent: 'guria', published: true,
     seoKey: 'musiciansPark', contentKey: 'musiciansPark',
-    image: '/images/files/georgia-home.jpg',
+    // Hero: the owner's own evening photo of the bronze Beatles sculpture group in
+    // the Musicians Park's eucalyptus grove, replacing the generic georgia-home.jpg
+    // placeholder. Landscape 4:3, native 1448 (BELOW the usual 1600 rung) → hero
+    // ladder 768/1200/1448 only; NO 1600/2400 variant is generated or referenced,
+    // and the ImageObject contentUrl points at the 1448 rung. Visible background is
+    // the `.hero--musicians-park` CSS class (heroClass) so the image-set ladder +
+    // `background-position: center center` apply; HeroSection then omits its inline
+    // background. Shekvetili is in Guria (Ozurgeti Municipality) on the Black Sea
+    // coast beside the Black Sea Arena — NOT Adjara, and distinct from the separate
+    // Shekvetili Dendrological Park and Georgia in Miniatures Park nearby.
+    image: '/images/files/beatles-statue-musicians-park-shekvetili-georgia-1448.webp',
+    imageAvif: '/images/files/beatles-statue-musicians-park-shekvetili-georgia-1448.avif',
+    heroClass: 'hero--musicians-park',
+    // Dedicated 1.91:1 social-share image (og:image / twitter:image) — hero only;
+    // the four inline images get NO OG variant.
+    ogImage: { src: '/images/files/beatles-statue-musicians-park-shekvetili-georgia-og.jpg', width: 1200, height: 630 },
+    // LCP hero preload: the 1200 AVIF rung with fetchpriority=high. Page-scoped —
+    // only entries with heroPreload emit a <link rel=preload as=image> via
+    // SitePage/useSEO + prerender.
+    heroPreload: '/images/files/beatles-statue-musicians-park-shekvetili-georgia-1200.avif',
+    // Hero image SEO/AEO metadata (owner's own photo → brand credit, set by
+    // SitePage). The hero is a CSS background (no <img alt>), so the localized alt
+    // lives here and is emitted as og:image:alt / twitter:image:alt per locale,
+    // while the `caption` map feeds the hero ImageObject caption. Verbatim from
+    // musicians-park-images-package.md. width/height = the 1448 rung. Coordinates
+    // are Shekvetili per the package (41.92778 / 41.76806) — NOT Ureki or Batumi.
+    // NOTE (likeness/IP): these are photos of public sculptures in a real
+    // attraction. The alt/caption name the musicians as plain factual travel
+    // documentation, describe the statues and the park, imply no endorsement or
+    // affiliation by any artist or estate, and reproduce no song lyrics.
+    imageMeta: {
+      width: 1448, height: 1086,
+      name: "A bronze statue of The Beatles with their instruments in the Musicians' Park at Shekvetili, lit in the evening, Georgia",
+      description: "A weathered bronze sculpture group of The Beatles with guitars and a drum kit, on a low plinth in the Musicians' Park at Shekvetili, set in an evening-lit eucalyptus grove. The Musicians' Park, opened in 2016 near the Black Sea Arena in Guria, holds around 37 interactive statues of Georgian and world musicians, in Georgia (the country).",
+      locationName: "Musicians' Park, Shekvetili, Ozurgeti Municipality, Guria, Georgia",
+      locality: 'Shekvetili', region: 'Guria', country: 'GE',
+      geo: { lat: 41.92778, lng: 41.76806 },
+      alt: {
+        en: "A bronze statue of The Beatles with their instruments in the Musicians' Park at Shekvetili, lit in the evening, Georgia",
+        de: 'Eine Bronzestatue der Beatles mit ihren Instrumenten im Musikerpark von Schekwetili, abends beleuchtet, Georgien',
+        fr: 'Une statue en bronze des Beatles avec leurs instruments dans le parc des Musiciens à Chekvetili, éclairée le soir, Géorgie',
+        es: 'Una estatua de bronce de los Beatles con sus instrumentos en el Parque de los Músicos de Shekvetili, iluminada al anochecer, Georgia',
+        nl: "Een bronzen standbeeld van The Beatles met hun instrumenten in het Muzikantenpark van Shekvetili, 's avonds verlicht, Georgië",
+        cs: 'Bronzová socha The Beatles s nástroji v Parku hudebníků v Šekvetili, večer nasvícená, Gruzie',
+        pl: 'Brązowy pomnik The Beatles z instrumentami w Parku Muzyków w Szekwetili, oświetlony wieczorem, Gruzja',
+      },
+      caption: {
+        en: "In a eucalyptus grove near the Black Sea Arena, the Musicians' Park lines its paths with bronze statues of music legends — among them The Beatles, mid-performance. Step close and a motion sensor plays the band's music: a concert in the woods that never ends.",
+        de: 'In einem Eukalyptushain nahe der Black Sea Arena säumt der Musikerpark seine Wege mit Bronzestatuen von Musiklegenden – darunter die Beatles mitten im Auftritt. Tritt man näher, spielt ein Bewegungssensor ihre Musik: ein Konzert im Wald, das nie endet.',
+        fr: "Dans une pinède d'eucalyptus près de la Black Sea Arena, le parc des Musiciens borde ses allées de statues en bronze de légendes de la musique — dont les Beatles en plein concert. Approchez-vous et un capteur déclenche leur musique : un concert dans les bois qui ne finit jamais.",
+        es: 'En un bosque de eucaliptos junto al Black Sea Arena, el Parque de los Músicos jalona sus senderos con estatuas de bronce de leyendas de la música, entre ellas los Beatles en plena actuación. Al acercarse, un sensor reproduce su música: un concierto en el bosque que nunca termina.',
+        nl: 'In een eucalyptusbos bij de Black Sea Arena zoomt het Muzikantenpark zijn paden af met bronzen beelden van muzieklegendes — waaronder The Beatles, middenin een optreden. Kom dichterbij en een bewegingssensor speelt hun muziek: een concert in het bos dat nooit ophoudt.',
+        cs: 'V eukalyptovém háji poblíž Black Sea Areny lemuje Park hudebníků své cesty bronzovými sochami hudebních legend – mezi nimi The Beatles uprostřed vystoupení. Přistupte blíž a pohybové čidlo spustí jejich hudbu: koncert v lese, který nikdy nekončí.',
+        pl: 'W eukaliptusowym gaju obok Black Sea Areny Park Muzyków obstawia swoje alejki brązowymi pomnikami legend muzyki — wśród nich The Beatles w trakcie występu. Podejdź bliżej, a czujnik ruchu włączy ich muzykę: koncert w lesie, który nigdy się nie kończy.',
+      },
+    },
+    // Four contextual inline body images (real <figure> blocks in the per-locale
+    // body HTML). Rendered via SitePage's inlineImageObjects @graph map: stable @id
+    // per the package (#inline-mozart / #inline-elvis / #inline-michael-jackson /
+    // #inline-georgian-musicians), contentUrl at each image's top rung (files ship
+    // WITHOUT the `w` suffix), localized name+caption, brand credit, and NEVER
+    // representativeOfPage — that stays the hero's. Same contentLocation + geo as
+    // the hero, matching the closest inline pattern (Vardzia/Gremi/Sameba).
+    // Mozart, Elvis and Michael Jackson are PORTRAIT 1086x1448 → ladder 768/1086
+    // only, rendered `.body-img--portrait` (560px cap). The Georgian-musicians
+    // frame is LANDSCAPE 4:3 → ladder 768/1200/1448, plain `.body-img` (642px cap).
+    // No 1600/2400 anywhere, no upscale, no fetchpriority, no OG.
+    // NOTE: the Georgian-musicians alt/caption deliberately do NOT name the four
+    // figures — the package could not reliably map faces to names, so they say
+    // "celebrated Georgian musicians in modern and traditional dress" and assert no
+    // identities. Do not add names here without a source.
+    inlineImageObjects: [
+      {
+        base: 'georgian-musicians-statues-musicians-park-shekvetili-georgia', width: 1448, height: 1086,
+        anchor: 'inline-georgian-musicians',
+        locationName: "Musicians' Park, Shekvetili, Ozurgeti Municipality, Guria, Georgia",
+        locality: 'Shekvetili', region: 'Guria', geo: { lat: 41.92778, lng: 41.76806 },
+        name: {
+          en: "Bronze statues of celebrated Georgian musicians in modern and traditional dress in the Musicians' Park at Shekvetili, Georgia",
+          de: 'Bronzestatuen berühmter georgischer Musiker in moderner und traditioneller Tracht im Musikerpark von Schekwetili, Georgien',
+          fr: 'Statues en bronze de célèbres musiciens géorgiens en tenue moderne et traditionnelle dans le parc des Musiciens à Chekvetili, Géorgie',
+          es: 'Estatuas de bronce de célebres músicos georgianos con atuendo moderno y tradicional en el Parque de los Músicos de Shekvetili, Georgia',
+          nl: 'Bronzen beelden van beroemde Georgische musici in moderne en traditionele kleding in het Muzikantenpark van Shekvetili, Georgië',
+          cs: 'Bronzové sochy slavných gruzínských hudebníků v moderním i tradičním oděvu v Parku hudebníků v Šekvetili, Gruzie',
+          pl: 'Brązowe pomniki słynnych gruzińskich muzyków w nowoczesnych i tradycyjnych strojach w Parku Muzyków w Szekwetili, Gruzja',
+        },
+        caption: {
+          en: "The park honours Georgia's own music as warmly as the world's: singers and folk musicians in both concert dress and traditional Georgian costume stand alongside the international legends.",
+          de: 'Der Park ehrt Georgiens eigene Musik ebenso herzlich wie die der Welt: Sänger und Volksmusiker in Konzertkleidung wie in traditioneller georgischer Tracht stehen neben den internationalen Legenden.',
+          fr: 'Le parc honore la musique géorgienne avec autant de chaleur que celle du monde : chanteurs et musiciens folkloriques, en tenue de concert comme en costume géorgien traditionnel, côtoient les légendes internationales.',
+          es: 'El parque honra la música de Georgia con el mismo cariño que la del mundo: cantantes y músicos folclóricos, tanto de gala como con traje tradicional georgiano, conviven con las leyendas internacionales.',
+          nl: 'Het park eert de eigen muziek van Georgië even warm als die van de wereld: zangers en volksmuzikanten, zowel in concertkleding als in traditioneel Georgisch kostuum, staan naast de internationale legendes.',
+          cs: 'Park ctí gruzínskou hudbu stejně vřele jako světovou: zpěváci a lidoví hudebníci v koncertním i tradičním gruzínském oděvu stojí po boku mezinárodních legend.',
+          pl: 'Park czci gruzińską muzykę równie ciepło jak światową: śpiewacy i muzycy ludowi, zarówno w strojach koncertowych, jak i tradycyjnych gruzińskich, stoją obok międzynarodowych legend.',
+        },
+      },
+      {
+        base: 'mozart-statue-musicians-park-shekvetili-georgia', width: 1086, height: 1448,
+        anchor: 'inline-mozart', portrait: true, widths: [768, 1086],
+        locationName: "Musicians' Park, Shekvetili, Ozurgeti Municipality, Guria, Georgia",
+        locality: 'Shekvetili', region: 'Guria', geo: { lat: 41.92778, lng: 41.76806 },
+        name: {
+          en: "A bronze statue of Wolfgang Amadeus Mozart playing the violin in the Musicians' Park at Shekvetili, Georgia",
+          de: 'Eine Bronzestatue von Wolfgang Amadeus Mozart mit Violine im Musikerpark von Schekwetili, Georgien',
+          fr: 'Une statue en bronze de Wolfgang Amadeus Mozart au violon dans le parc des Musiciens à Chekvetili, Géorgie',
+          es: 'Una estatua de bronce de Wolfgang Amadeus Mozart tocando el violín en el Parque de los Músicos de Shekvetili, Georgia',
+          nl: 'Een bronzen standbeeld van Wolfgang Amadeus Mozart met viool in het Muzikantenpark van Shekvetili, Georgië',
+          cs: 'Bronzová socha Wolfganga Amadea Mozarta s houslemi v Parku hudebníků v Šekvetili, Gruzie',
+          pl: 'Brązowy pomnik Wolfganga Amadeusza Mozarta grającego na skrzypcach w Parku Muzyków w Szekwetili, Gruzja',
+        },
+        caption: {
+          en: 'The park spans centuries of music: here Mozart, violin in hand, stands among the classical masters — Bach and Beethoven are close by — a short walk from the rock and pop legends.',
+          de: 'Der Park umspannt Jahrhunderte der Musik: Hier steht Mozart, Violine in der Hand, unter den Klassik-Meistern – Bach und Beethoven ganz in der Nähe – nur wenige Schritte von den Rock- und Pop-Legenden.',
+          fr: 'Le parc traverse des siècles de musique : ici Mozart, violon en main, se tient parmi les maîtres classiques — Bach et Beethoven tout près — à quelques pas des légendes du rock et de la pop.',
+          es: 'El parque abarca siglos de música: aquí Mozart, violín en mano, se alza entre los maestros clásicos —Bach y Beethoven están cerca— a pocos pasos de las leyendas del rock y el pop.',
+          nl: 'Het park omspant eeuwen muziek: hier staat Mozart, viool in de hand, tussen de klassieke meesters — Bach en Beethoven vlakbij — op een steenworp van de rock- en poplegendes.',
+          cs: 'Park zahrnuje staletí hudby: zde stojí Mozart s houslemi mezi klasickými mistry – Bach a Beethoven jsou nedaleko – pár kroků od legend rocku a popu.',
+          pl: 'Park obejmuje wieki muzyki: tutaj Mozart ze skrzypcami stoi wśród klasycznych mistrzów — Bach i Beethoven są blisko — o kilka kroków od legend rocka i popu.',
+        },
+      },
+      {
+        base: 'elvis-presley-statue-musicians-park-shekvetili-georgia', width: 1086, height: 1448,
+        anchor: 'inline-elvis', portrait: true, widths: [768, 1086],
+        locationName: "Musicians' Park, Shekvetili, Ozurgeti Municipality, Guria, Georgia",
+        locality: 'Shekvetili', region: 'Guria', geo: { lat: 41.92778, lng: 41.76806 },
+        name: {
+          en: "A bronze statue of Elvis Presley with a guitar and microphone, lit at night in the Musicians' Park at Shekvetili, Georgia",
+          de: 'Eine Bronzestatue von Elvis Presley mit Gitarre und Mikrofon, nachts beleuchtet im Musikerpark von Schekwetili, Georgien',
+          fr: "Une statue en bronze d'Elvis Presley avec guitare et micro, éclairée la nuit dans le parc des Musiciens à Chekvetili, Géorgie",
+          es: 'Una estatua de bronce de Elvis Presley con guitarra y micrófono, iluminada de noche en el Parque de los Músicos de Shekvetili, Georgia',
+          nl: "Een bronzen standbeeld van Elvis Presley met gitaar en microfoon, 's nachts verlicht in het Muzikantenpark van Shekvetili, Georgië",
+          cs: 'Bronzová socha Elvise Presleyho s kytarou a mikrofonem, v noci nasvícená v Parku hudebníků v Šekvetili, Gruzie',
+          pl: 'Brązowy pomnik Elvisa Presleya z gitarą i mikrofonem, oświetlony nocą w Parku Muzyków w Szekwetili, Gruzja',
+        },
+        caption: {
+          en: 'Lit against the dark eucalyptus, Elvis Presley catches the park at its most atmospheric — dusk, when the uplights come on and the sculptures seem to step out of the trees.',
+          de: 'Vor dem dunklen Eukalyptus beleuchtet, zeigt Elvis Presley den Park von seiner stimmungsvollsten Seite – in der Dämmerung, wenn die Strahler angehen und die Skulpturen aus den Bäumen zu treten scheinen.',
+          fr: "Éclairé contre les eucalyptus sombres, Elvis Presley saisit le parc au plus atmosphérique — au crépuscule, quand les projecteurs s'allument et que les sculptures semblent sortir des arbres.",
+          es: 'Iluminado contra los oscuros eucaliptos, Elvis Presley capta el parque en su momento más atmosférico: el anochecer, cuando se encienden los focos y las esculturas parecen salir de los árboles.',
+          nl: 'Verlicht tegen de donkere eucalyptus toont Elvis Presley het park op zijn sfeervolst — in de schemering, als de spots aangaan en de beelden uit de bomen lijken te stappen.',
+          cs: 'Nasvícený proti tmavému eukalyptu zachycuje Elvis Presley park v nejatmosferičtější chvíli – za soumraku, kdy se rozsvítí reflektory a sochy jako by vystupovaly ze stromů.',
+          pl: 'Oświetlony na tle ciemnych eukaliptusów Elvis Presley ukazuje park w najbardziej nastrojowej chwili — o zmierzchu, gdy zapalają się reflektory, a rzeźby zdają się wychodzić spośród drzew.',
+        },
+      },
+      {
+        base: 'michael-jackson-statue-musicians-park-shekvetili-georgia', width: 1086, height: 1448,
+        anchor: 'inline-michael-jackson', portrait: true, widths: [768, 1086],
+        locationName: "Musicians' Park, Shekvetili, Ozurgeti Municipality, Guria, Georgia",
+        locality: 'Shekvetili', region: 'Guria', geo: { lat: 41.92778, lng: 41.76806 },
+        name: {
+          en: "A bronze statue of Michael Jackson mid-pose, lit at dusk in the Musicians' Park at Shekvetili, Georgia",
+          de: 'Eine Bronzestatue von Michael Jackson in Bewegung, in der Dämmerung beleuchtet im Musikerpark von Schekwetili, Georgien',
+          fr: 'Une statue en bronze de Michael Jackson en pleine pose, éclairée au crépuscule dans le parc des Musiciens à Chekvetili, Géorgie',
+          es: 'Una estatua de bronce de Michael Jackson en plena pose, iluminada al anochecer en el Parque de los Músicos de Shekvetili, Georgia',
+          nl: 'Een bronzen standbeeld van Michael Jackson in een danspose, bij schemer verlicht in het Muzikantenpark van Shekvetili, Georgië',
+          cs: 'Bronzová socha Michaela Jacksona v taneční póze, za soumraku nasvícená v Parku hudebníků v Šekvetili, Gruzie',
+          pl: 'Brązowy pomnik Michaela Jacksona w tanecznej pozie, oświetlony o zmierzchu w Parku Muzyków w Szekwetili, Gruzja',
+        },
+        caption: {
+          en: "Michael Jackson caught mid-move — one of the pop legends among the park's 37 sculptures, each of which plays the artist's music when a visitor steps near.",
+          de: 'Michael Jackson mitten in der Bewegung – eine der Pop-Legenden unter den 37 Skulpturen des Parks, von denen jede die Musik des Künstlers spielt, sobald ein Besucher näher tritt.',
+          fr: "Michael Jackson saisi en plein mouvement — l'une des légendes de la pop parmi les 37 sculptures du parc, dont chacune joue la musique de l'artiste dès qu'un visiteur s'approche.",
+          es: 'Michael Jackson captado en pleno movimiento: una de las leyendas del pop entre las 37 esculturas del parque, cada una de las cuales reproduce la música del artista cuando un visitante se acerca.',
+          nl: 'Michael Jackson midden in een beweging — een van de poplegendes tussen de 37 sculpturen van het park, die elk de muziek van de artiest spelen zodra een bezoeker nadert.',
+          cs: 'Michael Jackson zachycený uprostřed pohybu – jedna z popových legend mezi 37 sochami parku, z nichž každá spustí hudbu umělce, jakmile se přiblíží návštěvník.',
+          pl: 'Michael Jackson uchwycony w ruchu — jedna z legend popu wśród 37 rzeźb parku, z których każda odtwarza muzykę artysty, gdy zbliży się zwiedzający.',
+        },
+      },
+    ],
   },
   {
     slug: 'shekvetili-dendrological-park', name: 'Shekvetili Dendrological Park',
