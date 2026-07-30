@@ -147,7 +147,14 @@ function contentSourcesFor(path, seoKeyByPath, entityByPath, tourByPath) {
 
   if (path.startsWith('blog/')) {
     const slug = path.slice('blog/'.length)
-    parts.push(chunkForSlug(blogSource, slug))
+    const chunk = chunkForSlug(blogSource, slug)
+    parts.push(chunk)
+    // An article's per-locale title and description live in ui.json under its
+    // titleKey/descKey, so a translation-only edit has to move the fingerprint
+    // as well — the chunk above would not change at all.
+    for (const m of chunk.matchAll(/["']?(?:titleKey|descKey)["']?\s*:\s*["']([^"']+)["']/g)) {
+      for (const l of languages) parts.push(uiByLang[l]?.[m[1]] ?? null)
+    }
   }
 
   return parts.filter((p) => p !== null && p !== '' && p !== undefined)
