@@ -1766,6 +1766,45 @@ section {
   }
 }
 /* No rung above 1448 exists (Europe Square). Do not add a 1600 or 2400 breakpoint. */
+/* Batumi Dolphinarium hero — per-page CSS background (same opt-in mechanism as
+   .hero--europe-square). The venue's own domed building, REPLACING the reused
+   generic batumi-coastal-tour.jpg, which is not this venue. ⚠️ That file is SHARED
+   (Batumi Boulevard page, a tour's hero/tile/listing images, a blog post) and was
+   deliberately NOT deleted — only this page's reference moved. Native 4:3
+   (1448x1086), just under the usual 1600 rung, so the ladder is exactly
+   768/1200/1448 with the top breakpoint at min-width:1200 — NO 1600/2400 rung, no
+   upscale. Served from /images/batumi/. `background-position: center center`: the
+   dome is centre-frame with open cloudy sky above (the H1 zone), so it stays
+   framed at every crop. No extra scrim — the shared .coverme::after overlay
+   (rgba(0,0,0,0.35)) supplies the readable text layer. The plain url() line =
+   image-set() fallback for browsers without image-set(). */
+.hero--batumi-dolphinarium {
+  background-image: url("/images/batumi/batumi-dolphinarium-building-georgia-1200.webp");
+  background-image: image-set(
+    url("/images/batumi/batumi-dolphinarium-building-georgia-768.avif") type("image/avif"),
+    url("/images/batumi/batumi-dolphinarium-building-georgia-768.webp") type("image/webp")
+  );
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+@media (min-width: 768px) {
+  .hero--batumi-dolphinarium {
+    background-image: image-set(
+      url("/images/batumi/batumi-dolphinarium-building-georgia-1200.avif") type("image/avif"),
+      url("/images/batumi/batumi-dolphinarium-building-georgia-1200.webp") type("image/webp")
+    );
+  }
+}
+@media (min-width: 1200px) {
+  .hero--batumi-dolphinarium {
+    background-image: image-set(
+      url("/images/batumi/batumi-dolphinarium-building-georgia-1448.avif") type("image/avif"),
+      url("/images/batumi/batumi-dolphinarium-building-georgia-1448.webp") type("image/webp")
+    );
+  }
+}
+/* No rung above 1448 exists (Batumi Dolphinarium). Do not add a 1600/2400 breakpoint. */
 .centerme {
   text-align: center !important;
 }

@@ -2663,7 +2663,157 @@ export const sites = [
     slug: 'batumi-dolphinarium', name: 'Batumi Dolphinarium',
     parentType: 'city', parent: 'batumi', published: true,
     seoKey: 'batumiDolphinarium', contentKey: 'batumiDolphinarium',
-    image: '/images/files/batumi-coastal-tour.jpg',
+    // Hero: the venue's own domed building (owner's photo), via the
+    // `.hero--batumi-dolphinarium` image-set() ladder. REPLACES the reused generic
+    // batumi-coastal-tour.jpg, which is NOT this venue — and which is SHARED with
+    // the Batumi Boulevard page, a tour's hero/tile/listing images and a blog
+    // post, so the file itself must stay; only this page's reference moved.
+    // Landscape 4:3, native 1448 (below the usual 1600 rung) → ladder 768/1200/1448
+    // only; no 1600/2400, no upscale. Served from /images/batumi/.
+    image: '/images/batumi/batumi-dolphinarium-building-georgia-1448.webp',
+    imageAvif: '/images/batumi/batumi-dolphinarium-building-georgia-1448.avif',
+    heroClass: 'hero--batumi-dolphinarium',
+    // LCP hero preload: the 1200 AVIF rung with fetchpriority=high (this entry had
+    // none before). Dedicated 1.91:1 social image; the matching -og.webp ships
+    // alongside but is unreferenced — useSEO/prerender emit a single og:image.
+    heroPreload: '/images/batumi/batumi-dolphinarium-building-georgia-1200.avif',
+    ogImage: { src: '/images/batumi/batumi-dolphinarium-building-georgia-og.jpg', width: 1200, height: 630 },
+    // Hero image SEO/AEO metadata (owner's own photo → brand credit, set by
+    // SitePage). The hero is a CSS background (no <img alt>), so the localized alt
+    // lives here and feeds og:image:alt / twitter:image:alt per locale, while the
+    // `caption` map feeds the hero ImageObject caption. Verbatim from
+    // batumi-dolphinarium-SEO-package.md. width/height = the 1448 rung.
+    // `imageId: 'hero-image'` gives the node a stable page-scoped @id.
+    // ⚠️ WORDING: alt/captions for this set are deliberately FACTUAL AND NEUTRAL —
+    // they describe the building, the show and the tank and make no claim about
+    // animal welfare, training methods, education or conservation, in either
+    // direction. The body's own swim-with-dolphins section already carries the
+    // welfare context. Do not add promotional or advocacy wording here.
+    imageMeta: {
+      width: 1448, height: 1086, imageId: 'hero-image',
+      name: 'Batumi Dolphinarium building, 6 May Park, Adjara, Georgia',
+      description: 'The domed glass-and-steel hall of the Batumi Dolphinarium in 6 May Park, Batumi, seen across lawns and young conifers. The venue opened in 1975 and reopened after rebuilding in 2011, and hosts dolphin shows in the Adjara region of Georgia (the country).',
+      locationName: 'Batumi Dolphinarium, 6 May Park, Batumi, Adjara, Georgia',
+      locality: 'Batumi', region: 'Adjara', country: 'GE',
+      alt: {
+        en: 'The domed glass-and-steel building of the Batumi Dolphinarium in 6 May Park, with lawns and conifers in front, Adjara, Georgia',
+        de: 'Das kuppelförmige Glas-und-Stahl-Gebäude des Delfinariums Batumi im 6-Mai-Park, mit Rasen und Nadelbäumen davor, Adscharien, Georgien',
+        fr: 'Le bâtiment en verre et acier à coupole du delphinarium de Batumi, dans le parc du 6-Mai, avec pelouses et conifères devant, Adjarie, Géorgie',
+        es: 'El edificio abovedado de vidrio y acero del delfinario de Batumi, en el parque del 6 de Mayo, con césped y coníferas delante, Adjaria, Georgia',
+        nl: 'Het koepelvormige glas-en-staalgebouw van het Dolfinarium Batumi in het 6 Mei-park, met gazons en naaldbomen ervoor, Adzjarië, Georgië',
+        cs: 'Kupolovitá skleněná a ocelová budova delfinária v Batumi v parku 6. května, s trávníky a jehličnany před ní, Adžárie, Gruzie',
+        pl: 'Kopulasty szklano-stalowy budynek delfinarium w Batumi w parku 6 Maja, z trawnikami i drzewami iglastymi z przodu, Adżaria, Gruzja',
+      },
+      caption: {
+        en: "The Batumi Dolphinarium in 6 May Park — the round, domed hall that hosts the city's dolphin shows, first opened in 1975 and rebuilt for its 2011 reopening.",
+        de: 'Das Delfinarium Batumi im 6-Mai-Park – der runde Kuppelbau, in dem die Delfinshows der Stadt stattfinden, erstmals 1975 eröffnet und für die Wiedereröffnung 2011 neu gebaut.',
+        fr: 'Le delphinarium de Batumi dans le parc du 6-Mai — la halle ronde à coupole qui accueille les spectacles de dauphins de la ville, ouverte en 1975 et reconstruite pour sa réouverture en 2011.',
+        es: 'El delfinario de Batumi en el parque del 6 de Mayo: la sala redonda y abovedada que acoge los espectáculos de delfines de la ciudad, inaugurada en 1975 y reconstruida para su reapertura en 2011.',
+        nl: 'Het Dolfinarium Batumi in het 6 Mei-park — de ronde, koepelvormige hal waar de dolfijnenshows van de stad plaatsvinden, voor het eerst geopend in 1975 en herbouwd voor de heropening in 2011.',
+        cs: 'Delfinárium v Batumi v parku 6. května — kulatá kupolovitá hala, kde se konají delfíní představení města, poprvé otevřená v roce 1975 a přestavěná pro znovuotevření v roce 2011.',
+        pl: 'Delfinarium w Batumi w parku 6 Maja — okrągła, kopulasta hala, w której odbywają się miejskie pokazy delfinów, otwarta po raz pierwszy w 1975 roku i przebudowana na ponowne otwarcie w 2011 roku.',
+      },
+    },
+    // Three contextual inline body photos (real <figure class="body-img"> blocks in
+    // the per-locale body HTML). This page had NO inline images before. Rendered via
+    // SitePage's inlineImageObjects @graph map: stable @id, contentUrl at each
+    // image's top rung (files ship WITHOUT the `w` suffix), localized name (=alt) +
+    // caption, brand credit, NEVER representativeOfPage — that stays the hero's.
+    // `dir` points them at /images/batumi/. All landscape; ladders 768/1200/1448
+    // EXCEPT the dolphin-ball frame, whose native is 1543x1019 → 768/1200/1543.
+    // Splice points (same block index in all 7 locales; the body is 13 blocks):
+    //   2 → dolphin show ("Performances feature bottlenose dolphins… two or three
+    //       shows on a typical day")
+    //   4 → aquarium (that block's closing sentence is the aquarium sentence)
+    //   5 → dolphin ball ("ball-and-hoop acrobatics" is in block 4; the figure sits
+    //       one paragraph later, still inside the "The shows" section, because
+    //       blocks 2 and 4 carry the show, aquarium AND ball anchors between them
+    //       and the renderer needs three distinct slots)
+    // ⚠️ The aquarium frame is a single goldfish display tank that reads as being
+    // inside the dolphinarium hall (blue walls, tiered seating behind). The body
+    // copy's aquarium references are to the SEPARATE ~100-species aquarium next
+    // door ("adjacent", "beside the dolphinarium", "mostly Black Sea and Georgian
+    // freshwater fish"). The package alt/caption deliberately claim only "one of
+    // the aquarium display tanks at the Batumi Dolphinarium" — they do NOT claim to
+    // depict the 100-species facility. Owner confirmed this placement. Keep the
+    // wording as-is; do not "upgrade" it to describe the adjacent aquarium.
+    // ⚠️ Neutral wording applies to all three, exactly as for the hero above.
+    inlineImageObjects: [
+      {
+        base: 'batumi-dolphinarium-dolphin-show-georgia', width: 1448, height: 1086,
+        anchor: 'inline-dolphin-show', dir: '/images/batumi',
+        locationName: 'Batumi Dolphinarium, 6 May Park, Batumi, Adjara, Georgia',
+        locality: 'Batumi', region: 'Adjara',
+        name: {
+          en: 'Bottlenose dolphins leaping in a row during a show at the Batumi Dolphinarium, with trainers and the city skyline behind, Georgia',
+          de: 'Große Tümmler springen in einer Reihe während einer Show im Delfinarium Batumi, mit Trainern und der Stadtsilhouette dahinter, Georgien',
+          fr: "Des grands dauphins bondissant en file lors d'un spectacle au delphinarium de Batumi, avec les dresseurs et la silhouette de la ville derrière, Géorgie",
+          es: 'Delfines mulares saltando en fila durante un espectáculo en el delfinario de Batumi, con los entrenadores y el perfil de la ciudad detrás, Georgia',
+          nl: 'Tuimelaars die op een rij springen tijdens een show in het Dolfinarium Batumi, met trainers en de skyline van de stad erachter, Georgië',
+          cs: 'Delfíni skákaví skákající v řadě během představení v delfináriu v Batumi, s trenéry a panoramatem města v pozadí, Gruzie',
+          pl: 'Delfiny butlonose skaczące w rzędzie podczas pokazu w delfinarium w Batumi, z trenerami i panoramą miasta w tle, Gruzja',
+        },
+        caption: {
+          en: "A dolphin show at the Batumi Dolphinarium — bottlenose dolphins performing a synchronised leap in front of trainers, with Batumi's high-rises and the hills of Adjara beyond.",
+          de: 'Eine Delfinshow im Delfinarium Batumi – Große Tümmler bei einem synchronen Sprung vor den Trainern, mit Batumis Hochhäusern und den Hügeln Adschariens im Hintergrund.',
+          fr: "Un spectacle de dauphins au delphinarium de Batumi — des grands dauphins exécutant un saut synchronisé devant les dresseurs, avec les tours de Batumi et les collines d'Adjarie au loin.",
+          es: 'Un espectáculo de delfines en el delfinario de Batumi: delfines mulares realizando un salto sincronizado ante los entrenadores, con los edificios de Batumi y las colinas de Adjaria al fondo.',
+          nl: 'Een dolfijnenshow in het Dolfinarium Batumi — tuimelaars die een gesynchroniseerde sprong maken voor de trainers, met de hoogbouw van Batumi en de heuvels van Adzjarië erachter.',
+          cs: 'Delfíní představení v delfináriu v Batumi — delfíni skákaví předvádějící synchronizovaný skok před trenéry, s batumskými výškovými budovami a kopci Adžárie v pozadí.',
+          pl: 'Pokaz delfinów w delfinarium w Batumi — delfiny butlonose wykonujące zsynchronizowany skok przed trenerami, z wieżowcami Batumi i wzgórzami Adżarii w tle.',
+        },
+      },
+      {
+        base: 'batumi-dolphinarium-aquarium-georgia', width: 1448, height: 1086,
+        anchor: 'inline-aquarium', dir: '/images/batumi',
+        locationName: 'Batumi Dolphinarium, 6 May Park, Batumi, Adjara, Georgia',
+        locality: 'Batumi', region: 'Adjara',
+        name: {
+          en: 'A freshwater aquarium tank of goldfish with green plants and rocks, on display inside the Batumi Dolphinarium, Georgia',
+          de: 'Ein Süßwasseraquarium mit Goldfischen, grünen Pflanzen und Steinen, ausgestellt im Delfinarium Batumi, Georgien',
+          fr: "Un aquarium d'eau douce avec des poissons rouges, des plantes vertes et des rochers, exposé à l'intérieur du delphinarium de Batumi, Géorgie",
+          es: 'Un acuario de agua dulce con peces dorados, plantas verdes y rocas, expuesto dentro del delfinario de Batumi, Georgia',
+          nl: 'Een zoetwateraquarium met goudvissen, groene planten en stenen, tentoongesteld in het Dolfinarium Batumi, Georgië',
+          cs: 'Sladkovodní akvárium se zlatými rybkami, zelenými rostlinami a kameny, vystavené uvnitř delfinária v Batumi, Gruzie',
+          pl: 'Słodkowodne akwarium ze złotymi rybkami, zielonymi roślinami i kamieniami, prezentowane wewnątrz delfinarium w Batumi, Gruzja',
+        },
+        caption: {
+          en: "One of the aquarium display tanks at the Batumi Dolphinarium, its goldfish among planted greenery under the hall's blue dome.",
+          de: 'Eines der Schauaquarien im Delfinarium Batumi, mit Goldfischen zwischen begrünter Bepflanzung unter der blauen Kuppel der Halle.',
+          fr: "L'un des aquariums d'exposition du delphinarium de Batumi, ses poissons rouges parmi une végétation plantée sous la coupole bleue de la halle.",
+          es: 'Uno de los acuarios de exhibición del delfinario de Batumi, con sus peces dorados entre vegetación plantada bajo la cúpula azul de la sala.',
+          nl: 'Een van de show­aquaria in het Dolfinarium Batumi, met goudvissen tussen beplanting onder de blauwe koepel van de hal.',
+          cs: 'Jedno z výstavních akvárií v delfináriu v Batumi, se zlatými rybkami mezi zelení pod modrou kupolí haly.',
+          pl: 'Jedno z akwariów wystawowych w delfinarium w Batumi, ze złotymi rybkami wśród roślinności pod niebieską kopułą hali.',
+        },
+      },
+      {
+        // Native 1543x1019 (NOT 1448x1086) → ladder 768/1200/1543. The only image in
+        // this set with a 1543 top rung; do not "normalise" it.
+        base: 'batumi-dolphinarium-dolphin-ball-georgia', width: 1543, height: 1019,
+        anchor: 'inline-dolphin-ball', dir: '/images/batumi', widths: [768, 1200, 1543],
+        locationName: 'Batumi Dolphinarium, 6 May Park, Batumi, Adjara, Georgia',
+        locality: 'Batumi', region: 'Adjara',
+        name: {
+          en: 'A dolphin balancing a pink ball on its nose during a show at the Batumi Dolphinarium, with trainers along the poolside, Georgia',
+          de: 'Ein Delfin balanciert bei einer Show im Delfinarium Batumi einen rosa Ball auf der Nase, mit Trainern am Beckenrand, Georgien',
+          fr: "Un dauphin en équilibre avec un ballon rose sur le museau lors d'un spectacle au delphinarium de Batumi, avec des dresseurs au bord du bassin, Géorgie",
+          es: 'Un delfín sosteniendo en equilibrio una pelota rosa sobre el hocico durante un espectáculo en el delfinario de Batumi, con entrenadores junto a la piscina, Georgia',
+          nl: 'Een dolfijn die tijdens een show in het Dolfinarium Batumi een roze bal op zijn neus balanceert, met trainers langs het bassin, Georgië',
+          cs: 'Delfín balancující během představení v delfináriu v Batumi růžový míč na nose, s trenéry u bazénu, Gruzie',
+          pl: 'Delfin balansujący różową piłką na nosie podczas pokazu w delfinarium w Batumi, z trenerami przy basenie, Gruzja',
+        },
+        caption: {
+          en: 'A bottlenose dolphin pushing a pink ball during the show at the Batumi Dolphinarium, one of the games the dolphins perform for the amphitheatre crowd.',
+          de: 'Ein Großer Tümmler stößt während der Show im Delfinarium Batumi einen rosa Ball – eines der Spiele, die die Delfine für das Publikum im Amphitheater vorführen.',
+          fr: "Un grand dauphin poussant un ballon rose pendant le spectacle du delphinarium de Batumi, l'un des jeux que les dauphins présentent au public de l'amphithéâtre.",
+          es: 'Un delfín mular empujando una pelota rosa durante el espectáculo del delfinario de Batumi, uno de los juegos que los delfines realizan para el público del anfiteatro.',
+          nl: 'Een tuimelaar die tijdens de show in het Dolfinarium Batumi een roze bal wegduwt, een van de spelletjes die de dolfijnen voor het publiek in het amfitheater doen.',
+          cs: 'Delfín skákavý strkající během představení v delfináriu v Batumi růžový míč, jedna z her, které delfíni předvádějí divákům v amfiteátru.',
+          pl: 'Delfin butlonosy popychający różową piłkę podczas pokazu w delfinarium w Batumi, jedna z zabaw, które delfiny prezentują publiczności w amfiteatrze.',
+        },
+      },
+    ],
     // ⚠️ NAME COLLISION, not a missing translation. This page's address is
     // "51 Rustaveli Avenue, Batumi" — BATUMI's Rustaveli Avenue, a completely
     // different street from the Tbilisi avenue that owns the
