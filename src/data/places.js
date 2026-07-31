@@ -998,7 +998,121 @@ export const cities = [
       },
     ],
     thingsToDo: {
-      seoKey: 'thingsToDoBatumi', contentKey: 'thingsToDoBatumi', image: '/images/files/georgia-home.jpg',
+      seoKey: 'thingsToDoBatumi', contentKey: 'thingsToDoBatumi',
+      // FIRST things-to-do page to use the opt-in image plumbing (610fb1d);
+      // every other one still renders from a bare `image` path.
+      // Hero: a WIDESCREEN RE-EDIT of the Batumi city page's skyline-from-the-beach
+      // frame — cropped 1448x1086 → 1448x815 at top=120, dropping the dominant
+      // pebble foreground so the towers, the palm-lined boulevard and a strip of
+      // beach read as a banner. Full native width kept, so the ladder still tops
+      // at 1448 and nothing is upscaled. It is a DERIVATIVE of an in-use photo,
+      // deliberately re-cut and re-encoded under its own base name rather than
+      // pointing at the city page's files — but it is visibly the same
+      // photograph, which a re-crop cannot change. Replace with a page-specific
+      // shot when a proper package exists.
+      image: '/images/batumi/batumi-seafront-skyline-wide-georgia-1448.webp',
+      imageAvif: '/images/batumi/batumi-seafront-skyline-wide-georgia-1448.avif',
+      heroClass: 'hero--things-to-do-batumi',
+      heroPreload: '/images/batumi/batumi-seafront-skyline-wide-georgia-1200.avif',
+      ogImage: { src: '/images/batumi/batumi-seafront-skyline-wide-georgia-og.jpg', width: 1200, height: 630 },
+      // Hero alt/caption reuse the Batumi city set's APPROVED 7-locale strings:
+      // the crop shows the same subject, so they remain accurate, and inventing
+      // fresh translations would be worse than a documented overlap.
+      imageMeta: {
+        width: 1448, height: 815, imageId: 'hero-image',
+        name: 'Batumi seafront skyline across the pebble beach, Adjara, Georgia',
+        description: "Batumi's Black Sea seafront seen from the pebble beach: the city's modern skyline of glass high-rise towers, including the sphere-topped Alphabet Tower, rising beyond the palm-lined boulevard. Batumi is the capital of the Adjara region on the Black Sea coast of Georgia (the country).",
+        locationName: 'Batumi, Adjara, Georgia',
+        locality: 'Batumi', region: 'Adjara', country: 'GE',
+        geo: { lat: 41.6500, lng: 41.6367 },
+        alt: {
+          en: "Batumi's modern seafront skyline of high-rise towers, including the sphere-topped Alphabet Tower, seen across the pebble beach under a blue sky, Adjara, Georgia",
+          de: 'Die moderne Uferskyline von Batumi mit Hochhaustürmen, darunter der kugelgekrönte Alphabet Tower, gesehen über den Kieselstrand unter blauem Himmel, Adscharien, Georgien',
+          fr: "La skyline moderne du front de mer de Batumi et ses tours, dont l'Alphabet Tower coiffée d'une sphère, vue depuis la plage de galets sous un ciel bleu, Adjarie, Géorgie",
+          es: 'El moderno perfil urbano frente al mar de Batumi con sus torres, entre ellas la Alphabet Tower rematada por una esfera, visto desde la playa de guijarros bajo un cielo azul, Adjaria, Georgia',
+          nl: 'De moderne skyline aan de kust van Batumi met hoogbouw, waaronder de met een bol bekroonde Alphabet Tower, gezien vanaf het kiezelstrand onder een blauwe lucht, Adzjarië, Georgië',
+          cs: 'Moderní panoráma pobřeží Batumi s výškovými věžemi, včetně Alphabet Tower zakončené koulí, při pohledu přes oblázkovou pláž pod modrou oblohou, Adžárie, Gruzie',
+          pl: 'Nowoczesna panorama nadmorska Batumi z wieżowcami, w tym zwieńczoną kulą Alphabet Tower, widziana zza kamienistej plaży pod błękitnym niebem, Adżaria, Gruzja',
+        },
+        caption: {
+          en: "Batumi's Black Sea seafront — the city's modern skyline of glass towers, including the sphere-topped Alphabet Tower, rising beyond the palm-lined boulevard and pebble beach.",
+          de: 'Die Schwarzmeerküste von Batumi – die moderne Skyline aus Glastürmen, darunter der kugelgekrönte Alphabet Tower, erhebt sich hinter der palmengesäumten Uferpromenade und dem Kieselstrand.',
+          fr: "Le front de mer de Batumi sur la mer Noire — la skyline moderne de tours de verre, dont l'Alphabet Tower surmontée d'une sphère, s'élève au-delà du boulevard bordé de palmiers et de la plage de galets.",
+          es: 'El frente marítimo de Batumi en el mar Negro: el moderno perfil de torres de cristal, incluida la Alphabet Tower coronada por una esfera, se alza tras el bulevar bordeado de palmeras y la playa de guijarros.',
+          nl: 'De Zwarte Zeekust van Batumi — de moderne skyline van glazen torens, waaronder de met een bol bekroonde Alphabet Tower, rijst op achter de met palmen omzoomde boulevard en het kiezelstrand.',
+          cs: 'Černomořské pobřeží Batumi — moderní panoráma skleněných věží, včetně Alphabet Tower zakončené koulí, se tyčí za palmami lemovaným bulvárem a oblázkovou pláží.',
+          pl: 'Czarnomorskie wybrzeże Batumi — nowoczesna panorama szklanych wież, w tym zwieńczona kulą Alphabet Tower, wznosi się za obsadzonym palmami bulwarem i kamienistą plażą.',
+        },
+      },
+      // Two inline body figures, each placed against the description it actually
+      // matches (block indices are identical in all 7 locales; body = 23 blocks):
+      //   4  "Batumi Boulevard" — "...locals come to jog, cycle, meet friends, or
+      //      WATCH THE SUNSET... In the evening it shifts: cooler air, lights
+      //      coming on"  -> the sunset/parasailing frame
+      //   20 "Relax by the Black Sea" — "It's MOSTLY PEBBLE rather than sand...
+      //      sitting by the sea, swimming, or walking along the water"
+      //      -> the pebble-shore frame
+      // ⚠️ The port/harbour frame from the same original package was considered
+      // and REJECTED: this page never describes a harbour, boats or cranes, and
+      // its single "port" mention is the 19th-century OIL port in the Old Batumi
+      // architecture section — a modern container-crane photo there would
+      // illustrate the wrong century.
+      inlineImageObjects: [
+        {
+          // Pre-encoded and copied as-is; unused elsewhere, so no re-edit needed.
+          base: 'batumi-sunset-parasailing-black-sea-georgia', width: 1448, height: 965,
+          anchor: 'inline-sunset-sea', dir: '/images/batumi',
+          locationName: 'Batumi, Adjara, Georgia',
+          locality: 'Batumi', region: 'Adjara', geo: { lat: 41.6500, lng: 41.6367 },
+          name: {
+            en: 'Parasailing over the Black Sea at sunset off Batumi, a boat towing a parachute against a pink and purple sky, Georgia',
+            de: 'Parasailing über dem Schwarzen Meer bei Sonnenuntergang vor Batumi, ein Boot zieht einen Fallschirm vor rosa-violettem Himmel, Georgien',
+            fr: 'Parachute ascensionnel au-dessus de la mer Noire au coucher du soleil au large de Batoumi, un bateau tractant une voile sur un ciel rose et violet, Géorgie',
+            es: 'Parasailing sobre el mar Negro al atardecer frente a Batumi, una lancha remolcando un paracaídas ante un cielo rosa y violeta, Georgia',
+            nl: 'Parasailing boven de Zwarte Zee bij zonsondergang voor Batoemi, een boot trekt een parachute tegen een roze-paarse lucht, Georgië',
+            cs: 'Parasailing nad Černým mořem při západu slunce u Batumi, člun táhne padák proti růžovo-fialové obloze, Gruzie',
+            pl: 'Parasailing nad Morzem Czarnym o zachodzie słońca u wybrzeży Batumi, łódź holująca spadochron na tle różowo-fioletowego nieba, Gruzja',
+          },
+          caption: {
+            en: 'On summer evenings the Batumi seafront turns to play: boats tow parasailers out over the Black Sea as the sun drops into the water and the sky flushes pink and violet.',
+            de: 'An Sommerabenden wird die Uferpromenade von Batumi zum Spielplatz: Boote ziehen Parasailer hinaus über das Schwarze Meer, während die Sonne im Wasser versinkt und der Himmel sich rosa und violett färbt.',
+            fr: "Les soirs d'été, le front de mer de Batoumi passe aux loisirs : les bateaux tractent les parachutistes ascensionnels au-dessus de la mer Noire tandis que le soleil plonge dans l'eau et que le ciel s'empourpre de rose et de violet.",
+            es: 'En las tardes de verano, el paseo marítimo de Batumi se entrega al ocio: las lanchas remolcan a los parasailers sobre el mar Negro mientras el sol se hunde en el agua y el cielo se tiñe de rosa y violeta.',
+            nl: 'Op zomeravonden wordt de boulevard van Batoemi speels: boten trekken parasailers uit over de Zwarte Zee terwijl de zon in het water zakt en de lucht roze en violet kleurt.',
+            cs: 'Za letních večerů se batumské nábřeží mění v hřiště: čluny táhnou parasailery nad Černým mořem, zatímco slunce zapadá do vody a obloha rudne do růžova a fialova.',
+            pl: 'Latem wieczorami nadmorska promenada Batumi zamienia się w plac zabaw: łodzie holują parasailerów nad Morzem Czarnym, gdy słońce zapada w wodę, a niebo różowieje i fioletowieje.',
+          },
+        },
+        {
+          // RE-EDIT of the Batumi city page's pebble-beach frame: cropped
+          // 1448x1086 → 1448x966 at top=120 so the shore fills the frame, which
+          // is what block 20 actually describes. Own base name, own encode; same
+          // photograph underneath. People are distant and incidental — alt and
+          // caption stay place-focused and describe no one.
+          base: 'batumi-pebble-shore-sea-georgia', width: 1448, height: 966,
+          anchor: 'inline-pebble-shore', dir: '/images/batumi',
+          locationName: 'Batumi, Adjara, Georgia',
+          locality: 'Batumi', region: 'Adjara', geo: { lat: 41.6500, lng: 41.6367 },
+          name: {
+            en: "Batumi's pebble beach sloping to the Black Sea under a bright, partly cloudy sky, Adjara, Georgia",
+            de: 'Batumis Kieselstrand, der unter einem hellen, teils bewölkten Himmel zum Schwarzen Meer abfällt, Adscharien, Georgien',
+            fr: 'La plage de galets de Batumi descendant vers la mer Noire sous un ciel lumineux et partiellement nuageux, Adjarie, Géorgie',
+            es: 'La playa de guijarros de Batumi descendiendo hacia el mar Negro bajo un cielo luminoso y parcialmente nublado, Adjaria, Georgia',
+            nl: 'Het kiezelstrand van Batumi dat afloopt naar de Zwarte Zee onder een heldere, deels bewolkte hemel, Adzjarië, Georgië',
+            cs: 'Oblázková pláž v Batumi klesající k Černému moři pod jasnou, částečně zataženou oblohou, Adžárie, Gruzie',
+            pl: 'Kamienista plaża w Batumi opadająca ku Morzu Czarnemu pod jasnym, częściowo zachmurzonym niebem, Adżaria, Gruzja',
+          },
+          caption: {
+            en: "Batumi's beach is pebble rather than sand — smooth stones running down to clear water, with the shoreline open along the city's coast.",
+            de: 'Batumis Strand besteht aus Kieseln statt Sand – glatte Steine, die bis ans klare Wasser reichen, mit offener Uferlinie entlang der Küste der Stadt.',
+            fr: 'La plage de Batumi est de galets et non de sable — des pierres lisses qui descendent jusqu’à l’eau claire, le long du rivage ouvert de la ville.',
+            es: 'La playa de Batumi es de guijarros y no de arena: piedras lisas que bajan hasta el agua clara, con la orilla abierta a lo largo de la costa de la ciudad.',
+            nl: 'Het strand van Batumi bestaat uit kiezels in plaats van zand — gladde stenen die aflopen naar helder water, met een open kustlijn langs de stad.',
+            cs: 'Pláž v Batumi tvoří oblázky, nikoli písek — hladké kameny klesající k čisté vodě, s otevřeným pobřežím podél města.',
+            pl: 'Plaża w Batumi jest kamienista, a nie piaszczysta — gładkie kamienie schodzące do przejrzystej wody, z otwartą linią brzegową wzdłuż miasta.',
+          },
+        },
+      ],
       address: { addressLocality: 'Batumi' },
       attractions: [
         'Batumi Boulevard', 'Ali and Nino Sculpture', 'Batumi Botanical Garden',

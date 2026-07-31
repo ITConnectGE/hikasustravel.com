@@ -1805,6 +1805,44 @@ section {
   }
 }
 /* No rung above 1448 exists (Batumi Dolphinarium). Do not add a 1600/2400 breakpoint. */
+/* Things to Do in Batumi hero — per-page CSS background, and the FIRST hero on a
+   things-to-do page to use a ladder at all (the template only gained the opt-in
+   plumbing in 610fb1d; every other things-to-do page still renders a bare
+   single-width background). Source is a 1448x815 WIDESCREEN RE-EDIT of the
+   Batumi city page's skyline-from-the-beach frame — re-cut and re-encoded under
+   its own base name so it is not a byte-duplicate, though it remains the same
+   photograph. Ladder 768/1200/1448; the crop keeps full native width so nothing
+   is upscaled and there is NO 1600/2400 rung. `background-position: center
+   center`: the towers sit mid-frame with open sky above (the H1 zone). No extra
+   scrim — the shared .coverme::after overlay carries the text. The plain url()
+   line is the image-set() fallback. */
+.hero--things-to-do-batumi {
+  background-image: url("/images/batumi/batumi-seafront-skyline-wide-georgia-1200.webp");
+  background-image: image-set(
+    url("/images/batumi/batumi-seafront-skyline-wide-georgia-768.avif") type("image/avif"),
+    url("/images/batumi/batumi-seafront-skyline-wide-georgia-768.webp") type("image/webp")
+  );
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+@media (min-width: 768px) {
+  .hero--things-to-do-batumi {
+    background-image: image-set(
+      url("/images/batumi/batumi-seafront-skyline-wide-georgia-1200.avif") type("image/avif"),
+      url("/images/batumi/batumi-seafront-skyline-wide-georgia-1200.webp") type("image/webp")
+    );
+  }
+}
+@media (min-width: 1200px) {
+  .hero--things-to-do-batumi {
+    background-image: image-set(
+      url("/images/batumi/batumi-seafront-skyline-wide-georgia-1448.avif") type("image/avif"),
+      url("/images/batumi/batumi-seafront-skyline-wide-georgia-1448.webp") type("image/webp")
+    );
+  }
+}
+/* No rung above 1448 exists (Things to Do in Batumi). Do not add a 1600/2400 breakpoint. */
 .centerme {
   text-align: center !important;
 }
