@@ -1677,6 +1677,46 @@ section {
   }
 }
 /* No rung above 1448 exists (Musicians Park). Do not add a 1600 or 2400 breakpoint. */
+/* Georgia in Miniatures (Shekvetili) hero — per-page CSS background (same opt-in
+   mechanism as .hero--ureki and .hero--musicians-park; the third Guria hero).
+   Owner's own photo of the Uplistsikhe SCALE MODEL inside the miniature park —
+   NOT the real cave town near Gori. Native ceiling is 1448, BELOW the usual 1600
+   rung, so the ladder is exactly 768/1200/1448 with the top breakpoint at
+   min-width:1200 — there is NO 1600 or 2400 rung, no upscale. First hero served
+   from /images/guria/ rather than /images/files/. `background-position: center
+   center`: the model sits centre-frame with open evening sky above (the H1 zone),
+   so it stays framed at every crop and needs no positioning bias. The shared
+   .coverme::after overlay (rgba(0,0,0,0.35)) supplies the readable text layer, so
+   NO extra per-hero scrim is added — a second layer would flatten the warm low
+   sunlight on the carved stone. The plain url() line = image-set() fallback for
+   browsers without image-set(). */
+.hero--georgia-in-miniatures {
+  background-image: url("/images/guria/uplistsikhe-miniature-shekvetili-georgia-1200.webp");
+  background-image: image-set(
+    url("/images/guria/uplistsikhe-miniature-shekvetili-georgia-768.avif") type("image/avif"),
+    url("/images/guria/uplistsikhe-miniature-shekvetili-georgia-768.webp") type("image/webp")
+  );
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+@media (min-width: 768px) {
+  .hero--georgia-in-miniatures {
+    background-image: image-set(
+      url("/images/guria/uplistsikhe-miniature-shekvetili-georgia-1200.avif") type("image/avif"),
+      url("/images/guria/uplistsikhe-miniature-shekvetili-georgia-1200.webp") type("image/webp")
+    );
+  }
+}
+@media (min-width: 1200px) {
+  .hero--georgia-in-miniatures {
+    background-image: image-set(
+      url("/images/guria/uplistsikhe-miniature-shekvetili-georgia-1448.avif") type("image/avif"),
+      url("/images/guria/uplistsikhe-miniature-shekvetili-georgia-1448.webp") type("image/webp")
+    );
+  }
+}
+/* No rung above 1448 exists (Georgia in Miniatures). Do not add a 1600 or 2400 breakpoint. */
 .centerme {
   text-align: center !important;
 }

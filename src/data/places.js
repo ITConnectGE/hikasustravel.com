@@ -2540,7 +2540,198 @@ export const sites = [
     slug: 'georgia-in-miniatures-shekvetili', name: 'Georgia in Miniatures Park',
     parentType: 'region', parent: 'guria', published: true,
     seoKey: 'georgiaInMiniatures', contentKey: 'georgiaInMiniatures',
-    image: '/images/files/georgia-home.jpg',
+    // Hero: the owner's own photo of the Uplistsikhe SCALE MODEL in the Georgia in
+    // Miniatures park, replacing the generic georgia-home.jpg placeholder.
+    // Landscape 4:3, native 1448 (BELOW the usual 1600 rung) → hero ladder
+    // 768/1200/1448 only; NO 1600/2400 variant is generated or referenced, and the
+    // ImageObject contentUrl points at the 1448 rung. Visible background is the
+    // `.hero--georgia-in-miniatures` CSS class (heroClass) so the image-set ladder
+    // + `background-position: center center` apply; HeroSection then omits its
+    // inline background. FIRST page to use /images/guria/ (every earlier Guria set
+    // — Ureki, Musicians Park — lives in /images/files/).
+    // ⚠️ MEANING: all six images on this page are photos of SCALE MODELS inside the
+    // miniature park, NOT the real monuments. Every alt/caption/name says "scale
+    // model … at the Georgia in Miniatures park in Shekvetili", and every
+    // contentLocation is the PARK in Shekvetili — never Mtskheta, Gori, Ushguli,
+    // Vardzia, Gelati or Tbilisi. Do not "correct" these to the real monuments.
+    image: '/images/guria/uplistsikhe-miniature-shekvetili-georgia-1448.webp',
+    imageAvif: '/images/guria/uplistsikhe-miniature-shekvetili-georgia-1448.avif',
+    heroClass: 'hero--georgia-in-miniatures',
+    // Dedicated 1.91:1 social-share image (og:image / twitter:image) — hero only;
+    // the five inline images get NO OG variant. A matching -og.webp ships in
+    // /images/guria/ but is unreferenced: useSEO/prerender emit a single og:image.
+    ogImage: { src: '/images/guria/uplistsikhe-miniature-shekvetili-georgia-og.jpg', width: 1200, height: 630 },
+    // LCP hero preload: the 1200 AVIF rung with fetchpriority=high. Page-scoped —
+    // only entries with heroPreload emit a <link rel=preload as=image> via
+    // SitePage/useSEO + prerender.
+    heroPreload: '/images/guria/uplistsikhe-miniature-shekvetili-georgia-1200.avif',
+    // Hero image SEO/AEO metadata (owner's own photo → brand credit, set by
+    // SitePage). The hero is a CSS background (no <img alt>), so the localized alt
+    // lives here and is emitted as og:image:alt / twitter:image:alt per locale,
+    // while the `caption` map feeds the hero ImageObject caption. Verbatim from
+    // georgia-in-miniatures-shekvetili-SEO-package.md. width/height = the 1448 rung.
+    // contentLocation is NAME + ADDRESS ONLY, no geo: the package ships no
+    // coordinate for the miniature park itself, and the nearby Musicians Park /
+    // Shekvetili village coordinates would be an unsourced guess for this point.
+    // SitePage + scripts/seo-jsonld.js both handle a geo-less contentLocation
+    // (Elia Hill / Bolnisi Museum precedent).
+    imageMeta: {
+      width: 1448, height: 1086,
+      name: 'Scale model of the rock-hewn cave town of Uplistsikhe at the Georgia in Miniatures park in Shekvetili, Guria, Georgia',
+      description: "A scale model of the rock-hewn cave town of Uplistsikhe, its carved chambers, stairways and terraces reproduced in stone on a lawn at the Georgia in Miniatures park in Shekvetili, Guria, on the Black Sea coast of Georgia (the country). The park, opened in 2016, displays around 50 models of Georgian monuments at roughly 1:25 scale. This is the miniature, not the real cave town near Gori.",
+      locationName: 'Georgia in Miniatures Park, Shekvetili, Ozurgeti Municipality, Guria, Georgia',
+      locality: 'Shekvetili', region: 'Guria', country: 'GE',
+      alt: {
+        en: 'Scale model of the rock-hewn cave town of Uplistsikhe at the Georgia in Miniatures park in Shekvetili, Guria, Georgia',
+        de: 'Modell der in den Fels gehauenen Höhlenstadt Uplisziche im Park „Georgia in Miniatures" in Shekvetili, Guria, Georgien',
+        fr: "Modèle réduit de la ville troglodyte d'Ouplistsikhé au parc Georgia in Miniatures à Shekvetili, Gourie, Géorgie",
+        es: 'Maqueta de la ciudad rupestre de Uplistsikhe en el parque Georgia in Miniatures en Shekvetili, Guria, Georgia',
+        nl: 'Schaalmodel van de in de rots uitgehakte grottenstad Uplistsikhe in het park Georgia in Miniatures in Shekvetili, Guria, Georgië',
+        cs: 'Model skalního jeskynního města Uplisciche v parku Georgia in Miniatures v Shekvetili, Gurie, Gruzie',
+        pl: 'Model wykutego w skale jaskiniowego miasta Uplisciche w parku Georgia in Miniatures w Szekwetili, Guria, Gruzja',
+      },
+      caption: {
+        en: "A scale model of Uplistsikhe, the ancient rock-hewn cave town near Gori, at the Georgia in Miniatures park in Shekvetili — an open-air park on the Black Sea coast where around 50 of Georgia's landmarks are recreated in miniature.",
+        de: 'Ein Modell von Uplisziche, der antiken in den Fels gehauenen Höhlenstadt bei Gori, im Park „Georgia in Miniatures" in Shekvetili – einem Freilichtpark an der Schwarzmeerküste, in dem rund 50 Wahrzeichen Georgiens in Miniatur nachgebildet sind.',
+        fr: "Une maquette d'Ouplistsikhé, l'ancienne cité troglodyte près de Gori, au parc Georgia in Miniatures à Shekvetili — un parc en plein air de la côte de la mer Noire où une cinquantaine de monuments géorgiens sont reproduits en miniature.",
+        es: 'Una maqueta de Uplistsikhe, la antigua ciudad rupestre cerca de Gori, en el parque Georgia in Miniatures en Shekvetili, un parque al aire libre de la costa del mar Negro donde se recrean en miniatura unos 50 monumentos de Georgia.',
+        nl: "Een schaalmodel van Uplistsikhe, de oude in de rots uitgehakte grottenstad bij Gori, in het park Georgia in Miniatures in Shekvetili — een openluchtpark aan de Zwarte Zeekust met zo'n 50 Georgische monumenten in miniatuur.",
+        cs: 'Model Uplisciche, starobylého skalního jeskynního města u Gori, v parku Georgia in Miniatures v Shekvetili — venkovním parku na pobřeží Černého moře, kde je v miniatuře ztvárněno na 50 gruzínských památek.',
+        pl: 'Model Uplisciche, starożytnego wykutego w skale miasta jaskiniowego koło Gori, w parku Georgia in Miniatures w Szekwetili — plenerowym parku nad Morzem Czarnym, gdzie w miniaturze odtworzono około 50 gruzińskich zabytków.',
+      },
+    },
+    // Five contextual inline body images (real <figure> blocks in the per-locale
+    // body HTML). Rendered via SitePage's inlineImageObjects @graph map: stable @id
+    // per image, contentUrl at the 1448 rung (files ship WITHOUT the `w` suffix),
+    // localized name+caption, brand credit, and NEVER representativeOfPage — that
+    // stays the hero's. `dir` points them at /images/guria/ instead of the default
+    // /images/files/. All five are LANDSCAPE 4:3 → ladder 768/1200/1448, plain
+    // `.body-img` (642px cap). No 1600/2400 anywhere, no upscale, no fetchpriority,
+    // no OG. Same name-only-plus-address contentLocation as the hero (no geo).
+    // Body block indices they are spliced after (identical in all 7 locales):
+    // 2 → Svetitskhoveli, 4 → Old Tbilisi, 5 → Vardzia, 8 → Gelati, 10 → Ushguli.
+    inlineImageObjects: [
+      {
+        base: 'svetitskhoveli-miniature-shekvetili-georgia', width: 1448, height: 1086,
+        anchor: 'inline-svetitskhoveli', dir: '/images/guria',
+        locationName: 'Georgia in Miniatures Park, Shekvetili, Ozurgeti Municipality, Guria, Georgia',
+        locality: 'Shekvetili', region: 'Guria',
+        name: {
+          en: 'Scale model of Svetitskhoveli Cathedral with its tall conical dome at the Georgia in Miniatures park in Shekvetili, Georgia',
+          de: 'Modell der Swetizchoweli-Kathedrale mit ihrer hohen Kegelkuppel im Park „Georgia in Miniatures" in Shekvetili, Georgien',
+          fr: 'Modèle réduit de la cathédrale de Svetitskhoveli et de sa haute coupole conique au parc Georgia in Miniatures à Shekvetili, Géorgie',
+          es: 'Maqueta de la catedral de Svetitsjoveli con su alta cúpula cónica en el parque Georgia in Miniatures en Shekvetili, Georgia',
+          nl: 'Schaalmodel van de Svetitschoveli-kathedraal met haar hoge kegelvormige koepel in het park Georgia in Miniatures in Shekvetili, Georgië',
+          cs: 'Model katedrály Sveticchoveli s vysokou kuželovou kupolí v parku Georgia in Miniatures v Shekvetili, Gruzie',
+          pl: 'Model katedry Sweticchoweli z wysoką stożkową kopułą w parku Georgia in Miniatures w Szekwetili, Gruzja',
+        },
+        caption: {
+          en: 'A scale model of Svetitskhoveli Cathedral — the 11th-century UNESCO-listed cathedral in Mtskheta — at the Georgia in Miniatures park in Shekvetili, Guria.',
+          de: 'Ein Modell der Swetizchoweli-Kathedrale – der zum UNESCO-Welterbe zählenden Kathedrale des 11. Jahrhunderts in Mzcheta – im Park „Georgia in Miniatures" in Shekvetili, Guria.',
+          fr: "Une maquette de la cathédrale de Svetitskhoveli — cathédrale du XIe siècle classée à l'UNESCO, à Mtskheta — au parc Georgia in Miniatures à Shekvetili, Gourie.",
+          es: 'Una maqueta de la catedral de Svetitsjoveli — catedral del siglo XI declarada Patrimonio de la Humanidad, en Mtsjeta — en el parque Georgia in Miniatures en Shekvetili, Guria.',
+          nl: 'Een schaalmodel van de Svetitschoveli-kathedraal — de 11e-eeuwse, op de UNESCO-lijst staande kathedraal in Mtscheta — in het park Georgia in Miniatures in Shekvetili, Guria.',
+          cs: 'Model katedrály Sveticchoveli — katedrály z 11. století zapsané na seznamu UNESCO v Mccchetě — v parku Georgia in Miniatures v Shekvetili, Gurie.',
+          pl: 'Model katedry Sweticchoweli — XI-wiecznej katedry z listy UNESCO w Mcchecie — w parku Georgia in Miniatures w Szekwetili, Guria.',
+        },
+      },
+      {
+        base: 'old-tbilisi-miniature-shekvetili-georgia', width: 1448, height: 1086,
+        anchor: 'inline-old-tbilisi', dir: '/images/guria',
+        locationName: 'Georgia in Miniatures Park, Shekvetili, Ozurgeti Municipality, Guria, Georgia',
+        locality: 'Shekvetili', region: 'Guria',
+        name: {
+          en: 'Scale model of Old Tbilisi and Narikala Fortress on its rocky hill at the Georgia in Miniatures park in Shekvetili, Georgia',
+          de: 'Modell der Altstadt von Tiflis mit der Festung Narikala auf ihrem Felshügel im Park „Georgia in Miniatures" in Shekvetili, Georgien',
+          fr: 'Modèle réduit du vieux Tbilissi et de la forteresse de Narikala sur sa colline rocheuse au parc Georgia in Miniatures à Shekvetili, Géorgie',
+          es: 'Maqueta del casco antiguo de Tiflis y la fortaleza de Narikala sobre su colina rocosa en el parque Georgia in Miniatures en Shekvetili, Georgia',
+          nl: 'Schaalmodel van de oude stad van Tbilisi en de vesting Narikala op haar rotsheuvel in het park Georgia in Miniatures in Shekvetili, Georgië',
+          cs: 'Model starého Tbilisi a pevnosti Narikala na skalnatém kopci v parku Georgia in Miniatures v Shekvetili, Gruzie',
+          pl: 'Model starego Tbilisi i twierdzy Narikala na skalistym wzgórzu w parku Georgia in Miniatures w Szekwetili, Gruzja',
+        },
+        caption: {
+          en: 'A scale model of Old Tbilisi, its balconied houses climbing toward Narikala Fortress, at the Georgia in Miniatures park in Shekvetili, Guria.',
+          de: 'Ein Modell der Altstadt von Tiflis, deren Balkonhäuser zur Festung Narikala emporsteigen, im Park „Georgia in Miniatures" in Shekvetili, Guria.',
+          fr: 'Une maquette du vieux Tbilissi, ses maisons à balcons grimpant vers la forteresse de Narikala, au parc Georgia in Miniatures à Shekvetili, Gourie.',
+          es: 'Una maqueta del casco antiguo de Tiflis, con sus casas de balcones ascendiendo hacia la fortaleza de Narikala, en el parque Georgia in Miniatures en Shekvetili, Guria.',
+          nl: 'Een schaalmodel van het oude Tbilisi, met balkonhuizen die opklimmen naar de vesting Narikala, in het park Georgia in Miniatures in Shekvetili, Guria.',
+          cs: 'Model starého Tbilisi, jehož domy s balkony stoupají k pevnosti Narikala, v parku Georgia in Miniatures v Shekvetili, Gurie.',
+          pl: 'Model starego Tbilisi, którego domy z balkonami wspinają się ku twierdzy Narikala, w parku Georgia in Miniatures w Szekwetili, Guria.',
+        },
+      },
+      {
+        base: 'vardzia-miniature-shekvetili-georgia', width: 1448, height: 1086,
+        anchor: 'inline-vardzia', dir: '/images/guria',
+        locationName: 'Georgia in Miniatures Park, Shekvetili, Ozurgeti Municipality, Guria, Georgia',
+        locality: 'Shekvetili', region: 'Guria',
+        name: {
+          en: 'Scale model of the Vardzia cave monastery carved into a cliff face at the Georgia in Miniatures park in Shekvetili, Georgia',
+          de: 'Modell des in eine Felswand gehauenen Höhlenklosters Wardsia im Park „Georgia in Miniatures" in Shekvetili, Georgien',
+          fr: 'Modèle réduit du monastère troglodyte de Vardzia creusé dans une falaise au parc Georgia in Miniatures à Shekvetili, Géorgie',
+          es: 'Maqueta del monasterio rupestre de Vardzia excavado en un acantilado en el parque Georgia in Miniatures en Shekvetili, Georgia',
+          nl: 'Schaalmodel van het in een rotswand uitgehakte grottenklooster Vardzia in het park Georgia in Miniatures in Shekvetili, Georgië',
+          cs: 'Model jeskynního kláštera Vardzia vytesaného do skalní stěny v parku Georgia in Miniatures v Shekvetili, Gruzie',
+          pl: 'Model wykutego w ścianie skalnej klasztoru jaskiniowego Wardzia w parku Georgia in Miniatures w Szekwetili, Gruzja',
+        },
+        caption: {
+          en: 'A scale model of Vardzia, the 12th-century cave monastery carved into a cliff under Queen Tamar, at the Georgia in Miniatures park in Shekvetili, Guria.',
+          de: 'Ein Modell von Wardsia, dem in eine Felswand gehauenen Höhlenkloster des 12. Jahrhunderts aus der Zeit der Königin Tamar, im Park „Georgia in Miniatures" in Shekvetili, Guria.',
+          fr: 'Une maquette de Vardzia, le monastère troglodyte du XIIe siècle creusé dans une falaise sous la reine Tamar, au parc Georgia in Miniatures à Shekvetili, Gourie.',
+          es: 'Una maqueta de Vardzia, el monasterio rupestre del siglo XII excavado en un acantilado bajo la reina Tamar, en el parque Georgia in Miniatures en Shekvetili, Guria.',
+          nl: 'Een schaalmodel van Vardzia, het 12e-eeuwse in een rotswand uitgehakte grottenklooster uit de tijd van koningin Tamar, in het park Georgia in Miniatures in Shekvetili, Guria.',
+          cs: 'Model Vardzie, jeskynního kláštera z 12. století vytesaného do skály za vlády královny Tamary, v parku Georgia in Miniatures v Shekvetili, Gurie.',
+          pl: 'Model Wardzii, XII-wiecznego klasztoru jaskiniowego wykutego w skale za panowania królowej Tamar, w parku Georgia in Miniatures w Szekwetili, Guria.',
+        },
+      },
+      {
+        base: 'gelati-miniature-shekvetili-georgia', width: 1448, height: 1086,
+        anchor: 'inline-gelati', dir: '/images/guria',
+        locationName: 'Georgia in Miniatures Park, Shekvetili, Ozurgeti Municipality, Guria, Georgia',
+        locality: 'Shekvetili', region: 'Guria',
+        name: {
+          en: 'Scale model of Gelati Monastery with turquoise-tiled roofs at the Georgia in Miniatures park in Shekvetili, Georgia',
+          de: 'Modell des Klosters Gelati mit türkis gedeckten Dächern im Park „Georgia in Miniatures" in Shekvetili, Georgien',
+          fr: 'Modèle réduit du monastère de Gélati aux toits de tuiles turquoise au parc Georgia in Miniatures à Shekvetili, Géorgie',
+          es: 'Maqueta del monasterio de Gelati con tejados de tejas turquesa en el parque Georgia in Miniatures en Shekvetili, Georgia',
+          nl: 'Schaalmodel van het klooster Gelati met turkooizen dakpannen in het park Georgia in Miniatures in Shekvetili, Georgië',
+          cs: 'Model kláštera Gelati s tyrkysově krytými střechami v parku Georgia in Miniatures v Shekvetili, Gruzie',
+          pl: 'Model klasztoru Gelati o dachach krytych turkusową dachówką w parku Georgia in Miniatures w Szekwetili, Gruzja',
+        },
+        caption: {
+          en: 'A scale model of Gelati Monastery — the 12th-century UNESCO-listed monastery near Kutaisi founded by David the Builder — at the Georgia in Miniatures park in Shekvetili.',
+          de: 'Ein Modell des Klosters Gelati – des zum UNESCO-Welterbe zählenden Klosters des 12. Jahrhunderts bei Kutaissi, gegründet von David dem Erbauer – im Park „Georgia in Miniatures" in Shekvetili.',
+          fr: "Une maquette du monastère de Gélati — monastère du XIIe siècle classé à l'UNESCO près de Koutaïssi, fondé par David le Bâtisseur — au parc Georgia in Miniatures à Shekvetili.",
+          es: 'Una maqueta del monasterio de Gelati — monasterio del siglo XII declarado Patrimonio de la Humanidad cerca de Kutaisi, fundado por David el Constructor — en el parque Georgia in Miniatures en Shekvetili.',
+          nl: 'Een schaalmodel van het klooster Gelati — het 12e-eeuwse, op de UNESCO-lijst staande klooster bij Koetaisi, gesticht door David de Bouwer — in het park Georgia in Miniatures in Shekvetili.',
+          cs: 'Model kláštera Gelati — kláštera z 12. století zapsaného na seznamu UNESCO u Kutaisi, založeného Davidem Stavitelem — v parku Georgia in Miniatures v Shekvetili.',
+          pl: 'Model klasztoru Gelati — XII-wiecznego klasztoru z listy UNESCO koło Kutaisi, założonego przez Dawida Budowniczego — w parku Georgia in Miniatures w Szekwetili.',
+        },
+      },
+      {
+        base: 'ushguli-svan-towers-miniature-shekvetili-georgia', width: 1448, height: 1086,
+        anchor: 'inline-ushguli-svan-towers', dir: '/images/guria',
+        locationName: 'Georgia in Miniatures Park, Shekvetili, Ozurgeti Municipality, Guria, Georgia',
+        locality: 'Shekvetili', region: 'Guria',
+        name: {
+          en: 'Scale model of the medieval Svan tower-houses of Ushguli at the Georgia in Miniatures park in Shekvetili, Georgia',
+          de: 'Modell der mittelalterlichen swanischen Wehrtürme von Uschguli im Park „Georgia in Miniatures" in Shekvetili, Georgien',
+          fr: "Modèle réduit des tours-maisons svanes médiévales d'Ouchgouli au parc Georgia in Miniatures à Shekvetili, Géorgie",
+          es: 'Maqueta de las casas-torre svanas medievales de Ushguli en el parque Georgia in Miniatures en Shekvetili, Georgia',
+          nl: 'Schaalmodel van de middeleeuwse Svanetische woontorens van Ushguli in het park Georgia in Miniatures in Shekvetili, Georgië',
+          cs: 'Model středověkých svanských obytných věží Ušguli v parku Georgia in Miniatures v Shekvetili, Gruzie',
+          pl: 'Model średniowiecznych swańskich wież mieszkalnych Uszguli w parku Georgia in Miniatures w Szekwetili, Gruzja',
+        },
+        caption: {
+          en: "A scale model of the medieval Svan tower-houses of Ushguli — one of Europe's highest inhabited villages, in UNESCO-listed Upper Svaneti — at the Georgia in Miniatures park in Shekvetili.",
+          de: 'Ein Modell der mittelalterlichen swanischen Wehrtürme von Uschguli – eines der höchstgelegenen bewohnten Dörfer Europas, im UNESCO-gelisteten Oberswanetien – im Park „Georgia in Miniatures" in Shekvetili.',
+          fr: "Une maquette des tours-maisons svanes médiévales d'Ouchgouli — l'un des villages habités les plus hauts d'Europe, en Haute-Svanétie classée à l'UNESCO — au parc Georgia in Miniatures à Shekvetili.",
+          es: 'Una maqueta de las casas-torre svanas medievales de Ushguli — uno de los pueblos habitados más altos de Europa, en la Alta Svanetia declarada Patrimonio de la Humanidad — en el parque Georgia in Miniatures en Shekvetili.',
+          nl: 'Een schaalmodel van de middeleeuwse Svanetische woontorens van Ushguli — een van de hoogstgelegen bewoonde dorpen van Europa, in het door UNESCO erkende Boven-Svanetië — in het park Georgia in Miniatures in Shekvetili.',
+          cs: 'Model středověkých svanských obytných věží Ušguli — jedné z nejvýše položených obydlených vesnic Evropy, v Horní Svanetii zapsané na seznamu UNESCO — v parku Georgia in Miniatures v Shekvetili.',
+          pl: 'Model średniowiecznych swańskich wież mieszkalnych Uszguli — jednej z najwyżej położonych zamieszkanych wsi Europy, w wpisanej na listę UNESCO Górnej Swanetii — w parku Georgia in Miniatures w Szekwetili.',
+        },
+      },
+    ],
   },
   {
     slug: 'musicians-park-shekvetili', name: 'Musicians Park',
