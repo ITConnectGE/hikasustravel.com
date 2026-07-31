@@ -15,6 +15,8 @@ import { autolinkHtml } from '../../utils/autolink'
 import NotFoundPage from './NotFoundPage'
 
 const SITE_URL = 'https://www.hikasustravel.com'
+// Brand used for ImageObject credit/creator (mirrors og:site_name in useSEO).
+const BRAND = 'Hikasus Travel'
 
 /**
  * Generic "Things to do in <City>" page, driven by the places.js registry.
@@ -43,6 +45,17 @@ export default function ThingsToDoCityPage() {
   const valid = !!config && ttd === `things-to-do-in-${citySlug}`
 
   const heroImage = config ? (config.image || place.image) : null
+  // Optional image plumbing, all opt-in on the `thingsToDo` block and mirroring
+  // what SitePage/CityPage already do. Every things-to-do page that sets none of
+  // these (all 37 of them today) renders byte-identically to before:
+  //   imageAvif / heroClass → AVIF+WebP image-set() hero ladder
+  //   heroPreload           → <link rel=preload as=image fetchpriority=high>
+  //   ogImage               → dedicated 1.91:1 social image
+  //   imageMeta             → localized hero alt (og:image:alt / twitter:image:alt)
+  //                           + a hero ImageObject in the @graph
+  //   inlineImageObjects    → one ImageObject per inline body figure
+  const heroImageMeta = valid ? config.imageMeta : null
+  const heroAlt = heroImageMeta ? (heroImageMeta.alt[lang] || heroImageMeta.alt.en) : null
   const page = valid ? (pages[config.contentKey] || enPages[config.contentKey]) : null
   const seo = getSEO(valid ? config.seoKey : 'destinations', lang)
   const faqItems = useMemo(() => (page && page.faq) || [], [page])
@@ -125,6 +138,82 @@ export default function ThingsToDoCityPage() {
             },
           })),
         },
+        // Hero ImageObject (opt-in via config.imageMeta). The hero is a CSS
+        // background, not an indexable <img>, so this is what makes it
+        // describable to Google/AI. `imageId` gives it a stable page-scoped @id.
+        ...(heroImageMeta ? [{
+          '@type': 'ImageObject',
+          ...(heroImageMeta.imageId ? { '@id': `${url}#${heroImageMeta.imageId}` } : {}),
+          contentUrl: `${SITE_URL}${heroImage}`,
+          url: `${SITE_URL}${heroImage}`,
+          width: heroImageMeta.width,
+          height: heroImageMeta.height,
+          caption: heroImageMeta.caption
+            ? (heroImageMeta.caption[lang] || heroImageMeta.caption.en)
+            : heroAlt,
+          name: heroImageMeta.name,
+          description: heroImageMeta.description,
+          representativeOfPage: true,
+          creator: { '@type': 'Organization', name: BRAND },
+          creditText: BRAND,
+          copyrightNotice: `© ${BRAND}`,
+          contentLocation: {
+            '@type': 'Place',
+            name: heroImageMeta.locationName,
+            ...((heroImageMeta.locality || heroImageMeta.region || heroImageMeta.country)
+              ? {
+                  address: {
+                    '@type': 'PostalAddress',
+                    addressLocality: heroImageMeta.locality,
+                    addressRegion: heroImageMeta.region,
+                    addressCountry: heroImageMeta.country,
+                  },
+                }
+              : {}),
+            ...(heroImageMeta.geo
+              ? { geo: { '@type': 'GeoCoordinates', latitude: heroImageMeta.geo.lat, longitude: heroImageMeta.geo.lng } }
+              : {}),
+          },
+        }] : []),
+        // Inline body images (real <figure> blocks in the per-locale content).
+        // Same convention as SitePage's inlineImageObjects: stable per-image @id,
+        // contentUrl at the image's top rung (files ship WITHOUT the `w` suffix),
+        // optional `dir` for a non-/images/files folder, localized name+caption,
+        // and NEVER representativeOfPage — that stays the hero's.
+        ...((valid && config.inlineImageObjects) || []).map((img) => {
+          const href = `${SITE_URL}${img.dir || '/images/files'}/${img.base}-${img.width}.webp`
+          return {
+            '@type': 'ImageObject',
+            '@id': `${url}#${img.anchor}`,
+            contentUrl: href,
+            url: href,
+            width: img.width,
+            height: img.height,
+            name: (img.name && (img.name[lang] || img.name.en)) || '',
+            caption: (img.caption && (img.caption[lang] || img.caption.en)) || '',
+            description: img.description,
+            creator: { '@type': 'Organization', name: BRAND },
+            creditText: BRAND,
+            copyrightNotice: `© ${BRAND}`,
+            contentLocation: {
+              '@type': 'Place',
+              name: img.locationName,
+              ...((img.locality || img.region)
+                ? {
+                    address: {
+                      '@type': 'PostalAddress',
+                      addressLocality: img.locality,
+                      addressRegion: img.region,
+                      addressCountry: 'GE',
+                    },
+                  }
+                : {}),
+              ...(img.geo
+                ? { geo: { '@type': 'GeoCoordinates', latitude: img.geo.lat, longitude: img.geo.lng } }
+                : {}),
+            },
+          }
+        }),
         {
           '@type': 'FAQPage',
           mainEntity: faqItems.map((item) => ({
@@ -136,9 +225,24 @@ export default function ThingsToDoCityPage() {
       ],
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [valid, lang, path, seo.description, heroImage, faqItems, ttdLabel])
+  }, [valid, lang, path, seo.description, heroImage, faqItems, ttdLabel, heroImageMeta, heroAlt])
 
-  useSEO(valid ? { ...seo, lang, path, image: heroImage, jsonLd } : {})
+  useSEO(valid ? {
+    ...seo, lang, path,
+    image: heroImage,
+    imageAlt: heroAlt,
+    // Prefer a dedicated 1.91:1 social image when the block defines one;
+    // otherwise useSEO falls back to the hero image (previous behaviour).
+    ogImage: config.ogImage?.src,
+    ogImageWidth: config.ogImage?.width,
+    ogImageHeight: config.ogImage?.height,
+    // Optional LCP hero preload (page-scoped): only blocks that set `heroPreload`
+    // emit a <link rel=preload as=image> for that rung.
+    preload: config.heroPreload
+      ? { href: config.heroPreload, type: 'image/avif', fetchpriority: 'high' }
+      : undefined,
+    jsonLd,
+  } : {})
 
   if (!valid) return <NotFoundPage />
 
@@ -147,7 +251,7 @@ export default function ThingsToDoCityPage() {
       <div className="dest-breadcrumbs">
         <Breadcrumbs trail={trail} />
       </div>
-      <HeroSection image={heroImage} title={page.heroTitle} />
+      <HeroSection image={heroImage} imageAvif={config.imageAvif} bgClass={config.heroClass} title={page.heroTitle} />
       <section className="page-items about-georgia">
         <EntityToursTag type={isCity ? 'city' : 'region'} slug={citySlug} name={place.name} />
         <FadeUp>
