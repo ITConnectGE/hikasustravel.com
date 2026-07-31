@@ -180,6 +180,12 @@ export default function SitePage() {
     const imageNode = heroImageMeta
       ? {
           '@type': 'ImageObject',
+          // Optional stable @id for the hero node (page-scoped), opt-in per entry:
+          // a hero package may ask the replacement node to reuse `#hero-image` so
+          // the swap is clean (e.g. Europe Square). Only entries that set
+          // imageMeta.imageId emit an @id; every other SitePage hero is unchanged.
+          // Mirrors CityPage and scripts/seo-jsonld.js, which already do this.
+          ...(heroImageMeta.imageId ? { '@id': `${url}#${heroImageMeta.imageId}` } : {}),
           contentUrl: `${SITE_URL}${heroImage}`,
           url: `${SITE_URL}${heroImage}`,
           width: heroImageMeta.width,

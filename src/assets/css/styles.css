@@ -1717,6 +1717,46 @@ section {
   }
 }
 /* No rung above 1448 exists (Georgia in Miniatures). Do not add a 1600 or 2400 breakpoint. */
+/* Europe Square (Batumi) hero — per-page CSS background (same opt-in mechanism as
+   .hero--ureki / .hero--musicians-park / .hero--georgia-in-miniatures). Owner's own
+   night photo of the square, replacing the reused generic Batumi.jpg (a DAYTIME
+   Alphabetic Tower / Boulevard shot that showed neither the square nor the Medea
+   statue). Native ceiling is 1448, BELOW the usual 1600 rung, so the ladder is
+   exactly 768/1200/1448 with the top breakpoint at min-width:1200 — there is NO
+   1600 or 2400 rung, no upscale. `background-position: center center`: the Medea
+   column sits mid-frame with the night sky above (the H1 zone), so it stays framed
+   at every crop and needs no positioning bias. The scene is already a night shot
+   and the shared .coverme::after overlay (rgba(0,0,0,0.35)) supplies the readable
+   text layer, so NO extra per-hero scrim is added — a second layer would crush the
+   lit façades and the illuminated skyline into the black sky. The plain url() line
+   = image-set() fallback for browsers without image-set(). */
+.hero--europe-square {
+  background-image: url("/images/batumi/europe-square-batumi-georgia-1200.webp");
+  background-image: image-set(
+    url("/images/batumi/europe-square-batumi-georgia-768.avif") type("image/avif"),
+    url("/images/batumi/europe-square-batumi-georgia-768.webp") type("image/webp")
+  );
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+@media (min-width: 768px) {
+  .hero--europe-square {
+    background-image: image-set(
+      url("/images/batumi/europe-square-batumi-georgia-1200.avif") type("image/avif"),
+      url("/images/batumi/europe-square-batumi-georgia-1200.webp") type("image/webp")
+    );
+  }
+}
+@media (min-width: 1200px) {
+  .hero--europe-square {
+    background-image: image-set(
+      url("/images/batumi/europe-square-batumi-georgia-1448.avif") type("image/avif"),
+      url("/images/batumi/europe-square-batumi-georgia-1448.webp") type("image/webp")
+    );
+  }
+}
+/* No rung above 1448 exists (Europe Square). Do not add a 1600 or 2400 breakpoint. */
 .centerme {
   text-align: center !important;
 }
@@ -7202,6 +7242,15 @@ select option:checked {
 .body-img--portrait img {
   max-width: 560px;
   margin-inline: auto;
+}
+/* Narrower portrait variant for very tall subjects (the Medea statue on its column
+   at Europe Square): a 3:4 frame at the 560px portrait cap renders 747px tall and
+   dominates the text column, so cap it at 420px (→ 560px tall). Additive modifier —
+   used alongside .body-img--portrait, and scoped so the existing 560px portraits
+   (Sameba, the Musicians Park statues) are unaffected. Placed after
+   `.body-img--portrait img` so it wins on source order (equal specificity). */
+.body-img--portrait-narrow img {
+  max-width: 420px;
 }
 /* Clickable body infographic (opens the shared lightbox). Affordance only —
    the <img> inside keeps its own sizing/rounding/shadow. */

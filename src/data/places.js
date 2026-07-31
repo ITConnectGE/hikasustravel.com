@@ -2498,7 +2498,108 @@ export const sites = [
     slug: 'europe-square-batumi', name: 'Europe Square',
     parentType: 'city', parent: 'batumi', published: true,
     seoKey: 'europeSquareBatumi', contentKey: 'europeSquareBatumi',
-    image: '/images/files/Batumi.jpg',
+    // Hero: the owner's own night photo of Europe Square, replacing the reused
+    // generic Batumi.jpg — which is a DAYTIME shot of the Alphabetic Tower and the
+    // Boulevard cycle path, not this square at all. Batumi.jpg is still the hero of
+    // batumi-central-mosque and batumi-piazza, so the file stays; only this page is
+    // repointed. Landscape 4:3, native 1448 (BELOW the usual 1600 rung) → hero
+    // ladder 768/1200/1448 only; NO 1600/2400 variant is generated or referenced,
+    // and the ImageObject contentUrl points at the 1448 rung. Visible background is
+    // the `.hero--europe-square` CSS class (heroClass) so the image-set ladder +
+    // `background-position: center center` apply; HeroSection then omits its inline
+    // background. FIRST set served from /images/batumi/ (earlier Batumi images live
+    // in /images/files/).
+    image: '/images/batumi/europe-square-batumi-georgia-1448.webp',
+    imageAvif: '/images/batumi/europe-square-batumi-georgia-1448.avif',
+    heroClass: 'hero--europe-square',
+    // Dedicated 1.91:1 social-share image (og:image / twitter:image) — hero only;
+    // the Medea inline gets NO OG variant. A matching -og.webp ships in
+    // /images/batumi/ but is unreferenced: useSEO/prerender emit a single og:image.
+    ogImage: { src: '/images/batumi/europe-square-batumi-georgia-og.jpg', width: 1200, height: 630 },
+    // LCP hero preload: the 1200 AVIF rung with fetchpriority=high. Page-scoped —
+    // only entries with heroPreload emit a <link rel=preload as=image> via
+    // SitePage/useSEO + prerender.
+    heroPreload: '/images/batumi/europe-square-batumi-georgia-1200.avif',
+    // Hero image SEO/AEO metadata (owner's own photo → brand credit, set by
+    // SitePage). The hero is a CSS background (no <img alt>), so the localized alt
+    // lives here and is emitted as og:image:alt / twitter:image:alt per locale,
+    // while the `caption` map feeds the hero ImageObject caption — there is no
+    // visible hero caption anywhere on this site (HeroSection renders only the H1).
+    // Verbatim from europe-square-batumi-SEO-package.md. width/height = the 1448
+    // rung. `imageId: 'hero-image'` makes SitePage emit the ImageObject @id
+    // …#hero-image (page-scoped, opt-in — mirrors the CityPage mechanism).
+    // contentLocation = Europe Square, Batumi, Adjara, GE. NO geo: the package
+    // ships no coordinate for the square and the Batumi city centroid used by the
+    // Batumi CityPage hero would be an unsourced guess for this exact point.
+    // NOTE (wording): the body copy and SEO description call the figure "gilded"
+    // while the package alt/caption say "bronze". Both describe the same gilded
+    // bronze sculpture — in this night shot the unlit figure reads dark while the
+    // column capital and the Argo relief are visibly gold. Package wording kept
+    // verbatim; body copy deliberately untouched.
+    imageMeta: {
+      width: 1448, height: 1086, imageId: 'hero-image',
+      name: 'Europe Square at night, Batumi, Adjara, Georgia',
+      description: "Europe Square in central Batumi after dark: the tall column topped by the Medea statue at the centre of the brick plaza, an ornate street clock in the foreground, ornate 19th–20th-century façades along the square and the city's modern illuminated skyline behind. Batumi is the capital of Adjara on the Black Sea coast of Georgia (the country).",
+      locationName: 'Europe Square, Batumi, Adjara, Georgia',
+      locality: 'Batumi', region: 'Adjara', country: 'GE',
+      alt: {
+        en: 'Europe Square in Batumi lit up at night, with the Medea statue on its tall column, an ornate street clock, and illuminated buildings along the brick plaza, Georgia',
+        de: 'Der Europaplatz in Batumi bei Nacht, mit der Medea-Statue auf ihrer hohen Säule, einer verzierten Standuhr und beleuchteten Gebäuden entlang des gepflasterten Platzes, Georgien',
+        fr: "La place de l'Europe à Batumi illuminée la nuit, avec la statue de Médée sur sa haute colonne, une horloge de rue ornée et des bâtiments éclairés le long de l'esplanade pavée, Géorgie",
+        es: 'La plaza de Europa en Batumi iluminada de noche, con la estatua de Medea sobre su alta columna, un ornamentado reloj de calle y edificios iluminados a lo largo de la explanada empedrada, Georgia',
+        nl: 'Het Europaplein in Batumi verlicht in de nacht, met het Medeabeeld op zijn hoge zuil, een sierlijke straatklok en verlichte gebouwen langs het geplaveide plein, Georgië',
+        cs: 'Evropské náměstí v Batumi osvětlené v noci, se sochou Médeie na vysokém sloupu, zdobenými pouličními hodinami a osvětlenými budovami podél dlážděného náměstí, Gruzie',
+        pl: 'Plac Europy w Batumi oświetlony nocą, z posągiem Medei na wysokiej kolumnie, ozdobnym zegarem ulicznym i podświetlonymi budynkami wzdłuż brukowanego placu, Gruzja',
+      },
+      caption: {
+        en: "Europe Square in Batumi after dark — the Medea statue rising on its column at the centre of the plaza, framed by ornate 19th–20th-century façades and the city's modern illuminated skyline.",
+        de: 'Der Europaplatz in Batumi bei Nacht – die Medea-Statue erhebt sich auf ihrer Säule im Zentrum des Platzes, umrahmt von verzierten Fassaden des 19.–20. Jahrhunderts und der beleuchteten modernen Skyline der Stadt.',
+        fr: "La place de l'Europe à Batumi de nuit — la statue de Médée s'élève sur sa colonne au centre de l'esplanade, encadrée par des façades ornées des XIXe–XXe siècles et la ligne d'horizon moderne et illuminée de la ville.",
+        es: 'La plaza de Europa en Batumi de noche: la estatua de Medea se alza sobre su columna en el centro de la explanada, enmarcada por ornamentadas fachadas de los siglos XIX–XX y el moderno horizonte iluminado de la ciudad.',
+        nl: 'Het Europaplein in Batumi bij nacht — het Medeabeeld rijst op zijn zuil in het midden van het plein, omlijst door sierlijke 19e–20e-eeuwse gevels en de moderne verlichte skyline van de stad.',
+        cs: 'Evropské náměstí v Batumi v noci — socha Médeie se tyčí na svém sloupu uprostřed náměstí, orámovaná zdobenými fasádami 19.–20. století a moderní osvětlenou panoramatou města.',
+        pl: 'Plac Europy w Batumi nocą — posąg Medei wznosi się na kolumnie pośrodku placu, otoczony ozdobnymi fasadami z XIX–XX wieku i nowoczesną, rozświetloną panoramą miasta.',
+      },
+    },
+    // One contextual inline body image (a real <figure> block in the per-locale body
+    // HTML, spliced after body block 6 — the paragraph under the "The Medea statue"
+    // heading that names the column, the Golden Fleece and the Argo relief; the same
+    // block index in all 7 locales). Rendered via SitePage's inlineImageObjects
+    // @graph map: stable @id #inline-medea-statue, contentUrl at the 1086 rung
+    // (files ship WITHOUT the `w` suffix), localized name+caption, brand credit,
+    // and NEVER representativeOfPage — that stays the hero's.
+    // PORTRAIT 1086x1448 → ladder caps at native: 768/1086 ONLY. A 1200/1448/1600/
+    // 2400 rung would upscale and none is generated or referenced. Rendered
+    // `.body-img--portrait-narrow` (420px cap) rather than the default portrait
+    // 560px: this is a tall column shot with a large dark sky, so the wider cap
+    // would tower over the text column. No fetchpriority, no OG.
+    inlineImageObjects: [
+      {
+        base: 'medea-statue-europe-square-batumi-georgia', width: 1086, height: 1448,
+        anchor: 'inline-medea-statue', dir: '/images/batumi',
+        portrait: true, widths: [768, 1086],
+        locationName: 'Europe Square, Batumi, Adjara, Georgia',
+        locality: 'Batumi', region: 'Adjara',
+        name: {
+          en: 'The bronze Medea statue holding the Golden Fleece atop its tall column at Europe Square in Batumi, Georgia, at night',
+          de: 'Die bronzene Medea-Statue mit dem Goldenen Vlies auf ihrer hohen Säule am Europaplatz in Batumi, Georgien, bei Nacht',
+          fr: "La statue en bronze de Médée tenant la Toison d'or au sommet de sa haute colonne, place de l'Europe à Batumi, Géorgie, la nuit",
+          es: 'La estatua de bronce de Medea sosteniendo el Vellocino de Oro en lo alto de su alta columna, en la plaza de Europa de Batumi, Georgia, de noche',
+          nl: 'Het bronzen Medeabeeld met het Gulden Vlies boven op zijn hoge zuil op het Europaplein in Batumi, Georgië, bij nacht',
+          cs: 'Bronzová socha Médeie držící zlaté rouno na vrcholu vysokého sloupu na Evropském náměstí v Batumi, Gruzie, v noci',
+          pl: 'Brązowy posąg Medei trzymającej złote runo na szczycie wysokiej kolumny na placu Europy w Batumi, Gruzja, nocą',
+        },
+        caption: {
+          en: "The Medea statue at Europe Square — sculptor Davit Khmaladze's 2007 bronze of the Colchian princess raising the Golden Fleece, with the ship Argo carved on the column, a nod to Batumi's link to the Argonauts myth.",
+          de: 'Die Medea-Statue am Europaplatz – die 2007 vom Bildhauer Davit Chmaladse geschaffene Bronze der kolchischen Prinzessin, die das Goldene Vlies emporhält, mit dem in die Säule gehauenen Schiff Argo, ein Verweis auf Batumis Verbindung zum Mythos der Argonauten.',
+          fr: "La statue de Médée place de l'Europe — le bronze réalisé en 2007 par le sculpteur Davit Khmaladze représentant la princesse de Colchide brandissant la Toison d'or, avec le navire Argo gravé sur la colonne, clin d'œil au lien de Batumi avec le mythe des Argonautes.",
+          es: 'La estatua de Medea en la plaza de Europa: el bronce realizado en 2007 por el escultor Davit Khmaladze de la princesa de la Cólquide alzando el Vellocino de Oro, con la nave Argo tallada en la columna, un guiño al vínculo de Batumi con el mito de los argonautas.',
+          nl: "Het Medeabeeld op het Europaplein — het in 2007 door beeldhouwer Davit Chmaladze vervaardigde brons van de Colchische prinses die het Gulden Vlies omhooghoudt, met het schip Argo in de zuil gehouwen, een verwijzing naar Batumi's band met de mythe van de Argonauten.",
+          cs: 'Socha Médeie na Evropském náměstí — bronz z roku 2007 od sochaře Davita Chmaladzeho zachycující kolchidskou princeznu zvedající zlaté rouno, s lodí Argó vytesanou do sloupu, odkaz na spojení Batumi s mýtem o Argonautech.',
+          pl: 'Posąg Medei na placu Europy — brąz z 2007 roku autorstwa rzeźbiarza Davita Chmaladzego przedstawiający kolchidzką księżniczkę unoszącą złote runo, ze statkiem Argo wykutym w kolumnie, nawiązanie do związku Batumi z mitem o Argonautach.',
+        },
+      },
+    ],
   },
   {
     slug: 'goderdzi-pass', name: 'Goderdzi Pass',
