@@ -54,7 +54,133 @@ export const regions = [
   {
     slug: 'adjara', name: 'Adjara', published: true,
     seoKey: 'adjara', contentKey: 'adjara',
-    image: '/images/files/Batumi%20Black%20Sea%20Coast.jpg',
+    // Cover/hero = the SAME coastline photograph the page has always used, now
+    // shipped as a proper 768/1200/1448 webp+avif ladder instead of a single raw
+    // 1600x1158 JPG. The photo was kept deliberately: it is the only broad
+    // "subtropical coast + Black Sea" frame available, and every alternative is
+    // already another page's hero. The original JPG is NOT deleted — it is still
+    // the hero of argo-cable-car and batumi-dancing-fountains, the image for this
+    // region's things-to-do guide, and a tour gallery frame.
+    // `heroClass` moves the background into CSS so the ladder actually applies
+    // (HeroSection's inline style can only carry one width); og:image/twitter
+    // still auto-derive from `image` via useSEO, matching the Kakheti region
+    // pattern — region pages have no page-specific OG convention.
+    image: '/images/adjara/adjara-black-sea-coast-georgia-1448.webp',
+    imageAvif: '/images/adjara/adjara-black-sea-coast-georgia-1448.avif',
+    heroClass: 'hero--adjara',
+    // Hero + three contextual body photos. The three body ones render as real
+    // <figure class="body-img"> blocks spliced into each locale's content at a
+    // fixed BLOCK INDEX (all 7 locales share a 30-block shape), each placed
+    // against the paragraph it actually illustrates. name/caption are localized
+    // per locale; `description` is the English long form. contentUrl uses the
+    // largest shipped variant. Sections with no photograph anywhere in the
+    // project (the mountain interior, Makhuntseti, Goderdzi, tea, Kobuleti)
+    // deliberately stay image-free rather than borrow a wrong-region frame.
+    inlineImageObjects: [
+      {
+        base: 'adjara-black-sea-coast-georgia', width: 1448, height: 1048,
+        anchor: 'hero-image', dir: '/images/adjara', hero: true,
+        description: 'Densely wooded hills falling to a narrow shingle shore along the Black Sea coast of Adjara, Georgia.',
+        // Region-level: no single identifiable spot in frame, so no geo.
+        locationName: 'Adjara, Georgia', region: 'Adjara',
+        name: {
+          en: 'Wooded green hillsides dropping to the Black Sea along the Adjara coastline, Georgia',
+          de: "Bewaldete grüne Hänge, die entlang der Küste Adschariens zum Schwarzen Meer abfallen, Georgien",
+          fr: "Coteaux verdoyants et boisés descendant vers la mer Noire le long du littoral de l'Adjarie, Géorgie",
+          es: 'Laderas verdes y boscosas que descienden hacia el mar Negro a lo largo de la costa de Adjara, Georgia',
+          nl: 'Beboste groene hellingen die langs de kust van Adzjarië afdalen naar de Zwarte Zee, Georgië',
+          cs: 'Zalesněné zelené svahy klesající k Černému moři podél pobřeží Adžárie, Gruzie',
+          pl: 'Zalesione zielone zbocza opadające ku Morzu Czarnemu wzdłuż wybrzeża Adżarii, Gruzja',
+        },
+        caption: {
+          en: "Densely wooded hills fall to a narrow shingle shore along Adjara's Black Sea coast, with a coastal settlement in the distance.",
+          de: 'Dicht bewaldete Hügel fallen entlang der Schwarzmeerküste Adschariens zu einem schmalen Kiesstrand ab, in der Ferne eine Siedlung an der Küste.',
+          fr: "Des collines densément boisées descendent vers une étroite plage de galets le long de la côte de la mer Noire en Adjarie, avec une localité côtière au loin.",
+          es: 'Colinas densamente boscosas descienden hasta una estrecha orilla de cantos rodados en la costa del mar Negro de Adjara, con una localidad costera a lo lejos.',
+          nl: 'Dicht beboste heuvels dalen af naar een smal kiezelstrand aan de Zwarte Zeekust van Adzjarië, met in de verte een kustplaats.',
+          cs: 'Hustě zalesněné kopce klesají k úzké oblázkové pláži podél černomořského pobřeží Adžárie, v dálce pobřežní sídlo.',
+          pl: 'Gęsto zalesione wzgórza opadają ku wąskiej żwirowej plaży na czarnomorskim wybrzeżu Adżarii, w oddali nadmorska miejscowość.',
+        },
+      },
+      {
+        base: 'adjara-shingle-beach-black-sea-georgia', width: 1448, height: 965,
+        anchor: 'inline-shingle-beach', dir: '/images/adjara',
+        description: 'A shingle beach of smooth grey pebbles running down to the calm Black Sea on the coast of Adjara, Georgia.',
+        // The source frame is filed under "Batumi", but nothing in the picture
+        // identifies the city, so the claim stays region-level.
+        locationName: 'Adjara, Georgia', region: 'Adjara',
+        name: {
+          en: 'A shingle beach on the Black Sea coast of Adjara, Georgia',
+          de: 'Ein Kiesstrand an der Schwarzmeerküste Adschariens, Georgien',
+          fr: "Une plage de galets sur la côte de la mer Noire en Adjarie, Géorgie",
+          es: 'Una playa de cantos rodados en la costa del mar Negro de Adjara, Georgia',
+          nl: 'Een kiezelstrand aan de Zwarte Zeekust van Adzjarië, Georgië',
+          cs: 'Oblázková pláž na černomořském pobřeží Adžárie, Gruzie',
+          pl: 'Żwirowa plaża na czarnomorskim wybrzeżu Adżarii, Gruzja',
+        },
+        caption: {
+          en: "Adjara's beaches are shingle rather than sand — smooth grey pebbles running down to a calm Black Sea, with the wooded coast beyond.",
+          de: 'Adschariens Strände bestehen aus Kies statt aus Sand — glatte graue Kiesel laufen zum ruhigen Schwarzen Meer hinunter, dahinter die bewaldete Küste.',
+          fr: "Les plages d'Adjarie sont de galets plutôt que de sable — des galets gris et lisses descendent vers une mer Noire calme, la côte boisée au fond.",
+          es: 'Las playas de Adjara son de cantos rodados y no de arena: guijarros grises y lisos bajan hasta un mar Negro en calma, con la costa boscosa al fondo.',
+          nl: 'De stranden van Adzjarië bestaan uit kiezels in plaats van zand — gladde grijze stenen lopen af naar een kalme Zwarte Zee, met daarachter de beboste kust.',
+          cs: 'Pláže Adžárie jsou oblázkové, nikoli písčité — hladké šedé oblázky sbíhají ke klidnému Černému moři, za nímž se táhne zalesněné pobřeží.',
+          pl: 'Plaże Adżarii są żwirowe, a nie piaszczyste — gładkie szare otoczaki schodzą ku spokojnemu Morzu Czarnemu, w tle zalesione wybrzeże.',
+        },
+      },
+      {
+        base: 'adjarian-khachapuri-georgia', width: 1200, height: 800,
+        anchor: 'inline-khachapuri', dir: '/images/adjara',
+        // A studio photograph from the site's dish dataset with no recorded
+        // provenance: brand credit is omitted rather than claimed, and there is
+        // no contentLocation because where it was taken is genuinely unknown.
+        noCredit: true,
+        description: 'Khachapuri Adjaruli, the boat-shaped Adjarian bread filled with molten cheese and topped with a raw egg and butter.',
+        name: {
+          en: 'Adjarian khachapuri, a boat-shaped bread filled with cheese and topped with egg and butter, Georgia',
+          de: 'Adscharisches Chatschapuri, ein bootsförmiges Brot mit Käsefüllung, Ei und Butter, Georgien',
+          fr: "Khachapuri adjaruli, un pain en forme de barque garni de fromage, d'un œuf et de beurre, Géorgie",
+          es: 'Khachapuri adjaruli, un pan con forma de barca relleno de queso y coronado con huevo y mantequilla, Georgia',
+          nl: 'Adzjarische khachapuri, een bootvormig brood gevuld met kaas en belegd met ei en boter, Georgië',
+          cs: 'Adžárské chačapuri, chléb ve tvaru lodičky plněný sýrem a doplněný vejcem a máslem, Gruzie',
+          pl: 'Chaczapuri adżarskie, chleb w kształcie łódki wypełniony serem, z jajkiem i masłem, Gruzja',
+        },
+        caption: {
+          en: 'Khachapuri Adjaruli: boat-shaped bread filled with molten cheese, topped with a raw egg and a knob of butter that is stirred into the filling at the table.',
+          de: 'Khachapuri Adjaruli: bootsförmiges Brot, gefüllt mit geschmolzenem Käse, getoppt mit einem rohen Ei und einem Stück Butter, das am Tisch in die Füllung eingerührt wird.',
+          fr: "Khachapuri adjaruli : un pain en forme de barque garni de fromage fondu, surmonté d'un œuf cru et d'une noix de beurre que l'on mélange à la garniture à table.",
+          es: 'Khachapuri adjaruli: pan con forma de barca relleno de queso fundido, coronado con un huevo crudo y una porción de mantequilla que se remueve dentro del relleno en la mesa.',
+          nl: 'Khachapuri Adjaruli: bootvormig brood gevuld met gesmolten kaas, belegd met een rauw ei en een klont boter die aan tafel door de vulling wordt geroerd.',
+          cs: 'Khachapuri Adjaruli: chléb ve tvaru lodičky plněný roztaveným sýrem, navrchu se syrovým vejcem a kouskem másla, který se u stolu vmíchá do náplně.',
+          pl: 'Khachapuri adjaruli: chleb w kształcie łódki wypełniony roztopionym serem, zwieńczony surowym jajkiem i porcją masła, którą przy stole wmiesza się w nadzienie.',
+        },
+      },
+      {
+        base: 'batumi-bay-marina-adjara-georgia', width: 1086, height: 1448,
+        anchor: 'inline-batumi-bay', dir: '/images/adjara',
+        description: "Batumi's bay and marina below the city skyline, with the wooded hills of Adjara rising behind the coastal strip, Georgia.",
+        locationName: 'Batumi', locality: 'Batumi', region: 'Adjara',
+        geo: { lat: 41.6500, lng: 41.6367 },
+        name: {
+          en: "Batumi's bay and marina below the city skyline and the wooded hills of Adjara, Georgia",
+          de: 'Die Bucht und der Jachthafen von Batumi unterhalb der Skyline der Stadt und der bewaldeten Hügel Adschariens, Georgien',
+          fr: "La baie et le port de plaisance de Batoumi sous les tours de la ville et les collines boisées de l'Adjarie, Géorgie",
+          es: 'La bahía y el puerto deportivo de Batumi bajo el perfil urbano y las colinas boscosas de Adjara, Georgia',
+          nl: 'De baai en jachthaven van Batumi onder de skyline van de stad en de beboste heuvels van Adzjarië, Georgië',
+          cs: 'Záliv a přístav pro jachty v Batumi pod panorámou města a zalesněnými kopci Adžárie, Gruzie',
+          pl: 'Zatoka i przystań jachtowa w Batumi pod panoramą miasta i zalesionymi wzgórzami Adżarii, Gruzja',
+        },
+        caption: {
+          en: 'Batumi from above: the bay and its marina, the modern skyline behind, and the wooded hills that rise immediately behind the coastal strip.',
+          de: 'Batumi von oben: die Bucht mit ihrem Jachthafen, dahinter die moderne Skyline und die bewaldeten Hügel, die sich unmittelbar hinter dem Küstenstreifen erheben.',
+          fr: "Batoumi vue d'en haut : la baie et son port de plaisance, les tours modernes derrière, et les collines boisées qui s'élèvent juste derrière la bande côtière.",
+          es: 'Batumi desde lo alto: la bahía y su puerto deportivo, el perfil urbano moderno detrás y las colinas boscosas que se elevan justo detrás de la franja costera.',
+          nl: 'Batumi van bovenaf: de baai met haar jachthaven, daarachter de moderne skyline en de beboste heuvels die vlak achter de kuststrook oprijzen.',
+          cs: 'Batumi shora: záliv s přístavem pro jachty, za ním moderní panoráma města a zalesněné kopce, které se zvedají hned za pobřežním pásem.',
+          pl: 'Batumi z góry: zatoka z przystanią jachtową, za nią nowoczesna panorama miasta i zalesione wzgórza wznoszące się tuż za nadmorskim pasem.',
+        },
+      },
+    ],
     // Region-level "things to do" guide, served (like a city's) at
     // /georgia/adjara/things-to-do-in-adjara via the CitySubPage dispatcher.
     thingsToDo: {

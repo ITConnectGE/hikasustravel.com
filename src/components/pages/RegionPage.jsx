@@ -20,6 +20,22 @@ const SITE_URL = 'https://www.hikasustravel.com'
 const BRAND = 'Hikasus Travel'
 
 /**
+ * Brand credit for an image's ImageObject — applied by default, since region
+ * photos are our own. An image whose provenance we cannot vouch for sets
+ * `noCredit: true` and ships with the credit fields omitted entirely rather
+ * than asserting an authorship we don't hold (schema.org treats absent credit
+ * as unknown, which is the honest answer).
+ */
+function creditFields(img) {
+  if (img.noCredit) return {}
+  return {
+    creator: { '@type': 'Organization', name: BRAND },
+    creditText: BRAND,
+    copyrightNotice: `© ${BRAND}`,
+  }
+}
+
+/**
  * Generic region detail page. Scaffolded against the places.js registry; a
  * region renders only once it has `published: true` plus seoKey/contentKey/
  * image. Until then the route resolves to the 404 page (no thin/empty pages).
@@ -104,17 +120,15 @@ export default function RegionPage() {
         // whose cover is not in this list) simply get representativeOfPage:false.
         ...(region.imageObjects || []).map((img) => ({
           '@type': 'ImageObject',
-          contentUrl: `${SITE_URL}/images/files/${img.base}-${img.width}w.webp`,
-          url: `${SITE_URL}/images/files/${img.base}-${img.width}w.webp`,
+          contentUrl: `${SITE_URL}${img.dir || '/images/files'}/${img.base}-${img.width}w.webp`,
+          url: `${SITE_URL}${img.dir || '/images/files'}/${img.base}-${img.width}w.webp`,
           width: img.width,
           height: img.height,
           representativeOfPage: !!img.hero,
           name: img.name,
           caption: img.caption,
           description: img.description,
-          creator: { '@type': 'Organization', name: BRAND },
-          creditText: BRAND,
-          copyrightNotice: `© ${BRAND}`,
+          ...creditFields(img),
           contentLocation: {
             '@type': 'Place',
             name: img.locationName,
@@ -131,40 +145,49 @@ export default function RegionPage() {
         // content) that ship variants WITHOUT the `w` filename suffix and need a
         // stable per-image `@id` (e.g. #inline-landscape). Distinct from `imageObjects`
         // above (which builds `-<width>w.webp` city-body-figure inlines with geo).
-        // name/caption are localized per locale; never representativeOfPage — that's
-        // the hero's. contentLocation address/geo are conditional, so a generic
-        // landscape can ship a NAME-ONLY Place ("Svaneti, Georgia", no geo). Mirrors
+        // name/caption are localized per locale. An entry may set `hero: true` to
+        // become the page's representative image (Adjara's cover, which ships the
+        // same no-`w` variants and wants localized strings — the older
+        // `imageObjects` hero above is English-only). contentLocation is fully
+        // conditional: address/geo drop out for a generic landscape (a NAME-ONLY
+        // Place such as "Svaneti, Georgia"), and the whole node drops out when
+        // there is no location to claim at all — e.g. a studio dish photograph,
+        // where asserting a place would be an invented fact. Mirrors
         // SitePage/CityPage's inlineImageObjects convention.
         ...(region.inlineImageObjects || []).map((img) => ({
           '@type': 'ImageObject',
           '@id': `${url}#${img.anchor}`,
-          contentUrl: `${SITE_URL}/images/files/${img.base}-${img.width}.webp`,
-          url: `${SITE_URL}/images/files/${img.base}-${img.width}.webp`,
+          contentUrl: `${SITE_URL}${img.dir || '/images/files'}/${img.base}-${img.width}.webp`,
+          url: `${SITE_URL}${img.dir || '/images/files'}/${img.base}-${img.width}.webp`,
           width: img.width,
           height: img.height,
+          // emitted only for the hero, so existing regions' nodes are unchanged
+          ...(img.hero ? { representativeOfPage: true } : {}),
           name: (img.name && (img.name[lang] || img.name.en)) || '',
           caption: (img.caption && (img.caption[lang] || img.caption.en)) || '',
           description: img.description,
-          creator: { '@type': 'Organization', name: BRAND },
-          creditText: BRAND,
-          copyrightNotice: `© ${BRAND}`,
-          contentLocation: {
-            '@type': 'Place',
-            name: img.locationName,
-            ...((img.locality || img.region)
-              ? {
-                  address: {
-                    '@type': 'PostalAddress',
-                    addressLocality: img.locality,
-                    addressRegion: img.region,
-                    addressCountry: 'GE',
-                  },
-                }
-              : {}),
-            ...(img.geo
-              ? { geo: { '@type': 'GeoCoordinates', latitude: img.geo.lat, longitude: img.geo.lng } }
-              : {}),
-          },
+          ...creditFields(img),
+          ...(img.locationName
+            ? {
+                contentLocation: {
+                  '@type': 'Place',
+                  name: img.locationName,
+                  ...((img.locality || img.region)
+                    ? {
+                        address: {
+                          '@type': 'PostalAddress',
+                          addressLocality: img.locality,
+                          addressRegion: img.region,
+                          addressCountry: 'GE',
+                        },
+                      }
+                    : {}),
+                  ...(img.geo
+                    ? { geo: { '@type': 'GeoCoordinates', latitude: img.geo.lat, longitude: img.geo.lng } }
+                    : {}),
+                },
+              }
+            : {}),
         })),
         {
           '@type': 'BreadcrumbList',
@@ -198,7 +221,15 @@ export default function RegionPage() {
       <div className="dest-breadcrumbs">
         <Breadcrumbs trail={trail} />
       </div>
-      <HeroSection image={heroImage} imageAvif={region.imageAvif} title={(page && page.heroTitle) || region.name} />
+      {/* `heroClass` is optional: a region that sets it gets a responsive
+          image-set() ladder from CSS (.hero--<slug>) instead of the single-width
+          inline background. Regions without it are unchanged. */}
+      <HeroSection
+        image={heroImage}
+        imageAvif={region.imageAvif}
+        bgClass={region.heroClass}
+        title={(page && page.heroTitle) || region.name}
+      />
       <section className="page-items about-georgia">
         <EntityToursTag type="region" slug={region.slug} name={region.name} />
         <FadeUp>
