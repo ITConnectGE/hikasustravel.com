@@ -226,11 +226,14 @@ export default function CityPage() {
         // contentUrl at the largest shipped variant (-<width>.webp), brand credit,
         // own contentLocation, and never representativeOfPage — the hero stays the
         // representative image. name/caption are localized per locale.
+        // `dir` overrides the default /images/files/ folder for sets that ship in
+        // a city/region folder instead (e.g. the Batumi city images →
+        // /images/batumi). Mirrors SitePage's inlineImageObjects.
         ...portraitInlines.map((img) => ({
           '@type': 'ImageObject',
           '@id': `${url}#${img.anchor}`,
-          contentUrl: `${SITE_URL}/images/files/${img.base}-${img.width}.webp`,
-          url: `${SITE_URL}/images/files/${img.base}-${img.width}.webp`,
+          contentUrl: `${SITE_URL}${img.dir || '/images/files'}/${img.base}-${img.width}.webp`,
+          url: `${SITE_URL}${img.dir || '/images/files'}/${img.base}-${img.width}.webp`,
           width: img.width,
           height: img.height,
           name: img.altText,
@@ -386,6 +389,9 @@ export default function CityPage() {
                      `.body-img--portrait` (capped 560px). Files ship WITHOUT the `w`
                      suffix. No upscale, no 1600/2400, no fetchpriority, no OG. */
                   const widths = portrait.widths || [768, 1024]
+                  // `dir` overrides the default /images/files/ folder (e.g. the
+                  // Batumi city set ships in /images/batumi). Default unchanged.
+                  const dir = portrait.dir || '/images/files'
                   const isPortrait = portrait.portrait !== false
                   const cap = isPortrait ? '560px' : '642px'
                   const sizes = `(min-width: 768px) ${cap}, 100vw`
@@ -401,16 +407,16 @@ export default function CityPage() {
                       <picture>
                         <source
                           type="image/avif"
-                          srcSet={widths.map((w) => `${asset(`/images/files/${portrait.base}-${w}.avif`)} ${w}w`).join(', ')}
+                          srcSet={widths.map((w) => `${asset(`${dir}/${portrait.base}-${w}.avif`)} ${w}w`).join(', ')}
                           sizes={sizes}
                         />
                         <source
                           type="image/webp"
-                          srcSet={widths.map((w) => `${asset(`/images/files/${portrait.base}-${w}.webp`)} ${w}w`).join(', ')}
+                          srcSet={widths.map((w) => `${asset(`${dir}/${portrait.base}-${w}.webp`)} ${w}w`).join(', ')}
                           sizes={sizes}
                         />
                         <img
-                          src={asset(`/images/files/${portrait.base}-${fbW}.webp`)}
+                          src={asset(`${dir}/${portrait.base}-${fbW}.webp`)}
                           width={imgW}
                           height={imgH}
                           alt={portrait.altText}
