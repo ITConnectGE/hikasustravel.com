@@ -1275,40 +1275,46 @@ section {
 }
 /* Native ceiling 1448 is the top rung. Do not add a 1600 or 2400 breakpoint. */
 /* Alphabetic Tower hero — per-page CSS background (same opt-in mechanism as
-   .hero--paravani; first Batumi/Adjara hero). Native 4:3 (1448x1086), just UNDER
-   the usual 1600 rung, so the ladder is exactly 768/1200/1448 with the top
-   breakpoint at min-width:1200 — there is NO 1600 or 2400 rung, no upscale.
-   `background-position: center center`: the tower is centre-frame with open sky at
-   left (H1 zone), so no positioning bias or scrim is added (the shared
-   .coverme::after overlay provides the readable text layer). plain url() line =
-   image-set() fallback for browsers without image-set(). */
+   .hero--paravani / .hero--juta). The tower lit in rainbow colours at NIGHT,
+   REPLACING the previous daytime landscape shot (alphabetic-tower-batumi-georgia,
+   now deleted — this rule and the places.js entry were its only users). Served
+   from /images/batumi/, not /images/files/.
+   ⚠️ PORTRAIT SOURCE (1122x1402, 4:5) in a WIDE hero frame. Native width 1122 →
+   the ladder is exactly 768/1122; a 1200, 1448, 1600 or 2400 rung would UPSCALE
+   and none exists, so the top breakpoint is min-width:768 (not 1200 as on the
+   landscape heroes).
+   ⚠️ `background-position: center top` is load-bearing, not cosmetic. The hero box
+   is .fullscreen (100dvh) — roughly 16:9 at 1920 and 16:10 at 1440 — so a 4:5
+   source is cropped hard vertically: at 1920x1080 it scales to 1920x2399 and
+   1319px of height is discarded. The image SEO package suggested `center 28%`
+   (i.e. object-position: center 28%), but rendering the real crop showed 28%
+   pushes the lit CROWN out of frame entirely at 1920 and clips it at 1440. `top`
+   keeps the full crown with a band of night sky above it — which is exactly the
+   centred-H1 zone. DO NOT change this back to a percentage without re-rendering
+   the crop. On mobile (390x844) the source scales to 675x844: zero vertical
+   overflow, so the value has no effect there and the full tower height shows.
+   No extra scrim — the scene is already a night shot and the shared
+   .coverme::after overlay (rgba(0,0,0,0.35)) supplies the readable text layer.
+   plain url() line = image-set() fallback for browsers without image-set(). */
 .hero--alphabetic-tower {
-  background-image: url("/images/files/alphabetic-tower-batumi-georgia-1200.webp");
+  background-image: url("/images/batumi/alphabet-tower-batumi-night-georgia-1122.webp");
   background-image: image-set(
-    url("/images/files/alphabetic-tower-batumi-georgia-768.avif") type("image/avif"),
-    url("/images/files/alphabetic-tower-batumi-georgia-768.webp") type("image/webp")
+    url("/images/batumi/alphabet-tower-batumi-night-georgia-768.avif") type("image/avif"),
+    url("/images/batumi/alphabet-tower-batumi-night-georgia-768.webp") type("image/webp")
   );
-  background-position: center center;
+  background-position: center top;
   background-size: cover;
   background-repeat: no-repeat;
 }
 @media (min-width: 768px) {
   .hero--alphabetic-tower {
     background-image: image-set(
-      url("/images/files/alphabetic-tower-batumi-georgia-1200.avif") type("image/avif"),
-      url("/images/files/alphabetic-tower-batumi-georgia-1200.webp") type("image/webp")
+      url("/images/batumi/alphabet-tower-batumi-night-georgia-1122.avif") type("image/avif"),
+      url("/images/batumi/alphabet-tower-batumi-night-georgia-1122.webp") type("image/webp")
     );
   }
 }
-@media (min-width: 1200px) {
-  .hero--alphabetic-tower {
-    background-image: image-set(
-      url("/images/files/alphabetic-tower-batumi-georgia-1448.avif") type("image/avif"),
-      url("/images/files/alphabetic-tower-batumi-georgia-1448.webp") type("image/webp")
-    );
-  }
-}
-/* Native ceiling 1448 is the top rung. Do not add a 1600 or 2400 breakpoint. */
+/* Native ceiling 1122 is the top rung. Do not add a 1200/1448/1600/2400 breakpoint. */
 /* Elia Hill (St Elias Church) hero — per-page CSS background (same opt-in mechanism
    as .hero--juta; the Kazbegi Elia-Hill sunset viewpoint). Native 4:3 (1448x1086),
    just UNDER the usual 1600 rung, so the ladder is exactly 768/1200/1448 with the top

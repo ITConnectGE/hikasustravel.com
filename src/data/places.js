@@ -2505,18 +2505,35 @@ export const sites = [
     slug: 'alphabetic-tower', name: 'Alphabetic Tower',
     parentType: 'city', parent: 'batumi', published: true,
     seoKey: 'alphabeticTower', contentKey: 'alphabeticTower',
-    // Hero: real Alphabetic Tower (owner's own photo) via the .hero--alphabetic-
-    // tower image-set() ladder (styles.css), replacing the reused generic Batumi.jpg
-    // city photo. Native 4:3 (1448x1086), just under the usual 1600 rung, so the
-    // ladder is exactly 768/1200/1448 with the top breakpoint at min-width:1200. NO
-    // 1600/2400 rung, no upscale. The CSS class controls the visible background
-    // (`background-position: center center`; open sky left = H1 zone; no scrim).
-    // `image`/`imageAvif` = the 1448 top rung, feeding the ImageObject contentUrl.
-    image: '/images/files/alphabetic-tower-batumi-georgia-1448.webp',
-    imageAvif: '/images/files/alphabetic-tower-batumi-georgia-1448.avif',
+    // Hero: the tower lit in rainbow colours at night (owner's own photo) via the
+    // .hero--alphabetic-tower image-set() ladder (styles.css). REPLACES the previous
+    // DAYTIME landscape shot (alphabetic-tower-batumi-georgia, 1448x1086), whose only
+    // users were this entry and that CSS rule; it has been deleted along with the
+    // daylight full-height inline. Served from /images/batumi/, not /images/files/.
+    // ⚠️ PORTRAIT HERO. Native 1122x1402 (4:5) → ladder caps at 768/1122; a 1200,
+    // 1448, 1600 or 2400 rung would UPSCALE and none exists. The hero frame is wide
+    // (.fullscreen = 100dvh, i.e. ~16:9 at 1920 and 16:10 at 1440), so a tall source
+    // must be cropped: `background-size: cover` (from .coverme) + a per-page
+    // `background-position: center top` in the CSS class — the CSS-background
+    // equivalent of object-fit:cover + object-position, same mechanism as
+    // .hero--juta's `center 40%`. ⚠️ The image package recommended `center 28%`, but
+    // rendering the real crop showed 28% pushes the lit CROWN out of frame entirely
+    // at 1920x1080 and clips it at 1440x900; `center top` keeps the full crown with a
+    // band of night sky above it (which is the H1 zone). Do not "restore" 28%.
+    // On mobile (390x844) the source scales to 675x844 — zero vertical overflow, so
+    // the value has no effect there and the full tower height is shown.
+    image: '/images/batumi/alphabet-tower-batumi-night-georgia-1122.webp',
+    imageAvif: '/images/batumi/alphabet-tower-batumi-night-georgia-1122.avif',
     heroClass: 'hero--alphabetic-tower',
-    // Dedicated 1.91:1 social-share image (og:image / twitter:image), .jpg default.
-    ogImage: { src: '/images/files/alphabetic-tower-batumi-georgia-og.jpg', width: 1200, height: 630 },
+    // LCP hero preload — the 1122 AVIF (the top rung) with fetchpriority=high, via
+    // SitePage/useSEO + prerender. This entry previously had none; it is the only way
+    // a CSS-background hero can express "eager + high priority".
+    heroPreload: '/images/batumi/alphabet-tower-batumi-night-georgia-1122.avif',
+    // Social-share image. ⚠️ NOT the usual 1200x630: the source is portrait, so the
+    // package ships a portrait-derived 1122x589 band cropped to keep the lit crown —
+    // upscaling to 1200 wide was deliberately avoided. A matching -og.webp ships
+    // alongside but is unreferenced (useSEO/prerender emit a single og:image).
+    ogImage: { src: '/images/batumi/alphabet-tower-batumi-night-georgia-og.jpg', width: 1122, height: 589 },
     // Hero image SEO/AEO metadata (owner's own photo → brand credit, set by
     // SitePage). Hero is a CSS background (no <img alt>), so the localized alt lives
     // here and is emitted as og:image:alt/twitter:image:alt per locale; the `caption`
@@ -2524,61 +2541,102 @@ export const sites = [
     // package.md. width/height = 1448 rung; coordinates per package. First Batumi/
     // Adjara hero.
     imageMeta: {
-      width: 1448, height: 1086,
-      name: 'The Alphabetic Tower in Batumi, a steel double-helix tower carrying Georgian alphabet letters, topped by a glass sphere, Georgia',
-      description: 'The Alphabetic Tower in Batumi, a 130-metre openwork steel tower whose two helical bands rise like a DNA strand carrying the 33 aluminium letters of the Georgian alphabet, crowned by a geodesic glass sphere, seen in evening light with a modern high-rise beside it. The tower stands in Miracle Park on the Batumi Boulevard, in the Adjara region of Georgia (the country).',
-      locationName: 'Alphabetic Tower, Miracle Park, Batumi, Adjara, Georgia',
+      width: 1122, height: 1402, imageId: 'hero-image',
+      name: 'Alphabet Tower at night, Batumi, Adjara, Georgia',
+      description: "The Alphabet Tower in Batumi lit in shifting rainbow colours after dark: a 130-metre openwork steel tower whose two helical bands rise like a DNA strand carrying the 33 aluminium letters of the Georgian alphabet, seen from below against the night sky. The tower stands in Miracle Park on the Batumi Boulevard, in the Adjara region of Georgia (the country).",
+      locationName: 'Alphabet Tower, Batumi, Adjara, Georgia',
       locality: 'Batumi', region: 'Adjara', country: 'GE',
       geo: { lat: 41.65594, lng: 41.63944 },
       alt: {
-        en: 'The Alphabetic Tower in Batumi, a steel double-helix tower carrying Georgian alphabet letters, topped by a glass sphere, Georgia',
-        de: 'Der Alphabet-Turm in Batumi, ein stählerner Doppelhelix-Turm mit georgischen Buchstaben und einer Glaskugel an der Spitze, Georgien',
-        fr: "La tour de l'Alphabet à Batoumi, tour d'acier en double hélice portant les lettres de l'alphabet géorgien, coiffée d'une sphère de verre, Géorgie",
-        es: 'La Torre del Alfabeto en Batumi, una torre de acero en doble hélice con letras del alfabeto georgiano, coronada por una esfera de cristal, Georgia',
-        nl: 'De Alfabettoren in Batoemi, een stalen dubbele-helixtoren met Georgische letters, bekroond door een glazen bol, Georgië',
-        cs: 'Věž abecedy v Batumi, ocelová věž ve tvaru dvojité šroubovice s písmeny gruzínské abecedy, zakončená skleněnou koulí, Gruzie',
-        pl: 'Wieża Alfabetu w Batumi, stalowa wieża w kształcie podwójnej helisy z literami gruzińskiego alfabetu, zwieńczona szklaną kulą, Gruzja',
+        en: 'The Alphabet Tower in Batumi lit in rainbow colours at night, its DNA-style steel helix carrying the Georgian alphabet letters, Adjara, Georgia',
+        de: 'Der Alphabet-Turm in Batumi bei Nacht in Regenbogenfarben beleuchtet, dessen DNA-artige Stahlspirale die georgischen Buchstaben trägt, Adscharien, Georgien',
+        fr: "La tour de l'Alphabet à Batumi illuminée aux couleurs de l'arc-en-ciel la nuit, sa spirale d'acier façon ADN portant les lettres de l'alphabet géorgien, Adjarie, Géorgie",
+        es: 'La Torre del Alfabeto de Batumi iluminada con los colores del arcoíris de noche, con su hélice de acero al estilo del ADN portando las letras del alfabeto georgiano, Adjaria, Georgia',
+        nl: "De Alfabettoren in Batumi 's nachts verlicht in regenboogkleuren, met zijn DNA-achtige stalen helix die de Georgische letters draagt, Adzjarië, Georgië",
+        cs: 'Abecední věž v Batumi osvětlená v noci duhovými barvami, s ocelovou spirálou ve stylu DNA nesoucí gruzínská písmena, Adžárie, Gruzie',
+        pl: 'Wieża Alfabetu w Batumi oświetlona nocą tęczowymi barwami, z jej stalową helisą w stylu DNA niosącą litery gruzińskiego alfabetu, Adżaria, Gruzja',
       },
       caption: {
-        en: 'The 130-metre Alphabetic Tower on Batumi Boulevard celebrates the Georgian script: two steel bands spiral up like a strand of DNA, carrying all 33 letters of the alphabet in four-metre aluminium. A glass sphere with a rotating restaurant and viewing deck crowns the top.',
-        de: 'Der 130 Meter hohe Alphabet-Turm am Boulevard von Batumi feiert die georgische Schrift: Zwei Stahlbänder winden sich wie ein DNA-Strang empor und tragen alle 33 Buchstaben des Alphabets aus vier Meter hohem Aluminium. Eine Glaskugel mit Drehrestaurant und Aussichtsdeck krönt die Spitze.',
-        fr: "La tour de l'Alphabet, haute de 130 mètres sur le boulevard de Batoumi, célèbre l'écriture géorgienne : deux bandes d'acier s'enroulent comme un brin d'ADN, portant les 33 lettres de l'alphabet en aluminium de quatre mètres. Une sphère de verre avec restaurant tournant et terrasse panoramique couronne le sommet.",
-        es: 'La Torre del Alfabeto, de 130 metros, en el bulevar de Batumi celebra la escritura georgiana: dos bandas de acero se enroscan como una hebra de ADN portando las 33 letras del alfabeto en aluminio de cuatro metros. Una esfera de cristal con restaurante giratorio y mirador corona la cima.',
-        nl: 'De 130 meter hoge Alfabettoren aan de boulevard van Batoemi eert het Georgische schrift: twee stalen banden winden zich omhoog als een DNA-streng en dragen alle 33 letters van het alfabet in vier meter hoog aluminium. Een glazen bol met draaiend restaurant en uitzichtdek bekroont de top.',
-        cs: 'Stotřicetimetrová Věž abecedy na batumském bulváru oslavuje gruzínské písmo: dva ocelové pásy se vinou vzhůru jako vlákno DNA a nesou všech 33 písmen abecedy ze čtyřmetrového hliníku. Vrchol korunuje skleněná koule s otočnou restaurací a vyhlídkou.',
-        pl: 'Licząca 130 metrów Wieża Alfabetu przy bulwarze w Batumi sławi gruzińskie pismo: dwie stalowe wstęgi wiją się w górę jak nić DNA, niosąc wszystkie 33 litery alfabetu z czterometrowego aluminium. Szczyt wieńczy szklana kula z obrotową restauracją i tarasem widokowym.',
+        en: "Batumi's 130-metre Alphabet Tower after dark — the DNA-inspired double helix, studded with the 33 letters of the Georgian alphabet, glowing in shifting colours above Miracle Park on the boulevard.",
+        de: 'Batumis 130 Meter hoher Alphabet-Turm bei Nacht – die von der DNA inspirierte Doppelhelix, besetzt mit den 33 Buchstaben des georgischen Alphabets, leuchtet in wechselnden Farben über dem Miracle Park am Boulevard.',
+        fr: "La tour de l'Alphabet de Batumi, haute de 130 mètres, la nuit — la double hélice inspirée de l'ADN, ornée des 33 lettres de l'alphabet géorgien, brille de couleurs changeantes au-dessus du Miracle Park, sur le boulevard.",
+        es: 'La Torre del Alfabeto de Batumi, de 130 metros, de noche: la doble hélice inspirada en el ADN, cuajada con las 33 letras del alfabeto georgiano, brilla en colores cambiantes sobre el Miracle Park, en el bulevar.',
+        nl: 'De 130 meter hoge Alfabettoren van Batumi bij nacht — de op DNA geïnspireerde dubbele helix, bezet met de 33 letters van het Georgische alfabet, gloeit in wisselende kleuren boven het Miracle Park aan de boulevard.',
+        cs: '130 metrů vysoká Abecední věž v Batumi po setmění — dvojitá šroubovice inspirovaná DNA, posázená 33 písmeny gruzínské abecedy, září měnícími se barvami nad Miracle Parkem na bulváru.',
+        pl: '130-metrowa Wieża Alfabetu w Batumi po zmroku — inspirowana DNA podwójna helisa, usiana 33 literami gruzińskiego alfabetu, świeci zmieniającymi się barwami nad Miracle Parkiem przy bulwarze.',
       },
     },
-    // One contextual inline body image (real <figure class="body-img body-img--
-    // portrait"> in the per-locale body, placed at the end of each locale's "The
-    // structure" section — the full base-to-sphere portrait complements the
-    // structural description). Rendered via SitePage's inlineImageObjects @graph
-    // map: stable @id (#inline-full-height), contentUrl at the 941 rung (portrait
-    // ceiling; no `w` suffix), localized name (=alt) + caption, brand credit, NO
-    // representativeOfPage (that's the hero's). Verbatim from the image package.
+    // Two contextual inline body photos (real <figure> blocks in the per-locale body
+    // HTML). These REPLACE the single daylight full-height portrait
+    // (alphabetic-tower-full-height-batumi-georgia, 941x1672), whose files are
+    // deleted. Rendered via SitePage's inlineImageObjects @graph map: stable @id,
+    // contentUrl at the 1122 rung (files ship WITHOUT the `w` suffix), localized
+    // name (=alt) + caption, brand credit, NEVER representativeOfPage — that stays
+    // the hero's. `dir` points them at /images/batumi/.
+    // ⚠️ BOTH PORTRAIT 1122x1402 → ladder 768/1122 ONLY; a 1200/1448/1600/2400 rung
+    // would upscale and none exists. Rendered `.body-img--portrait-narrow` (420px
+    // cap, added for the Medea statue) rather than the default portrait 560px — two
+    // tall frames on one page at 560 would render 747px each and swamp the column.
+    // Splice points (same block index in all 7 locales; the body is 13 blocks):
+    //   4 → purple  ("A monument to the alphabet", the ¶ closing on the DNA /
+    //                genetic-code idea — the design/letters/helix anchor)
+    //   7 → blue    ("The structure", the illumination-after-dark ¶ naming the
+    //                shifting colours and the boulevard viewpoint)
+    // Blocks 4 and 7 are used rather than 6 and 7 because 6 and 7 are consecutive
+    // paragraphs — two tall portraits four lines apart reads far too heavy.
+    // ⚠️ EDITORIAL: all three page images are now NIGHT shots. The deleted daylight
+    // portrait was the only one showing the crowning glass sphere clearly, which the
+    // body's "The structure" and "observation level" sections describe. Flagged to
+    // the owner and accepted; do not treat as an oversight.
     inlineImageObjects: [
       {
-        base: 'alphabetic-tower-full-height-batumi-georgia', width: 941, height: 1672, anchor: 'inline-full-height',
-        description: "A full-height view of the Alphabetic Tower in Batumi from its base to the crowning glass sphere, the two helical steel bands lined with the aluminium letters of the Georgian alphabet against a clear sky, with street-level surroundings at the foot. The tower stands in Miracle Park on the Batumi Boulevard, in the Adjara region of Georgia (the country).",
-        locationName: 'Alphabetic Tower, Miracle Park, Batumi, Adjara, Georgia',
+        base: 'alphabet-tower-batumi-purple-night-georgia', width: 1122, height: 1402,
+        anchor: 'inline-purple-night', dir: '/images/batumi',
+        portrait: true, widths: [768, 1122],
+        locationName: 'Alphabet Tower, Batumi, Adjara, Georgia',
         locality: 'Batumi', region: 'Adjara', geo: { lat: 41.65594, lng: 41.63944 },
         name: {
-          en: 'Full view of the Alphabetic Tower in Batumi from base to glass sphere, its helix bands lined with Georgian letters, Georgia',
-          de: 'Gesamtansicht des Alphabet-Turms in Batumi vom Fuß bis zur Glaskugel, die Helixbänder mit georgischen Buchstaben besetzt, Georgien',
-          fr: "Vue complète de la tour de l'Alphabet à Batoumi, de la base à la sphère de verre, ses bandes hélicoïdales bordées de lettres géorgiennes, Géorgie",
-          es: 'Vista completa de la Torre del Alfabeto en Batumi, desde la base hasta la esfera de cristal, con sus bandas helicoidales llenas de letras georgianas, Georgia',
-          nl: 'Volledig zicht op de Alfabettoren in Batoemi van voet tot glazen bol, met helixbanden vol Georgische letters, Georgië',
-          cs: 'Celkový pohled na Věž abecedy v Batumi od paty po skleněnou kouli, s šroubovicovými pásy plnými gruzínských písmen, Gruzie',
-          pl: 'Pełny widok Wieży Alfabetu w Batumi od podstawy po szklaną kulę, z helisami pełnymi gruzińskich liter, Gruzja',
+          en: 'The Alphabet Tower in Batumi illuminated purple at night above the boulevard, its crown sphere and helix of Georgian letters visible, Georgia',
+          de: 'Der Alphabet-Turm in Batumi bei Nacht violett beleuchtet über dem Boulevard, mit sichtbarer Krönungskugel und Buchstabenspirale, Georgien',
+          fr: "La tour de l'Alphabet à Batumi illuminée de violet la nuit au-dessus du boulevard, sa sphère au sommet et sa spirale de lettres géorgiennes visibles, Géorgie",
+          es: 'La Torre del Alfabeto de Batumi iluminada de violeta de noche sobre el bulevar, con su esfera en la cima y su hélice de letras georgianas visibles, Georgia',
+          nl: "De Alfabettoren in Batumi 's nachts paars verlicht boven de boulevard, met zijn bekronende bol en helix van Georgische letters zichtbaar, Georgië",
+          cs: 'Abecední věž v Batumi osvětlená v noci fialově nad bulvárem, s viditelnou vrcholovou koulí a spirálou gruzínských písmen, Gruzie',
+          pl: 'Wieża Alfabetu w Batumi oświetlona nocą na fioletowo nad bulwarem, z widoczną kulą na szczycie i helisą gruzińskich liter, Gruzja',
         },
         caption: {
-          en: "Seen in full, the tower's DNA form is unmistakable — the designers' idea was that language is the genetic code of the Georgian nation, written here letter by letter into the structure itself.",
-          de: 'In der Gesamtansicht ist die DNA-Form des Turms unverkennbar – die Idee der Entwerfer war, dass die Sprache der genetische Code der georgischen Nation ist, hier Buchstabe für Buchstabe in das Bauwerk selbst geschrieben.',
-          fr: "Vue en entier, la forme d'ADN de la tour est incontestable : pour ses concepteurs, la langue est le code génétique de la nation géorgienne, inscrit ici lettre par lettre dans la structure même.",
-          es: 'Vista por completo, la forma de ADN de la torre es inconfundible: la idea de sus diseñadores era que la lengua es el código genético de la nación georgiana, escrito aquí letra a letra en la propia estructura.',
-          nl: 'In volle lengte is de DNA-vorm van de toren onmiskenbaar — het idee van de ontwerpers was dat taal de genetische code van de Georgische natie is, hier letter voor letter in het bouwwerk zelf geschreven.',
-          cs: 'V celkovém pohledu je tvar DNA věže nezaměnitelný – myšlenkou návrhářů bylo, že jazyk je genetickým kódem gruzínského národa, zde vepsaným písmeno po písmenu do samotné stavby.',
-          pl: 'Widziana w całości, forma DNA wieży jest nie do pomylenia — ideą projektantów było, że język to kod genetyczny gruzińskiego narodu, zapisany tu litera po literze w samej konstrukcji.',
+          en: 'The Alphabet Tower washed in purple light after dark, the silver sphere at its crown topping the 130-metre helix of Georgian alphabet letters.',
+          de: 'Der Alphabet-Turm in violettes Licht getaucht nach Einbruch der Dunkelheit, die silberne Kugel an seiner Spitze krönt die 130 Meter hohe Spirale aus georgischen Buchstaben.',
+          fr: "La tour de l'Alphabet baignée de lumière violette à la nuit tombée, la sphère argentée à son sommet couronnant la spirale de 130 mètres de lettres de l'alphabet géorgien.",
+          es: 'La Torre del Alfabeto bañada en luz violeta al anochecer, con la esfera plateada de su cima coronando la hélice de 130 metros de letras del alfabeto georgiano.',
+          nl: 'De Alfabettoren in paars licht gedompeld na zonsondergang, met de zilveren bol op de top die de 130 meter hoge helix van Georgische alfabetletters bekroont.',
+          cs: 'Abecední věž zalitá fialovým světlem po setmění, stříbrná koule na jejím vrcholu korunuje 130 metrů vysokou spirálu gruzínských písmen.',
+          pl: 'Wieża Alfabetu skąpana w fioletowym świetle po zmroku, srebrna kula na jej szczycie wieńczy 130-metrową helisę liter gruzińskiego alfabetu.',
+        },
+      },
+      {
+        base: 'alphabet-tower-batumi-blue-night-georgia', width: 1122, height: 1402,
+        anchor: 'inline-blue-night', dir: '/images/batumi',
+        portrait: true, widths: [768, 1122],
+        locationName: 'Alphabet Tower, Batumi, Adjara, Georgia',
+        locality: 'Batumi', region: 'Adjara', geo: { lat: 41.65594, lng: 41.63944 },
+        name: {
+          en: 'The Alphabet Tower in Batumi glowing blue at night, seen from the boulevard promenade with palm trees, Georgia',
+          de: 'Der Alphabet-Turm in Batumi bei Nacht blau leuchtend, gesehen von der Uferpromenade mit Palmen, Georgien',
+          fr: "La tour de l'Alphabet à Batumi rayonnant de bleu la nuit, vue depuis la promenade du boulevard avec des palmiers, Géorgie",
+          es: 'La Torre del Alfabeto de Batumi brillando en azul de noche, vista desde el paseo del bulevar con palmeras, Georgia',
+          nl: "De Alfabettoren in Batumi 's nachts blauw gloeiend, gezien vanaf de boulevardpromenade met palmbomen, Georgië",
+          cs: 'Abecední věž v Batumi zářící v noci modře, při pohledu z promenády bulváru s palmami, Gruzie',
+          pl: 'Wieża Alfabetu w Batumi świecąca nocą na niebiesko, widziana z promenady bulwaru z palmami, Gruzja',
+        },
+        caption: {
+          en: 'The Alphabet Tower lit blue over Batumi Boulevard at night, its steel lattice and Georgian letters standing out against the dark sky.',
+          de: 'Der Alphabet-Turm blau beleuchtet über dem Boulevard von Batumi bei Nacht, dessen Stahlgitter und georgische Buchstaben sich vom dunklen Himmel abheben.',
+          fr: "La tour de l'Alphabet illuminée de bleu au-dessus du boulevard de Batumi la nuit, sa structure d'acier et ses lettres géorgiennes se détachant sur le ciel sombre.",
+          es: 'La Torre del Alfabeto iluminada de azul sobre el bulevar de Batumi de noche, con su entramado de acero y sus letras georgianas destacando contra el cielo oscuro.',
+          nl: 'De Alfabettoren blauw verlicht boven de boulevard van Batumi bij nacht, met zijn stalen vakwerk en Georgische letters die afsteken tegen de donkere lucht.',
+          cs: 'Abecední věž osvětlená modře nad bulvárem v Batumi v noci, jejíž ocelová konstrukce a gruzínská písmena vynikají proti tmavé obloze.',
+          pl: 'Wieża Alfabetu oświetlona na niebiesko nad bulwarem w Batumi nocą, z jej stalową kratownicą i gruzińskimi literami odcinającymi się na tle ciemnego nieba.',
         },
       },
     ],
