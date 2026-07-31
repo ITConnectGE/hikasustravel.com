@@ -6137,6 +6137,15 @@ export function publishedDestinationPages() {
         path: cleanPath(thingsToDoPath(r.slug)),
         seoKey: r.thingsToDo.seoKey,
         image: r.thingsToDo.image || r.image,
+        // Same optional image-SEO extras the city/site branches carry. Without
+        // these, a things-to-do block that sets ogImage/imageMeta/heroPreload
+        // renders them client-side but NOT into the prerendered <head>, so
+        // crawlers and social scrapers see the bare hero and no preload.
+        ogImage: r.thingsToDo.ogImage?.src,
+        ogImageWidth: r.thingsToDo.ogImage?.width,
+        ogImageHeight: r.thingsToDo.ogImage?.height,
+        imageAlt: r.thingsToDo.imageMeta?.alt,
+        heroPreload: r.thingsToDo.heroPreload,
       })
     }
   }
@@ -6157,6 +6166,14 @@ export function publishedDestinationPages() {
         path: cleanPath(thingsToDoPath(c.slug)),
         seoKey: c.thingsToDo.seoKey,
         image: c.thingsToDo.image || c.image,
+        // Same optional image-SEO extras as the city branch above — see the
+        // region thingsToDo branch for why these are required (first consumer:
+        // Batumi's things-to-do page).
+        ogImage: c.thingsToDo.ogImage?.src,
+        ogImageWidth: c.thingsToDo.ogImage?.width,
+        ogImageHeight: c.thingsToDo.ogImage?.height,
+        imageAlt: c.thingsToDo.imageMeta?.alt,
+        heroPreload: c.thingsToDo.heroPreload,
       })
     }
   }
