@@ -155,31 +155,10 @@ export const regions = [
           pl: 'Khachapuri adjaruli: chleb w kształcie łódki wypełniony roztopionym serem, zwieńczony surowym jajkiem i porcją masła, którą przy stole wmiesza się w nadzienie.',
         },
       },
-      {
-        base: 'batumi-bay-marina-adjara-georgia', width: 1086, height: 1448,
-        anchor: 'inline-batumi-bay', dir: '/images/adjara',
-        description: "Batumi's bay and marina below the city skyline, with the wooded hills of Adjara rising behind the coastal strip, Georgia.",
-        locationName: 'Batumi', locality: 'Batumi', region: 'Adjara',
-        geo: { lat: 41.6500, lng: 41.6367 },
-        name: {
-          en: "Batumi's bay and marina below the city skyline and the wooded hills of Adjara, Georgia",
-          de: 'Die Bucht und der Jachthafen von Batumi unterhalb der Skyline der Stadt und der bewaldeten Hügel Adschariens, Georgien',
-          fr: "La baie et le port de plaisance de Batoumi sous les tours de la ville et les collines boisées de l'Adjarie, Géorgie",
-          es: 'La bahía y el puerto deportivo de Batumi bajo el perfil urbano y las colinas boscosas de Adjara, Georgia',
-          nl: 'De baai en jachthaven van Batumi onder de skyline van de stad en de beboste heuvels van Adzjarië, Georgië',
-          cs: 'Záliv a přístav pro jachty v Batumi pod panorámou města a zalesněnými kopci Adžárie, Gruzie',
-          pl: 'Zatoka i przystań jachtowa w Batumi pod panoramą miasta i zalesionymi wzgórzami Adżarii, Gruzja',
-        },
-        caption: {
-          en: 'Batumi from above: the bay and its marina, the modern skyline behind, and the wooded hills that rise immediately behind the coastal strip.',
-          de: 'Batumi von oben: die Bucht mit ihrem Jachthafen, dahinter die moderne Skyline und die bewaldeten Hügel, die sich unmittelbar hinter dem Küstenstreifen erheben.',
-          fr: "Batoumi vue d'en haut : la baie et son port de plaisance, les tours modernes derrière, et les collines boisées qui s'élèvent juste derrière la bande côtière.",
-          es: 'Batumi desde lo alto: la bahía y su puerto deportivo, el perfil urbano moderno detrás y las colinas boscosas que se elevan justo detrás de la franja costera.',
-          nl: 'Batumi van bovenaf: de baai met haar jachthaven, daarachter de moderne skyline en de beboste heuvels die vlak achter de kuststrook oprijzen.',
-          cs: 'Batumi shora: záliv s přístavem pro jachty, za ním moderní panoráma města a zalesněné kopce, které se zvedají hned za pobřežním pásem.',
-          pl: 'Batumi z góry: zatoka z przystanią jachtową, za nią nowoczesna panorama miasta i zalesione wzgórza wznoszące się tuż za nadmorskim pasem.',
-        },
-      },
+      // The Batumi bay/marina portrait inline was REMOVED at the owner's request
+      // (was `inline-batumi-bay`, block 25, batumi-bay-marina-adjara-georgia
+      // 1086x1448). Its four generated files were deleted with it — nothing else
+      // referenced them. The "Batumi" section is intentionally image-free again.
     ],
     // Region-level "things to do" guide, served (like a city's) at
     // /georgia/adjara/things-to-do-in-adjara via the CitySubPage dispatcher.
