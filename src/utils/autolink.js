@@ -156,8 +156,13 @@ const SKIP_TAGS = new Set(['A', 'CODE', 'PRE', 'SCRIPT', 'STYLE', 'BUTTON', 'TEX
  * @param {string} html        content HTML string
  * @param {string} lang        current language code
  * @param {object} pages       loaded pages.json for the current language
- * @param {string} [excludeKey] entity key (e.g. "place:bodbe-monastery") of the
- *                              current page, to avoid self-links in its own body
+ * @param {string|string[]} [excludeKey] entity key(s) that must NOT be linked in
+ *   this body. Normally just the current page's own key (e.g.
+ *   "place:bodbe-monastery") to avoid self-links. A page may also pass extra keys
+ *   to suppress a mention that is a NAME COLLISION rather than a real reference —
+ *   e.g. the Batumi Dolphinarium sits on Batumi's own Rustaveli Avenue, which is a
+ *   different street from the Tbilisi avenue that owns the entity, so linking it
+ *   would send the reader to the wrong city (see `noAutolinkKeys` in places.js).
  */
 export function autolinkHtml(html, lang, pages, excludeKey) {
   if (typeof window === 'undefined' || typeof DOMParser === 'undefined') return html
@@ -173,6 +178,12 @@ export function autolinkHtml(html, lang, pages, excludeKey) {
 function linkHtml(html, lang, pages, excludeKey) {
   const { byName, regex } = getIndex(lang, pages)
   if (!regex) return html
+  // `excludeKey` accepts a single key (the historical shape) or an array; empty
+  // and undefined both mean "exclude nothing", so every existing caller is
+  // unchanged.
+  const excluded = new Set(
+    Array.isArray(excludeKey) ? excludeKey.filter(Boolean) : (excludeKey ? [excludeKey] : []),
+  )
 
   const doc = new DOMParser().parseFromString(`<body>${html}</body>`, 'text/html')
   const walker = doc.createTreeWalker(doc.body, NodeFilter.SHOW_TEXT)
@@ -198,7 +209,7 @@ function linkHtml(html, lang, pages, excludeKey) {
     while ((m = regex.exec(text))) {
       const matched = m[0]
       const ent = byName.get(matched.toLowerCase())
-      if (!ent || ent.key === excludeKey) continue // unknown casing or self-link: leave as text
+      if (!ent || excluded.has(ent.key)) continue // unknown casing, self-link or opted-out: leave as text
       if (!frag) frag = doc.createDocumentFragment()
       if (m.index > last) frag.appendChild(doc.createTextNode(text.slice(last, m.index)))
       const a = doc.createElement('a')

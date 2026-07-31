@@ -2664,6 +2664,20 @@ export const sites = [
     parentType: 'city', parent: 'batumi', published: true,
     seoKey: 'batumiDolphinarium', contentKey: 'batumiDolphinarium',
     image: '/images/files/batumi-coastal-tour.jpg',
+    // ⚠️ NAME COLLISION, not a missing translation. This page's address is
+    // "51 Rustaveli Avenue, Batumi" — BATUMI's Rustaveli Avenue, a completely
+    // different street from the Tbilisi avenue that owns the
+    // `place:rustaveli-avenue` entity. The autolinker matches on name alone, so
+    // without this opt-out every "Rustaveli Avenue" in the address was linked to
+    // the Tbilisi page and sent the reader to the wrong city.
+    // Scoped per-page rather than globally on purpose: a blanket rule (e.g. only
+    // autolink inside the Tbilisi page family, or require the literal phrase
+    // "Tbilisi Rustaveli Avenue") would also strip the CORRECT links on the
+    // Samtavisi Cathedral page ("Kashveti Church on Rustaveli Avenue in Tbilisi")
+    // and in six Tbilisi city-tour itineraries, which all genuinely mean Tbilisi.
+    // Add the same flag to any future page that means a non-Tbilisi street of
+    // this name (Kutaisi has one too).
+    noAutolinkKeys: ['place:rustaveli-avenue'],
   },
   {
     slug: 'batumi-piazza', name: 'Batumi Piazza',

@@ -53,15 +53,23 @@ export default function SitePage() {
   const page = published ? (pages[contentKey] || enPages[contentKey]) : null
   const seo = getSEO(published ? site.seoKey : 'destinations', lang)
   const faqItems = useMemo(() => (page && page.faq) || [], [page])
-  // Auto-link other destinations in the body + FAQ, skipping self-links.
+  // Auto-link other destinations in the body + FAQ, skipping self-links and any
+  // entity this page opts out of via `noAutolinkKeys` (a same-name-different-place
+  // collision — see places.js). Joined into a stable string so the memo deps stay
+  // primitive rather than a new array identity on every render.
+  const noAutolinkKeys = published && site.noAutolinkKeys ? site.noAutolinkKeys.join(',') : ''
   const excludeKey = published ? `place:${site.slug}` : null
+  const excludeKeys = useMemo(
+    () => [excludeKey, ...(noAutolinkKeys ? noAutolinkKeys.split(',') : [])].filter(Boolean),
+    [excludeKey, noAutolinkKeys],
+  )
   const linkedContent = useMemo(
-    () => (page ? autolinkHtml(page.content, lang, pages, excludeKey) : ''),
-    [page, lang, pages, excludeKey],
+    () => (page ? autolinkHtml(page.content, lang, pages, excludeKeys) : ''),
+    [page, lang, pages, excludeKeys],
   )
   const linkedFaq = useMemo(
-    () => faqItems.map((it) => ({ ...it, content: autolinkHtml(it.content, lang, pages, excludeKey) })),
-    [faqItems, lang, pages, excludeKey],
+    () => faqItems.map((it) => ({ ...it, content: autolinkHtml(it.content, lang, pages, excludeKeys) })),
+    [faqItems, lang, pages, excludeKeys],
   )
   const path = published ? sitePath(site).replace(/^\//, '') : ''
   const heroImage = published ? site.image : null
