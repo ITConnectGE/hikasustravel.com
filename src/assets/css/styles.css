@@ -874,6 +874,42 @@ section {
     );
   }
 }
+/* Shida Kartli (REGION) hero — same mechanism as .hero--adjara above. The view
+   from the carved plateau at Uplistsikhe out over the Mtkvari valley, replacing
+   the flat washed-out Uplistsikhe Cave Town.jpg (that JPG stays — it is still a
+   tours.js frame). The page's first ladder. Files are SHARED with the Uplistsikhe
+   site page at their existing /images/files/ path — this base uniquely ships both
+   no-`w` and `-1600w` rungs, so nothing was copied for the hero; see the note on
+   places.js's shida-kartli entry. The no-`w` set tops out at 1448: do not add a
+   1600 breakpoint here even though `-1600w` exists, since the ladder below uses
+   the no-`w` names. The carved foreground sits low with the valley across the
+   middle, so centre-centre holds the composition from 360px to 1920px. */
+.hero--shida-kartli {
+  background-image: url("/images/files/uplistsikhe-mtkvari-valley-view-georgia-1200.webp");
+  background-image: image-set(
+    url("/images/files/uplistsikhe-mtkvari-valley-view-georgia-768.avif") type("image/avif"),
+    url("/images/files/uplistsikhe-mtkvari-valley-view-georgia-768.webp") type("image/webp")
+  );
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+@media (min-width: 768px) {
+  .hero--shida-kartli {
+    background-image: image-set(
+      url("/images/files/uplistsikhe-mtkvari-valley-view-georgia-1200.avif") type("image/avif"),
+      url("/images/files/uplistsikhe-mtkvari-valley-view-georgia-1200.webp") type("image/webp")
+    );
+  }
+}
+@media (min-width: 1200px) {
+  .hero--shida-kartli {
+    background-image: image-set(
+      url("/images/files/uplistsikhe-mtkvari-valley-view-georgia-1448.avif") type("image/avif"),
+      url("/images/files/uplistsikhe-mtkvari-valley-view-georgia-1448.webp") type("image/webp")
+    );
+  }
+}
 /* Samtskhe-Javakheti (REGION) hero — same mechanism as .hero--adjara above. The
    cliff-face view of Vardzia, replacing the flat grey-skied vardzia-cave-
    monastery.jpg this page shipped with (that JPG stays — it is still an inline on
