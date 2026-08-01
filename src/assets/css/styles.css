@@ -906,6 +906,52 @@ section {
     );
   }
 }
+/* Things to Do in Kvemo Kartli hero — same mechanism as .hero--adjara above.
+   Replaces the generic georgia-home.jpg placeholder this guide shipped with: the
+   Diamond Bridge is named in the page's own H1 and is the only subject on the
+   page with any photography at all.
+
+   ⚠️ DELIBERATE duplication, owner-approved: this exact frame is also the Kvemo
+   Kartli region hero and the Tsalka/Dashbashi Canyon hero. There is no unused
+   Kvemo Kartli photograph — every encoded frame is committed, and the only large
+   unused set (22 raw Rustavi shots) is unusable here because this page mentions
+   Rustavi solely as a bus-transport note. Files are REFERENCED in place, so no
+   new bytes land on disk.
+
+   ⚠️ background-position is 25%, NOT centre — copied deliberately from
+   .hero--kvemo-kartli. The diamond-shaped glass café sits about a third in from
+   the left edge and a centred `cover` crop pushes it out of frame entirely on
+   narrow viewports; 25% keeps it in frame at 360px. The source is 1.33:1, so any
+   viewport wider than that crops vertically and the horizontal value has no
+   effect — only mobile portrait is affected.
+
+   Native width is 1445, so that is the top rung — no 1600 breakpoint. */
+.hero--things-to-do-kvemo-kartli {
+  background-image: url("/images/kvemo-kartli/diamond-bridge-dashbashi-canyon-georgia-1200.webp");
+  background-image: image-set(
+    url("/images/kvemo-kartli/diamond-bridge-dashbashi-canyon-georgia-768.avif") type("image/avif"),
+    url("/images/kvemo-kartli/diamond-bridge-dashbashi-canyon-georgia-768.webp") type("image/webp")
+  );
+  background-position: 25% center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+@media (min-width: 768px) {
+  .hero--things-to-do-kvemo-kartli {
+    background-image: image-set(
+      url("/images/kvemo-kartli/diamond-bridge-dashbashi-canyon-georgia-1200.avif") type("image/avif"),
+      url("/images/kvemo-kartli/diamond-bridge-dashbashi-canyon-georgia-1200.webp") type("image/webp")
+    );
+  }
+}
+@media (min-width: 1200px) {
+  .hero--things-to-do-kvemo-kartli {
+    background-image: image-set(
+      url("/images/kvemo-kartli/diamond-bridge-dashbashi-canyon-georgia-1445.avif") type("image/avif"),
+      url("/images/kvemo-kartli/diamond-bridge-dashbashi-canyon-georgia-1445.webp") type("image/webp")
+    );
+  }
+}
 /* Things to Do in Kakheti hero — same mechanism as .hero--adjara above, and the
    SAME photograph the guide already showed: /images/files/kakheti-vineyard.jpg
    is a 1280-wide raw crop of this exact frame (confirmed by pixel comparison,

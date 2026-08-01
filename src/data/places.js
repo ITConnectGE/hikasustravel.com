@@ -1258,7 +1258,135 @@ export const regions = [
     // /georgia/kvemo-kartli/things-to-do-in-kvemo-kartli via the CitySubPage dispatcher.
     thingsToDo: {
       seoKey: 'thingsToDoKvemoKartli', contentKey: 'thingsToDoKvemoKartli',
-      image: '/images/files/georgia-home.jpg',
+      // Cover/hero = the Diamond Bridge over Dashbashi Canyon, replacing the
+      // generic georgia-home.jpg placeholder this guide shipped with. It is named
+      // in the page's own H1 and is the only subject on the page with any
+      // photography at all.
+      //
+      // ⚠️ DELIBERATE duplication, owner-approved and unavoidable: this frame is
+      // also the Kvemo Kartli region hero and the Tsalka/Dashbashi Canyon hero.
+      // Every encoded Kvemo Kartli photograph is committed to a page. The one
+      // large unused set — 22 raw Rustavi Central Park / Fortress frames, which a
+      // filename-based scan misses because they are named 1.jpg..22.jpg — is
+      // unusable here: this page mentions Rustavi only as a bus-transport note
+      // ("Rustavi is under an hour by public bus"), never as somewhere to visit.
+      //
+      // All rungs already exist at /images/kvemo-kartli WITHOUT the `w` suffix, so
+      // every file is REFERENCED in place: nothing copied, nothing generated.
+      // Native width is 1445 → top rung 1445, no 1600.
+      image: '/images/kvemo-kartli/diamond-bridge-dashbashi-canyon-georgia-1445.webp',
+      imageAvif: '/images/kvemo-kartli/diamond-bridge-dashbashi-canyon-georgia-1445.avif',
+      heroClass: 'hero--things-to-do-kvemo-kartli',
+      heroPreload: '/images/kvemo-kartli/diamond-bridge-dashbashi-canyon-georgia-1200.avif',
+      // No `ogImage`: no 1.91:1 file exists for this frame, and the Kvemo Kartli
+      // region page likewise auto-derives og:image from `image`. Consistent with
+      // the Adjara guide (the Batumi/Imereti/Kakheti guides only carry a dedicated
+      // ogImage because one had already been built for their hero).
+      //
+      // Strings below are the Kvemo Kartli region page's approved sets, reused
+      // VERBATIM. Unusually for this page family they needed no re-derivation:
+      // their exonyms already match this page's body exactly — Latin `Kvemo
+      // Kartli`/`Dashbashi`/`Tsalka` in all 7, plus de `Diamantbrücke`,
+      // fr `pont de Diamant`, es `puente de Diamante`, nl `Diamanten brug`,
+      // cs `Diamantový most`, pl `Diamentowy Most`.
+      // ⚠️ Polish is `Diament-`, not `Diamant-`; a `/diamant/` check silently
+      // misses it (that exact false negative bit the region-page pass).
+      imageMeta: {
+        width: 1445, height: 1088, imageId: 'hero-image',
+        name: 'Diamond Bridge over Dashbashi Canyon, Kvemo Kartli, Georgia',
+        description: 'The glass Diamond Bridge spanning Dashbashi Canyon near Tsalka, with the volcanic plateau of the western uplands beyond, in the Kvemo Kartli region of Georgia.',
+        locationName: 'Dashbashi Canyon Diamond Bridge, Kvemo Kartli, Georgia',
+        locality: 'Tsalka', region: 'Kvemo Kartli', country: 'GE',
+        geo: { lat: 41.6394, lng: 44.1103 },
+        alt: {
+          en: 'The Diamond Bridge glass walkway over Dashbashi Canyon near Tsalka, Kvemo Kartli, Georgia',
+          de: 'Der gläserne Steg der Diamantbrücke über der Dashbashi-Schlucht bei Tsalka, Kvemo Kartli, Georgien',
+          fr: "La passerelle de verre du pont de Diamant au-dessus du canyon de Dashbashi, près de Tsalka, Kvemo Kartli, Géorgie",
+          es: 'La pasarela de cristal del puente de Diamante sobre el cañón de Dashbashi, cerca de Tsalka, Kvemo Kartli, Georgia',
+          nl: 'De glazen loopbrug van de Diamanten brug over de Dashbashi-kloof bij Tsalka, Kvemo Kartli, Georgië',
+          cs: 'Skleněná lávka Diamantového mostu nad kaňonem Dashbashi poblíž města Tsalka, Kvemo Kartli, Gruzie',
+          pl: 'Szklana kładka Diamentowego Mostu nad kanionem Dashbashi w pobliżu miasta Tsalka, Kvemo Kartli, Gruzja',
+        },
+        caption: {
+          en: 'The glass Diamond Bridge spans Dashbashi Canyon near Tsalka, with the volcanic plateau of the western uplands beyond.',
+          de: 'Die gläserne Diamantbrücke überspannt die Dashbashi-Schlucht bei Tsalka, dahinter das vulkanische Plateau der westlichen Hochländer.',
+          fr: "Le pont de Diamant en verre franchit le canyon de Dashbashi près de Tsalka, le plateau volcanique des hauts plateaux occidentaux au fond.",
+          es: 'El puente de Diamante de cristal cruza el cañón de Dashbashi cerca de Tsalka, con la meseta volcánica de las tierras altas occidentales al fondo.',
+          nl: 'De glazen Diamanten brug overspant de Dashbashi-kloof bij Tsalka, met daarachter het vulkanische plateau van de westelijke hooglanden.',
+          cs: 'Skleněný Diamantový most překlenuje kaňon Dashbashi poblíž města Tsalka, za ním se rozkládá sopečná plošina západních vrchovin.',
+          pl: 'Szklany Diamentowy Most rozpina się nad kanionem Dashbashi w pobliżu miasta Tsalka, a w tle rozciąga się wulkaniczny płaskowyż zachodnich wyżyn.',
+        },
+      },
+      // Two contextual body photos, both referenced in place. The glass café sits
+      // under the Dashbashi section that explicitly describes it; the canyon frame
+      // sits under the open-plateau-landscapes section, which is what that photo
+      // actually shows — rolling green upland above a rocky gorge. Its caption
+      // names Dashbashi so nothing broader is implied.
+      //
+      // Nine of the ten sections stay image-free. No photograph exists anywhere in
+      // the project for the Dmanisi excavation site, Bolnisi Sioni Cathedral, the
+      // region's multicultural character (no mosque or khachkar frame) or the
+      // lesser-known sites. REJECTED as misleading rather than used: the Diamond
+      // Restaurant frame (large readable commercial signage, and the page's "glass
+      // café" is the capsule on the bridge, not that building) and the Bolnisi
+      // museum's Dmanisi hominin reconstruction (a museum display; the page's
+      // Dmanisi section is about visiting the excavation site, and it never
+      // mentions that museum).
+      //
+      // Brand credit throughout, mirroring the region page — these exact files
+      // already assert it there.
+      inlineImageObjects: [
+        {
+          base: 'diamond-bridge-glass-capsule-dashbashi-canyon-georgia', width: 1086, height: 1448,
+          anchor: 'inline-glass-cafe', dir: '/images/kvemo-kartli',
+          description: 'The diamond-shaped glass café suspended at the centre of the Diamond Bridge, high above Dashbashi Canyon near Tsalka, in the Kvemo Kartli region of Georgia.',
+          locationName: 'Dashbashi Canyon Diamond Bridge, Kvemo Kartli, Georgia',
+          locality: 'Tsalka', region: 'Kvemo Kartli', geo: { lat: 41.6394, lng: 44.1103 },
+          name: {
+            en: 'The diamond-shaped glass café suspended beneath the Diamond Bridge, Dashbashi Canyon, Georgia',
+            de: 'Das diamantförmige Glascafé unter der Diamantbrücke über der Dashbashi-Schlucht, Georgien',
+            fr: "Le café de verre en forme de diamant suspendu sous le pont de Diamant, canyon de Dashbashi, Géorgie",
+            es: 'El café de cristal con forma de diamante suspendido bajo el puente de Diamante, cañón de Dashbashi, Georgia',
+            nl: 'Het diamantvormige glazen café onder de Diamanten brug boven de Dashbashi-kloof, Georgië',
+            cs: 'Skleněná kavárna ve tvaru diamantu zavěšená pod Diamantovým mostem nad kaňonem Dashbashi, Gruzie',
+            pl: 'Szklana kawiarnia w kształcie diamentu zawieszona pod Diamentowym Mostem nad kanionem Dashbashi, Gruzja',
+          },
+          caption: {
+            en: 'The diamond-shaped glass café hangs at the centre of the bridge, high above the canyon floor.',
+            de: 'Das diamantförmige Glascafé hängt in der Mitte der Brücke, hoch über dem Grund der Schlucht.',
+            fr: "Le café de verre en forme de diamant est suspendu au milieu du pont, très haut au-dessus du fond du canyon.",
+            es: 'El café de cristal con forma de diamante cuelga en el centro del puente, muy por encima del fondo del cañón.',
+            nl: 'Het diamantvormige glazen café hangt midden aan de brug, hoog boven de bodem van de kloof.',
+            cs: 'Skleněná kavárna ve tvaru diamantu visí uprostřed mostu vysoko nad dnem kaňonu.',
+            pl: 'Szklana kawiarnia w kształcie diamentu wisi pośrodku mostu, wysoko nad dnem kanionu.',
+          },
+        },
+        {
+          base: 'dashbashi-canyon-zipline-georgia', width: 1445, height: 1088,
+          anchor: 'inline-canyon', dir: '/images/kvemo-kartli',
+          description: 'The basalt walls and green slopes of Dashbashi Canyon, cut by the Khrami River through a volcanic plateau near Tsalka, with the open upland grassland above, in the Kvemo Kartli region of Georgia.',
+          locationName: 'Dashbashi Canyon, Kvemo Kartli, Georgia',
+          locality: 'Tsalka', region: 'Kvemo Kartli', geo: { lat: 41.6394, lng: 44.1103 },
+          name: {
+            en: 'The basalt walls and green slopes of Dashbashi Canyon near Tsalka, Kvemo Kartli, Georgia',
+            de: 'Die Basaltwände und grünen Hänge der Dashbashi-Schlucht bei Tsalka, Kvemo Kartli, Georgien',
+            fr: "Les parois de basalte et les versants verdoyants du canyon de Dashbashi, près de Tsalka, Kvemo Kartli, Géorgie",
+            es: 'Las paredes de basalto y las laderas verdes del cañón de Dashbashi, cerca de Tsalka, Kvemo Kartli, Georgia',
+            nl: 'De basaltwanden en groene hellingen van de Dashbashi-kloof bij Tsalka, Kvemo Kartli, Georgië',
+            cs: 'Čedičové stěny a zelené svahy kaňonu Dashbashi poblíž města Tsalka, Kvemo Kartli, Gruzie',
+            pl: 'Bazaltowe ściany i zielone zbocza kanionu Dashbashi w pobliżu miasta Tsalka, Kvemo Kartli, Gruzja',
+          },
+          caption: {
+            en: 'Open upland grassland runs right to the rim of Dashbashi Canyon, where the plateau drops away in basalt walls.',
+            de: 'Offenes Hochlandgrasland reicht bis an den Rand der Dashbashi-Schlucht, wo das Plateau in Basaltwänden abfällt.',
+            fr: "Les prairies des hauts plateaux s'étendent jusqu'au bord du canyon de Dashbashi, où le plateau s'effondre en parois de basalte.",
+            es: 'Los pastizales de las tierras altas llegan hasta el borde del cañón de Dashbashi, donde la meseta cae en paredes de basalto.',
+            nl: 'Open hooglandgrasland loopt door tot aan de rand van de Dashbashi-kloof, waar het plateau in basaltwanden wegvalt.',
+            cs: 'Otevřené horské pastviny sahají až k okraji kaňonu Dashbashi, kde plošina spadá čedičovými stěnami.',
+            pl: 'Otwarte wyżynne pastwiska sięgają aż po krawędź kanionu Dashbashi, gdzie płaskowyż opada bazaltowymi ścianami.',
+          },
+        },
+      ],
       address: { addressRegion: 'Kvemo Kartli' },
       attractions: [
         'Dmanisi Archaeological Site', 'Dashbashi Canyon', 'Diamond Bridge',
