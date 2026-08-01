@@ -906,6 +906,45 @@ section {
     );
   }
 }
+/* Things to Do in Kakheti hero — same mechanism as .hero--adjara above, and the
+   SAME photograph the guide already showed: /images/files/kakheti-vineyard.jpg
+   is a 1280-wide raw crop of this exact frame (confirmed by pixel comparison,
+   not by filename). The region page had already re-encoded it properly as
+   kakheti-vineyard-sunset-georgia, so this points at that ladder instead of
+   serving one un-laddered JPG to every viewport. No new files exist for it, and
+   the old JPG is NOT deleted — tours.js still references it.
+
+   ⚠️ These rungs keep the `w` width suffix. That is fine HERE because the hero
+   is a CSS background plus a plain `image:` path; only inlineImageObjects need
+   no-`w` names (their contentUrl is built as `<base>-<width>.webp`).
+
+   Native is 1448, so that is the top rung — no 1600 or 2400 breakpoint. */
+.hero--things-to-do-kakheti {
+  background-image: url("/images/files/kakheti-vineyard-sunset-georgia-1200w.webp");
+  background-image: image-set(
+    url("/images/files/kakheti-vineyard-sunset-georgia-768w.avif") type("image/avif"),
+    url("/images/files/kakheti-vineyard-sunset-georgia-768w.webp") type("image/webp")
+  );
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+@media (min-width: 768px) {
+  .hero--things-to-do-kakheti {
+    background-image: image-set(
+      url("/images/files/kakheti-vineyard-sunset-georgia-1200w.avif") type("image/avif"),
+      url("/images/files/kakheti-vineyard-sunset-georgia-1200w.webp") type("image/webp")
+    );
+  }
+}
+@media (min-width: 1200px) {
+  .hero--things-to-do-kakheti {
+    background-image: image-set(
+      url("/images/files/kakheti-vineyard-sunset-georgia-1448w.avif") type("image/avif"),
+      url("/images/files/kakheti-vineyard-sunset-georgia-1448w.webp") type("image/webp")
+    );
+  }
+}
 /* Things to Do in Imereti hero — same mechanism as .hero--adjara above, and the
    SAME photograph as .hero--bagrati (the Bagrati Cathedral site page). It gets
    its own class rather than reusing .hero--bagrati so that changing one page's

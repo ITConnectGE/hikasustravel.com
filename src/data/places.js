@@ -882,7 +882,228 @@ export const regions = [
     // /georgia/kakheti/things-to-do-in-kakheti via the CitySubPage dispatcher.
     thingsToDo: {
       seoKey: 'thingsToDoKakheti', contentKey: 'thingsToDoKakheti',
-      image: '/images/files/kakheti-vineyard.jpg',
+      // Cover/hero = the SAME photograph this guide already showed, at the encode
+      // the region page had already built. /images/files/kakheti-vineyard.jpg is a
+      // 1280-wide raw crop of this exact frame — established by PIXEL COMPARISON,
+      // not by trusting the filenames — served un-laddered to every viewport. It
+      // now uses the 768/1200/1448 ladder plus the 1200x630 social image that
+      // already existed. The old JPG is NOT deleted; tours.js still uses it.
+      //
+      // ⚠️ DELIBERATE duplication, owner-approved and unavoidable: there is no
+      // unused Kakheti photograph in the project. Four frames that appeared free
+      // (referenced only from tours.js) turned out to BE the region page's images
+      // under different names — sighnaghi-kakheti = sighnaghi-ridge,
+      // kakheti-wine-tasting = kakheti-wine-table, gombori-pass-kakheti-georgia =
+      // gombori-pass-road, and "Qvevri (Clay Vessels).jpg" = qvevri-clay-vessels
+      // (a wider crop; the numeric signature said "different", viewing them said
+      // otherwise). The only genuinely unreferenced Kakheti frame,
+      // batonistsikhe-fortress-telavi.jpg, is a poor snapshot with parked cars.
+      //
+      // Files are REFERENCED in place wherever the naming allows. Native width is
+      // 1448, so that is the top rung — no 1600/2400 breakpoint.
+      image: '/images/files/kakheti-vineyard-sunset-georgia-1448w.webp',
+      imageAvif: '/images/files/kakheti-vineyard-sunset-georgia-1448w.avif',
+      heroClass: 'hero--things-to-do-kakheti',
+      heroPreload: '/images/files/kakheti-vineyard-sunset-georgia-1200w.avif',
+      // Dedicated 1.91:1 social image, already built. Matches the Batumi/Imereti
+      // things-to-do precedent (Adjara's guide auto-derives only because no OG
+      // file existed for its frame).
+      ogImage: { src: '/images/files/kakheti-vineyard-sunset-georgia-og-1200x630.jpg', width: 1200, height: 630 },
+      // `alt` feeds og:image:alt + twitter:image:alt and the hero ImageObject
+      // caption; `name`/`description` are English-invariant by component design.
+      //
+      // ⚠️ The location claim is deliberately no stronger than the site's existing
+      // one. This frame carries no Kakheti landmark — it is vine rows at sunrise —
+      // so the strings say "a Kakheti vineyard" exactly as the region page already
+      // does, and assert nothing more specific. No locality, no invented town.
+      imageMeta: {
+        width: 1448, height: 1086, imageId: 'hero-image',
+        name: 'Vineyard in Kakheti at sunrise, Georgia',
+        description: "Rows of vines in a vineyard in Kakheti, the region that produces the majority of Georgia's wine, at sunrise.",
+        locationName: 'Kakheti, Georgia', region: 'Kakheti', country: 'GE',
+        alt: {
+          en: 'Rows of vines in a Kakheti vineyard at sunrise, Georgia',
+          de: 'Rebzeilen in einem Weinberg in Kachetien bei Sonnenaufgang, Georgien',
+          fr: "Rangs de vigne dans un vignoble du Kakheti au lever du soleil, Géorgie",
+          es: 'Hileras de vides en un viñedo de Kakheti al amanecer, Georgia',
+          nl: 'Rijen wijnstokken in een wijngaard in Kakheti bij zonsopgang, Georgië',
+          cs: 'Řady révy ve vinici v Kachetii za východu slunce, Gruzie',
+          pl: 'Rzędy winorośli w winnicy w Kakheti o wschodzie słońca, Gruzja',
+        },
+        caption: {
+          en: 'Rows of vines in a Kakheti vineyard at sunrise.',
+          de: 'Rebzeilen in einem Weinberg in Kachetien bei Sonnenaufgang.',
+          fr: "Rangs de vigne dans un vignoble du Kakheti au lever du soleil.",
+          es: 'Hileras de vides en un viñedo de Kakheti al amanecer.',
+          nl: 'Rijen wijnstokken in een wijngaard in Kakheti bij zonsopgang.',
+          cs: 'Řady révy ve vinici v Kachetii za východu slunce.',
+          pl: 'Rzędy winorośli w winnicy w Kakheti o wschodzie słońca.',
+        },
+      },
+      // Five contextual body photos, spliced into every locale at a fixed BLOCK
+      // INDEX against the paragraph each actually illustrates: qvevri cellar (6),
+      // Sighnaghi (10), Telavi (12), Alaverdi (16), the supra (18). Every one
+      // duplicates another page's frame — see the hero note.
+      //
+      // ⚠️ NAMING: this page writes fr/es/nl/pl "Kakheti", plus "Telavi" and
+      // "Erekle" in all 7 locales (de "Kachetien", cs "Kachetie"). The Telavi and
+      // Alaverdi pages instead write fr "Kakhétie"/"Héraclius II", es "Kajetia",
+      // nl "Kachetië", pl "Kachetia"/"Telawi"/"Herakliusza II", de "Telawi" — so
+      // their strings are RE-DERIVED here, not reused, or five locales would read
+      // against their own body text. Only the region page's second-pass strings
+      // (Sighnaghi, the supra table) match this page exactly and are reused verbatim.
+      //
+      // Credit mirrors each photo's owning page: the qvevri, Telavi and Alaverdi
+      // frames are brand-credited there; the two second-pass region frames carry
+      // `noCredit` because no provenance is recorded for them anywhere.
+      //
+      // Sections with NO photograph anywhere in the project — Bodbe, the Rtveli
+      // harvest, the family-winery and larger-estate paragraphs — deliberately stay
+      // image-free. The Gombori Pass frame was rejected for the Alazani-drive
+      // paragraph: it shows a wooded hairpin bend, not the vineyards, villages and
+      // open farmland that paragraph describes.
+      inlineImageObjects: [
+        {
+          // Copied byte-for-byte from the `-<w>w` originals to no-`w` names, because
+          // the contentUrl builder emits `<base>-<width>.webp`. Nothing re-encoded.
+          // English-only on the region page (older `imageObjects` convention), so
+          // the six non-English sets below are newly authored.
+          base: 'qvevri-clay-vessels-kakheti-georgia', width: 1448, height: 1086,
+          anchor: 'inline-qvevri', dir: '/images/kakheti',
+          description: "Egg-shaped clay qvevri, the vessels traditionally buried in the ground to ferment and age Georgian wine, lined up against a stone wall in Kakheti, Georgia.",
+          locationName: 'Kakheti, Georgia', region: 'Kakheti',
+          name: {
+            en: 'Large clay qvevri wine vessels against a stone wall in Kakheti, Georgia',
+            de: 'Große Qvevri-Tongefäße für Wein an einer Steinmauer in Kachetien, Georgien',
+            fr: "Grandes jarres qvevri en argile contre un mur de pierre au Kakheti, Géorgie",
+            es: 'Grandes vasijas de barro qvevri junto a un muro de piedra en Kakheti, Georgia',
+            nl: 'Grote kleien qvevri-wijnvaten tegen een stenen muur in Kakheti, Georgië',
+            cs: 'Velké hliněné nádoby qvevri u kamenné zdi v Kachetii, Gruzie',
+            pl: 'Duże gliniane naczynia qvevri przy kamiennym murze w Kakheti, Gruzja',
+          },
+          caption: {
+            en: 'Large clay qvevri, the vessels traditionally buried underground to ferment and age the wine.',
+            de: 'Große Tongefäße namens Qvevri, die traditionell im Boden vergraben werden, um den Wein zu vergären und reifen zu lassen.',
+            fr: "De grandes jarres d'argile appelées qvevri, traditionnellement enterrées pour la fermentation et le vieillissement du vin.",
+            es: 'Grandes vasijas de barro llamadas qvevri, tradicionalmente enterradas para fermentar y envejecer el vino.',
+            nl: 'Grote kleien vaten, qvevri genoemd, die traditioneel worden ingegraven om de wijn te laten gisten en rijpen.',
+            cs: 'Velké hliněné nádoby zvané qvevri, tradičně zakopávané do země, aby v nich víno kvasilo a zrálo.',
+            pl: 'Duże gliniane naczynia zwane qvevri, tradycyjnie zakopywane w ziemi, by wino w nich fermentowało i dojrzewało.',
+          },
+        },
+        {
+          // Referenced in place at /images/kakheti — already no-`w`. name/caption
+          // are the region page's approved second-pass strings, reused VERBATIM:
+          // same photograph, and their exonyms already match this page's body.
+          base: 'sighnaghi-ridge-alazani-valley-kakheti-georgia', width: 1448, height: 877,
+          anchor: 'inline-sighnaghi', dir: '/images/kakheti',
+          noCredit: true,
+          description: 'The red-tiled roofs of Sighnaghi covering the ridge above the western Alazani valley, with the foothills of the Greater Caucasus beyond, in Kakheti, Georgia.',
+          locationName: 'Sighnaghi, Kakheti, Georgia', locality: 'Sighnaghi', region: 'Kakheti',
+          name: {
+            en: 'Red-tiled roofs of Sighnaghi on the ridge above the Alazani valley, Kakheti, Georgia',
+            de: 'Die Ziegeldächer von Sighnaghi auf dem Bergkamm über dem Alazani-Tal, Kachetien, Georgien',
+            fr: "Les toits de tuiles de Sighnaghi sur sa crête au-dessus de la vallée de l'Alazani, Kakheti, Géorgie",
+            es: 'Los tejados de teja roja de Sighnaghi sobre su cresta por encima del valle del Alazani, Kakheti, Georgia',
+            nl: 'De rode pannendaken van Sighnaghi op de bergkam boven het Alazani-dal, Kakheti, Georgië',
+            cs: 'Červené střechy Sighnaghi na hřebeni nad údolím Alazani, Kachetie, Gruzie',
+            pl: 'Czerwone dachy Sighnaghi na grzbiecie nad doliną Alazani, Kakheti, Gruzja',
+          },
+          caption: {
+            en: 'The roofs of Sighnaghi cover the ridge above the western Alazani valley, with the foothills of the Caucasus beyond.',
+            de: 'Die Dächer von Sighnaghi bedecken den Bergkamm über dem westlichen Alazani-Tal, dahinter die Ausläufer des Kaukasus.',
+            fr: "Les toits de Sighnaghi couvrent la crête au-dessus de la vallée occidentale de l'Alazani, les contreforts du Caucase au fond.",
+            es: 'Los tejados de Sighnaghi cubren la cresta sobre el valle occidental del Alazani, con el piedemonte del Cáucaso al fondo.',
+            nl: 'De daken van Sighnaghi bedekken de bergkam boven het westelijke Alazani-dal, met daarachter de uitlopers van de Kaukasus.',
+            cs: 'Střechy Sighnaghi pokrývají hřeben nad západním údolím Alazani, za nímž se táhne podhůří Kavkazu.',
+            pl: 'Dachy Sighnaghi pokrywają grzbiet nad zachodnią doliną Alazani, w tle podgórza Kaukazu.',
+          },
+        },
+        {
+          // 768/1448 DOWNSCALED from the 2400 original (those rungs did not exist);
+          // 1200 copied pre-encoded. Nothing upscaled.
+          //
+          // ⚠️ Strings RE-DERIVED, not reused: the Telavi city page writes de/pl
+          // "Telawi", fr "Héraclius II", pl "Herakliusza II", fr "Kakhétie",
+          // es "Kajetia", nl "Kachetië" — none of which this page's body uses.
+          base: 'telavi-town-view-erekle-ii-monument-kakheti-georgia', width: 1448, height: 1090,
+          anchor: 'inline-telavi', dir: '/images/kakheti',
+          description: 'The red-roofed old town of Telavi seen from beside the King Erekle II monument, with the Alazani valley and the Greater Caucasus beyond, in Kakheti, Georgia.',
+          locationName: 'Telavi, Kakheti, Georgia', locality: 'Telavi', region: 'Kakheti', geo: { lat: 41.9192, lng: 45.4731 },
+          name: {
+            en: 'Telavi old town seen from the King Erekle II monument, Kakheti, Georgia',
+            de: 'Die Altstadt von Telavi vom Denkmal für König Erekle II. aus, Kachetien, Georgien',
+            fr: "La vieille ville de Telavi vue depuis le monument au roi Erekle II, Kakheti, Géorgie",
+            es: 'El casco antiguo de Telavi desde el monumento al rey Erekle II, Kakheti, Georgia',
+            nl: 'De oude stad van Telavi gezien vanaf het monument voor koning Erekle II, Kakheti, Georgië',
+            cs: 'Staré město Telavi od pomníku krále Erekleho II., Kachetie, Gruzie',
+            pl: 'Stare miasto Telavi widziane od pomnika króla Erekle II, Kakheti, Gruzja',
+          },
+          caption: {
+            en: 'The red-roofed old town of Telavi below the King Erekle II monument, with the Alazani valley beyond.',
+            de: 'Die Altstadt von Telavi mit ihren roten Dächern unterhalb des Denkmals für König Erekle II., dahinter das Alazani-Tal.',
+            fr: "La vieille ville de Telavi aux toits rouges en contrebas du monument au roi Erekle II, la vallée de l'Alazani au fond.",
+            es: 'El casco antiguo de Telavi, de tejados rojos, bajo el monumento al rey Erekle II, con el valle del Alazani al fondo.',
+            nl: 'De oude stad van Telavi met haar rode daken onder het monument voor koning Erekle II, met daarachter het Alazani-dal.',
+            cs: 'Staré město Telavi s červenými střechami pod pomníkem krále Erekleho II., v pozadí údolí Alazani.',
+            pl: 'Stare miasto Telavi o czerwonych dachach poniżej pomnika króla Erekle II, w tle dolina Alazani.',
+          },
+        },
+        {
+          // Referenced in place at /images/kakheti — already no-`w`. Strings
+          // RE-DERIVED: the Alaverdi page writes fr "Kakhétie", es "Kajetia",
+          // nl "Kachetië", pl/cs "Kachetii", which this page's body does not.
+          base: 'alaverdi-cathedral-georgia', width: 1448, height: 1086,
+          anchor: 'inline-alaverdi', dir: '/images/kakheti',
+          description: 'Alaverdi Cathedral, an 11th-century Georgian Orthodox church with a tall conical dome, rising behind the stone defensive walls of its monastery on the flat valley floor in Kakheti, Georgia.',
+          locationName: 'Alaverdi Cathedral, Kakheti, Georgia', region: 'Kakheti', geo: { lat: 42.032497, lng: 45.377108 },
+          name: {
+            en: 'Alaverdi Cathedral behind its monastery walls on the Kakheti valley floor, Georgia',
+            de: 'Die Kathedrale von Alaverdi hinter den Klostermauern auf dem Talboden in Kachetien, Georgien',
+            fr: "La cathédrale d'Alaverdi derrière les murs de son monastère, au fond de la vallée, Kakheti, Géorgie",
+            es: 'La catedral de Alaverdi tras los muros de su monasterio en el llano del valle, Kakheti, Georgia',
+            nl: 'De kathedraal van Alaverdi achter de kloostermuren op de vlakke valleibodem, Kakheti, Georgië',
+            cs: 'Katedrála Alaverdi za hradbami svého kláštera na dně údolí, Kachetie, Gruzie',
+            pl: 'Katedra Alaverdi za murami swojego klasztoru na dnie doliny, Kakheti, Gruzja',
+          },
+          caption: {
+            en: "Alaverdi Cathedral, its tall conical dome rising above the monastery's stone walls on the valley floor.",
+            de: 'Die Kathedrale von Alaverdi, deren hohe Kegelkuppel sich über den Steinmauern des Klosters auf dem Talboden erhebt.',
+            fr: "La cathédrale d'Alaverdi, dont la haute coupole conique domine les murs de pierre du monastère au fond de la vallée.",
+            es: 'La catedral de Alaverdi, cuya alta cúpula cónica se eleva sobre los muros de piedra del monasterio en el llano del valle.',
+            nl: 'De kathedraal van Alaverdi, met haar hoge kegelvormige koepel boven de stenen muren van het klooster op de valleibodem.',
+            cs: 'Katedrála Alaverdi, jejíž vysoká kuželová kupole se tyčí nad kamennými hradbami kláštera na dně údolí.',
+            pl: 'Katedra Alaverdi, której wysoka stożkowa kopuła wznosi się ponad kamiennymi murami klasztoru na dnie doliny.',
+          },
+        },
+        {
+          // Referenced in place at /images/kakheti — already no-`w`. Region page's
+          // approved second-pass strings, reused VERBATIM (exonyms already match).
+          base: 'kakheti-wine-table-alazani-valley-georgia', width: 1448, height: 579,
+          anchor: 'inline-supra', dir: '/images/kakheti',
+          noCredit: true,
+          description: 'A table laid with glasses and dishes on a terrace above the vineyards of the Alazani valley, with the Greater Caucasus in the distance, in Kakheti, Georgia.',
+          locationName: 'Alazani Valley, Kakheti, Georgia', region: 'Kakheti',
+          name: {
+            en: 'A table laid on a terrace above the vineyards, the Greater Caucasus beyond, Kakheti, Georgia',
+            de: 'Ein gedeckter Tisch auf einer Terrasse über den Weinbergen, dahinter der Große Kaukasus, Kachetien, Georgien',
+            fr: "Une table dressée sur une terrasse au-dessus des vignes, le Grand Caucase au fond, Kakheti, Géorgie",
+            es: 'Una mesa puesta en una terraza sobre los viñedos, con el Gran Cáucaso al fondo, Kakheti, Georgia',
+            nl: 'Een gedekte tafel op een terras boven de wijngaarden, met daarachter de Grote Kaukasus, Kakheti, Georgië',
+            cs: 'Prostřený stůl na terase nad vinicemi, v pozadí Velký Kavkaz, Kachetie, Gruzie',
+            pl: 'Nakryty stół na tarasie nad winnicami, w tle Wielki Kaukaz, Kakheti, Gruzja',
+          },
+          caption: {
+            en: 'A table laid on a terrace above the vineyards of the Alazani valley, looking toward the Greater Caucasus.',
+            de: 'Ein gedeckter Tisch auf einer Terrasse über den Weinbergen des Alazani-Tals mit Blick zum Großen Kaukasus.',
+            fr: "Une table dressée sur une terrasse au-dessus des vignes de la vallée de l'Alazani, face au Grand Caucase.",
+            es: 'Una mesa puesta en una terraza sobre los viñedos del valle del Alazani, mirando hacia el Gran Cáucaso.',
+            nl: 'Een gedekte tafel op een terras boven de wijngaarden van het Alazani-dal, met zicht op de Grote Kaukasus.',
+            cs: 'Prostřený stůl na terase nad vinicemi údolí Alazani s výhledem k Velkému Kavkazu.',
+            pl: 'Nakryty stół na tarasie nad winnicami doliny Alazani, z widokiem na Wielki Kaukaz.',
+          },
+        },
+      ],
       address: { addressRegion: 'Kakheti' },
       attractions: [
         'Family Wineries', 'Kvareli Wine Cave', 'Shumi Winery', 'Sighnaghi', 'Telavi', 'Bodbe Monastery', 'Alaverdi Cathedral', 'Alazani Valley',
