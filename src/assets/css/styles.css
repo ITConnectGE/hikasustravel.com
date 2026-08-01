@@ -874,18 +874,20 @@ section {
     );
   }
 }
-/* Imereti (REGION) hero — same mechanism as .hero--adjara above. Same Bagrati
-   photograph the page always had, re-encoded from the raw 1600x1200 JPG into
-   768/1200/1448 webp+avif; the JPG stays in /images/files because the region's
-   things-to-do guide still references it. Native width is 1600, so 1448 is the
-   top rung — do not add a 1600 or 2400 breakpoint. Source is 4:3 with the
-   cathedral just above the vertical midpoint, so centre-centre cropping keeps it
-   in frame at every hero band from 360px to 1920px. */
+/* Imereti (REGION) hero — same mechanism as .hero--adjara above. Gelati
+   Monastery, replacing the old bagrati-cathedral.jpg at the owner's request.
+   The variants are SHARED with the Gelati Monastery site page (same
+   /images/files/ path, one set of bytes) rather than copied into an
+   /images/imereti/ folder — see the note on places.js's imereti entry about the
+   deliberate one-photo-two-pages exception. Native width is 1491, so that is the
+   top rung — do not add a 1600 or 2400 breakpoint. Source is ~4:3 with the
+   complex across the middle band, so centre-centre cropping keeps the domed
+   cathedral in frame at every hero band from 360px to 1920px. */
 .hero--imereti {
-  background-image: url("/images/imereti/imereti-bagrati-kutaisi-georgia-1200.webp");
+  background-image: url("/images/files/gelati-monastery-kutaisi-georgia-1200.webp");
   background-image: image-set(
-    url("/images/imereti/imereti-bagrati-kutaisi-georgia-768.avif") type("image/avif"),
-    url("/images/imereti/imereti-bagrati-kutaisi-georgia-768.webp") type("image/webp")
+    url("/images/files/gelati-monastery-kutaisi-georgia-768.avif") type("image/avif"),
+    url("/images/files/gelati-monastery-kutaisi-georgia-768.webp") type("image/webp")
   );
   background-position: center center;
   background-size: cover;
@@ -894,16 +896,16 @@ section {
 @media (min-width: 768px) {
   .hero--imereti {
     background-image: image-set(
-      url("/images/imereti/imereti-bagrati-kutaisi-georgia-1200.avif") type("image/avif"),
-      url("/images/imereti/imereti-bagrati-kutaisi-georgia-1200.webp") type("image/webp")
+      url("/images/files/gelati-monastery-kutaisi-georgia-1200.avif") type("image/avif"),
+      url("/images/files/gelati-monastery-kutaisi-georgia-1200.webp") type("image/webp")
     );
   }
 }
 @media (min-width: 1200px) {
   .hero--imereti {
     background-image: image-set(
-      url("/images/imereti/imereti-bagrati-kutaisi-georgia-1448.avif") type("image/avif"),
-      url("/images/imereti/imereti-bagrati-kutaisi-georgia-1448.webp") type("image/webp")
+      url("/images/files/gelati-monastery-kutaisi-georgia-1491.avif") type("image/avif"),
+      url("/images/files/gelati-monastery-kutaisi-georgia-1491.webp") type("image/webp")
     );
   }
 }

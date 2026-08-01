@@ -195,20 +195,28 @@ export const regions = [
   {
     slug: 'imereti', name: 'Imereti', published: true,
     seoKey: 'imereti', contentKey: 'imereti',
-    // Cover/hero = the SAME Bagrati photograph the page has always used, now
-    // shipped as a proper 768/1200/1448 webp+avif ladder instead of a single raw
-    // 1600x1200 JPG (the Adjara move: re-encode, don't swap). The photo was kept
-    // because every stronger Imereti frame in the project — Gelati, the Bagrati
-    // package shot, the Colchis Fountain — is already another page's hero, and
-    // this site keeps one photograph to one page (cf. the reverted Gabriadze
-    // hero, and Ushguli city vs. the Svaneti region page each getting their own
-    // Ushguli frame). The original JPG is NOT deleted — `thingsToDo` below still
-    // uses it. `heroClass` moves the background into CSS so the ladder actually
-    // applies (HeroSection's inline style can only carry one width); og:image/
-    // twitter still auto-derive from `image` via useSEO, matching the Adjara and
-    // Kakheti region pattern — region pages have no page-specific OG convention.
-    image: '/images/imereti/imereti-bagrati-kutaisi-georgia-1448.webp',
-    imageAvif: '/images/imereti/imereti-bagrati-kutaisi-georgia-1448.avif',
+    // Cover/hero = the Gelati Monastery photograph, at the owner's request,
+    // replacing the old bagrati-cathedral.jpg (a distant, hazy frame of the
+    // cathedral under scaffolding). Gelati is the page's flagship monument and is
+    // named in its H1, and this is the only broad, well-lit "Imereti landmark in
+    // its landscape" frame in the project.
+    //
+    // ⚠️ DELIBERATE EXCEPTION to the site's one-photo-one-page rule (cf. the
+    // reverted Gabriadze hero, and Ushguli city vs. the Svaneti region page each
+    // getting their own Ushguli frame): this is also the hero of the Gelati
+    // Monastery site page. Every Imereti photograph in the project is already
+    // committed to a more specific page, so a region hub either duplicates or
+    // keeps a poor frame; the owner chose to duplicate. The files are REFERENCED
+    // at their existing /images/files/ path rather than copied, so there is only
+    // one set of bytes on disk.
+    //
+    // `heroClass` moves the background into CSS so the 768/1200/1491 ladder
+    // actually applies (HeroSection's inline style can only carry one width);
+    // og:image/twitter auto-derive from `image` via useSEO, matching the Adjara
+    // and Kakheti region pattern — region pages have no page-specific OG
+    // convention. Native width is 1491, so that is the top rung; no 1600 rung.
+    image: '/images/files/gelati-monastery-kutaisi-georgia-1491.webp',
+    imageAvif: '/images/files/gelati-monastery-kutaisi-georgia-1491.avif',
     heroClass: 'hero--imereti',
     // Hero + two contextual body photos. The two body ones render as real
     // <figure class="body-img"> blocks spliced into each locale's content at a
@@ -218,39 +226,45 @@ export const regions = [
     // `description` is the English long form. contentUrl uses the largest shipped
     // variant.
     //
-    // All three carry `noCredit`: no provenance is recorded anywhere for
-    // bagrati-cathedral.jpg or for the two cave JPGs (which reach the site only
-    // as tours.js tile/gallery frames), so asserting Hikasus authorship would be
-    // false attribution. Flip to brand credit once ownership is confirmed.
+    // The two CAVE frames carry `noCredit`: no provenance is recorded for them
+    // (they reach the site only as tours.js tile/gallery frames), so asserting
+    // Hikasus authorship would be false attribution. The Gelati hero does NOT —
+    // it is recorded as the owner's own photo on the Gelati Monastery site page,
+    // so it takes the same brand credit there and here.
     //
     // Sections with no photograph anywhere in the project — Okatse and Martvili,
     // Sataplia, Tskaltubo, the Rioni valley, Imeretian wine — deliberately stay
     // image-free rather than borrow a wrong-region or already-committed frame.
     inlineImageObjects: [
       {
-        base: 'imereti-bagrati-kutaisi-georgia', width: 1448, height: 1086,
-        anchor: 'hero-image', dir: '/images/imereti', hero: true,
-        noCredit: true,
-        description: 'Bagrati Cathedral on Ukimerioni Hill, seen across the rooftops and trees of Kutaisi in the Imereti region of Georgia.',
-        locationName: 'Bagrati Cathedral, Ukimerioni Hill, Kutaisi, Imereti, Georgia',
-        locality: 'Kutaisi', region: 'Imereti', geo: { lat: 42.2773, lng: 42.7043 },
+        // No `dir` — these variants live at the default /images/files/ path,
+        // shared with the Gelati Monastery site page rather than duplicated.
+        // Coordinates and location match that page's entry.
+        base: 'gelati-monastery-kutaisi-georgia', width: 1491, height: 1055,
+        anchor: 'hero-image', hero: true,
+        description: 'The medieval Gelati Monastery on a forested hillside northeast of Kutaisi, its domed cathedral and stone bell tower in honey-coloured stone, in the Imereti region of Georgia.',
+        locationName: 'Gelati Monastery, Kutaisi, Imereti, Georgia',
+        locality: 'Kutaisi', region: 'Imereti', geo: { lat: 42.29472, lng: 42.76806 },
+        // Naming follows THIS page's body, which uses the Latin Kutaisi/Gelati in
+        // every locale (the Gelati site page's own strings use the minority
+        // Koutaïssi/Ghélati/Koetaisi variants — not repeated here).
         name: {
-          en: 'Bagrati Cathedral on its hill above the rooftops of Kutaisi, Imereti, Georgia',
-          de: 'Die Bagrati-Kathedrale auf ihrem Hügel über den Dächern von Kutaisi, Imereti, Georgien',
-          fr: "La cathédrale de Bagrati sur sa colline au-dessus des toits de Kutaisi, Imereti, Géorgie",
-          es: 'La catedral de Bagrati sobre su colina, por encima de los tejados de Kutaisi, Imereti, Georgia',
-          nl: 'De Bagrati-kathedraal op haar heuvel boven de daken van Kutaisi, Imereti, Georgië',
-          cs: 'Katedrála Bagrati na návrší nad střechami Kutaisi, Imeretie, Gruzie',
-          pl: 'Katedra Bagrati na wzgórzu ponad dachami Kutaisi, Imeretia, Gruzja',
+          en: 'Gelati Monastery on its hillside near Kutaisi, Imereti, Georgia',
+          de: 'Das Gelati-Kloster auf seinem Hügel bei Kutaisi, Imereti, Georgien',
+          fr: "Le monastère de Gelati sur sa colline près de Kutaisi, Imereti, Géorgie",
+          es: 'El monasterio de Gelati en su ladera cerca de Kutaisi, Imereti, Georgia',
+          nl: 'Het Gelati-klooster op zijn heuvel bij Kutaisi, Imereti, Georgië',
+          cs: 'Klášter Gelati na svahu poblíž Kutaisi, Imeretie, Gruzie',
+          pl: 'Klasztor Gelati na zboczu koło Kutaisi, Imeretia, Gruzja',
         },
         caption: {
-          en: 'Bagrati Cathedral stands on Ukimerioni Hill above Kutaisi, overlooking the Rioni valley.',
-          de: 'Die Bagrati-Kathedrale steht auf dem Ukimerioni-Hügel über Kutaisi mit Blick über das Rioni-Tal.',
-          fr: "La cathédrale de Bagrati se dresse sur la colline d'Ukimerioni au-dessus de Kutaisi, dominant la vallée du Rioni.",
-          es: 'La catedral de Bagrati se alza sobre la colina de Ukimerioni, por encima de Kutaisi, con vistas al valle del Rioni.',
-          nl: 'De Bagrati-kathedraal staat op de Ukimerioni-heuvel boven Kutaisi, met uitzicht over de Rioni-vallei.',
-          cs: 'Katedrála Bagrati stojí na vrchu Ukimerioni nad Kutaisi s výhledem do údolí Rioni.',
-          pl: 'Katedra Bagrati stoi na wzgórzu Ukimerioni ponad Kutaisi, z widokiem na dolinę Rioni.',
+          en: 'The medieval monastery complex of Gelati, on a forested hillside northeast of Kutaisi, with its domed cathedral and stone bell tower.',
+          de: 'Die mittelalterliche Klosteranlage von Gelati auf einem bewaldeten Hang nordöstlich von Kutaisi, mit ihrer Kuppelkathedrale und dem steinernen Glockenturm.',
+          fr: "Le complexe monastique médiéval de Gelati, sur un coteau boisé au nord-est de Kutaisi, avec sa cathédrale à coupole et son clocher de pierre.",
+          es: 'El complejo monástico medieval de Gelati, en una ladera boscosa al noreste de Kutaisi, con su catedral cupulada y su campanario de piedra.',
+          nl: 'Het middeleeuwse kloostercomplex van Gelati, op een beboste helling ten noordoosten van Kutaisi, met zijn koepelkathedraal en stenen klokkentoren.',
+          cs: 'Středověký klášterní komplex Gelati na zalesněném svahu severovýchodně od Kutaisi, s kupolovou katedrálou a kamennou zvonicí.',
+          pl: 'Średniowieczny zespół klasztorny Gelati na zalesionym zboczu na północny wschód od Kutaisi, z kopułową katedrą i kamienną dzwonnicą.',
         },
       },
       {
