@@ -503,7 +503,164 @@ export const regions = [
     // /georgia/imereti/things-to-do-in-imereti via the CitySubPage dispatcher.
     thingsToDo: {
       seoKey: 'thingsToDoImereti', contentKey: 'thingsToDoImereti',
-      image: '/images/files/bagrati-cathedral.jpg',
+      // Cover/hero = the restored Bagrati Cathedral on Ukimerioni Hill, REPLACING
+      // /images/files/bagrati-cathedral.jpg. Same subject, different and far
+      // better photograph: the old frame is distant and hazy, shot with the
+      // cathedral still under reconstruction scaffolding and a lamp-post and
+      // overhead lines across it — it is the same frame the Imereti region page
+      // rejected. That JPG is NOT deleted; it is still referenced elsewhere.
+      //
+      // ⚠️ DELIBERATE duplication, owner-approved, and unavoidable: every Imereti
+      // photograph in the project is already committed to a more specific page
+      // (a full unused-asset scan of all 260 source subjects found 37 free ones,
+      // none of them Imereti). This frame is also the Bagrati Cathedral site page
+      // hero. Files are REFERENCED at their existing /images/files/ path, so there
+      // is only one set of bytes on disk. Same call the owner made for the Imereti
+      // region hub (Gelati) and the Adjara things-to-do guide.
+      //
+      // Native is 16:9 at 1600x900, so 1600 is the top rung — no 2400.
+      image: '/images/files/bagrati-cathedral-kutaisi-georgia-1600.webp',
+      imageAvif: '/images/files/bagrati-cathedral-kutaisi-georgia-1600.avif',
+      heroClass: 'hero--things-to-do-imereti',
+      heroPreload: '/images/files/bagrati-cathedral-kutaisi-georgia-1200.avif',
+      // Dedicated 1.91:1 social image, already built for the Bagrati site page.
+      // Matches the Batumi things-to-do precedent (Adjara's guide auto-derives
+      // only because no OG file existed for its frame).
+      ogImage: { src: '/images/files/bagrati-cathedral-kutaisi-georgia-og.jpg', width: 1200, height: 630 },
+      // Hero alt/caption. `alt` feeds og:image:alt + twitter:image:alt and the
+      // hero ImageObject caption; `name`/`description` are English-invariant by
+      // component design (ThingsToDoCityPage reads them as plain strings).
+      //
+      // ⚠️ The Bagrati site page's own alt map says de "Kutaissi", fr "Koutaïssi"
+      // / "Oukimérioni", nl "Koetaisi". Those are NOT reused: this page's body
+      // writes the Latin "Kutaisi" 19 times in every one of the 7 locales, so the
+      // strings below are re-derived to match the page they appear on — the same
+      // rule the Imereti region page applies to the Gelati site page's strings.
+      imageMeta: {
+        width: 1600, height: 900, imageId: 'hero-image',
+        name: 'Bagrati Cathedral on Ukimerioni Hill above Kutaisi, Imereti, Georgia',
+        description: 'Bagrati Cathedral on Ukimerioni Hill above Kutaisi, a large cross-in-square cathedral of pale limestone with turquoise metal roofs and dome, an arched entrance portico and a separate bell tower, shown in its reconstructed form, in the Imereti region of Georgia.',
+        locationName: 'Bagrati Cathedral, Ukimerioni Hill, Kutaisi, Imereti, Georgia',
+        locality: 'Kutaisi', region: 'Imereti', country: 'GE',
+        geo: { lat: 42.2773, lng: 42.7043 },
+        alt: {
+          en: 'Bagrati Cathedral on Ukimerioni Hill above Kutaisi, Imereti, Georgia',
+          de: 'Die Bagrati-Kathedrale auf dem Ukimerioni-Hügel über Kutaisi, Imereti, Georgien',
+          fr: "La cathédrale de Bagrati sur la colline d'Ukimerioni au-dessus de Kutaisi, Imereti, Géorgie",
+          es: 'La catedral de Bagrati en la colina de Ukimerioni sobre Kutaisi, Imereti, Georgia',
+          nl: 'De Bagrati-kathedraal op de Ukimerioni-heuvel boven Kutaisi, Imereti, Georgië',
+          cs: 'Katedrála Bagrati na kopci Ukimerioni nad Kutaisi, Imeretie, Gruzie',
+          pl: 'Katedra Bagrati na wzgórzu Ukimerioni nad Kutaisi, Imeretia, Gruzja',
+        },
+        caption: {
+          en: 'Bagrati Cathedral on Ukimerioni Hill above Kutaisi, its pale stone walls and turquoise roofs in their reconstructed form.',
+          de: 'Die Bagrati-Kathedrale auf dem Ukimerioni-Hügel über Kutaisi, mit ihren hellen Steinmauern und türkisen Dächern in wiederhergestellter Form.',
+          fr: "La cathédrale de Bagrati sur la colline d'Ukimerioni au-dessus de Kutaisi, ses murs de pierre claire et ses toits turquoise dans leur forme reconstruite.",
+          es: 'La catedral de Bagrati en la colina de Ukimerioni sobre Kutaisi, con sus muros de piedra clara y sus tejados turquesa en su forma reconstruida.',
+          nl: 'De Bagrati-kathedraal op de Ukimerioni-heuvel boven Kutaisi, met haar lichte stenen muren en turquoise daken in gereconstrueerde vorm.',
+          cs: 'Katedrála Bagrati na kopci Ukimerioni nad Kutaisi, s bledými kamennými zdmi a tyrkysovými střechami v obnovené podobě.',
+          pl: 'Katedra Bagrati na wzgórzu Ukimerioni nad Kutaisi, o jasnych kamiennych murach i turkusowych dachach w odbudowanej formie.',
+        },
+      },
+      // Three contextual body photos, each spliced into every locale's content at
+      // a fixed BLOCK INDEX against the paragraph it actually illustrates:
+      // Kutaisi (4), Gelati (8), Prometheus Cave (10). All three duplicate a photo
+      // already used elsewhere — see the hero note; there is no unused Imereti
+      // photography. All carry brand credit, matching their owning pages.
+      //
+      // Eight of the twelve sections deliberately stay image-free: NO photograph
+      // of Sataplia, Okatse, Martvili, Tskaltubo, Motsameta or the Rioni valley
+      // exists anywhere in the project, and the only wine frame is the Kakheti
+      // qvevri set — wrong region, and this page explicitly contrasts Imereti
+      // against Kakheti.
+      inlineImageObjects: [
+        {
+          // Copied byte-for-byte from the `-<w>w` originals at /images/files to
+          // no-`w` names here, because the contentUrl builder emits
+          // `<base>-<width>.webp`. Nothing re-encoded; native 1536 → 1448 ceiling.
+          base: 'kutaisi-green-bazaar-churchkhela-georgia', width: 1448, height: 965,
+          anchor: 'inline-kutaisi-bazaar', dir: '/images/imereti',
+          description: "Strings of churchkhela hanging above stalls of vegetables, pickles and preserves at the Green Bazaar, Kutaisi's central covered food market, in the Imereti region of Georgia.",
+          locationName: 'Green Bazaar, Kutaisi, Imereti, Georgia',
+          locality: 'Kutaisi', region: 'Imereti', geo: { lat: 42.2662, lng: 42.7089 },
+          name: {
+            en: 'Churchkhela and produce stalls at the Green Bazaar in Kutaisi, Imereti, Georgia',
+            de: 'Churchkhela und Gemüsestände auf dem Grünen Basar in Kutaisi, Imereti, Georgien',
+            fr: "Churchkhela et étals de produits frais au Bazar vert de Kutaisi, Imereti, Géorgie",
+            es: 'Churchkhela y puestos de productos frescos en el Bazar Verde de Kutaisi, Imereti, Georgia',
+            nl: 'Churchkhela en groentekramen op de Groene Bazaar in Kutaisi, Imereti, Georgië',
+            cs: 'Čurčchela a stánky s potravinami na Zeleném bazaru v Kutaisi, Imeretie, Gruzie',
+            pl: 'Czurczchela i stoiska z produktami na Zielonym Bazarze w Kutaisi, Imeretia, Gruzja',
+          },
+          caption: {
+            en: "Strings of churchkhela hang above produce stalls at the Green Bazaar, Kutaisi's central food market.",
+            de: 'Churchkhela-Schnüre hängen über den Gemüseständen des Grünen Basars, des zentralen Lebensmittelmarkts von Kutaisi.',
+            fr: "Des chapelets de churchkhela pendent au-dessus des étals du Bazar vert, le marché alimentaire central de Kutaisi.",
+            es: 'Ristras de churchkhela cuelgan sobre los puestos del Bazar Verde, el mercado de alimentos central de Kutaisi.',
+            nl: 'Snoeren churchkhela hangen boven de kramen van de Groene Bazaar, de centrale voedselmarkt van Kutaisi.',
+            cs: 'Šňůry čurčchely visí nad stánky Zeleného bazaru, ústřední potravinové tržnice v Kutaisi.',
+            pl: 'Sznury czurczcheli wiszą nad stoiskami Zielonego Bazaru, centralnego targu spożywczego w Kutaisi.',
+          },
+        },
+        {
+          // Referenced in place at /images/files (no `dir`), shared with the Gelati
+          // Monastery site page and the Imereti region page rather than copied.
+          // name/caption are the Imereti region page's approved strings, reused
+          // VERBATIM — same photograph, same page family, same Latin naming.
+          base: 'gelati-monastery-kutaisi-georgia', width: 1491, height: 1055,
+          anchor: 'inline-gelati',
+          description: 'The medieval Gelati Monastery on a forested hillside northeast of Kutaisi, its domed cathedral and stone bell tower in honey-coloured stone, in the Imereti region of Georgia.',
+          locationName: 'Gelati Monastery, Kutaisi, Imereti, Georgia',
+          locality: 'Kutaisi', region: 'Imereti', geo: { lat: 42.29472, lng: 42.76806 },
+          name: {
+            en: 'Gelati Monastery on its hillside near Kutaisi, Imereti, Georgia',
+            de: 'Das Gelati-Kloster auf seinem Hügel bei Kutaisi, Imereti, Georgien',
+            fr: "Le monastère de Gelati sur sa colline près de Kutaisi, Imereti, Géorgie",
+            es: 'El monasterio de Gelati en su ladera cerca de Kutaisi, Imereti, Georgia',
+            nl: 'Het Gelati-klooster op zijn heuvel bij Kutaisi, Imereti, Georgië',
+            cs: 'Klášter Gelati na svahu poblíž Kutaisi, Imeretie, Gruzie',
+            pl: 'Klasztor Gelati na zboczu koło Kutaisi, Imeretia, Gruzja',
+          },
+          caption: {
+            en: 'The medieval monastery complex of Gelati, on a forested hillside northeast of Kutaisi, with its domed cathedral and stone bell tower.',
+            de: 'Die mittelalterliche Klosteranlage von Gelati auf einem bewaldeten Hang nordöstlich von Kutaisi, mit ihrer Kuppelkathedrale und dem steinernen Glockenturm.',
+            fr: "Le complexe monastique médiéval de Gelati, sur un coteau boisé au nord-est de Kutaisi, avec sa cathédrale à coupole et son clocher de pierre.",
+            es: 'El complejo monástico medieval de Gelati, en una ladera boscosa al noreste de Kutaisi, con su catedral cupulada y su campanario de piedra.',
+            nl: 'Het middeleeuwse kloostercomplex van Gelati, op een beboste helling ten noordoosten van Kutaisi, met zijn koepelkathedraal en stenen klokkentoren.',
+            cs: 'Středověký klášterní komplex Gelati na zalesněném svahu severovýchodně od Kutaisi, s kupolovou katedrálou a kamennou zvonicí.',
+            pl: 'Średniowieczny zespół klasztorny Gelati na zalesionym zboczu na północny wschód od Kutaisi, z kopułową katedrą i kamienną dzwonnicą.',
+          },
+        },
+        {
+          // Copied byte-for-byte to no-`w` names, as above. The paragraph this
+          // sits under says "near Tskaltubo", so the visible strings say that;
+          // locationName/geo keep the Prometheus Cave site page's authoritative
+          // Kumistavi coordinates.
+          base: 'prometheus-cave-imereti-georgia', width: 1448, height: 965,
+          anchor: 'inline-prometheus-cave', dir: '/images/imereti',
+          description: 'A lit walkway curving through a large illuminated chamber of Prometheus (Kumistavi) Cave near Tskaltubo, its ceiling hung with stalactites above stalagmites and flowstone, in the Imereti region of Georgia.',
+          locationName: 'Prometheus Cave (Kumistavi), Imereti, Georgia',
+          locality: 'Kumistavi', region: 'Imereti', geo: { lat: 42.3767, lng: 42.6 },
+          name: {
+            en: 'A lit walkway through a stalactite chamber in Prometheus Cave near Tskaltubo, Imereti, Georgia',
+            de: 'Ein beleuchteter Steg durch eine Stalaktitenhalle der Prometheus-Höhle bei Tskaltubo, Imereti, Georgien',
+            fr: "Une passerelle éclairée traversant une salle à stalactites de la grotte de Prométhée près de Tskaltubo, Imereti, Géorgie",
+            es: 'Una pasarela iluminada atraviesa una sala de estalactitas de la cueva de Prometeo cerca de Tskaltubo, Imereti, Georgia',
+            nl: 'Een verlicht looppad door een stalactietenzaal van de Prometheusgrot bij Tskaltubo, Imereti, Georgië',
+            cs: 'Osvětlená lávka vedoucí sálem se stalaktity v Prométheově jeskyni poblíž Tskaltuba, Imeretie, Gruzie',
+            pl: 'Oświetlona kładka przez salę ze stalaktytami w Jaskini Prometeusza koło Tskaltubo, Imeretia, Gruzja',
+          },
+          caption: {
+            en: 'A lit walkway runs through one of the stalactite chambers of Prometheus Cave, near Tskaltubo.',
+            de: 'Ein beleuchteter Steg führt durch eine der Stalaktitenhallen der Prometheus-Höhle bei Tskaltubo.',
+            fr: "Une passerelle éclairée traverse l'une des salles à stalactites de la grotte de Prométhée, près de Tskaltubo.",
+            es: 'Una pasarela iluminada recorre una de las salas de estalactitas de la cueva de Prometeo, cerca de Tskaltubo.',
+            nl: 'Een verlicht looppad loopt door een van de stalactietenzalen van de Prometheusgrot, bij Tskaltubo.',
+            cs: 'Osvětlená lávka prochází jedním ze sálů se stalaktity v Prométheově jeskyni poblíž Tskaltuba.',
+            pl: 'Oświetlona kładka biegnie przez jedną z sal ze stalaktytami w Jaskini Prometeusza koło Tskaltubo.',
+          },
+        },
+      ],
       address: { addressRegion: 'Imereti' },
       attractions: [
         'Gelati Monastery', 'Bagrati Cathedral', 'Prometheus Cave', 'Okatse Canyon', 'Martvili Canyon', 'Tskaltubo',
