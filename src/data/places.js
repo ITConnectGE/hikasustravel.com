@@ -344,13 +344,24 @@ export const regions = [
   {
     slug: 'kakheti', name: 'Kakheti', published: true,
     seoKey: 'kakheti', contentKey: 'kakheti',
-    // Cover/hero = our own qvevri photo, replacing the previous kakheti-vineyard.jpg
-    // (a relevant shot, not a placeholder — it stays in use by the things-to-do guide
-    // below and by a tour, so the file is kept). Rendered as the CSS-background hero
-    // via HeroSection image-set (webp `image` + avif `imageAvif`); og:image/twitter
-    // auto-derive from `image` through useSEO. Native max width is 1448 (no upscale).
-    image: '/images/files/qvevri-clay-vessels-kakheti-georgia-1448w.webp',
-    imageAvif: '/images/files/qvevri-clay-vessels-kakheti-georgia-1448w.avif',
+    // Cover/hero = Sighnaghi at sunrise on its ridge above the Alazani valley, with
+    // the Greater Caucasus along the horizon — a broad regional cultural landscape,
+    // replacing the qvevri close-up that held the slot before. The qvevri photo is
+    // NOT removed: it stays in `imageObjects` below as the wine section's subject,
+    // only its `hero` flag is cleared so exactly one image is representativeOfPage.
+    //
+    // `heroClass` is new on this page — the hero previously shipped a single 1448
+    // width to every viewport with no ladder. Native is 5504 wide, so the ladder
+    // tops out at the house 1448 rung rather than the source's full size.
+    // og:image/twitter auto-derive from `image` through useSEO — region pages have
+    // no page-specific OG convention (same as Adjara/Imereti).
+    //
+    // ⚠️ The same photograph is the Sighnaghi card on the homepage. That is a card
+    // on a different surface, not another destination page's hero, and the owner
+    // approved the reuse (cf. the Gelati hero on the Imereti region page).
+    image: '/images/kakheti/sighnaghi-sunrise-alazani-valley-kakheti-georgia-1448.webp',
+    imageAvif: '/images/kakheti/sighnaghi-sunrise-alazani-valley-kakheti-georgia-1448.avif',
+    heroClass: 'hero--kakheti',
     // Cover + the one contextual body photo (our own). The vineyard renders as a real
     // inline <figure> in the per-locale body HTML (pages.json), by the wine/vineyard
     // text; the qvevri cover is the hero and is NOT repeated inline. `imageObjects`
@@ -360,7 +371,11 @@ export const regions = [
     // image SEO package (REPLACE-BRAND → Hikasus Travel).
     imageObjects: [
       {
-        base: 'qvevri-clay-vessels-kakheti-georgia', width: 1448, height: 1086, hero: true,
+        // `hero` flag CLEARED when the Sighnaghi sunrise took the cover slot — the
+        // photo and its ImageObject stay, but representativeOfPage now belongs to
+        // the hero entry in `inlineImageObjects` below. Two true flags would be
+        // invalid schema.
+        base: 'qvevri-clay-vessels-kakheti-georgia', width: 1448, height: 1086,
         name: 'Qvevri clay wine vessels, Kakheti, Georgia',
         caption: 'Large clay qvevri wine vessels lined up against a stone wall in Kakheti',
         description: "Egg-shaped clay qvevri, the vessels traditionally buried in the ground to ferment and age Georgian wine — a method on UNESCO's Intangible Cultural Heritage list since 2013 — in Kakheti, Georgia.",
@@ -375,6 +390,164 @@ export const regions = [
         caption: 'Rows of vines in a Kakheti vineyard at sunrise',
         description: "Rows of vines in a vineyard in Kakheti, the region that produces the majority of Georgia's wine, at sunrise.",
         locationName: 'Kakheti', region: 'Kakheti', geo: { lat: 41.9200, lng: 45.4750 },
+      },
+    ],
+    // The hero plus four contextual body photos, all added later than the two
+    // `imageObjects` above and therefore using the newer `inlineImageObjects`
+    // convention: filenames WITHOUT the `w` suffix, a stable per-image `@id`, and
+    // localized name/caption maps (the older array is English-only). The four body
+    // ones render as real <figure class="body-img"> blocks spliced into each
+    // locale's content at a fixed BLOCK INDEX — all 7 locales share a 33-block
+    // shape — each against the paragraph it actually illustrates.
+    //
+    // Sources: all five reach the site only as tours.js tile/gallery frames, so no
+    // destination page's image is duplicated. Each is identified as Kakheti by the
+    // owner's OWN tours.js gallery caption, which is what licenses naming Sighnaghi,
+    // Tsinandali and the Gombori Pass here.
+    //
+    // All five carry `noCredit`: no provenance is recorded for them anywhere, so
+    // asserting Hikasus authorship would be false attribution. (The two older
+    // `imageObjects` above keep their brand credit — untouched.)
+    //
+    // `geo` is emitted ONLY where the repo already records a coordinate — Tsinandali
+    // Estate has one; Sighnaghi and the Gombori Pass do not, so no coordinate is
+    // invented for them and the Place stays name/locality-level.
+    //
+    // Sections with no photograph anywhere in the project — the Rtveli harvest, the
+    // Saperavi/Rkatsiteli variety paragraphs, the monasteries — deliberately stay
+    // image-free rather than borrow another page's frame.
+    inlineImageObjects: [
+      {
+        base: 'sighnaghi-sunrise-alazani-valley-kakheti-georgia', width: 1448, height: 808,
+        anchor: 'hero-image', dir: '/images/kakheti', hero: true,
+        noCredit: true,
+        description: 'Sighnaghi on its ridge above the Alazani Valley at sunrise, with the Greater Caucasus range along the horizon, Kakheti, Georgia.',
+        locationName: 'Sighnaghi, Kakheti, Georgia', locality: 'Sighnaghi', region: 'Kakheti',
+        name: {
+          en: 'Sighnaghi on its ridge above the Alazani Valley at sunrise, with the Greater Caucasus beyond, Kakheti, Georgia',
+          de: 'Sighnaghi auf seinem Bergkamm über dem Alazani-Tal bei Sonnenaufgang, dahinter der Große Kaukasus, Kachetien, Georgien',
+          fr: "Sighnaghi sur sa crête au-dessus de la vallée de l'Alazani au lever du soleil, le Grand Caucase au fond, Kakheti, Géorgie",
+          es: 'Sighnaghi sobre su cresta por encima del valle del Alazani al amanecer, con el Gran Cáucaso al fondo, Kakheti, Georgia',
+          nl: 'Sighnaghi op zijn bergkam boven het Alazani-dal bij zonsopgang, met daarachter de Grote Kaukasus, Kakheti, Georgië',
+          cs: 'Sighnaghi na svém hřebeni nad údolím Alazani za východu slunce, v pozadí Velký Kavkaz, Kachetie, Gruzie',
+          pl: 'Sighnaghi na swoim grzbiecie nad doliną Alazani o wschodzie słońca, w tle Wielki Kaukaz, Kakheti, Gruzja',
+        },
+        caption: {
+          en: 'Sighnaghi stands on its ridge above the Alazani Valley, with the Greater Caucasus rising along the horizon.',
+          de: 'Sighnaghi liegt auf seinem Bergkamm über dem Alazani-Tal, am Horizont erhebt sich der Große Kaukasus.',
+          fr: "Sighnaghi domine la vallée de l'Alazani depuis sa crête, le Grand Caucase se dressant à l'horizon.",
+          es: 'Sighnaghi se alza sobre su cresta por encima del valle del Alazani, con el Gran Cáucaso recortado en el horizonte.',
+          nl: 'Sighnaghi ligt op zijn bergkam boven het Alazani-dal, met aan de horizon de Grote Kaukasus.',
+          cs: 'Sighnaghi leží na svém hřebeni nad údolím Alazani, na obzoru se zvedá Velký Kavkaz.',
+          pl: 'Sighnaghi leży na swoim grzbiecie nad doliną Alazani, a na horyzoncie wznosi się Wielki Kaukaz.',
+        },
+      },
+      {
+        base: 'tsinandali-estate-park-kakheti-georgia', width: 1448, height: 965,
+        anchor: 'inline-tsinandali', dir: '/images/kakheti',
+        noCredit: true,
+        description: 'The 19th-century Chavchavadze house at Tsinandali Estate near Telavi, its carved veranda seen across the lawns of the estate park, Kakheti, Georgia.',
+        // Coordinates reused from the Tsinandali Estate site-page entry. A summer
+        // frame — distinct from that page's autumn view of the same house.
+        locationName: 'Tsinandali Estate', locality: 'Tsinandali', region: 'Kakheti',
+        geo: { lat: 41.8945, lng: 45.5705 },
+        name: {
+          en: 'The Chavchavadze house at Tsinandali Estate near Telavi, Kakheti, Georgia',
+          de: 'Das Chavchavadze-Haus auf dem Anwesen Tsinandali bei Telavi, Kachetien, Georgien',
+          fr: "La maison Chavchavadze du domaine de Tsinandali près de Telavi, Kakheti, Géorgie",
+          es: 'La casa Chavchavadze de la finca Tsinandali, cerca de Telavi, Kakheti, Georgia',
+          nl: 'Het Chavchavadze-huis op landgoed Tsinandali bij Telavi, Kakheti, Georgië',
+          cs: 'Dům Chavchavadze v usedlosti Tsinandali poblíž Telavi, Kachetie, Gruzie',
+          pl: 'Dom Chavchavadze w posiadłości Tsinandali koło Telavi, Kakheti, Gruzja',
+        },
+        caption: {
+          en: 'The 19th-century Chavchavadze house at Tsinandali Estate near Telavi, seen across the estate park.',
+          de: 'Das Chavchavadze-Haus aus dem 19. Jahrhundert auf dem Anwesen Tsinandali bei Telavi, gesehen über den Gutspark.',
+          fr: "La maison Chavchavadze du XIXe siècle au domaine de Tsinandali, près de Telavi, vue depuis le parc.",
+          es: 'La casa Chavchavadze del siglo XIX en la finca Tsinandali, cerca de Telavi, vista desde el parque.',
+          nl: 'Het 19e-eeuwse Chavchavadze-huis op landgoed Tsinandali bij Telavi, gezien over het landgoedpark.',
+          cs: 'Dům Chavchavadze z 19. století v usedlosti Tsinandali poblíž Telavi, pohled přes park.',
+          pl: 'XIX-wieczny dom Chavchavadze w posiadłości Tsinandali koło Telavi, widziany przez park.',
+        },
+      },
+      {
+        base: 'sighnaghi-ridge-alazani-valley-kakheti-georgia', width: 1448, height: 877,
+        anchor: 'inline-sighnaghi', dir: '/images/kakheti',
+        noCredit: true,
+        description: 'The red-tiled roofs of Sighnaghi covering its ridge above the western Alazani Valley, with the Caucasus foothills beyond, Kakheti, Georgia.',
+        locationName: 'Sighnaghi, Kakheti, Georgia', locality: 'Sighnaghi', region: 'Kakheti',
+        name: {
+          en: 'The red-tiled roofs of Sighnaghi on its ridge above the Alazani Valley, Kakheti, Georgia',
+          de: 'Die Ziegeldächer von Sighnaghi auf dem Bergkamm über dem Alazani-Tal, Kachetien, Georgien',
+          fr: "Les toits de tuiles de Sighnaghi sur sa crête au-dessus de la vallée de l'Alazani, Kakheti, Géorgie",
+          es: 'Los tejados de teja roja de Sighnaghi sobre su cresta por encima del valle del Alazani, Kakheti, Georgia',
+          nl: 'De rode pannendaken van Sighnaghi op de bergkam boven het Alazani-dal, Kakheti, Georgië',
+          cs: 'Červené střechy Sighnaghi na hřebeni nad údolím Alazani, Kachetie, Gruzie',
+          pl: 'Czerwone dachy Sighnaghi na grzbiecie nad doliną Alazani, Kakheti, Gruzja',
+        },
+        caption: {
+          en: "Sighnaghi's roofs cover the ridge above the western Alazani Valley, with the Caucasus foothills beyond.",
+          de: 'Die Dächer von Sighnaghi bedecken den Bergkamm über dem westlichen Alazani-Tal, dahinter die Ausläufer des Kaukasus.',
+          fr: "Les toits de Sighnaghi couvrent la crête au-dessus de la vallée occidentale de l'Alazani, les contreforts du Caucase au fond.",
+          es: 'Los tejados de Sighnaghi cubren la cresta sobre el valle occidental del Alazani, con el piedemonte del Cáucaso al fondo.',
+          nl: 'De daken van Sighnaghi bedekken de bergkam boven het westelijke Alazani-dal, met daarachter de uitlopers van de Kaukasus.',
+          cs: 'Střechy Sighnaghi pokrývají hřeben nad západním údolím Alazani, za nímž se táhne podhůří Kavkazu.',
+          pl: 'Dachy Sighnaghi pokrywają grzbiet nad zachodnią doliną Alazani, w tle podgórza Kaukazu.',
+        },
+      },
+      {
+        base: 'kakheti-wine-table-alazani-valley-georgia', width: 1448, height: 579,
+        anchor: 'inline-wine-table', dir: '/images/kakheti',
+        noCredit: true,
+        description: 'A table laid with glasses and dishes on a stone terrace above vineyards, looking across the Alazani Valley to the Greater Caucasus, Kakheti, Georgia.',
+        // Valley-level: the owner's tours.js caption places it in the Alazani
+        // Valley, but no single identifiable spot is in frame, so no coordinate.
+        locationName: 'Alazani Valley, Kakheti, Georgia', region: 'Kakheti',
+        name: {
+          en: 'A table laid on a terrace above vineyards, with the Greater Caucasus beyond, Kakheti, Georgia',
+          de: 'Ein gedeckter Tisch auf einer Terrasse über den Weinbergen, dahinter der Große Kaukasus, Kachetien, Georgien',
+          fr: "Une table dressée sur une terrasse au-dessus des vignes, le Grand Caucase au fond, Kakheti, Géorgie",
+          es: 'Una mesa puesta en una terraza sobre los viñedos, con el Gran Cáucaso al fondo, Kakheti, Georgia',
+          nl: 'Een gedekte tafel op een terras boven de wijngaarden, met daarachter de Grote Kaukasus, Kakheti, Georgië',
+          cs: 'Prostřený stůl na terase nad vinicemi, v pozadí Velký Kavkaz, Kachetie, Gruzie',
+          pl: 'Nakryty stół na tarasie nad winnicami, w tle Wielki Kaukaz, Kakheti, Gruzja',
+        },
+        caption: {
+          en: 'A table set on a terrace above the vineyards of the Alazani Valley, looking towards the Greater Caucasus.',
+          de: 'Ein gedeckter Tisch auf einer Terrasse über den Weinbergen des Alazani-Tals mit Blick zum Großen Kaukasus.',
+          fr: "Une table dressée sur une terrasse au-dessus des vignes de la vallée de l'Alazani, face au Grand Caucase.",
+          es: 'Una mesa puesta en una terraza sobre los viñedos del valle del Alazani, mirando hacia el Gran Cáucaso.',
+          nl: 'Een gedekte tafel op een terras boven de wijngaarden van het Alazani-dal, met zicht op de Grote Kaukasus.',
+          cs: 'Prostřený stůl na terase nad vinicemi údolí Alazani s výhledem k Velkému Kavkazu.',
+          pl: 'Nakryty stół na tarasie nad winnicami doliny Alazani, z widokiem na Wielki Kaukaz.',
+        },
+      },
+      {
+        base: 'gombori-pass-road-kakheti-georgia', width: 1448, height: 965,
+        anchor: 'inline-gombori-pass', dir: '/images/kakheti',
+        noCredit: true,
+        description: 'A bend in the road over the Gombori Pass in autumn, the forested route between Tbilisi and the Alazani Valley, Kakheti, Georgia.',
+        // The site's own gombori-pass entry records no coordinate, so none is
+        // asserted here either.
+        locationName: 'The Gombori Pass, Kakheti, Georgia', region: 'Kakheti',
+        name: {
+          en: 'A bend in the road over the Gombori Pass in autumn, Kakheti, Georgia',
+          de: 'Eine Kehre der Straße über den Gombori-Pass im Herbst, Kachetien, Georgien',
+          fr: "Un virage de la route du col de Gombori en automne, Kakheti, Géorgie",
+          es: 'Una curva de la carretera del paso de Gombori en otoño, Kakheti, Georgia',
+          nl: 'Een bocht in de weg over de Gombori-pas in de herfst, Kakheti, Georgië',
+          cs: 'Zatáčka silnice přes Gomboriský průsmyk na podzim, Kachetie, Gruzie',
+          pl: 'Zakręt drogi przez przełęcz Gombori jesienią, Kakheti, Gruzja',
+        },
+        caption: {
+          en: 'The road over the Gombori Pass, the forested route between Tbilisi and the Alazani Valley.',
+          de: 'Die Straße über den Gombori-Pass, die bewaldete Route zwischen Tiflis und dem Alazani-Tal.',
+          fr: "La route du col de Gombori, l'itinéraire boisé entre Tbilissi et la vallée de l'Alazani.",
+          es: 'La carretera del paso de Gombori, la ruta boscosa entre Tiflis y el valle del Alazani.',
+          nl: 'De weg over de Gombori-pas, de beboste route tussen Tbilisi en het Alazani-dal.',
+          cs: 'Silnice přes Gomboriský průsmyk, zalesněná cesta mezi Tbilisi a údolím Alazani.',
+          pl: 'Droga przez przełęcz Gombori, zalesiona trasa między Tbilisi a doliną Alazani.',
+        },
       },
     ],
     // Region-level "things to do" guide, served (like Adjara's/Guria's) at

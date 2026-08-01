@@ -874,6 +874,40 @@ section {
     );
   }
 }
+/* Kakheti (REGION) hero — same mechanism as .hero--adjara above. Sighnaghi at
+   sunrise above the Alazani valley, replacing the qvevri close-up that held the
+   slot before (that photo stays on the page as a body ImageObject). The page had
+   NO ladder until now — it shipped a single 1448 width to every viewport. The
+   source is 5504px wide, far above the house ceiling, so the ladder still stops
+   at 1448: do not add a 1600 or 2400 breakpoint. Source is a wide 1.79:1 with the
+   town along the lower third, so centre-centre keeps both the ridge and the
+   Caucasus horizon in frame from 360px to 1920px. */
+.hero--kakheti {
+  background-image: url("/images/kakheti/sighnaghi-sunrise-alazani-valley-kakheti-georgia-1200.webp");
+  background-image: image-set(
+    url("/images/kakheti/sighnaghi-sunrise-alazani-valley-kakheti-georgia-768.avif") type("image/avif"),
+    url("/images/kakheti/sighnaghi-sunrise-alazani-valley-kakheti-georgia-768.webp") type("image/webp")
+  );
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+@media (min-width: 768px) {
+  .hero--kakheti {
+    background-image: image-set(
+      url("/images/kakheti/sighnaghi-sunrise-alazani-valley-kakheti-georgia-1200.avif") type("image/avif"),
+      url("/images/kakheti/sighnaghi-sunrise-alazani-valley-kakheti-georgia-1200.webp") type("image/webp")
+    );
+  }
+}
+@media (min-width: 1200px) {
+  .hero--kakheti {
+    background-image: image-set(
+      url("/images/kakheti/sighnaghi-sunrise-alazani-valley-kakheti-georgia-1448.avif") type("image/avif"),
+      url("/images/kakheti/sighnaghi-sunrise-alazani-valley-kakheti-georgia-1448.webp") type("image/webp")
+    );
+  }
+}
 /* Imereti (REGION) hero — same mechanism as .hero--adjara above. Gelati
    Monastery, replacing the old bagrati-cathedral.jpg at the owner's request.
    The variants are SHARED with the Gelati Monastery site page (same
