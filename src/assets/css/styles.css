@@ -906,6 +906,49 @@ section {
     );
   }
 }
+/* Things to Do in Mtskheta-Mtianeti hero — same mechanism as .hero--adjara
+   above, and the SAME photograph the guide already showed: it was serving the
+   raw 1920-wide "Ananuri Fortress and Zhinvali Reservoir.jpg" at one width to
+   every viewport. That JPG stays — the region page and the Ananuri Fortress page
+   both still reference it; only this guide moves to the ladder, which is newly
+   generated from that same source by downscaling (768/1200/1448, nothing
+   upscaled).
+
+   Native is 1920x1271 but the ladder tops out at 1448, matching every other
+   things-to-do hero — do not add a 1600 or 1920 breakpoint. */
+.hero--things-to-do-mtskheta-mtianeti {
+  background-image: url("/images/mtskheta-mtianeti/ananuri-fortress-zhinvali-reservoir-georgia-1200.webp");
+  background-image: image-set(
+    url("/images/mtskheta-mtianeti/ananuri-fortress-zhinvali-reservoir-georgia-768.avif") type("image/avif"),
+    url("/images/mtskheta-mtianeti/ananuri-fortress-zhinvali-reservoir-georgia-768.webp") type("image/webp")
+  );
+  /* Biased left, not centred: the fortress — the subject the hero is actually
+     about — sits in the left quarter of a 1.51:1 frame, while the hero container
+     is portrait on phones. `cover` then crops horizontally around the centre and
+     pushes the fortress out of frame entirely at 360px, leaving only hills and
+     water. 25% keeps the fortress complex and part of the reservoir in shot.
+     Desktop framing is unaffected: once the viewport is wider than the source
+     ratio the crop is vertical and the horizontal value stops mattering. */
+  background-position: 25% center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+@media (min-width: 768px) {
+  .hero--things-to-do-mtskheta-mtianeti {
+    background-image: image-set(
+      url("/images/mtskheta-mtianeti/ananuri-fortress-zhinvali-reservoir-georgia-1200.avif") type("image/avif"),
+      url("/images/mtskheta-mtianeti/ananuri-fortress-zhinvali-reservoir-georgia-1200.webp") type("image/webp")
+    );
+  }
+}
+@media (min-width: 1200px) {
+  .hero--things-to-do-mtskheta-mtianeti {
+    background-image: image-set(
+      url("/images/mtskheta-mtianeti/ananuri-fortress-zhinvali-reservoir-georgia-1448.avif") type("image/avif"),
+      url("/images/mtskheta-mtianeti/ananuri-fortress-zhinvali-reservoir-georgia-1448.webp") type("image/webp")
+    );
+  }
+}
 /* Things to Do in Kvemo Kartli hero — same mechanism as .hero--adjara above.
    Replaces the generic georgia-home.jpg placeholder this guide shipped with: the
    Diamond Bridge is named in the page's own H1 and is the only subject on the

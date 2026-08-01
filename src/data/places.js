@@ -1535,7 +1535,183 @@ export const regions = [
     // /georgia/mtskheta-mtianeti/things-to-do-in-mtskheta-mtianeti via the CitySubPage dispatcher.
     thingsToDo: {
       seoKey: 'thingsToDoMtskhetaMtianeti', contentKey: 'thingsToDoMtskhetaMtianeti',
-      image: '/images/files/Ananuri%20Fortress%20and%20Zhinvali%20Reservoir.jpg',
+      // Cover/hero = the SAME photograph this guide already showed, now with a
+      // ladder. It was serving the raw 1920-wide "Ananuri Fortress and Zhinvali
+      // Reservoir.jpg" at a single width to every viewport; the 768/1200/1448
+      // variants below are newly generated from that exact source by downscaling
+      // (nothing upscaled). The raw JPG is NOT deleted — the region page and the
+      // Ananuri Fortress page both still reference it.
+      //
+      // ⚠️ DELIBERATE duplication, owner-approved: this frame is also the region
+      // hero and the Ananuri Fortress hero, so the guide is its third use. Every
+      // Mtskheta-Mtianeti photograph in the project is committed to a page.
+      //
+      // ⚠️ NO credit fields: this photograph has no recorded provenance anywhere —
+      // it exists only as a raw path with no `imageMeta` on any page — so
+      // `noCredit` is set rather than asserting Hikasus authorship. The four
+      // inlines below DO carry brand credit, which their own pages already assert.
+      image: '/images/mtskheta-mtianeti/ananuri-fortress-zhinvali-reservoir-georgia-1448.webp',
+      imageAvif: '/images/mtskheta-mtianeti/ananuri-fortress-zhinvali-reservoir-georgia-1448.avif',
+      heroClass: 'hero--things-to-do-mtskheta-mtianeti',
+      heroPreload: '/images/mtskheta-mtianeti/ananuri-fortress-zhinvali-reservoir-georgia-1200.avif',
+      // No `ogImage`: no 1.91:1 file exists for this frame and the region page
+      // likewise auto-derives og:image from `image`.
+      //
+      // ⚠️ NAMING — the widest mismatch in this page family so far. This page
+      // writes every place name in Latin form in ALL 7 locales: Mtskheta,
+      // Svetitskhoveli, Jvari, Gergeti, Stepantsminda, Kazbegi, Ananuri,
+      // Zhinvali, Gudauri, Truso. The sibling site pages do NOT — Svetitskhoveli
+      // says de "Mzcheta"/"Swetizchoweli", es "Mtsjeta"/"Svetitsjoveli",
+      // nl "Mtscheta", cs "Mccchetě"/"Sveticchoveli", pl "Mcchecie"/"Sweticchoweli";
+      // Gergeti says fr "Guerguéti", es "Guergueti", cs "Stepancmindou",
+      // pl "Stepancmindą"; Truso says de "Kasbegi". NONE of those strings is
+      // reused. Every set below is authored from THIS page's own body wording.
+      // ⚠️ Polish uses `cerkiew` (11x) not `kościół` (1x) for these churches.
+      imageMeta: {
+        width: 1448, height: 959, imageId: 'hero-image',
+        noCredit: true,
+        name: 'Ananuri Fortress above the Zhinvali Reservoir, Mtskheta-Mtianeti, Georgia',
+        description: 'The medieval Ananuri fortress complex on a wooded spur above the turquoise water of the Zhinvali Reservoir, on the Georgian Military Highway in the Mtskheta-Mtianeti region of Georgia.',
+        locationName: 'Ananuri Fortress, Zhinvali Reservoir, Mtskheta-Mtianeti, Georgia',
+        region: 'Mtskheta-Mtianeti', country: 'GE',
+        alt: {
+          en: 'Ananuri Fortress above the Zhinvali Reservoir in Mtskheta-Mtianeti, Georgia',
+          de: 'Die Festung Ananuri über dem Zhinvali-Stausee in Mtskheta-Mtianeti, Georgien',
+          fr: "La forteresse d'Ananuri au-dessus du réservoir de Zhinvali, Mtskheta-Mtianeti, Géorgie",
+          es: 'La fortaleza de Ananuri sobre el embalse de Zhinvali, Mtskheta-Mtianeti, Georgia',
+          nl: 'De vesting Ananuri boven het Zhinvali-stuwmeer in Mtskheta-Mtianeti, Georgië',
+          cs: 'Pevnost Ananuri nad přehradou Zhinvali v Mtskheta-Mtianeti, Gruzie',
+          pl: 'Twierdza Ananuri nad zbiornikiem Zhinvali w Mtskheta-Mtianeti, Gruzja',
+        },
+        caption: {
+          en: 'Ananuri fortress stands on a wooded spur above the turquoise water of the Zhinvali Reservoir.',
+          de: 'Die Festung Ananuri steht auf einem bewaldeten Sporn über dem türkisfarbenen Wasser des Zhinvali-Stausees.',
+          fr: "La forteresse d'Ananuri se dresse sur un éperon boisé au-dessus des eaux turquoise du réservoir de Zhinvali.",
+          es: 'La fortaleza de Ananuri se alza sobre un espolón boscoso por encima de las aguas turquesa del embalse de Zhinvali.',
+          nl: 'De vesting Ananuri staat op een beboste uitloper boven het turkooizen water van het Zhinvali-stuwmeer.',
+          cs: 'Pevnost Ananuri stojí na zalesněném ostrohu nad tyrkysovou hladinou přehrady Zhinvali.',
+          pl: 'Twierdza Ananuri stoi na zalesionym cyplu nad turkusową wodą zbiornika Zhinvali.',
+        },
+      },
+      // Four contextual body photos, one per section, each REFERENCED in place at
+      // its existing /images/files path (all four already ship no-`w` filenames,
+      // so nothing is copied or generated for them). Each duplicates its own
+      // site page's hero — unavoidable, as above.
+      //
+      // Six of the eleven sections stay image-free, including the Georgian
+      // Military Highway and Gudauri. REJECTED rather than stretched: the three
+      // "unused" gudauri-gallery frames, which pixel-comparison shows are the
+      // SAME photographs as the 7-Day Gudauri Ski Tour gallery (MAD 0.3) and
+      // whose own package manifest flags identifiable people; and the Juta /
+      // Abudelauri frames, because the hiking paragraph describes Kazbegi-district
+      // walks and the Gergeti glacier and never mentions Juta, Chaukhi or
+      // Abudelauri (which are Khevsureti).
+      //
+      // The Gergeti frame chosen here is a DIFFERENT photograph from the one the
+      // region page uses (verified by pixel comparison, MAD 44.5), so the region
+      // hub and this guide do not repeat the same view.
+      inlineImageObjects: [
+        {
+          base: 'svetitskhoveli-cathedral-mtskheta-georgia', width: 1540, height: 1021,
+          anchor: 'inline-svetitskhoveli',
+          description: 'The 11th-century Svetitskhoveli Cathedral in Mtskheta, a large stone cross-in-square church with a conical dome, inside its fortified wall, in the Mtskheta-Mtianeti region of Georgia.',
+          locationName: 'Svetitskhoveli Cathedral, Mtskheta, Mtskheta-Mtianeti, Georgia',
+          locality: 'Mtskheta', region: 'Mtskheta-Mtianeti', geo: { lat: 41.8419, lng: 44.7211 },
+          name: {
+            en: 'Svetitskhoveli Cathedral in Mtskheta, Mtskheta-Mtianeti, Georgia',
+            de: 'Die Svetitskhoveli-Kathedrale in Mtskheta, Mtskheta-Mtianeti, Georgien',
+            fr: "La cathédrale de Svetitskhoveli à Mtskheta, Mtskheta-Mtianeti, Géorgie",
+            es: 'La catedral de Svetitskhoveli en Mtskheta, Mtskheta-Mtianeti, Georgia',
+            nl: 'De Svetitskhoveli-kathedraal in Mtskheta, Mtskheta-Mtianeti, Georgië',
+            cs: 'Katedrála Svetitskhoveli v Mtskhetě, Mtskheta-Mtianeti, Gruzie',
+            pl: 'Katedra Svetitskhoveli w Mtskhecie, Mtskheta-Mtianeti, Gruzja',
+          },
+          caption: {
+            en: "The 11th-century Svetitskhoveli Cathedral at the heart of Mtskheta's old town, within its fortified wall.",
+            de: 'Die Svetitskhoveli-Kathedrale aus dem 11. Jahrhundert im Herzen der Altstadt von Mtskheta, innerhalb ihrer Wehrmauer.',
+            fr: "La cathédrale de Svetitskhoveli, du XIe siècle, au cœur de la vieille ville de Mtskheta, dans son enceinte fortifiée.",
+            es: 'La catedral de Svetitskhoveli, del siglo XI, en el corazón del casco antiguo de Mtskheta, dentro de su muralla.',
+            nl: 'De 11e-eeuwse Svetitskhoveli-kathedraal in het hart van de oude stad van Mtskheta, binnen haar verdedigingsmuur.',
+            cs: 'Katedrála Svetitskhoveli z 11. století v srdci starého města Mtskhety, uvnitř svých hradeb.',
+            pl: 'Katedra Svetitskhoveli z XI wieku w sercu starego miasta Mtskhety, wewnątrz murów obronnych.',
+          },
+        },
+        {
+          base: 'gergeti-trinity-church-kazbegi-georgia', width: 1448, height: 1086,
+          anchor: 'inline-gergeti',
+          description: 'The Gergeti Trinity Church and its separate stone bell tower on a grassy ridge above Stepantsminda, against the vast scree slopes of the Kazbek massif, in the Mtskheta-Mtianeti region of Georgia.',
+          locationName: 'Gergeti Trinity Church, Stepantsminda, Mtskheta-Mtianeti, Georgia',
+          locality: 'Stepantsminda', region: 'Mtskheta-Mtianeti', geo: { lat: 42.66253, lng: 44.62072 },
+          name: {
+            en: 'Gergeti Trinity Church on its ridge above Stepantsminda, Mtskheta-Mtianeti, Georgia',
+            de: 'Die Gergeti-Dreifaltigkeitskirche auf ihrem Bergrücken über Stepantsminda, Mtskheta-Mtianeti, Georgien',
+            fr: "L'église de la Trinité de Gergeti sur sa crête au-dessus de Stepantsminda, Mtskheta-Mtianeti, Géorgie",
+            es: 'La iglesia de la Trinidad de Gergeti en su cresta sobre Stepantsminda, Mtskheta-Mtianeti, Georgia',
+            nl: 'De Drie-eenheidskerk van Gergeti op haar bergkam boven Stepantsminda, Mtskheta-Mtianeti, Georgië',
+            cs: 'Kostel Nejsvětější Trojice v Gergeti na hřebeni nad Stepantsmindou, Mtskheta-Mtianeti, Gruzie',
+            pl: 'Cerkiew Trójcy Świętej w Gergeti na grani nad Stepantsmindą, Mtskheta-Mtianeti, Gruzja',
+          },
+          caption: {
+            en: 'Gergeti Trinity Church and its bell tower stand on the ridge, below the scree slopes of the Kazbek massif.',
+            de: 'Die Gergeti-Dreifaltigkeitskirche und ihr Glockenturm stehen auf dem Bergrücken, unterhalb der Geröllhänge des Kazbek-Massivs.',
+            fr: "L'église de la Trinité de Gergeti et son clocher se dressent sur la crête, sous les pentes d'éboulis du massif du Kazbek.",
+            es: 'La iglesia de la Trinidad de Gergeti y su campanario se alzan en la cresta, bajo las laderas de pedregal del macizo del Kazbek.',
+            nl: 'De Drie-eenheidskerk van Gergeti en haar klokkentoren staan op de bergkam, onder de puinhellingen van het Kazbek-massief.',
+            cs: 'Kostel Nejsvětější Trojice v Gergeti a jeho zvonice stojí na hřebeni pod sutinovými svahy masivu Kazbek.',
+            pl: 'Cerkiew Trójcy Świętej w Gergeti i jej dzwonnica stoją na grani, poniżej piarżystych zboczy masywu Kazbek.',
+          },
+        },
+        {
+          base: 'gudauri-panorama-friendship-monument-georgia', width: 1448, height: 1086,
+          anchor: 'inline-friendship-monument',
+          description: 'The curved stone-and-concrete wall of the Russia-Georgia Friendship Monument near Gudauri, covered with a colourful mosaic mural, on the Georgian Military Highway in the Mtskheta-Mtianeti region of Georgia.',
+          locationName: 'Russia-Georgia Friendship Monument, Gudauri, Mtskheta-Mtianeti, Georgia',
+          locality: 'Gudauri', region: 'Mtskheta-Mtianeti', geo: { lat: 42.4920, lng: 44.4527 },
+          name: {
+            en: 'The mosaic wall of the Russia-Georgia Friendship Monument near Gudauri, Georgia',
+            de: 'Die Mosaikwand des Russisch-Georgischen Freundschaftsdenkmals nahe Gudauri, Georgien',
+            fr: "La fresque en mosaïque du monument de l'amitié russo-géorgienne près de Gudauri, Géorgie",
+            es: 'El muro de mosaico del Monumento a la Amistad ruso-georgiana cerca de Gudauri, Georgia',
+            nl: 'De mozaïekwand van het Russisch-Georgisch Vriendschapsmonument bij Gudauri, Georgië',
+            cs: 'Mozaiková stěna Památníku rusko-gruzínského přátelství poblíž Gudauri, Gruzie',
+            pl: 'Mozaikowa ściana Pomnika Przyjaźni Gruzińsko-Rosyjskiej koło Gudauri, Gruzja',
+          },
+          caption: {
+            en: 'The curved wall of the Friendship Monument, covered with colourful mosaic murals, on the edge above the valley.',
+            de: 'Die geschwungene Wand des Freundschaftsdenkmals mit ihren bunten Mosaiken, am Rand über dem Tal.',
+            fr: "Le mur incurvé du monument de l'amitié, orné de fresques en mosaïque colorées, au bord du plateau au-dessus de la vallée.",
+            es: 'El muro curvo del Monumento a la Amistad, cubierto de coloridos murales de mosaico, al borde del valle.',
+            nl: 'De gebogen wand van het Vriendschapsmonument, bedekt met kleurrijke mozaïeken, op de rand boven het dal.',
+            cs: 'Zakřivená stěna Památníku přátelství, pokrytá barevnými mozaikami, na okraji nad údolím.',
+            pl: 'Wygięta ściana Pomnika Przyjaźni, pokryta barwnymi mozaikami, na krawędzi nad doliną.',
+          },
+        },
+        {
+          base: 'truso-valley-defensive-tower-church-georgia', width: 1600, height: 1067,
+          anchor: 'inline-truso',
+          description: 'A tapering stone defensive tower and a small stone church with tiled roofs on the floor of the Truso valley, with a ruined tower village on the slope behind, in the Mtskheta-Mtianeti region of Georgia.',
+          locationName: 'Truso Valley, Kazbegi Municipality, Mtskheta-Mtianeti, Georgia',
+          region: 'Mtskheta-Mtianeti', geo: { lat: 42.5033, lng: 44.4497 },
+          name: {
+            en: 'A stone defensive tower and church in the Truso valley, Mtskheta-Mtianeti, Georgia',
+            de: 'Ein steinerner Wehrturm und eine Kirche im Truso-Tal, Mtskheta-Mtianeti, Georgien',
+            fr: "Une tour de défense en pierre et une église dans la vallée de Truso, Mtskheta-Mtianeti, Géorgie",
+            es: 'Una torre defensiva de piedra y una iglesia en el valle de Truso, Mtskheta-Mtianeti, Georgia',
+            nl: 'Een stenen verdedigingstoren en een kerkje in de Truso-vallei, Mtskheta-Mtianeti, Georgië',
+            cs: 'Kamenná obranná věž a kostel v údolí Truso, Mtskheta-Mtianeti, Gruzie',
+            pl: 'Kamienna wieża obronna i cerkiew w dolinie Truso, Mtskheta-Mtianeti, Gruzja',
+          },
+          caption: {
+            en: 'A defensive tower and a small church stand on the valley floor at Truso, below a ruined tower village.',
+            de: 'Ein Wehrturm und eine kleine Kirche stehen auf dem Talboden von Truso, unterhalb eines verfallenen Turmdorfs.',
+            fr: "Une tour de défense et une petite église se dressent au fond de la vallée de Truso, sous un village de tours en ruine.",
+            es: 'Una torre defensiva y una pequeña iglesia se alzan en el fondo del valle de Truso, bajo un pueblo de torres en ruinas.',
+            nl: 'Een verdedigingstoren en een kerkje staan op de bodem van de Truso-vallei, onder een vervallen torendorp.',
+            cs: 'Obranná věž a malý kostel stojí na dně údolí Truso pod zříceninou věžové vesnice.',
+            pl: 'Wieża obronna i mała cerkiew stoją na dnie doliny Truso, poniżej ruin wieżowej wsi.',
+          },
+        },
+      ],
       address: { addressRegion: 'Mtskheta-Mtianeti' },
       attractions: [
         'Mtskheta', 'Georgian Military Highway', 'Ananuri Fortress',
