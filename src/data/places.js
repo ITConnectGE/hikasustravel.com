@@ -743,7 +743,117 @@ export const regions = [
   {
     slug: 'mtskheta-mtianeti', name: 'Mtskheta-Mtianeti', published: true,
     seoKey: 'mtskhetaMtianeti', contentKey: 'mtskhetaMtianeti',
+    // Hero DELIBERATELY UNTOUCHED — still the Ananuri/Zhinvali JPG, still a single
+    // width with no ladder and no ImageObject. Flagged, not fixed: this pass adds
+    // body images only. og:image/twitter continue to auto-derive from this value.
     image: '/images/files/Ananuri%20Fortress%20and%20Zhinvali%20Reservoir.jpg',
+    // Three contextual body photos, spliced into each locale's content at a fixed
+    // BLOCK INDEX (all 7 locales share a 28-block shape), one per major section:
+    // Jvari in the Mtskheta section, Gudauri on the Military Highway, Gergeti in
+    // the Kazbegi section. The hero's subject (Ananuri above the Zhinvali
+    // reservoir) is deliberately NOT repeated inline.
+    //
+    // ⚠️ NONE of the three is another destination page's image — verified by
+    // pixel-comparing each against the corresponding page hero (Jvari 38.6,
+    // Gergeti 45.7, Gudauri 41.5 mean abs difference; all clearly distinct
+    // photographs of the same subjects). The Jvari and Gudauri frames reach the
+    // site only through tours.js; the Gergeti original was entirely unused.
+    //
+    // The Gudauri set already ships no-`w` filenames in /images/files/, which is
+    // exactly what this array builds, so it is REFERENCED IN PLACE — no copy, no
+    // re-encode, no duplicate bytes. Only Jvari and Gergeti needed generating.
+    //
+    // All three carry `noCredit`: unlike the Kvemo Kartli set, these three assert
+    // no authorship anywhere in the repo, so claiming it here would be invented.
+    //
+    // NO entry sets `hero` — this page's representative image is unaffected (it
+    // has no hero ImageObject at all, which is pre-existing and out of scope).
+    //
+    // Sections left image-free on purpose: Svetitskhoveli (every photo of it
+    // belongs to the cathedral's own page), Zhinvali and Ananuri (the hero already
+    // shows both), and Shatili (no photograph exists in the project).
+    inlineImageObjects: [
+      {
+        base: 'jvari-monastery-confluence-mtskheta-georgia', width: 1448, height: 1085,
+        anchor: 'inline-jvari', dir: '/images/mtskheta-mtianeti',
+        noCredit: true,
+        description: 'Jvari Monastery on the cliff above the confluence of the Aragvi and Mtkvari rivers, with the town of Mtskheta on the valley floor below, Mtskheta-Mtianeti, Georgia.',
+        locationName: 'Jvari Monastery, Mtskheta, Mtskheta-Mtianeti, Georgia',
+        locality: 'Mtskheta', region: 'Mtskheta-Mtianeti', geo: { lat: 41.8380, lng: 44.7328 },
+        name: {
+          en: 'Jvari Monastery on the cliff above the confluence of the Aragvi and Mtkvari at Mtskheta, Georgia',
+          de: 'Das Jvari-Kloster auf der Klippe über dem Zusammenfluss von Aragvi und Mtkvari bei Mtskheta, Georgien',
+          fr: "Le monastère de Jvari sur la falaise au-dessus du confluent de l'Aragvi et de la Mtkvari à Mtskheta, Géorgie",
+          es: 'El monasterio de Jvari en el acantilado sobre la confluencia del Aragvi y el Mtkvari en Mtskheta, Georgia',
+          nl: 'Het Jvari-klooster op de klif boven de samenvloeiing van de Aragvi en de Mtkvari bij Mtskheta, Georgië',
+          cs: 'Klášter Jvari na útesu nad soutokem Aragvi a Mtkvari u Mtskhety, Gruzie',
+          pl: 'Klasztor Jvari na klifie nad zbiegiem Aragwi i Mtkwari koło Mtskhety, Gruzja',
+        },
+        caption: {
+          en: 'Jvari Monastery stands on the cliff above the meeting of the Aragvi and Mtkvari, with Mtskheta spread out below.',
+          de: 'Das Jvari-Kloster steht auf der Klippe über dem Zusammenfluss von Aragvi und Mtkvari, darunter breitet sich Mtskheta aus.',
+          fr: "Le monastère de Jvari se dresse sur la falaise au-dessus de la rencontre de l'Aragvi et de la Mtkvari, Mtskheta s'étendant en contrebas.",
+          es: 'El monasterio de Jvari se alza en el acantilado sobre el encuentro del Aragvi y el Mtkvari, con Mtskheta extendida abajo.',
+          nl: 'Het Jvari-klooster staat op de klif boven de samenvloeiing van de Aragvi en de Mtkvari, met Mtskheta uitgestrekt daaronder.',
+          cs: 'Klášter Jvari stojí na útesu nad soutokem Aragvi a Mtkvari, pod nímž se rozkládá Mtskheta.',
+          pl: 'Klasztor Jvari stoi na klifie nad zbiegiem Aragwi i Mtkwari, a poniżej rozciąga się Mtskheta.',
+        },
+      },
+      {
+        // Referenced in place: this set already lives in /images/files/ under the
+        // no-`w` names this array expects, so nothing is copied or re-encoded.
+        base: 'gudauri-ski-slopes-caucasus-georgia', width: 1448, height: 1086,
+        anchor: 'inline-gudauri', dir: '/images/files',
+        noCredit: true,
+        description: 'Ski lifts running up the open snow slopes above Gudauri, the resort on the Georgian Military Highway at around 2,200 metres, Mtskheta-Mtianeti, Georgia.',
+        locationName: 'Gudauri, Mtskheta-Mtianeti, Georgia',
+        locality: 'Gudauri', region: 'Mtskheta-Mtianeti', geo: { lat: 42.47583, lng: 44.47861 },
+        name: {
+          en: 'Ski lifts and open pistes above Gudauri in the Caucasus, Mtskheta-Mtianeti, Georgia',
+          de: 'Skilifte und offene Pisten oberhalb von Gudauri im Kaukasus, Mtskheta-Mtianeti, Georgien',
+          fr: "Remontées mécaniques et pistes ouvertes au-dessus de Gudauri, dans le Caucase, Mtskheta-Mtianeti, Géorgie",
+          es: 'Remontes y pistas abiertas por encima de Gudauri, en el Cáucaso, Mtskheta-Mtianeti, Georgia',
+          nl: 'Skiliften en open pistes boven Gudauri in de Kaukasus, Mtskheta-Mtianeti, Georgië',
+          cs: 'Lyžařské vleky a otevřené sjezdovky nad Gudauri v Kavkazu, Mtskheta-Mtianeti, Gruzie',
+          pl: 'Wyciągi narciarskie i otwarte stoki powyżej Gudauri w Kaukazie, Mtskheta-Mtianeti, Gruzja',
+        },
+        caption: {
+          en: 'Lifts run up the open slopes at Gudauri, the resort the Georgian Military Highway passes at around 2,200 metres.',
+          de: 'Lifte führen die offenen Hänge von Gudauri hinauf — jenem Skigebiet, das die Georgische Heerstraße auf rund 2.200 Metern passiert.',
+          fr: "Les remontées gravissent les pentes ouvertes de Gudauri, la station que la route militaire géorgienne traverse vers 2 200 mètres.",
+          es: 'Los remontes suben por las laderas abiertas de Gudauri, la estación que la Carretera Militar Georgiana atraviesa hacia los 2.200 metros.',
+          nl: 'Liften voeren omhoog over de open hellingen van Gudauri, het skigebied dat de Georgische Militaire Weg op zo’n 2.200 meter passeert.',
+          cs: 'Vleky stoupají po otevřených svazích Gudauri — střediska, které Gruzínská vojenská cesta míjí v asi 2 200 metrech.',
+          pl: 'Wyciągi wznoszą się po otwartych stokach Gudauri — ośrodka, który Gruzińska Droga Wojenna mija na wysokości około 2200 metrów.',
+        },
+      },
+      {
+        base: 'gergeti-trinity-church-caucasus-kazbegi-georgia', width: 1448, height: 959,
+        anchor: 'inline-gergeti', dir: '/images/mtskheta-mtianeti',
+        noCredit: true,
+        description: 'Gergeti Trinity Church on its green hill below the snow-streaked wall of the Greater Caucasus, near Stepantsminda, Mtskheta-Mtianeti, Georgia.',
+        locationName: 'Gergeti Trinity Church, Stepantsminda (Kazbegi), Mtskheta-Mtianeti, Georgia',
+        locality: 'Stepantsminda', region: 'Mtskheta-Mtianeti', geo: { lat: 42.66253, lng: 44.62072 },
+        name: {
+          en: 'Gergeti Trinity Church on its hill below the Caucasus ridge near Stepantsminda, Mtskheta-Mtianeti, Georgia',
+          de: 'Die Gergeti-Kirche auf ihrem Hügel unterhalb des Kaukasuskamms bei Stepantsminda, Mtskheta-Mtianeti, Georgien',
+          fr: "L'église de Gergeti sur sa colline au pied de la crête du Caucase, près de Stepantsminda, Mtskheta-Mtianeti, Géorgie",
+          es: 'La iglesia de Gergeti sobre su colina al pie de la cresta del Cáucaso, cerca de Stepantsminda, Mtskheta-Mtianeti, Georgia',
+          nl: 'De Gergeti-kerk op haar heuvel onder de Kaukasuskam bij Stepantsminda, Mtskheta-Mtianeti, Georgië',
+          cs: 'Kostel v Gergeti na návrší pod kavkazským hřebenem poblíž Stepantsmindy, Mtskheta-Mtianeti, Gruzie',
+          pl: 'Cerkiew w Gergeti na wzgórzu u stóp grani Kaukazu koło Stepantsmindy, Mtskheta-Mtianeti, Gruzja',
+        },
+        caption: {
+          en: 'The Gergeti church stands on its green hill below the snow-streaked wall of the Greater Caucasus.',
+          de: 'Die Gergeti-Kirche steht auf ihrem grünen Hügel unterhalb der schneedurchzogenen Wand des Großen Kaukasus.',
+          fr: "L'église de Gergeti se dresse sur sa colline verdoyante au pied de la muraille enneigée du Grand Caucase.",
+          es: 'La iglesia de Gergeti se alza sobre su colina verde al pie de la pared nevada del Gran Cáucaso.',
+          nl: 'De Gergeti-kerk staat op haar groene heuvel onder de met sneeuw doorregen wand van de Grote Kaukasus.',
+          cs: 'Kostel v Gergeti stojí na zeleném návrší pod sněhem pruhovanou stěnou Velkého Kavkazu.',
+          pl: 'Cerkiew w Gergeti stoi na zielonym wzgórzu u stóp pokrytej smugami śniegu ściany Wielkiego Kaukazu.',
+        },
+      },
+    ],
     // Region-level "things to do" guide, served (like Kvemo Kartli's) at
     // /georgia/mtskheta-mtianeti/things-to-do-in-mtskheta-mtianeti via the CitySubPage dispatcher.
     thingsToDo: {
