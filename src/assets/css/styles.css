@@ -874,6 +874,47 @@ section {
     );
   }
 }
+/* Kvemo Kartli (REGION) hero — same mechanism as .hero--adjara above. The Diamond
+   Bridge over Dashbashi Canyon, replacing the generic georgia-home.jpg placeholder
+   this page shipped with; it is the page's first hero ladder of any kind. The
+   files are byte-for-byte copies of the Tsalka/Dashbashi Canyon page's set, put
+   under /images/kvemo-kartli/ with no-`w` names so the inlineImageObjects
+   contentUrl convention resolves — see the note on places.js's kvemo-kartli entry.
+   Native width is 1445, so that is the top rung: do not add a 1600 or 2400
+   breakpoint. The bridge runs across the middle band with the canyon below and the
+   plateau above, so centre-centre holds the composition from 360px to 1920px. */
+.hero--kvemo-kartli {
+  background-image: url("/images/kvemo-kartli/diamond-bridge-dashbashi-canyon-georgia-1200.webp");
+  background-image: image-set(
+    url("/images/kvemo-kartli/diamond-bridge-dashbashi-canyon-georgia-768.avif") type("image/avif"),
+    url("/images/kvemo-kartli/diamond-bridge-dashbashi-canyon-georgia-768.webp") type("image/webp")
+  );
+  /* Biased left, not centred: the diamond-shaped glass café — the feature the
+     page's own section is about — sits about a third in from the left edge, and a
+     centred `cover` crop pushes it out of frame entirely on narrow viewports.
+     25% keeps it fully in frame at 360px. Desktop framing is untouched: the source
+     is 1.33:1, so any viewport wider than that crops vertically and the horizontal
+     value has no effect — only mobile portrait is affected. */
+  background-position: 25% center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+@media (min-width: 768px) {
+  .hero--kvemo-kartli {
+    background-image: image-set(
+      url("/images/kvemo-kartli/diamond-bridge-dashbashi-canyon-georgia-1200.avif") type("image/avif"),
+      url("/images/kvemo-kartli/diamond-bridge-dashbashi-canyon-georgia-1200.webp") type("image/webp")
+    );
+  }
+}
+@media (min-width: 1200px) {
+  .hero--kvemo-kartli {
+    background-image: image-set(
+      url("/images/kvemo-kartli/diamond-bridge-dashbashi-canyon-georgia-1445.avif") type("image/avif"),
+      url("/images/kvemo-kartli/diamond-bridge-dashbashi-canyon-georgia-1445.webp") type("image/webp")
+    );
+  }
+}
 /* Kakheti (REGION) hero — same mechanism as .hero--adjara above. Sighnaghi at
    sunrise above the Alazani valley, replacing the qvevri close-up that held the
    slot before (that photo stays on the page as a body ImageObject). The page had
