@@ -195,7 +195,125 @@ export const regions = [
   {
     slug: 'imereti', name: 'Imereti', published: true,
     seoKey: 'imereti', contentKey: 'imereti',
-    image: '/images/files/bagrati-cathedral.jpg',
+    // Cover/hero = the SAME Bagrati photograph the page has always used, now
+    // shipped as a proper 768/1200/1448 webp+avif ladder instead of a single raw
+    // 1600x1200 JPG (the Adjara move: re-encode, don't swap). The photo was kept
+    // because every stronger Imereti frame in the project — Gelati, the Bagrati
+    // package shot, the Colchis Fountain — is already another page's hero, and
+    // this site keeps one photograph to one page (cf. the reverted Gabriadze
+    // hero, and Ushguli city vs. the Svaneti region page each getting their own
+    // Ushguli frame). The original JPG is NOT deleted — `thingsToDo` below still
+    // uses it. `heroClass` moves the background into CSS so the ladder actually
+    // applies (HeroSection's inline style can only carry one width); og:image/
+    // twitter still auto-derive from `image` via useSEO, matching the Adjara and
+    // Kakheti region pattern — region pages have no page-specific OG convention.
+    image: '/images/imereti/imereti-bagrati-kutaisi-georgia-1448.webp',
+    imageAvif: '/images/imereti/imereti-bagrati-kutaisi-georgia-1448.avif',
+    heroClass: 'hero--imereti',
+    // Hero + two contextual body photos. The two body ones render as real
+    // <figure class="body-img"> blocks spliced into each locale's content at a
+    // fixed BLOCK INDEX (all 7 locales share a 36-block shape), each placed
+    // against the paragraph it actually illustrates: the karst-geology paragraph
+    // and the Prometheus Cave section. name/caption are localized per locale;
+    // `description` is the English long form. contentUrl uses the largest shipped
+    // variant.
+    //
+    // All three carry `noCredit`: no provenance is recorded anywhere for
+    // bagrati-cathedral.jpg or for the two cave JPGs (which reach the site only
+    // as tours.js tile/gallery frames), so asserting Hikasus authorship would be
+    // false attribution. Flip to brand credit once ownership is confirmed.
+    //
+    // Sections with no photograph anywhere in the project — Okatse and Martvili,
+    // Sataplia, Tskaltubo, the Rioni valley, Imeretian wine — deliberately stay
+    // image-free rather than borrow a wrong-region or already-committed frame.
+    inlineImageObjects: [
+      {
+        base: 'imereti-bagrati-kutaisi-georgia', width: 1448, height: 1086,
+        anchor: 'hero-image', dir: '/images/imereti', hero: true,
+        noCredit: true,
+        description: 'Bagrati Cathedral on Ukimerioni Hill, seen across the rooftops and trees of Kutaisi in the Imereti region of Georgia.',
+        locationName: 'Bagrati Cathedral, Ukimerioni Hill, Kutaisi, Imereti, Georgia',
+        locality: 'Kutaisi', region: 'Imereti', geo: { lat: 42.2773, lng: 42.7043 },
+        name: {
+          en: 'Bagrati Cathedral on its hill above the rooftops of Kutaisi, Imereti, Georgia',
+          de: 'Die Bagrati-Kathedrale auf ihrem Hügel über den Dächern von Kutaisi, Imereti, Georgien',
+          fr: "La cathédrale de Bagrati sur sa colline au-dessus des toits de Kutaisi, Imereti, Géorgie",
+          es: 'La catedral de Bagrati sobre su colina, por encima de los tejados de Kutaisi, Imereti, Georgia',
+          nl: 'De Bagrati-kathedraal op haar heuvel boven de daken van Kutaisi, Imereti, Georgië',
+          cs: 'Katedrála Bagrati na návrší nad střechami Kutaisi, Imeretie, Gruzie',
+          pl: 'Katedra Bagrati na wzgórzu ponad dachami Kutaisi, Imeretia, Gruzja',
+        },
+        caption: {
+          en: 'Bagrati Cathedral stands on Ukimerioni Hill above Kutaisi, overlooking the Rioni valley.',
+          de: 'Die Bagrati-Kathedrale steht auf dem Ukimerioni-Hügel über Kutaisi mit Blick über das Rioni-Tal.',
+          fr: "La cathédrale de Bagrati se dresse sur la colline d'Ukimerioni au-dessus de Kutaisi, dominant la vallée du Rioni.",
+          es: 'La catedral de Bagrati se alza sobre la colina de Ukimerioni, por encima de Kutaisi, con vistas al valle del Rioni.',
+          nl: 'De Bagrati-kathedraal staat op de Ukimerioni-heuvel boven Kutaisi, met uitzicht over de Rioni-vallei.',
+          cs: 'Katedrála Bagrati stojí na vrchu Ukimerioni nad Kutaisi s výhledem do údolí Rioni.',
+          pl: 'Katedra Bagrati stoi na wzgórzu Ukimerioni ponad Kutaisi, z widokiem na dolinę Rioni.',
+        },
+      },
+      {
+        base: 'imereti-karst-cave-chamber-georgia', width: 1448, height: 925,
+        anchor: 'inline-karst-cave', dir: '/images/imereti',
+        noCredit: true,
+        description: 'A broad limestone cave chamber in the karst of Imereti, Georgia, its arched ceiling hung with stalactites above a lit walkway.',
+        // Deliberately region-level. The source file is named for Prometheus Cave
+        // and reaches the site as that tour's tile image, but unlike the walkway
+        // frame below there is no owner-authored caption confirming which cave it
+        // is — and filenames in this set have been wrong before. The karst claim
+        // is what the picture actually supports, and it is exactly what the
+        // paragraph it sits under is about. No coordinates are asserted.
+        locationName: 'Imereti, Georgia', region: 'Imereti',
+        name: {
+          en: 'A limestone cave chamber with stalactites in the karst of Imereti, Georgia',
+          de: 'Eine Kalksteinhöhlenhalle mit Stalaktiten im Karst von Imereti, Georgien',
+          fr: "Une salle de grotte calcaire aux stalactites dans le karst de l'Imereti, Géorgie",
+          es: 'Una sala de cueva calcárea con estalactitas en el karst de Imereti, Georgia',
+          nl: 'Een kalkstenen grotzaal met stalactieten in de karst van Imereti, Georgië',
+          cs: 'Vápencová jeskynní síň s krápníky v krasu Imeretie, Gruzie',
+          pl: 'Wapienna sala jaskiniowa ze stalaktytami w krasie Imeretii, Gruzja',
+        },
+        caption: {
+          en: 'Water working through soluble limestone over millennia has hollowed out chambers and stalactite formations across the karst of Imereti.',
+          de: 'Wasser, das über Jahrtausende durch lösliches Kalkgestein sickert, hat im Karst von Imereti Hallen und Stalaktitenformationen ausgehöhlt.',
+          fr: "L'eau qui s'infiltre depuis des millénaires dans le calcaire soluble a creusé salles et formations de stalactites dans tout le karst de l'Imereti.",
+          es: 'El agua que se filtra durante milenios a través de la caliza soluble ha excavado salas y formaciones de estalactitas por todo el karst de Imereti.',
+          nl: 'Water dat millennia lang door oplosbaar kalksteen sijpelt, heeft in de karst van Imereti zalen en stalactietformaties uitgehold.',
+          cs: 'Voda prosakující po tisíciletí rozpustným vápencem vyhloubila v krasu Imeretie síně a krápníkové útvary.',
+          pl: 'Woda przesiąkająca przez tysiąclecia przez rozpuszczalny wapień wydrążyła w krasie Imeretii sale i formacje stalaktytowe.',
+        },
+      },
+      {
+        base: 'prometheus-cave-walkway-imereti-georgia', width: 1448, height: 964,
+        anchor: 'inline-prometheus-walkway', dir: '/images/imereti',
+        noCredit: true,
+        description: 'A lit walkway curving through a stalactite chamber of Prometheus Cave, near Tskaltubo in Imereti, Georgia.',
+        // Identified as Prometheus Cave on the owner's own tours.js gallery entry
+        // ("Prometheus Cave near Kutaisi"), so the cave is named here. Locality and
+        // coordinates match the Prometheus Cave site page entry (Kumistavi).
+        locationName: 'Prometheus Cave (Kumistavi)',
+        locality: 'Kumistavi', region: 'Imereti', geo: { lat: 42.3767, lng: 42.6000 },
+        name: {
+          en: 'A lit walkway through a stalactite chamber in Prometheus Cave, Imereti, Georgia',
+          de: 'Ein beleuchteter Steg durch eine Stalaktitenhalle in der Prometheus-Höhle, Imereti, Georgien',
+          fr: "Une passerelle éclairée traversant une salle à stalactites de la grotte de Prométhée, Imereti, Géorgie",
+          es: 'Una pasarela iluminada a través de una sala de estalactitas en la cueva de Prometeo, Imereti, Georgia',
+          nl: 'Een verlicht looppad door een stalactietenzaal in de Prometheusgrot, Imereti, Georgië',
+          cs: 'Osvětlená lávka procházející krápníkovou síní Prométheovy jeskyně, Imeretie, Gruzie',
+          pl: 'Oświetlona kładka przez salę stalaktytową w Jaskini Prometeusza, Imeretia, Gruzja',
+        },
+        caption: {
+          en: 'A lit walkway leads through the chambers of Prometheus Cave, near Tskaltubo in Imereti.',
+          de: 'Ein beleuchteter Steg führt durch die Hallen der Prometheus-Höhle nahe Tskaltubo in Imereti.',
+          fr: "Une passerelle éclairée traverse les salles de la grotte de Prométhée, près de Tskaltubo en Imereti.",
+          es: 'Una pasarela iluminada recorre las salas de la cueva de Prometeo, cerca de Tskaltubo, en Imereti.',
+          nl: 'Een verlicht looppad voert door de zalen van de Prometheusgrot, bij Tskaltubo in Imereti.',
+          cs: 'Osvětlená lávka vede síněmi Prométheovy jeskyně poblíž Tskaltuba v Imeretii.',
+          pl: 'Oświetlona kładka prowadzi przez sale Jaskini Prometeusza w pobliżu Tskaltubo w Imeretii.',
+        },
+      },
+    ],
     // Region-level "things to do" guide, served (like Adjara's/Guria's) at
     // /georgia/imereti/things-to-do-in-imereti via the CitySubPage dispatcher.
     thingsToDo: {
