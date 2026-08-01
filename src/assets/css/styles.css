@@ -906,6 +906,45 @@ section {
     );
   }
 }
+/* Things to Do in Shida Kartli hero — same mechanism as .hero--adjara below.
+   REPLACES the raw /images/files/Uplistsikhe%20Cave%20Town.jpg, which shipped at
+   a single width with no AVIF. Same subject, better frame and a real ladder: the
+   view out over the Mtkvari valley from the carved plateau, which is also what
+   the page's own valley section is about. The raw JPG is NOT deleted — tours.js
+   and the English body still reference it.
+
+   ⚠️ DELIBERATE duplication, owner-approved: this frame is also the Shida Kartli
+   region hero. Every Shida Kartli photograph in the project is committed to a
+   page; the sole unreferenced one is a raw "Stalins Train Gori.jpg", deliberately
+   left unused. Files are REFERENCED in place — nothing copied, nothing generated.
+
+   Native for the no-`w` set is 1448, so that is the top rung. */
+.hero--things-to-do-shida-kartli {
+  background-image: url("/images/files/uplistsikhe-mtkvari-valley-view-georgia-1200.webp");
+  background-image: image-set(
+    url("/images/files/uplistsikhe-mtkvari-valley-view-georgia-768.avif") type("image/avif"),
+    url("/images/files/uplistsikhe-mtkvari-valley-view-georgia-768.webp") type("image/webp")
+  );
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+@media (min-width: 768px) {
+  .hero--things-to-do-shida-kartli {
+    background-image: image-set(
+      url("/images/files/uplistsikhe-mtkvari-valley-view-georgia-1200.avif") type("image/avif"),
+      url("/images/files/uplistsikhe-mtkvari-valley-view-georgia-1200.webp") type("image/webp")
+    );
+  }
+}
+@media (min-width: 1200px) {
+  .hero--things-to-do-shida-kartli {
+    background-image: image-set(
+      url("/images/files/uplistsikhe-mtkvari-valley-view-georgia-1448.avif") type("image/avif"),
+      url("/images/files/uplistsikhe-mtkvari-valley-view-georgia-1448.webp") type("image/webp")
+    );
+  }
+}
 /* Things to Do in Svaneti hero — same mechanism as .hero--adjara below.
    REPLACES /images/files/Koruldi%20Lakes.jpg on relevance grounds, not quality:
    that frame shows the Koruldi Lakes, and this page never mentions Koruldi (0

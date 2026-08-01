@@ -2266,7 +2266,150 @@ export const regions = [
     // dispatcher.
     thingsToDo: {
       seoKey: 'thingsToDoShidaKartli', contentKey: 'thingsToDoShidaKartli',
-      image: '/images/files/Uplistsikhe%20Cave%20Town.jpg',
+      // Cover/hero = the Mtkvari valley seen from the carved plateau at
+      // Uplistsikhe, REPLACING the raw /images/files/Uplistsikhe Cave Town.jpg,
+      // which shipped at one width with no AVIF. Same site, better frame, and it
+      // doubles as the subject of the page's own Mtkvari-valley section. The raw
+      // JPG is NOT deleted — tours.js and the English body still reference it.
+      //
+      // ⚠️ DELIBERATE duplication, owner-approved: this frame and all three
+      // inlines below are the Shida Kartli REGION page's set, so the hub and this
+      // guide will look similar. Every Shida Kartli photograph in the project is
+      // committed to a page; the only unreferenced one is a raw "Stalins Train
+      // Gori.jpg", deliberately left unused (it would need a generated ladder,
+      // and the Stalin Museum page already carries a railway-carriage frame).
+      //
+      // ZERO files copied or generated: the region pass already made no-`w`
+      // copies of all three inlines under /images/shida-kartli, and the hero has
+      // a no-`w` 1448 rung plus an existing OG in /images/files.
+      image: '/images/files/uplistsikhe-mtkvari-valley-view-georgia-1448.webp',
+      imageAvif: '/images/files/uplistsikhe-mtkvari-valley-view-georgia-1448.avif',
+      heroClass: 'hero--things-to-do-shida-kartli',
+      heroPreload: '/images/files/uplistsikhe-mtkvari-valley-view-georgia-1200.avif',
+      ogImage: { src: '/images/files/uplistsikhe-mtkvari-valley-view-georgia-og-1200x630.jpg', width: 1200, height: 630 },
+      // ⚠️ SENSITIVE GEOGRAPHY: this page carries a section titled "A note on the
+      // South Ossetia boundary" (blocks 17-18). NO figure is placed at, before or
+      // after it — the nearest is block 10, seven blocks clear — and the splice
+      // script hard-refuses those indices and byte-compares the political wording.
+      // No image of South Ossetia or Tskhinvali is used; none exists, and none
+      // would be appropriate.
+      //
+      // NAMING: no exonym trap here. Shida Kartli, Gori, Uplistsikhe, Mtkvari and
+      // Ateni are Latin-identical in all 7 locales, and the region page's approved
+      // sets already match this page's nouns (fortress = de Festung, fr
+      // forteresse, es fortaleza, nl vesting, cs pevnost, pl twierdza), so all
+      // four sets are reused VERBATIM.
+      imageMeta: {
+        width: 1448, height: 1086, imageId: 'hero-image',
+        name: 'The Mtkvari valley seen from the carved plateau at Uplistsikhe, Shida Kartli, Georgia',
+        description: 'The Mtkvari valley seen from the rock-cut plateau at Uplistsikhe, the river and plain opening out toward the foothills, Shida Kartli, Georgia.',
+        locationName: 'Uplistsikhe, Shida Kartli, Georgia',
+        locality: 'Uplistsikhe', region: 'Shida Kartli', country: 'GE',
+        geo: { lat: 41.9686, lng: 44.2072 },
+        alt: {
+          en: 'The Mtkvari valley seen from the carved plateau at Uplistsikhe, Shida Kartli, Georgia',
+          de: 'Das Mtkvari-Tal vom ausgehauenen Plateau in Uplistsikhe aus gesehen, Shida Kartli, Georgien',
+          fr: "La vallée du Mtkvari vue depuis le plateau creusé d'Uplistsikhe, Shida Kartli, Géorgie",
+          es: 'El valle del Mtkvari visto desde la meseta excavada de Uplistsikhe, Shida Kartli, Georgia',
+          nl: 'Het Mtkvari-dal gezien vanaf het uitgehouwen plateau van Uplistsikhe, Shida Kartli, Georgië',
+          cs: 'Údolí Mtkvari z vytesané plošiny v Uplistsikhe, Shida Kartli, Gruzie',
+          pl: 'Dolina Mtkvari widziana z wykutego płaskowyżu w Uplistsikhe, Shida Kartli, Gruzja',
+        },
+        caption: {
+          en: 'From the rock-cut plateau at Uplistsikhe the Mtkvari valley opens out across the plain toward the foothills.',
+          de: 'Vom in den Fels gehauenen Plateau in Uplistsikhe öffnet sich das Mtkvari-Tal über die Ebene hin zu den Vorbergen.',
+          fr: "Depuis le plateau taillé dans la roche d'Uplistsikhe, la vallée du Mtkvari s'ouvre sur la plaine jusqu'aux contreforts.",
+          es: 'Desde la meseta tallada en la roca de Uplistsikhe, el valle del Mtkvari se abre sobre la llanura hacia el piedemonte.',
+          nl: 'Vanaf het in de rots uitgehouwen plateau van Uplistsikhe opent het Mtkvari-dal zich over de vlakte naar de uitlopers.',
+          cs: 'Z plošiny vytesané do skály v Uplistsikhe se údolí Mtkvari otevírá přes rovinu k podhůří.',
+          pl: 'Z wykutego w skale płaskowyżu w Uplistsikhe dolina Mtkvari otwiera się na równinę aż po podgórza.',
+        },
+      },
+      // Three contextual body photos, one per section: Uplistsikhe (4), Gori (6),
+      // the Mtkvari valley and rural Shida Kartli (10). All referenced in place at
+      // /images/shida-kartli, all brand-credited on the region page.
+      //
+      // Six of the ten sections stay image-free. NO photograph of Ateni Sioni,
+      // Kintsvisi, Ruisi, Urbnisi or Surami exists anywhere in the project —
+      // searched across public/images and the whole source tree — so those
+      // sections have none, even though Ateni is named 10 times.
+      inlineImageObjects: [
+        {
+          base: 'uplistsikhe-rock-cut-halls-georgia', width: 1600, height: 900,
+          anchor: 'inline-rock-cut-halls', dir: '/images/shida-kartli',
+          description: 'Rooms and halls cut directly into the living sandstone at Uplistsikhe, with the sandstone cliffs rising behind, Shida Kartli, Georgia.',
+          locationName: 'Uplistsikhe, Shida Kartli, Georgia',
+          locality: 'Uplistsikhe', region: 'Shida Kartli', geo: { lat: 41.9686, lng: 44.2072 },
+          name: {
+            en: 'Halls and chambers cut into the sandstone at Uplistsikhe, Shida Kartli, Georgia',
+            de: 'In den Sandstein gehauene Hallen und Kammern in Uplistsikhe, Shida Kartli, Georgien',
+            fr: "Salles et chambres taillées dans le grès à Uplistsikhe, Shida Kartli, Géorgie",
+            es: 'Salas y cámaras talladas en la arenisca en Uplistsikhe, Shida Kartli, Georgia',
+            nl: 'In het zandsteen uitgehakte zalen en kamers in Uplistsikhe, Shida Kartli, Georgië',
+            cs: 'Síně a komory vytesané do pískovce v Uplistsikhe, Shida Kartli, Gruzie',
+            pl: 'Sale i komory wykute w piaskowcu w Uplistsikhe, Shida Kartli, Gruzja',
+          },
+          caption: {
+            en: 'Rooms and halls cut directly into the living sandstone at Uplistsikhe, with the cliffs rising behind.',
+            de: 'Direkt in den gewachsenen Sandstein geschnittene Räume und Hallen in Uplistsikhe, dahinter steigen die Felsen auf.',
+            fr: "Des pièces et des salles creusées directement dans le grès vif à Uplistsikhe, les falaises s'élevant derrière.",
+            es: 'Estancias y salas talladas directamente en la arenisca viva en Uplistsikhe, con los acantilados alzándose detrás.',
+            nl: 'Kamers en zalen rechtstreeks uitgehakt in het levende zandsteen van Uplistsikhe, met daarachter de kliffen.',
+            cs: 'Místnosti a síně vyhloubené přímo do živého pískovce v Uplistsikhe, za nimi se zvedají útesy.',
+            pl: 'Pomieszczenia i sale wycięte bezpośrednio w żywym piaskowcu w Uplistsikhe, a za nimi wznoszą się klify.',
+          },
+        },
+        {
+          base: 'gori-fortress-georgia', width: 1264, height: 842,
+          anchor: 'inline-gori-fortress', dir: '/images/shida-kartli',
+          description: 'Gori Fortress (Gori Tsikhe) on the rocky volcanic hill above the city, its stone walls following the contour of the rock, Shida Kartli, Georgia.',
+          locationName: 'Gori Fortress, Gori, Shida Kartli, Georgia',
+          locality: 'Gori', region: 'Shida Kartli', geo: { lat: 41.9847, lng: 44.1067 },
+          name: {
+            en: 'Gori Fortress on its rocky hill above the city, Shida Kartli, Georgia',
+            de: 'Die Festung Gori auf ihrem Felshügel über der Stadt, Shida Kartli, Georgien',
+            fr: "La forteresse de Gori sur sa colline rocheuse au-dessus de la ville, Shida Kartli, Géorgie",
+            es: 'La fortaleza de Gori en su colina rocosa sobre la ciudad, Shida Kartli, Georgia',
+            nl: 'De vesting van Gori op haar rotsheuvel boven de stad, Shida Kartli, Georgië',
+            cs: 'Pevnost Gori na skalnatém kopci nad městem, Shida Kartli, Gruzie',
+            pl: 'Twierdza Gori na skalistym wzgórzu nad miastem, Shida Kartli, Gruzja',
+          },
+          caption: {
+            en: 'Gori Tsikhe crowns the rocky hill above the city, its stone walls following the contour of the rock.',
+            de: 'Gori Tsikhe krönt den felsigen Hügel über der Stadt, seine Steinmauern folgen der Kontur des Felsens.',
+            fr: "Gori Tsikhe couronne la colline rocheuse au-dessus de la ville, ses murs de pierre épousant le contour du rocher.",
+            es: 'Gori Tsikhe corona la colina rocosa sobre la ciudad, con sus muros de piedra siguiendo el contorno de la roca.',
+            nl: 'Gori Tsikhe kroont de rotsachtige heuvel boven de stad, met stenen muren die de contour van de rots volgen.',
+            cs: 'Gori Tsikhe korunuje skalnatý kopec nad městem, jeho kamenné hradby sledují obrys skály.',
+            pl: 'Gori Tsikhe wieńczy skaliste wzgórze nad miastem, a kamienne mury podążają za konturem skały.',
+          },
+        },
+        {
+          base: 'gori-town-panorama-georgia', width: 1448, height: 1086,
+          anchor: 'inline-gori-panorama', dir: '/images/shida-kartli',
+          description: 'The roofs of Gori spread across the valley floor below the surrounding hills in autumn, Shida Kartli, Georgia.',
+          locationName: 'Gori, Shida Kartli, Georgia',
+          locality: 'Gori', region: 'Shida Kartli', geo: { lat: 41.9847, lng: 44.1086 },
+          name: {
+            en: 'The rooftops of Gori below the surrounding hills in autumn, Shida Kartli, Georgia',
+            de: 'Die Dächer von Gori unterhalb der umliegenden Hügel im Herbst, Shida Kartli, Georgien',
+            fr: "Les toits de Gori au pied des collines environnantes en automne, Shida Kartli, Géorgie",
+            es: 'Los tejados de Gori al pie de las colinas circundantes en otoño, Shida Kartli, Georgia',
+            nl: 'De daken van Gori onder de omringende heuvels in de herfst, Shida Kartli, Georgië',
+            cs: 'Střechy Gori pod okolními kopci na podzim, Shida Kartli, Gruzie',
+            pl: 'Dachy Gori u stóp okolicznych wzgórz jesienią, Shida Kartli, Gruzja',
+          },
+          caption: {
+            en: 'The roofs of Gori spread across the valley floor below the surrounding hills.',
+            de: 'Die Dächer von Gori breiten sich über den Talboden unterhalb der umliegenden Hügel aus.',
+            fr: "Les toits de Gori s'étendent sur le fond de la vallée, au pied des collines environnantes.",
+            es: 'Los tejados de Gori se extienden por el fondo del valle, al pie de las colinas circundantes.',
+            nl: 'De daken van Gori strekken zich uit over de dalbodem onder de omringende heuvels.',
+            cs: 'Střechy Gori se rozkládají po dně údolí pod okolními kopci.',
+            pl: 'Dachy Gori rozciągają się po dnie doliny u stóp okolicznych wzgórz.',
+          },
+        },
+      ],
       address: { addressRegion: 'Shida Kartli' },
       attractions: [
         'Uplistsikhe Cave City', 'Gori', 'Stalin Museum', 'Ateni Sioni', 'Mtkvari Valley',
