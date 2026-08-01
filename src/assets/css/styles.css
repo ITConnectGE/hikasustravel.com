@@ -906,6 +906,46 @@ section {
     );
   }
 }
+/* Things to Do in Samtskhe-Javakheti hero — same mechanism as .hero--adjara
+   below. REPLACES /images/files/vardzia-cave-monastery.jpg, which is a
+   DIFFERENT and much weaker photograph of the same subject (verified by viewing
+   both, not by filename): a flat, overcast, distant view of the cliff face with
+   no clear subject. This frame shows the rock-cut church facade, the terraces
+   and the stairways above the Mtkvari valley in warm light. That raw JPG is NOT
+   deleted — it is still referenced elsewhere.
+
+   ⚠️ DELIBERATE duplication, owner-approved: this is also the Samtskhe-Javakheti
+   region hero and the Vardzia site-page hero, so the guide is its third use.
+   There is no unused Samtskhe-Javakheti photograph in the project. Files are
+   REFERENCED in place, so nothing new lands on disk.
+
+   Native is 1448 — that is the top rung, no 1600 breakpoint. */
+.hero--things-to-do-samtskhe-javakheti {
+  background-image: url("/images/files/vardzia-cave-monastery-cliff-face-georgia-1200.webp");
+  background-image: image-set(
+    url("/images/files/vardzia-cave-monastery-cliff-face-georgia-768.avif") type("image/avif"),
+    url("/images/files/vardzia-cave-monastery-cliff-face-georgia-768.webp") type("image/webp")
+  );
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+@media (min-width: 768px) {
+  .hero--things-to-do-samtskhe-javakheti {
+    background-image: image-set(
+      url("/images/files/vardzia-cave-monastery-cliff-face-georgia-1200.avif") type("image/avif"),
+      url("/images/files/vardzia-cave-monastery-cliff-face-georgia-1200.webp") type("image/webp")
+    );
+  }
+}
+@media (min-width: 1200px) {
+  .hero--things-to-do-samtskhe-javakheti {
+    background-image: image-set(
+      url("/images/files/vardzia-cave-monastery-cliff-face-georgia-1448.avif") type("image/avif"),
+      url("/images/files/vardzia-cave-monastery-cliff-face-georgia-1448.webp") type("image/webp")
+    );
+  }
+}
 /* Things to Do in Mtskheta-Mtianeti hero — same mechanism as .hero--adjara
    above, and the SAME photograph the guide already showed: it was serving the
    raw 1920-wide "Ananuri Fortress and Zhinvali Reservoir.jpg" at one width to

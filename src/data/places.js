@@ -1935,7 +1935,178 @@ export const regions = [
     // CitySubPage dispatcher.
     thingsToDo: {
       seoKey: 'thingsToDoSamtskheJavakheti', contentKey: 'thingsToDoSamtskheJavakheti',
-      image: '/images/files/vardzia-cave-monastery.jpg',
+      // Cover/hero = the Vardzia cliff-face frame, REPLACING the raw
+      // /images/files/vardzia-cave-monastery.jpg. Same subject, but a genuinely
+      // DIFFERENT photograph — verified by viewing both rather than by filename:
+      // the old one is flat, overcast and distant with no clear subject; this one
+      // shows the rock-cut church facade, terraces and stairways above the Mtkvari
+      // valley in warm light. The raw JPG is NOT deleted; it is referenced elsewhere.
+      //
+      // ⚠️ DELIBERATE duplication, owner-approved and unavoidable: this frame is
+      // also the region hero and the Vardzia site-page hero, so the guide is its
+      // third use. Every Samtskhe-Javakheti photograph in the project is committed
+      // to a page. All five images here ship no-`w` filenames with complete
+      // 768/1200/1448 ladders, so every one is REFERENCED in place — nothing
+      // copied, nothing generated. Native 1448 → top rung 1448, no 1600.
+      image: '/images/files/vardzia-cave-monastery-cliff-face-georgia-1448.webp',
+      imageAvif: '/images/files/vardzia-cave-monastery-cliff-face-georgia-1448.avif',
+      heroClass: 'hero--things-to-do-samtskhe-javakheti',
+      heroPreload: '/images/files/vardzia-cave-monastery-cliff-face-georgia-1200.avif',
+      // Dedicated 1.91:1 social image, already built for the Vardzia site page.
+      ogImage: { src: '/images/files/vardzia-cave-monastery-cliff-face-georgia-og.jpg', width: 1200, height: 630 },
+      // ⚠️ NAMING — unusually clean here. This page writes every place name in
+      // Latin form in ALL 7 locales (Vardzia, Rabati, Akhaltsikhe, Khertvisi,
+      // Paravani, Mtkvari, Samtskhe-Javakheti), and the region page's approved
+      // sets already match, so they are reused VERBATIM. The `Achalziche` form on
+      // the Rabati SITE page does not reach here — the region page had already
+      // re-derived away from it. Single deliberate deviation: the region page
+      // writes Dutch `fort` for the two fortresses while this page's body uses
+      // `vesting` 14x, so those two nl strings are aligned to the page they sit on.
+      imageMeta: {
+        width: 1448, height: 1086, imageId: 'hero-image',
+        name: 'The cave monastery of Vardzia carved into the cliffs above the Mtkvari valley, Samtskhe-Javakheti, Georgia',
+        description: 'The cave monastery of Vardzia, its chambers and a stone church cut into the cliff face above the Mtkvari valley, Samtskhe-Javakheti, Georgia.',
+        locationName: 'Vardzia, Aspindza Municipality, Samtskhe-Javakheti, Georgia',
+        locality: 'Vardzia', region: 'Samtskhe-Javakheti', country: 'GE',
+        geo: { lat: 41.3811, lng: 43.2847 },
+        alt: {
+          en: 'The cave monastery of Vardzia carved into the cliffs above the Mtkvari valley, Samtskhe-Javakheti, Georgia',
+          de: 'Das Höhlenkloster Vardzia, in die Felsen über dem Mtkvari-Tal gehauen, Samtskhe-Javakheti, Georgien',
+          fr: "Le monastère troglodytique de Vardzia, creusé dans les falaises au-dessus de la vallée du Mtkvari, Samtskhe-Javakheti, Géorgie",
+          es: 'El monasterio rupestre de Vardzia, excavado en los acantilados sobre el valle del Mtkvari, Samtskhe-Javakheti, Georgia',
+          nl: 'Het grottenklooster Vardzia, uitgehouwen in de rotsen boven het Mtkvari-dal, Samtskhe-Javakheti, Georgië',
+          cs: 'Jeskynní klášter Vardzia vytesaný do skal nad údolím Mtkvari, Samtskhe-Javakheti, Gruzie',
+          pl: 'Jaskiniowy klasztor Vardzia wykuty w skałach nad doliną Mtkvari, Samtskhe-Javakheti, Gruzja',
+        },
+        caption: {
+          en: 'Chambers and a stone church cut into the cliff at Vardzia, with the valley opening away below.',
+          de: 'In den Fels gehauene Kammern und eine steinerne Kirche in Vardzia, darunter öffnet sich das Tal.',
+          fr: "Des chambres et une église de pierre taillées dans la falaise de Vardzia, la vallée s'ouvrant en contrebas.",
+          es: 'Cámaras y una iglesia de piedra excavadas en el acantilado de Vardzia, con el valle abriéndose abajo.',
+          nl: 'In de rots uitgehouwen kamers en een stenen kerk bij Vardzia, met daaronder het zich openende dal.',
+          cs: 'Komory a kamenný kostel vytesané do skály ve Vardzii, pod nimi se otevírá údolí.',
+          pl: 'Komory i kamienny kościół wykute w skale w Vardzii, a poniżej otwiera się dolina.',
+        },
+      },
+      // Four contextual body photos, one per section, all REFERENCED in place:
+      // Vardzia (4), Rabati (6), the Javakheti plateau (10), Khertvisi (12).
+      // All four are brand-credited on the region page and keep that here.
+      //
+      // Seven of the eleven sections stay image-free. REJECTED rather than
+      // stretched: all five Bakuriani frames plus any Abastumani or Sapara image,
+      // because this page NEVER mentions those places (0 occurrences each — the
+      // same finding as the region page); borjomi-town.jpg, which on inspection is
+      // a snowy suburban back street crossed by overhead power lines, showing none
+      // of the spa town, mineral-water park or forest trails its paragraph
+      // describes (and it is a raw with no ladder); and
+      // akhaltsikhe-rabati-fortress-ramparts-georgia, a good frame but the
+      // Akhaltsikhe city-page hero duplicating a subject already covered.
+      // No photograph of Vanis Kvabebi exists anywhere.
+      inlineImageObjects: [
+        {
+          base: 'vardzia-cave-monastery-mtkvari-valley-georgia', width: 1448, height: 1086,
+          anchor: 'inline-vardzia-valley',
+          description: 'Rows of cave chambers and linking stairways across the cliff at Vardzia, above the Mtkvari river winding through its gorge, Samtskhe-Javakheti, Georgia.',
+          locationName: 'Vardzia, Aspindza Municipality, Samtskhe-Javakheti, Georgia',
+          locality: 'Vardzia', region: 'Samtskhe-Javakheti', geo: { lat: 41.3811, lng: 43.2847 },
+          name: {
+            en: 'Cave chambers and stairways at Vardzia above the Mtkvari river valley, Samtskhe-Javakheti, Georgia',
+            de: 'Höhlenkammern und Treppen in Vardzia über dem Tal des Mtkvari, Samtskhe-Javakheti, Georgien',
+            fr: "Chambres troglodytiques et escaliers à Vardzia au-dessus de la vallée du Mtkvari, Samtskhe-Javakheti, Géorgie",
+            es: 'Cámaras rupestres y escaleras en Vardzia sobre el valle del Mtkvari, Samtskhe-Javakheti, Georgia',
+            nl: 'Grotkamers en trappen bij Vardzia boven het dal van de Mtkvari, Samtskhe-Javakheti, Georgië',
+            cs: 'Jeskynní komory a schodiště ve Vardzii nad údolím Mtkvari, Samtskhe-Javakheti, Gruzie',
+            pl: 'Jaskiniowe komory i schody w Vardzii nad doliną Mtkvari, Samtskhe-Javakheti, Gruzja',
+          },
+          caption: {
+            en: 'Rows of cave chambers and linking stairways run across the cliff at Vardzia, above the Mtkvari as it winds through the gorge.',
+            de: 'Reihen von Höhlenkammern und verbindende Treppen ziehen sich über die Felswand von Vardzia, darunter windet sich der Mtkvari durch die Schlucht.',
+            fr: "Des rangées de chambres troglodytiques et les escaliers qui les relient parcourent la falaise de Vardzia, au-dessus du Mtkvari qui serpente dans la gorge.",
+            es: 'Hileras de cámaras rupestres y las escaleras que las conectan recorren el acantilado de Vardzia, sobre el Mtkvari que serpentea por el desfiladero.',
+            nl: 'Rijen grotkamers en verbindende trappen lopen over de rotswand van Vardzia, boven de Mtkvari die door de kloof kronkelt.',
+            cs: 'Řady jeskynních komor a spojujících schodišť se táhnou po skalní stěně Vardzie, pod nimi se Mtkvari vine soutěskou.',
+            pl: 'Rzędy jaskiniowych komór i łączących je schodów biegną po ścianie skalnej Vardzii, a poniżej Mtkvari wije się wąwozem.',
+          },
+        },
+        {
+          base: 'rabati-fortress-akhaltsikhe-georgia', width: 1448, height: 1086,
+          anchor: 'inline-rabati',
+          description: 'The Rabati fortress complex on its hilltop above Akhaltsikhe, its ramparts and towers enclosing a mosque, a palace and courtyards, Samtskhe-Javakheti, Georgia.',
+          locationName: 'Rabati Fortress (Akhaltsikhe Castle), Akhaltsikhe, Samtskhe-Javakheti, Georgia',
+          locality: 'Akhaltsikhe', region: 'Samtskhe-Javakheti', geo: { lat: 41.64267, lng: 42.97706 },
+          name: {
+            en: 'Rabati Fortress on its hilltop above Akhaltsikhe, Samtskhe-Javakheti, Georgia',
+            de: 'Die Festung Rabati auf ihrem Hügel über Akhaltsikhe, Samtskhe-Javakheti, Georgien',
+            fr: "La forteresse de Rabati sur sa colline au-dessus d'Akhaltsikhe, Samtskhe-Javakheti, Géorgie",
+            es: 'La fortaleza de Rabati en su colina sobre Akhaltsikhe, Samtskhe-Javakheti, Georgia',
+            // `vesting`, not the region page's `fort`: this page's body uses
+            // `vesting` 14x and `fort` never.
+            nl: 'De vesting Rabati op haar heuvel boven Akhaltsikhe, Samtskhe-Javakheti, Georgië',
+            cs: 'Pevnost Rabati na návrší nad Akhaltsikhe, Samtskhe-Javakheti, Gruzie',
+            pl: 'Twierdza Rabati na wzgórzu nad Akhaltsikhe, Samtskhe-Javakheti, Gruzja',
+          },
+          caption: {
+            en: 'The Rabati complex fills its hilltop above Akhaltsikhe, its ramparts and towers enclosing a mosque, a palace and courtyards.',
+            de: 'Die Anlage von Rabati füllt ihren Hügel über Akhaltsikhe; Wälle und Türme umschließen eine Moschee, einen Palast und Höfe.',
+            fr: "Le complexe de Rabati occupe toute sa colline au-dessus d'Akhaltsikhe, ses remparts et ses tours enfermant une mosquée, un palais et des cours.",
+            es: 'El complejo de Rabati ocupa toda su colina sobre Akhaltsikhe, con murallas y torres que encierran una mezquita, un palacio y patios.',
+            nl: 'Het complex van Rabati vult zijn heuvel boven Akhaltsikhe; wallen en torens omsluiten een moskee, een paleis en binnenplaatsen.',
+            cs: 'Komplex Rabati zaplňuje své návrší nad Akhaltsikhe, hradby a věže obepínají mešitu, palác a nádvoří.',
+            pl: 'Kompleks Rabati wypełnia wzgórze nad Akhaltsikhe, a mury i wieże otaczają meczet, pałac i dziedzińce.',
+          },
+        },
+        {
+          base: 'lake-paravani-javakheti-georgia', width: 1448, height: 1086,
+          anchor: 'inline-paravani',
+          description: 'Lake Paravani on the open volcanic grassland of the Javakheti plateau, ringed by low rounded hills, Samtskhe-Javakheti, Georgia.',
+          locationName: 'Lake Paravani, Ninotsminda Municipality, Samtskhe-Javakheti, Georgia',
+          locality: 'Ninotsminda Municipality', region: 'Samtskhe-Javakheti', geo: { lat: 41.45, lng: 43.7833 },
+          name: {
+            en: 'Lake Paravani on the open volcanic grassland of the Javakheti plateau, Samtskhe-Javakheti, Georgia',
+            de: 'Der Paravani-See im offenen vulkanischen Grasland der Hochebene von Javakheti, Samtskhe-Javakheti, Georgien',
+            fr: "Le lac Paravani dans les prairies volcaniques ouvertes du plateau du Javakheti, Samtskhe-Javakheti, Géorgie",
+            es: 'El lago Paravani en la pradera volcánica abierta de la meseta de Javakheti, Samtskhe-Javakheti, Georgia',
+            nl: 'Het Paravani-meer op het open vulkanische grasland van het Javakheti-plateau, Samtskhe-Javakheti, Georgië',
+            cs: 'Jezero Paravani v otevřené vulkanické stepi Javakhetské plošiny, Samtskhe-Javakheti, Gruzie',
+            pl: 'Jezioro Paravani na otwartym wulkanicznym stepie Płaskowyżu Javakheti, Samtskhe-Javakheti, Gruzja',
+          },
+          caption: {
+            en: 'Lake Paravani lies on the open volcanic grassland of the Javakheti plateau, ringed by low rounded hills.',
+            de: 'Der Paravani-See liegt im offenen vulkanischen Grasland der Hochebene von Javakheti, umgeben von niedrigen, gerundeten Hügeln.',
+            fr: "Le lac Paravani s'étend dans les prairies volcaniques ouvertes du plateau du Javakheti, cerné de collines basses et arrondies.",
+            es: 'El lago Paravani se extiende en la pradera volcánica abierta de la meseta de Javakheti, rodeado de colinas bajas y redondeadas.',
+            nl: 'Het Paravani-meer ligt op het open vulkanische grasland van het Javakheti-plateau, omringd door lage, ronde heuvels.',
+            cs: 'Jezero Paravani leží v otevřené vulkanické stepi Javakhetské plošiny, obklopené nízkými zaoblenými kopci.',
+            pl: 'Jezioro Paravani leży na otwartym wulkanicznym stepie Płaskowyżu Javakheti, otoczone niskimi, zaokrąglonymi wzgórzami.',
+          },
+        },
+        {
+          base: 'khertvisi-fortress-towers-georgia', width: 1448, height: 1086,
+          anchor: 'inline-khertvisi',
+          description: 'The towers and curtain walls of Khertvisi Fortress on its ridge above the Mtkvari gorge, Samtskhe-Javakheti, Georgia.',
+          locationName: 'Khertvisi Fortress, Aspindza Municipality, Samtskhe-Javakheti, Georgia',
+          locality: 'Aspindza Municipality', region: 'Samtskhe-Javakheti', geo: { lat: 41.47778, lng: 43.28528 },
+          name: {
+            en: 'The towers and curtain walls of Khertvisi Fortress on its ridge, Samtskhe-Javakheti, Georgia',
+            de: 'Die Türme und Ringmauern der Festung Khertvisi auf ihrem Bergrücken, Samtskhe-Javakheti, Georgien',
+            fr: "Les tours et les courtines de la forteresse de Khertvisi sur sa crête, Samtskhe-Javakheti, Géorgie",
+            es: 'Las torres y murallas de la fortaleza de Khertvisi sobre su cresta, Samtskhe-Javakheti, Georgia',
+            // `vesting`, not the region page's `fort` — see the Rabati note above.
+            nl: 'De torens en muren van de vesting Khertvisi op haar bergrug, Samtskhe-Javakheti, Georgië',
+            cs: 'Věže a hradby pevnosti Khertvisi na jejím hřebeni, Samtskhe-Javakheti, Gruzie',
+            pl: 'Wieże i mury twierdzy Khertvisi na grani, Samtskhe-Javakheti, Gruzja',
+          },
+          caption: {
+            en: 'Khertvisi Fortress holds its ridge above the Mtkvari gorge, its towers and curtain walls following the rock.',
+            de: 'Die Festung Khertvisi behauptet ihren Bergrücken über der Mtkvari-Schlucht, ihre Türme und Mauern folgen dem Fels.',
+            fr: "La forteresse de Khertvisi tient sa crête au-dessus de la gorge du Mtkvari, ses tours et ses courtines épousant le rocher.",
+            es: 'La fortaleza de Khertvisi domina su cresta sobre el desfiladero del Mtkvari, con torres y murallas que siguen la roca.',
+            nl: 'De vesting Khertvisi beheerst haar bergrug boven de Mtkvari-kloof, met torens en muren die de rots volgen.',
+            cs: 'Pevnost Khertvisi drží svůj hřeben nad soutěskou Mtkvari, její věže a hradby sledují skálu.',
+            pl: 'Twierdza Khertvisi trzyma swoją grań nad wąwozem Mtkvari, a jej wieże i mury podążają za skałą.',
+          },
+        },
+      ],
       address: { addressRegion: 'Samtskhe-Javakheti' },
       attractions: [
         'Vardzia Cave Monastery', 'Rabati Fortress', 'Borjomi', 'Khertvisi Fortress', 'Lake Paravani',
