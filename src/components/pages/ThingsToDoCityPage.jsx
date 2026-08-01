@@ -19,6 +19,26 @@ const SITE_URL = 'https://www.hikasustravel.com'
 const BRAND = 'Hikasus Travel'
 
 /**
+ * Brand credit for an image's ImageObject — applied by default, since these
+ * photos are our own. An image whose provenance we cannot vouch for sets
+ * `noCredit: true` and ships with the credit fields omitted entirely rather
+ * than asserting an authorship we don't hold (schema.org treats absent credit
+ * as unknown, which is the honest answer).
+ *
+ * Ported verbatim from RegionPage, which has had this since the Adjara pass.
+ * Backwards-compatible: no `thingsToDo` block set `noCredit` before this, so
+ * every existing page keeps the credit it had.
+ */
+function creditFields(img) {
+  if (img.noCredit) return {}
+  return {
+    creator: { '@type': 'Organization', name: BRAND },
+    creditText: BRAND,
+    copyrightNotice: `© ${BRAND}`,
+  }
+}
+
+/**
  * Generic "Things to do in <City>" page, driven by the places.js registry.
  * The URL /:lang/georgia/:citySlug/:ttd resolves a city whose `thingsToDo`
  * block exists and whose `:ttd` segment is exactly things-to-do-in-<citySlug>;
@@ -154,9 +174,7 @@ export default function ThingsToDoCityPage() {
           name: heroImageMeta.name,
           description: heroImageMeta.description,
           representativeOfPage: true,
-          creator: { '@type': 'Organization', name: BRAND },
-          creditText: BRAND,
-          copyrightNotice: `© ${BRAND}`,
+          ...creditFields(heroImageMeta),
           contentLocation: {
             '@type': 'Place',
             name: heroImageMeta.locationName,
@@ -192,26 +210,32 @@ export default function ThingsToDoCityPage() {
             name: (img.name && (img.name[lang] || img.name.en)) || '',
             caption: (img.caption && (img.caption[lang] || img.caption.en)) || '',
             description: img.description,
-            creator: { '@type': 'Organization', name: BRAND },
-            creditText: BRAND,
-            copyrightNotice: `© ${BRAND}`,
-            contentLocation: {
-              '@type': 'Place',
-              name: img.locationName,
-              ...((img.locality || img.region)
-                ? {
-                    address: {
-                      '@type': 'PostalAddress',
-                      addressLocality: img.locality,
-                      addressRegion: img.region,
-                      addressCountry: 'GE',
-                    },
-                  }
-                : {}),
-              ...(img.geo
-                ? { geo: { '@type': 'GeoCoordinates', latitude: img.geo.lat, longitude: img.geo.lng } }
-                : {}),
-            },
+            ...creditFields(img),
+            // contentLocation is conditional on `locationName`, mirroring
+            // RegionPage: an image whose location is genuinely unknown (a studio
+            // dish photograph, say) drops the node entirely rather than emitting
+            // an empty Place — or worse, an invented one.
+            ...(img.locationName
+              ? {
+                  contentLocation: {
+                    '@type': 'Place',
+                    name: img.locationName,
+                    ...((img.locality || img.region)
+                      ? {
+                          address: {
+                            '@type': 'PostalAddress',
+                            addressLocality: img.locality,
+                            addressRegion: img.region,
+                            addressCountry: 'GE',
+                          },
+                        }
+                      : {}),
+                    ...(img.geo
+                      ? { geo: { '@type': 'GeoCoordinates', latitude: img.geo.lat, longitude: img.geo.lng } }
+                      : {}),
+                  },
+                }
+              : {}),
           }
         }),
         {

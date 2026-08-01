@@ -164,7 +164,178 @@ export const regions = [
     // /georgia/adjara/things-to-do-in-adjara via the CitySubPage dispatcher.
     thingsToDo: {
       seoKey: 'thingsToDoAdjara', contentKey: 'thingsToDoAdjara',
-      image: '/images/files/Batumi%20Black%20Sea%20Coast.jpg',
+      // Cover/hero = the SAME photograph this page has always used, now pointed
+      // at the ladder that already exists. The raw Batumi Black Sea Coast.jpg was
+      // re-encoded for the region page above as adjara-black-sea-coast-georgia
+      // (768/1200/1448 webp+avif); this page was still serving the single raw
+      // JPG to every viewport. Nothing new is duplicated — it is the same image
+      // the two Adjara pages already shared, just delivered properly.
+      // og:image/twitter auto-derive from `image`, matching the region page (the
+      // Batumi things-to-do sibling ships a dedicated ogImage; deliberately not
+      // copied here, so the two Adjara pages stay consistent with each other).
+      image: '/images/adjara/adjara-black-sea-coast-georgia-1448.webp',
+      imageAvif: '/images/adjara/adjara-black-sea-coast-georgia-1448.avif',
+      heroClass: 'hero--things-to-do-adjara',
+      heroPreload: '/images/adjara/adjara-black-sea-coast-georgia-1200.avif',
+      // Hero alt/caption REUSE the region page's approved 7-locale strings for
+      // this exact photograph — same subject, so they stay accurate, and
+      // inventing fresh translations would be worse than a documented overlap.
+      // (Same reasoning the Batumi things-to-do block records.)
+      imageMeta: {
+        width: 1448, height: 1048, imageId: 'hero-image',
+        name: 'Wooded green hillsides dropping to the Black Sea along the Adjara coastline, Georgia',
+        description: 'Densely wooded hills falling to a narrow shingle shore along the Black Sea coast of Adjara, Georgia.',
+        // Region-level: no single identifiable spot in frame, so no geo.
+        locationName: 'Adjara, Georgia', region: 'Adjara', country: 'GE',
+        alt: {
+          en: 'Wooded green hillsides dropping to the Black Sea along the Adjara coastline, Georgia',
+          de: 'Bewaldete grüne Hänge, die entlang der Küste Adschariens zum Schwarzen Meer abfallen, Georgien',
+          fr: "Coteaux verdoyants et boisés descendant vers la mer Noire le long du littoral de l'Adjarie, Géorgie",
+          es: 'Laderas verdes y boscosas que descienden hacia el mar Negro a lo largo de la costa de Adjara, Georgia',
+          nl: 'Beboste groene hellingen die langs de kust van Adzjarië afdalen naar de Zwarte Zee, Georgië',
+          cs: 'Zalesněné zelené svahy klesající k Černému moři podél pobřeží Adžárie, Gruzie',
+          pl: 'Zalesione zielone zbocza opadające ku Morzu Czarnemu wzdłuż wybrzeża Adżarii, Gruzja',
+        },
+        caption: {
+          en: "Densely wooded hills fall to a narrow shingle shore along Adjara's Black Sea coast, with a coastal settlement in the distance.",
+          de: 'Dicht bewaldete Hügel fallen entlang der Schwarzmeerküste Adschariens zu einem schmalen Kiesstrand ab, in der Ferne eine Siedlung an der Küste.',
+          fr: "Des collines densément boisées descendent vers une étroite plage de galets le long de la côte de la mer Noire en Adjarie, avec une localité côtière au loin.",
+          es: 'Colinas densamente boscosas descienden hasta una estrecha orilla de cantos rodados en la costa del mar Negro de Adjara, con una localidad costera a lo lejos.',
+          nl: 'Dicht beboste heuvels dalen af naar een smal kiezelstrand aan de Zwarte Zeekust van Adzjarië, met in de verte een kustplaats.',
+          cs: 'Hustě zalesněné kopce klesají k úzké oblázkové pláži podél černomořského pobřeží Adžárie, v dálce pobřežní sídlo.',
+          pl: 'Gęsto zalesione wzgórza opadają ku wąskiej żwirowej plaży na czarnomorskim wybrzeżu Adżarii, w oddali nadmorska miejscowość.',
+        },
+      },
+      // Four contextual body photos, spliced into each locale's content at a
+      // fixed BLOCK INDEX (all 7 locales share a 27-block shape). Three are
+      // referenced in place from folders that already hold them; only the
+      // Botanical Garden needed generating (a raw 1023x1537 portrait → 768/1023,
+      // its native ceiling — no 1200 or 1448 rung, nothing upscaled).
+      //
+      // ⚠️ Credit is per-image, not blanket: the coast, skyline and shingle
+      // frames already assert Hikasus authorship on their own pages, while the
+      // khachapuri (a studio dish photograph) and the Botanical Garden raw have
+      // NO recorded provenance anywhere and therefore ship `noCredit`. The
+      // khachapuri's region-page entry says so explicitly — asserting credit here
+      // would have contradicted it.
+      //
+      // Sections with no photograph anywhere in the project stay image-free:
+      // Mtirala, the Adjarian mountains, Machakhela, Gonio Fortress, local
+      // culture, and seaside dining — 6 of the 13 sections.
+      inlineImageObjects: [
+        {
+          // Batumi's seafront skyline. Strings reused verbatim from the Batumi
+          // things-to-do block (same photograph) EXCEPT the two French ones:
+          // that page writes "Batumi", this page's French body writes "Batoumi"
+          // 19 times and never "Batumi", so the fr strings are adjusted to match
+          // the page they appear on.
+          base: 'batumi-seafront-skyline-wide-georgia', width: 1448, height: 815,
+          anchor: 'inline-batumi-skyline', dir: '/images/batumi',
+          description: "Batumi's Black Sea seafront: the city's modern skyline of glass high-rise towers, including the sphere-topped Alphabet Tower, rising beyond the palm-lined boulevard and the pebble beach, Adjara, Georgia.",
+          locationName: 'Batumi, Adjara, Georgia',
+          locality: 'Batumi', region: 'Adjara', geo: { lat: 41.6500, lng: 41.6367 },
+          name: {
+            en: "Batumi's modern seafront skyline of high-rise towers, including the sphere-topped Alphabet Tower, seen across the pebble beach under a blue sky, Adjara, Georgia",
+            de: 'Die moderne Uferskyline von Batumi mit Hochhaustürmen, darunter der kugelgekrönte Alphabet Tower, gesehen über den Kieselstrand unter blauem Himmel, Adscharien, Georgien',
+            fr: "La skyline moderne du front de mer de Batoumi et ses tours, dont l'Alphabet Tower coiffée d'une sphère, vue depuis la plage de galets sous un ciel bleu, Adjarie, Géorgie",
+            es: 'El moderno perfil urbano frente al mar de Batumi con sus torres, entre ellas la Alphabet Tower rematada por una esfera, visto desde la playa de guijarros bajo un cielo azul, Adjaria, Georgia',
+            nl: 'De moderne skyline aan de kust van Batumi met hoogbouw, waaronder de met een bol bekroonde Alphabet Tower, gezien vanaf het kiezelstrand onder een blauwe lucht, Adzjarië, Georgië',
+            cs: 'Moderní panoráma pobřeží Batumi s výškovými věžemi, včetně Alphabet Tower zakončené koulí, při pohledu přes oblázkovou pláž pod modrou oblohou, Adžárie, Gruzie',
+            pl: 'Nowoczesna panorama nadmorska Batumi z wieżowcami, w tym zwieńczoną kulą Alphabet Tower, widziana zza kamienistej plaży pod błękitnym niebem, Adżaria, Gruzja',
+          },
+          caption: {
+            en: "Batumi's Black Sea seafront — the city's modern skyline of glass towers, including the sphere-topped Alphabet Tower, rising beyond the palm-lined boulevard and pebble beach.",
+            de: 'Die Schwarzmeerküste von Batumi – die moderne Skyline aus Glastürmen, darunter der kugelgekrönte Alphabet Tower, erhebt sich hinter der palmengesäumten Uferpromenade und dem Kieselstrand.',
+            fr: "Le front de mer de Batoumi sur la mer Noire — la skyline moderne de tours de verre, dont l'Alphabet Tower surmontée d'une sphère, s'élève au-delà du boulevard bordé de palmiers et de la plage de galets.",
+            es: 'El frente marítimo de Batumi en el mar Negro: el moderno perfil de torres de cristal, incluida la Alphabet Tower coronada por una esfera, se alza tras el bulevar bordeado de palmeras y la playa de guijarros.',
+            nl: 'De Zwarte Zeekust van Batumi — de moderne skyline van glazen torens, waaronder de met een bol bekroonde Alphabet Tower, rijst op achter de met palmen omzoomde boulevard en het kiezelstrand.',
+            cs: 'Černomořské pobřeží Batumi — moderní panoráma skleněných věží, včetně Alphabet Tower zakončené koulí, se tyčí za palmami lemovaným bulvárem a oblázkovou pláží.',
+            pl: 'Czarnomorskie wybrzeże Batumi — nowoczesna panorama szklanych wież, w tym zwieńczona kulą Alphabet Tower, wznosi się za obsadzonym palmami bulwarem i kamienistą plażą.',
+          },
+        },
+        {
+          // Strings reused verbatim from the Adjara region page (same photograph).
+          base: 'adjara-shingle-beach-black-sea-georgia', width: 1448, height: 965,
+          anchor: 'inline-shingle-beach', dir: '/images/adjara',
+          description: 'A shingle beach of smooth grey pebbles running down to the calm Black Sea on the coast of Adjara, Georgia.',
+          locationName: 'Adjara, Georgia', region: 'Adjara',
+          name: {
+            en: 'A shingle beach on the Black Sea coast of Adjara, Georgia',
+            de: 'Ein Kiesstrand an der Schwarzmeerküste Adschariens, Georgien',
+            fr: "Une plage de galets sur la côte de la mer Noire en Adjarie, Géorgie",
+            es: 'Una playa de cantos rodados en la costa del mar Negro de Adjara, Georgia',
+            nl: 'Een kiezelstrand aan de Zwarte Zeekust van Adzjarië, Georgië',
+            cs: 'Oblázková pláž na černomořském pobřeží Adžárie, Gruzie',
+            pl: 'Żwirowa plaża na czarnomorskim wybrzeżu Adżarii, Gruzja',
+          },
+          caption: {
+            en: "Adjara's beaches are shingle rather than sand — smooth grey pebbles running down to a calm Black Sea, with the wooded coast beyond.",
+            de: 'Adschariens Strände bestehen aus Kies statt aus Sand — glatte graue Kiesel laufen zum ruhigen Schwarzen Meer hinunter, dahinter die bewaldete Küste.',
+            fr: "Les plages d'Adjarie sont de galets plutôt que de sable — des galets gris et lisses descendent vers une mer Noire calme, la côte boisée au fond.",
+            es: 'Las playas de Adjara son de cantos rodados y no de arena: guijarros grises y lisos bajan hasta un mar Negro en calma, con la costa boscosa al fondo.',
+            nl: 'De stranden van Adzjarië bestaan uit kiezels in plaats van zand — gladde grijze stenen lopen af naar een kalme Zwarte Zee, met daarachter de beboste kust.',
+            cs: 'Pláže Adžárie jsou oblázkové, nikoli písčité — hladké šedé oblázky sbíhají ke klidnému Černému moři, za nímž se táhne zalesněné pobřeží.',
+            pl: 'Plaże Adżarii są żwirowe, a nie piaszczyste — gładkie szare otoczaki schodzą ku spokojnemu Morzu Czarnemu, w tle zalesione wybrzeże.',
+          },
+        },
+        {
+          // PORTRAIT (1023x1537). Renders as body-img body-img--portrait, 560 cap.
+          // No provenance recorded for this file anywhere — the Botanical Garden's
+          // own page carries it as a bare JPG with no credit — so `noCredit`.
+          base: 'batumi-botanical-garden-headland-adjara-georgia', width: 1023, height: 1537,
+          anchor: 'inline-botanical-garden', dir: '/images/adjara',
+          noCredit: true,
+          description: 'The wooded headland of the Batumi Botanical Garden dropping to the Black Sea, Adjara, Georgia.',
+          // The garden sits outside Batumi on its own headland, so no locality is
+          // claimed and no coordinate is recorded anywhere in the repo.
+          locationName: 'Batumi Botanical Garden, Adjara, Georgia', region: 'Adjara',
+          name: {
+            en: 'The wooded headland of the Batumi Botanical Garden above the Black Sea, Adjara, Georgia',
+            de: 'Die bewaldete Landzunge des Botanischen Gartens Batumi über dem Schwarzen Meer, Adscharien, Georgien',
+            fr: "Le promontoire boisé du jardin botanique de Batoumi au-dessus de la mer Noire, Adjarie, Géorgie",
+            es: 'El promontorio boscoso del jardín botánico de Batumi sobre el mar Negro, Adjara, Georgia',
+            nl: 'De beboste landtong van de botanische tuin van Batumi boven de Zwarte Zee, Adzjarië, Georgië',
+            cs: 'Zalesněný mys botanické zahrady Batumi nad Černým mořem, Adžárie, Gruzie',
+            pl: 'Zalesiony przylądek ogrodu botanicznego w Batumi nad Morzem Czarnym, Adżaria, Gruzja',
+          },
+          caption: {
+            en: 'The Botanical Garden occupies a green headland above the Black Sea just outside Batumi.',
+            de: 'Der Botanische Garten liegt auf einer grünen Landzunge über dem Schwarzen Meer, knapp außerhalb von Batumi.',
+            fr: "Le jardin botanique occupe un promontoire verdoyant au-dessus de la mer Noire, juste à l'extérieur de Batoumi.",
+            es: 'El jardín botánico ocupa un promontorio verde sobre el mar Negro, justo a las afueras de Batumi.',
+            nl: 'De botanische tuin ligt op een groene landtong boven de Zwarte Zee, net buiten Batumi.',
+            cs: 'Botanická zahrada leží na zeleném mysu nad Černým mořem hned za Batumi.',
+            pl: 'Ogród botaniczny leży na zielonym przylądku nad Morzem Czarnym, tuż za Batumi.',
+          },
+        },
+        {
+          // Strings reused verbatim from the Adjara region page (same photograph),
+          // including its `noCredit` and its deliberate ABSENCE of contentLocation:
+          // a studio dish photograph whose location is genuinely unknown.
+          base: 'adjarian-khachapuri-georgia', width: 1200, height: 800,
+          anchor: 'inline-khachapuri', dir: '/images/adjara',
+          noCredit: true,
+          description: 'Khachapuri Adjaruli, the boat-shaped Adjarian bread filled with molten cheese and topped with a raw egg and butter.',
+          name: {
+            en: 'Adjarian khachapuri, a boat-shaped bread filled with cheese and topped with egg and butter, Georgia',
+            de: 'Adscharisches Chatschapuri, ein bootsförmiges Brot mit Käsefüllung, Ei und Butter, Georgien',
+            fr: "Khachapuri adjaruli, un pain en forme de barque garni de fromage, d'un œuf et de beurre, Géorgie",
+            es: 'Khachapuri adjaruli, un pan con forma de barca relleno de queso y coronado con huevo y mantequilla, Georgia',
+            nl: 'Adzjarische khachapuri, een bootvormig brood gevuld met kaas en belegd met ei en boter, Georgië',
+            cs: 'Adžárské chačapuri, chléb ve tvaru lodičky plněný sýrem a doplněný vejcem a máslem, Gruzie',
+            pl: 'Chaczapuri adżarskie, chleb w kształcie łódki wypełniony serem, z jajkiem i masłem, Gruzja',
+          },
+          caption: {
+            en: 'Khachapuri Adjaruli: boat-shaped bread filled with molten cheese, topped with a raw egg and a knob of butter that is stirred into the filling at the table.',
+            de: 'Khachapuri Adjaruli: bootsförmiges Brot, gefüllt mit geschmolzenem Käse, getoppt mit einem rohen Ei und einem Stück Butter, das am Tisch in die Füllung eingerührt wird.',
+            fr: "Khachapuri adjaruli : un pain en forme de barque garni de fromage fondu, surmonté d'un œuf cru et d'une noix de beurre que l'on mélange à la garniture à table.",
+            es: 'Khachapuri adjaruli: pan con forma de barca relleno de queso fundido, coronado con un huevo crudo y una porción de mantequilla que se remueve dentro del relleno en la mesa.',
+            nl: 'Khachapuri Adjaruli: bootvormig brood gevuld met gesmolten kaas, belegd met een rauw ei en een klont boter die aan tafel door de vulling wordt geroerd.',
+            cs: 'Khachapuri Adjaruli: chléb ve tvaru lodičky plněný roztaveným sýrem, navrchu se syrovým vejcem a kouskem másla, který se u stolu vmíchá do náplně.',
+            pl: 'Khachapuri adjaruli: chleb w kształcie łódki wypełniony roztopionym serem, zwieńczony surowym jajkiem i porcją masła, którą przy stole wmiesza się w nadzienie.',
+          },
+        },
+      ],
       address: { addressRegion: 'Adjara' },
       attractions: [
         'Batumi', 'Batumi Boulevard', 'Black Sea Beaches', 'Batumi Botanical Garden',

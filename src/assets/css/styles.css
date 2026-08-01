@@ -874,6 +874,38 @@ section {
     );
   }
 }
+/* Things to Do in Adjara hero — same mechanism as .hero--adjara above, and the
+   SAME photograph: this guide and the Adjara region page have always shared the
+   Batumi Black Sea Coast frame, but the guide was still serving the raw JPG at a
+   single width. It now uses the ladder the region page already generated, so no
+   new files exist for it. Native width is 1448, so that is the top rung — do not
+   add a 1600 or 2400 breakpoint. */
+.hero--things-to-do-adjara {
+  background-image: url("/images/adjara/adjara-black-sea-coast-georgia-1200.webp");
+  background-image: image-set(
+    url("/images/adjara/adjara-black-sea-coast-georgia-768.avif") type("image/avif"),
+    url("/images/adjara/adjara-black-sea-coast-georgia-768.webp") type("image/webp")
+  );
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+@media (min-width: 768px) {
+  .hero--things-to-do-adjara {
+    background-image: image-set(
+      url("/images/adjara/adjara-black-sea-coast-georgia-1200.avif") type("image/avif"),
+      url("/images/adjara/adjara-black-sea-coast-georgia-1200.webp") type("image/webp")
+    );
+  }
+}
+@media (min-width: 1200px) {
+  .hero--things-to-do-adjara {
+    background-image: image-set(
+      url("/images/adjara/adjara-black-sea-coast-georgia-1448.avif") type("image/avif"),
+      url("/images/adjara/adjara-black-sea-coast-georgia-1448.webp") type("image/webp")
+    );
+  }
+}
 /* Shida Kartli (REGION) hero — same mechanism as .hero--adjara above. The view
    from the carved plateau at Uplistsikhe out over the Mtkvari valley, replacing
    the flat washed-out Uplistsikhe Cave Town.jpg (that JPG stays — it is still a
