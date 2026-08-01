@@ -906,6 +906,48 @@ section {
     );
   }
 }
+/* Things to Do in Svaneti hero — same mechanism as .hero--adjara below.
+   REPLACES /images/files/Koruldi%20Lakes.jpg on relevance grounds, not quality:
+   that frame shows the Koruldi Lakes, and this page never mentions Koruldi (0
+   occurrences in any locale), while it names Ushguli 30x and Svan towers 11x. It
+   is also the Svaneti region page's hero and has a hiker prominent in the
+   foreground. The JPG is NOT deleted — the region page still uses it.
+
+   ⚠️ DELIBERATE duplication, owner-approved: this frame is also the Ushguli page
+   hero. There is no unused Svaneti photograph available — the only two are held
+   (the Ushguli panorama, provenance unresolved) or disqualified (svaneti-horse-
+   riding, flagged likely AI-generated and already pulled from the Svaneti page).
+
+   ⚠️ These rungs keep the `w` width suffix, which is fine HERE because a hero is
+   a CSS background plus a plain `image:` path; only inlineImageObjects need
+   no-`w` names. Native is 2000 but the ladder tops out at 1448-equivalent usage —
+   the widest rung shipped is 1600, matching the other things-to-do heroes. */
+.hero--things-to-do-svaneti {
+  background-image: url("/images/files/ushguli-svan-towers-village-svaneti-georgia-1200w.webp");
+  background-image: image-set(
+    url("/images/files/ushguli-svan-towers-village-svaneti-georgia-768w.avif") type("image/avif"),
+    url("/images/files/ushguli-svan-towers-village-svaneti-georgia-768w.webp") type("image/webp")
+  );
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+@media (min-width: 768px) {
+  .hero--things-to-do-svaneti {
+    background-image: image-set(
+      url("/images/files/ushguli-svan-towers-village-svaneti-georgia-1200w.avif") type("image/avif"),
+      url("/images/files/ushguli-svan-towers-village-svaneti-georgia-1200w.webp") type("image/webp")
+    );
+  }
+}
+@media (min-width: 1200px) {
+  .hero--things-to-do-svaneti {
+    background-image: image-set(
+      url("/images/files/ushguli-svan-towers-village-svaneti-georgia-1600w.avif") type("image/avif"),
+      url("/images/files/ushguli-svan-towers-village-svaneti-georgia-1600w.webp") type("image/webp")
+    );
+  }
+}
 /* Things to Do in Samtskhe-Javakheti hero — same mechanism as .hero--adjara
    below. REPLACES /images/files/vardzia-cave-monastery.jpg, which is a
    DIFFERENT and much weaker photograph of the same subject (verified by viewing
