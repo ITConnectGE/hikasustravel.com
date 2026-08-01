@@ -874,6 +874,41 @@ section {
     );
   }
 }
+/* Samtskhe-Javakheti (REGION) hero — same mechanism as .hero--adjara above. The
+   cliff-face view of Vardzia, replacing the flat grey-skied vardzia-cave-
+   monastery.jpg this page shipped with (that JPG stays — it is still an inline on
+   the Akhaltsikhe city page). This is the page's first ladder of any kind. The
+   files are SHARED with the Vardzia site page at their existing /images/files/
+   path — nothing was copied; see the note on places.js's samtskhe-javakheti
+   entry. Native width is 1448, so that is the top rung: do not add a 1600 or 2400
+   breakpoint. The cliff and its church sit across the middle band with the valley
+   to the left, so centre-centre holds the subject from 360px to 1920px. */
+.hero--samtskhe-javakheti {
+  background-image: url("/images/files/vardzia-cave-monastery-cliff-face-georgia-1200.webp");
+  background-image: image-set(
+    url("/images/files/vardzia-cave-monastery-cliff-face-georgia-768.avif") type("image/avif"),
+    url("/images/files/vardzia-cave-monastery-cliff-face-georgia-768.webp") type("image/webp")
+  );
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+@media (min-width: 768px) {
+  .hero--samtskhe-javakheti {
+    background-image: image-set(
+      url("/images/files/vardzia-cave-monastery-cliff-face-georgia-1200.avif") type("image/avif"),
+      url("/images/files/vardzia-cave-monastery-cliff-face-georgia-1200.webp") type("image/webp")
+    );
+  }
+}
+@media (min-width: 1200px) {
+  .hero--samtskhe-javakheti {
+    background-image: image-set(
+      url("/images/files/vardzia-cave-monastery-cliff-face-georgia-1448.avif") type("image/avif"),
+      url("/images/files/vardzia-cave-monastery-cliff-face-georgia-1448.webp") type("image/webp")
+    );
+  }
+}
 /* Kvemo Kartli (REGION) hero — same mechanism as .hero--adjara above. The Diamond
    Bridge over Dashbashi Canyon, replacing the generic georgia-home.jpg placeholder
    this page shipped with; it is the page's first hero ladder of any kind. The
