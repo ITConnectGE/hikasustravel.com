@@ -1698,6 +1698,49 @@ section {
   }
 }
 /* Native is 1448 — that is the top rung. Do not add a 1600 or 2400 breakpoint. */
+/* Things to Do in Kutaisi hero — per-page CSS background, same mechanism as the
+   other things-to-do guides. Replaces the generic georgia-home.jpg placeholder
+   with Gelati Monastery on its terrace.
+
+   ⚠️ SAME PHOTOGRAPH AS `.hero--imereti` (the Imereti region hub). Deliberate, and
+   the least bad of three unavoidable clashes — Bagrati is the Imereti THINGS-TO-DO
+   guide's hero (same page type, one click away) and the Colchis Fountain is the
+   parent Kutaisi city page's. See the places.js comment. If a genuine Kutaisi
+   city-view photograph ever arrives, this is the first hero to replace.
+
+   Native is 1491 and the set ships 768/1200/1491 — that is the whole ladder, and
+   the top breakpoint sits at min-width:1200. Do NOT add a 1600/2400 rung. Names
+   carry NO `w` suffix.
+
+   Default `background-position: center` (from .coverme) is kept and was checked at
+   360px and 1440px: the monastery sits centred and low in a 1.41:1 frame, so the
+   tall mobile crop keeps the domes and the terrace without clipping either. */
+.hero--things-to-do-kutaisi {
+  background-image: url("/images/files/gelati-monastery-kutaisi-georgia-768.webp");
+  background-image: image-set(
+    url("/images/files/gelati-monastery-kutaisi-georgia-768.avif") type("image/avif"),
+    url("/images/files/gelati-monastery-kutaisi-georgia-768.webp") type("image/webp")
+  );
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+@media (min-width: 768px) {
+  .hero--things-to-do-kutaisi {
+    background-image: image-set(
+      url("/images/files/gelati-monastery-kutaisi-georgia-1200.avif") type("image/avif"),
+      url("/images/files/gelati-monastery-kutaisi-georgia-1200.webp") type("image/webp")
+    );
+  }
+}
+@media (min-width: 1200px) {
+  .hero--things-to-do-kutaisi {
+    background-image: image-set(
+      url("/images/files/gelati-monastery-kutaisi-georgia-1491.avif") type("image/avif"),
+      url("/images/files/gelati-monastery-kutaisi-georgia-1491.webp") type("image/webp")
+    );
+  }
+}
+/* Native is 1491 — that is the top rung. Do not add a 1600 or 2400 breakpoint. */
 /* Martvili Canyon hero — per-page CSS background (same opt-in mechanism as
    .hero--akhaltsikhe above). FIRST Samegrelo photograph in the project; replaces
    the generic georgia-home.jpg placeholder.

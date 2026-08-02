@@ -3355,7 +3355,263 @@ export const cities = [
       },
     ],
     thingsToDo: {
-      seoKey: 'thingsToDoKutaisi', contentKey: 'thingsToDoKutaisi', image: '/images/files/georgia-home.jpg',
+      seoKey: 'thingsToDoKutaisi', contentKey: 'thingsToDoKutaisi',
+      // Cover/hero = Gelati Monastery, REPLACING the generic georgia-home.jpg
+      // placeholder. It is the attraction this page pushes hardest ("for many
+      // visitors it's the highlight of western Georgia"), and it is bright, sharp
+      // and free of identifiable people. Ladder 768/1200/1491 (native), OG already
+      // built. No `w` suffix on this set.
+      //
+      // ⚠️ EVERY OBVIOUS COVER IS ALREADY A SIBLING'S HERO, so this was a choice of
+      // which clash to accept, not whether to have one:
+      //   Bagrati  = the IMERETI THINGS-TO-DO guide's hero — same page type, one
+      //              click away. Rejected: two sibling guides with one cover.
+      //   Colchis  = the PARENT Kutaisi city page's hero, i.e. exactly the
+      //              anti-pattern the Gori pass established, and a blue-hour frame
+      //              that goes very dark under the .coverme overlay.
+      //   Gelati   = the IMERETI REGION hub's hero — a different page type, one
+      //              level up. Least bad, so it is what ships here.
+      // Also rejected: the legacy `bagrati-cathedral.jpg`, a soft old snapshot of
+      // the cathedral UNDER SCAFFOLDING shot over power lines.
+      //
+      // ⚠️ TWO FILES NAMED FOR KUTAISI ARE NOT KUTAISI. `cultural-wonders-kutaisi.jpg`
+      // is TBILISI (Sameba above the Mtkvari) and `ultimate-exploration-kutaisi.jpg`
+      // is GERGETI in Kazbegi. Both reach the site through tours.js only. Never
+      // caption either as Kutaisi.
+      image: '/images/files/gelati-monastery-kutaisi-georgia-1491.webp',
+      imageAvif: '/images/files/gelati-monastery-kutaisi-georgia-1491.avif',
+      heroClass: 'hero--things-to-do-kutaisi',
+      heroPreload: '/images/files/gelati-monastery-kutaisi-georgia-1200.avif',
+      ogImage: { src: '/images/files/gelati-monastery-kutaisi-georgia-og.jpg', width: 1200, height: 630 },
+      // ⚠️ ENGLISH-ONLY BODY — the fifth such guide, after Chiatura, Gori, Gudauri
+      // and Kazbegi. `thingsToDoKutaisi` exists only in en/pages.json; the other six
+      // locales fall back to en-fallback.json. Per the owner's decision on the
+      // Chiatura pass the visible <figcaption> and <img alt> are ENGLISH in all
+      // seven, matching the prose they sit in, while the `alt` map drives
+      // og:image:alt / twitter:image:alt and every `caption` map drives the
+      // per-locale ImageObject JSON-LD.
+      //
+      // ⚠️ NAMING — this page DOES have real exonyms, unlike the last four. Counted
+      // across the whole of each locale, not one page:
+      //   Latin everywhere: Kutaisi (422-574, against de `Kutaissi` 73, fr
+      //   `Koutaïssi` 66, nl `Koetaisi` 40 — all clear minorities), Imereti (against
+      //   de `Imeretien` 67, fr `Iméréthie` 51, es `Imericia` 23), Gelati, Bagrati,
+      //   Martvili, Katskhi.
+      //   LOCALIZED, and used below: the fountain is de `Kolchis-Brunnen`, fr
+      //   `fontaine de Colchide`, es `Fuente de la Cólquide`, nl `Colchis-fontein`,
+      //   cs `Kolchidská fontána`, pl `Fontanna Kolchidzka`; the cave is de
+      //   `Prometheus-Höhle` (62x), fr `grotte de Prométhée` (59x), es `cueva de
+      //   Prometeo` (37x), nl `Prometheusgrot` (61x), cs `Prométheova jeskyně`
+      //   (26x), pl `jaskinia Prometeusza` (69x). Do NOT flatten these to Latin.
+      //
+      // ⚠️ NO ADDED FACTS. The image package's own Colchis captions assert a 2011
+      // unveiling and an 1861 theatre; this page states neither, so they were NOT
+      // reused. Nothing below adds UNESCO status, dates, prices, hours, transport
+      // or access, and no caption places a nearby attraction inside the city.
+      imageMeta: {
+        width: 1491, height: 1055, imageId: 'hero-image',
+        name: 'Gelati Monastery near Kutaisi, Imereti, Georgia',
+        description: 'The stone churches of Gelati Monastery on their grassy terrace in the hills near Kutaisi, Imereti, Georgia (the country).',
+        locationName: 'Gelati Monastery, Imereti, Georgia',
+        locality: 'Kutaisi', region: 'Imereti', country: 'GE',
+        geo: { lat: 42.29528, lng: 42.76806 },
+        alt: {
+          en: 'The domed churches of Gelati Monastery on their green terrace near Kutaisi, Imereti, Georgia',
+          de: 'Die Kuppelkirchen des Klosters Gelati auf ihrer grünen Terrasse bei Kutaisi, Imereti, Georgien',
+          fr: "Les églises à coupole du monastère de Gelati sur leur terrasse verdoyante près de Kutaisi, Imereti, Géorgie",
+          es: 'Las iglesias con cúpula del monasterio de Gelati sobre su terraza verde cerca de Kutaisi, Imereti, Georgia',
+          nl: 'De koepelkerken van het Gelati-klooster op hun groene terras bij Kutaisi, Imereti, Georgië',
+          cs: 'Kostely s kupolí kláštera Gelati na zelené terase poblíž Kutaisi, Imereti, Gruzie',
+          pl: 'Kopułowe cerkwie klasztoru Gelati na zielonym tarasie koło Kutaisi, Imereti, Gruzja',
+        },
+        caption: {
+          en: 'Gelati Monastery near Kutaisi, its main church and the arcaded building beside it standing on a grassy terrace.',
+          de: 'Das Kloster Gelati bei Kutaisi: die Hauptkirche und das benachbarte Arkadengebäude auf einer Grasterrasse.',
+          fr: "Le monastère de Gelati près de Kutaisi : l'église principale et le bâtiment à arcades voisin, sur une terrasse herbeuse.",
+          es: 'El monasterio de Gelati cerca de Kutaisi: la iglesia principal y el edificio con arcadas contiguo, sobre una terraza de hierba.',
+          nl: 'Het Gelati-klooster bij Kutaisi: de hoofdkerk en het aangrenzende arcadegebouw op een grasterras.',
+          cs: 'Klášter Gelati poblíž Kutaisi — hlavní kostel a sousední arkádová budova na travnaté terase.',
+          pl: 'Klasztor Gelati koło Kutaisi — główna cerkiew i sąsiadujący budynek z arkadami na trawiastym tarasie.',
+        },
+      },
+      // Six body figures, spliced into the ENGLISH content by LINE INDEX (29-line
+      // single-\n page): 6 Bagrati · 12 Colchis Fountain · 14 Green Bazaar ·
+      // 16 Prometheus Cave · 18 Martvili Canyon · 26 nearby (Katskhi Pillar).
+      //
+      // ⚠️ THREE SETS WERE COPIED, THREE ARE REFERENCED. Bagrati, the Green Bazaar
+      // and Martvili already ship under the no-`w` names this array builds. The
+      // other three ship as `-1200w`, which would 404 the contentUrl, so
+      // byte-identical copies (sha256-verified) went into a new /images/kutaisi/.
+      // Nothing re-encoded, nothing upscaled.
+      //
+      // ⚠️ MARTVILI IS THE ONE noCredit ENTRY — the licensed STOCK pair (owner
+      // confirmed 2026-08-02), which must never carry brand credit. Its
+      // contentLocation is SAMEGRELO-ZEMO SVANETI, not Imereti: the canyon is not in
+      // Imereti and this page only lists it as a trip from Kutaisi.
+      //
+      // ⚠️ SIX SECTIONS STAY BARE. Gelati (the hero already shows it) and then
+      // MOTSAMETA, the RIONI/WHITE BRIDGE walk, OKATSE CANYON, SATAPLIA and
+      // TSKALTUBO — for which no photograph exists anywhere in the project. The
+      // whole source tree was searched: zero hits on any of those five names.
+      inlineImageObjects: [
+        {
+          base: 'bagrati-cathedral-kutaisi-georgia', width: 1200, height: 675,
+          anchor: 'inline-bagrati', dir: '/images/files',
+          description: 'Bagrati Cathedral on its hilltop in Kutaisi, its stone walls and turquoise roofs beside a separate stone bell tower, Imereti, Georgia.',
+          locationName: 'Bagrati Cathedral, Kutaisi, Imereti, Georgia',
+          locality: 'Kutaisi', region: 'Imereti', geo: { lat: 42.27750, lng: 42.70417 },
+          name: {
+            en: 'Bagrati Cathedral on its hilltop in Kutaisi, Imereti, Georgia',
+            de: 'Die Bagrati-Kathedrale auf ihrem Hügel in Kutaisi, Imereti, Georgien',
+            fr: "La cathédrale de Bagrati sur sa colline à Kutaisi, Imereti, Géorgie",
+            es: 'La catedral de Bagrati en su colina en Kutaisi, Imereti, Georgia',
+            nl: 'De Bagrati-kathedraal op haar heuvel in Kutaisi, Imereti, Georgië',
+            cs: 'Katedrála Bagrati na návrší v Kutaisi, Imereti, Gruzie',
+            pl: 'Katedra Bagrati na wzgórzu w Kutaisi, Imereti, Gruzja',
+          },
+          caption: {
+            en: 'Bagrati Cathedral in Kutaisi, its stone walls and turquoise roofs on the hilltop, with the separate bell tower at the right.',
+            de: 'Die Bagrati-Kathedrale in Kutaisi mit ihren Steinmauern und türkisfarbenen Dächern auf dem Hügel, rechts der freistehende Glockenturm.',
+            fr: "La cathédrale de Bagrati à Kutaisi, ses murs de pierre et ses toits turquoise sur la colline, avec le clocher séparé à droite.",
+            es: 'La catedral de Bagrati en Kutaisi, con sus muros de piedra y techos turquesa en la colina, y el campanario exento a la derecha.',
+            nl: 'De Bagrati-kathedraal in Kutaisi, met stenen muren en turkooizen daken op de heuvel en rechts de losstaande klokkentoren.',
+            cs: 'Katedrála Bagrati v Kutaisi — kamenné zdi a tyrkysové střechy na návrší, vpravo samostatná zvonice.',
+            pl: 'Katedra Bagrati w Kutaisi — kamienne mury i turkusowe dachy na wzgórzu, a po prawej wolnostojąca dzwonnica.',
+          },
+        },
+        {
+          base: 'colchis-fountain-night-kutaisi-georgia', width: 1200, height: 900,
+          anchor: 'inline-colchis-fountain', dir: '/images/kutaisi',
+          description: 'The Colchis Fountain in the central square of Kutaisi, its golden animal figures lit above the water at night, Imereti, Georgia.',
+          locationName: 'Colchis Fountain, Kutaisi, Imereti, Georgia',
+          locality: 'Kutaisi', region: 'Imereti', geo: { lat: 42.26972, lng: 42.70472 },
+          name: {
+            en: 'The golden Colchis Fountain lit at night in central Kutaisi, Imereti, Georgia',
+            de: 'Der goldene Kolchis-Brunnen bei Nacht im Zentrum von Kutaisi, Imereti, Georgien',
+            fr: "La fontaine de Colchide dorée, illuminée la nuit au centre de Kutaisi, Imereti, Géorgie",
+            es: 'La dorada Fuente de la Cólquide iluminada de noche en el centro de Kutaisi, Imereti, Georgia',
+            nl: 'De gouden Colchis-fontein bij nacht in het centrum van Kutaisi, Imereti, Georgië',
+            cs: 'Zlatá Kolchidská fontána osvětlená v noci v centru Kutaisi, Imereti, Gruzie',
+            pl: 'Złota Fontanna Kolchidzka oświetlona nocą w centrum Kutaisi, Imereti, Gruzja',
+          },
+          caption: {
+            en: 'The Colchis Fountain in the central square of Kutaisi, its golden animal figures lit above the water at night.',
+            de: 'Der Kolchis-Brunnen am zentralen Platz von Kutaisi, seine goldenen Tierfiguren nachts über dem Wasser beleuchtet.',
+            fr: "La fontaine de Colchide sur la place centrale de Kutaisi, ses figures animales dorées éclairées au-dessus de l'eau la nuit.",
+            es: 'La Fuente de la Cólquide en la plaza central de Kutaisi, con sus figuras doradas de animales iluminadas sobre el agua por la noche.',
+            nl: 'De Colchis-fontein op het centrale plein van Kutaisi, met de gouden dierfiguren ’s nachts verlicht boven het water.',
+            cs: 'Kolchidská fontána na centrálním náměstí v Kutaisi — zlaté zvířecí figury osvětlené v noci nad vodou.',
+            pl: 'Fontanna Kolchidzka na centralnym placu Kutaisi — złote figury zwierząt podświetlone nocą nad wodą.',
+          },
+        },
+        {
+          base: 'kutaisi-green-bazaar-produce-stalls-georgia', width: 1200, height: 900,
+          anchor: 'inline-green-bazaar', dir: '/images/files',
+          description: 'Aisles of vegetables, fruit and herbs on the stalls of the Green Bazaar in Kutaisi, under a yellow steel roof, Imereti, Georgia.',
+          locationName: 'Green Bazaar, Kutaisi, Imereti, Georgia',
+          locality: 'Kutaisi', region: 'Imereti', geo: { lat: 42.26861, lng: 42.70139 },
+          name: {
+            en: 'Produce stalls under the yellow steel roof of the Green Bazaar in Kutaisi, Georgia',
+            de: 'Marktstände unter dem gelben Stahldach des Grünen Basars in Kutaisi, Georgien',
+            fr: "Les étals de produits frais sous la charpente jaune du bazar vert de Kutaisi, Géorgie",
+            es: 'Puestos de productos frescos bajo la techumbre amarilla del Bazar Verde de Kutaisi, Georgia',
+            nl: 'Kramen met verse waren onder het gele stalen dak van de Groene Bazaar in Kutaisi, Georgië',
+            cs: 'Stánky s čerstvými produkty pod žlutou ocelovou střechou Zeleného bazaru v Kutaisi, Gruzie',
+            pl: 'Stoiska z płodami rolnymi pod żółtym stalowym dachem Zielonego Bazaru w Kutaisi, Gruzja',
+          },
+          caption: {
+            en: 'The Green Bazaar in Kutaisi, aisles of vegetables, fruit and herbs under a yellow steel roof.',
+            de: 'Der Grüne Basar in Kutaisi: Gänge voller Gemüse, Obst und Kräuter unter einem gelben Stahldach.',
+            fr: "Le bazar vert de Kutaisi : des allées de légumes, de fruits et d'herbes sous une charpente d'acier jaune.",
+            es: 'El Bazar Verde de Kutaisi: pasillos de verduras, frutas y hierbas bajo una techumbre de acero amarilla.',
+            nl: 'De Groene Bazaar in Kutaisi: gangen vol groenten, fruit en kruiden onder een geel stalen dak.',
+            cs: 'Zelený bazar v Kutaisi — uličky se zeleninou, ovocem a bylinkami pod žlutou ocelovou střechou.',
+            pl: 'Zielony Bazar w Kutaisi — alejki z warzywami, owocami i ziołami pod żółtym stalowym dachem.',
+          },
+        },
+        {
+          base: 'prometheus-cave-natural-walkway-imereti-georgia', width: 1200, height: 900,
+          anchor: 'inline-prometheus-cave', dir: '/images/kutaisi',
+          description: 'A large hall in Prometheus Cave with a railed walkway running between stalactites and stalagmites under coloured lighting, Imereti, Georgia.',
+          locationName: 'Prometheus Cave, Imereti, Georgia',
+          region: 'Imereti', geo: { lat: 42.37639, lng: 42.60083 },
+          name: {
+            en: 'A lit cave hall with stalactites and a railed walkway at Prometheus Cave, Imereti, Georgia',
+            de: 'Eine beleuchtete Halle mit Tropfsteinen und Geländersteg in der Prometheus-Höhle, Imereti, Georgien',
+            fr: "Une salle éclairée avec concrétions et passerelle à rambarde dans la grotte de Prométhée, Imereti, Géorgie",
+            es: 'Una sala iluminada con estalactitas y una pasarela con barandilla en la cueva de Prometeo, Imereti, Georgia',
+            nl: 'Een verlichte zaal met druipstenen en een looppad met leuning in de Prometheusgrot, Imereti, Georgië',
+            cs: 'Osvětlený sál s krápníky a lávkou se zábradlím v Prométheově jeskyni, Imereti, Gruzie',
+            pl: 'Oświetlona sala z naciekami i kładką z barierką w jaskini Prometeusza, Imereti, Gruzja',
+          },
+          caption: {
+            en: 'A large hall in Prometheus Cave, a railed walkway running between the stalactites and stalagmites under coloured lighting.',
+            de: 'Eine große Halle in der Prometheus-Höhle, ein Steg mit Geländer führt unter farbigem Licht zwischen Stalaktiten und Stalagmiten hindurch.',
+            fr: "Une vaste salle de la grotte de Prométhée : une passerelle à rambarde serpente entre stalactites et stalagmites sous un éclairage coloré.",
+            es: 'Una gran sala de la cueva de Prometeo: una pasarela con barandilla discurre entre estalactitas y estalagmitas bajo luces de colores.',
+            nl: 'Een grote zaal in de Prometheusgrot: een looppad met leuning loopt onder gekleurde verlichting tussen de stalactieten en stalagmieten door.',
+            cs: 'Velký sál Prométheovy jeskyně — lávka se zábradlím vede pod barevným osvětlením mezi stalaktity a stalagmity.',
+            pl: 'Wielka sala jaskini Prometeusza — kładka z barierką biegnie w barwnym świetle między stalaktytami a stalagmitami.',
+          },
+        },
+        {
+          // ⚠️ PORTRAIT (1086x1448, 3:4) → rungs 768 + 1086, NO 1200, and the figure
+          // takes `--portrait` (560 cap → 747 tall), the same call as the Shkhara
+          // inline. NOT `--portrait-narrow`, which is for taller-than-3:4 frames.
+          //
+          // ⚠️ noCredit — LICENSED STOCK, the only such images on the site. Never
+          // add brand credit here. And note contentLocation: SAMEGRELO-ZEMO SVANETI.
+          base: 'martvili-canyon-turquoise-river-georgia', width: 1086, height: 1448,
+          anchor: 'inline-martvili-canyon', dir: '/images/martvili',
+          noCredit: true,
+          description: 'Turquoise water running between rock walls covered in moss and greenery at Martvili Canyon, Samegrelo-Zemo Svaneti, Georgia.',
+          locationName: 'Martvili Canyon, Samegrelo-Zemo Svaneti, Georgia',
+          locality: 'Martvili', region: 'Samegrelo-Zemo Svaneti', geo: { lat: 42.4525, lng: 42.3703 },
+          name: {
+            en: 'Turquoise water between mossy rock walls at Martvili Canyon, Samegrelo-Zemo Svaneti, Georgia',
+            de: 'Türkisfarbenes Wasser zwischen moosbewachsenen Felswänden der Martvili-Schlucht, Samegrelo-Semo Swanetien, Georgien',
+            fr: "Une eau turquoise entre des parois rocheuses moussues dans le canyon de Martvili, Samegrelo-Zemo Svaneti, Géorgie",
+            es: 'Agua turquesa entre paredes rocosas cubiertas de musgo en el cañón de Martvili, Samegrelo-Zemo Svaneti, Georgia',
+            nl: 'Turkooisblauw water tussen bemoste rotswanden in de Martvili-kloof, Samegrelo-Zemo Svaneti, Georgië',
+            cs: 'Tyrkysová voda mezi mechem porostlými skalními stěnami kaňonu Martvili, Samegrelo-Zemo Svaneti, Gruzie',
+            pl: 'Turkusowa woda między omszałymi ścianami skalnymi kanionu Martvili, Samegrelo-Zemo Svaneti, Gruzja',
+          },
+          caption: {
+            en: 'Martvili Canyon in Samegrelo-Zemo Svaneti, its turquoise river running between rock walls covered in greenery.',
+            de: 'Die Martvili-Schlucht in Samegrelo-Semo Swanetien: Der türkisfarbene Fluss zieht zwischen grün bewachsenen Felswänden hindurch.',
+            fr: "Le canyon de Martvili, en Samegrelo-Zemo Svaneti : sa rivière turquoise court entre des parois rocheuses couvertes de végétation.",
+            es: 'El cañón de Martvili, en Samegrelo-Zemo Svaneti: su río turquesa discurre entre paredes rocosas cubiertas de vegetación.',
+            nl: 'De Martvili-kloof in Samegrelo-Zemo Svaneti: de turkooizen rivier loopt tussen met groen begroeide rotswanden door.',
+            cs: 'Kaňon Martvili v Samegrelu-Zemo Svaneti — tyrkysová řeka teče mezi skalními stěnami porostlými zelení.',
+            pl: 'Kanion Martvili w Samegrelo-Zemo Svaneti — turkusowa rzeka płynie między ścianami skalnymi porośniętymi zielenią.',
+          },
+        },
+        {
+          base: 'katskhi-pillar-summit-church-imereti-georgia', width: 1200, height: 800,
+          anchor: 'inline-katskhi-pillar', dir: '/images/kutaisi',
+          description: 'A small stone church on the flat summit of the Katskhi Pillar, a tall limestone monolith, Imereti, Georgia.',
+          locationName: 'Katskhi Pillar, Imereti, Georgia',
+          region: 'Imereti', geo: { lat: 42.29222, lng: 43.20583 },
+          name: {
+            en: 'The small church on top of the Katskhi Pillar limestone monolith, Imereti, Georgia',
+            de: 'Die kleine Kirche auf dem Kalksteinmonolithen der Katskhi-Säule, Imereti, Georgien',
+            fr: "La petite église au sommet du monolithe calcaire du pilier de Katskhi, Imereti, Géorgie",
+            es: 'La pequeña iglesia en la cima del monolito calizo del pilar de Katskhi, Imereti, Georgia',
+            nl: 'Het kerkje op de top van de kalkstenen monoliet de Katskhi-pilaar, Imereti, Georgië',
+            cs: 'Kostelík na vrcholu vápencového monolitu Katskhi, Imereti, Gruzie',
+            pl: 'Kościółek na szczycie wapiennego monolitu Filar Katskhi, Imereti, Gruzja',
+          },
+          caption: {
+            en: 'The Katskhi Pillar, a tall limestone monolith with a small church on its summit.',
+            de: 'Die Katskhi-Säule, ein hoher Kalksteinmonolith mit einer kleinen Kirche auf dem Gipfel.',
+            fr: "Le pilier de Katskhi, un haut monolithe calcaire couronné d'une petite église.",
+            es: 'El pilar de Katskhi, un alto monolito calizo coronado por una pequeña iglesia.',
+            nl: 'De Katskhi-pilaar, een hoge kalkstenen monoliet met een kerkje op de top.',
+            cs: 'Katskhi — vysoký vápencový monolit s kostelíkem na vrcholu.',
+            pl: 'Filar Katskhi — wysoki wapienny monolit z kościółkiem na szczycie.',
+          },
+        },
+      ],
       address: { addressLocality: 'Kutaisi' },
       attractions: ['Gelati Monastery', 'Bagrati Cathedral', 'Motsameta Monastery', 'Prometheus Cave', 'Martvili Canyon', 'Okatse Canyon', 'Sataplia Nature Reserve', 'Tskaltubo'],
     },
