@@ -1492,6 +1492,43 @@ section {
   }
 }
 /* No rung above 1448 exists. Do not add a 1600 or 2400 breakpoint. */
+/* Things to Do in Gori hero — per-page CSS background, same mechanism as the other
+   things-to-do guides. Replaces the generic georgia-home.jpg placeholder with the
+   elevated view over Gori's rooftops.
+
+   Native is 1448 and the set ships 768/1200/1448, so the ladder is exactly those
+   three. There is no larger variant of this frame — do not add a 1600/2400 rung.
+
+   Default `background-position: center` (from .coverme) is kept: the source is 4:3,
+   so a wide hero crops it only modestly and the rooftops, church and hills all stay
+   in frame; below 768px cover scales by height and shows the whole frame. Verified
+   by screenshot, so no explicit position is needed here. */
+.hero--things-to-do-gori {
+  background-image: url("/images/files/gori-church-view-georgia-768w.webp");
+  background-image: image-set(
+    url("/images/files/gori-church-view-georgia-768w.avif") type("image/avif"),
+    url("/images/files/gori-church-view-georgia-768w.webp") type("image/webp")
+  );
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+@media (min-width: 768px) {
+  .hero--things-to-do-gori {
+    background-image: image-set(
+      url("/images/files/gori-church-view-georgia-1200w.avif") type("image/avif"),
+      url("/images/files/gori-church-view-georgia-1200w.webp") type("image/webp")
+    );
+  }
+}
+@media (min-width: 1200px) {
+  .hero--things-to-do-gori {
+    background-image: image-set(
+      url("/images/files/gori-church-view-georgia-1448w.avif") type("image/avif"),
+      url("/images/files/gori-church-view-georgia-1448w.webp") type("image/webp")
+    );
+  }
+}
+/* Native is 1448 — that is the top rung. Do not add a 1600 or 2400 breakpoint. */
 /* Things to Do in Chiatura hero — per-page CSS background, same mechanism as the
    other things-to-do guides. Replaces the generic georgia-home.jpg placeholder
    with the autumn panorama of the town in its valley.

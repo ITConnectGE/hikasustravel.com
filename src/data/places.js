@@ -4536,7 +4536,197 @@ export const cities = [
       },
     ],
     thingsToDo: {
-      seoKey: 'thingsToDoGori', contentKey: 'thingsToDoGori', image: '/images/files/georgia-home.jpg',
+      seoKey: 'thingsToDoGori', contentKey: 'thingsToDoGori',
+      // Cover/hero = the elevated view over Gori's rooftops, REPLACING the generic
+      // georgia-home.jpg placeholder. Native 1448, ladder 768/1200/1448, OG already
+      // built.
+      //
+      // ⚠️ DELIBERATELY NOT gori-town-panorama, even though its composition is
+      // marginally better (it adds distant snow peaks): that frame is the Gori CITY
+      // page hero AND an inline on both the Shida Kartli region page and its guide,
+      // so using it here would be a fourth use and would make this guide's hero
+      // identical to its parent's. This frame is only a city-page inline, so the
+      // duplication is one step lighter and the two Gori pages stay distinguishable.
+      image: '/images/files/gori-church-view-georgia-1448w.webp',
+      imageAvif: '/images/files/gori-church-view-georgia-1448w.avif',
+      heroClass: 'hero--things-to-do-gori',
+      heroPreload: '/images/files/gori-church-view-georgia-1200w.avif',
+      ogImage: { src: '/images/files/gori-church-view-georgia-og-1200x630.jpg', width: 1200, height: 630 },
+      // ⚠️ THIS PAGE'S BODY IS ENGLISH-ONLY, like Chiatura. `thingsToDoGori` exists
+      // only in en/pages.json; the other six locales fall back to en-fallback.json
+      // (18 of the 37 guides are untranslated). Per the owner's decision on the
+      // Chiatura pass, the visible <figcaption> and <img alt> are ENGLISH in all
+      // seven — matching the English prose they sit in — while everything that CAN
+      // be localized is: the `alt` map drives og:image:alt / twitter:image:alt, and
+      // every `caption` map drives the per-locale ImageObject JSON-LD.
+      //
+      // ⚠️ NEUTRALITY. This page is about a Stalin-related museum and the Soviet
+      // period. No alt or caption evaluates Stalin, the museum or Soviet history —
+      // the museum strings describe the BUILDING only (stone facade, arcade of
+      // pointed arches) and carry no adjective of approval. The page's own critical
+      // framing of the museum is untouched. The park frame has a public building in
+      // the background that resembles the museum; it is deliberately NOT named.
+      //
+      // ⚠️ NAMING: `Gori` is Latin in all 7 locales (245x each) and `Shida Kartli`
+      // dominates everywhere (95-118 vs 2-17 for any exonym), so both are used as-is.
+      // Uplistsikhe is the interesting one — de writes `Uplisziche`, fr
+      // `Ouplistsikhé` and cs `Uplisciche` on the GORI CITY page, but all of de/fr/cs
+      // use Latin `Uplistsikhe` on the Shida Kartli REGION page. Another per-page
+      // split. These strings use LATIN Uplistsikhe in all seven, because that is what
+      // the page they describe says (8x) and what the region page uses.
+      //
+      // Words this page never uses, so no caption does either: Mtkvari (0), Ateni
+      // (0), Kintsvisi (0). It also carries NO occupied-territory passage — South
+      // Ossetia, Tskhinvali and "occupied" are all 0 — unlike the Shida Kartli region
+      // page and its guide, so there is nothing sensitive to guard here and nothing
+      // of the sort is introduced.
+      imageMeta: {
+        width: 1448, height: 1086, imageId: 'hero-image',
+        name: 'View over the rooftops of Gori, Shida Kartli, Georgia',
+        description: 'An elevated view over the rooftops of Gori, with a stone church among the houses and the wooded hills of Shida Kartli beyond, Georgia (the country).',
+        locationName: 'Gori',
+        locality: 'Gori', region: 'Shida Kartli', country: 'GE',
+        geo: { lat: 41.9842, lng: 44.1108 },
+        alt: {
+          en: 'View over the rooftops of Gori with a stone church and wooded hills beyond, Shida Kartli, Georgia',
+          de: 'Blick über die Dächer von Gori mit einer Steinkirche und bewaldeten Hügeln dahinter, Shida Kartli, Georgien',
+          fr: "Vue sur les toits de Gori avec une église en pierre et des collines boisées au-delà, Shida Kartli, Géorgie",
+          es: 'Vista sobre los tejados de Gori con una iglesia de piedra y colinas boscosas al fondo, Shida Kartli, Georgia',
+          nl: 'Uitzicht over de daken van Gori met een stenen kerk en beboste heuvels daarachter, Shida Kartli, Georgië',
+          cs: 'Pohled přes střechy Gori s kamenným kostelem a zalesněnými kopci v pozadí, Shida Kartli, Gruzie',
+          pl: 'Widok na dachy Gori z kamiennym kościołem i zalesionymi wzgórzami w tle, Shida Kartli, Gruzja',
+        },
+        caption: {
+          en: 'Gori seen from above, its rooftops and church set against the hills of Shida Kartli.',
+          de: 'Gori von oben, seine Dächer und die Kirche vor den Hügeln von Shida Kartli.',
+          fr: "Gori vue d'en haut, ses toits et son église se détachant sur les collines de Shida Kartli.",
+          es: 'Gori vista desde arriba, con sus tejados y su iglesia recortados sobre las colinas de Shida Kartli.',
+          nl: 'Gori van bovenaf, met de daken en de kerk tegen de heuvels van Shida Kartli.',
+          cs: 'Gori z výšky, jeho střechy a kostel na pozadí kopců Shida Kartli.',
+          pl: 'Gori z góry, jego dachy i kościół na tle wzgórz Shida Kartli.',
+        },
+      },
+      // Four body figures, spliced into the ENGLISH content by LINE INDEX (this page
+      // uses single-\n separators, 21 lines): 4 Stalin Museum, 7 Gori Fortress,
+      // 10 Uplistsikhe, 12 Gori city centre.
+      //
+      // MIXED `dir` ON PURPOSE. Three sets are copied byte-identical to a new
+      // /images/gori/ under no-`w` names (the originals ship `-1200w`, while
+      // inlineImageObjects builds `base-<width>.webp` with no `w`). The FOURTH,
+      // gori-fortress-georgia, is REFERENCED from /images/shida-kartli/ where the
+      // Shida Kartli guide already put no-`w` copies — so it costs zero new bytes.
+      // Nothing re-encoded, nothing upscaled. Note the fortress is 3:2 (1200x799),
+      // not 4:3 like the other three.
+      //
+      // Five sections stay image-free: the Great Patriotic War Museum (no photograph
+      // of it exists), the Shida Kartli region section (it describes farmland and
+      // small villages — nothing in the project shows that; the fortress/Caucasus
+      // frame is a wall against mountains, not countryside), and the intro, summary
+      // and closing sections.
+      //
+      // Brand credit kept — these are the owner's own Gori sets.
+      inlineImageObjects: [
+        {
+          base: 'stalin-museum-gori-georgia', width: 1200, height: 900,
+          anchor: 'inline-museum-building', dir: '/images/gori',
+          description: 'The long arcaded stone facade of the Joseph Stalin Museum building in Gori, Shida Kartli, Georgia.',
+          locationName: 'Joseph Stalin Museum', locality: 'Gori', region: 'Shida Kartli',
+          geo: { lat: 41.9842, lng: 44.1108 },
+          name: {
+            en: 'The arcaded stone facade of the Stalin Museum building in Gori, Georgia',
+            de: 'Die von Arkaden gesäumte Steinfassade des Josef-Stalin-Museums in Gori, Georgien',
+            fr: "La façade en pierre à arcades du musée Joseph Staline à Gori, Géorgie",
+            es: 'La fachada de piedra con arcadas del Museo de Iósif Stalin en Gori, Georgia',
+            nl: 'De stenen gevel met arcaden van het Jozef Stalin-museum in Gori, Georgië',
+            cs: 'Kamenná fasáda s arkádami budovy Muzea Josifa Stalina v Gori, Gruzie',
+            pl: 'Kamienna fasada z arkadami budynku Muzeum Józefa Stalina w Gori, Gruzja',
+          },
+          caption: {
+            en: 'The museum building in Gori, a stone hall fronted by a long arcade of pointed arches.',
+            de: 'Das Museumsgebäude in Gori, eine Steinhalle mit einer langen Arkade aus Spitzbögen.',
+            fr: "Le bâtiment du musée à Gori, une halle de pierre précédée d'une longue arcade d'arcs brisés.",
+            es: 'El edificio del museo en Gori, una sala de piedra precedida por una larga arcada de arcos apuntados.',
+            nl: 'Het museumgebouw in Gori, een stenen hal met ervoor een lange arcade van spitsbogen.',
+            cs: 'Budova muzea v Gori, kamenná hala s dlouhou arkádou lomených oblouků.',
+            pl: 'Budynek muzeum w Gori, kamienna hala z długą arkadą ostrych łuków.',
+          },
+        },
+        {
+          base: 'gori-fortress-georgia', width: 1200, height: 799,
+          anchor: 'inline-gori-fortress', dir: '/images/shida-kartli',
+          description: 'The stone ramparts of Gori Fortress on the hill above the city, with the Georgian flag flying, Shida Kartli, Georgia.',
+          locationName: 'Gori Fortress', locality: 'Gori', region: 'Shida Kartli',
+          geo: { lat: 41.9847, lng: 44.1097 },
+          name: {
+            en: 'Gori Fortress on its hill above the city, Shida Kartli, Georgia',
+            de: 'Die Festung Gori auf ihrem Hügel über der Stadt, Shida Kartli, Georgien',
+            fr: "La forteresse de Gori sur sa colline au-dessus de la ville, Shida Kartli, Géorgie",
+            es: 'La fortaleza de Gori en su colina sobre la ciudad, Shida Kartli, Georgia',
+            nl: 'De vesting Gori op haar heuvel boven de stad, Shida Kartli, Georgië',
+            cs: 'Pevnost Gori na návrší nad městem, Shida Kartli, Gruzie',
+            pl: 'Twierdza Gori na wzgórzu nad miastem, Shida Kartli, Gruzja',
+          },
+          caption: {
+            en: 'The stone ramparts of Gori Fortress on the hill above the city, flying the Georgian flag.',
+            de: 'Die steinernen Wälle der Festung Gori auf dem Hügel über der Stadt, mit der georgischen Flagge.',
+            fr: "Les remparts de pierre de la forteresse de Gori sur la colline dominant la ville, drapeau géorgien au vent.",
+            es: 'Las murallas de piedra de la fortaleza de Gori en la colina sobre la ciudad, con la bandera georgiana ondeando.',
+            nl: 'De stenen wallen van de vesting Gori op de heuvel boven de stad, met de Georgische vlag.',
+            cs: 'Kamenné hradby pevnosti Gori na kopci nad městem, s gruzínskou vlajkou.',
+            pl: 'Kamienne mury twierdzy Gori na wzgórzu nad miastem, z gruzińską flagą.',
+          },
+        },
+        {
+          base: 'uplistsikhe-cave-town-georgia', width: 1200, height: 900,
+          anchor: 'inline-uplistsikhe', dir: '/images/gori',
+          description: 'Rock-cut chambers, stone walls and paths at the Uplistsikhe cave town east of Gori, Shida Kartli, Georgia.',
+          locationName: 'Uplistsikhe', locality: 'Uplistsikhe', region: 'Shida Kartli',
+          geo: { lat: 41.9678, lng: 44.2078 },
+          name: {
+            en: 'Rock-cut chambers and stone walls at the Uplistsikhe cave town near Gori, Georgia',
+            de: 'In den Fels gehauene Kammern und Steinmauern in der Höhlenstadt Uplistsikhe nahe Gori, Georgien',
+            fr: "Chambres taillées dans la roche et murs de pierre de la cité troglodyte d'Uplistsikhe près de Gori, Géorgie",
+            es: 'Cámaras excavadas en la roca y muros de piedra en la ciudad rupestre de Uplistsikhe, cerca de Gori, Georgia',
+            nl: 'In de rots uitgehouwen kamers en stenen muren in de grotstad Uplistsikhe bij Gori, Georgië',
+            cs: 'Do skály vytesané komory a kamenné zdi ve skalním městě Uplistsikhe nedaleko Gori, Gruzie',
+            pl: 'Wykute w skale komory i kamienne mury w skalnym mieście Uplistsikhe niedaleko Gori, Gruzja',
+          },
+          caption: {
+            en: 'Chambers cut into the rock at Uplistsikhe, with stone walls and paths threading between them.',
+            de: 'In den Fels gehauene Kammern in Uplistsikhe, dazwischen Steinmauern und Pfade.',
+            fr: "Des chambres taillées dans la roche à Uplistsikhe, entre lesquelles serpentent murs de pierre et sentiers.",
+            es: 'Cámaras excavadas en la roca en Uplistsikhe, con muros de piedra y senderos entre ellas.',
+            nl: 'In de rots uitgehouwen kamers bij Uplistsikhe, met stenen muren en paden ertussen.',
+            cs: 'Komory vytesané do skály v Uplistsikhe, mezi nimi kamenné zdi a pěšiny.',
+            pl: 'Komory wykute w skale w Uplistsikhe, a między nimi kamienne mury i ścieżki.',
+          },
+        },
+        {
+          base: 'gori-central-park-georgia', width: 1200, height: 900,
+          anchor: 'inline-city-park', dir: '/images/gori',
+          description: 'A landscaped park in central Gori with clipped shrubs and paved walkways, Shida Kartli, Georgia.',
+          locationName: 'Gori', locality: 'Gori', region: 'Shida Kartli',
+          geo: { lat: 41.9842, lng: 44.1108 },
+          name: {
+            en: 'A landscaped park with paved paths in central Gori, Shida Kartli, Georgia',
+            de: 'Ein gepflegter Park mit gepflasterten Wegen im Zentrum von Gori, Shida Kartli, Georgien',
+            fr: "Un parc aménagé aux allées pavées dans le centre de Gori, Shida Kartli, Géorgie",
+            es: 'Un parque ajardinado con senderos pavimentados en el centro de Gori, Shida Kartli, Georgia',
+            nl: 'Een aangelegd park met geplaveide paden in het centrum van Gori, Shida Kartli, Georgië',
+            cs: 'Upravený park s dlážděnými cestami v centru Gori, Shida Kartli, Gruzie',
+            pl: 'Zadbany park z brukowanymi alejkami w centrum Gori, Shida Kartli, Gruzja',
+          },
+          caption: {
+            en: 'A landscaped park in central Gori, with clipped shrubs and paved walkways.',
+            de: 'Ein gepflegter Park im Zentrum von Gori, mit beschnittenen Sträuchern und gepflasterten Wegen.',
+            fr: "Un parc aménagé au centre de Gori, avec ses arbustes taillés et ses allées pavées.",
+            es: 'Un parque ajardinado en el centro de Gori, con arbustos recortados y paseos pavimentados.',
+            nl: 'Een aangelegd park in het centrum van Gori, met gesnoeide struiken en geplaveide paden.',
+            cs: 'Upravený park v centru Gori s tvarovanými keři a dlážděnými cestami.',
+            pl: 'Zadbany park w centrum Gori, ze strzyżonymi krzewami i brukowanymi alejkami.',
+          },
+        },
+      ],
       address: { addressLocality: 'Gori' },
       attractions: ['Joseph Stalin Museum', 'Gori Fortress', 'Uplistsikhe Cave Town', 'Great Patriotic War Museum'],
     },
