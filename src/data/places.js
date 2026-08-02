@@ -7863,13 +7863,17 @@ export const sites = [
     // authorship claim, and the licence obliges no third-party credit either.
     // Do NOT add brand credit to these two entries.
     //
-    // ⚠️ NAMING: alt and caption strings are the package's/owner's VERBATIM and
-    // diverge from this page's own body in three places — the body writes the
-    // river "Abasha" in all 7 locales (de "Abascha", cs "Abaša", pl "Abasza"
-    // here), and the Polish body writes the canyon "Martvili" 24x while these
-    // strings say "Martwili". Left as supplied on instruction; flagged for the
-    // owner rather than silently rewritten. (The German body is itself mixed:
-    // Martwili 15x / Martvili 9x — pre-existing, untouched.)
+    // ⚠️ NAMING — ALIGNED TO THE BODY (owner instruction 2026-08-02: "use Abasha
+    // everywhere"). The image package shipped three locale-specific spellings of
+    // the river that this page's body never uses; all are now the body's form.
+    // The body treats the name as INDECLINABLE in every locale ("des Flusses
+    // Abasha", "řeky Abasha", "rzeki Abasha"), so the surrounding grammar was
+    // already correct and only the token changed. The Polish strings also spelled
+    // the canyon with a w, which its body never does (24x without) — also
+    // aligned. Keep any future string on the body's forms: river Abasha, canyon
+    // Martvili. NOTE for whoever edits this block next: a blind search-and-replace
+    // over this entry will rewrite THIS COMMENT too, so don't quote the old
+    // spellings here.
     imageMeta: {
       width: 1086, height: 1448, imageId: 'hero-image', noCredit: true,
       name: 'Martvili Canyon, the emerald water of the Abasha River between forested limestone cliffs, Samegrelo, Georgia',
@@ -7883,7 +7887,7 @@ export const sites = [
         es: 'El agua verde esmeralda del cañón de Martvili fluyendo entre altos acantilados calizos cubiertos de exuberante bosque verde, Samegrelo, Georgia',
         nl: 'Het smaragdgroene water van de Martvili-canyon dat tussen hoge kalkstenen kliffen met weelderig groen bos door stroomt, Samegrelo, Georgië',
         cs: 'Smaragdově zelená voda kaňonu Martvili protékající mezi vysokými vápencovými útesy porostlými bujným zeleným lesem, Samegrelo, Gruzie',
-        pl: 'Szmaragdowozielona woda kanionu Martwili płynąca między wysokimi wapiennymi klifami porośniętymi bujnym zielonym lasem, Samegrelo, Gruzja',
+        pl: 'Szmaragdowozielona woda kanionu Martvili płynąca między wysokimi wapiennymi klifami porośniętymi bujnym zielonym lasem, Samegrelo, Gruzja',
       },
       // ⚠️ TRIMMED, owner-approved. The package's hero caption ended with the
       // gorge's history as "the private bathing place of the noble Dadiani
@@ -7894,12 +7898,12 @@ export const sites = [
       // wording verbatim, and each string is still a complete sentence.
       caption: {
         en: "Martvili Canyon in Samegrelo — the Abasha River's emerald water winding between forested limestone walls.",
-        de: 'Die Martvili-Schlucht in Samegrelo – das smaragdgrüne Wasser des Flusses Abascha windet sich zwischen bewaldeten Kalksteinwänden.',
+        de: 'Die Martvili-Schlucht in Samegrelo – das smaragdgrüne Wasser des Flusses Abasha windet sich zwischen bewaldeten Kalksteinwänden.',
         fr: "Le canyon de Martvili en Samegrelo — l'eau émeraude de la rivière Abasha serpente entre des parois calcaires boisées.",
         es: 'El cañón de Martvili en Samegrelo: el agua esmeralda del río Abasha serpentea entre paredes calizas boscosas.',
         nl: 'De Martvili-canyon in Samegrelo — het smaragdgroene water van de Abasha-rivier kronkelt tussen beboste kalkstenen wanden.',
-        cs: 'Kaňon Martvili v Samegrelu — smaragdová voda řeky Abaša se vine mezi zalesněnými vápencovými stěnami.',
-        pl: 'Kanion Martwili w Samegrelo — szmaragdowa woda rzeki Abasza wije się między zalesionymi wapiennymi ścianami.',
+        cs: 'Kaňon Martvili v Samegrelu — smaragdová voda řeky Abasha se vine mezi zalesněnými vápencovými stěnami.',
+        pl: 'Kanion Martvili w Samegrelo — szmaragdowa woda rzeki Abasha wije się między zalesionymi wapiennymi ścianami.',
       },
     },
     // One inline body figure, spliced into each locale's content after the
@@ -7916,21 +7920,21 @@ export const sites = [
         locationName: 'Martvili Canyon', region: 'Samegrelo-Zemo Svaneti',
         name: {
           en: 'Turquoise water of the Abasha River rushing over pale limestone ledges in Martvili Canyon, its banks covered in moss and greenery, Georgia',
-          de: 'Türkisfarbenes Wasser des Flusses Abascha strömt über helle Kalksteinstufen in der Martvili-Schlucht, die Ufer mit Moos und Grün bedeckt, Georgien',
+          de: 'Türkisfarbenes Wasser des Flusses Abasha strömt über helle Kalksteinstufen in der Martvili-Schlucht, die Ufer mit Moos und Grün bedeckt, Georgien',
           fr: "L'eau turquoise de la rivière Abasha dévalant des corniches calcaires claires dans le canyon de Martvili, ses berges couvertes de mousse et de verdure, Géorgie",
           es: 'El agua turquesa del río Abasha corriendo sobre repisas calizas claras en el cañón de Martvili, sus orillas cubiertas de musgo y vegetación, Georgia',
           nl: 'Turkoois water van de Abasha-rivier dat over lichte kalkstenen richels stroomt in de Martvili-canyon, de oevers bedekt met mos en groen, Georgië',
-          cs: 'Tyrkysová voda řeky Abaša se řítí přes světlé vápencové stupně v kaňonu Martvili, břehy pokryté mechem a zelení, Gruzie',
-          pl: 'Turkusowa woda rzeki Abasza pędząca po jasnych wapiennych półkach w kanionie Martwili, brzegi porośnięte mchem i zielenią, Gruzja',
+          cs: 'Tyrkysová voda řeky Abasha se řítí přes světlé vápencové stupně v kaňonu Martvili, břehy pokryté mechem a zelení, Gruzie',
+          pl: 'Turkusowa woda rzeki Abasha pędząca po jasnych wapiennych półkach w kanionie Martvili, brzegi porośnięte mchem i zielenią, Gruzja',
         },
         caption: {
           en: 'The turquoise Abasha River tumbling over limestone shelves in Martvili Canyon, its colour drawn from the mineral-rich water and pale rock.',
-          de: 'Der türkisfarbene Fluss Abascha stürzt über Kalksteinstufen in der Martvili-Schlucht, seine Farbe stammt vom mineralreichen Wasser und hellen Gestein.',
+          de: 'Der türkisfarbene Fluss Abasha stürzt über Kalksteinstufen in der Martvili-Schlucht, seine Farbe stammt vom mineralreichen Wasser und hellen Gestein.',
           fr: "La rivière Abasha turquoise dévalant les gradins calcaires du canyon de Martvili, sa couleur venant de l'eau riche en minéraux et de la roche claire.",
           es: 'El río Abasha turquesa cayendo sobre escalones calizos en el cañón de Martvili, su color procedente del agua rica en minerales y la roca clara.',
           nl: 'De turkooizen Abasha-rivier die over kalkstenen richels tuimelt in de Martvili-canyon, haar kleur ontleend aan het mineraalrijke water en het lichte gesteente.',
-          cs: 'Tyrkysová řeka Abaša se valí přes vápencové stupně v kaňonu Martvili, její barva pochází z minerály bohaté vody a světlé skály.',
-          pl: 'Turkusowa rzeka Abasza spływająca po wapiennych progach w kanionie Martwili, jej barwa pochodzi z bogatej w minerały wody i jasnej skały.',
+          cs: 'Tyrkysová řeka Abasha se valí přes vápencové stupně v kaňonu Martvili, její barva pochází z minerály bohaté vody a světlé skály.',
+          pl: 'Turkusowa rzeka Abasha spływająca po wapiennych progach w kanionie Martvili, jej barwa pochodzi z bogatej w minerały wody i jasnej skały.',
         },
       },
     ],
