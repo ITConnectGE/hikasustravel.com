@@ -7853,11 +7853,15 @@ export const sites = [
     // yield a 1086x570 band without upscaling, so the package ships that and the
     // real dimensions are declared here rather than claiming 1200x630.
     ogImage: { src: '/images/martvili/martvili-canyon-georgia-og.jpg', width: 1086, height: 570 },
-    // ⚠️ NO BRAND CREDIT. The package ships both frames EXIF-stripped and flags
-    // them `credit: brand-CONFIRM` ("confirm own photos"); ownership was NOT
-    // confirmed, so `noCredit` drops creator/creditText/copyrightNotice rather
-    // than asserting an authorship we don't hold. Revisit if provenance is
-    // established.
+    // ⚠️ NO BRAND CREDIT — RESOLVED, do not "fix" this later. Unlike every other
+    // photograph on the site, these two are NOT ours: they are STOCK images held
+    // under a commercial licence that requires no attribution (owner confirmed
+    // 2026-08-02; the package shipped them EXIF-stripped and flagged
+    // `credit: brand-CONFIRM`). `noCredit` therefore drops
+    // creator/creditText/copyrightNotice — omitting credit is correct on both
+    // counts here, because asserting `creator: Hikasus Travel` would be a false
+    // authorship claim, and the licence obliges no third-party credit either.
+    // Do NOT add brand credit to these two entries.
     //
     // ⚠️ NAMING: alt and caption strings are the package's/owner's VERBATIM and
     // diverge from this page's own body in three places — the body writes the
