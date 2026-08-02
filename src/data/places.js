@@ -4868,7 +4868,190 @@ export const cities = [
       },
     },
     thingsToDo: {
-      seoKey: 'thingsToDoGudauri', contentKey: 'thingsToDoGudauri', image: '/images/files/georgia-home.jpg',
+      seoKey: 'thingsToDoGudauri', contentKey: 'thingsToDoGudauri',
+      // Cover/hero = the open snowfield with a lift line below a rounded Caucasus
+      // summit, REPLACING the generic georgia-home.jpg placeholder. It matches the
+      // page's own framing (open, spacious, high-altitude terrain), carries no
+      // identifiable people, and is only a Mtskheta-Mtianeti region-page inline —
+      // not a hero anywhere — so this does not clone a sibling page's cover.
+      // Native 1448, ladder 768/1200/1448, OG already built.
+      image: '/images/files/gudauri-ski-slopes-caucasus-georgia-1448.webp',
+      imageAvif: '/images/files/gudauri-ski-slopes-caucasus-georgia-1448.avif',
+      heroClass: 'hero--things-to-do-gudauri',
+      heroPreload: '/images/files/gudauri-ski-slopes-caucasus-georgia-1200.avif',
+      ogImage: { src: '/images/files/gudauri-ski-slopes-caucasus-georgia-og.jpg', width: 1200, height: 630 },
+      // ⚠️ ENGLISH-ONLY BODY, like Chiatura and Gori. `thingsToDoGudauri` exists
+      // only in en/pages.json; the other six locales fall back to en-fallback.json.
+      // Per the owner's decision on the Chiatura pass, the visible <figcaption> and
+      // <img alt> are ENGLISH in all seven — matching the prose they sit in — while
+      // the `alt` map drives og:image:alt / twitter:image:alt and every `caption`
+      // map drives the per-locale ImageObject JSON-LD.
+      //
+      // ⚠️ NAMING — the monument. The panorama FILE is historically named
+      // `gudauri-panorama-friendship-monument-georgia`, so the old name is
+      // unavoidable in the ImageObject contentUrl (renaming shipped assets is out
+      // of scope). NO new alt, caption, name, description or locationName uses it:
+      // they say "Gudauri Panorama" only, which is also the house preference and
+      // what this page uses (Panorama 4x, Friendship 0x).
+      //
+      // ⚠️ NAMING — places. Gudauri (63x), Ananuri (30x), Kazbegi (111-129x) and
+      // Mtskheta-Mtianeti are Latin in every locale. German also carries `Kasbegi`
+      // but only 18x against 111 — a clear minority, so Latin Kazbegi is used, which
+      // is also what this page says.
+      //
+      // ⚠️ ACTIVITY/SAFETY. No string implies snow cover, lift or road status,
+      // weather, piste condition, safety, access or ability. Captions describe only
+      // what is in frame.
+      imageMeta: {
+        width: 1448, height: 1086, imageId: 'hero-image',
+        name: 'Open ski slopes below a Caucasus summit at Gudauri, Mtskheta-Mtianeti, Georgia',
+        description: 'Open snow-covered ski slopes at Gudauri with a lift line running up toward a rounded Caucasus summit under a blue sky, Mtskheta-Mtianeti, Georgia (the country).',
+        locationName: 'Gudauri',
+        locality: 'Gudauri', region: 'Mtskheta-Mtianeti', country: 'GE',
+        geo: { lat: 42.4783, lng: 44.4794 },
+        alt: {
+          en: 'Open snow-covered ski slopes and a lift line below a Caucasus summit at Gudauri, Mtskheta-Mtianeti, Georgia',
+          de: 'Offene schneebedeckte Skihänge und eine Liftlinie unterhalb eines Kaukasusgipfels in Gudauri, Mtskheta-Mtianeti, Georgien',
+          fr: "Pistes enneigées ouvertes et ligne de remontée sous un sommet du Caucase à Gudauri, Mtskheta-Mtianeti, Géorgie",
+          es: 'Amplias laderas nevadas y una línea de remonte bajo una cumbre del Cáucaso en Gudauri, Mtskheta-Mtianeti, Georgia',
+          nl: 'Open besneeuwde skihellingen en een liftlijn onder een Kaukasustop in Gudauri, Mtskheta-Mtianeti, Georgië',
+          cs: 'Otevřené zasněžené sjezdovky a linka lanovky pod kavkazským vrcholem v Gudauri, Mtskheta-Mtianeti, Gruzie',
+          pl: 'Otwarte ośnieżone stoki i linia wyciągu pod kaukaskim szczytem w Gudauri, Mtskheta-Mtianeti, Gruzja',
+        },
+        caption: {
+          en: 'The open slopes at Gudauri, with a lift line running up toward the rounded Caucasus summits.',
+          de: 'Die offenen Hänge von Gudauri, über die eine Liftlinie zu den gerundeten Kaukasusgipfeln hinaufführt.',
+          fr: "Les pentes ouvertes de Gudauri, une ligne de remontée grimpant vers les sommets arrondis du Caucase.",
+          es: 'Las laderas abiertas de Gudauri, con una línea de remonte que sube hacia las cumbres redondeadas del Cáucaso.',
+          nl: 'De open hellingen van Gudauri, met een liftlijn die omhoog loopt naar de ronde Kaukasustoppen.',
+          cs: 'Otevřené svahy v Gudauri, po nichž stoupá linka lanovky k zaobleným kavkazským vrcholům.',
+          pl: 'Otwarte stoki Gudauri, z linią wyciągu wspinającą się ku zaokrąglonym szczytom Kaukazu.',
+        },
+      },
+      // Four body figures, spliced into the ENGLISH content by LINE INDEX (25-line
+      // single-\n page): 4 the ski area, 14 Gudauri Panorama, 16 Ananuri Fortress,
+      // 18 Kazbegi.
+      //
+      // ⚠️ ONLY ANANURI IS COPIED. Three of the four already ship no-`w` filenames
+      // in /images/files, which is exactly what inlineImageObjects builds, so they
+      // are REFERENCED in place — zero new bytes. Only the Ananuri set uses the
+      // `-1200w` convention, so it alone was copied to /images/gudauri/ under no-`w`
+      // names. Nothing re-encoded, nothing upscaled.
+      //
+      // ⚠️ REJECTED ON PRIVACY. `gudauri-ski-lift` is, despite its filename, a close
+      // PORTRAIT of a clearly recognisable man, and `gudauri-ski-piste` is a lift
+      // station with four mid-distance people, one near-facing. The image package's
+      // own notes flag both. `gudauri-ski-view` — again despite its filename — is the
+      // wide, essentially empty piste, and is the one used here. VIEW THESE THREE
+      // BEFORE REUSING THEM; the names do not describe the contents.
+      //
+      // Five sections stay image-free for want of a photograph: PARAGLIDING (a
+      // headline section, 8 mentions — no paragliding photo exists anywhere in the
+      // project), freeride, learn-to-ski, snow activities for non-skiers, and summer
+      // hiking (every Gudauri frame is winter). Gergeti is 0 mentions, so no Gergeti
+      // image is used even though Kazbegi is named 9x.
+      inlineImageObjects: [
+        {
+          base: 'gudauri-ski-view', width: 1200, height: 900,
+          anchor: 'inline-ski-area', dir: '/images/files',
+          description: 'A wide groomed piste at Gudauri with a lift line climbing the slope under a blue sky, Mtskheta-Mtianeti, Georgia.',
+          locationName: 'Gudauri', locality: 'Gudauri', region: 'Mtskheta-Mtianeti',
+          geo: { lat: 42.4783, lng: 44.4794 },
+          name: {
+            en: 'A wide groomed piste and lift line under a blue sky at Gudauri, Georgia',
+            de: 'Eine breite präparierte Piste und eine Liftlinie unter blauem Himmel in Gudauri, Georgien',
+            fr: "Une large piste damée et une ligne de remontée sous un ciel bleu à Gudauri, Géorgie",
+            es: 'Una amplia pista pisada y una línea de remonte bajo un cielo azul en Gudauri, Georgia',
+            nl: 'Een brede geprepareerde piste en een liftlijn onder een blauwe hemel in Gudauri, Georgië',
+            cs: 'Široká upravená sjezdovka a linka lanovky pod modrou oblohou v Gudauri, Gruzie',
+            pl: 'Szeroki wyratrakowany stok i linia wyciągu pod błękitnym niebem w Gudauri, Gruzja',
+          },
+          caption: {
+            en: 'A broad open piste at Gudauri, the lift line climbing the slope to the left.',
+            de: 'Eine breite offene Piste in Gudauri, links steigt die Liftlinie den Hang hinauf.',
+            fr: "Une large piste ouverte à Gudauri, la ligne de remontée gravissant la pente sur la gauche.",
+            es: 'Una amplia pista abierta en Gudauri, con la línea de remonte subiendo la ladera a la izquierda.',
+            nl: 'Een brede open piste in Gudauri, met links de liftlijn die de helling op klimt.',
+            cs: 'Široká otevřená sjezdovka v Gudauri, vlevo stoupá po svahu linka lanovky.',
+            pl: 'Szeroki otwarty stok w Gudauri, a po lewej linia wyciągu wspina się po zboczu.',
+          },
+        },
+        {
+          base: 'gudauri-panorama-friendship-monument-georgia', width: 1200, height: 900,
+          anchor: 'inline-gudauri-panorama', dir: '/images/files',
+          description: 'The curved terrace of Gudauri Panorama, its wall faced with a large mosaic mural above arched openings, Mtskheta-Mtianeti, Georgia.',
+          locationName: 'Gudauri Panorama', locality: 'Gudauri', region: 'Mtskheta-Mtianeti',
+          geo: { lat: 42.4906, lng: 44.4525 },
+          name: {
+            en: 'The curved mosaic wall and terrace of Gudauri Panorama, Mtskheta-Mtianeti, Georgia',
+            de: 'Die geschwungene Mosaikwand und Terrasse von Gudauri Panorama, Mtskheta-Mtianeti, Georgien',
+            fr: "Le mur en mosaïque incurvé et la terrasse de Gudauri Panorama, Mtskheta-Mtianeti, Géorgie",
+            es: 'El muro curvo de mosaico y la terraza de Gudauri Panorama, Mtskheta-Mtianeti, Georgia',
+            nl: 'De gebogen mozaïekmuur en het terras van Gudauri Panorama, Mtskheta-Mtianeti, Georgië',
+            cs: 'Zakřivená mozaiková stěna a terasa Gudauri Panorama, Mtskheta-Mtianeti, Gruzie',
+            pl: 'Zakrzywiona mozaikowa ściana i taras Gudauri Panorama, Mtskheta-Mtianeti, Gruzja',
+          },
+          caption: {
+            en: 'Gudauri Panorama, its curved terrace lined with a large mosaic mural above the arched openings.',
+            de: 'Gudauri Panorama: Die geschwungene Terrasse ist über den Bogenöffnungen mit einem großen Mosaik verkleidet.',
+            fr: "Gudauri Panorama, sa terrasse incurvée bordée d'une grande mosaïque au-dessus des ouvertures en arc.",
+            es: 'Gudauri Panorama, con su terraza curva revestida de un gran mosaico sobre las aberturas en arco.',
+            nl: 'Gudauri Panorama, met zijn gebogen terras en een groot mozaïek boven de boogopeningen.',
+            cs: 'Gudauri Panorama, jeho zakřivená terasa je nad oblouky obložena velkou mozaikou.',
+            pl: 'Gudauri Panorama, którego zakrzywiony taras zdobi wielka mozaika nad łukowymi prześwitami.',
+          },
+        },
+        {
+          base: 'ananuri-fortress-complex-georgia', width: 1200, height: 900,
+          anchor: 'inline-ananuri', dir: '/images/gudauri',
+          description: 'Ananuri Fortress above the road, its stone towers and curtain wall enclosing a church with a conical roof, Mtskheta-Mtianeti, Georgia.',
+          locationName: 'Ananuri Fortress', locality: 'Ananuri', region: 'Mtskheta-Mtianeti',
+          geo: { lat: 42.1642, lng: 44.7031 },
+          name: {
+            en: 'The towers, curtain wall and church of Ananuri Fortress, Mtskheta-Mtianeti, Georgia',
+            de: 'Die Türme, die Ringmauer und die Kirche der Festung Ananuri, Mtskheta-Mtianeti, Georgien',
+            fr: "Les tours, la courtine et l'église de la forteresse d'Ananuri, Mtskheta-Mtianeti, Géorgie",
+            es: 'Las torres, la muralla y la iglesia de la fortaleza de Ananuri, Mtskheta-Mtianeti, Georgia',
+            nl: 'De torens, de ringmuur en de kerk van de vesting Ananuri, Mtskheta-Mtianeti, Georgië',
+            cs: 'Věže, hradby a kostel pevnosti Ananuri, Mtskheta-Mtianeti, Gruzie',
+            pl: 'Wieże, mury i cerkiew twierdzy Ananuri, Mtskheta-Mtianeti, Gruzja',
+          },
+          caption: {
+            en: 'Ananuri Fortress above the road, its stone towers and walls enclosing a church with a conical roof.',
+            de: 'Die Festung Ananuri über der Straße; ihre Steintürme und Mauern umschließen eine Kirche mit Kegeldach.',
+            fr: "La forteresse d'Ananuri au-dessus de la route, ses tours et ses murs de pierre enfermant une église à toit conique.",
+            es: 'La fortaleza de Ananuri sobre la carretera, con sus torres y muros de piedra rodeando una iglesia de techo cónico.',
+            nl: 'De vesting Ananuri boven de weg, met stenen torens en muren rond een kerk met kegeldak.',
+            cs: 'Pevnost Ananuri nad silnicí, její kamenné věže a hradby obepínají kostel s kuželovou střechou.',
+            pl: 'Twierdza Ananuri nad drogą, a jej kamienne wieże i mury otaczają cerkiew ze stożkowym dachem.',
+          },
+        },
+        {
+          base: 'kazbegi-winter-ridges-snow-georgia', width: 1200, height: 900,
+          anchor: 'inline-kazbegi-ridges', dir: '/images/files',
+          description: 'Snow-streaked mountain ridges rising above a valley in the Kazbegi area, north of Gudauri, Mtskheta-Mtianeti, Georgia.',
+          locationName: 'Kazbegi', locality: 'Kazbegi', region: 'Mtskheta-Mtianeti',
+          geo: { lat: 42.6572, lng: 44.6417 },
+          name: {
+            en: 'Snow-streaked mountain ridges in the Kazbegi area, Mtskheta-Mtianeti, Georgia',
+            de: 'Schneedurchzogene Bergrücken in der Gegend von Kazbegi, Mtskheta-Mtianeti, Georgien',
+            fr: "Crêtes montagneuses striées de neige dans la région de Kazbegi, Mtskheta-Mtianeti, Géorgie",
+            es: 'Cordales montañosos veteados de nieve en la zona de Kazbegi, Mtskheta-Mtianeti, Georgia',
+            nl: 'Met sneeuw doorschoten bergkammen in de omgeving van Kazbegi, Mtskheta-Mtianeti, Georgië',
+            cs: 'Sněhem prokládané horské hřebeny v oblasti Kazbegi, Mtskheta-Mtianeti, Gruzie',
+            pl: 'Poprzecinane śniegiem górskie grzbiety w okolicy Kazbegi, Mtskheta-Mtianeti, Gruzja',
+          },
+          caption: {
+            en: 'Snow-streaked ridges rising above the valley in the Kazbegi area, north of Gudauri.',
+            de: 'Schneedurchzogene Bergrücken über dem Tal in der Gegend von Kazbegi, nördlich von Gudauri.',
+            fr: "Des crêtes striées de neige s'élevant au-dessus de la vallée dans la région de Kazbegi, au nord de Gudauri.",
+            es: 'Cordales veteados de nieve alzándose sobre el valle en la zona de Kazbegi, al norte de Gudauri.',
+            nl: 'Met sneeuw doorschoten bergkammen boven het dal in de omgeving van Kazbegi, ten noorden van Gudauri.',
+            cs: 'Sněhem prokládané hřebeny nad údolím v oblasti Kazbegi, severně od Gudauri.',
+            pl: 'Poprzecinane śniegiem grzbiety wznoszące się nad doliną w okolicy Kazbegi, na północ od Gudauri.',
+          },
+        },
+      ],
       address: { addressLocality: 'Gudauri' },
       attractions: ['Gudauri Ski Resort', 'Gudauri Panorama', 'Ananuri Fortress', 'Kazbegi (Stepantsminda)'],
     },

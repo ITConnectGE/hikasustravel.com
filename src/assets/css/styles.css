@@ -1610,6 +1610,47 @@ section {
   }
 }
 /* Native is 1672. 1600 is the top rung — do not add a 2104 or 2400 breakpoint. */
+/* Things to Do in Gudauri hero — per-page CSS background, same mechanism as the
+   other things-to-do guides. Replaces the generic georgia-home.jpg placeholder
+   with the open snowfield and lift line below a rounded Caucasus summit.
+
+   ⚠️ NO `w` SUFFIX. This set ships as `-768.webp` / `-1200.webp` / `-1448.webp`,
+   unlike the Gori and Bakuriani heroes directly above, whose files are `-768w`.
+   Copying one of those blocks and swapping the base name yields a 404 hero that
+   silently falls back to the flat overlay. Check the real filenames.
+
+   Native is 1448 and only 768/1200/1448 exist — that is the whole ladder. Do NOT
+   add a 1600/2400 rung.
+
+   Default `background-position: center` (from .coverme) is kept and was checked at
+   360px: the source is 4:3, so the tall mobile crop still holds the summit, the
+   lift line and the open slope. */
+.hero--things-to-do-gudauri {
+  background-image: url("/images/files/gudauri-ski-slopes-caucasus-georgia-768.webp");
+  background-image: image-set(
+    url("/images/files/gudauri-ski-slopes-caucasus-georgia-768.avif") type("image/avif"),
+    url("/images/files/gudauri-ski-slopes-caucasus-georgia-768.webp") type("image/webp")
+  );
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+@media (min-width: 768px) {
+  .hero--things-to-do-gudauri {
+    background-image: image-set(
+      url("/images/files/gudauri-ski-slopes-caucasus-georgia-1200.avif") type("image/avif"),
+      url("/images/files/gudauri-ski-slopes-caucasus-georgia-1200.webp") type("image/webp")
+    );
+  }
+}
+@media (min-width: 1200px) {
+  .hero--things-to-do-gudauri {
+    background-image: image-set(
+      url("/images/files/gudauri-ski-slopes-caucasus-georgia-1448.avif") type("image/avif"),
+      url("/images/files/gudauri-ski-slopes-caucasus-georgia-1448.webp") type("image/webp")
+    );
+  }
+}
+/* Native is 1448 — that is the top rung. Do not add a 1600 or 2400 breakpoint. */
 /* Martvili Canyon hero — per-page CSS background (same opt-in mechanism as
    .hero--akhaltsikhe above). FIRST Samegrelo photograph in the project; replaces
    the generic georgia-home.jpg placeholder.
