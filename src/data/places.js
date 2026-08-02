@@ -4802,7 +4802,268 @@ export const cities = [
       },
     },
     thingsToDo: {
-      seoKey: 'thingsToDoKazbegiStepantsminda', contentKey: 'thingsToDoKazbegiStepantsminda', image: '/images/files/georgia-home.jpg',
+      seoKey: 'thingsToDoKazbegiStepantsminda', contentKey: 'thingsToDoKazbegiStepantsminda',
+      // Cover/hero = Gergeti Trinity Church on its green hill below the snow-streaked
+      // wall of the Greater Caucasus, REPLACING the generic georgia-home.jpg
+      // placeholder. It is the page's number-one topic (Gergeti 12x, Gergeti Trinity
+      // 6x) and, crucially, the ONLY Kazbegi-area frame in the project that is not
+      // already some page's hero — it appears once, as an inline on the
+      // Mtskheta-Mtianeti region page. Every alternative would have cloned a hero:
+      // `gergeti-trinity-church-kazbegi-georgia` is the Gergeti church page's cover
+      // and `kazbegi-mountains-village-georgia` is the parent Kazbegi hub's. Same
+      // reasoning as the Gori guide.
+      //
+      // ⚠️ LIVES IN /images/mtskheta-mtianeti/, NOT /images/files/. The ladder below
+      // and the CSS class both point there; nothing was copied. Ladder 768/1200/1448,
+      // which is the whole set — native is 1448, so do NOT add a 1600/2400 rung.
+      image: '/images/mtskheta-mtianeti/gergeti-trinity-church-caucasus-kazbegi-georgia-1448.webp',
+      imageAvif: '/images/mtskheta-mtianeti/gergeti-trinity-church-caucasus-kazbegi-georgia-1448.avif',
+      heroClass: 'hero--things-to-do-kazbegi',
+      heroPreload: '/images/mtskheta-mtianeti/gergeti-trinity-church-caucasus-kazbegi-georgia-1200.avif',
+      // GENERATED for this page — the 768/1200/1448 rungs shipped without an OG.
+      // Cropped 1200x630 from the 4928x3264 ORIGINAL (not from the 1448 webp, which
+      // would stack a second lossy pass); confirmed the same photograph by 32x32 MAD
+      // (2.46 vs the 1448 encode, against 42.6 for the other Gergeti frame).
+      ogImage: { src: '/images/kazbegi/gergeti-trinity-church-caucasus-kazbegi-georgia-og.jpg', width: 1200, height: 630 },
+      // ⚠️ ENGLISH-ONLY BODY — the fourth such guide, after Chiatura, Gori and
+      // Gudauri. `thingsToDoKazbegiStepantsminda` exists only in en/pages.json; the
+      // other six locales fall back to en-fallback.json. Per the owner's decision on
+      // the Chiatura pass the visible <figcaption> and <img alt> are ENGLISH in all
+      // seven, matching the prose they sit in, while the `alt` map drives
+      // og:image:alt / twitter:image:alt and every `caption` map drives the
+      // per-locale ImageObject JSON-LD.
+      //
+      // ⚠️ NO BRAND CREDIT ON THE HERO. This frame carries `noCredit` in its existing
+      // use on the Mtskheta-Mtianeti region page because authorship is asserted
+      // nowhere in the repo; claiming `creator: Hikasus Travel` here would invent it.
+      // The five inline frames DO carry brand credit — they are the owner's own and
+      // are credited on their own pages. Do not "harmonise" these.
+      //
+      // ⚠️ MOUNT KAZBEK IS NOT NAMED FOR THE HERO. What rises behind the church in
+      // this frame is the snow-streaked Caucasus wall, not an identifiable Kazbek
+      // summit. Only the Gergeti INLINE says "Kazbek massif", reusing the wording
+      // already approved for that exact photograph on the Gergeti church page.
+      //
+      // ⚠️ NAMING. Kazbegi (19x on the page), Stepantsminda (12x), Gergeti, Juta,
+      // Chaukhi, Truso and Gveleti are Latin in all seven locales site-wide. German
+      // also carries `Kasbegi`, but 18x against 111 — a clear minority, so Latin
+      // Kazbegi is used, which is also what this page says. The monument at line 16
+      // is "Gudauri Panorama" only: this page uses that name 4x and the old
+      // Friendship name 0x, and the old name survives solely inside the shipped
+      // filename, which cannot be renamed here.
+      //
+      // ⚠️ NO CONDITION CLAIMS. No string implies clear views of Kazbek, passable
+      // trails, difficulty, road or border status, weather, or access. Note this is
+      // why the Juta caption below does NOT reuse the Juta page's existing one,
+      // which states when the Chaukhi Pass is "generally passable".
+      imageMeta: {
+        width: 1448, height: 959, imageId: 'hero-image',
+        noCredit: true,
+        name: 'Gergeti Trinity Church below the Greater Caucasus near Stepantsminda, Mtskheta-Mtianeti, Georgia',
+        description: 'Gergeti Trinity Church on its green hill above Stepantsminda, below the snow-streaked wall of the Greater Caucasus, in the Kazbegi area of Mtskheta-Mtianeti, Georgia (the country).',
+        locationName: 'Gergeti Trinity Church, Stepantsminda (Kazbegi), Mtskheta-Mtianeti, Georgia',
+        locality: 'Stepantsminda', region: 'Mtskheta-Mtianeti', country: 'GE',
+        geo: { lat: 42.66253, lng: 44.62072 },
+        alt: {
+          en: 'Gergeti Trinity Church on its green hill below the snow-streaked wall of the Greater Caucasus near Stepantsminda, Mtskheta-Mtianeti, Georgia',
+          de: 'Die Gergeti-Dreifaltigkeitskirche auf ihrem grünen Hügel unterhalb der schneedurchzogenen Wand des Großen Kaukasus bei Stepantsminda, Mtskheta-Mtianeti, Georgien',
+          fr: "L'église de la Trinité de Gergeti sur sa colline verte, au pied de la muraille enneigée du Grand Caucase près de Stepantsminda, Mtskheta-Mtianeti, Géorgie",
+          es: 'La iglesia de la Trinidad de Gergeti sobre su colina verde, al pie de la muralla nevada del Gran Cáucaso cerca de Stepantsminda, Mtskheta-Mtianeti, Georgia',
+          nl: 'De Drie-eenheidskerk van Gergeti op haar groene heuvel onder de met sneeuw doorschoten wand van de Grote Kaukasus bij Stepantsminda, Mtskheta-Mtianeti, Georgië',
+          cs: 'Gergetský kostel Nejsvětější Trojice na zeleném návrší pod zasněženou stěnou Velkého Kavkazu poblíž Stepantsmindy, Mtskheta-Mtianeti, Gruzie',
+          pl: 'Cerkiew Trójcy Świętej w Gergeti na zielonym wzgórzu pod ośnieżoną ścianą Wielkiego Kaukazu koło Stepantsmindy, Mtskheta-Mtianeti, Gruzja',
+        },
+        caption: {
+          en: 'Gergeti Trinity Church on its hill above Stepantsminda, with the snow-streaked wall of the Greater Caucasus behind.',
+          de: 'Die Gergeti-Dreifaltigkeitskirche auf ihrem Hügel über Stepantsminda, dahinter die schneedurchzogene Wand des Großen Kaukasus.',
+          fr: "L'église de la Trinité de Gergeti sur sa colline au-dessus de Stepantsminda, la muraille enneigée du Grand Caucase en arrière-plan.",
+          es: 'La iglesia de la Trinidad de Gergeti sobre su colina por encima de Stepantsminda, con la muralla nevada del Gran Cáucaso detrás.',
+          nl: 'De Drie-eenheidskerk van Gergeti op haar heuvel boven Stepantsminda, met daarachter de met sneeuw doorschoten wand van de Grote Kaukasus.',
+          cs: 'Gergetský kostel Nejsvětější Trojice na návrší nad Stepantsmindou, za ním zasněžená stěna Velkého Kavkazu.',
+          pl: 'Cerkiew Trójcy Świętej w Gergeti na wzgórzu nad Stepantsmindą, a za nią ośnieżona ściana Wielkiego Kaukazu.',
+        },
+      },
+      // Six body figures, spliced into the ENGLISH content by LINE INDEX (23-line
+      // single-\n page): 4 Gergeti Trinity Church · 6 Juta and the Chaukhi · 8 Truso
+      // Valley · 12 Gveleti Waterfalls · 16 Gudauri Panorama · 18 Stepantsminda.
+      //
+      // ⚠️ FIVE OF SIX ARE REFERENCED, NOT COPIED. They already ship under the
+      // no-`w` names this array builds, in the directories named below — zero new
+      // bytes, nothing re-encoded. Only the Gveleti set is new: its source is the
+      // repo's own 1600x1067 `files/Gveleti-Waterfall.jpg`, which reached the site
+      // through tour galleries only and had no responsive variants at all, so
+      // 768/1200 webp+avif were generated into a new /images/kazbegi/. Downscale
+      // only — the 1600 native is the ceiling and nothing was upscaled.
+      //
+      // ⚠️ TWO SECTIONS STAY BARE FOR WANT OF A PHOTOGRAPH: the Gergeti Glacier and
+      // the Dariali Gorge. Neither exists anywhere in the project — the whole source
+      // tree was searched. The only glacier frames are Shkhara and svaneti-glacier,
+      // both Svaneti, and using either as Kazbegi would be a regional lie.
+      //
+      // ⚠️ THE GUDAURI PANORAMA FRAME IS ITS THIRD USE (region page, the Gudauri
+      // guide, here). Justified because this page gives it a section of its own —
+      // "On the way to Kazbegi, Gudauri Panorama is one of the best viewpoints on the
+      // Georgian Military Highway" — and no other photograph of it exists. Owner
+      // approved the repeat.
+      inlineImageObjects: [
+        {
+          base: 'gergeti-trinity-church-kazbegi-georgia', width: 1200, height: 900,
+          anchor: 'inline-gergeti', dir: '/images/files',
+          description: 'The 14th-century church of Gergeti Trinity and its separate stone bell tower on a grassy ridge above Stepantsminda, against the scree slopes of the Kazbek massif, Mtskheta-Mtianeti, Georgia.',
+          locationName: 'Gergeti Trinity Church, Stepantsminda, Mtskheta-Mtianeti, Georgia',
+          locality: 'Stepantsminda', region: 'Mtskheta-Mtianeti', geo: { lat: 42.66253, lng: 44.62072 },
+          name: {
+            en: 'The church and separate bell tower of Gergeti Trinity on its ridge above Stepantsminda, Kazbegi, Georgia',
+            de: 'Kirche und freistehender Glockenturm von Gergeti auf dem Bergrücken über Stepantsminda, Kazbegi, Georgien',
+            fr: "L'église et le clocher séparé de Gergeti sur la crête au-dessus de Stepantsminda, Kazbegi, Géorgie",
+            es: 'La iglesia y el campanario exento de Gergeti en la cresta sobre Stepantsminda, Kazbegi, Georgia',
+            nl: 'De kerk en de losstaande klokkentoren van Gergeti op de bergkam boven Stepantsminda, Kazbegi, Georgië',
+            cs: 'Kostel a samostatná zvonice v Gergeti na hřebeni nad Stepantsmindou, Kazbegi, Gruzie',
+            pl: 'Cerkiew i wolnostojąca dzwonnica w Gergeti na grzbiecie nad Stepantsmindą, Kazbegi, Gruzja',
+          },
+          caption: {
+            en: 'Gergeti Trinity Church and its separate bell tower on the ridge, with the path up from below and the scree slopes of the Kazbek massif behind.',
+            de: 'Die Gergeti-Dreifaltigkeitskirche und ihr freistehender Glockenturm auf dem Bergrücken, davor der Weg hinauf, dahinter die Schutthänge des Kasbek-Massivs.',
+            fr: "L'église de la Trinité de Gergeti et son clocher séparé sur la crête, avec le sentier qui y monte et les pentes d'éboulis du massif du Kazbek derrière.",
+            es: 'La iglesia de la Trinidad de Gergeti y su campanario exento en la cresta, con el sendero que sube y las laderas de derrubios del macizo del Kazbek detrás.',
+            nl: 'De Drie-eenheidskerk van Gergeti en haar losstaande klokkentoren op de bergkam, met het pad omhoog en de puinhellingen van het Kazbek-massief erachter.',
+            cs: 'Gergetský kostel Nejsvětější Trojice a jeho samostatná zvonice na hřebeni, pod nimi stoupající cesta a za nimi suťové svahy masivu Kazbek.',
+            pl: 'Cerkiew Trójcy Świętej w Gergeti i jej wolnostojąca dzwonnica na grzbiecie, poniżej ścieżka pod górę, a za nimi piarżyste stoki masywu Kazbek.',
+          },
+        },
+        {
+          base: 'juta-valley-chaukhi-tents-camp-georgia', width: 1200, height: 900,
+          anchor: 'inline-juta', dir: '/images/files',
+          description: 'The open grass floor of the Juta valley with a stream and a footpath crossing it and the jagged peaks of the Chaukhi massif at the head of the valley, Kazbegi Municipality, Mtskheta-Mtianeti, Georgia.',
+          locationName: 'Juta, Kazbegi Municipality, Mtskheta-Mtianeti, Georgia',
+          locality: 'Juta', region: 'Mtskheta-Mtianeti', geo: { lat: 42.5236, lng: 44.7386 },
+          name: {
+            en: 'The open floor of the Juta valley below the jagged Chaukhi peaks, Kazbegi, Georgia',
+            de: 'Der offene Talboden von Juta unterhalb der zerklüfteten Chaukhi-Gipfel, Kazbegi, Georgien',
+            fr: "Le fond ouvert de la vallée de Juta sous les pics déchiquetés du Chaukhi, Kazbegi, Géorgie",
+            es: 'El fondo abierto del valle de Juta bajo los picos dentados del Chaukhi, Kazbegi, Georgia',
+            nl: 'De open bodem van de Juta-vallei onder de gekartelde Chaukhi-toppen, Kazbegi, Georgië',
+            cs: 'Otevřené dno údolí Juta pod rozeklanými vrcholy Chaukhi, Kazbegi, Gruzie',
+            pl: 'Otwarte dno doliny Juty pod poszarpanymi szczytami Chaukhi, Kazbegi, Gruzja',
+          },
+          caption: {
+            en: 'The Juta valley, a stream and a footpath crossing the open grass floor below the jagged peaks of the Chaukhi massif.',
+            de: 'Das Juta-Tal: Ein Bach und ein Fußweg queren den offenen Wiesenboden unterhalb der zerklüfteten Gipfel des Chaukhi-Massivs.',
+            fr: "La vallée de Juta : un ruisseau et un sentier traversent le fond herbeux ouvert, sous les pics déchiquetés du massif du Chaukhi.",
+            es: 'El valle de Juta: un arroyo y un sendero cruzan el fondo herboso abierto bajo los picos dentados del macizo del Chaukhi.',
+            nl: 'De Juta-vallei: een beek en een voetpad doorkruisen de open grasbodem onder de gekartelde toppen van het Chaukhi-massief.',
+            cs: 'Údolí Juta — potok a pěšina protínají otevřené travnaté dno pod rozeklanými vrcholy masivu Chaukhi.',
+            pl: 'Dolina Juty — strumień i ścieżka przecinają otwarte trawiaste dno pod poszarpanymi szczytami masywu Chaukhi.',
+          },
+        },
+        {
+          base: 'truso-valley-defensive-tower-church-georgia', width: 1200, height: 800,
+          anchor: 'inline-truso', dir: '/images/files',
+          description: 'A tapering stone defensive tower and a small stone church with tiled roofs on the floor of the Truso valley, with a ruined tower village on the slope behind, Kazbegi Municipality, Mtskheta-Mtianeti, Georgia.',
+          locationName: 'Truso Valley, Kazbegi Municipality, Mtskheta-Mtianeti, Georgia',
+          region: 'Mtskheta-Mtianeti', geo: { lat: 42.5033, lng: 44.4497 },
+          name: {
+            en: 'A stone defensive tower and church on the floor of the Truso valley, Kazbegi, Georgia',
+            de: 'Ein steinerner Wehrturm und eine Kirche auf dem Talboden von Truso, Kazbegi, Georgien',
+            fr: "Une tour de défense en pierre et une église au fond de la vallée de Truso, Kazbegi, Géorgie",
+            es: 'Una torre defensiva de piedra y una iglesia en el fondo del valle de Truso, Kazbegi, Georgia',
+            nl: 'Een stenen verdedigingstoren en een kerkje op de bodem van de Truso-vallei, Kazbegi, Georgië',
+            cs: 'Kamenná obranná věž a kostel na dně údolí Truso, Kazbegi, Gruzie',
+            pl: 'Kamienna wieża obronna i kościół na dnie doliny Truso, Kazbegi, Gruzja',
+          },
+          caption: {
+            en: 'A stone defensive tower and a small church on the floor of the Truso valley, with a ruined tower village on the slope behind.',
+            de: 'Ein steinerner Wehrturm und eine kleine Kirche auf dem Talboden von Truso, dahinter am Hang ein verfallenes Turmdorf.',
+            fr: "Une tour de défense en pierre et une petite église au fond de la vallée de Truso, avec un village de tours en ruine sur le versant derrière.",
+            es: 'Una torre defensiva de piedra y una pequeña iglesia en el fondo del valle de Truso, con una aldea de torres en ruinas en la ladera de detrás.',
+            nl: 'Een stenen verdedigingstoren en een kerkje op de bodem van de Truso-vallei, met op de helling erachter een vervallen torendorp.',
+            cs: 'Kamenná obranná věž a kostelík na dně údolí Truso, za nimi na svahu zřícená věžová vesnice.',
+            pl: 'Kamienna wieża obronna i mały kościół na dnie doliny Truso, a za nimi na zboczu zrujnowana wieś wieżowa.',
+          },
+        },
+        {
+          base: 'gveleti-waterfall-kazbegi-georgia', width: 1200, height: 800,
+          anchor: 'inline-gveleti', dir: '/images/kazbegi',
+          description: 'A waterfall falling down the rock face of a narrow gorge at Gveleti, near Stepantsminda, Kazbegi Municipality, Mtskheta-Mtianeti, Georgia.',
+          locationName: 'Gveleti Waterfall, Kazbegi Municipality, Mtskheta-Mtianeti, Georgia',
+          region: 'Mtskheta-Mtianeti', geo: { lat: 42.7211, lng: 44.6194 },
+          name: {
+            en: 'A waterfall in the narrow rocky gorge at Gveleti near Stepantsminda, Kazbegi, Georgia',
+            de: 'Ein Wasserfall in der engen Felsschlucht von Gveleti bei Stepantsminda, Kazbegi, Georgien',
+            fr: "Une cascade dans l'étroite gorge rocheuse de Gveleti, près de Stepantsminda, Kazbegi, Géorgie",
+            es: 'Una cascada en el estrecho desfiladero rocoso de Gveleti, cerca de Stepantsminda, Kazbegi, Georgia',
+            nl: 'Een waterval in de nauwe rotskloof bij Gveleti nabij Stepantsminda, Kazbegi, Georgië',
+            cs: 'Vodopád v úzké skalní rokli u Gveleti nedaleko Stepantsmindy, Kazbegi, Gruzie',
+            pl: 'Wodospad w wąskim skalnym wąwozie w Gveleti koło Stepantsmindy, Kazbegi, Gruzja',
+          },
+          caption: {
+            en: 'The Gveleti waterfall dropping down the rock face of its narrow gorge near Stepantsminda.',
+            de: 'Der Wasserfall von Gveleti stürzt die Felswand seiner engen Schlucht hinab, unweit von Stepantsminda.',
+            fr: "La cascade de Gveleti dévale la paroi rocheuse de son étroite gorge, non loin de Stepantsminda.",
+            es: 'La cascada de Gveleti cae por la pared rocosa de su estrecho desfiladero, cerca de Stepantsminda.',
+            nl: 'De waterval van Gveleti stort omlaag langs de rotswand van zijn nauwe kloof, vlak bij Stepantsminda.',
+            cs: 'Vodopád Gveleti padá po skalní stěně své úzké rokle nedaleko Stepantsmindy.',
+            pl: 'Wodospad Gveleti spada po skalnej ścianie swojego wąskiego wąwozu niedaleko Stepantsmindy.',
+          },
+        },
+        {
+          base: 'gudauri-panorama-friendship-monument-georgia', width: 1200, height: 900,
+          anchor: 'inline-gudauri-panorama', dir: '/images/files',
+          description: 'The curved terrace of Gudauri Panorama, its wall faced with a large mosaic mural above arched openings, on the Georgian Military Highway in Mtskheta-Mtianeti, Georgia.',
+          locationName: 'Gudauri Panorama', locality: 'Gudauri', region: 'Mtskheta-Mtianeti',
+          geo: { lat: 42.4906, lng: 44.4525 },
+          name: {
+            en: 'The curved mosaic wall and terrace of Gudauri Panorama, Mtskheta-Mtianeti, Georgia',
+            de: 'Die geschwungene Mosaikwand und Terrasse von Gudauri Panorama, Mtskheta-Mtianeti, Georgien',
+            fr: "Le mur en mosaïque incurvé et la terrasse de Gudauri Panorama, Mtskheta-Mtianeti, Géorgie",
+            es: 'El muro curvo de mosaico y la terraza de Gudauri Panorama, Mtskheta-Mtianeti, Georgia',
+            nl: 'De gebogen mozaïekmuur en het terras van Gudauri Panorama, Mtskheta-Mtianeti, Georgië',
+            cs: 'Zakřivená mozaiková stěna a terasa Gudauri Panorama, Mtskheta-Mtianeti, Gruzie',
+            pl: 'Zakrzywiona mozaikowa ściana i taras Gudauri Panorama, Mtskheta-Mtianeti, Gruzja',
+          },
+          caption: {
+            en: 'Gudauri Panorama on the Georgian Military Highway, its curved terrace lined with a large mosaic mural above the arched openings.',
+            de: 'Gudauri Panorama an der Georgischen Heerstraße: Die geschwungene Terrasse ist über den Bogenöffnungen mit einem großen Mosaik verkleidet.',
+            fr: "Gudauri Panorama, sur la route militaire géorgienne, sa terrasse incurvée bordée d'une grande mosaïque au-dessus des ouvertures en arc.",
+            es: 'Gudauri Panorama, en la Carretera Militar Georgiana, con su terraza curva revestida de un gran mosaico sobre las aberturas en arco.',
+            nl: 'Gudauri Panorama aan de Georgische Militaire Weg, met zijn gebogen terras en een groot mozaïek boven de boogopeningen.',
+            cs: 'Gudauri Panorama u Gruzínské vojenské cesty — jeho zakřivená terasa je nad oblouky obložena velkou mozaikou.',
+            pl: 'Gudauri Panorama przy Gruzińskiej Drodze Wojennej — jego zakrzywiony taras zdobi wielka mozaika nad łukowymi prześwitami.',
+          },
+        },
+        {
+          // ⚠️ THE ONLY PORTRAIT FIGURE HERE (2:3, native 1024 → rungs 768 + 1024,
+          // NO 1200). At the 560px `--portrait` cap a 2:3 frame renders 840px tall
+          // and swamps the column, so the figure also takes `--portrait-narrow`
+          // (420 → 630 tall), the same call made for the Medea column at Europe
+          // Square. This is the parent Kazbegi hub page's hero, reused deliberately
+          // and with the owner's approval: it is the only frame that actually shows
+          // Stepantsminda under the massif, which is what this section describes.
+          base: 'kazbegi-mountains-village-georgia', width: 1024, height: 1536,
+          anchor: 'inline-stepantsminda', dir: '/images/files',
+          description: 'The village of Stepantsminda spread across green slopes below a snow-capped massif of the Greater Caucasus, Kazbegi Municipality, Mtskheta-Mtianeti, Georgia.',
+          locationName: 'Stepantsminda, Kazbegi Municipality, Mtskheta-Mtianeti, Georgia',
+          locality: 'Stepantsminda', region: 'Mtskheta-Mtianeti', geo: { lat: 42.6572, lng: 44.6417 },
+          name: {
+            en: 'Stepantsminda on its green slopes below a snow-capped Caucasus massif, Kazbegi, Georgia',
+            de: 'Stepantsminda an seinen grünen Hängen unterhalb eines schneebedeckten Kaukasusmassivs, Kazbegi, Georgien',
+            fr: "Stepantsminda sur ses pentes verdoyantes, au pied d'un massif enneigé du Caucase, Kazbegi, Géorgie",
+            es: 'Stepantsminda en sus laderas verdes, al pie de un macizo nevado del Cáucaso, Kazbegi, Georgia',
+            nl: 'Stepantsminda op zijn groene hellingen onder een besneeuwd Kaukasusmassief, Kazbegi, Georgië',
+            cs: 'Stepantsminda na zelených svazích pod zasněženým kavkazským masivem, Kazbegi, Gruzie',
+            pl: 'Stepantsminda na zielonych zboczach pod ośnieżonym masywem Kaukazu, Kazbegi, Gruzja',
+          },
+          caption: {
+            en: 'Stepantsminda spread across the green slopes of its valley, below a snow-capped massif of the Greater Caucasus.',
+            de: 'Stepantsminda erstreckt sich über die grünen Hänge seines Tals, darüber ein schneebedecktes Massiv des Großen Kaukasus.',
+            fr: "Stepantsminda s'étend sur les pentes verdoyantes de sa vallée, sous un massif enneigé du Grand Caucase.",
+            es: 'Stepantsminda se extiende por las laderas verdes de su valle, bajo un macizo nevado del Gran Cáucaso.',
+            nl: 'Stepantsminda ligt uitgespreid over de groene hellingen van zijn dal, onder een besneeuwd massief van de Grote Kaukasus.',
+            cs: 'Stepantsminda se rozkládá po zelených svazích svého údolí pod zasněženým masivem Velkého Kavkazu.',
+            pl: 'Stepantsminda rozciąga się po zielonych zboczach swojej doliny, pod ośnieżonym masywem Wielkiego Kaukazu.',
+          },
+        },
+      ],
       address: { addressLocality: 'Stepantsminda' },
       attractions: ['Gergeti Trinity Church', 'Juta Valley & Chaukhi Mountains', 'Truso Valley', 'Gergeti Glacier', 'Gveleti Waterfalls', 'Dariali Gorge', 'Gudauri Panorama'],
     },

@@ -1651,6 +1651,53 @@ section {
   }
 }
 /* Native is 1448 — that is the top rung. Do not add a 1600 or 2400 breakpoint. */
+/* Things to Do in Kazbegi hero — per-page CSS background, same mechanism as the
+   other things-to-do guides. Replaces the generic georgia-home.jpg placeholder
+   with Gergeti Trinity Church on its green hill below the Caucasus wall.
+
+   ⚠️ THE FILES LIVE IN /images/mtskheta-mtianeti/, not /images/files/. This is the
+   region page's Gergeti inline set, referenced in place — nothing was copied. It
+   is also the ONLY Kazbegi-area frame in the project that is not already some
+   page's hero, which is why it was chosen. Names carry NO `w` suffix.
+
+   Native is 1448 and only 768/1200/1448 exist — that is the whole ladder. Do NOT
+   add a 1600/2400 rung.
+
+   ⚠️ `background-position: 30% center`, NOT the inherited `center` — measured at
+   360px, not guessed. The church sits about a third of the way in from the left of
+   this 3:2 frame, so at the narrow mobile crop `center` pushes it hard against the
+   left edge and clips its near tower, leaving a hero that is all mountain and no
+   landmark. 30% recentres the crop on the church and its hill; 38% still clipped
+   the approach. Desktop is barely affected (the crop is near full-width there) and
+   was re-checked at 1440px. Must sit after `.coverme`, which sets
+   `background-position: center`, to win on source order — it does. */
+.hero--things-to-do-kazbegi {
+  background-image: url("/images/mtskheta-mtianeti/gergeti-trinity-church-caucasus-kazbegi-georgia-768.webp");
+  background-image: image-set(
+    url("/images/mtskheta-mtianeti/gergeti-trinity-church-caucasus-kazbegi-georgia-768.avif") type("image/avif"),
+    url("/images/mtskheta-mtianeti/gergeti-trinity-church-caucasus-kazbegi-georgia-768.webp") type("image/webp")
+  );
+  background-size: cover;
+  background-position: 30% center;
+  background-repeat: no-repeat;
+}
+@media (min-width: 768px) {
+  .hero--things-to-do-kazbegi {
+    background-image: image-set(
+      url("/images/mtskheta-mtianeti/gergeti-trinity-church-caucasus-kazbegi-georgia-1200.avif") type("image/avif"),
+      url("/images/mtskheta-mtianeti/gergeti-trinity-church-caucasus-kazbegi-georgia-1200.webp") type("image/webp")
+    );
+  }
+}
+@media (min-width: 1200px) {
+  .hero--things-to-do-kazbegi {
+    background-image: image-set(
+      url("/images/mtskheta-mtianeti/gergeti-trinity-church-caucasus-kazbegi-georgia-1448.avif") type("image/avif"),
+      url("/images/mtskheta-mtianeti/gergeti-trinity-church-caucasus-kazbegi-georgia-1448.webp") type("image/webp")
+    );
+  }
+}
+/* Native is 1448 — that is the top rung. Do not add a 1600 or 2400 breakpoint. */
 /* Martvili Canyon hero — per-page CSS background (same opt-in mechanism as
    .hero--akhaltsikhe above). FIRST Samegrelo photograph in the project; replaces
    the generic georgia-home.jpg placeholder.
