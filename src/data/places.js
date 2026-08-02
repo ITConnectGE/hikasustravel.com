@@ -3110,7 +3110,190 @@ export const cities = [
       },
     ],
     thingsToDo: {
-      seoKey: 'thingsToDoBakuriani', contentKey: 'thingsToDoBakuriani', image: '/images/files/georgia-home.jpg',
+      seoKey: 'thingsToDoBakuriani', contentKey: 'thingsToDoBakuriani',
+      // Cover/hero = the groomed-piste frame, REPLACING the generic
+      // georgia-home.jpg placeholder this guide shipped with. It is the image
+      // package's own hero recommendation: already 16:9, the left half is clean
+      // sky/snow so the H1 sits well, and it reads as "ski resort" at thumbnail
+      // size. Native 1672x941 → top rung 1600, NO upscale.
+      //
+      // ⚠️ DELIBERATE duplication, precedented: this is also the Bakuriani CITY
+      // page hero. The package explicitly rules out the alternatives as heroes —
+      // chairlift-view is "noticeably soft, looks like a video still, don't run
+      // it full-bleed", and chairlift-forest's lift cables "get visually busy
+      // once a hero overlay is applied". Same call the Akhaltsikhe and
+      // Samtskhe-Javakheti guides made in reusing their parent page's hero.
+      image: '/images/files/bakuriani-ski-slope-georgia-1600w.webp',
+      imageAvif: '/images/files/bakuriani-ski-slope-georgia-1600w.avif',
+      heroClass: 'hero--things-to-do-bakuriani',
+      heroPreload: '/images/files/bakuriani-ski-slope-georgia-1200w.avif',
+      // Dedicated 1.91:1 social image, already built in the package. Without it
+      // og:image fell back to the georgia-home.jpg placeholder.
+      ogImage: { src: '/images/files/bakuriani-ski-slope-georgia-og-1200x630.jpg', width: 1200, height: 630 },
+      // ⚠️ CAPTIONS ARE NEWLY WRITTEN, NOT the package's. Every one of the
+      // package's five captions imports a fact this page never states — the
+      // Trialeti Range (0 mentions here), Mitarbi (0), a volcanic caldera, the
+      // Kokhta lift's 2016 reopening, and the 2023 FIS World Championships — and
+      // captions must not introduce facts the page doesn't support. The package
+      // ALT strings are clean (they describe only what is visible) and ARE reused
+      // verbatim in all 7 locales.
+      //
+      // No caption names Didveli, Kokhta or Mitarbi: not one of these frames is
+      // identifiably a single named area, so the wording stays "Bakuriani" even
+      // where the figure sits beside the Didveli or Kokhta section.
+      //
+      // NAMING: unusually clean — all 7 locales write Bakuriani/Didveli/Kokhta in
+      // Latin, so there is no exonym trap here. Only the country name localizes.
+      imageMeta: {
+        width: 1600, height: 900, imageId: 'hero-image',
+        name: 'Ski slope at Bakuriani, Samtskhe-Javakheti, Georgia',
+        description: 'A groomed piste beside a chairlift line, running between snow-covered spruce forest at the Bakuriani mountain resort, Samtskhe-Javakheti, Georgia (the country).',
+        locationName: 'Bakuriani',
+        locality: 'Bakuriani', region: 'Samtskhe-Javakheti', country: 'GE',
+        geo: { lat: 41.75, lng: 43.533 },
+        alt: {
+          en: 'Skiers on a groomed piste beside a chairlift among snow-covered spruce forest at Bakuriani, Georgia',
+          de: 'Skifahrer auf einer präparierten Piste neben einem Sessellift im verschneiten Fichtenwald in Bakuriani, Georgien',
+          fr: "Des skieurs sur une piste damée près d'un télésiège dans la forêt d'épicéas enneigée de Bakuriani, Géorgie",
+          es: 'Esquiadores en una pista pisada junto a un telesilla entre el bosque nevado de abetos en Bakuriani, Georgia',
+          nl: 'Skiërs op een geprepareerde piste naast een stoeltjeslift in het besneeuwde sparrenbos van Bakuriani, Georgië',
+          cs: 'Lyžaři na upravené sjezdovce vedle sedačkové lanovky ve zasněženém smrkovém lese v Bakuriani, Gruzie',
+          pl: 'Narciarze na wyratrakowanym stoku obok wyciągu krzesełkowego w ośnieżonym świerkowym lesie w Bakuriani, Gruzja',
+        },
+        caption: {
+          en: 'A groomed piste and a chairlift line running between snow-covered spruce forest at Bakuriani.',
+          de: 'Eine präparierte Piste und eine Sesselliftlinie zwischen verschneitem Fichtenwald in Bakuriani.',
+          fr: "Une piste damée et la ligne d'un télésiège entre la forêt d'épicéas enneigée à Bakuriani.",
+          es: 'Una pista pisada y la línea de un telesilla entre el bosque nevado de abetos en Bakuriani.',
+          nl: 'Een geprepareerde piste en een stoeltjesliftlijn tussen het besneeuwde sparrenbos in Bakuriani.',
+          cs: 'Upravená sjezdovka a linka sedačkové lanovky mezi zasněženým smrkovým lesem v Bakuriani.',
+          pl: 'Wyratrakowany stok i linia wyciągu krzesełkowego pośród ośnieżonego świerkowego lasu w Bakuriani.',
+        },
+      },
+      // Four contextual body figures, spliced by BLOCK INDEX (all 7 locales share
+      // a 13-block shape): the scenery overview (1), Didveli (2), Kokhta (3) and
+      // the "slow down / mountain air" section (10).
+      //
+      // ⚠️ FILES ARE COPIED, not referenced. The Bakuriani set ships `-1200w.webp`
+      // names, but inlineImageObjects builds `base-<width>.webp` with NO `w`, so
+      // referencing in place would make every ImageObject contentUrl a 404 that
+      // disagrees with the rendered <img>. The four inlines are therefore copied
+      // byte-identical to /images/bakuriani/ under no-`w` names at 768 + 1200, and
+      // BOTH the figure srcset and the JSON-LD point at those same URLs. Nothing
+      // re-encoded, nothing upscaled. (The hero needs no copy — hero paths are
+      // used verbatim, so it references /images/files in place.)
+      //
+      // Eight sections stay image-free rather than take a stretched match: the
+      // "learn to ski" and "snow activities" sections, because NO photograph in
+      // the project shows lessons, sledding, snowmobiling or sleigh rides and a
+      // ski frame would misrepresent them; both summer sections, the Kukushka
+      // railway and Borjomi, because no summer, railway or usable Borjomi
+      // photograph exists at all; and the two planning/summary sections.
+      //
+      // Brand credit kept: the package states these are our own photos, and the
+      // city page already credits them.
+      inlineImageObjects: [
+        {
+          base: 'bakuriani-chairlift-view-georgia', width: 1200, height: 694,
+          anchor: 'inline-chairlift-view', dir: '/images/bakuriani',
+          description: 'The view from a chairlift at Bakuriani, looking out over snow-covered forest toward the ridges beyond, Samtskhe-Javakheti, Georgia.',
+          locationName: 'Bakuriani', locality: 'Bakuriani', region: 'Samtskhe-Javakheti',
+          geo: { lat: 41.75, lng: 43.533 },
+          name: {
+            en: 'View from a chairlift over snowy forest toward a distant peak at Bakuriani, Georgia',
+            de: 'Blick vom Sessellift über verschneiten Wald zu einem fernen Gipfel in Bakuriani, Georgien',
+            fr: "Vue depuis un télésiège sur la forêt enneigée vers un sommet lointain à Bakuriani, Géorgie",
+            es: 'Vista desde un telesilla sobre el bosque nevado hacia un pico lejano en Bakuriani, Georgia',
+            nl: 'Uitzicht vanaf een stoeltjeslift over besneeuwd bos naar een verre top in Bakuriani, Georgië',
+            cs: 'Pohled ze sedačkové lanovky přes zasněžený les k vzdálenému vrcholu v Bakuriani, Gruzie',
+            pl: 'Widok z wyciągu krzesełkowego ponad ośnieżonym lasem ku odległemu szczytowi w Bakuriani, Gruzja',
+          },
+          caption: {
+            en: 'The view from a chairlift at Bakuriani, over snow-covered forest toward the ridges beyond.',
+            de: 'Der Blick vom Sessellift in Bakuriani über verschneiten Wald zu den Bergrücken dahinter.',
+            fr: "La vue depuis un télésiège à Bakuriani, par-dessus la forêt enneigée vers les crêtes au loin.",
+            es: 'La vista desde un telesilla en Bakuriani, sobre el bosque nevado hacia los cordales del fondo.',
+            nl: 'Het uitzicht vanaf een stoeltjeslift in Bakuriani, over besneeuwd bos naar de bergkammen erachter.',
+            cs: 'Pohled ze sedačkové lanovky v Bakuriani přes zasněžený les k hřebenům v pozadí.',
+            pl: 'Widok z wyciągu krzesełkowego w Bakuriani, ponad ośnieżonym lasem ku grzbietom w oddali.',
+          },
+        },
+        {
+          base: 'bakuriani-mountain-panorama-georgia', width: 1200, height: 900,
+          anchor: 'inline-panorama', dir: '/images/bakuriani',
+          description: 'Wide, gently rolling snowfields above the tree line at Bakuriani, with snow-covered ridges beyond, Samtskhe-Javakheti, Georgia.',
+          locationName: 'Bakuriani', locality: 'Bakuriani', region: 'Samtskhe-Javakheti',
+          geo: { lat: 41.75, lng: 43.533 },
+          name: {
+            en: 'Snow-covered ridges and open pistes seen from a summit at Bakuriani, Georgia',
+            de: 'Verschneite Bergrücken und offene Pisten vom Gipfel in Bakuriani, Georgien',
+            fr: "Crêtes enneigées et pistes ouvertes vues depuis un sommet à Bakuriani, Géorgie",
+            es: 'Cordales nevados y pistas abiertas vistos desde una cumbre en Bakuriani, Georgia',
+            nl: 'Besneeuwde bergkammen en open pistes gezien vanaf een top in Bakuriani, Georgië',
+            cs: 'Zasněžené hřebeny a otevřené sjezdovky z vrcholu v Bakuriani, Gruzie',
+            pl: 'Ośnieżone grzbiety i otwarte stoki widziane ze szczytu w Bakuriani, Gruzja',
+          },
+          caption: {
+            en: 'Above the treeline the slopes at Bakuriani open into wide, gently rolling snowfields.',
+            de: 'Oberhalb der Baumgrenze öffnen sich die Hänge in Bakuriani zu weiten, sanft gewellten Schneefeldern.',
+            fr: "Au-dessus de la limite des arbres, les pentes de Bakuriani s'ouvrent en vastes champs de neige légèrement vallonnés.",
+            es: 'Por encima del límite arbóreo, las laderas de Bakuriani se abren en amplios campos de nieve suavemente ondulados.',
+            nl: 'Boven de boomgrens openen de hellingen bij Bakuriani zich in weidse, zacht golvende sneeuwvelden.',
+            cs: 'Nad hranicí lesa se svahy v Bakuriani otevírají do širokých, mírně zvlněných sněhových polí.',
+            pl: 'Powyżej granicy lasu stoki w Bakuriani otwierają się w szerokie, łagodnie faliste pola śnieżne.',
+          },
+        },
+        {
+          base: 'bakuriani-chairlift-forest-georgia', width: 1200, height: 675,
+          anchor: 'inline-chairlift-forest', dir: '/images/bakuriani',
+          description: 'A chairlift rising through snow-laden spruce forest toward the pistes on the ridge above Bakuriani, Samtskhe-Javakheti, Georgia.',
+          locationName: 'Bakuriani', locality: 'Bakuriani', region: 'Samtskhe-Javakheti',
+          geo: { lat: 41.75, lng: 43.533 },
+          name: {
+            en: 'A chairlift climbing through snow-laden spruce forest toward the summit at Bakuriani, Georgia',
+            de: 'Ein Sessellift steigt durch schneebeladenen Fichtenwald zum Gipfel in Bakuriani, Georgien',
+            fr: "Un télésiège s'élève à travers la forêt d'épicéas enneigée vers le sommet à Bakuriani, Géorgie",
+            es: 'Un telesilla asciende entre abetos cargados de nieve hacia la cumbre en Bakuriani, Georgia',
+            nl: 'Een stoeltjeslift klimt door met sneeuw beladen sparrenbos naar de top in Bakuriani, Georgië',
+            cs: 'Sedačková lanovka stoupá zasněženým smrkovým lesem k vrcholu v Bakuriani, Gruzie',
+            pl: 'Wyciąg krzesełkowy wznosi się przez ośnieżony świerkowy las ku szczytowi w Bakuriani, Gruzja',
+          },
+          caption: {
+            en: 'A chairlift climbs through snow-laden spruce forest toward the pistes on the ridge above Bakuriani.',
+            de: 'Ein Sessellift steigt durch schneebeladenen Fichtenwald zu den Pisten am Grat oberhalb von Bakuriani.',
+            fr: "Un télésiège s'élève à travers la forêt d'épicéas enneigée vers les pistes de la crête au-dessus de Bakuriani.",
+            es: 'Un telesilla asciende entre abetos cargados de nieve hacia las pistas de la cresta sobre Bakuriani.',
+            nl: 'Een stoeltjeslift klimt door met sneeuw beladen sparrenbos naar de pistes op de bergkam boven Bakuriani.',
+            cs: 'Sedačková lanovka stoupá zasněženým smrkovým lesem ke sjezdovkám na hřebeni nad Bakuriani.',
+            pl: 'Wyciąg krzesełkowy wznosi się przez ośnieżony świerkowy las ku trasom na grani nad Bakuriani.',
+          },
+        },
+        {
+          base: 'bakuriani-slope-cafe-georgia', width: 1200, height: 1983,
+          anchor: 'inline-slope-plateau', dir: '/images/bakuriani',
+          description: 'A slope-side hut on a snowy plateau at Bakuriani, with snow-covered ridges spread out beyond, Samtskhe-Javakheti, Georgia.',
+          locationName: 'Bakuriani', locality: 'Bakuriani', region: 'Samtskhe-Javakheti',
+          geo: { lat: 41.75, lng: 43.533 },
+          name: {
+            en: 'Skiers and a slope-side cafe on a snowy plateau with mountain views at Bakuriani, Georgia',
+            de: 'Skifahrer und ein Pisten-Café auf einem verschneiten Plateau mit Bergblick in Bakuriani, Georgien',
+            fr: "Des skieurs et un café de piste sur un plateau enneigé avec vue sur les montagnes à Bakuriani, Géorgie",
+            es: 'Esquiadores y un café a pie de pista en una meseta nevada con vistas a las montañas en Bakuriani, Georgia',
+            nl: 'Skiërs en een pistecafé op een besneeuwd plateau met bergzicht in Bakuriani, Georgië',
+            cs: 'Lyžaři a kavárna u sjezdovky na zasněžené plošině s výhledem na hory v Bakuriani, Gruzie',
+            pl: 'Narciarze i kawiarnia przy stoku na ośnieżonym płaskowyżu z widokiem na góry w Bakuriani, Gruzja',
+          },
+          caption: {
+            en: 'A slope-side hut on a snowy plateau at Bakuriani, with snow-covered ridges spread out beyond.',
+            de: 'Eine Hütte am Pistenrand auf einem verschneiten Plateau in Bakuriani, dahinter breiten sich verschneite Bergrücken aus.',
+            fr: "Un chalet en bord de piste sur un plateau enneigé à Bakuriani, les crêtes enneigées s'étendant au-delà.",
+            es: 'Una cabaña junto a la pista en una meseta nevada en Bakuriani, con los cordales nevados extendiéndose al fondo.',
+            nl: 'Een hut langs de piste op een besneeuwd plateau in Bakuriani, met daarachter besneeuwde bergkammen.',
+            cs: 'Chata u sjezdovky na zasněžené plošině v Bakuriani, za ní se rozprostírají zasněžené hřebeny.',
+            pl: 'Chata przy stoku na ośnieżonym płaskowyżu w Bakuriani, a za nią rozciągają się ośnieżone grzbiety.',
+          },
+        },
+      ],
       address: { addressLocality: 'Bakuriani' },
       attractions: [
         'Didveli Ski Area', 'Kokhta Ski Area', 'Ski and Snowboard Lessons',

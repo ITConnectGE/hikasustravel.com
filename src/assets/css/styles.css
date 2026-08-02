@@ -1492,6 +1492,48 @@ section {
   }
 }
 /* No rung above 1448 exists. Do not add a 1600 or 2400 breakpoint. */
+/* Things to Do in Bakuriani hero — per-page CSS background, same mechanism as the
+   other things-to-do guides. Replaces the generic georgia-home.jpg placeholder.
+
+   The source is 1672x941 (16:9) and the package ships 768/1200/1600, so the ladder
+   is exactly those three with breakpoints at 768 and 1200. Native is 1672 — 1600 is
+   the top rung and there is NO 2104/2400 variant of this frame; do not add one.
+
+   Default `background-position: center` (inherited from .coverme) is correct here
+   and is deliberately NOT overridden: this is a true 16:9 landscape, so the wide
+   hero crops it only slightly and the piste, the lift line and the forest all stay
+   in frame at every viewport. Contrast with .hero--martvili-canyon, which needed an
+   explicit position because its source is portrait.
+
+   ⚠️ Same photograph as the Bakuriani CITY page hero, deliberately: the image
+   package rules out the alternatives as heroes (chairlift-view is soft and must not
+   run full-bleed; chairlift-forest's cables go busy under the overlay). */
+.hero--things-to-do-bakuriani {
+  background-image: url("/images/files/bakuriani-ski-slope-georgia-768w.webp");
+  background-image: image-set(
+    url("/images/files/bakuriani-ski-slope-georgia-768w.avif") type("image/avif"),
+    url("/images/files/bakuriani-ski-slope-georgia-768w.webp") type("image/webp")
+  );
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+@media (min-width: 768px) {
+  .hero--things-to-do-bakuriani {
+    background-image: image-set(
+      url("/images/files/bakuriani-ski-slope-georgia-1200w.avif") type("image/avif"),
+      url("/images/files/bakuriani-ski-slope-georgia-1200w.webp") type("image/webp")
+    );
+  }
+}
+@media (min-width: 1200px) {
+  .hero--things-to-do-bakuriani {
+    background-image: image-set(
+      url("/images/files/bakuriani-ski-slope-georgia-1600w.avif") type("image/avif"),
+      url("/images/files/bakuriani-ski-slope-georgia-1600w.webp") type("image/webp")
+    );
+  }
+}
+/* Native is 1672. 1600 is the top rung — do not add a 2104 or 2400 breakpoint. */
 /* Martvili Canyon hero — per-page CSS background (same opt-in mechanism as
    .hero--akhaltsikhe above). FIRST Samegrelo photograph in the project; replaces
    the generic georgia-home.jpg placeholder.
