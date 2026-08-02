@@ -830,9 +830,9 @@
     "keywords": "Nationalpark Kolkheti, Kolkheti, Kolchis, Paliastomi-See, Paliastomi, Fluss Pichori, georgischer Amazonas, Poti, Samegrelo, Guria, Feuchtgebiete am Schwarzen Meer, Kolchische Regenwälder und Feuchtgebiete, UNESCO-Welterbe, Ramsar-Feuchtgebiet, Vogelbeobachtung Georgien, Vogelzug, Krauskopfpelikan, Phasianus colchicus, Fasan, Goldenes Vlies, Argonauten, Phasis, Rioni, kolchischer Wald, Churia, Mtirala, Kintrishi, Kobuleti, Kutaisi, Zugdidi, Batumi"
   },
   "martviliCanyon": {
-    "title": "Martwili-Schlucht: Georgiens türkisfarbene Schlucht per Boot",
-    "description": "Martwili-Schlucht, Georgien: eine türkisfarbene Kalksteinschlucht nahe Kutaisi, erkundet über einen kurzen Steg am Rand und eine Bootsfahrt durch die Schlucht – mühelos, dramatisch, ganzjährig.",
-    "keywords": "Martwili-Schlucht, Martvili, Fluss Abasha, türkisfarbene Schlucht Georgien, Kalksteinschlucht, Bootsfahrt, Karst, Samegrelo, Imeretien, Okatse-Schlucht, Kinchkha-Wasserfall, Kutaisi, Martwili-Kloster, Chkondidi, Toba-Wasserfall, Oniore, Ochkhomuri, Intsra-Wasserfall, Natur Westgeorgien, Schlucht-Bootstour, jurassischer Kalkstein, Tiflis"
+    "title": "Martvili-Schlucht: Georgiens türkisfarbene Schlucht per Boot",
+    "description": "Martvili-Schlucht, Georgien: eine türkisfarbene Kalksteinschlucht nahe Kutaisi, erkundet über einen kurzen Steg am Rand und eine Bootsfahrt durch die Schlucht – mühelos, dramatisch, ganzjährig.",
+    "keywords": "Martvili-Schlucht, Martvili, Fluss Abasha, türkisfarbene Schlucht Georgien, Kalksteinschlucht, Bootsfahrt, Karst, Samegrelo, Imeretien, Okatse-Schlucht, Kinchkha-Wasserfall, Kutaisi, Martvili-Kloster, Chkondidi, Toba-Wasserfall, Oniore, Ochkhomuri, Intsra-Wasserfall, Natur Westgeorgien, Schlucht-Bootstour, jurassischer Kalkstein, Tiflis"
   },
   "martviliMonastery": {
     "title": "Kloster Martvili (Chkondidi), Samegrelo, Georgien",
@@ -1271,8 +1271,8 @@
   },
   "kutaisi": {
     "title": "Kutaissi, Georgien: Bagrati, Gelati & Schluchten",
-    "description": "Kutaissi ist das historische Zentrum Westgeorgiens: das UNESCO-Kloster Gelati und die Bagrati-Kathedrale, die Prometheus-Höhle, die Schluchten von Martwili und Okatse sowie Zqaltubo.",
-    "keywords": "Kutaissi, Kutaissi Georgien, Kloster Gelati, Bagrati-Kathedrale, Prometheus-Höhle, Martwili-Schlucht, Okatse-Schlucht, Zqaltubo, Imeretien"
+    "description": "Kutaissi ist das historische Zentrum Westgeorgiens: das UNESCO-Kloster Gelati und die Bagrati-Kathedrale, die Prometheus-Höhle, die Schluchten von Martvili und Okatse sowie Zqaltubo.",
+    "keywords": "Kutaissi, Kutaissi Georgien, Kloster Gelati, Bagrati-Kathedrale, Prometheus-Höhle, Martvili-Schlucht, Okatse-Schlucht, Zqaltubo, Imeretien"
   },
   "kvareli": {
     "title": "Kwareli, Georgien: Kindsmarauli-Wein & Kachetien",
@@ -1280,9 +1280,9 @@
     "keywords": "Kwareli, Kwareli Georgien, Kindsmarauli-Wein, Weintunnel Kwareli, Qvevri, Kloster Nekresi, Tschawtschawadse-Museum, Kwareli-See"
   },
   "martvili": {
-    "title": "Martwili, Georgien: Schlucht, Kloster & Mingrelien",
-    "description": "Martwili in Westgeorgien ist bekannt für die türkisfarbene Martwili-Schlucht mit ihrer Bootsfahrt, ein Kloster aus dem 7. Jahrhundert und die eigenständige mingrelische Küche. Der komplette Guide.",
-    "keywords": "Martwili, Martwili-Schlucht, Kloster Martwili, Bootsfahrt, Mingrelien, Samegrelo, mingrelische Küche, Balda-Wasserfall"
+    "title": "Martvili, Georgien: Schlucht, Kloster & Mingrelien",
+    "description": "Martvili in Westgeorgien ist bekannt für die türkisfarbene Martvili-Schlucht mit ihrer Bootsfahrt, ein Kloster aus dem 7. Jahrhundert und die eigenständige mingrelische Küche. Der komplette Guide.",
+    "keywords": "Martvili, Martvili-Schlucht, Kloster Martvili, Bootsfahrt, Mingrelien, Samegrelo, mingrelische Küche, Balda-Wasserfall"
   },
   "mestia": {
     "title": "Mestia, Georgien: Swanentürme, Wandern & Swanetien",
@@ -1366,7 +1366,7 @@
   },
   "thingsToDoKutaisi": {
     "title": "Sehenswertes in Kutaissi: Höhlen & Schluchten",
-    "description": "Sehenswertes in Kutaissi, Georgien: Gelati und Bagrati, Mozameta, die Prometheus-Höhle, die Schluchten von Martwili und Okatse, Sataplia, Zqaltubo und das Rioni-Ufer.",
+    "description": "Sehenswertes in Kutaissi, Georgien: Gelati und Bagrati, Mozameta, die Prometheus-Höhle, die Schluchten von Martvili und Okatse, Sataplia, Zqaltubo und das Rioni-Ufer.",
     "keywords": "Sehenswertes Kutaissi, Gelati, Bagrati, Mozameta, Prometheus-Höhle, Okatse-Schlucht, Sataplia, Zqaltubo"
   },
   "thingsToDoKvareli": {
@@ -1375,9 +1375,9 @@
     "keywords": "Sehenswertes Kwareli, Khareba-Weintunnel, Qvevri-Keller, Kloster Nekresi, Kwareli-See, Tschawtschawadse-Museum"
   },
   "thingsToDoMartvili": {
-    "title": "Sehenswertes in Martwili: Schluchten & Natur",
-    "description": "Sehenswertes in Martwili, Georgien: die türkisfarbene Martwili-Schlucht mit Bootsfahrt, das Kloster auf dem Hügel, die Balda-Schlucht, der Fluss Abascha und die mingrelische Küche.",
-    "keywords": "Sehenswertes Martwili, Martwili-Schlucht, Bootsfahrt, Kloster Martwili, Balda-Schlucht, Fluss Abascha, mingrelische Küche"
+    "title": "Sehenswertes in Martvili: Schluchten & Natur",
+    "description": "Sehenswertes in Martvili, Georgien: die türkisfarbene Martvili-Schlucht mit Bootsfahrt, das Kloster auf dem Hügel, die Balda-Schlucht, der Fluss Abascha und die mingrelische Küche.",
+    "keywords": "Sehenswertes Martvili, Martvili-Schlucht, Bootsfahrt, Kloster Martvili, Balda-Schlucht, Fluss Abascha, mingrelische Küche"
   },
   "thingsToDoMestia": {
     "title": "Sehenswertes in Mestia: Türme & Gletscher",
