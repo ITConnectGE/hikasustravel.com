@@ -7830,7 +7830,106 @@ export const sites = [
     slug: 'martvili-canyon', name: 'Martvili Canyon',
     parentType: 'city', parent: 'martvili', formerParent: 'samegrelo', published: true,
     seoKey: 'martviliCanyon', contentKey: 'martviliCanyon',
-    image: '/images/files/georgia-home.jpg',
+    // FIRST Samegrelo photographs in the project — until this package arrived
+    // there were none at all, and both this page and the region page had to ship
+    // the generic georgia-home.jpg placeholder. Files live in a NEW
+    // /images/martvili/ folder (the region has no folder of its own yet).
+    //
+    // ⚠️ BOTH FRAMES ARE PORTRAIT 1086x1448 (exact 3:4), so the ladder caps at
+    // 768 + 1086. A 1200/1448/1600 rung would UPSCALE and is deliberately absent
+    // — do not add one. Files are copied byte-identical from the package; nothing
+    // re-encoded.
+    image: '/images/martvili/martvili-canyon-georgia-1086.webp',
+    imageAvif: '/images/martvili/martvili-canyon-georgia-1086.avif',
+    // Portrait photo in a wide hero: the ladder + `background-position: center 88%`
+    // live in `.hero--martvili-canyon` (styles.css), keeping the emerald pool and
+    // the gorge walls in frame instead of centring on the tree canopy. 88% rather
+    // than the package's suggested 62% — see the styles.css comment for the
+    // measurement; at 62% the desktop hero showed foliage and no water at all.
+    heroClass: 'hero--martvili-canyon',
+    // LCP preload = the 1086 AVIF, the rung the ladder serves from 768px up.
+    heroPreload: '/images/martvili/martvili-canyon-georgia-1086.avif',
+    // Dedicated social image. NOT the usual 1200x630: a portrait source can only
+    // yield a 1086x570 band without upscaling, so the package ships that and the
+    // real dimensions are declared here rather than claiming 1200x630.
+    ogImage: { src: '/images/martvili/martvili-canyon-georgia-og.jpg', width: 1086, height: 570 },
+    // ⚠️ NO BRAND CREDIT. The package ships both frames EXIF-stripped and flags
+    // them `credit: brand-CONFIRM` ("confirm own photos"); ownership was NOT
+    // confirmed, so `noCredit` drops creator/creditText/copyrightNotice rather
+    // than asserting an authorship we don't hold. Revisit if provenance is
+    // established.
+    //
+    // ⚠️ NAMING: alt and caption strings are the package's/owner's VERBATIM and
+    // diverge from this page's own body in three places — the body writes the
+    // river "Abasha" in all 7 locales (de "Abascha", cs "Abaša", pl "Abasza"
+    // here), and the Polish body writes the canyon "Martvili" 24x while these
+    // strings say "Martwili". Left as supplied on instruction; flagged for the
+    // owner rather than silently rewritten. (The German body is itself mixed:
+    // Martwili 15x / Martvili 9x — pre-existing, untouched.)
+    imageMeta: {
+      width: 1086, height: 1448, imageId: 'hero-image', noCredit: true,
+      name: 'Martvili Canyon, the emerald water of the Abasha River between forested limestone cliffs, Samegrelo, Georgia',
+      description: 'The emerald-green water of Martvili (Gachedili) Canyon seen at water level, winding between tall limestone walls draped in dense subtropical forest. The gorge was cut by the Abasha River through Jurassic limestone in the Samegrelo region of western Georgia (the country).',
+      locationName: 'Martvili Canyon',
+      region: 'Samegrelo-Zemo Svaneti', country: 'GE',
+      alt: {
+        en: 'The emerald-green water of Martvili Canyon flowing between tall limestone cliffs draped in lush green forest, Samegrelo, Georgia',
+        de: 'Das smaragdgrüne Wasser der Martvili-Schlucht fließt zwischen hohen, von üppigem grünem Wald bewachsenen Kalksteinfelsen, Samegrelo, Georgien',
+        fr: "L'eau vert émeraude du canyon de Martvili s'écoulant entre de hautes falaises calcaires couvertes d'une forêt verdoyante, Samegrelo, Géorgie",
+        es: 'El agua verde esmeralda del cañón de Martvili fluyendo entre altos acantilados calizos cubiertos de exuberante bosque verde, Samegrelo, Georgia',
+        nl: 'Het smaragdgroene water van de Martvili-canyon dat tussen hoge kalkstenen kliffen met weelderig groen bos door stroomt, Samegrelo, Georgië',
+        cs: 'Smaragdově zelená voda kaňonu Martvili protékající mezi vysokými vápencovými útesy porostlými bujným zeleným lesem, Samegrelo, Gruzie',
+        pl: 'Szmaragdowozielona woda kanionu Martwili płynąca między wysokimi wapiennymi klifami porośniętymi bujnym zielonym lasem, Samegrelo, Gruzja',
+      },
+      // ⚠️ TRIMMED, owner-approved. The package's hero caption ended with the
+      // gorge's history as "the private bathing place of the noble Dadiani
+      // family" (de Badeplatz, fr baignade, es baño, nl privébadplaats, cs
+      // koupaliště, pl kąpielisko — all 7 locales). Swimming is FORBIDDEN in the
+      // protected canyon and no caption may imply bathing or water access, so the
+      // clause is cut in every locale. Everything before it is the package's
+      // wording verbatim, and each string is still a complete sentence.
+      caption: {
+        en: "Martvili Canyon in Samegrelo — the Abasha River's emerald water winding between forested limestone walls.",
+        de: 'Die Martvili-Schlucht in Samegrelo – das smaragdgrüne Wasser des Flusses Abascha windet sich zwischen bewaldeten Kalksteinwänden.',
+        fr: "Le canyon de Martvili en Samegrelo — l'eau émeraude de la rivière Abasha serpente entre des parois calcaires boisées.",
+        es: 'El cañón de Martvili en Samegrelo: el agua esmeralda del río Abasha serpentea entre paredes calizas boscosas.',
+        nl: 'De Martvili-canyon in Samegrelo — het smaragdgroene water van de Abasha-rivier kronkelt tussen beboste kalkstenen wanden.',
+        cs: 'Kaňon Martvili v Samegrelu — smaragdová voda řeky Abaša se vine mezi zalesněnými vápencovými stěnami.',
+        pl: 'Kanion Martwili w Samegrelo — szmaragdowa woda rzeki Abasza wije się między zalesionymi wapiennymi ścianami.',
+      },
+    },
+    // One inline body figure, spliced into each locale's content after the
+    // "geology and the water" paragraph — the one that opens on the turquoise
+    // colour of the Abasha River and explains it as a limestone effect, which is
+    // exactly what this frame shows. `dir` points the ImageObject contentUrl at
+    // the new /images/martvili/ folder. Never representativeOfPage — that is the
+    // hero's. Same `noCredit` reasoning as above.
+    inlineImageObjects: [
+      {
+        base: 'martvili-canyon-turquoise-river-georgia', width: 1086, height: 1448,
+        anchor: 'inline-abasha-river', dir: '/images/martvili', noCredit: true,
+        description: 'The turquoise water of the Abasha River running over pale limestone shelves in Martvili Canyon, its banks thick with moss and greenery, Samegrelo, Georgia.',
+        locationName: 'Martvili Canyon', region: 'Samegrelo-Zemo Svaneti',
+        name: {
+          en: 'Turquoise water of the Abasha River rushing over pale limestone ledges in Martvili Canyon, its banks covered in moss and greenery, Georgia',
+          de: 'Türkisfarbenes Wasser des Flusses Abascha strömt über helle Kalksteinstufen in der Martvili-Schlucht, die Ufer mit Moos und Grün bedeckt, Georgien',
+          fr: "L'eau turquoise de la rivière Abasha dévalant des corniches calcaires claires dans le canyon de Martvili, ses berges couvertes de mousse et de verdure, Géorgie",
+          es: 'El agua turquesa del río Abasha corriendo sobre repisas calizas claras en el cañón de Martvili, sus orillas cubiertas de musgo y vegetación, Georgia',
+          nl: 'Turkoois water van de Abasha-rivier dat over lichte kalkstenen richels stroomt in de Martvili-canyon, de oevers bedekt met mos en groen, Georgië',
+          cs: 'Tyrkysová voda řeky Abaša se řítí přes světlé vápencové stupně v kaňonu Martvili, břehy pokryté mechem a zelení, Gruzie',
+          pl: 'Turkusowa woda rzeki Abasza pędząca po jasnych wapiennych półkach w kanionie Martwili, brzegi porośnięte mchem i zielenią, Gruzja',
+        },
+        caption: {
+          en: 'The turquoise Abasha River tumbling over limestone shelves in Martvili Canyon, its colour drawn from the mineral-rich water and pale rock.',
+          de: 'Der türkisfarbene Fluss Abascha stürzt über Kalksteinstufen in der Martvili-Schlucht, seine Farbe stammt vom mineralreichen Wasser und hellen Gestein.',
+          fr: "La rivière Abasha turquoise dévalant les gradins calcaires du canyon de Martvili, sa couleur venant de l'eau riche en minéraux et de la roche claire.",
+          es: 'El río Abasha turquesa cayendo sobre escalones calizos en el cañón de Martvili, su color procedente del agua rica en minerales y la roca clara.',
+          nl: 'De turkooizen Abasha-rivier die over kalkstenen richels tuimelt in de Martvili-canyon, haar kleur ontleend aan het mineraalrijke water en het lichte gesteente.',
+          cs: 'Tyrkysová řeka Abaša se valí přes vápencové stupně v kaňonu Martvili, její barva pochází z minerály bohaté vody a světlé skály.',
+          pl: 'Turkusowa rzeka Abasza spływająca po wapiennych progach w kanionie Martwili, jej barwa pochodzi z bogatej w minerały wody i jasnej skały.',
+        },
+      },
+    ],
   },
   {
     slug: 'martvili-monastery', name: 'Martvili Monastery (Chkondidi)',

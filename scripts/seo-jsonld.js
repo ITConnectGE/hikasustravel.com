@@ -64,9 +64,13 @@ function imageNode(meta, imageHref, lang, pageUrl) {
     name: meta.name,
     description: meta.description,
     representativeOfPage: true,
-    creator: ORG,
-    creditText: BRAND,
-    copyrightNotice: `© ${BRAND}`,
+    // Brand credit is the default (our own photos). A hero whose provenance we
+    // cannot vouch for sets `noCredit: true` and ships with the credit fields
+    // omitted rather than asserting an authorship we don't hold — the same
+    // opt-out SitePage/RegionPage/ThingsToDoCityPage apply to the runtime graph.
+    // This file builds the STATIC build-time JSON-LD, so without the flag here a
+    // `noCredit` hero would still claim brand credit in the prerendered HTML.
+    ...(meta.noCredit ? {} : { creator: ORG, creditText: BRAND, copyrightNotice: `© ${BRAND}` }),
     contentLocation: {
       '@type': 'Place',
       name: meta.locationName,

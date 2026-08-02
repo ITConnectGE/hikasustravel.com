@@ -18,6 +18,28 @@ import NotFoundPage from './NotFoundPage'
 const SITE_URL = 'https://www.hikasustravel.com'
 // Brand used for ImageObject credit/creator (mirrors og:site_name in useSEO).
 const BRAND = 'Hikasus Travel'
+
+/**
+ * Brand credit for an image's ImageObject — applied by default, since these
+ * photos are our own. An image whose provenance we cannot vouch for sets
+ * `noCredit: true` and ships with the credit fields omitted entirely rather
+ * than asserting an authorship we don't hold (schema.org treats absent credit
+ * as unknown, which is the honest answer).
+ *
+ * Ported verbatim from RegionPage/ThingsToDoCityPage, which have had this since
+ * the Adjara pass. Backwards-compatible: no SitePage `imageMeta` or
+ * `inlineImageObjects` entry set `noCredit` before this, so every existing page
+ * keeps exactly the credit it had. First consumer: Martvili Canyon, whose
+ * package ships EXIF-stripped frames flagged `credit: brand-CONFIRM`.
+ */
+function creditFields(img) {
+  if (img.noCredit) return {}
+  return {
+    creator: { '@type': 'Organization', name: BRAND },
+    creditText: BRAND,
+    copyrightNotice: `© ${BRAND}`,
+  }
+}
 // Responsive-variant widths shipped for each gallery base name. These originals
 // top out at 1536px (no upscaled 2400 variant), so the largest source is 1536w
 // and the fallback <img> uses -1200w.webp. Mirrors the Telavi CityPage gallery.
@@ -207,9 +229,7 @@ export default function SitePage() {
           name: heroImageMeta.name,
           description: heroImageMeta.description,
           representativeOfPage: true,
-          creator: { '@type': 'Organization', name: BRAND },
-          creditText: BRAND,
-          copyrightNotice: `© ${BRAND}`,
+          ...creditFields(heroImageMeta),
           contentLocation: {
             '@type': 'Place',
             name: heroImageMeta.locationName,
@@ -327,9 +347,7 @@ export default function SitePage() {
           name: (img.name && (img.name[lang] || img.name.en)) || '',
           caption: (img.caption && (img.caption[lang] || img.caption.en)) || '',
           description: img.description,
-          creator: { '@type': 'Organization', name: BRAND },
-          creditText: BRAND,
-          copyrightNotice: `© ${BRAND}`,
+          ...creditFields(img),
           contentLocation: {
             '@type': 'Place',
             name: img.locationName,

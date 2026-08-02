@@ -1492,6 +1492,52 @@ section {
   }
 }
 /* No rung above 1448 exists. Do not add a 1600 or 2400 breakpoint. */
+/* Martvili Canyon hero — per-page CSS background (same opt-in mechanism as
+   .hero--akhaltsikhe above). FIRST Samegrelo photograph in the project; replaces
+   the generic georgia-home.jpg placeholder.
+
+   ⚠️ PORTRAIT SOURCE (1086x1448, exact 3:4) in a wide hero. The ladder therefore
+   caps at 768 + 1086 — a 1200/1448/1600 rung would upscale and must NOT be added.
+   `background-position` is the background-image equivalent of the package's
+   `object-position`, and biases the crop DOWN so the emerald pool and the gorge
+   walls stay in frame rather than centring on the tree canopy. It has to sit after
+   `.coverme` (which sets `background-position: center`) to win on source order —
+   it does.
+
+   ⚠️ 88%, NOT the package's 62% — measured, not guessed. The hero box is 100dvh,
+   so at 1440x810 cover scales the 1086x1448 source to 1920 tall and shows only
+   810px of it (42%). At Y=62% that visible band is 36%-78% of the frame, and the
+   emerald pool sits at ~82% — so a 62% crop showed a wall of foliage and NO WATER
+   on desktop, failing the "clean desktop crop" requirement. 88% puts the band at
+   roughly 49%-91%, which holds the pool, the gorge walls and the canopy together
+   at 768, 1024, 1366, 1440 and 1920. Y is INERT below 768px (box aspect 0.51 <
+   the image's 0.75, so cover scales by height and the full frame is shown), so
+   this costs the mobile crop nothing — verified by screenshot at 390px.
+
+   Hero geometry is deliberately NOT overridden: `.fullscreen` is height:100dvh, so
+   a desktop 1920x1080 viewport already gives ~16/9 and a 390x844 phone gives ~0.46,
+   i.e. far taller than the 4/5 the package asks for on mobile. Both requirements
+   are met by the shared hero box; a per-page height would break consistency with
+   every other page for no gain. */
+.hero--martvili-canyon {
+  background-image: url("/images/martvili/martvili-canyon-georgia-768.webp");
+  background-image: image-set(
+    url("/images/martvili/martvili-canyon-georgia-768.avif") type("image/avif"),
+    url("/images/martvili/martvili-canyon-georgia-768.webp") type("image/webp")
+  );
+  background-position: center 88%;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+@media (min-width: 768px) {
+  .hero--martvili-canyon {
+    background-image: image-set(
+      url("/images/martvili/martvili-canyon-georgia-1086.avif") type("image/avif"),
+      url("/images/martvili/martvili-canyon-georgia-1086.webp") type("image/webp")
+    );
+  }
+}
+/* 1086 is the native width. Do NOT add a 1200, 1448 or 1600 breakpoint. */
 /* Rabati Fortress hero — per-page CSS background (same opt-in mechanism as
    .hero--gremi). Akhaltsikhe Castle, native 4:3 (1448x1086), just under the 1600
    rung, so the ladder is exactly 768/1200/1448 with the top breakpoint at
