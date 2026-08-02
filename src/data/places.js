@@ -3461,7 +3461,217 @@ export const cities = [
       },
     ],
     thingsToDo: {
-      seoKey: 'thingsToDoChiatura', contentKey: 'thingsToDoChiatura', image: '/images/files/georgia-home.jpg',
+      seoKey: 'thingsToDoChiatura', contentKey: 'thingsToDoChiatura',
+      // Cover/hero = the autumn town panorama, REPLACING the generic
+      // georgia-home.jpg placeholder. Broad and on-topic: it shows exactly what
+      // this guide's "industrial landscape" section describes — the town built
+      // into a narrow valley with steep rock walls on both sides. Native 1448.
+      //
+      // ⚠️ DELIBERATE duplication, precedented: this is also the Chiatura CITY
+      // page hero. EVERY Chiatura-area photograph in the project is already
+      // committed to a page (city ×9, Katskhi Pillar site ×3, Mghvimevi site ×3,
+      // Cable Cars site ×1), so a guide can only duplicate. Same call the
+      // Akhaltsikhe, Bakuriani and Samtskhe-Javakheti guides made.
+      image: '/images/files/chiatura-town-panorama-imereti-georgia-1448w.webp',
+      imageAvif: '/images/files/chiatura-town-panorama-imereti-georgia-1448w.avif',
+      heroClass: 'hero--things-to-do-chiatura',
+      heroPreload: '/images/files/chiatura-town-panorama-imereti-georgia-1200w.avif',
+      ogImage: { src: '/images/files/chiatura-town-panorama-imereti-georgia-og-1200x630.jpg', width: 1200, height: 630 },
+      // ⚠️ THIS PAGE'S BODY IS ENGLISH-ONLY. `thingsToDoChiatura` exists only in
+      // en/pages.json; the other six locales fall back to en-fallback.json (18 of
+      // the 37 things-to-do guides are untranslated). The visible <figcaption>
+      // and <img alt> are therefore ENGLISH in all seven locales — matching the
+      // English prose they sit in, rather than dropping a German caption under an
+      // English paragraph. Everything that CAN be localized per-locale is: the
+      // `alt` map below drives og:image:alt / twitter:image:alt, and every
+      // `caption` map drives the per-locale ImageObject JSON-LD. When this page is
+      // eventually translated, the figcaptions are the only thing left to swap.
+      //
+      // ⚠️ EXONYM: German, French, Czech and Polish all write an exonym for the
+      // town on the CITY page (Tschiatura / Tchiatoura / Čiatura / Cziatura) but
+      // Latin "Chiatura" on the Cable Cars page — the split is per page, not per
+      // locale (de and fr are exactly 47/47 site-wide). These strings use LATIN
+      // Chiatura in all seven, because that is what the page they describe says,
+      // 22 times, and what the closest translated sibling uses.
+      //
+      // ⚠️ NAMING the page does NOT support: it never says Kvirila (0), gorge (0),
+      // manganese (0), mine (0) or square (0), so no caption uses them — "valley"
+      // and "canyon" are the page's own words. Localized place names follow the
+      // translated sibling pages: Katskhi-Säule / pilier de Katskhi / Pilar de
+      // Katskhi / Pilaar van Katskhi / Sloup Katskhi / Filar Katskhi, and Kloster
+      // Mghvimevi / monastère de Mghvimevi / etc.
+      imageMeta: {
+        width: 1448, height: 1086, imageId: 'hero-image',
+        name: 'Panorama of Chiatura in its valley, Imereti, Georgia',
+        description: 'A panorama of the town of Chiatura filling its narrow valley, ringed by limestone cliffs and autumn forest, Imereti, Georgia (the country).',
+        locationName: 'Chiatura',
+        locality: 'Chiatura', region: 'Imereti', country: 'GE',
+        geo: { lat: 42.29, lng: 43.2833 },
+        alt: {
+          en: 'Panorama of Chiatura filling its narrow valley between limestone cliffs in autumn, Imereti, Georgia',
+          de: 'Panorama von Chiatura, das im Herbst sein enges Tal zwischen Kalksteinfelsen ausfüllt, Imereti, Georgien',
+          fr: "Panorama de Chiatura occupant son étroite vallée entre des falaises calcaires en automne, Imereti, Géorgie",
+          es: 'Panorámica de Chiatura ocupando su estrecho valle entre acantilados calizos en otoño, Imereti, Georgia',
+          nl: 'Panorama van Chiatura dat in de herfst zijn smalle dal tussen kalkstenen kliffen vult, Imereti, Georgië',
+          cs: 'Panorama Chiatury vyplňující na podzim své úzké údolí mezi vápencovými útesy, Imereti, Gruzie',
+          pl: 'Panorama Chiatury wypełniającej jesienią swoją wąską dolinę między wapiennymi klifami, Imereti, Gruzja',
+        },
+        caption: {
+          en: 'Chiatura spreads along its narrow valley, with limestone cliffs and autumn forest rising on both sides.',
+          de: 'Chiatura erstreckt sich entlang seines engen Tals, zu beiden Seiten steigen Kalksteinfelsen und herbstlicher Wald auf.',
+          fr: "Chiatura s'étire le long de son étroite vallée, falaises calcaires et forêt automnale s'élevant des deux côtés.",
+          es: 'Chiatura se extiende a lo largo de su estrecho valle, con acantilados calizos y bosque otoñal alzándose a ambos lados.',
+          nl: 'Chiatura strekt zich uit langs zijn smalle dal, met aan weerszijden kalkstenen kliffen en herfstbos.',
+          cs: 'Chiatura se rozprostírá podél svého úzkého údolí, po obou stranách se zvedají vápencové útesy a podzimní les.',
+          pl: 'Chiatura rozciąga się wzdłuż swojej wąskiej doliny, a po obu stronach wznoszą się wapienne klify i jesienny las.',
+        },
+      },
+      // Five body figures, spliced into the ENGLISH content by LINE INDEX (this
+      // page uses single-\n separators, not the \n\n blocks the other guides use):
+      // 4 cable cars, 6 Katskhi Pillar, 8 industrial landscape, 10 neighbourhoods,
+      // 12 Mghvimevi. Files are COPIED to /images/chiatura/ under no-`w` names,
+      // because the set ships `-1200w` while inlineImageObjects builds
+      // `base-<width>.webp`; srcset and JSON-LD therefore share one URL. Nothing
+      // re-encoded, nothing upscaled. The hero needs no copy (hero paths are
+      // literal), so it references /images/files in place.
+      //
+      // REJECTED rather than stretched: the swan-pond park frame (park 0, swan 0
+      // mentions), the Caucasus-peaks frame (the page's only "Caucasus" is "South
+      // Caucasus", the country descriptor), and the hillside-sign frame. Sections
+      // 0/1, 13/14 and 15/16 stay image-free.
+      //
+      // ⚠️ SAFETY: no caption implies entering a mine, a closed station or any
+      // structure, and none asserts operating status beyond the page's own "some
+      // lines have been replaced with upgraded cabins". The Katskhi caption
+      // deliberately omits the ladder visible in the frame — the page says summit
+      // access is restricted.
+      inlineImageObjects: [
+        {
+          base: 'chiatura-cable-car-cabin-imereti-georgia', width: 1200, height: 900,
+          anchor: 'inline-cable-car-cabin', dir: '/images/chiatura',
+          description: 'A modern glass gondola cabin standing at a cable car station platform in Chiatura, Imereti, Georgia.',
+          locationName: 'Chiatura', locality: 'Chiatura', region: 'Imereti',
+          geo: { lat: 42.29, lng: 43.2833 },
+          name: {
+            en: 'A modern glass cable car cabin at a station in Chiatura, Imereti, Georgia',
+            de: 'Eine moderne verglaste Seilbahnkabine an einer Station in Chiatura, Imereti, Georgien',
+            fr: "Une cabine de téléphérique moderne vitrée à une station de Chiatura, Imereti, Géorgie",
+            es: 'Una cabina de teleférico moderna acristalada en una estación de Chiatura, Imereti, Georgia',
+            nl: 'Een moderne glazen kabelbaancabine bij een station in Chiatura, Imereti, Georgië',
+            cs: 'Moderní prosklená kabina lanovky ve stanici v Chiatuře, Imereti, Gruzie',
+            pl: 'Nowoczesna przeszklona kabina kolei linowej na stacji w Chiaturze, Imereti, Gruzja',
+          },
+          caption: {
+            en: "One of Chiatura's upgraded cable car cabins waiting at a station platform.",
+            de: 'Eine der modernisierten Seilbahnkabinen von Chiatura wartet am Bahnsteig einer Station.',
+            fr: "L'une des cabines modernisées du téléphérique de Chiatura à quai dans une station.",
+            es: 'Una de las cabinas modernizadas del teleférico de Chiatura, detenida en el andén de una estación.',
+            nl: 'Een van de gemoderniseerde kabelbaancabines van Chiatura staat op een stationsperron.',
+            cs: 'Jedna z modernizovaných kabin lanovky v Chiatuře stojí na nástupišti stanice.',
+            pl: 'Jedna ze zmodernizowanych kabin kolei linowej w Chiaturze stoi na peronie stacji.',
+          },
+        },
+        {
+          base: 'katskhi-pillar-imereti-georgia', width: 1086, height: 1448,
+          anchor: 'inline-katskhi-pillar', dir: '/images/chiatura',
+          description: 'The Katskhi Pillar seen from below, a tall limestone monolith with a small church on its flat summit, near Chiatura, Imereti, Georgia.',
+          locationName: 'Katskhi Pillar', locality: 'Katskhi', region: 'Imereti',
+          geo: { lat: 42.2933, lng: 43.2144 },
+          name: {
+            en: 'The Katskhi Pillar, a tall limestone monolith topped by a small church, near Chiatura, Georgia',
+            de: 'Die Katskhi-Säule, ein hoher Kalksteinmonolith mit einer kleinen Kirche auf dem Gipfel, nahe Chiatura, Georgien',
+            fr: "Le pilier de Katskhi, haut monolithe calcaire couronné d'une petite église, près de Chiatura, Géorgie",
+            es: 'El pilar de Katskhi, un alto monolito calizo coronado por una pequeña iglesia, cerca de Chiatura, Georgia',
+            nl: 'De pilaar van Katskhi, een hoge kalkstenen monoliet met bovenop een kerkje, bij Chiatura, Georgië',
+            cs: 'Sloup Katskhi, vysoký vápencový monolit s malým kostelem na vrcholu, poblíž Chiatury, Gruzie',
+            pl: 'Filar Katskhi, wysoki wapienny monolit zwieńczony małym kościołem, w pobliżu Chiatury, Gruzja',
+          },
+          caption: {
+            en: 'The Katskhi Pillar seen from below, its small church on the flat summit of the limestone monolith.',
+            de: 'Die Katskhi-Säule von unten gesehen, mit ihrer kleinen Kirche auf der flachen Kuppe des Kalksteinmonolithen.',
+            fr: "Le pilier de Katskhi vu d'en bas, sa petite église posée sur le sommet plat du monolithe calcaire.",
+            es: 'El pilar de Katskhi visto desde abajo, con su pequeña iglesia en la cima plana del monolito calizo.',
+            nl: 'De pilaar van Katskhi van onderaf gezien, met het kerkje op de vlakke top van de kalkstenen monoliet.',
+            cs: 'Sloup Katskhi při pohledu zdola, s malým kostelem na ploché vrcholové plošině vápencového monolitu.',
+            pl: 'Filar Katskhi widziany z dołu, z małym kościołem na płaskim szczycie wapiennego monolitu.',
+          },
+        },
+        {
+          base: 'chiatura-cable-car-gondola-imereti-georgia', width: 1200, height: 900,
+          anchor: 'inline-cable-lines', dir: '/images/chiatura',
+          description: 'Cable car lines and a support tower rising above houses on the wooded valley slope in Chiatura, Imereti, Georgia.',
+          locationName: 'Chiatura', locality: 'Chiatura', region: 'Imereti',
+          geo: { lat: 42.29, lng: 43.2833 },
+          name: {
+            en: 'Cable car infrastructure above hillside houses in Chiatura, Imereti, Georgia',
+            de: 'Seilbahnanlagen über Wohnhäusern am Hang in Chiatura, Imereti, Georgien',
+            fr: "Installations du téléphérique au-dessus des maisons du coteau à Chiatura, Imereti, Géorgie",
+            es: 'Instalaciones del teleférico sobre las casas de la ladera en Chiatura, Imereti, Georgia',
+            nl: 'Kabelbaaninstallaties boven huizen op de helling in Chiatura, Imereti, Georgië',
+            cs: 'Zařízení lanovky nad domy na svahu v Chiatuře, Imereti, Gruzie',
+            pl: 'Infrastruktura kolei linowej nad domami na zboczu w Chiaturze, Imereti, Gruzja',
+          },
+          caption: {
+            en: 'Cable lines and a support tower rise above houses on the valley slope in Chiatura.',
+            de: 'Seilbahntrassen und ein Stützmast erheben sich über den Häusern am Talhang von Chiatura.',
+            fr: "Câbles et pylône de soutien s'élèvent au-dessus des maisons du versant de la vallée à Chiatura.",
+            es: 'Los cables y una torre de soporte se alzan sobre las casas de la ladera del valle en Chiatura.',
+            nl: 'Kabels en een steunmast verheffen zich boven de huizen op de dalhelling in Chiatura.',
+            cs: 'Lana a nosný stožár se zvedají nad domy na svahu údolí v Chiatuře.',
+            pl: 'Liny i wieża podporowa wznoszą się nad domami na zboczu doliny w Chiaturze.',
+          },
+        },
+        {
+          base: 'chiatura-town-square-imereti-georgia', width: 1200, height: 900,
+          anchor: 'inline-town-street', dir: '/images/chiatura',
+          description: 'An open square and street in Chiatura at sunset, with the wooded cliffs of the valley rising directly behind the town, Imereti, Georgia.',
+          locationName: 'Chiatura', locality: 'Chiatura', region: 'Imereti',
+          geo: { lat: 42.2903, lng: 43.2925 },
+          name: {
+            en: 'A street and square in Chiatura below wooded cliffs at sunset, Imereti, Georgia',
+            de: 'Eine Straße und ein Platz in Chiatura unterhalb bewaldeter Felsen bei Sonnenuntergang, Imereti, Georgien',
+            fr: "Une rue et une place de Chiatura au pied des falaises boisées au coucher du soleil, Imereti, Géorgie",
+            es: 'Una calle y una plaza de Chiatura bajo los acantilados boscosos al atardecer, Imereti, Georgia',
+            nl: 'Een straat en plein in Chiatura onder beboste kliffen bij zonsondergang, Imereti, Georgië',
+            cs: 'Ulice a prostranství v Chiatuře pod zalesněnými útesy při západu slunce, Imereti, Gruzie',
+            pl: 'Ulica i plac w Chiaturze pod zalesionymi klifami o zachodzie słońca, Imereti, Gruzja',
+          },
+          caption: {
+            en: 'A square in Chiatura at sunset, the wooded cliffs of the valley rising directly behind the town.',
+            de: 'Ein Platz in Chiatura bei Sonnenuntergang; die bewaldeten Felsen des Tals erheben sich direkt hinter der Stadt.',
+            fr: "Une place de Chiatura au coucher du soleil, les falaises boisées de la vallée s'élevant juste derrière la ville.",
+            es: 'Una plaza de Chiatura al atardecer, con los acantilados boscosos del valle alzándose justo detrás del pueblo.',
+            nl: 'Een plein in Chiatura bij zonsondergang, met de beboste kliffen van het dal direct achter de stad.',
+            cs: 'Prostranství v Chiatuře při západu slunce, zalesněné útesy údolí se zvedají přímo za městem.',
+            pl: 'Plac w Chiaturze o zachodzie słońca, a tuż za miastem wznoszą się zalesione klify doliny.',
+          },
+        },
+        {
+          base: 'mghvimevi-monastery-chiatura-imereti-georgia', width: 1200, height: 900,
+          anchor: 'inline-mghvimevi', dir: '/images/chiatura',
+          description: 'Mghvimevi Monastery set on the limestone cliff face above the town of Chiatura, Imereti, Georgia.',
+          locationName: 'Mghvimevi Monastery', locality: 'Chiatura', region: 'Imereti',
+          geo: { lat: 42.2969, lng: 43.2789 },
+          name: {
+            en: 'Mghvimevi Monastery on the limestone cliff above Chiatura, Imereti, Georgia',
+            de: 'Das Kloster Mghvimevi an der Kalksteinwand über Chiatura, Imereti, Georgien',
+            fr: "Le monastère de Mghvimevi sur la falaise calcaire au-dessus de Chiatura, Imereti, Géorgie",
+            es: 'El monasterio de Mghvimevi en el acantilado calizo sobre Chiatura, Imereti, Georgia',
+            nl: 'Het klooster Mghvimevi op de kalkstenen klif boven Chiatura, Imereti, Georgië',
+            cs: 'Klášter Mghvimevi na vápencovém útesu nad Chiaturou, Imereti, Gruzie',
+            pl: 'Klasztor Mghvimevi na wapiennym klifie nad Chiaturą, Imereti, Gruzja',
+          },
+          caption: {
+            en: 'Mghvimevi Monastery sits on the cliff face above Chiatura, its buildings set against the rock.',
+            de: 'Das Kloster Mghvimevi liegt an der Felswand über Chiatura, seine Gebäude schmiegen sich an den Fels.',
+            fr: "Le monastère de Mghvimevi occupe la paroi rocheuse au-dessus de Chiatura, ses bâtiments adossés à la roche.",
+            es: 'El monasterio de Mghvimevi se asienta en la pared rocosa sobre Chiatura, con sus edificios pegados a la roca.',
+            nl: 'Het klooster Mghvimevi ligt tegen de rotswand boven Chiatura, met de gebouwen tegen de rots aan.',
+            cs: 'Klášter Mghvimevi stojí na skalní stěně nad Chiaturou, jeho budovy přiléhají ke skále.',
+            pl: 'Klasztor Mghvimevi stoi na ścianie skalnej nad Chiaturą, a jego zabudowania przylegają do skały.',
+          },
+        },
+      ],
       address: { addressLocality: 'Chiatura' },
       attractions: ['Chiatura Cable Cars', 'Katskhi Pillar', 'Mghvimevi Monastery', 'Kvirila River Canyon'],
     },

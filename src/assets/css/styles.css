@@ -1492,6 +1492,45 @@ section {
   }
 }
 /* No rung above 1448 exists. Do not add a 1600 or 2400 breakpoint. */
+/* Things to Do in Chiatura hero — per-page CSS background, same mechanism as the
+   other things-to-do guides. Replaces the generic georgia-home.jpg placeholder
+   with the autumn panorama of the town in its valley.
+
+   Native is 1448 and the set ships 768/1200/1448, so the ladder is exactly those
+   three. Do NOT add a 1600/2400 rung — no larger variant of this frame exists.
+
+   Default `background-position: center` (from .coverme) is kept deliberately: the
+   source is 4:3, and at wide viewports the crop keeps the town, both cliff walls
+   and the valley floor in frame; at narrow viewports cover scales by height and
+   shows the full frame. Verified by screenshot at 360 and 1440, so no explicit
+   position is needed here (unlike .hero--martvili-canyon, whose source is
+   portrait, or .hero--things-to-do-akhaltsikhe, which needed 72%). */
+.hero--things-to-do-chiatura {
+  background-image: url("/images/files/chiatura-town-panorama-imereti-georgia-768w.webp");
+  background-image: image-set(
+    url("/images/files/chiatura-town-panorama-imereti-georgia-768w.avif") type("image/avif"),
+    url("/images/files/chiatura-town-panorama-imereti-georgia-768w.webp") type("image/webp")
+  );
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+@media (min-width: 768px) {
+  .hero--things-to-do-chiatura {
+    background-image: image-set(
+      url("/images/files/chiatura-town-panorama-imereti-georgia-1200w.avif") type("image/avif"),
+      url("/images/files/chiatura-town-panorama-imereti-georgia-1200w.webp") type("image/webp")
+    );
+  }
+}
+@media (min-width: 1200px) {
+  .hero--things-to-do-chiatura {
+    background-image: image-set(
+      url("/images/files/chiatura-town-panorama-imereti-georgia-1448w.avif") type("image/avif"),
+      url("/images/files/chiatura-town-panorama-imereti-georgia-1448w.webp") type("image/webp")
+    );
+  }
+}
+/* Native is 1448 — that is the top rung. Do not add a 1600 or 2400 breakpoint. */
 /* Things to Do in Bakuriani hero — per-page CSS background, same mechanism as the
    other things-to-do guides. Replaces the generic georgia-home.jpg placeholder.
 
