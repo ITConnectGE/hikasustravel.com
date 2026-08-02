@@ -1027,6 +1027,54 @@ section {
     );
   }
 }
+/* Things to Do in Akhaltsikhe hero — same mechanism as the guides above, and the
+   same ladder .hero--akhaltsikhe already serves: the Rabati ramparts from the
+   walls in evening light. It REPLACES the generic georgia-home.jpg placeholder
+   this guide shipped with (one raw JPG at every viewport).
+
+   ⚠️ DELIBERATE duplication, owner-approved: this is also the Akhaltsikhe city
+   page hero. Every Akhaltsikhe / Samtskhe-Javakheti photograph in the project is
+   already committed to a page, so a guide can only duplicate. Kept as its own
+   class rather than reusing .hero--akhaltsikhe so the two pages stay independent.
+
+   Native is 1448 — that is the top rung, no 1600 breakpoint.
+
+   ⚠️ `background-position: 72% center`, NOT the city page's `center center`.
+   Eyeballed at 360px: this hero fills a tall portrait box there, so cover crops
+   to ~48% of the frame width and a centred crop keeps only the round tower and a
+   slab of wall — the flag-topped citadel, the hills and the complex roofs all
+   fall outside, and it stops reading as Akhaltsikhe. 72% holds the tower AND the
+   citadel together at 360/390/430/768. Verified inert at desktop widths, where
+   the viewport is wider than the image's 4:3 so cover crops vertically instead.
+   The bright cloudy sky is the H1 zone and the shared .coverme::after overlay
+   carries the contrast, so no extra scrim. */
+.hero--things-to-do-akhaltsikhe {
+  background-image: url("/images/files/akhaltsikhe-rabati-fortress-ramparts-georgia-1200.webp");
+  background-image: image-set(
+    url("/images/files/akhaltsikhe-rabati-fortress-ramparts-georgia-768.avif") type("image/avif"),
+    url("/images/files/akhaltsikhe-rabati-fortress-ramparts-georgia-768.webp") type("image/webp")
+  );
+  background-position: 72% center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+@media (min-width: 768px) {
+  .hero--things-to-do-akhaltsikhe {
+    background-image: image-set(
+      url("/images/files/akhaltsikhe-rabati-fortress-ramparts-georgia-1200.avif") type("image/avif"),
+      url("/images/files/akhaltsikhe-rabati-fortress-ramparts-georgia-1200.webp") type("image/webp")
+    );
+  }
+}
+@media (min-width: 1200px) {
+  .hero--things-to-do-akhaltsikhe {
+    background-image: image-set(
+      url("/images/files/akhaltsikhe-rabati-fortress-ramparts-georgia-1448.avif") type("image/avif"),
+      url("/images/files/akhaltsikhe-rabati-fortress-ramparts-georgia-1448.webp") type("image/webp")
+    );
+  }
+}
+/* No rung above 1448 exists. Do not add a 1600 or 2400 breakpoint. */
 /* Things to Do in Mtskheta-Mtianeti hero — same mechanism as .hero--adjara
    above, and the SAME photograph the guide already showed: it was serving the
    raw 1920-wide "Ananuri Fortress and Zhinvali Reservoir.jpg" at one width to
