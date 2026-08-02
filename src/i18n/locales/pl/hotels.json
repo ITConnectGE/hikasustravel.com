@@ -24,7 +24,7 @@
   "Hotel West Way": {
     "description": "Przyjazny hotel w sercu Kutaisi z bujnymi ogrodami i miejscem na grilla, idealnym na spokojne wieczory. Hotel West Way to doskonała baza wypadowa do Jaskini Prometeusza, rezerwatu przyrody Sataplia i klasztoru Gelati.",
     "amenities": ["Bezpłatne Wi-Fi", "Własna restauracja", "Ogród i miejsce na grilla", "Bezpłatny parking", "Klimatyzacja"],
-    "locationHighlights": ["Baza do Jaskini Prometeusza i kanionu Martwili", "Blisko wpisanego na listę UNESCO klasztoru Gelati", "Spacerem do centrum Kutaisi"],
+    "locationHighlights": ["Baza do Jaskini Prometeusza i kanionu Martvili", "Blisko wpisanego na listę UNESCO klasztoru Gelati", "Spacerem do centrum Kutaisi"],
     "imageAlts": [
       "Elewacja hotelu West Way w Kutaisi, Gruzja",
       "Lobby i recepcja hotelu West Way w Kutaisi, Gruzja",
@@ -167,7 +167,7 @@
   "Newport Hotel Kutaisi": {
     "description": "Stylowy, nowoczesny hotel w centrum Kutaisi, drugiego co do wielkości miasta Gruzji. Newport Hotel oferuje przestronne pokoje o nowoczesnych wnętrzach, doskonałą restaurację i świetną lokalizację do zwiedzania obiektów UNESCO i cudów natury regionu.",
     "amenities": ["Bezpłatne Wi-Fi", "Restauracja i bar", "Klimatyzacja", "Bezpłatny parking", "Recepcja 24/7"],
-    "locationHighlights": ["Centrum Kutaisi, blisko Białego Mostu", "Baza do Jaskini Prometeusza i kanionu Martwili", "Blisko wpisanej na listę UNESCO katedry Bagrati"],
+    "locationHighlights": ["Centrum Kutaisi, blisko Białego Mostu", "Baza do Jaskini Prometeusza i kanionu Martvili", "Blisko wpisanej na listę UNESCO katedry Bagrati"],
     "imageAlts": [
       "Elegancka elewacja hotelu Newport Hotel Kutaisi w centrum Kutaisi, Gruzja",
       "Lobby i recepcja hotelu Newport Hotel Kutaisi",
