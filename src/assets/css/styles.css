@@ -1741,6 +1741,48 @@ section {
   }
 }
 /* Native is 1491 — that is the top rung. Do not add a 1600 or 2400 breakpoint. */
+/* Things to Do in Mestia hero — per-page CSS background (same opt-in mechanism as
+   .hero--things-to-do-kutaisi above). Replaces the generic georgia-home.jpg
+   placeholder with the Mestia Svan-tower-houses frame — the same photograph the
+   Mestia city page uses, reused deliberately because it is the only photograph of
+   Mestia in the project (see the note on the thingsToDo block in places.js).
+
+   Native ceiling is 1541, BELOW the usual 1600 rung, so the ladder is exactly
+   768/1200/1541 with the top breakpoint at min-width:1200 — there is NO 1600 or
+   2400 rung, and adding one would upscale. Default `background-position: center`
+   (inherited from .coverme) is kept and was checked at 360px and 1440px: the towers
+   span most of the 1.51:1 frame's height, so the tall mobile crop keeps their
+   machicolated tops and the forested slope without clipping either — the hero
+   package explicitly notes "no positioning hack needed here". The shared
+   .coverme::after overlay already provides the readable text layer, so no extra
+   scrim is enabled. plain url() line = image-set() fallback for browsers without
+   image-set(). */
+.hero--things-to-do-mestia {
+  background-image: url("/images/files/mestia-svan-tower-houses-svaneti-georgia-768.webp");
+  background-image: image-set(
+    url("/images/files/mestia-svan-tower-houses-svaneti-georgia-768.avif") type("image/avif"),
+    url("/images/files/mestia-svan-tower-houses-svaneti-georgia-768.webp") type("image/webp")
+  );
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+@media (min-width: 768px) {
+  .hero--things-to-do-mestia {
+    background-image: image-set(
+      url("/images/files/mestia-svan-tower-houses-svaneti-georgia-1200.avif") type("image/avif"),
+      url("/images/files/mestia-svan-tower-houses-svaneti-georgia-1200.webp") type("image/webp")
+    );
+  }
+}
+@media (min-width: 1200px) {
+  .hero--things-to-do-mestia {
+    background-image: image-set(
+      url("/images/files/mestia-svan-tower-houses-svaneti-georgia-1541.avif") type("image/avif"),
+      url("/images/files/mestia-svan-tower-houses-svaneti-georgia-1541.webp") type("image/webp")
+    );
+  }
+}
+/* Native is 1541 — that is the top rung. Do not add a 1600 or 2400 breakpoint. */
 /* Martvili Canyon hero — per-page CSS background (same opt-in mechanism as
    .hero--akhaltsikhe above). FIRST Samegrelo photograph in the project; replaces
    the generic georgia-home.jpg placeholder.

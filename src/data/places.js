@@ -4491,7 +4491,234 @@ export const cities = [
       },
     },
     thingsToDo: {
-      seoKey: 'thingsToDoMestia', contentKey: 'thingsToDoMestia', image: '/images/files/georgia-home.jpg',
+      seoKey: 'thingsToDoMestia', contentKey: 'thingsToDoMestia',
+      // Cover/hero = the Mestia Svan-tower-houses frame, REPLACING the generic
+      // georgia-home.jpg placeholder. Ladder 768/1200/1541 (native ceiling — there
+      // is NO 1600/2400 rung), OG already built at 1200x630. No `w` suffix on this
+      // set, so the paths below and the inline contentUrls agree.
+      //
+      // ⚠️ THIS IS THE PARENT MESTIA CITY PAGE'S HERO, reused deliberately and
+      // owner-approved (2026-08-03). Normally the Gori/Kutaisi passes treat
+      // "same photo as the parent city page" as an anti-pattern, but here the pool
+      // leaves no alternative: this is THE ONLY PHOTOGRAPH OF MESTIA IN THE PROJECT.
+      // Every other Svaneti frame is Ushguli, Becho, Shkhara or an unplaced
+      // landscape, and putting a non-Mestia cover on a page titled "Things to Do in
+      // Mestia" is the worse failure. Same call the Svaneti things-to-do guide made
+      // when it reused the Ushguli page hero. Rejected alternatives:
+      //   ushguli-svan-towers-village = the SVANETI things-to-do guide's hero, i.e.
+      //     the sibling guide one level up, and not Mestia.
+      //   svan-towers-svaneti-georgia = portrait 1024x1536; at hero scale it
+      //     stretches 1024 across wide desktops and shows ~30% of the height. It
+      //     ships as inline #1 below instead, where it is excellent.
+      //
+      // ⚠️ A HIGHER-RESOLUTION ORIGINAL EXISTS. `Images for tours/New folder/Svan
+      // Towers.jpg` is 4928x3264 and is the same frame as this 1541px export — the
+      // "re-export from the original" the Mestia hero package asked for. NOT acted
+      // on here: re-cutting the ladder would change the Mestia CITY page, which is
+      // outside this pass's scope. Left for a dedicated pass.
+      image: '/images/files/mestia-svan-tower-houses-svaneti-georgia-1541.webp',
+      imageAvif: '/images/files/mestia-svan-tower-houses-svaneti-georgia-1541.avif',
+      heroClass: 'hero--things-to-do-mestia',
+      heroPreload: '/images/files/mestia-svan-tower-houses-svaneti-georgia-1200.avif',
+      // Dedicated 1.91:1 social image, already built for the Mestia city page.
+      ogImage: { src: '/images/files/mestia-svan-tower-houses-svaneti-georgia-og.jpg', width: 1200, height: 630 },
+      // ⚠️ ENGLISH-ONLY BODY — the sixth such guide, after Chiatura, Gori, Gudauri,
+      // Kazbegi and Kutaisi. `thingsToDoMestia` exists only in en/pages.json; the
+      // other six locales fall back to en-fallback.json. Per the owner's decision on
+      // the Chiatura pass the visible <figcaption> and <img alt> are ENGLISH in all
+      // seven, matching the prose they sit in, while the `alt` map drives
+      // og:image:alt / twitter:image:alt and every `caption` map drives the
+      // per-locale ImageObject JSON-LD.
+      //
+      // ⚠️ NAMING — counted across the WHOLE of each locale, not this page:
+      //   de  Swanetien 202 v Svaneti 54 → Swanetien / Oberswanetien
+      //   fr  Svanétie 259 v Svaneti 60  → Svanétie / Haute-Svanétie
+      //   es  Svaneti 306 v Esvanetia 13 → Svaneti (⚠️ the Mestia CITY page's alt
+      //       says "Alta Esvanetia"; that form loses site-wide 13-306, so it is
+      //       NOT carried over here)
+      //   nl  Svaneti 322 v Svanetië 42  → Svaneti; adjective Svaanse (74 v 3)
+      //   cs  Svaneti/Svanetie; Mestia DECLINES (Mestie 127, "v Mestii" 52)
+      //   pl  Swanetia+Swanetii 222 v Svaneti 88 → Swanetia; Mestia DECLINES
+      //       ("w Mestii" 188)
+      //   Latin in all 7: Mestia (stem), Ushguli (v de Uschguli 7, fr Ouchgouli 4),
+      //   Shkhara (v de Schchara 4, fr Chkhara 4).
+      //
+      // ⚠️ NO ADDED FACTS. Nothing below asserts UNESCO status, dates, altitudes,
+      // prices, opening hours, transport, road condition, trail difficulty, weather,
+      // visibility or snow cover — the safety/access rules for this page are strict
+      // and the prose already carries every such claim the page makes.
+      imageMeta: {
+        width: 1541, height: 1020, imageId: 'hero-image',
+        name: 'Svan stone tower houses in Mestia, Upper Svaneti, Georgia',
+        description: 'Svan stone tower houses in Mestia, seen past a dry-stone wall, with shingle-roofed dwellings attached at their base and a forested slope behind, Upper Svaneti, Georgia (the country).',
+        locationName: 'Mestia, Svaneti, Georgia',
+        locality: 'Mestia', region: 'Samegrelo-Zemo Svaneti', country: 'GE',
+        geo: { lat: 43.04556, lng: 42.72972 },
+        alt: {
+          en: 'Svan stone tower houses in Mestia with shingled roofs and a forested slope behind, Upper Svaneti, Georgia',
+          de: 'Swanische Wohntürme in Mestia mit Schindeldächern und bewaldetem Hang dahinter, Oberswanetien, Georgien',
+          fr: "Tours-maisons svanes à Mestia, toits de bardeaux et versant boisé à l'arrière, Haute-Svanétie, Géorgie",
+          es: 'Torres-vivienda svanas en Mestia, con tejados de tablilla y ladera boscosa detrás, Alta Svaneti, Georgia',
+          nl: 'Svaanse woontorens in Mestia met houten daken en een beboste helling erachter, Boven-Svaneti, Georgië',
+          cs: 'Svanské obytné věže v Mestii se šindelovými střechami a zalesněným svahem v pozadí, Horní Svanetie, Gruzie',
+          pl: 'Swańskie wieże mieszkalne w Mestii z gontowymi dachami i zalesionym stokiem w tle, Górna Swanetia, Gruzja',
+        },
+        caption: {
+          en: 'Stone Svan tower houses in Mestia, shingle-roofed dwellings at their base and a forested slope behind.',
+          de: 'Steinerne swanische Wohntürme in Mestia, an ihrem Fuß schindelgedeckte Häuser, dahinter ein bewaldeter Hang.',
+          fr: "Des tours-maisons svanes en pierre à Mestia, avec des habitations à toit de bardeaux à leur base et un versant boisé à l'arrière.",
+          es: 'Torres-vivienda svanas de piedra en Mestia, con casas de tejado de tablilla a sus pies y una ladera boscosa detrás.',
+          nl: 'Stenen Svaanse woontorens in Mestia, met aan de voet huizen met houten daken en daarachter een beboste helling.',
+          cs: 'Kamenné svanské obytné věže v Mestii, u jejich paty domy se šindelovými střechami a v pozadí zalesněný svah.',
+          pl: 'Kamienne swańskie wieże mieszkalne w Mestii, u ich podnóża domy z gontowymi dachami, a w tle zalesiony stok.',
+        },
+      },
+      // Four body figures, spliced into the ENGLISH content by LINE INDEX (this page
+      // is a 25-line single-\n block, so the unit is the LINE, not the \n\n chunk):
+      //   4 Svan towers · 12 Ushguli day trip · 22 best time to visit · 24 why Mestia.
+      //
+      // ⚠️ ALL FOUR ARE REFERENCES, NOT COPIES, EXCEPT svaneti-alpine-meadow. Three
+      // sets already ship under the no-`w` names this array builds. The meadow ships
+      // only as `-<w>w`, which would 404 the contentUrl, so byte-identical copies
+      // (sha256-verified) went into the existing /images/svaneti/. Nothing was
+      // re-encoded, nothing upscaled, no OG generated.
+      //
+      // ⚠️ INLINE #1 MUST NOT BE CALLED MESTIA. Its own package deliberately does not
+      // assert the village ("almost certainly Ushguli, but the metadata says *a
+      // village in Upper Svaneti*"), so every string below and its contentLocation
+      // stay at Upper Svaneti. It sits under the Svan-towers heading because that
+      // section is about the towers as a phenomenon of "Mestia and Svaneti"; the
+      // caption carries the disambiguation.
+      //
+      // ⚠️ EIGHT SECTIONS STAY BARE, and this is the honest ceiling of the library,
+      // not an oversight: the Svaneti museum, the Margiani house museum, Chalaadi
+      // Glacier, Hatsvali, Tetnuldi, the Mestia town walk and Svan cuisine have NO
+      // photograph anywhere in the source tree (whole tree searched — zero hits on
+      // Chalaadi, Hatsvali, Tetnuldi, Margiani or kubdari).
+      //
+      // Explicitly REJECTED rather than stretched:
+      //   shkhara-glacier-ushguli — a glacier snout above a forested river valley,
+      //     which matches the Chalaadi PROSE almost exactly, but it is the Shkhara
+      //     Glacier page's hero and placing it under a "Hike to the Chalaadi Glacier"
+      //     heading would mislabel it by position. Same reasoning the Svaneti guide
+      //     used to reject svaneti-glacier-valley for Chalaadi.
+      //   svaneti-hiking-trail-signpost — the signboard visibly reads BECHO and
+      //     KORULDI LAKES, neither of which this page mentions.
+      //   becho-village / svaneti-glacier-valley — Becho is never mentioned; the
+      //     valley cannot honestly be labelled anything this page names.
+      //   ushguli-village-towers-panorama — provenance HELD, and byte-for-byte the
+      //     same frame as the Ushguli hero.
+      //   svaneti-horse-riding — flagged likely AI-generated, already pulled.
+      //   "Koruldi Lakes.jpg" — Koruldi is not on this page, and a single
+      //     identifiable person dominates the frame.
+      inlineImageObjects: [
+        {
+          // PORTRAIT (1024x1536, 2:3 — taller than 3:4) → rungs 768 + 1024, and the
+          // figure takes `--portrait-narrow` alongside `--portrait`, the same call
+          // the Kazbegi guide made for its 2:3 frame. At the plain 560 portrait cap
+          // this would render 840px tall and dominate the column.
+          base: 'svan-towers-svaneti-georgia', width: 1024, height: 1536,
+          anchor: 'inline-svan-towers', dir: '/images/files',
+          description: 'Two Svan stone tower houses with machicolated tops and attached slate-roofed dwellings, in a village in Upper Svaneti, Georgia.',
+          locationName: 'Upper Svaneti, Georgia',
+          region: 'Samegrelo-Zemo Svaneti',
+          name: {
+            en: 'Two Svan tower houses with machicolated tops in a village in Upper Svaneti, Georgia',
+            de: 'Zwei swanische Wohntürme mit Zinnenkränzen in einem Dorf in Oberswanetien, Georgien',
+            fr: "Deux tours-maisons svanes à couronnement à mâchicoulis dans un village de Haute-Svanétie, Géorgie",
+            es: 'Dos torres-vivienda svanas con remate de matacanes en una aldea de Alta Svaneti, Georgia',
+            nl: 'Twee Svaanse woontorens met gekanteelde bekroning in een dorp in Boven-Svaneti, Georgië',
+            cs: 'Dvě svanské obytné věže s korunou na krakorcích ve vesnici v Horní Svanetii, Gruzie',
+            pl: 'Dwie swańskie wieże mieszkalne z wieńczącym gankiem na wspornikach we wsi w Górnej Swanetii, Gruzja',
+          },
+          caption: {
+            en: 'Svan tower houses with their machicolated crowns and attached slate-roofed dwellings, in a village in Upper Svaneti.',
+            de: 'Swanische Wohntürme mit ihren Zinnenkränzen und den angebauten schiefergedeckten Häusern, in einem Dorf in Oberswanetien.',
+            fr: "Des tours-maisons svanes, leur couronnement à mâchicoulis et les habitations à toit d'ardoise qui leur sont accolées, dans un village de Haute-Svanétie.",
+            es: 'Torres-vivienda svanas con su remate de matacanes y las casas de tejado de pizarra adosadas, en una aldea de Alta Svaneti.',
+            nl: 'Svaanse woontorens met hun gekanteelde bekroning en de aangebouwde huizen met leien daken, in een dorp in Boven-Svaneti.',
+            cs: 'Svanské obytné věže s korunou na krakorcích a přistavěnými domy s břidlicovými střechami, ve vesnici v Horní Svanetii.',
+            pl: 'Swańskie wieże mieszkalne z wieńczącym gankiem na wspornikach i dobudowanymi domami o łupkowych dachach, we wsi w Górnej Swanetii.',
+          },
+        },
+        {
+          base: 'ushguli-village-shkhara-svaneti-georgia', width: 1217, height: 864,
+          anchor: 'inline-ushguli', dir: '/images/svaneti',
+          description: 'The houses and Svan towers of Ushguli spread along a green valley, closed at its head by the snow-covered mass of Mount Shkhara, Svaneti, Georgia.',
+          locationName: 'Ushguli, Svaneti, Georgia',
+          locality: 'Ushguli', region: 'Samegrelo-Zemo Svaneti',
+          geo: { lat: 42.9169, lng: 43.0136 },
+          name: {
+            en: 'The village of Ushguli with Svan towers below the snow-covered Mount Shkhara, Svaneti, Georgia',
+            de: 'Das Dorf Ushguli mit swanischen Türmen unterhalb des schneebedeckten Schchara, Swanetien, Georgien',
+            fr: "Le village d'Ushguli et ses tours svanes sous le Shkhara enneigé, Svanétie, Géorgie",
+            es: 'La aldea de Ushguli con torres svanas bajo el nevado monte Shkhara, Svaneti, Georgia',
+            nl: 'Het dorp Ushguli met Svaanse torens onder de besneeuwde Shkhara, Svaneti, Georgië',
+            cs: 'Vesnice Ushguli se svanskými věžemi pod zasněženou Shkharou, Svanetie, Gruzie',
+            pl: 'Wieś Ushguli ze swańskimi wieżami pod ośnieżoną Shkharą, Swanetia, Gruzja',
+          },
+          caption: {
+            en: 'Ushguli in its valley, the stone Svan towers of the village standing below the snow-covered mass of Mount Shkhara.',
+            de: 'Ushguli in seinem Tal: die steinernen swanischen Türme des Dorfes stehen unterhalb des schneebedeckten Massivs des Schchara.',
+            fr: "Ushguli dans sa vallée : les tours svanes en pierre du village se dressent sous le massif enneigé du Shkhara.",
+            es: 'Ushguli en su valle: las torres svanas de piedra de la aldea se alzan bajo el macizo nevado del Shkhara.',
+            nl: 'Ushguli in zijn dal: de stenen Svaanse torens van het dorp staan onder het besneeuwde massief van de Shkhara.',
+            cs: 'Ushguli ve svém údolí — kamenné svanské věže vesnice stojí pod zasněženým masivem Shkhary.',
+            pl: 'Ushguli w swojej dolinie — kamienne swańskie wieże wsi stoją pod ośnieżonym masywem Shkhary.',
+          },
+        },
+        {
+          base: 'svaneti-alpine-meadow-georgia', width: 1024, height: 1024,
+          anchor: 'inline-alpine-meadow', dir: '/images/svaneti',
+          description: 'A green alpine meadow strewn with boulders below forested ridges and a snow-streaked peak of the Greater Caucasus, near Mestia, Svaneti, Georgia.',
+          locationName: 'Mestia, Svaneti, Georgia',
+          locality: 'Mestia', region: 'Samegrelo-Zemo Svaneti',
+          geo: { lat: 43.0451, lng: 42.7289 },
+          name: {
+            en: 'A green alpine meadow below forested ridges and a snow-streaked peak in Svaneti, Georgia',
+            de: 'Eine grüne Bergwiese unterhalb bewaldeter Kämme und eines schneegestreiften Gipfels in Swanetien, Georgien',
+            fr: "Une prairie d'altitude verdoyante sous des crêtes boisées et un sommet strié de neige en Svanétie, Géorgie",
+            es: 'Un prado alpino verde bajo cordales boscosos y un pico veteado de nieve en Svaneti, Georgia',
+            nl: 'Een groene bergweide onder beboste kammen en een met sneeuw doorstreepte top in Svaneti, Georgië',
+            cs: 'Zelená horská louka pod zalesněnými hřebeny a sněhem prokládaným vrcholem ve Svanetii, Gruzie',
+            pl: 'Zielona hala pod zalesionymi grzbietami i pręgowanym śniegiem szczytem w Swanetii, Gruzja',
+          },
+          caption: {
+            en: 'A green alpine meadow near Mestia, below forested ridges and a snow-streaked peak of the Greater Caucasus.',
+            de: 'Eine grüne Bergwiese bei Mestia, unterhalb bewaldeter Kämme und eines schneegestreiften Gipfels des Großen Kaukasus.',
+            fr: "Une prairie d'altitude verdoyante près de Mestia, sous des crêtes boisées et un sommet strié de neige du Grand Caucase.",
+            es: 'Un prado alpino verde cerca de Mestia, bajo cordales boscosos y un pico veteado de nieve del Gran Cáucaso.',
+            nl: 'Een groene bergweide bij Mestia, onder beboste kammen en een met sneeuw doorstreepte top van de Grote Kaukasus.',
+            cs: 'Zelená horská louka poblíž Mestie, pod zalesněnými hřebeny a sněhem prokládaným vrcholem Velkého Kavkazu.',
+            pl: 'Zielona hala w pobliżu Mestii, pod zalesionymi grzbietami i pręgowanym śniegiem szczytem Wielkiego Kaukazu.',
+          },
+        },
+        {
+          base: 'svaneti-caucasus-mountains-georgia', width: 1448, height: 1086,
+          anchor: 'inline-caucasus-landscape', dir: '/images/files',
+          description: 'Forested ridges of the Greater Caucasus falling to a wooded valley below snow-streaked peaks, Svaneti, Georgia.',
+          locationName: 'Svaneti, Georgia',
+          region: 'Samegrelo-Zemo Svaneti',
+          name: {
+            en: 'Forested ridges of the Greater Caucasus below snow-streaked peaks in Svaneti, Georgia',
+            de: 'Bewaldete Kämme des Großen Kaukasus unterhalb schneegestreifter Gipfel in Swanetien, Georgien',
+            fr: "Crêtes boisées du Grand Caucase sous des sommets striés de neige en Svanétie, Géorgie",
+            es: 'Cordales boscosos del Gran Cáucaso bajo picos veteados de nieve en Svaneti, Georgia',
+            nl: 'Beboste bergkammen van de Grote Kaukasus onder met sneeuw doorstreepte toppen in Svaneti, Georgië',
+            cs: 'Zalesněné hřebeny Velkého Kavkazu pod sněhem prokládanými vrcholy ve Svanetii, Gruzie',
+            pl: 'Zalesione grzbiety Wielkiego Kaukazu pod pręgowanymi śniegiem szczytami w Swanetii, Gruzja',
+          },
+          caption: {
+            en: 'Forested ridges of the Greater Caucasus falling to a wooded valley below snow-streaked peaks in Svaneti.',
+            de: 'Bewaldete Kämme des Großen Kaukasus fallen zu einem waldigen Tal ab, darüber schneegestreifte Gipfel in Swanetien.',
+            fr: "Les crêtes boisées du Grand Caucase descendent vers une vallée forestière, sous des sommets striés de neige, en Svanétie.",
+            es: 'Los cordales boscosos del Gran Cáucaso descienden hacia un valle arbolado, bajo picos veteados de nieve, en Svaneti.',
+            nl: 'Beboste bergkammen van de Grote Kaukasus dalen af naar een bebost dal, onder met sneeuw doorstreepte toppen in Svaneti.',
+            cs: 'Zalesněné hřebeny Velkého Kavkazu klesají k zalesněnému údolí pod sněhem prokládanými vrcholy ve Svanetii.',
+            pl: 'Zalesione grzbiety Wielkiego Kaukazu opadają ku zalesionej dolinie pod pręgowanymi śniegiem szczytami w Swanetii.',
+          },
+        },
+      ],
       address: { addressLocality: 'Mestia' },
       attractions: ['Svan Towers', 'Svaneti History and Ethnography Museum', 'Margiani House Museum', 'Chalaadi Glacier', 'Ushguli', 'Hatsvali Cable Car', 'Tetnuldi Ski Resort'],
     },
