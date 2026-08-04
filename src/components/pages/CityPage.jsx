@@ -24,6 +24,33 @@ const BRAND = 'Hikasus Travel'
 const GALLERY_WIDTHS = [1200, 1600, 2400]
 
 /**
+ * Brand credit for an image's ImageObject — applied by default, since these
+ * photos are our own. An image whose provenance we cannot vouch for sets
+ * `noCredit: true` and ships with the credit fields omitted entirely rather
+ * than asserting an authorship we don't hold (schema.org treats absent credit
+ * as unknown, which is the honest answer).
+ *
+ * Ported verbatim from RegionPage / SitePage / ThingsToDoCityPage, which have
+ * had this since the Adjara pass. CityPage was the ONE renderer still missing
+ * it, and the gap had a real consequence: with no way to omit credit, the
+ * Ushguli hero's unresolved provenance was expressed by overriding the credit
+ * strings to the literal placeholder `REPLACE-BRAND`, which then shipped into
+ * production structured data. Omission is the correct expression of "unknown";
+ * a placeholder string is not.
+ *
+ * Backwards-compatible: no city image set `noCredit` before this, so every
+ * existing ImageObject keeps exactly the credit it had.
+ */
+function creditFields(img) {
+  if (img.noCredit) return {}
+  return {
+    creator: { '@type': 'Organization', name: BRAND },
+    creditText: BRAND,
+    copyrightNotice: `© ${BRAND}`,
+  }
+}
+
+/**
  * Generic city detail page. Driven by the places.js registry — the URL
  * /:lang/georgia/:citySlug resolves a registry entry; an unknown or
  * not-yet-published slug renders the 404 page (never an empty stub).
@@ -167,9 +194,7 @@ export default function CityPage() {
           name: img.name,
           caption: img.caption || img.description,
           description: img.description,
-          creator: { '@type': 'Organization', name: BRAND },
-          creditText: BRAND,
-          copyrightNotice: `© ${BRAND}`,
+          ...creditFields(img),
           contentLocation: {
             '@type': 'Place',
             name: img.locationName,
@@ -202,12 +227,14 @@ export default function CityPage() {
           name: img.name,
           caption: img.caption,
           description: img.description,
-          // Credit defaults to the brand (our own photos), but an image may
-          // override it — e.g. an unresolved/third-party origin left as a
-          // REPLACE-BRAND placeholder until attribution is confirmed.
-          creator: { '@type': 'Organization', name: img.creator || BRAND },
-          creditText: img.creditText || BRAND,
-          copyrightNotice: img.copyrightNotice || `© ${BRAND}`,
+          // Credit defaults to the brand (our own photos); an image whose origin
+          // we cannot vouch for sets `noCredit: true` and omits the fields.
+          // ⚠️ This REPLACED a per-image string override (`img.creator ||
+          // BRAND`, etc.). That override existed only to hold the literal
+          // placeholder `REPLACE-BRAND`, which shipped straight into production
+          // structured data on the Ushguli city page. Omission — not a
+          // placeholder, and not a false brand claim — is how "unknown" is said.
+          ...creditFields(img),
           contentLocation: {
             '@type': 'Place',
             name: img.locationName,
@@ -239,9 +266,7 @@ export default function CityPage() {
           name: img.altText,
           caption: img.captionText,
           description: (img.caption && img.caption.en) || img.captionText,
-          creator: { '@type': 'Organization', name: BRAND },
-          creditText: BRAND,
-          copyrightNotice: `© ${BRAND}`,
+          ...creditFields(img),
           contentLocation: {
             '@type': 'Place',
             name: img.locationName,
@@ -285,9 +310,7 @@ export default function CityPage() {
           name: heroImageMeta.name,
           caption: heroAlt,
           description: heroImageMeta.description,
-          creator: { '@type': 'Organization', name: BRAND },
-          creditText: BRAND,
-          copyrightNotice: `© ${BRAND}`,
+          ...creditFields(heroImageMeta),
           contentLocation: {
             '@type': 'Place',
             name: heroImageMeta.locationName,

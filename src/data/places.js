@@ -4289,17 +4289,36 @@ export const cities = [
     imageAvif: '/images/files/ushguli-svan-towers-village-svaneti-georgia-2000w.avif',
     // Hero ImageObject → CityPage JSON-LD @graph (representativeOfPage:true; the
     // hero is a CSS background with no <img alt>, so this carries the metadata).
-    // Verbatim from the image SEO package. ⚠️ CREDIT UNRESOLVED: the image shows
-    // signs of being an upscaled/stock file, not an owner original — creditText /
-    // copyrightNotice / creator are intentionally left as REPLACE-BRAND until the
-    // origin is confirmed. Do NOT set these to Hikasus Travel yet.
+    //
+    // ⚠️ NOT OURS — `noCredit: true`, so the ImageObject ships with NO creator /
+    // creditText / copyrightNotice at all. Provenance is no longer merely
+    // "unresolved": it was MEASURED on 2026-08-04 and this frame is the same
+    // photograph as `ushguli-village-towers-panorama`, the crop that was held for
+    // exactly this reason. Both come from `Images for tours/New folder/Ushguli.jpeg`
+    // (7917x4871), which measures Laplacian variance 15.8 against 2,000-3,800 for
+    // the owner's genuine photos — i.e. massively upscaled — plus JPEG blocking
+    // 2.01 and an HDR-stock look. Matched-aspect comparison: hero 1.624 / panorama
+    // 1.626 / source 1.625, MAD hero-vs-panorama 3.75 (a genuinely different pair
+    // scores ~12).
+    //
+    // ⚠️ THIS FIELD PREVIOUSLY HELD THE LITERAL STRING 'REPLACE-BRAND', and it
+    // shipped: the live page emitted `"creditText":"REPLACE-BRAND"` and
+    // `"creator":{"name":"REPLACE-BRAND"}` into production structured data, because
+    // CityPage was the one renderer with no `noCredit` support and the placeholder
+    // was the only way to express doubt. CityPage now has the shared
+    // `creditFields()` helper, so absence — the schema.org way of saying "unknown"
+    // — is expressible. Do NOT reintroduce a placeholder string here, and do NOT
+    // set this to Hikasus Travel: the measurement says it is not ours.
+    //
+    // Replacing the photograph would fix this properly; no genuine wide
+    // village-and-towers frame exists in the library yet (see the photo-gaps note).
     imageObjects: [
       {
         base: 'ushguli-svan-towers-village-svaneti-georgia', width: 2000, height: 1231, hero: true,
         name: 'Svan tower-houses in Ushguli, Upper Svaneti, Georgia',
         caption: 'Medieval Svan stone tower-houses in Ushguli village above the green Enguri valley, Upper Svaneti',
         description: "Medieval Svan stone tower-houses in the Ushguli community at around 2,100 m at the head of the Enguri gorge, Upper Svaneti — a UNESCO World Heritage Site and one of Europe's highest continuously inhabited settlements, Georgia.",
-        creditText: 'REPLACE-BRAND', copyrightNotice: '© REPLACE-BRAND', creator: 'REPLACE-BRAND',
+        noCredit: true,
         locationName: 'Ushguli', locality: 'Ushguli', region: 'Svaneti', geo: { lat: 42.9169, lng: 43.0136 },
       },
     ],
