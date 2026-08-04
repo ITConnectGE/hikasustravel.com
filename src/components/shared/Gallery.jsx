@@ -5,7 +5,8 @@ import BlurUpBackground from './BlurUpBackground'
 import asset from '../../utils/basePath'
 import useT from '../../i18n/useT'
 
-const INITIAL_COUNT = 8
+/* Two rows of three on desktop (.gallery-grid is repeat(3, 1fr) above 600px). */
+const INITIAL_COUNT = 6
 const SWIPE_THRESHOLD = 50
 
 export function GalleryLightbox({ images, startIndex, onClose, label }) {
@@ -113,6 +114,12 @@ export default function Gallery({ images }) {
 
   if (!images || images.length === 0) return null
 
+  /* `visible` drives the GRID only. The lightbox always receives the full
+     `images` array, so a visitor who opens the last visible card can page on
+     into the still-hidden photos without pressing "show more" first.
+     Because `visible` is a leading slice, a card's index within it IS its index
+     within `images` — keep that invariant if the grid order ever changes
+     (indexOf would misresolve a gallery that repeats the same src). */
   const visible = expanded ? images : images.slice(0, INITIAL_COUNT)
   const hasMore = images.length > INITIAL_COUNT
 
@@ -166,12 +173,12 @@ export default function Gallery({ images }) {
       {hasMore && !expanded && (
         <div className="gallery-show-more">
           <button className="gallery-show-more__btn" onClick={() => setExpanded(true)}>
-            {t('tour.showMore', { count: images.length - INITIAL_COUNT })}
+            {t('tour.showMore')}
           </button>
         </div>
       )}
       {lightboxIndex !== null && (
-        <GalleryLightbox images={visible} startIndex={lightboxIndex} onClose={closeLightbox} />
+        <GalleryLightbox images={images} startIndex={lightboxIndex} onClose={closeLightbox} />
       )}
     </>
   )
