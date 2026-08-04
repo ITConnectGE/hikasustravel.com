@@ -2367,6 +2367,218 @@ export const tours = [
   },
   {
     "slug": "8-day-georgia-culture-and-adventure-tour",
+    "enTouristTrip": {
+      "@context": "https://schema.org",
+      "@type": "TouristTrip",
+      "name": "8-Day Georgia Culture and Adventure Tour",
+      "description": "A private 8-day culture and adventure tour of Georgia from Tbilisi: Tbilisi, Kakheti wine country, the UNESCO monuments of Mtskheta, the cave town of Uplistsikhe, a hike in Lagodekhi National Park, rafting on the Pshavi Aragvi, and Kazbegi with Gergeti Trinity Church.",
+      "url": "https://www.hikasustravel.com/en/private-tours/8-day-georgia-culture-and-adventure-tour/",
+      "image": "https://www.hikasustravel.com/images/files/cultural-adventure-caucasus.jpg",
+      "touristType": [
+        "Cultural tourism",
+        "Adventure tourism",
+        "Wine tourism",
+        "Hiking"
+      ],
+      "provider": {
+        "@type": "TravelAgency",
+        "name": "Hikasus Travel",
+        "url": "https://www.hikasustravel.com/"
+      },
+      "itinerary": {
+        "@type": "ItemList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "item": {
+              "@type": "TouristAttraction",
+              "name": "Tbilisi Old Town",
+              "address": {
+                "@type": "PostalAddress",
+                "addressRegion": "Tbilisi",
+                "addressCountry": "GE"
+              }
+            }
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "item": {
+              "@type": "TouristAttraction",
+              "name": "Bodbe Monastery",
+              "address": {
+                "@type": "PostalAddress",
+                "addressRegion": "Kakheti",
+                "addressCountry": "GE"
+              }
+            }
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "item": {
+              "@type": "TouristAttraction",
+              "name": "Sighnaghi",
+              "address": {
+                "@type": "PostalAddress",
+                "addressRegion": "Kakheti",
+                "addressCountry": "GE"
+              }
+            }
+          },
+          {
+            "@type": "ListItem",
+            "position": 4,
+            "item": {
+              "@type": "TouristAttraction",
+              "name": "Lagodekhi National Park",
+              "address": {
+                "@type": "PostalAddress",
+                "addressRegion": "Kakheti",
+                "addressCountry": "GE"
+              }
+            }
+          },
+          {
+            "@type": "ListItem",
+            "position": 5,
+            "item": {
+              "@type": "TouristAttraction",
+              "name": "Telavi",
+              "address": {
+                "@type": "PostalAddress",
+                "addressRegion": "Kakheti",
+                "addressCountry": "GE"
+              }
+            }
+          },
+          {
+            "@type": "ListItem",
+            "position": 6,
+            "item": {
+              "@type": "TouristAttraction",
+              "name": "Jvari Monastery",
+              "address": {
+                "@type": "PostalAddress",
+                "addressRegion": "Mtskheta-Mtianeti",
+                "addressCountry": "GE"
+              }
+            }
+          },
+          {
+            "@type": "ListItem",
+            "position": 7,
+            "item": {
+              "@type": "TouristAttraction",
+              "name": "Svetitskhoveli Cathedral, Mtskheta",
+              "address": {
+                "@type": "PostalAddress",
+                "addressRegion": "Mtskheta-Mtianeti",
+                "addressCountry": "GE"
+              }
+            }
+          },
+          {
+            "@type": "ListItem",
+            "position": 8,
+            "item": {
+              "@type": "TouristAttraction",
+              "name": "Uplistsikhe",
+              "address": {
+                "@type": "PostalAddress",
+                "addressRegion": "Shida Kartli",
+                "addressCountry": "GE"
+              }
+            }
+          },
+          {
+            "@type": "ListItem",
+            "position": 9,
+            "item": {
+              "@type": "TouristAttraction",
+              "name": "Ananuri Fortress",
+              "address": {
+                "@type": "PostalAddress",
+                "addressRegion": "Mtskheta-Mtianeti",
+                "addressCountry": "GE"
+              }
+            }
+          },
+          {
+            "@type": "ListItem",
+            "position": 10,
+            "item": {
+              "@type": "TouristAttraction",
+              "name": "Gudauri Panorama Viewpoint",
+              "address": {
+                "@type": "PostalAddress",
+                "addressRegion": "Mtskheta-Mtianeti",
+                "addressCountry": "GE"
+              }
+            }
+          },
+          {
+            "@type": "ListItem",
+            "position": 11,
+            "item": {
+              "@type": "TouristAttraction",
+              "name": "Gergeti Trinity Church, Kazbegi",
+              "address": {
+                "@type": "PostalAddress",
+                "addressRegion": "Mtskheta-Mtianeti",
+                "addressCountry": "GE"
+              }
+            }
+          },
+          {
+            "@type": "ListItem",
+            "position": 12,
+            "item": {
+              "@type": "TouristAttraction",
+              "name": "Stalin Museum, Gori",
+              "address": {
+                "@type": "PostalAddress",
+                "addressRegion": "Shida Kartli",
+                "addressCountry": "GE"
+              }
+            }
+          }
+        ]
+      },
+      "offers": {
+        "@type": "AggregateOffer",
+        "priceCurrency": "EUR",
+        "lowPrice": "1185",
+        "offerCount": "3",
+        "availability": "https://schema.org/InStock",
+        "url": "https://www.hikasustravel.com/en/private-tours/8-day-georgia-culture-and-adventure-tour/"
+      }
+    },
+    "enBreadcrumb": {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://www.hikasustravel.com/en/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Private Tours",
+          "item": "https://www.hikasustravel.com/en/private-tours/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "8-Day Georgia Culture and Adventure Tour",
+          "item": "https://www.hikasustravel.com/en/private-tours/8-day-georgia-culture-and-adventure-tour/"
+        }
+      ]
+    },
     "formerSlug": "immerse-yourself-in-georgia-8-day-cultural-and-adventure-journey-through-the-caucasus",
     "type": "private",
     "title": "8-Day Georgia Culture & Adventure Tour",
