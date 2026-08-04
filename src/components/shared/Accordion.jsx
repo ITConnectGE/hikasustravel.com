@@ -15,26 +15,72 @@ function ChevronIcon({ open }) {
   )
 }
 
+/* Itinerary day titles read "<day word> <n><separator><description>" in every
+   language. Matching a fixed list of day words (rather than any leading word)
+   keeps a title like "Tbilisi 5 — ..." from being mistaken for a day heading.
+   `Dzien` is the diacritic-stripped spelling that most of the Polish tour copy
+   still uses; `Dia` likewise for Spanish. */
+const DAY_WORDS = new Set(['day', 'tag', 'jour', 'día', 'dia', 'dag', 'den', 'dzień', 'dzien'])
+
 function parseDayTitle(title) {
-  const match = title.match(/^Day\s+(\d+)\s*[:\-–—]\s*(.+)$/i)
-  if (match) return { dayNum: match[1], description: match[2].trim() }
+  const match = title.match(/^(\p{L}+)\s+(\d+)\s*[:\-–—]\s*(.+)$/u)
+  if (match && DAY_WORDS.has(match[1].toLowerCase())) {
+    return { dayNum: match[2], description: match[3].trim() }
+  }
   return { dayNum: null, description: title }
 }
 
-function extractTags(htmlContent) {
-  const tags = []
-  const durationMatch = htmlContent.match(/<strong>Duration of the tour:<\/strong>\s*([^<]+)/i)
-  const drivingMatch = htmlContent.match(/<strong>Driving duration:<\/strong>\s*([^<]+)/i)
-  if (durationMatch) tags.push({ icon: 'clock', label: durationMatch[1].trim() })
-  if (drivingMatch) tags.push({ icon: 'car', label: drivingMatch[1].trim() })
+/* The two chip-worthy duration labels, in every spelling that actually occurs
+   in the tour data (counted across all tours in all 7 locales). Matching is on
+   the COMPLETE label, never a prefix: a bare "Duration:" / "Dauer:" /
+   "Czas trwania:" also exists ~25 times and must stay an ordinary bullet, and
+   "Czas trwania wycieczki" would otherwise swallow it. "Driving duration"
+   appears untranslated a few times in every locale, so it is listed for all. */
+const normLabel = (s) => s.replace(/[\u00a0\u202f]/g, ' ').replace(/\s*:\s*$/, '').trim().toLowerCase()
+const TOUR_DURATION = new Set([
+  'Duration of the tour', 'Dauer der Tour', 'Durée de la visite', 'Durée du tour',
+  'Duración del tour', 'Duur van de tour', 'Délka prohlídky', 'Délka zájezdu',
+  'Czas trwania wycieczki', 'Czas trwania touru',
+].map(normLabel))
+const DRIVING_DURATION = new Set([
+  'Driving duration', 'Fahrtdauer', 'Durée du trajet', 'Durée de conduite',
+  'Duración del trayecto', 'Duración de la conducción', 'Rijduur',
+  'Doba jízdy', 'Délka jízdy', 'Czas jazdy',
+].map(normLabel))
 
-  // Strip the duration/driving lines from content for cleaner display
-  let cleaned = htmlContent
-    .replace(/<li>\s*<strong>Duration of the tour:<\/strong>[^<]*<\/li>/gi, '')
-    .replace(/<li>\s*<strong>Driving duration:<\/strong>[^<]*<\/li>/gi, '')
-    .replace(/<p>\s*<br\s*\/?>\s*<i>\s*<strong>Duration of the tour:<\/strong>[^<]*<\/i>\s*<br\s*\/?>\s*<i>\s*<strong>Driving duration:<\/strong>[^<]*<\/i>\s*<\/p>/gi, '')
-    .replace(/<i>\s*<strong>Duration of the tour:<\/strong>[^<]*<\/i>/gi, '')
-    .replace(/<i>\s*<strong>Driving duration:<\/strong>[^<]*<\/i>/gi, '')
+function extractTags(htmlContent) {
+  let tourValue = null
+  let drivingValue = null
+
+  // Lift the two duration lines out of their <li> (or <i>) wrapper, whatever
+  // language they are written in, and drop them from the visible bullet list.
+  let cleaned = htmlContent.replace(
+    /<(li|i)>\s*<strong>([^<]*)<\/strong>([^<]*)<\/\1>/gi,
+    (whole, _tag, label, value) => {
+      const key = normLabel(label)
+      if (TOUR_DURATION.has(key)) { if (tourValue === null) tourValue = value.trim(); return '' }
+      if (DRIVING_DURATION.has(key)) { if (drivingValue === null) drivingValue = value.trim(); return '' }
+      return whole
+    }
+  )
+
+  // Fall back to a bare scan for any layout that does not use those wrappers.
+  if (tourValue === null || drivingValue === null) {
+    for (const m of htmlContent.matchAll(/<strong>([^<]*)<\/strong>\s*([^<]*)/g)) {
+      const key = normLabel(m[1])
+      if (tourValue === null && TOUR_DURATION.has(key)) tourValue = m[2].trim()
+      if (drivingValue === null && DRIVING_DURATION.has(key)) drivingValue = m[2].trim()
+    }
+  }
+
+  // Tidy up wrappers left empty by the removals.
+  cleaned = cleaned
+    .replace(/<p>\s*(?:<br\s*\/?>\s*)*<\/p>/gi, '')
+    .replace(/<ul>\s*<\/ul>/gi, '')
+
+  const tags = []
+  if (tourValue) tags.push({ icon: 'clock', label: tourValue })
+  if (drivingValue) tags.push({ icon: 'car', label: drivingValue })
 
   return { tags, cleanedContent: cleaned }
 }
