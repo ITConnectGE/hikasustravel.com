@@ -21,12 +21,35 @@
  *   node scripts/generate-redirects.js
  */
 
-import { mkdirSync, writeFileSync } from 'fs'
+import { existsSync, mkdirSync, readFileSync, writeFileSync } from 'fs'
 import { dirname, join } from 'path'
 import { fileURLToPath, pathToFileURL } from 'url'
 
 const __dirname = dirname(fileURLToPath(import.meta.url))
 const src = (p) => pathToFileURL(join(__dirname, '..', 'src', p)).href
+
+/**
+ * `--check` mode: verify the committed redirect config still matches what this
+ * generator would produce, WITHOUT rewriting it. The build runs this so the
+ * Cloudflare list cannot silently drift out of sync with the route table — the
+ * failure mode it guards against is a page being renamed or re-parented and the
+ * legacy URL quietly losing its redirect.
+ *
+ * ⚠️ Comparison is LINE-ENDING NORMALISED on purpose. `core.autocrlf=true` gives
+ * a CRLF working tree on Windows while this script (and CI on Linux) writes LF,
+ * so a byte comparison would fail on every developer machine and pass in CI —
+ * the worst possible split. Content is what matters here.
+ */
+const CHECK = process.argv.includes('--check')
+const drift = []
+const norm = (s) => s.replace(/\r\n/g, '\n')
+
+function emit(file, content) {
+  const path = join(OUT, file)
+  if (!CHECK) { writeFileSync(path, content, 'utf-8'); return }
+  if (!existsSync(path)) { drift.push(`${file} — missing`); return }
+  if (norm(readFileSync(path, 'utf-8')) !== norm(content)) drift.push(`${file} — out of date`)
+}
 
 const { legacyRedirects, publishedDestinationPages } = await import(src('data/places.js'))
 const { publishedBorderPages } = await import(src('data/borders.js'))
@@ -185,7 +208,7 @@ console.log(`simulation: ${FAMILIES.length} regex rules verified against `
 // ---------------------------------------------------------------------------
 // 3. Emit
 // ---------------------------------------------------------------------------
-mkdirSync(OUT, { recursive: true })
+if (!CHECK) mkdirSync(OUT, { recursive: true })
 
 const csv = ['source,target,status,preserve_query_string']
 for (const lang of LANGS) {
@@ -193,7 +216,7 @@ for (const lang of LANGS) {
     csv.push(`${SITE}/${lang}/${from}/,${SITE}/${lang}/${to}/,301,true`)
   }
 }
-writeFileSync(join(OUT, 'cloudflare-bulk-redirects.csv'), csv.join('\n') + '\n', 'utf-8')
+emit('cloudflare-bulk-redirects.csv', csv.join('\n') + '\n')
 
 const md = []
 md.push('# Cloudflare redirects for legacy URLs', '')
@@ -246,7 +269,7 @@ md.push('```', '')
 md.push('---', '', 'Both options express identical coverage — apply one, not both.', '')
 md.push('The `noindex, follow` meta-refresh stubs the build ships stay in place either way; they',
   'become a harmless fallback for anything that reaches the origin without passing the edge.', '')
-writeFileSync(join(OUT, 'cloudflare-redirect-rules.md'), md.join('\n'), 'utf-8')
+emit('cloudflare-redirect-rules.md', md.join('\n'))
 
 // ---------------------------------------------------------------------------
 // 4. Report
@@ -258,5 +281,17 @@ for (const fam of FAMILIES) {
 }
 console.log(`  ${'residual (1:1)'.padEnd(22)} ${String(residual.length).padStart(4)} paths           (${residual.length * LANGS.length} URLs)`)
 console.log(`\nrule count: ${FAMILIES.length} regex rules + ${residual.length} explicit  (vs ${pairs.length * LANGS.length} bulk rows)`)
-console.log(`\nwrote docs/redirects/cloudflare-bulk-redirects.csv  (${csv.length - 1} rows)`)
-console.log('wrote docs/redirects/cloudflare-redirect-rules.md')
+
+if (!CHECK) {
+  console.log(`\nwrote docs/redirects/cloudflare-bulk-redirects.csv  (${csv.length - 1} rows)`)
+  console.log('wrote docs/redirects/cloudflare-redirect-rules.md')
+} else if (drift.length) {
+  console.error('\n✗ redirect config is OUT OF SYNC with the route table:')
+  for (const d of drift) console.error(`    ${d}`)
+  console.error('\n  A route was probably renamed or re-parented without refreshing the')
+  console.error('  Cloudflare redirect list, which would leave its old URL without a 301.')
+  console.error('  Fix:  node scripts/generate-redirects.js   (then commit docs/redirects/)')
+  process.exit(1)
+} else {
+  console.log(`\n✓ redirect config in sync (${csv.length - 1} bulk rows) — nothing to regenerate`)
+}
