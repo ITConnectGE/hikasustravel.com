@@ -5479,7 +5479,160 @@ export const cities = [
       },
     ],
     thingsToDo: {
-      seoKey: 'thingsToDoRustavi', contentKey: 'thingsToDoRustavi', image: '/images/files/georgia-home.jpg',
+      seoKey: 'thingsToDoRustavi', contentKey: 'thingsToDoRustavi',
+      // Cover/hero = the Central Park cypress avenue, REPLACING the generic
+      // georgia-home.jpg placeholder. Ladder 1200/1448/1672 (native ceiling), OG
+      // 1200x630 already built. Hero paths keep the legacy `-<w>w` suffix, which is
+      // fine: a hero is a plain path plus CSS, and only inlineImageObjects need
+      // no-`w` names.
+      //
+      // ⚠️ NO 768 RUNG EXISTS for this set, so the mobile base rung is 1200. That is
+      // deliberate: the only way to make a 768 would be re-encoding the lossy 1672
+      // webp, and shipping a slightly heavier honest rung beats a twice-compressed
+      // light one. If a true 768 is ever wanted, cut it from the 3629px raw
+      // (`Rustavi Central Park and Rustavi Fortress Images/20.jpg`), not from the webp.
+      //
+      // ⚠️ CHOSEN BY RENDERING THE CROP, not by eye. The park LAKE frame was the
+      // other candidate and is the better photograph, but simulating
+      // `background-size: cover` at 360 showed it is TWO-THIRDS EMPTY SKY — the
+      // water and hills sit in the bottom third, so under the H1 overlay it is a
+      // near-blank blue banner. The avenue fills the tall mobile crop with depth.
+      // The lake therefore ships INLINE below, where nothing is cropped.
+      image: '/images/files/rustavi-central-park-georgia-1672w.webp',
+      imageAvif: '/images/files/rustavi-central-park-georgia-1672w.avif',
+      heroClass: 'hero--things-to-do-rustavi',
+      heroPreload: '/images/files/rustavi-central-park-georgia-1200w.avif',
+      // Dedicated 1.91:1 social image, already built for the Rustavi city page.
+      ogImage: { src: '/images/files/rustavi-central-park-georgia-og-1200x630.jpg', width: 1200, height: 630 },
+      // ⚠️ ENGLISH-ONLY BODY — the ninth such guide. `thingsToDoRustavi` exists only
+      // in en/pages.json; the other six locales fall back to en-fallback.json. Per
+      // the owner's decision on the Chiatura pass the visible <figcaption> and
+      // <img alt> are ENGLISH in all seven, while the `alt` map drives og:image:alt
+      // and every `caption` map drives the per-locale ImageObject JSON-LD.
+      //
+      // ⚠️ NAMING — counted site-wide in the prose AND in this file. Unusually, the
+      // two corpora AGREE here (unlike Telavi and Ushguli), so everything is Latin:
+      //   Rustavi      de 162 v `Rustawi` 2 · fr 162 v `Roustavi` 1 · pl 145 v
+      //                `Rustawi` 19 · es/nl/cs Latin outright; ZERO exonyms in places.js
+      //   Kvemo Kartli de 119 v `Kwemo` 17 · fr 143 v 3 · es 146 v 0 · nl 146 v 1 ·
+      //                cs 143 v 3 · pl 127 v 0
+      //   Soviet adj.  de sowjetisch- · fr soviétique · es soviético · nl Sovjet- ·
+      //                cs sovětsk- · pl sowieck-
+      //
+      // ⚠️ SAFETY WORDING IS LOAD-BEARING ON THIS PAGE. The plant photograph is shot
+      // from the public square OUTSIDE the administrative building, and every string
+      // below says so. Nothing hints at entering the plant, a factory tour, rail
+      // land, abandoned structures or any restricted area, and nothing states hours,
+      // prices, access rules, event dates, transport times or road conditions.
+      imageMeta: {
+        width: 1672, height: 941, imageId: 'hero-image',
+        name: 'Cypress avenue in Rustavi Central Park, Kvemo Kartli, Georgia',
+        description: 'A paved path running between clipped cypresses in the Central Park of Rustavi, with rows of small flags strung overhead, Kvemo Kartli, Georgia (the country).',
+        locationName: 'Rustavi Central Park, Rustavi, Kvemo Kartli, Georgia',
+        locality: 'Rustavi', region: 'Kvemo Kartli', country: 'GE',
+        geo: { lat: 41.5495, lng: 44.9930 },
+        alt: {
+          en: 'Cypress-lined path hung with bunting in Rustavi Central Park, Kvemo Kartli, Georgia',
+          de: 'Von Zypressen gesäumter Weg mit Wimpelketten im Zentralpark von Rustavi, Kvemo Kartli, Georgien',
+          fr: "Allée bordée de cyprès et pavoisée de fanions dans le parc central de Rustavi, Kvemo Kartli, Géorgie",
+          es: 'Sendero flanqueado de cipreses con banderines en el parque central de Rustavi, Kvemo Kartli, Georgia',
+          nl: 'Met cipressen omzoomd pad met vlaggenlijnen in het centrale park van Rustavi, Kvemo Kartli, Georgië',
+          cs: 'Cesta lemovaná cypřiši s girlandami vlaječek v centrálním parku Rustavi, Kvemo Kartli, Gruzie',
+          pl: 'Ścieżka obsadzona cyprysami z girlandami chorągiewek w parku centralnym Rustavi, Kvemo Kartli, Gruzja',
+        },
+        caption: {
+          en: 'A cypress-lined path runs through Rustavi Central Park beneath rows of small strung flags.',
+          de: 'Ein von Zypressen gesäumter Weg führt durch den Zentralpark von Rustavi, überspannt von Reihen kleiner Fähnchen.',
+          fr: "Une allée bordée de cyprès traverse le parc central de Rustavi sous des rangées de petits fanions tendus.",
+          es: 'Un sendero flanqueado de cipreses atraviesa el parque central de Rustavi bajo hileras de banderines.',
+          nl: 'Een met cipressen omzoomd pad loopt door het centrale park van Rustavi, onder rijen kleine vlaggetjes.',
+          cs: 'Cesta lemovaná cypřiši vede centrálním parkem Rustavi pod řadami malých vlaječek.',
+          pl: 'Ścieżka obsadzona cyprysami biegnie przez park centralny Rustavi pod rzędami małych chorągiewek.',
+        },
+      },
+      // TWO body figures only, spliced into the ENGLISH content by LINE INDEX (this
+      // page is a 19-line single-\n block): 6 the park lake · 14 the Soviet-era
+      // plant building. Both are exact subject matches.
+      //
+      // ⚠️ TWO IS THE HONEST CEILING, not an oversight. FOUR of this page's named
+      // subjects have NO photograph anywhere in the project: the RUSTAVI
+      // INTERNATIONAL MOTORPARK, the RUSTAVI HISTORY MUSEUM, the SEMI-DESERT
+      // LANDSCAPES, and DAVID GAREJA — the last being the page's biggest draw. The
+      // whole tree was searched, including the 22 numerically-named raws in
+      // `Rustavi Central Park and Rustavi Fortress Images` that unused-asset scans
+      // miss: all 22 are Central Park or the fortress, nothing new.
+      //
+      // Explicitly REJECTED rather than stretched:
+      //   rustavi-fortress-georgia and the fortress raws — ⚠️ THE FORTRESS IS NOT
+      //     DESCRIBED ON THIS PAGE. A grep for "fortress" hits once, but that is
+      //     DMANISI's medieval fortress in the combine-with-nearby section, not
+      //     Rustavi's. The city page's hero is therefore off-limits here.
+      //   rustavi-street-art-mural / -portrait-mural — "mural" and "street art"
+      //     score ZERO on this page; captioning one would introduce a fact the page
+      //     never states.
+      //   the lake's dry background hills as the SEMI-DESERT section's image — the
+      //     hills are visible, but the frame's subject is the lake, and placing it
+      //     under that heading would mislabel by position.
+      //   bolnisi-museum-* (incl. the Dmanisi hominin case) — the page names
+      //     Bolnisi's 5th-century CATHEDRAL and Dmanisi's hominin SITE; museum
+      //     display cases show neither.
+      //   the park entrance gate and duck/pavilion frames — redundant once the lake
+      //     is in, and all are the Central Park site page's own inlines.
+      inlineImageObjects: [
+        {
+          // Generated for this pass from the 2419x1361 raw that the Central Park
+          // site page still serves un-laddered: 768/1200/1448, WebP q85 / AVIF q62,
+          // no upscale (1448 is well under native).
+          base: 'rustavi-central-park-lake-georgia', width: 1448, height: 815,
+          anchor: 'inline-park-lake', dir: '/images/kvemo-kartli',
+          description: 'The lake in the Central Park of Rustavi, its banks open and wooded, with low dry hills rising beyond the far shore, Kvemo Kartli, Georgia.',
+          locationName: 'Rustavi Central Park, Rustavi, Kvemo Kartli, Georgia',
+          locality: 'Rustavi', region: 'Kvemo Kartli', geo: { lat: 41.5495, lng: 44.9930 },
+          name: {
+            en: 'The lake in Rustavi Central Park with wooded banks and dry hills beyond, Kvemo Kartli, Georgia',
+            de: 'Der See im Zentralpark von Rustavi mit bewaldeten Ufern und trockenen Hügeln dahinter, Kvemo Kartli, Georgien',
+            fr: "Le lac du parc central de Rustavi, aux rives boisées, avec des collines arides à l'arrière-plan, Kvemo Kartli, Géorgie",
+            es: 'El lago del parque central de Rustavi, con orillas arboladas y colinas secas al fondo, Kvemo Kartli, Georgia',
+            nl: 'Het meer in het centrale park van Rustavi met beboste oevers en droge heuvels erachter, Kvemo Kartli, Georgië',
+            cs: 'Jezero v centrálním parku Rustavi se zalesněnými břehy a vyprahlými kopci v pozadí, Kvemo Kartli, Gruzie',
+            pl: 'Jezioro w parku centralnym Rustavi z zalesionymi brzegami i suchymi wzgórzami w tle, Kvemo Kartli, Gruzja',
+          },
+          caption: {
+            en: 'The lake at the heart of Rustavi Central Park, its banks open and wooded, with dry hills on the far side.',
+            de: 'Der See im Herzen des Zentralparks von Rustavi: offene, teils bewaldete Ufer, dahinter trockene Hügel.',
+            fr: "Le lac au cœur du parc central de Rustavi, aux rives dégagées et boisées, avec des collines arides de l'autre côté.",
+            es: 'El lago en el corazón del parque central de Rustavi, de orillas abiertas y arboladas, con colinas secas al otro lado.',
+            nl: 'Het meer in het hart van het centrale park van Rustavi, met open en beboste oevers en droge heuvels aan de overkant.',
+            cs: 'Jezero v srdci centrálního parku Rustavi — otevřené a zalesněné břehy, na druhé straně vyprahlé kopce.',
+            pl: 'Jezioro w sercu parku centralnego Rustavi — otwarte i zalesione brzegi, a po drugiej stronie suche wzgórza.',
+          },
+        },
+        {
+          base: 'rustavi-metallurgical-plant-building-georgia', width: 1448, height: 1086,
+          anchor: 'inline-plant-building', dir: '/images/kvemo-kartli',
+          description: 'The Soviet-era administrative building of the Rustavi metallurgical plant, with its clock tower and colonnade, seen from the public square and sculpture group in front of it, Kvemo Kartli, Georgia.',
+          locationName: 'Rustavi, Kvemo Kartli, Georgia',
+          locality: 'Rustavi', region: 'Kvemo Kartli', geo: { lat: 41.5606, lng: 44.9908 },
+          name: {
+            en: 'Soviet-era administrative building of the Rustavi metallurgical plant, Kvemo Kartli, Georgia',
+            de: 'Verwaltungsgebäude des Metallurgiewerks Rustavi aus sowjetischer Zeit, Kvemo Kartli, Georgien',
+            fr: "Bâtiment administratif de l'usine métallurgique de Rustavi, d'époque soviétique, Kvemo Kartli, Géorgie",
+            es: 'Edificio administrativo de época soviética de la planta metalúrgica de Rustavi, Kvemo Kartli, Georgia',
+            nl: 'Administratiegebouw uit de Sovjettijd van de metaalfabriek van Rustavi, Kvemo Kartli, Georgië',
+            cs: 'Administrativní budova rustavské hutě ze sovětské éry, Kvemo Kartli, Gruzie',
+            pl: 'Budynek administracyjny huty w Rustavi z czasów sowieckich, Kvemo Kartli, Gruzja',
+          },
+          caption: {
+            en: "The Soviet-era administrative building of Rustavi's metallurgical plant, seen across the square and its monument.",
+            de: 'Das Verwaltungsgebäude des Metallurgiewerks Rustavi aus sowjetischer Zeit, gesehen über den Platz mit seinem Denkmal hinweg.',
+            fr: "Le bâtiment administratif d'époque soviétique de l'usine métallurgique de Rustavi, vu depuis la place et son monument.",
+            es: 'El edificio administrativo de época soviética de la planta metalúrgica de Rustavi, visto desde la plaza y su monumento.',
+            nl: 'Het administratiegebouw uit de Sovjettijd van de metaalfabriek van Rustavi, gezien vanaf het plein met zijn monument.',
+            cs: 'Administrativní budova rustavské hutě ze sovětské éry, pohled přes náměstí s pomníkem.',
+            pl: 'Budynek administracyjny huty w Rustavi z czasów sowieckich, widziany z placu z pomnikiem.',
+          },
+        },
+      ],
       address: { addressLocality: 'Rustavi' },
       attractions: ['Rustavi International Motorpark', 'Rustavi Central Park', 'Rustavi History Museum', 'David Gareja Monastery'],
     },

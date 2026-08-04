@@ -1881,6 +1881,48 @@ section {
   }
 }
 /* Native is 1217 — that is the top rung. Do not add a 1448/1600/2400 breakpoint. */
+/* Things to Do in Rustavi hero — per-page CSS background (same opt-in mechanism as
+   .hero--things-to-do-ushguli above). Replaces the generic georgia-home.jpg
+   placeholder with the Central Park cypress avenue.
+
+   ⚠️ THE LADDER STARTS AT 1200, NOT 768 — this set has no 768 rung and never had
+   one. Making one would mean re-encoding the lossy 1672 webp, so the honest
+   slightly-heavier base rung ships instead. If a true 768 is ever wanted, cut it
+   from the 3629px raw, not from the webp. Native is 1672 — that is the ceiling.
+
+   Default `background-position: center` (from .coverme) is kept and was MEASURED at
+   360px and 1440px: the avenue's cypresses, bunting and receding path fill the tall
+   mobile crop with depth. This is the same test that rejected the park LAKE frame
+   for the hero slot — its crop at 360 is two-thirds empty sky — so the lake ships
+   as a body figure instead, where nothing is cropped. The shared .coverme::after
+   overlay already provides the readable text layer, so no extra scrim is enabled.
+   plain url() line = image-set() fallback for browsers without image-set(). */
+.hero--things-to-do-rustavi {
+  background-image: url("/images/files/rustavi-central-park-georgia-1200w.webp");
+  background-image: image-set(
+    url("/images/files/rustavi-central-park-georgia-1200w.avif") type("image/avif"),
+    url("/images/files/rustavi-central-park-georgia-1200w.webp") type("image/webp")
+  );
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+@media (min-width: 1200px) {
+  .hero--things-to-do-rustavi {
+    background-image: image-set(
+      url("/images/files/rustavi-central-park-georgia-1448w.avif") type("image/avif"),
+      url("/images/files/rustavi-central-park-georgia-1448w.webp") type("image/webp")
+    );
+  }
+}
+@media (min-width: 1448px) {
+  .hero--things-to-do-rustavi {
+    background-image: image-set(
+      url("/images/files/rustavi-central-park-georgia-1672w.avif") type("image/avif"),
+      url("/images/files/rustavi-central-park-georgia-1672w.webp") type("image/webp")
+    );
+  }
+}
+/* Native is 1672 — that is the top rung. Do not add a 2000/2400 breakpoint. */
 /* Martvili Canyon hero — per-page CSS background (same opt-in mechanism as
    .hero--akhaltsikhe above). FIRST Samegrelo photograph in the project; replaces
    the generic georgia-home.jpg placeholder.
