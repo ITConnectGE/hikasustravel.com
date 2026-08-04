@@ -451,10 +451,25 @@ function writeRedirectStub(filePath, target) {
   const $ = load(template)
   $('head').prepend(`<meta http-equiv="refresh" content="0; url=${target}">`)
   $('link[rel="canonical"]').attr('href', target)
+  // ⚠️ NO `noindex` HERE — deliberately. A stub previously carried
+  // `noindex, follow` AND a rel=canonical to its destination, which are
+  // contradictory instructions: noindex says "drop this URL", canonical says
+  // "merge this URL into that one". Google's guidance is to pick one, and if the
+  // page is dropped before the canonical is processed the consolidation signal
+  // is simply lost — the legacy URL's accumulated equity goes nowhere instead of
+  // flowing to the live page.
+  //
+  // Canonical + an instant meta-refresh is the coherent pairing for a moved URL,
+  // so the robots meta inherited from the template is removed and none is added
+  // back (absence = the default index,follow, and the canonical does the work).
+  //
+  // The tradeoff, stated plainly: without noindex a stub *could* be indexed if
+  // Google disregards the canonical. The instant refresh makes that unlikely,
+  // and a real 301 at the edge would remove the question entirely — see
+  // docs/redirects/, which is generated and still unapplied.
   $('meta[name="robots"]').remove()
-  $('head').append('<meta name="robots" content="noindex, follow">')
-  // `follow` needs something to follow: give the stub a real anchor to its
-  // destination, not only the meta-refresh and the canonical.
+  // Give the stub a real anchor to its destination, not only the meta-refresh
+  // and the canonical, so a crawler without JS has a link to follow.
   $('#root').html(renderCrawlLinks([{ href: target, text: target }]))
   mkdirSync(dirname(filePath), { recursive: true })
   writeFileSync(filePath, $.html(), 'utf-8')
