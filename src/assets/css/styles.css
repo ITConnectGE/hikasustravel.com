@@ -5064,6 +5064,21 @@ ul {
   background-size: cover;
   background-position: center;
 }
+/* Responsive gallery items render a real <img>; the blur-up variant renders a
+   <div> with a CSS background. This element+class selector therefore matches
+   ONLY the opt-in items and leaves every other tour gallery on 4:3 as before.
+   A uniform 3:2 tile with object-fit:cover keeps mixed portrait and landscape
+   photos aligned in the grid; the lightbox still shows the uncropped image. */
+img.gallery-card__img {
+  display: block;
+  /* `height: auto` is load-bearing: the intrinsic `height` attribute (needed for
+     CLS) also acts as a presentational hint, and a specified height makes the
+     browser ignore `aspect-ratio` entirely — tiles then rendered at their full
+     native height and the grid was ragged. */
+  height: auto;
+  aspect-ratio: 3 / 2;
+  object-fit: cover;
+}
 .gallery-card__day {
   position: absolute;
   top: 10px;

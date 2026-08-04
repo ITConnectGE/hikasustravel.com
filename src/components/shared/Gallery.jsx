@@ -9,6 +9,16 @@ import useT from '../../i18n/useT'
 const INITIAL_COUNT = 6
 const SWIPE_THRESHOLD = 50
 
+/* A gallery item opts into real responsive markup by supplying `base` + `widths`
+   (plus the native `width`/`height`). Those render a crawlable
+   <figure><picture><img> with an AVIF/WebP ladder and exact intrinsic
+   dimensions, so the tile reserves its space and nothing shifts on load.
+   Items without those keys keep the original blur-up background rendering —
+   every existing tour gallery is therefore untouched. */
+const GALLERY_SIZES = '(max-width:768px) 50vw, 300px'
+const srcSetFor = (base, widths, ext) =>
+  widths.map((w) => `${asset(`${base}-${w}.${ext}`)} ${w}w`).join(', ')
+
 export function GalleryLightbox({ images, startIndex, onClose, label }) {
   const t = useT()
   const [index, setIndex] = useState(startIndex)
@@ -140,9 +150,12 @@ export default function Gallery({ images }) {
           const caption = img.caption ? img.caption.replace(/<[^>]*>/g, '') : ''
           const description = img.description || ''
           const day = img.day || ''
+          const responsive = !!(img.base && img.widths?.length)
+          const Card = responsive ? 'figure' : 'div'
+          const Info = responsive ? 'figcaption' : 'div'
           return (
             <FadeUp key={index}>
-              <div className="gallery-card">
+              <Card className="gallery-card">
                 <div
                   className="gallery-card__img-wrap"
                   role="button"
@@ -156,16 +169,33 @@ export default function Gallery({ images }) {
                     }
                   }}
                 >
-                  <BlurUpBackground src={img.src} className="gallery-card__img" />
+                  {responsive ? (
+                    <picture>
+                      <source type="image/avif" srcSet={srcSetFor(img.base, img.widths, 'avif')} sizes={GALLERY_SIZES} />
+                      <source type="image/webp" srcSet={srcSetFor(img.base, img.widths, 'webp')} sizes={GALLERY_SIZES} />
+                      <img
+                        src={asset(`${img.base}-${img.widths[0]}.webp`)}
+                        width={img.width}
+                        height={img.height}
+                        loading="lazy"
+                        decoding="async"
+                        sizes={GALLERY_SIZES}
+                        alt={caption}
+                        className="gallery-card__img"
+                      />
+                    </picture>
+                  ) : (
+                    <BlurUpBackground src={img.src} className="gallery-card__img" />
+                  )}
                   {day && <span className="gallery-card__day">{day}</span>}
                 </div>
                 {(caption || description) && (
-                  <div className="gallery-card__info">
+                  <Info className="gallery-card__info">
                     {caption && <h4 className="gallery-card__location">{caption}</h4>}
                     {description && <p className="gallery-card__desc">{description}</p>}
-                  </div>
+                  </Info>
                 )}
-              </div>
+              </Card>
             </FadeUp>
           )
         })}

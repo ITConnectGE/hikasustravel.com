@@ -2583,7 +2583,8 @@ export const tours = [
     "type": "private",
     "title": "8-Day Georgia Culture & Adventure Tour",
     "seoTitle": "8-Day Georgia Culture & Adventure Tour: Caucasus Mountains",
-    "heroImage": "/images/files/cultural-adventure-caucasus.jpg",
+    "heroImage": "/images/tours/8-day-culture-adventure/gergeti-trinity-church-kazbegi-georgia-1448.webp",
+    "ogImage": { "src": "/images/tours/8-day-culture-adventure/gergeti-trinity-church-kazbegi-georgia-og.jpg", "width": 1200, "height": 630 },
     "tileImage": "/images/files/cultural-adventure-caucasus.jpg",
     "listingImage": "/images/files/cultural-adventure-caucasus.jpg",
     "days": 8,
@@ -2696,12 +2697,150 @@ export const tours = [
       "Travel insurance."
     ],
     "gallery": [
-      { "src": "/images/files/cultural-adventure-caucasus.jpg", "caption": "Caucasus Adventure", "description": "Dramatic landscapes of the Georgian highlands" },
-      { "src": "/images/files/georgia-tour-01.jpg", "caption": "Tbilisi", "description": "Georgia's vibrant capital city" },
-      { "src": "/images/files/georgia-tour-06.jpg", "caption": "Stalin Museum", "description": "Historic museum in Gori, Georgia" },
-      { "src": "/images/files/georgia-tour-10.jpg", "caption": "Batumi", "description": "Black Sea coastal city with modern architecture" },
-      { "src": "/images/files/georgia-tour-14.jpg", "caption": "Qvevri Winemaking", "description": "Traditional Georgian clay vessel winemaking" },
-      { "src": "/images/files/Gergeti-Church.jpg", "caption": "Gergeti Trinity Church", "description": "Iconic church with stunning Caucasus mountain views" }
+      {
+        "src": "/images/tours/8-day-culture-adventure/holy-trinity-cathedral-sameba-tbilisi-georgia-1672.webp",
+        "base": "/images/tours/8-day-culture-adventure/holy-trinity-cathedral-sameba-tbilisi-georgia",
+        "widths": [768, 1200, 1600, 1672],
+        "width": 1672,
+        "height": 941,
+        "caption": "Holy Trinity Cathedral (Sameba), Tbilisi"
+      },
+      {
+        "src": "/images/tours/8-day-culture-adventure/metekhi-cliff-mtkvari-river-tbilisi-georgia-1448.webp",
+        "base": "/images/tours/8-day-culture-adventure/metekhi-cliff-mtkvari-river-tbilisi-georgia",
+        "widths": [768, 1200, 1448],
+        "width": 1448,
+        "height": 1086,
+        "caption": "Metekhi cliff above the Mtkvari River, Tbilisi"
+      },
+      {
+        "src": "/images/tours/8-day-culture-adventure/narikala-fortress-tbilisi-georgia-1448.webp",
+        "base": "/images/tours/8-day-culture-adventure/narikala-fortress-tbilisi-georgia",
+        "widths": [768, 1200, 1448],
+        "width": 1448,
+        "height": 1086,
+        "caption": "Narikala Fortress, Tbilisi"
+      },
+      {
+        "src": "/images/tours/8-day-culture-adventure/tbilisi-cable-car-old-town-georgia-1023.webp",
+        "base": "/images/tours/8-day-culture-adventure/tbilisi-cable-car-old-town-georgia",
+        "widths": [768, 1023],
+        "width": 1023,
+        "height": 1537,
+        "caption": "Cable car over Old Tbilisi"
+      },
+      {
+        "src": "/images/tours/8-day-culture-adventure/gabriadze-clock-tower-tbilisi-georgia-1086.webp",
+        "base": "/images/tours/8-day-culture-adventure/gabriadze-clock-tower-tbilisi-georgia",
+        "widths": [768, 1086],
+        "width": 1086,
+        "height": 1448,
+        "caption": "Rezo Gabriadze clock tower, Tbilisi"
+      },
+      {
+        "src": "/images/tours/8-day-culture-adventure/tbilisi-old-town-panorama-georgia-1448.webp",
+        "base": "/images/tours/8-day-culture-adventure/tbilisi-old-town-panorama-georgia",
+        "widths": [768, 1200, 1448],
+        "width": 1448,
+        "height": 1086,
+        "caption": "Old Town panorama, Tbilisi"
+      },
+      {
+        "src": "/images/tours/8-day-culture-adventure/georgian-supra-feast-georgia-1448.webp",
+        "base": "/images/tours/8-day-culture-adventure/georgian-supra-feast-georgia",
+        "widths": [768, 1200, 1448],
+        "width": 1448,
+        "height": 1086,
+        "caption": "Traditional Georgian supra (feast)"
+      },
+      {
+        "src": "/images/tours/8-day-culture-adventure/ninoskhevi-waterfall-lagodekhi-georgia-941.webp",
+        "base": "/images/tours/8-day-culture-adventure/ninoskhevi-waterfall-lagodekhi-georgia",
+        "widths": [768, 941],
+        "width": 941,
+        "height": 1672,
+        "caption": "Ninoskhevi Waterfall, Lagodekhi"
+      },
+      {
+        "src": "/images/tours/8-day-culture-adventure/batonistsikhe-fortress-telavi-georgia-2400.webp",
+        "base": "/images/tours/8-day-culture-adventure/batonistsikhe-fortress-telavi-georgia",
+        "widths": [768, 1200, 1600, 2400],
+        "width": 2400,
+        "height": 1807,
+        "caption": "Batonistsikhe Fortress, Telavi"
+      },
+      {
+        "src": "/images/tours/8-day-culture-adventure/jvari-monastery-mtskheta-georgia-1448.webp",
+        "base": "/images/tours/8-day-culture-adventure/jvari-monastery-mtskheta-georgia",
+        "widths": [768, 1200, 1448],
+        "width": 1448,
+        "height": 1086,
+        "caption": "Jvari Monastery, Mtskheta"
+      },
+      {
+        "src": "/images/tours/8-day-culture-adventure/svetitskhoveli-cathedral-mtskheta-georgia-1540.webp",
+        "base": "/images/tours/8-day-culture-adventure/svetitskhoveli-cathedral-mtskheta-georgia",
+        "widths": [768, 1200, 1540],
+        "width": 1540,
+        "height": 1021,
+        "caption": "Svetitskhoveli Cathedral, Mtskheta"
+      },
+      {
+        "src": "/images/tours/8-day-culture-adventure/uplistsikhe-cave-town-georgia-1448.webp",
+        "base": "/images/tours/8-day-culture-adventure/uplistsikhe-cave-town-georgia",
+        "widths": [768, 1200, 1448],
+        "width": 1448,
+        "height": 1086,
+        "caption": "Uplistsikhe cave town, near Gori"
+      },
+      {
+        "src": "/images/tours/8-day-culture-adventure/zhinvali-reservoir-georgia-1448.webp",
+        "base": "/images/tours/8-day-culture-adventure/zhinvali-reservoir-georgia",
+        "widths": [768, 1200, 1448],
+        "width": 1448,
+        "height": 1086,
+        "caption": "Zhinvali Reservoir"
+      },
+      {
+        "src": "/images/tours/8-day-culture-adventure/ananuri-fortress-zhinvali-reservoir-georgia-1920.webp",
+        "base": "/images/tours/8-day-culture-adventure/ananuri-fortress-zhinvali-reservoir-georgia",
+        "widths": [768, 1200, 1600, 1920],
+        "width": 1920,
+        "height": 1271,
+        "caption": "Ananuri Fortress on the Zhinvali Reservoir"
+      },
+      {
+        "src": "/images/tours/8-day-culture-adventure/gudauri-friendship-monument-georgia-1448.webp",
+        "base": "/images/tours/8-day-culture-adventure/gudauri-friendship-monument-georgia",
+        "widths": [768, 1200, 1448],
+        "width": 1448,
+        "height": 1086,
+        "caption": "Friendship Monument, Gudauri"
+      },
+      {
+        "src": "/images/tours/8-day-culture-adventure/gergeti-trinity-church-kazbegi-georgia-1448.webp",
+        "base": "/images/tours/8-day-culture-adventure/gergeti-trinity-church-kazbegi-georgia",
+        "widths": [768, 1200, 1448],
+        "width": 1448,
+        "height": 1086,
+        "caption": "Gergeti Trinity Church below Mount Kazbek, Kazbegi"
+      },
+      {
+        "src": "/images/tours/8-day-culture-adventure/stalin-museum-gori-georgia-1009.webp",
+        "base": "/images/tours/8-day-culture-adventure/stalin-museum-gori-georgia",
+        "widths": [768, 1009],
+        "width": 1009,
+        "height": 1559,
+        "caption": "Stalin Museum, Gori"
+      },
+      {
+        "src": "/images/tours/8-day-culture-adventure/stalin-museum-railway-carriage-gori-georgia-1477.webp",
+        "base": "/images/tours/8-day-culture-adventure/stalin-museum-railway-carriage-gori-georgia",
+        "widths": [768, 1200, 1477],
+        "width": 1477,
+        "height": 1065,
+        "caption": "Stalin's railway carriage, Stalin Museum, Gori"
+      }
     ],
     "map": {
       "center": [
