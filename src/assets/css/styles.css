@@ -3366,6 +3366,51 @@ tour-info h2 a,
   flex: 1;
   position: relative;
 }
+/* ⚠️ DESKTOP-ONLY FIX — the search field had a ZERO-WIDTH content box above
+   900px, which is why typed text was invisible while search still worked.
+   Nothing was wrong with the colours: `.th__search` paints #2b4e47 on a 95%
+   white background with a matching caret, all verified computed live.
+   The cause was purely layout. `.th__actions` is a 580px nowrap flex row
+   holding the search plus THREE `.th__sort` selects at `min-width: 150px`
+   each: 3x150 + 3x12 gaps = 486px, so `.th__search-wrap { flex: 1 }` (basis
+   0) was squeezed to 64px — exactly the input's own 48px + 16px padding,
+   leaving 0px for the text to render into.
+
+   Measured content width before this rule: 360/390/430 -> 248/278/318px ok
+   (mobile column), 768 -> 416px ok (tablet already wraps), and
+   1024/1366/1440/1920 -> 0px BROKEN.
+
+   The two working breakpoints already solve this by giving the search its own
+   full-width row, so this reuses that proven pattern rather than inventing a
+   new layout. Scoped to min-width 901px so the mobile (<=600px, column) and
+   tablet (601-900px) blocks are untouched.
+
+   ⚠️ Do NOT move `flex: 1 1 100%` into the base rule above: below 601px
+   `.th__actions` switches to `flex-direction: column`, where a 100% flex-basis
+   resolves against HEIGHT, not width, and would break the mobile layout. */
+@media (min-width: 901px) {
+  .th__actions {
+    flex-wrap: wrap;
+  }
+  .th__search-wrap {
+    flex: 1 1 100%;
+  }
+  /* With `flex-wrap: wrap` the browser wraps an item BEFORE shrinking it, so the
+     three selects (~210px of content each) spilled 2-then-1 across two rows even
+     though 3 x their 150px min-width plus gaps fits well inside the 580px bar.
+     Equal zero-basis columns put them on one row at ~185px each — comfortably
+     above the 150px floor, so no label is truncated in any locale.
+     `min-width: 0` is the load-bearing part: a flex item defaults to
+     `min-width: auto`, which floors the wrapper at its select's intrinsic
+     content width (~210px) and defeats the zero basis on its own. */
+  .th__sort-wrap {
+    flex: 1 1 0;
+    min-width: 0;
+  }
+  .th__sort {
+    width: 100%;
+  }
+}
 .th__search-icon {
   position: absolute;
   left: 16px;
