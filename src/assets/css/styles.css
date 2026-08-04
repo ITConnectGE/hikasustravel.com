@@ -3304,8 +3304,14 @@ tour-info h2 a,
   display: flex;
   align-items: center;
   justify-content: center;
-  /* offset vertical center below the 300px header area */
-  padding-top: 280px;
+  /* Clearance for the absolutely-positioned site header above this hero.
+     `header` declares height:300px, but the nav overflows it: the real bottom
+     edge of the last nav row measures 327px, rising to 346px between 901px and
+     1024px where longer translated labels (en/fr/es/nl) wrap the nav onto a
+     second line. The old 280px assumed the 300px box and so sat *above* the
+     nav, which is what let the H1 collide with it. */
+  --th-header-safe: 380px;
+  padding-top: var(--th-header-safe);
   padding-bottom: 80px;
   box-sizing: border-box;
 }
@@ -3323,6 +3329,15 @@ tour-info h2 a,
 .th__center {
   position: relative;
   z-index: 1;
+  /* Safe vertical centring. `align-items: center` distributes NEGATIVE free
+     space too, so on a short viewport the content overflowed its box in both
+     directions and rode up under the header. Auto margins only ever absorb
+     POSITIVE free space: roomy viewports still centre exactly as before, and
+     once space runs out the content stops at padding-top instead of climbing
+     past it. (This is the only in-flow child — .th__overlay and .th__scroll are
+     absolutely positioned — so the auto margins govern alignment here.) */
+  margin-top: auto;
+  margin-bottom: auto;
   width: 100%;
   max-width: 860px;
   padding: 0 var(--indent);
@@ -6949,7 +6964,9 @@ select option:checked {
   .th {
     height: 100svh;
     min-height: 500px;
-    padding-top: 100px;
+    /* Here the header is a fixed 80px bar (logo + hamburger), not the tall
+       absolute overlay, so 100px clears it with room to spare. */
+    --th-header-safe: 100px;
     padding-bottom: 60px;
   }
   .th__title {
@@ -7740,7 +7757,7 @@ select option:checked {
   main { margin-top: 80px; }
   .fullscreen { height: calc(100svh - 80px); }
   .td-hero { min-height: 100svh; padding-top: 110px; }
-  .th { height: 100svh; min-height: 500px; padding-top: 100px; padding-bottom: 60px; }
+  .th { height: 100svh; min-height: 500px; --th-header-safe: 100px; padding-bottom: 60px; }
   .td-nav--fixed { top: 80px; }
 
   /* Tours-hero filter bar: the 3 sort dropdowns (min-width 150px each) plus the
