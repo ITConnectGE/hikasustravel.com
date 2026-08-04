@@ -26,4 +26,11 @@ export default defineConfig([
       'no-unused-vars': ['error', { varsIgnorePattern: '^[A-Z_]' }],
     },
   },
+  // Build scripts run in Node, not the browser. Without this they were linted
+  // against browser globals, so any use of `process` (argv, exit, env) read as
+  // an undefined variable — which is why no script had used one until now.
+  {
+    files: ['scripts/**/*.js'],
+    languageOptions: { globals: { ...globals.node } },
+  },
 ])
