@@ -1836,6 +1836,51 @@ section {
   }
 }
 /* Native is 2400 — that is the top rung. Do not add anything above it. */
+/* Things to Do in Ushguli hero — per-page CSS background (same opt-in mechanism as
+   .hero--things-to-do-telavi above). Replaces the generic georgia-home.jpg
+   placeholder with the Ushguli-below-Shkhara frame: village, Svan towers, the
+   upper Enguri valley and the snow of Mount Shkhara.
+
+   ⚠️ DELIBERATELY NOT the iconic `ushguli-svan-towers-village` frame, which is both
+   the Ushguli city page hero and the Svaneti guide hero AND is the same photograph
+   as the held upscaled-stock panorama — see the note on the thingsToDo block in
+   places.js.
+
+   Native ceiling is 1217, well BELOW the usual 1448/1600 rungs, so the ladder is
+   exactly 768/1200/1217 with the top breakpoint at min-width:1200 — there is NO
+   1448, 1600 or 2400 rung and adding one would upscale. Default
+   `background-position: center` (from .coverme) is kept and was MEASURED, not
+   assumed, at 360px and 1440px: Shkhara's snow holds the upper third of the tall
+   mobile crop with the towers centre-right and the Enguri river below. The shared
+   .coverme::after overlay already provides the readable text layer, so no extra
+   scrim is enabled. plain url() line = image-set() fallback for browsers without
+   image-set(). */
+.hero--things-to-do-ushguli {
+  background-image: url("/images/svaneti/ushguli-village-shkhara-svaneti-georgia-768.webp");
+  background-image: image-set(
+    url("/images/svaneti/ushguli-village-shkhara-svaneti-georgia-768.avif") type("image/avif"),
+    url("/images/svaneti/ushguli-village-shkhara-svaneti-georgia-768.webp") type("image/webp")
+  );
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+@media (min-width: 768px) {
+  .hero--things-to-do-ushguli {
+    background-image: image-set(
+      url("/images/svaneti/ushguli-village-shkhara-svaneti-georgia-1200.avif") type("image/avif"),
+      url("/images/svaneti/ushguli-village-shkhara-svaneti-georgia-1200.webp") type("image/webp")
+    );
+  }
+}
+@media (min-width: 1200px) {
+  .hero--things-to-do-ushguli {
+    background-image: image-set(
+      url("/images/svaneti/ushguli-village-shkhara-svaneti-georgia-1217.avif") type("image/avif"),
+      url("/images/svaneti/ushguli-village-shkhara-svaneti-georgia-1217.webp") type("image/webp")
+    );
+  }
+}
+/* Native is 1217 — that is the top rung. Do not add a 1448/1600/2400 breakpoint. */
 /* Martvili Canyon hero — per-page CSS background (same opt-in mechanism as
    .hero--akhaltsikhe above). FIRST Samegrelo photograph in the project; replaces
    the generic georgia-home.jpg placeholder.

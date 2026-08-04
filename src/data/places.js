@@ -4449,7 +4449,233 @@ export const cities = [
       },
     ],
     thingsToDo: {
-      seoKey: 'thingsToDoUshguli', contentKey: 'thingsToDoUshguli', image: '/images/files/georgia-home.jpg',
+      seoKey: 'thingsToDoUshguli', contentKey: 'thingsToDoUshguli',
+      // Cover/hero = the Ushguli-below-Shkhara frame, REPLACING the generic
+      // georgia-home.jpg placeholder. Village, Svan towers, the Enguri valley and
+      // the snow of Mount Shkhara in one frame. Ladder 768/1200/1217 (native
+      // ceiling — NO 1448/1600 rung), OG 1200x630 already built. No `w` suffix on
+      // the /images/svaneti copies, so the hero paths and the inline contentUrls
+      // agree without any file work.
+      //
+      // ⚠️ DELIBERATELY *NOT* `ushguli-svan-towers-village`, the obvious iconic
+      // frame and this page's nearest neighbour's cover. Two reasons, the second
+      // decisive:
+      //   1. It is BOTH the Ushguli city page hero AND the Svaneti things-to-do
+      //      guide's hero — the parent page and the sibling guide at once.
+      //   2. IT IS THE SAME PHOTOGRAPH AS THE HELD STOCK PANORAMA. The panorama
+      //      `ushguli-village-towers-panorama` was held because its source
+      //      (`Ushguli.jpeg`, 7917x4871) measures Laplacian variance 15.8 against
+      //      2,000-3,800 for genuine photos — massively upscaled — plus JPEG
+      //      blocking 2.01 and an HDR-stock look. Measured here at matched aspect:
+      //      hero 1.624 / panorama 1.626 / source 1.625, and MAD hero-vs-panorama
+      //      3.75 (a genuinely different pair scores ~12). One crop of that file
+      //      was held; another crop of it ships as the city page hero with credit
+      //      unresolved. It does not get a third outing here.
+      //
+      // By contrast the frame below is a genuine owner photograph, brand-credited
+      // on three existing pages, and — unlike the last two things-to-do passes —
+      // it has NEVER been a hero anywhere, only an inline. Crop measured at 360 and
+      // 1440: `center center` holds Shkhara's snow in the upper third with the
+      // towers centre-right and the river below. No positioning hack needed.
+      image: '/images/svaneti/ushguli-village-shkhara-svaneti-georgia-1217.webp',
+      imageAvif: '/images/svaneti/ushguli-village-shkhara-svaneti-georgia-1217.avif',
+      heroClass: 'hero--things-to-do-ushguli',
+      heroPreload: '/images/svaneti/ushguli-village-shkhara-svaneti-georgia-1200.avif',
+      // Dedicated 1.91:1 social image, already built for the Svaneti region page.
+      ogImage: { src: '/images/files/ushguli-village-shkhara-svaneti-georgia-og-1200x630.jpg', width: 1200, height: 630 },
+      // ⚠️ ENGLISH-ONLY BODY — the eighth such guide, after Chiatura, Gori,
+      // Gudauri, Kazbegi, Kutaisi, Mestia and Telavi. `thingsToDoUshguli` exists
+      // only in en/pages.json; the other six locales fall back to en-fallback.json.
+      // Per the owner's decision on the Chiatura pass the visible <figcaption> and
+      // <img alt> are ENGLISH in all seven, matching the prose they sit in, while
+      // the `alt` map drives og:image:alt / twitter:image:alt and every `caption`
+      // map drives the per-locale ImageObject JSON-LD.
+      //
+      // ⚠️ NAMING — counted site-wide in the PROSE and, separately, in this file,
+      // because the older caption corpus here disagrees with the prose. Prose wins:
+      //   Ushguli  Latin in all 7 (de 122 v Uschguli 7, fr 125 v Ouchgouli 4, nl
+      //            127 v 2, cs 125 v 4, pl 122 v 7) — even though places.js holds
+      //            `Uschguli` 16x and `Ouchgouli` 17x.
+      //   Shkhara  Latin in all 7 (de 57 v Schchara 4, fr 57 v Chkhara 4, es/nl 59
+      //            v 2, cs 52 v 2, pl 50 v 0) — places.js holds `Schchara` 11x and
+      //            `Chkhara` 9x. ⚠️ The Mestia guide (previous pass) wrote German
+      //            `Schchara`; that is the minority form and this pass does not
+      //            repeat it. Mestia was out of scope to correct here.
+      //   Chazhashi / Lamaria / Enguri  Latin in all 7; `Inguri` appears 0 times.
+      //   Svaneti  de Swanetien (202 v 54) · fr Svanétie (259 v 60) · es Svaneti
+      //            (306 v Esvanetia 13) · nl Svaneti (322 v 42) · cs Svanetie/
+      //            Svanetii · pl Swanetia/Swanetii (222 v 88).
+      //   adjective de swanisch- · fr svane(s) · es svanas · nl Svaanse ·
+      //            cs svansk- · pl swańsk-.
+      //
+      // ⚠️ NO UNESCO IN ANY CAPTION. The page states the UNESCO listing four times,
+      // so the FACT is supported — but a photograph cannot show a designation, and
+      // the caption rules confine us to what is visible. The prose carries it; the
+      // images do not repeat it. Nothing below asserts weather, visibility, road or
+      // access conditions, trail difficulty, opening hours, prices, or safety.
+      //
+      // ⚠️ CAPTIONS ARE DELIBERATELY WORDED DIFFERENTLY from the Svaneti and Mestia
+      // guides, which already use two of these frames. No duplicate caption strings
+      // across pages.
+      imageMeta: {
+        width: 1217, height: 864, imageId: 'hero-image',
+        name: 'Ushguli and its Svan towers below Mount Shkhara, Svaneti, Georgia',
+        description: 'The stone houses and medieval Svan towers of Ushguli spread along the upper Enguri valley, with the snow-covered mass of Mount Shkhara closing the head of the valley, Upper Svaneti, Georgia (the country).',
+        locationName: 'Ushguli, Svaneti, Georgia',
+        locality: 'Ushguli', region: 'Svaneti', country: 'GE',
+        geo: { lat: 42.9169, lng: 43.0136 },
+        alt: {
+          en: 'The village of Ushguli with its Svan towers below the snow-covered Mount Shkhara, Svaneti, Georgia',
+          de: 'Das Dorf Ushguli mit seinen swanischen Türmen unterhalb des schneebedeckten Shkhara, Swanetien, Georgien',
+          fr: "Le village d'Ushguli et ses tours svanes sous le Shkhara enneigé, Svanétie, Géorgie",
+          es: 'La aldea de Ushguli con sus torres svanas bajo el nevado monte Shkhara, Svaneti, Georgia',
+          nl: 'Het dorp Ushguli met zijn Svaanse torens onder de besneeuwde Shkhara, Svaneti, Georgië',
+          cs: 'Vesnice Ushguli se svanskými věžemi pod zasněženou Shkharou, Svanetie, Gruzie',
+          pl: 'Wieś Ushguli ze swańskimi wieżami pod ośnieżoną Shkharą, Swanetia, Gruzja',
+        },
+        caption: {
+          en: 'The stone houses and Svan towers of Ushguli spread along the upper Enguri valley, with Mount Shkhara closing its head in snow.',
+          de: 'Die Steinhäuser und swanischen Türme von Ushguli ziehen sich durch das obere Enguri-Tal, dessen Talschluss der schneebedeckte Shkhara abschließt.',
+          fr: "Les maisons de pierre et les tours svanes d'Ushguli s'étirent dans la haute vallée de l'Enguri, dont le Shkhara enneigé ferme le fond.",
+          es: 'Las casas de piedra y las torres svanas de Ushguli se extienden por el alto valle del Enguri, cerrado al fondo por la nieve del Shkhara.',
+          nl: 'De stenen huizen en Svaanse torens van Ushguli liggen verspreid door het bovenste Enguri-dal, dat achteraan wordt afgesloten door de besneeuwde Shkhara.',
+          cs: 'Kamenné domy a svanské věže Ushguli se rozprostírají horním údolím Enguri, jehož závěr uzavírá zasněžená Shkhara.',
+          pl: 'Kamienne domy i swańskie wieże Ushguli rozciągają się w górnej dolinie Enguri, której zamknięcie stanowi ośnieżona Shkhara.',
+        },
+      },
+      // Four body figures, spliced into the ENGLISH content by LINE INDEX (this
+      // page is a 19-line single-\n block, so the unit is the LINE, not the \n\n
+      // chunk): 4 the villages · 6 the Svan towers · 10 the Shkhara walk ·
+      // 12 the landscape. Every one is an exact subject match for its section.
+      //
+      // ⚠️ ZERO FILES COPIED OR GENERATED — a first for this guide family. All five
+      // frames already ship as pre-encoded AVIF+WebP under no-`w` names at exactly
+      // the widths referenced, so every contentUrl resolves as-is. Nothing
+      // re-encoded, nothing upscaled, no OG built.
+      //
+      // ⚠️ FIVE SECTIONS STAY BARE. LAMARIA CHURCH — the page's third named
+      // attraction — HAS NO PHOTOGRAPH ANYWHERE IN THE PROJECT (whole tree
+      // searched: zero hits on Lamaria). Nor does the guesthouse section. The
+      // summary, best-time and why-Ushguli sections were left unpadded.
+      //
+      // Explicitly REJECTED rather than stretched:
+      //   ushguli-village-towers-panorama — ⛔ HELD, upscaled stock (see the hero
+      //     note); and the same frame as the city page hero, so it adds nothing.
+      //   ushguli-alpine-meadow-flowers — would have gone under "best time to
+      //     visit", but summer wildflowers are a SEASONAL MOOD match, not a subject
+      //     match, and that section is about road access and months.
+      //   ushguli-forest-waterfall — this page never mentions a waterfall.
+      //   shkhara-glacier-meadow — redundant once the glacier itself is in.
+      //   Every Mestia, Kazbegi, Gudauri and Samegrelo frame — the page names
+      //     Mestia only as road context, which does not earn a photograph.
+      inlineImageObjects: [
+        {
+          // PORTRAIT 1024x1536 (2:3, taller than 3:4) → rungs 768 + 1024 and the
+          // figure takes `--portrait-narrow` alongside `--portrait`, the same call
+          // the Kazbegi and Mestia guides made for 2:3 frames.
+          base: 'ushguli-village-lane-svaneti-georgia', width: 1024, height: 1536,
+          anchor: 'inline-village-lane', dir: '/images/files',
+          description: 'An unpaved lane running between the stone houses of Ushguli, past a weathered wooden balcony and a Svan tower, with snow-covered peaks behind, Svaneti, Georgia.',
+          locationName: 'Ushguli, Svaneti, Georgia',
+          locality: 'Ushguli', region: 'Svaneti', geo: { lat: 42.9169, lng: 43.0136 },
+          name: {
+            en: 'An unpaved lane between stone houses and a Svan tower in Ushguli, Svaneti, Georgia',
+            de: 'Ein unbefestigter Weg zwischen Steinhäusern und einem swanischen Turm in Ushguli, Swanetien, Georgien',
+            fr: "Un chemin de terre entre les maisons de pierre et une tour svane à Ushguli, Svanétie, Géorgie",
+            es: 'Un camino sin asfaltar entre casas de piedra y una torre svana en Ushguli, Svaneti, Georgia',
+            nl: 'Een onverhard pad tussen stenen huizen en een Svaanse toren in Ushguli, Svaneti, Georgië',
+            cs: 'Nezpevněná cesta mezi kamennými domy a svanskou věží v Ushguli, Svanetie, Gruzie',
+            pl: 'Nieutwardzona dróżka między kamiennymi domami a swańską wieżą w Ushguli, Swanetia, Gruzja',
+          },
+          caption: {
+            en: 'An unpaved lane runs between the stone houses of Ushguli, past a wooden balcony and a Svan tower, with snow-covered peaks behind.',
+            de: 'Ein unbefestigter Weg führt zwischen den Steinhäusern von Ushguli hindurch, vorbei an einem Holzbalkon und einem swanischen Turm, dahinter schneebedeckte Gipfel.',
+            fr: "Un chemin de terre passe entre les maisons de pierre d'Ushguli, longeant un balcon de bois et une tour svane, avec des sommets enneigés à l'arrière.",
+            es: 'Un camino sin asfaltar discurre entre las casas de piedra de Ushguli, junto a un balcón de madera y una torre svana, con cumbres nevadas detrás.',
+            nl: 'Een onverhard pad loopt tussen de stenen huizen van Ushguli door, langs een houten balkon en een Svaanse toren, met besneeuwde toppen erachter.',
+            cs: 'Nezpevněná cesta vede mezi kamennými domy Ushguli kolem dřevěného balkonu a svanské věže, v pozadí zasněžené vrcholy.',
+            pl: 'Nieutwardzona dróżka biegnie między kamiennymi domami Ushguli, mijając drewniany balkon i swańską wieżę, a w tle ośnieżone szczyty.',
+          },
+        },
+        {
+          base: 'ushguli-towers-stream-svaneti-georgia', width: 1024, height: 1536,
+          anchor: 'inline-towers-stream', dir: '/images/files',
+          description: 'Svan stone towers standing among the houses of Ushguli above a fast mountain stream, with autumn colour on the slopes behind, Svaneti, Georgia.',
+          locationName: 'Ushguli, Svaneti, Georgia',
+          locality: 'Ushguli', region: 'Svaneti', geo: { lat: 42.9169, lng: 43.0136 },
+          name: {
+            en: 'Svan towers above a mountain stream at Ushguli in autumn, Svaneti, Georgia',
+            de: 'Swanische Türme über einem Gebirgsbach in Ushguli im Herbst, Swanetien, Georgien',
+            fr: "Des tours svanes au-dessus d'un torrent à Ushguli en automne, Svanétie, Géorgie",
+            es: 'Torres svanas sobre un arroyo de montaña en Ushguli en otoño, Svaneti, Georgia',
+            nl: 'Svaanse torens boven een bergbeek bij Ushguli in de herfst, Svaneti, Georgië',
+            cs: 'Svanské věže nad horským potokem v Ushguli na podzim, Svanetie, Gruzie',
+            pl: 'Swańskie wieże nad górskim potokiem w Ushguli jesienią, Swanetia, Gruzja',
+          },
+          caption: {
+            en: 'Svan towers stand among the houses of Ushguli above a stream, with autumn colour on the slopes behind.',
+            de: 'Swanische Türme stehen zwischen den Häusern von Ushguli über einem Bach, dahinter herbstlich gefärbte Hänge.',
+            fr: "Des tours svanes se dressent parmi les maisons d'Ushguli au-dessus d'un torrent, les pentes derrière prises par les couleurs d'automne.",
+            es: 'Torres svanas se alzan entre las casas de Ushguli sobre un arroyo, con las laderas teñidas de otoño al fondo.',
+            nl: 'Svaanse torens staan tussen de huizen van Ushguli boven een beek, met herfstkleuren op de hellingen erachter.',
+            cs: 'Svanské věže stojí mezi domy Ushguli nad potokem, na svazích v pozadí podzimní barvy.',
+            pl: 'Swańskie wieże stoją wśród domów Ushguli nad potokiem, a na zboczach w tle jesienne barwy.',
+          },
+        },
+        {
+          // PORTRAIT 1086x1448 (exact 3:4) → rungs 768 + 1086 and plain
+          // `--portrait` (560 cap), matching how the Svaneti guide already renders
+          // this same frame. NOT `--portrait-narrow`, which is for taller than 3:4.
+          base: 'shkhara-glacier-ushguli-svaneti-georgia', width: 1086, height: 1448,
+          anchor: 'inline-shkhara-glacier', dir: '/images/files',
+          description: 'The glacier below Mount Shkhara filling the head of the Enguri valley upstream from Ushguli, with the river running down through forested slopes, Svaneti, Georgia.',
+          locationName: 'Shkhara Glacier, Enguri valley above Ushguli, Svaneti, Georgia',
+          region: 'Svaneti', geo: { lat: 42.9550, lng: 43.1170 },
+          name: {
+            en: 'The glacier at the head of the Enguri valley below Mount Shkhara, Svaneti, Georgia',
+            de: 'Der Gletscher am Talschluss des Enguri-Tals unterhalb des Shkhara, Swanetien, Georgien',
+            fr: "Le glacier au fond de la vallée de l'Enguri, sous le Shkhara, Svanétie, Géorgie",
+            es: 'El glaciar en la cabecera del valle del Enguri, bajo el monte Shkhara, Svaneti, Georgia',
+            nl: 'De gletsjer aan het einde van het Enguri-dal onder de Shkhara, Svaneti, Georgië',
+            cs: 'Ledovec v závěru údolí Enguri pod Shkharou, Svanetie, Gruzie',
+            pl: 'Lodowiec w zamknięciu doliny Enguri pod Shkharą, Swanetia, Gruzja',
+          },
+          caption: {
+            en: 'The glacier below Mount Shkhara fills the head of the Enguri valley upstream from Ushguli, the river running down through the forest.',
+            de: 'Der Gletscher unterhalb des Shkhara füllt den Talschluss des Enguri-Tals oberhalb von Ushguli; der Fluss zieht durch den Wald hinab.',
+            fr: "Le glacier sous le Shkhara occupe le fond de la vallée de l'Enguri en amont d'Ushguli, la rivière descendant à travers la forêt.",
+            es: 'El glaciar bajo el Shkhara ocupa la cabecera del valle del Enguri, aguas arriba de Ushguli, con el río bajando entre el bosque.',
+            nl: 'De gletsjer onder de Shkhara vult het einde van het Enguri-dal stroomopwaarts van Ushguli, met de rivier die door het bos omlaag loopt.',
+            cs: 'Ledovec pod Shkharou vyplňuje závěr údolí Enguri nad Ushguli, řeka klesá lesem dolů.',
+            pl: 'Lodowiec pod Shkharą wypełnia zamknięcie doliny Enguri powyżej Ushguli, a rzeka spływa przez las.',
+          },
+        },
+        {
+          base: 'ushguli-valley-trail-svaneti-georgia', width: 1448, height: 1086,
+          anchor: 'inline-valley-trail', dir: '/images/files',
+          description: 'A footpath crossing open grassland above Ushguli, the Enguri valley running between steep, largely treeless slopes, Svaneti, Georgia.',
+          locationName: 'Enguri valley above Ushguli, Svaneti, Georgia',
+          region: 'Svaneti',
+          name: {
+            en: 'An open valley with a footpath above Ushguli in the Enguri valley, Svaneti, Georgia',
+            de: 'Ein offenes Tal mit einem Fußweg oberhalb von Ushguli im Enguri-Tal, Swanetien, Georgien',
+            fr: "Une vallée ouverte et un sentier au-dessus d'Ushguli, dans la vallée de l'Enguri, Svanétie, Géorgie",
+            es: 'Un valle abierto con un sendero sobre Ushguli, en el valle del Enguri, Svaneti, Georgia',
+            nl: 'Een open dal met een voetpad boven Ushguli in het Enguri-dal, Svaneti, Georgië',
+            cs: 'Otevřené údolí s pěšinou nad Ushguli v údolí Enguri, Svanetie, Gruzie',
+            pl: 'Otwarta dolina ze ścieżką ponad Ushguli w dolinie Enguri, Swanetia, Gruzja',
+          },
+          caption: {
+            en: 'A footpath crosses open grassland above Ushguli, the valley running between steep slopes with few trees.',
+            de: 'Ein Fußweg quert offenes Grasland oberhalb von Ushguli; das Tal zieht zwischen steilen, baumarmen Hängen hindurch.',
+            fr: "Un sentier traverse la prairie ouverte au-dessus d'Ushguli, la vallée s'étirant entre des pentes raides et presque sans arbres.",
+            es: 'Un sendero cruza el pastizal abierto sobre Ushguli, con el valle discurriendo entre laderas escarpadas y casi sin árboles.',
+            nl: 'Een voetpad doorkruist open grasland boven Ushguli; het dal loopt tussen steile, vrijwel boomloze hellingen door.',
+            cs: 'Pěšina přechází otevřenou travnatou pláň nad Ushguli, údolí se táhne mezi strmými svahy s několika stromy.',
+            pl: 'Ścieżka przecina otwarte trawiaste zbocze ponad Ushguli, a dolina biegnie między stromymi, niemal bezdrzewnymi stokami.',
+          },
+        },
+      ],
       address: { addressLocality: 'Ushguli' },
       attractions: ['Ushguli Svan Towers', 'Lamaria Church', 'Mount Shkhara & Glacier', 'Chazhashi Village'],
     },
