@@ -4750,7 +4750,295 @@ export const cities = [
     image: '/images/files/telavi-town-view-erekle-ii-monument-kakheti-georgia-1600w.webp',
     imageAvif: '/images/files/telavi-town-view-erekle-ii-monument-kakheti-georgia-1600w.avif',
     thingsToDo: {
-      seoKey: 'thingsToDoTelavi', contentKey: 'thingsToDoTelavi', image: '/images/files/georgia-home.jpg',
+      seoKey: 'thingsToDoTelavi', contentKey: 'thingsToDoTelavi',
+      // Cover/hero = the Telavi town view, REPLACING the generic georgia-home.jpg
+      // placeholder. Red-roofed old town, the Alazani valley and the Caucasus in
+      // one frame — the exact "city view with valley/Caucasus backdrop" this guide
+      // needs.
+      //
+      // ⚠️ THE LADDER SPANS TWO FOLDERS, deliberately. This frame shipped twice
+      // under different conventions: /images/files holds the ORIGINAL package's
+      // `-1200w/-1600w/-2400w`, and /images/kakheti holds the no-`w` `768/1200/1448`
+      // copies the Kakheti pass made. Neither set alone gives both a 768 rung (for
+      // mobile payload) and the 2400 native (for 1920 desktops), so the ladder is
+      // 768/1200/1448 from /images/kakheti plus the 2400w top rung from
+      // /images/files. Nothing was re-encoded to tidy this up; a 4th rung that
+      // already exists is worth more than one-folder neatness. Native IS 2400, so
+      // that is the ceiling — do not add anything above it.
+      //
+      // ⚠️ THIS FRAME IS ALREADY ON TWO NEIGHBOURING PAGES — the Telavi CITY page
+      // uses it as its hero, and the KAKHETI things-to-do guide uses it as an inline.
+      // Reused here anyway, owner-approved (2026-08-04), because the measured
+      // alternative was worse: `batonis-tsikhe-telavi-kakheti-georgia` (the Batonis
+      // Tsikhe page's hero) was the pick that would have avoided the parent-page
+      // clash, but rendering its actual `cover` crop at 360 and 1440 showed the
+      // FORTRESS CAR PARK dead centre, filling about a third of the mobile frame.
+      // No background-position shift fixes it (up cuts the walls, down centres the
+      // cars harder), so it was rejected on measured evidence, not taste.
+      image: '/images/kakheti/telavi-town-view-erekle-ii-monument-kakheti-georgia-1448.webp',
+      imageAvif: '/images/kakheti/telavi-town-view-erekle-ii-monument-kakheti-georgia-1448.avif',
+      heroClass: 'hero--things-to-do-telavi',
+      heroPreload: '/images/kakheti/telavi-town-view-erekle-ii-monument-kakheti-georgia-1200.avif',
+      // Dedicated 1.91:1 social image, already built for the Telavi city page.
+      ogImage: { src: '/images/files/telavi-town-view-erekle-ii-monument-kakheti-georgia-og-1200x630.jpg', width: 1200, height: 630 },
+      // ⚠️ ENGLISH-ONLY BODY — the seventh such guide, after Chiatura, Gori,
+      // Gudauri, Kazbegi, Kutaisi and Mestia. `thingsToDoTelavi` exists only in
+      // en/pages.json; the other six locales fall back to en-fallback.json. Per the
+      // owner's decision on the Chiatura pass the visible <figcaption> and <img alt>
+      // are ENGLISH in all seven, matching the prose they sit in, while the `alt`
+      // map drives og:image:alt / twitter:image:alt and every `caption` map drives
+      // the per-locale ImageObject JSON-LD.
+      //
+      // ⚠️ NAMING — counted site-wide AND, separately, inside places.js, because
+      // this family's captions live here rather than in pages.json AND THE TWO
+      // CORPORA DISAGREE. Prose wins; three forms therefore diverge from the Telavi
+      // CITY page's own gallery captions, deliberately:
+      //   de  Telavi (prose 220 v Telawi 2) — but the city gallery says `Telawi` 22x
+      //   de  Batonis Tsikhe (prose 7 v 0) — but the city gallery says `Batonis Zikhe`
+      //   pl  Telavi (prose 219 v Telawi 3) — city gallery says `Telawi` 22x
+      // Otherwise: de Kachetien (446 v 7) · fr Kakheti (408 v Kakhétie 58) · es
+      // Kakheti (514 v Kajetia 14) · nl Kakheti (86 v Kachetië 48) · cs Kachetie
+      // (223 v 10, declines) · pl Kakheti (396 v 58). fr `Erekle II` (59 v Héraclius
+      // 8), pl `Erekle II` (81 v Herakliusz 8). Latin in all 7: Alazani, Alaverdi,
+      // Tsinandali, Gremi. Qvevri is capitalised in German (a noun), lowercase
+      // elsewhere (cs `qvevri` 101 beats `kvevri` 11).
+      //
+      // ⚠️ NO ADDED FACTS. Nothing below asserts tasting availability, prices,
+      // opening hours, reservations, transport times, grape varieties, wine quality,
+      // UNESCO status or access. In particular the hero caption is NOT the city
+      // page's, which calls Telavi "the former capital of the Kakheti kingdom" — a
+      // claim THIS page never makes (it says Telavi became the political centre
+      // under Erekle II, and that GREMI was the 16th-century capital).
+      imageMeta: {
+        width: 1448, height: 1090, imageId: 'hero-image',
+        name: 'Telavi and the Alazani valley seen from above, Kakheti, Georgia',
+        description: 'The red-roofed streets of Telavi seen from above, running down toward the Alazani valley with the Caucasus range beyond, Kakheti, Georgia (the country).',
+        locationName: 'Telavi, Kakheti, Georgia',
+        locality: 'Telavi', region: 'Kakheti', country: 'GE',
+        geo: { lat: 41.9192, lng: 45.4731 },
+        alt: {
+          en: 'View over the red roofs of Telavi toward the Alazani valley and the Caucasus, Kakheti, Georgia',
+          de: 'Blick über die roten Dächer von Telavi zum Alazani-Tal und zum Kaukasus, Kachetien, Georgien',
+          fr: "Vue sur les toits rouges de Telavi vers la vallée de l'Alazani et le Caucase, Kakheti, Géorgie",
+          es: 'Vista sobre los tejados rojos de Telavi hacia el valle del Alazani y el Cáucaso, Kakheti, Georgia',
+          nl: 'Uitzicht over de rode daken van Telavi naar het Alazani-dal en de Kaukasus, Kakheti, Georgië',
+          cs: 'Pohled přes červené střechy Telavi k údolí Alazani a Kavkazu, Kachetie, Gruzie',
+          pl: 'Widok ponad czerwonymi dachami Telavi ku dolinie Alazani i Kaukazowi, Kakheti, Gruzja',
+        },
+        caption: {
+          en: 'Telavi seen from above, its red-roofed streets running down toward the Alazani valley with the Caucasus beyond.',
+          de: 'Telavi von oben: Die Straßen mit ihren roten Ziegeldächern fallen zum Alazani-Tal ab, dahinter der Kaukasus.',
+          fr: "Telavi vue d'en haut : ses rues aux toits rouges descendent vers la vallée de l'Alazani, le Caucase au fond.",
+          es: 'Telavi desde lo alto: sus calles de tejados rojos descienden hacia el valle del Alazani, con el Cáucaso al fondo.',
+          nl: 'Telavi van bovenaf: de straten met rode daken lopen af naar het Alazani-dal, met daarachter de Kaukasus.',
+          cs: 'Telavi shora — ulice s červenými střechami klesají k údolí Alazani, v pozadí Kavkaz.',
+          pl: 'Telavi z góry — ulice o czerwonych dachach opadają ku dolinie Alazani, a w tle Kaukaz.',
+        },
+      },
+      // Six body figures, spliced into the ENGLISH content by LINE INDEX (this page
+      // is a 33-line single-\n block, so the unit is the LINE, not the \n\n chunk):
+      //   4 Batonis Tsikhe · 6 Erekle II monument · 10 Alaverdi · 14 qvevri ·
+      //   16 Tsinandali · 18 Gremi. Every one is an EXACT subject match for the
+      //   section it sits in; nothing is stretched to fill a heading.
+      //
+      // ⚠️ THREE SETS WERE COPIED, THREE ARE REFERENCED. Alaverdi, qvevri and Gremi
+      // already ship under the no-`w` names this array builds. Batonis-evening,
+      // the Erekle statue and the Tsinandali house ship only as `-<w>w`, which would
+      // 404 the contentUrl, so byte-identical copies (sha256-verified) went into the
+      // existing /images/kakheti/. Nothing re-encoded, nothing upscaled, no OG built.
+      //
+      // ⚠️ TWO TELAVI LANDMARK IMAGES ARE THIRD-PARTY AND ARE DELIBERATELY ABSENT.
+      // `giant-plane-tree-telavi.jpg` and `erekle-ii-statue-telavi.jpg` are Wikimedia
+      // CC BY-SA files with `imageCredit` blocks (see the site-page entries below).
+      // A body-img <figure> has NO attribution mechanism and CC BY-SA REQUIRES
+      // attribution, so using them would be a licence problem, not merely a missing
+      // credit field. The giant plane tree is the only photograph of its subject in
+      // the project, so THAT SECTION STAYS BARE rather than shipping unattributed.
+      // (The Erekle II section uses our OWN `erekle-ii-statue-telavi-kakheti-georgia`,
+      // which is a different photograph despite the near-identical name.)
+      //
+      // ⚠️ NINE SECTIONS STAY BARE, which is the honest ceiling of the library: the
+      // giant plane tree (above), IKALTO, SHUAMTA, the NADIKVARI viewpoint, the
+      // TELAVI BAZAAR and LOPOTA LAKE have no photograph anywhere in the project
+      // (whole tree searched; the only "bazaar" frames are Kutaisi's), and the
+      // combine-with-Kakheti, best-time and why-Telavi sections were left alone
+      // rather than padded.
+      //
+      // Explicitly REJECTED rather than stretched:
+      //   kakheti-vineyard-sunset — fits the rtveli/best-time section, but it is the
+      //     KAKHETI guide's HERO: two sibling guides, one cover. Same call the
+      //     Kutaisi pass made about Bagrati.
+      //   kakheti-wine-table-alazani-valley — a laid table with glasses reads as an
+      //     offer of a tasting, which the caption rules forbid implying.
+      //   telavi-park-promenade — CANNOT be called Nadikvari. The project's own
+      //     metadata for it says only "central park and promenade, Telavi", so
+      //     placing it under the Nadikvari heading would assert a location we
+      //     cannot verify.
+      //   sighnaghi-ridge / sighnaghi-sunrise — permitted (the page does name
+      //     Sighnaghi twice) but not used: a different town's skyline on a Telavi
+      //     guide earns less than leaving the section clean, and both are already
+      //     on the Kakheti guide.
+      //   batonistsikhe-fortress-telavi.jpg — the one unreferenced Kakheti frame,
+      //     and a poor snapshot: apartment block, parked cars, a wall fragment.
+      //   tsinandali park/garden/maze and gremi-church-bell-tower — redundant once
+      //     the house and the establishing Gremi shot are in.
+      inlineImageObjects: [
+        {
+          // Chosen over `batonis-tsikhe-telavi-kakheti-georgia` (the Batonis Tsikhe
+          // page's hero) because that frame's car park dominates; this one is the
+          // same fortress in evening light. A few figures walk the road at the
+          // bottom of the frame — small, mid-distance and not the subject, so the
+          // strings stay place-focused and describe nobody.
+          base: 'batonis-tsikhe-fortress-evening-telavi-kakheti-georgia', width: 1600, height: 1205,
+          anchor: 'inline-batonis-tsikhe', dir: '/images/kakheti',
+          description: 'The stone walls, round bastion and gate tower of the Batonis Tsikhe fortress in Telavi in evening light, with the palace church and its bell tower inside the walls, Kakheti, Georgia.',
+          locationName: 'Batonis Tsikhe, Telavi, Kakheti, Georgia',
+          locality: 'Telavi', region: 'Kakheti', geo: { lat: 41.9200, lng: 45.4750 },
+          name: {
+            en: 'The walls and tower of Batonis Tsikhe in Telavi, Kakheti, Georgia, in evening light',
+            de: 'Die Mauern und der Turm von Batonis Tsikhe in Telavi, Kachetien, Georgien, im Abendlicht',
+            fr: "Les murs et la tour de Batonis Tsikhe à Telavi, Kakheti, Géorgie, dans la lumière du soir",
+            es: 'Las murallas y la torre de Batonis Tsikhe en Telavi, Kakheti, Georgia, con la luz del atardecer',
+            nl: 'De muren en de toren van Batonis Tsikhe in Telavi, Kakheti, Georgië, in avondlicht',
+            cs: 'Hradby a věž Batonis Tsikhe v Telavi, Kachetie, Gruzie, ve večerním světle',
+            pl: 'Mury i wieża Batonis Tsikhe w Telavi, Kakheti, Gruzja, w wieczornym świetle',
+          },
+          caption: {
+            en: 'Evening light on the walls and round bastion of Batonis Tsikhe, with the palace church and bell tower inside the fortress.',
+            de: 'Abendlicht auf den Mauern und der Rundbastion von Batonis Tsikhe, im Inneren die Palastkirche und der Glockenturm.',
+            fr: "Lumière du soir sur les murs et le bastion rond de Batonis Tsikhe ; à l'intérieur, l'église du palais et son clocher.",
+            es: 'Luz del atardecer sobre los muros y el bastión redondo de Batonis Tsikhe, con la iglesia del palacio y su campanario dentro del recinto.',
+            nl: 'Avondlicht op de muren en het ronde bastion van Batonis Tsikhe, met binnen de muren de paleiskerk en de klokkentoren.',
+            cs: 'Večerní světlo na hradbách a kulaté baště Batonis Tsikhe, uvnitř palácový kostel a zvonice.',
+            pl: 'Wieczorne światło na murach i okrągłym bastionie Batonis Tsikhe, a w środku pałacowa cerkiew i dzwonnica.',
+          },
+        },
+        {
+          base: 'erekle-ii-statue-telavi-kakheti-georgia', width: 1600, height: 1205,
+          anchor: 'inline-erekle-monument', dir: '/images/kakheti',
+          description: 'The bronze equestrian monument to King Erekle II on its stone terrace above Telavi, with the roofs of the town, the Alazani valley and the mountains behind, Kakheti, Georgia.',
+          locationName: 'Monument to King Erekle II, Telavi, Kakheti, Georgia',
+          locality: 'Telavi', region: 'Kakheti', geo: { lat: 41.9192, lng: 45.4731 },
+          name: {
+            en: 'The equestrian monument to King Erekle II above Telavi, Kakheti, Georgia',
+            de: 'Das Reiterstandbild von König Erekle II. über Telavi, Kachetien, Georgien',
+            fr: "Le monument équestre au roi Erekle II au-dessus de Telavi, Kakheti, Géorgie",
+            es: 'El monumento ecuestre al rey Erekle II sobre Telavi, Kakheti, Georgia',
+            nl: 'Het ruitermonument voor koning Erekle II boven Telavi, Kakheti, Georgië',
+            cs: 'Jezdecký pomník krále Erekleho II. nad Telavi, Kachetie, Gruzie',
+            pl: 'Pomnik konny króla Erekle II ponad Telavi, Kakheti, Gruzja',
+          },
+          caption: {
+            en: 'The equestrian monument to King Erekle II on its terrace above Telavi, looking out over the town and the Alazani valley.',
+            de: 'Das Reiterstandbild von König Erekle II. auf seiner Terrasse über Telavi, mit Blick über die Stadt und das Alazani-Tal.',
+            fr: "Le monument équestre au roi Erekle II, sur sa terrasse au-dessus de Telavi, face à la ville et à la vallée de l'Alazani.",
+            es: 'El monumento ecuestre al rey Erekle II, en su terraza sobre Telavi, mirando hacia la ciudad y el valle del Alazani.',
+            nl: 'Het ruitermonument voor koning Erekle II op zijn terras boven Telavi, met uitzicht over de stad en het Alazani-dal.',
+            cs: 'Jezdecký pomník krále Erekleho II. na terase nad Telavi, s výhledem na město a údolí Alazani.',
+            pl: 'Pomnik konny króla Erekle II na tarasie ponad Telavi, z widokiem na miasto i dolinę Alazani.',
+          },
+        },
+        {
+          base: 'alaverdi-cathedral-georgia', width: 1448, height: 1086,
+          anchor: 'inline-alaverdi', dir: '/images/kakheti',
+          description: 'The tall stone cathedral of Alaverdi Monastery rising above the monastery walls in the open Alazani valley, with the Caucasus range behind, Kakheti, Georgia.',
+          locationName: 'Alaverdi Monastery, Kakheti, Georgia',
+          region: 'Kakheti', geo: { lat: 42.0311, lng: 45.3772 },
+          name: {
+            en: 'Alaverdi Cathedral and its monastery walls in the Alazani valley, Kakheti, Georgia',
+            de: 'Die Kathedrale von Alaverdi und ihre Klostermauern im Alazani-Tal, Kachetien, Georgien',
+            fr: "La cathédrale d'Alaverdi et les murs de son monastère dans la vallée de l'Alazani, Kakheti, Géorgie",
+            es: 'La catedral de Alaverdi y las murallas de su monasterio en el valle del Alazani, Kakheti, Georgia',
+            nl: 'De kathedraal van Alaverdi en de muren van haar klooster in het Alazani-dal, Kakheti, Georgië',
+            cs: 'Katedrála Alaverdi a hradby jejího kláštera v údolí Alazani, Kachetie, Gruzie',
+            pl: 'Katedra Alaverdi i mury jej klasztoru w dolinie Alazani, Kakheti, Gruzja',
+          },
+          caption: {
+            en: "Alaverdi Cathedral rising above the monastery's walls in the open Alazani valley, with the Caucasus behind.",
+            de: 'Die Kathedrale von Alaverdi überragt die Klostermauern im offenen Alazani-Tal, dahinter der Kaukasus.',
+            fr: "La cathédrale d'Alaverdi domine les murs du monastère dans la vallée ouverte de l'Alazani, le Caucase à l'arrière.",
+            es: 'La catedral de Alaverdi se alza sobre las murallas del monasterio en el abierto valle del Alazani, con el Cáucaso detrás.',
+            nl: 'De kathedraal van Alaverdi steekt boven de kloostermuren uit in het open Alazani-dal, met de Kaukasus erachter.',
+            cs: 'Katedrála Alaverdi se tyčí nad hradbami kláštera v otevřeném údolí Alazani, v pozadí Kavkaz.',
+            pl: 'Katedra Alaverdi wznosi się ponad murami klasztoru w otwartej dolinie Alazani, a w tle Kaukaz.',
+          },
+        },
+        {
+          base: 'qvevri-clay-vessels-kakheti-georgia', width: 1448, height: 1086,
+          anchor: 'inline-qvevri', dir: '/images/kakheti',
+          description: 'A row of large clay qvevri vessels lying on the ground beside a stone cellar wall, Kakheti, Georgia.',
+          locationName: 'Kakheti, Georgia',
+          region: 'Kakheti',
+          name: {
+            en: 'Large clay qvevri vessels beside a stone wall in Kakheti, Georgia',
+            de: 'Große tönerne Qvevri-Gefäße an einer Steinmauer in Kachetien, Georgien',
+            fr: "De grandes jarres qvevri en argile le long d'un mur de pierre en Kakheti, Géorgie",
+            es: 'Grandes vasijas de barro qvevri junto a un muro de piedra en Kakheti, Georgia',
+            nl: 'Grote kleien qvevri-vaten naast een stenen muur in Kakheti, Georgië',
+            cs: 'Velké hliněné nádoby qvevri u kamenné zdi v Kachetii, Gruzie',
+            pl: 'Wielkie gliniane naczynia qvevri przy kamiennym murze w Kakheti, Gruzja',
+          },
+          caption: {
+            en: 'Large clay qvevri lying beside a stone cellar wall in Kakheti.',
+            de: 'Große tönerne Qvevri liegen an einer steinernen Kellermauer in Kachetien.',
+            fr: "De grandes jarres qvevri en argile posées le long du mur de pierre d'une cave, en Kakheti.",
+            es: 'Grandes qvevri de barro reposan junto al muro de piedra de una bodega en Kakheti.',
+            nl: 'Grote kleien qvevri liggen naast de stenen muur van een kelder in Kakheti.',
+            cs: 'Velké hliněné qvevri leží u kamenné zdi sklepa v Kachetii.',
+            pl: 'Wielkie gliniane qvevri leżą przy kamiennym murze piwnicy w Kakheti.',
+          },
+        },
+        {
+          base: 'tsinandali-estate-chavchavadze-house-kakheti-georgia', width: 1536, height: 1024,
+          anchor: 'inline-tsinandali', dir: '/images/kakheti',
+          description: 'The Chavchavadze house at the Tsinandali Estate, its carved arcaded balcony facing the lawns, flowerbeds and autumn trees of the estate gardens, Kakheti, Georgia.',
+          locationName: 'Tsinandali Estate, Kakheti, Georgia',
+          region: 'Kakheti', geo: { lat: 41.8931, lng: 45.5686 },
+          name: {
+            en: 'The Chavchavadze house and gardens at the Tsinandali Estate, Kakheti, Georgia',
+            de: 'Das Tschawtschawadse-Haus und die Gärten des Anwesens Tsinandali, Kachetien, Georgien',
+            fr: "La maison Tchavtchavadzé et les jardins du domaine de Tsinandali, Kakheti, Géorgie",
+            es: 'La casa Chavchavadze y los jardines de la finca de Tsinandali, Kakheti, Georgia',
+            nl: 'Het Tsjavtsjavadze-huis en de tuinen van het landgoed Tsinandali, Kakheti, Georgië',
+            cs: 'Dům Čavčavadzeů a zahrady panství Tsinandali, Kachetie, Gruzie',
+            pl: 'Dom Czawczawadzych i ogrody posiadłości Tsinandali, Kakheti, Gruzja',
+          },
+          caption: {
+            en: 'The Chavchavadze house at the Tsinandali Estate, its arcaded balcony facing the lawns and trees of the estate gardens.',
+            de: 'Das Tschawtschawadse-Haus in Tsinandali, dessen Arkadenbalkon auf die Rasenflächen und Bäume des Parks blickt.',
+            fr: "La maison Tchavtchavadzé à Tsinandali, son balcon à arcades tourné vers les pelouses et les arbres du parc.",
+            es: 'La casa Chavchavadze en Tsinandali, con su balcón de arcadas frente a los céspedes y los árboles del jardín.',
+            nl: 'Het Tsjavtsjavadze-huis in Tsinandali, met zijn arcadebalkon gericht op de gazons en bomen van de tuin.',
+            cs: 'Dům Čavčavadzeů v Tsinandali, jehož arkádový balkon hledí na trávníky a stromy zahrady.',
+            pl: 'Dom Czawczawadzych w Tsinandali, którego arkadowy balkon wychodzi na trawniki i drzewa ogrodu.',
+          },
+        },
+        {
+          base: 'gremi-archangels-complex-kakheti-georgia', width: 1448, height: 1086,
+          anchor: 'inline-gremi', dir: '/images/files',
+          description: 'The brick church and bell tower of Gremi standing behind the stone walls on their hill above the valley, Kakheti, Georgia.',
+          locationName: 'Gremi, Kakheti, Georgia',
+          region: 'Kakheti', geo: { lat: 41.9903, lng: 45.6089 },
+          name: {
+            en: 'The church and tower of Gremi on their hilltop in Kakheti, Georgia',
+            de: 'Die Kirche und der Turm von Gremi auf ihrem Hügel in Kachetien, Georgien',
+            fr: "L'église et la tour de Gremi sur leur colline en Kakheti, Géorgie",
+            es: 'La iglesia y la torre de Gremi en su colina en Kakheti, Georgia',
+            nl: 'De kerk en de toren van Gremi op hun heuvel in Kakheti, Georgië',
+            cs: 'Kostel a věž Gremi na návrší v Kachetii, Gruzie',
+            pl: 'Cerkiew i wieża Gremi na wzgórzu w Kakheti, Gruzja',
+          },
+          caption: {
+            en: 'The brick church and tower of Gremi standing behind the walls on their hill above the valley.',
+            de: 'Die Backsteinkirche und der Turm von Gremi hinter den Mauern auf ihrem Hügel über dem Tal.',
+            fr: "L'église en brique et la tour de Gremi, derrière les murs, sur leur colline dominant la vallée.",
+            es: 'La iglesia de ladrillo y la torre de Gremi, tras las murallas, en su colina sobre el valle.',
+            nl: 'De bakstenen kerk en de toren van Gremi achter de muren op hun heuvel boven het dal.',
+            cs: 'Cihlový kostel a věž Gremi za hradbami na návrší nad údolím.',
+            pl: 'Ceglana cerkiew i wieża Gremi za murami, na wzgórzu ponad doliną.',
+          },
+        },
+      ],
       address: { addressLocality: 'Telavi' },
       attractions: ['Batonis Tsikhe', 'Alaverdi Monastery', 'Ikalto Monastery', 'Tsinandali Estate', 'Gremi', 'Shuamta Monasteries', 'Nadikvari Viewpoint'],
     },
