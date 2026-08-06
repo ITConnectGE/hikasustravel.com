@@ -4269,7 +4269,221 @@ export const cities = [
   },
   {
     slug: 'mtskheta', name: 'Mtskheta', region: 'mtskheta-mtianeti', published: true,
-    seoKey: 'mtskheta', contentKey: 'mtskheta', image: '/images/files/georgia-home.jpg',
+    seoKey: 'mtskheta', contentKey: 'mtskheta',
+    // Hero = the aerial of Jvari Monastery on its cliff with Mtskheta, the
+    // Aragvi/Mtkvari confluence and the valley below (native 1448x1085), replacing
+    // the generic georgia-home.jpg placeholder. Owner's pick: it is the one frame
+    // in the project that shows the town, the two rivers and the monastery in a
+    // single image, which is precisely what this page is about.
+    //
+    // ⚠️ NOT from `Images for tours/Pictures for the website (Final)`. That folder
+    // holds only four Mtskheta-cluster photographs (two Svetitskhoveli, two Jvari)
+    // and none of them shows the confluence. This frame already ships in the
+    // project: it is a body figure on the Mtskheta-Mtianeti region page, reached
+    // originally through tours.js. Chosen deliberately over the in-folder
+    // Svetitskhoveli frame, which now runs as the first body figure below.
+    //
+    // ⚠️ ZERO NEW FILES. All six rungs (768/1200/1448 avif+webp) already exist in
+    // /images/mtskheta-mtianeti/ and are REFERENCED in place — nothing copied,
+    // nothing re-encoded, nothing upscaled.
+    //
+    // Native ceiling is 1448, BELOW the usual 1600 rung, so the ladder is exactly
+    // 768/1200/1448 with the top breakpoint at min-width:1200 — there is NO
+    // 1600/2400 rung. The visible background comes from the new `.hero--mtskheta`
+    // class (styles.css), which also carries `background-position: 62% center`:
+    // the church sits in the right third of a 4:3 frame and a centred crop pushes
+    // it off a portrait phone hero entirely. HeroSection omits its inline
+    // background when heroClass is set.
+    image: '/images/mtskheta-mtianeti/jvari-monastery-confluence-mtskheta-georgia-1448.webp',
+    imageAvif: '/images/mtskheta-mtianeti/jvari-monastery-confluence-mtskheta-georgia-1448.avif',
+    heroClass: 'hero--mtskheta',
+    // LCP hint for the CSS-background hero (same convention as the region guides
+    // and the Kazbegi hub): preload the 1200 AVIF rung with fetchpriority=high.
+    heroPreload: '/images/mtskheta-mtianeti/jvari-monastery-confluence-mtskheta-georgia-1200.avif',
+    // NO `ogImage`: no 1.91:1 crop exists for this frame, so og:image/twitter:image
+    // auto-derive from `image` above (the 1448 webp) — the same call the region
+    // page makes for this very photograph. Still a real change from the previous
+    // state, where og:image was the georgia-home.jpg placeholder. No other SEO
+    // field is touched.
+    //
+    // Hero image SEO/AEO metadata. The hero is a CSS background with no <img alt>,
+    // so the localized alt lives here and is emitted as the hero ImageObject
+    // caption plus og:image:alt / twitter:image:alt per locale. width/height = the
+    // 1448 rung.
+    //
+    // ⚠️ `noCredit: true` — the hero ImageObject ships with NO creator /
+    // creditText / copyrightNotice. This photograph asserts no authorship anywhere
+    // in the repo; the region page reached the same conclusion for the same frame
+    // and set noCredit there. Claiming the brand here would be inventing it, and
+    // absence is how schema.org says "unknown". Do NOT substitute a placeholder
+    // string. The three body figures below ARE ours and keep brand credit, so this
+    // page mixes credited and uncredited nodes on purpose.
+    //
+    // Naming: Latin forms (Mtskheta / Svetitskhoveli / Jvari) in all seven
+    // locales. That is the site-wide majority in every language — de 174:31,
+    // fr 205:0, es 200:5, nl 192:13, cs 76:27, pl 82:18 — and it is also what this
+    // page's own body says, since the Mtskheta block exists ONLY in English and
+    // the other six locales render it through the EN fallback. Only the
+    // grammatical case is localized (cs "v Mtskhetě" 20x, pl "w Mtskhecie" 25x).
+    imageMeta: {
+      width: 1448, height: 1085,
+      noCredit: true,
+      name: 'Jvari Monastery on the cliff above Mtskheta and the meeting of the Aragvi and Mtkvari rivers, Georgia',
+      description: 'An aerial view of Jvari Monastery, a stone church with a low dome standing among ruined walls on the cliff above the confluence of the Aragvi and Mtkvari rivers, with the town of Mtskheta spread across the valley floor below and wooded hills behind. Mtskheta lies in the Mtskheta-Mtianeti region of Georgia (the country).',
+      locationName: 'Jvari Monastery, Mtskheta, Mtskheta-Mtianeti, Georgia',
+      locality: 'Mtskheta', region: 'Mtskheta-Mtianeti', country: 'GE',
+      geo: { lat: 41.8380, lng: 44.7328 },
+      alt: {
+        en: 'Jvari Monastery on the cliff above Mtskheta and the meeting of the Aragvi and Mtkvari rivers, Georgia',
+        de: 'Das Jvari-Kloster auf der Klippe über Mtskheta und dem Zusammenfluss von Aragvi und Mtkvari, Georgien',
+        fr: "Le monastère de Jvari sur la falaise dominant Mtskheta et la rencontre de l'Aragvi et de la Mtkvari, Géorgie",
+        es: 'El monasterio de Jvari en el acantilado sobre Mtskheta y el encuentro del Aragvi y el Mtkvari, Georgia',
+        nl: 'Het Jvari-klooster op de klif boven Mtskheta en de samenvloeiing van de Aragvi en de Mtkvari, Georgië',
+        cs: 'Klášter Jvari na útesu nad Mtskhetou a soutokem Aragvi a Mtkvari, Gruzie',
+        pl: 'Klasztor Jvari na klifie nad Mtskhetą i zbiegiem Aragwi i Mtkwari, Gruzja',
+      },
+    },
+    // Four LANDSCAPE inline body photos, rendered by CityPage as real crawlable
+    // <figure class="body-img"> blocks BETWEEN body sections via `afterChunk` —
+    // never the hero, never OG, lazy + async, no fetchpriority, explicit
+    // width/height. `portrait: false` + `widths` selects the 4:3 landscape branch
+    // (768/1200/1448, 642px display cap, 1200x900 fallback <img>).
+    //
+    // ⚠️ ZERO FILES COPIED OR GENERATED. All four ladders already exist at
+    // /images/files/ without the `w` suffix (they were built for the Svetitskhoveli
+    // and Jvari site pages) and are referenced in place. Native width is 1448 for
+    // three of them and 1540 for the cathedral, so those are their top rungs —
+    // no 1600/2400, no upscale.
+    //
+    // The Mtskheta page-content block exists ONLY in English (the other six
+    // locales fall back to it all-or-nothing), so alt/caption live here as
+    // 7-language maps to guarantee localized figure text on every locale — the
+    // same reason the Ushguli inlines do. Each gets one inline ImageObject via
+    // `anchor` (stable page-scoped @id, brand credit, own contentLocation) and
+    // none is representativeOfPage — that stays the hero's.
+    //
+    // Placement follows the body: the cathedral frame sits under "Svetitskhoveli
+    // Cathedral"; the carved-facade frame under "Jvari Monastery", which describes
+    // the relief carvings and the precision of the stone cutting; the wall and
+    // bell-tower frame under "The town", which talks about walking between the
+    // monuments and the area around Svetitskhoveli; the ridge frame under "Best
+    // time to visit Mtskheta", which names the clear spring and autumn skies at
+    // Jvari.
+    //
+    // The cathedral frame was this page's hero until the owner chose the Jvari
+    // confluence aerial instead; it moved down here rather than going unused,
+    // which is why the wall/bell-tower frame sits under "The town" and not under
+    // the cathedral section.
+    //
+    // ⚠️ NO DATES IN THE CAPTIONS for the Svetitskhoveli wall. This page dates it
+    // "mainly to the 17th century"; the Svetitskhoveli site page's own inline
+    // caption says 1787 under Erekle II. Both stay as they are (no body copy was
+    // touched); the caption here describes only what the photograph shows, so it
+    // contradicts neither.
+    portraitInlines: [
+      {
+        // 3:2, not 4:3 — native 1540x1021, so the ladder is 768/1200/1540 and the
+        // 1200 fallback <img> is 1200x796 (CityPage derives the height).
+        base: 'svetitskhoveli-cathedral-mtskheta-georgia', width: 1540, height: 1021,
+        afterChunk: 2, anchor: 'inline-svetitskhoveli-cathedral',
+        portrait: false, widths: [768, 1200, 1540],
+        locationName: 'Svetitskhoveli Cathedral, Mtskheta, Mtskheta-Mtianeti, Georgia',
+        locality: 'Mtskheta', region: 'Mtskheta-Mtianeti', geo: { lat: 41.8419, lng: 44.7211 },
+        alt: {
+          en: 'Svetitskhoveli Cathedral and the wall of its precinct in Mtskheta, Georgia',
+          de: 'Die Svetitskhoveli-Kathedrale und die Mauer ihres Bezirks in Mtskheta, Georgien',
+          fr: "La cathédrale de Svetitskhoveli et le mur de son enceinte à Mtskheta, Géorgie",
+          es: 'La catedral de Svetitskhoveli y la muralla de su recinto en Mtskheta, Georgia',
+          nl: 'De Svetitskhoveli-kathedraal en de muur van haar ommuurde terrein in Mtskheta, Georgië',
+          cs: 'Katedrála Svetitskhoveli a zeď jejího areálu v Mtskhetě, Gruzie',
+          pl: 'Katedra Svetitskhoveli i mur jej dziedzińca w Mtskhecie, Gruzja',
+        },
+        caption: {
+          en: 'Svetitskhoveli in golden sandstone, its arcaded flanks rising to a faceted drum and conical dome, with the gate tower and precinct wall standing off to the right.',
+          de: 'Svetitskhoveli aus goldenem Sandstein: Die arkadengegliederten Flanken steigen zu einem facettierten Tambour und einer Kegelkuppel auf, rechts stehen Torturm und Bezirksmauer.',
+          fr: "Svetitskhoveli en grès doré, ses flancs à arcatures s'élevant vers un tambour à pans et une coupole conique, la tour-porte et le mur d'enceinte se tenant à droite.",
+          es: 'Svetitskhoveli en arenisca dorada, con sus costados de arquerías que ascienden hasta un tambor facetado y una cúpula cónica, y la torre de la puerta y la muralla del recinto a la derecha.',
+          nl: 'Svetitskhoveli in goudkleurige zandsteen, met arcadegevels die oplopen naar een gefacetteerde tamboer en kegelkoepel, en rechts de poorttoren en de muur van het terrein.',
+          cs: 'Svetitskhoveli ze zlatavého pískovce: boční stěny s arkádami stoupají k fasetovanému tamburu a kuželové kupoli, vpravo stojí brána s věží a zeď areálu.',
+          pl: 'Svetitskhoveli ze złocistego piaskowca — arkadowe ściany wznoszą się ku fasetowanemu bębnowi i stożkowej kopule, a po prawej stoją wieża bramna i mur dziedzińca.',
+        },
+      },
+      {
+        base: 'svetitskhoveli-bell-tower-wall-mtskheta-georgia', width: 1448, height: 1086,
+        afterChunk: 6, anchor: 'inline-svetitskhoveli-wall',
+        portrait: false, widths: [768, 1200, 1448],
+        locationName: 'Svetitskhoveli Cathedral, Mtskheta, Mtskheta-Mtianeti, Georgia',
+        locality: 'Mtskheta', region: 'Mtskheta-Mtianeti', geo: { lat: 41.8419, lng: 44.7211 },
+        alt: {
+          en: 'The bell tower over the gate and the crenellated wall around Svetitskhoveli Cathedral, seen from the courtyard in Mtskheta, Georgia',
+          de: 'Der Glockenturm über dem Tor und die zinnenbewehrte Mauer um die Svetitskhoveli-Kathedrale, vom Hof aus gesehen, Mtskheta, Georgien',
+          fr: "Le clocher au-dessus de la porte et le mur crénelé qui entoure la cathédrale de Svetitskhoveli, vus de la cour, Mtskheta, Géorgie",
+          es: 'El campanario sobre la puerta y la muralla almenada que rodea la catedral de Svetitskhoveli, vistos desde el patio, Mtskheta, Georgia',
+          nl: 'De klokkentoren boven de poort en de gekanteelde muur rond de Svetitskhoveli-kathedraal, gezien vanaf de binnenplaats, Mtskheta, Georgië',
+          cs: 'Zvonice nad branou a cimbuřím opatřená zeď kolem katedrály Svetitskhoveli při pohledu z nádvoří, Mtskheta, Gruzie',
+          pl: 'Dzwonnica nad bramą i blankowany mur wokół katedry Svetitskhoveli widziane z dziedzińca, Mtskheta, Gruzja',
+        },
+        caption: {
+          en: 'Svetitskhoveli stands inside a walled precinct: a crenellated stone wall with corner towers rings the cathedral, and a bell tower rises over the entrance gate.',
+          de: 'Svetitskhoveli steht in einem ummauerten Bezirk: Eine zinnenbewehrte Steinmauer mit Ecktürmen umschließt die Kathedrale, über dem Eingangstor erhebt sich ein Glockenturm.',
+          fr: "Svetitskhoveli s'élève dans une enceinte fortifiée : un mur de pierre crénelé, flanqué de tours d'angle, ceint la cathédrale, et un clocher domine la porte d'entrée.",
+          es: 'Svetitskhoveli se alza dentro de un recinto amurallado: una muralla de piedra almenada con torres en las esquinas rodea la catedral y un campanario se levanta sobre la puerta de entrada.',
+          nl: 'Svetitskhoveli staat binnen een ommuurd terrein: een gekanteelde stenen muur met hoektorens omsluit de kathedraal, en boven de toegangspoort rijst een klokkentoren op.',
+          cs: 'Svetitskhoveli stojí v ohrazeném areálu: katedrálu obepíná cimbuřím opatřená kamenná zeď s nárožními věžemi a nad vstupní branou se zvedá zvonice.',
+          pl: 'Svetitskhoveli stoi w obwarowanym dziedzińcu: katedrę otacza blankowany kamienny mur z wieżami w narożnikach, a nad bramą wjazdową wznosi się dzwonnica.',
+        },
+      },
+      {
+        base: 'jvari-monastery-walls-mtskheta-georgia', width: 1448, height: 1086,
+        afterChunk: 3, anchor: 'inline-jvari-carving',
+        portrait: false, widths: [768, 1200, 1448],
+        locationName: 'Jvari Monastery, Mtskheta, Mtskheta-Mtianeti, Georgia',
+        locality: 'Mtskheta', region: 'Mtskheta-Mtianeti', geo: { lat: 41.8380, lng: 44.7328 },
+        alt: {
+          en: 'The carved stone facade and tiled dome of the church at Jvari Monastery above Mtskheta, Georgia',
+          de: 'Die reliefgeschmückte Steinfassade und die ziegelgedeckte Kuppel der Kirche des Jvari-Klosters über Mtskheta, Georgien',
+          fr: "La façade de pierre sculptée et la coupole de tuiles de l'église du monastère de Jvari au-dessus de Mtskheta, Géorgie",
+          es: 'La fachada de piedra tallada y la cúpula de tejas de la iglesia del monasterio de Jvari sobre Mtskheta, Georgia',
+          nl: 'De gebeeldhouwde stenen gevel en de met pannen gedekte koepel van de kerk van het Jvari-klooster boven Mtskheta, Georgië',
+          cs: 'Kamenná fasáda s reliéfy a taškami krytá kupole kostela kláštera Jvari nad Mtskhetou, Gruzie',
+          pl: 'Rzeźbiona kamienna fasada i kryta dachówką kopuła kościoła klasztoru Jvari nad Mtskhetą, Gruzja',
+        },
+        caption: {
+          en: 'Close up, the Jvari church shows the qualities the building is known for: cleanly cut stone, relief carving around the windows and on the facade, and a low drum carrying the dome.',
+          de: 'Aus der Nähe zeigt die Jvari-Kirche, wofür der Bau bekannt ist: sauber behauener Stein, Reliefschmuck um die Fenster und an der Fassade und ein niedriger Tambour, der die Kuppel trägt.',
+          fr: "De près, l'église de Jvari montre ce qui fait sa réputation : une pierre taillée avec netteté, des reliefs autour des fenêtres et sur la façade, et un tambour bas portant la coupole.",
+          es: 'De cerca, la iglesia de Jvari muestra aquello por lo que es conocida: piedra tallada con limpieza, relieves alrededor de las ventanas y en la fachada, y un tambor bajo que sostiene la cúpula.',
+          nl: 'Van dichtbij toont de Jvari-kerk waar het gebouw om bekendstaat: strak gehouwen steen, reliëfwerk rond de vensters en op de gevel, en een lage tamboer die de koepel draagt.',
+          cs: 'Zblízka ukazuje kostel Jvari to, čím je proslulý: čistě tesaný kámen, reliéfy kolem oken i na fasádě a nízký tambur nesoucí kupoli.',
+          pl: 'Z bliska kościół Jvari pokazuje to, z czego słynie: czysto ciosany kamień, reliefy wokół okien i na fasadzie oraz niski bęben dźwigający kopułę.',
+        },
+      },
+      {
+        base: 'jvari-monastery-hilltop-mtskheta-georgia', width: 1448, height: 1086,
+        afterChunk: 8, anchor: 'inline-jvari-ridge',
+        portrait: false, widths: [768, 1200, 1448],
+        locationName: 'Jvari Monastery, Mtskheta, Mtskheta-Mtianeti, Georgia',
+        locality: 'Mtskheta', region: 'Mtskheta-Mtianeti', geo: { lat: 41.8380, lng: 44.7328 },
+        alt: {
+          en: 'Jvari Monastery standing alone on its ridge above Mtskheta, with the hills of the valley behind, Georgia',
+          de: 'Das Jvari-Kloster steht allein auf seinem Bergrücken über Mtskheta, dahinter die Hügel des Tals, Georgien',
+          fr: "Le monastère de Jvari, seul sur sa crête au-dessus de Mtskheta, les collines de la vallée en arrière-plan, Géorgie",
+          es: 'El monasterio de Jvari, solo en su cresta sobre Mtskheta, con las colinas del valle al fondo, Georgia',
+          nl: 'Het Jvari-klooster alleen op zijn bergkam boven Mtskheta, met de heuvels van het dal erachter, Georgië',
+          cs: 'Klášter Jvari osamocený na hřebeni nad Mtskhetou, v pozadí kopce údolí, Gruzie',
+          pl: 'Klasztor Jvari samotnie na grzbiecie nad Mtskhetą, w tle wzgórza doliny, Gruzja',
+        },
+        caption: {
+          en: 'Clear air brings out the ridge above the town where Jvari stands. The monastery grounds are the vantage point for the view over the meeting of the two rivers and the valley beyond.',
+          de: 'Klare Luft lässt den Bergrücken über der Stadt hervortreten, auf dem Jvari steht. Vom Klostergelände öffnet sich der Blick auf den Zusammenfluss der beiden Flüsse und das Tal dahinter.',
+          fr: "L'air limpide fait ressortir la crête au-dessus de la ville où se dresse Jvari. C'est depuis l'enceinte du monastère que s'ouvre la vue sur la rencontre des deux rivières et la vallée au-delà.",
+          es: 'El aire limpio realza la cresta sobre la ciudad donde se alza Jvari. Desde el recinto del monasterio se abre la vista sobre el encuentro de los dos ríos y el valle que se extiende detrás.',
+          nl: 'Heldere lucht laat de bergkam boven de stad uitkomen waarop Jvari staat. Vanaf het kloosterterrein opent zich het uitzicht op de samenvloeiing van de twee rivieren en het dal daarachter.',
+          cs: 'Čistý vzduch zvýrazní hřeben nad městem, na němž stojí Jvari. Z klášterního areálu se otevírá pohled na soutok obou řek a údolí za ním.',
+          pl: 'Czyste powietrze uwydatnia grzbiet nad miastem, na którym stoi Jvari. Z terenu klasztoru rozciąga się widok na spotkanie obu rzek i dolinę za nimi.',
+        },
+      },
+    ],
     thingsToDo: {
       seoKey: 'thingsToDoMtskheta', contentKey: 'thingsToDoMtskheta', image: '/images/files/georgia-home.jpg',
       address: { addressLocality: 'Mtskheta' },

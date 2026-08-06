@@ -2444,6 +2444,53 @@ section {
   }
 }
 /* No rung above 1540 exists. Do not add a 1600 or 2400 breakpoint. */
+/* Mtskheta CITY page hero — per-page CSS background (same opt-in mechanism as
+   .hero--svetitskhoveli above). The frame is the aerial of Jvari Monastery on its
+   cliff with Mtskheta, the river confluence and the valley below; its rungs
+   already ship in /images/mtskheta-mtianeti/ for the region page, so this class
+   only points at them — no file was copied, generated or re-encoded. Native is
+   4:3 at 1448x1085, BELOW the usual 1600 rung, so the ladder is exactly
+   768/1200/1448 with the top breakpoint at min-width:1200 — there is NO 1600 or
+   2400 rung.
+
+   ⚠️ `background-position: 82% center`, NOT the default centre. The church sits
+   in the right third of a 4:3 frame; a portrait phone hero shows only ~43% of the
+   width under `cover`, and centring pushes the monastery hard against the right
+   edge, leaving mostly hillside. Rendered and COMPARED at 50/62/70/76/82% on a
+   360px frame: 50% clips the church badly, 62% and 70% still cut its right side,
+   82% is the first value that clears the whole building while keeping the river
+   bend at the left edge. Above ~1.34:1 viewports (all desktop widths) `cover`
+   scales by width and crops vertically instead, so this value is a phone-only
+   correction and does not alter the desktop framing. The shared .coverme::after
+   overlay already provides the readable text layer, so no extra scrim is added.
+   The plain url() line is the fallback for browsers without image-set(). */
+.hero--mtskheta {
+  background-image: url("/images/mtskheta-mtianeti/jvari-monastery-confluence-mtskheta-georgia-1200.webp");
+  background-image: image-set(
+    url("/images/mtskheta-mtianeti/jvari-monastery-confluence-mtskheta-georgia-768.avif") type("image/avif"),
+    url("/images/mtskheta-mtianeti/jvari-monastery-confluence-mtskheta-georgia-768.webp") type("image/webp")
+  );
+  background-position: 82% center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+@media (min-width: 768px) {
+  .hero--mtskheta {
+    background-image: image-set(
+      url("/images/mtskheta-mtianeti/jvari-monastery-confluence-mtskheta-georgia-1200.avif") type("image/avif"),
+      url("/images/mtskheta-mtianeti/jvari-monastery-confluence-mtskheta-georgia-1200.webp") type("image/webp")
+    );
+  }
+}
+@media (min-width: 1200px) {
+  .hero--mtskheta {
+    background-image: image-set(
+      url("/images/mtskheta-mtianeti/jvari-monastery-confluence-mtskheta-georgia-1448.avif") type("image/avif"),
+      url("/images/mtskheta-mtianeti/jvari-monastery-confluence-mtskheta-georgia-1448.webp") type("image/webp")
+    );
+  }
+}
+/* No rung above 1448 exists. Do not add a 1600 or 2400 breakpoint. */
 /* Narikala Fortress hero — per-page CSS background (same opt-in mechanism as
    .hero--svetitskhoveli). Native ceiling is 1537, BELOW the usual 1600 rung, so
    the ladder is exactly 768/1200/1537 with the top breakpoint at min-width:1200 —
