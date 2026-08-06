@@ -1969,6 +1969,50 @@ section {
   }
 }
 /* 1086 is the native width. Do NOT add a 1200, 1448 or 1600 breakpoint. */
+/* Martvili CITY page hero — per-page CSS background, same mechanism as
+   .hero--martvili-canyon directly above, and the same two-rung ladder for the same
+   reason: the source is the second of only two Martvili photographs in the project
+   and is portrait 1086x1448, so 768 and 1086 are the ONLY rungs. Do NOT add a
+   1200/1448/1600 breakpoint — anything above 1086 would upscale.
+
+   Deliberately a DIFFERENT frame from .hero--martvili-canyon: the canyon page
+   already heroes the emerald-pool photograph, so the town page takes the turquoise
+   rapids one and shows the pool photograph as its body figure instead. That way
+   the two pages do not open with the same image. Files are referenced in place
+   from /images/martvili — nothing was copied or re-encoded for this hero.
+
+   ⚠️ `background-position: center 20%`, chosen by rendering 20/34/50/66% at four
+   widths and looking, not by arithmetic. The hero box is wide, so cover scales this
+   portrait source by WIDTH and shows only ~42% of its height at 1440; at 34% and
+   below-centre the band is rock ledge and flat water, with the mossy green walls
+   that make the frame read as a canyon cropped away entirely. 20% keeps the white
+   rapids, the turquoise reach AND the overhanging green wall in one view.
+
+   Measured, not assumed: box aspect is 1.759 at 1440, 1.261 at 1024 and 0.918 at
+   768 — all above the source's 0.75, so Y is live at those widths — but 0.514 at
+   360, BELOW 0.75, so cover scales by height there and the whole frame shows
+   regardless of Y. The verifier asserts that inertness rather than trusting it.
+   Same behaviour as .hero--martvili-canyon. The shared .coverme::after overlay
+   already provides the readable text layer, so no extra scrim is added. */
+.hero--martvili {
+  background-image: url("/images/martvili/martvili-canyon-turquoise-river-georgia-768.webp");
+  background-image: image-set(
+    url("/images/martvili/martvili-canyon-turquoise-river-georgia-768.avif") type("image/avif"),
+    url("/images/martvili/martvili-canyon-turquoise-river-georgia-768.webp") type("image/webp")
+  );
+  background-position: center 20%;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+@media (min-width: 768px) {
+  .hero--martvili {
+    background-image: image-set(
+      url("/images/martvili/martvili-canyon-turquoise-river-georgia-1086.avif") type("image/avif"),
+      url("/images/martvili/martvili-canyon-turquoise-river-georgia-1086.webp") type("image/webp")
+    );
+  }
+}
+/* 1086 is the native width. Do NOT add a 1200, 1448 or 1600 breakpoint. */
 /* Rabati Fortress hero — per-page CSS background (same opt-in mechanism as
    .hero--gremi). Akhaltsikhe Castle, native 4:3 (1448x1086), just under the 1600
    rung, so the ladder is exactly 768/1200/1448 with the top breakpoint at

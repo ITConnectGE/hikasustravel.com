@@ -5193,7 +5193,124 @@ export const cities = [
   },
   {
     slug: 'martvili', name: 'Martvili', region: 'samegrelo', published: true,
-    seoKey: 'martvili', contentKey: 'martvili', image: '/images/files/georgia-home.jpg',
+    seoKey: 'martvili', contentKey: 'martvili',
+    // Hero = the turquoise-rapids frame, replacing the generic georgia-home.jpg
+    // placeholder. Portrait 1086x1448, so the ladder is 768/1086 ONLY — 1086 is
+    // native and anything above it would upscale. Rendered through the new
+    // `.hero--martvili` class (styles.css) with `background-position: center 20%`;
+    // HeroSection omits its inline background when heroClass is set.
+    //
+    // ⚠️ ONLY TWO MARTVILI PHOTOGRAPHS EXIST IN THE PROJECT — this one and the
+    // emerald-pool frame below — and both already ship on the Martvili Canyon
+    // attraction page. Reuse is unavoidable, so the roles are deliberately
+    // MIRRORED: that page heroes the emerald pool and shows the rapids inline;
+    // this page does the opposite, so neither opens with the other's cover image.
+    // The approved source folder holds one further frame ("Martvili Canyon
+    // (entrance).jpg") which is NOT used — see the note on the inline below.
+    //
+    // ⚠️ ZERO image files copied or re-encoded: both ladders already live in
+    // /images/martvili and are referenced in place. The only NEW files are the two
+    // og variants below, cropped from the 1086x1448 source at native resolution.
+    image: '/images/martvili/martvili-canyon-turquoise-river-georgia-1086.webp',
+    imageAvif: '/images/martvili/martvili-canyon-turquoise-river-georgia-1086.avif',
+    heroClass: 'hero--martvili',
+    heroPreload: '/images/martvili/martvili-canyon-turquoise-river-georgia-1086.avif',
+    // Social-share image. A portrait hero makes a terrible og:image, so this frame
+    // gets its own horizontal band, exactly as the canyon page's hero did: 1086x570
+    // cut from the native source (no upscale), the real dimensions declared rather
+    // than claiming the conventional 1200x630. Generated for this pass — the sibling
+    // og belongs to the other frame and shows a different part of the canyon.
+    ogImage: { src: '/images/martvili/martvili-canyon-turquoise-river-georgia-og.jpg', width: 1086, height: 570 },
+    // Hero image SEO/AEO metadata. The hero is a CSS background with no <img alt>,
+    // so the localized alt lives here and is emitted as the hero ImageObject caption
+    // plus og:image:alt / twitter:image:alt per locale. width/height = the 1086 rung.
+    //
+    // ⚠️ `noCredit: true` — RESOLVED, do not revisit. The owner confirmed on
+    // 2026-08-02 that the two Martvili Canyon photographs are STOCK images under a
+    // commercial licence that requires no attribution, and are NOT Hikasus Travel's
+    // own work. They are the only third-party imagery on the site. Brand credit
+    // would be a false authorship claim, and the licence obliges no third-party
+    // credit either, so both nodes ship with no creator / creditText /
+    // copyrightNotice at all. An audit that flags "images without credit" must not
+    // treat these as a bug.
+    //
+    // ⚠️ NO WATER-ACCESS WORDING anywhere in these strings. Swimming is forbidden
+    // in the protected canyon, and the canyon page's own hero caption was trimmed
+    // in all 7 locales to remove a "bathing place" clause for exactly this reason.
+    // Nothing here may imply bathing, wading or entering the water. The body also
+    // describes a flat-bottomed boat ride, but neither photograph shows a boat, so
+    // no boat wording is used either.
+    //
+    // Naming follows the body and the site-wide norm: `Martvili` and `Abasha` in
+    // all 7 locales (the river is treated as indeclinable everywhere), and the
+    // region is Samegrelo — NEVER Imereti, which is the neighbouring region the
+    // page names only as route context.
+    imageMeta: {
+      width: 1086, height: 1448, noCredit: true,
+      name: 'The turquoise water of the Abasha River running over limestone ledges in Martvili Canyon, Samegrelo, Georgia',
+      description: 'The turquoise-green water of the Abasha River breaking white over tiered limestone ledges and then running deep and still, between moss-covered rock and dense overhanging vegetation in Martvili Canyon, Samegrelo, western Georgia (the country).',
+      locationName: 'Martvili Canyon',
+      region: 'Samegrelo-Zemo Svaneti', country: 'GE',
+      alt: {
+        en: 'The turquoise water of the Abasha River running over limestone ledges in Martvili Canyon, Samegrelo, Georgia',
+        de: 'Das türkisfarbene Wasser des Abasha fließt über Kalksteinstufen in der Martvili-Schlucht, Samegrelo, Georgien',
+        fr: "L'eau turquoise de la rivière Abasha coulant sur des gradins calcaires dans le canyon de Martvili, Samegrelo, Géorgie",
+        es: 'El agua turquesa del río Abasha corriendo sobre escalones calizos en el cañón de Martvili, Samegrelo, Georgia',
+        nl: 'Het turkooizen water van de rivier de Abasha dat over kalkstenen richels stroomt in de Martvili-canyon, Samegrelo, Georgië',
+        cs: 'Tyrkysová voda řeky Abasha proudící přes vápencové stupně v kaňonu Martvili, Samegrelo, Gruzie',
+        pl: 'Turkusowa woda rzeki Abasha płynąca po wapiennych progach w kanionie Martvili, Samegrelo, Gruzja',
+      },
+    },
+    // ONE inline body photo — the project's entire Martvili inventory is two
+    // photographs, and the other one is the hero above, so this page ships a single
+    // figure rather than the usual three to six. Nothing was padded out with
+    // wrong-region or off-subject material to reach a count.
+    //
+    // ⚠️ REJECTED, and worth recording: `Images for tours/Pictures for the website
+    // (Final)/AAA completed/Martvili Canyon/Martvili Canyon (entrance).jpg` is the
+    // only other Martvili frame in the approved folder and is NOT used. Two men in
+    // swim shorts stand at the water's edge as the clear focal point of the left
+    // third — on a page where implying bathing is specifically off-limits. It is
+    // also 1024x1024 square (native ceiling below even the 1086 rung) and its
+    // provenance differs from the two licensed stock frames.
+    //
+    // Rendered by CityPage as a real crawlable <figure class="body-img
+    // body-img--portrait"> (560px cap) placed after body chunk 2 — the "Martvili
+    // Canyon" section, which describes the turquoise-green water, the sheer walls
+    // "overhung with ferns, moss, and subtropical vegetation" and the narrow strip
+    // of sky. Lazy + async, explicit width/height, no fetchpriority, no OG.
+    // Portrait ladder 768/1086 (native ceiling), files referenced in place from
+    // /images/martvili via `dir`. alt/caption are 7-language maps because the
+    // Martvili page-content block exists ONLY in English and the other six locales
+    // render it through the EN fallback. `noCredit` and the water-access ban apply
+    // here exactly as to the hero.
+    portraitInlines: [
+      {
+        base: 'martvili-canyon-georgia', width: 1086, height: 1448,
+        afterChunk: 2, anchor: 'inline-canyon-pool',
+        widths: [768, 1086], dir: '/images/martvili', noCredit: true,
+        locationName: 'Martvili Canyon',
+        region: 'Samegrelo-Zemo Svaneti',
+        alt: {
+          en: 'The emerald-green water of Martvili Canyon between tall limestone walls covered in ferns, moss and dense forest, Samegrelo, Georgia',
+          de: 'Das smaragdgrüne Wasser der Martvili-Schlucht zwischen hohen, mit Farnen, Moos und dichtem Wald bewachsenen Kalksteinwänden, Samegrelo, Georgien',
+          fr: "L'eau vert émeraude du canyon de Martvili entre de hautes parois calcaires couvertes de fougères, de mousse et de forêt dense, Samegrelo, Géorgie",
+          es: 'El agua verde esmeralda del cañón de Martvili entre altas paredes calizas cubiertas de helechos, musgo y bosque denso, Samegrelo, Georgia',
+          nl: 'Het smaragdgroene water van de Martvili-canyon tussen hoge kalkstenen wanden vol varens, mos en dicht bos, Samegrelo, Georgië',
+          cs: 'Smaragdově zelená voda kaňonu Martvili mezi vysokými vápencovými stěnami porostlými kapradím, mechem a hustým lesem, Samegrelo, Gruzie',
+          pl: 'Szmaragdowozielona woda kanionu Martvili między wysokimi wapiennymi ścianami porośniętymi paprociami, mchem i gęstym lasem, Samegrelo, Gruzja',
+        },
+        caption: {
+          en: 'The Abasha River cut this gorge through Jurassic limestone, and the walls it left behind carry ferns, moss and subtropical greenery down to the waterline — with only a narrow strip of sky above.',
+          de: 'Der Abasha hat diese Schlucht in jurassischen Kalkstein geschnitten; die zurückgebliebenen Wände tragen Farne, Moos und subtropisches Grün bis zur Wasserlinie hinab – darüber bleibt nur ein schmaler Streifen Himmel.',
+          fr: "La rivière Abasha a taillé cette gorge dans le calcaire jurassique, et les parois qu'elle a laissées portent fougères, mousses et végétation subtropicale jusqu'au fil de l'eau — au-dessus, il ne reste qu'une étroite bande de ciel.",
+          es: 'El río Abasha excavó esta garganta en la caliza jurásica, y las paredes que dejó llevan helechos, musgo y vegetación subtropical hasta la línea del agua, con solo una estrecha franja de cielo por encima.',
+          nl: 'De Abasha sneed deze kloof uit jurassisch kalksteen, en de wanden die overbleven dragen varens, mos en subtropisch groen tot aan de waterlijn — daarboven blijft slechts een smalle strook lucht.',
+          cs: 'Řeka Abasha vyhloubila tuto soutěsku do jurského vápence a stěny, které po ní zbyly, nesou kapradí, mech a subtropickou zeleň až k hladině – nad nimi zůstává jen úzký pruh oblohy.',
+          pl: 'Rzeka Abasha wyżłobiła ten wąwóz w jurajskim wapieniu, a pozostawione ściany porastają paprocie, mech i subtropikalna zieleń aż po lustro wody — powyżej zostaje tylko wąski pas nieba.',
+        },
+      },
+    ],
     thingsToDo: {
       seoKey: 'thingsToDoMartvili', contentKey: 'thingsToDoMartvili', image: '/images/files/georgia-home.jpg',
       address: { addressLocality: 'Martvili' },
