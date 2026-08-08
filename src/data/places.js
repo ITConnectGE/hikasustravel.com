@@ -3963,7 +3963,91 @@ export const cities = [
   },
   {
     slug: 'tskaltubo', name: 'Tskaltubo', region: 'imereti', published: true,
-    seoKey: 'tskaltubo', contentKey: 'tskaltubo', image: '/images/files/georgia-home.jpg',
+    seoKey: 'tskaltubo', contentKey: 'tskaltubo',
+    // ⚠️ NOT a photograph of Tskaltubo — there is none. No image of the town, its
+    // Soviet sanatoriums, its bathhouses or the mineral baths exists anywhere in
+    // the library, so this page's dominant subject cannot be illustrated at all.
+    // Prometheus Cave is the only described subject with photographs; it sits
+    // ~5 km outside the town near Kumistavi, is named in this page's own H1 and
+    // has its own section, so the owner approved leading with it. Every caption
+    // says "near Tskaltubo" so the cave is never presented as the town centre.
+    // Hero is deliberately the amber `illuminated-chamber` frame, NOT the violet
+    // `prometheus-cave-imereti-georgia` that heads the Prometheus Cave page.
+    image: '/images/files/prometheus-cave-illuminated-chamber-imereti-georgia-1536w.webp',
+    imageAvif: '/images/files/prometheus-cave-illuminated-chamber-imereti-georgia-1536w.avif',
+    heroClass: 'hero--tskaltubo',
+    heroPreload: '/images/files/prometheus-cave-illuminated-chamber-imereti-georgia-1200w.avif',
+    // ⚠️ These filenames carry the `-<width>w` suffix — do not drop the `w`.
+    ogImage: { src: '/images/files/prometheus-cave-illuminated-chamber-imereti-georgia-og-1200x630.jpg', width: 1200, height: 630 },
+    imageMeta: {
+      width: 1536,
+      height: 1024,
+      imageId: 'hero-image',
+      name: 'Illuminated chambers and stalactite formations in Prometheus Cave near Tskaltubo, Imereti, Georgia',
+      description: 'Warm-lit stalactite and stalagmite formations above a paved walkway in a chamber of Prometheus Cave, in the karst limestone near Kumistavi outside Tskaltubo, Imereti, Georgia (the country).',
+      // No addressLocality: the cave is about five kilometres from the town
+      // centre, so claiming Tskaltubo as the locality would overstate it — same
+      // call the Martvili Canyon nodes make.
+      locationName: 'Prometheus Cave, Imereti, Georgia',
+      region: 'Imereti',
+      country: 'GE',
+      // Credit left to the CityPage default (Hikasus Travel), matching how the
+      // Prometheus Cave page already treats these same photographs. Crediting one
+      // photograph two different ways across two pages would be incoherent.
+      alt: {
+        en: 'Illuminated chambers and stalactite formations in Prometheus Cave near Tskaltubo, Imereti, Georgia',
+        de: 'Beleuchtete Hallen und Stalaktiten in der Prometheus-Höhle bei Tskaltubo, Imereti, Georgien',
+        fr: 'Salles illuminées et stalactites de la grotte de Prométhée près de Tskaltubo, Iméréthie, Géorgie',
+        es: 'Salas iluminadas y estalactitas de la cueva de Prometeo cerca de Tskaltubo, Imereti, Georgia',
+        nl: 'Verlichte zalen en stalactieten in de Prometheusgrot bij Tskaltubo, Imereti, Georgië',
+        cs: 'Osvětlené sály a stalaktity v Prométheově jeskyni u Tskaltuba, Imereti, Gruzie',
+        pl: 'Oświetlone sale i stalaktyty w Jaskini Prometeusza koło Tskaltubo, Imeretia, Gruzja',
+      },
+      caption: {
+        en: 'The illuminated chambers of Prometheus Cave, near the village of Kumistavi outside Tskaltubo.',
+        de: 'Die beleuchteten Hallen der Prometheus-Höhle beim Dorf Kumistavi außerhalb von Tskaltubo.',
+        fr: 'Les salles illuminées de la grotte de Prométhée, près du village de Kumistavi, à l’extérieur de Tskaltubo.',
+        es: 'Las salas iluminadas de la cueva de Prometeo, junto a la aldea de Kumistavi, a las afueras de Tskaltubo.',
+        nl: 'De verlichte zalen van de Prometheusgrot, bij het dorp Kumistavi buiten Tskaltubo.',
+        cs: 'Osvětlené sály Prométheovy jeskyně u vesnice Kumistavi za Tskaltubem.',
+        pl: 'Oświetlone sale Jaskini Prometeusza, przy wsi Kumistavi pod Tskaltubo.',
+      },
+    },
+    // ⚠️ `imageObjects`, NOT `inlineImageObjects`: CityPage reads this field for
+    // body photos rendered as <figure> blocks in the per-locale body HTML, and it
+    // builds contentUrl from /images/files/ WITH the `-<width>w` suffix these
+    // files carry. `inlineImageObjects` is the SitePage/RegionPage convention and
+    // CityPage ignores it entirely — the figures render but emit no ImageObject.
+    // name/caption are plain strings here (not 7-language maps) because this page
+    // is English-only; the localized hero alt lives in imageMeta above.
+    // locality/geo are taken verbatim from the Prometheus Cave page's own nodes,
+    // so the cave is placed in Kumistavi — never in Tskaltubo town.
+    imageObjects: [
+      {
+        base: 'prometheus-cave-colored-lighting-imereti-georgia',
+        width: 1536,
+        height: 1024,
+        name: 'Lit limestone formations in a chamber of Prometheus Cave near Tskaltubo, Imereti, Georgia',
+        caption: 'Stalactite and stalagmite formations in the karst limestone of Prometheus Cave, near Tskaltubo.',
+        description: 'Coloured floodlighting on stalactite and stalagmite formations in a large chamber of Prometheus Cave, near Kumistavi outside Tskaltubo, Imereti, Georgia (the country).',
+        locationName: 'Prometheus Cave (Kumistavi)',
+        locality: 'Kumistavi',
+        region: 'Imereti',
+        geo: { lat: 42.3767, lng: 42.6 },
+      },
+      {
+        base: 'prometheus-cave-natural-walkway-imereti-georgia',
+        width: 1448,
+        height: 1086,
+        name: 'The lit walkway running through Prometheus Cave near Tskaltubo, Imereti, Georgia',
+        caption: 'The lit walkway threading the main sequence of chambers at Prometheus Cave, near Tskaltubo.',
+        description: 'A railed walkway running between lit formations through the main sequence of chambers in Prometheus Cave, near Kumistavi outside Tskaltubo, Imereti, Georgia (the country).',
+        locationName: 'Prometheus Cave (Kumistavi)',
+        locality: 'Kumistavi',
+        region: 'Imereti',
+        geo: { lat: 42.3767, lng: 42.6 },
+      },
+    ],
     thingsToDo: {
       seoKey: 'thingsToDoTskaltubo', contentKey: 'thingsToDoTskaltubo', image: '/images/files/georgia-home.jpg',
       address: { addressLocality: 'Tskaltubo' },

@@ -1959,6 +1959,50 @@ section {
 }
 /* Native is 1672 — that is the top rung. Do not add a 2000/2400 breakpoint. */
 
+/* Tskaltubo hero — replaces the generic georgia-home.jpg placeholder. ⚠️ This is
+   Prometheus Cave, ~5 km outside the town: no photograph of Tskaltubo itself
+   exists, and the cave is named in this page's own H1. Deliberately the amber
+   `illuminated-chamber` frame, NOT the violet `prometheus-cave-imereti-georgia`
+   that heads the Prometheus Cave page, so the two do not open identically.
+   ⚠️ Filenames carry the `-<width>w` suffix. Native is 1536 — top rung.
+   Landscape 1.5:1, so the default centre crop holds the chamber and the walkway
+   at every viewport; verified by rendering rather than assumed. */
+.hero--tskaltubo {
+  background-image: url("/images/files/prometheus-cave-illuminated-chamber-imereti-georgia-768w.webp");
+  background-image: image-set(
+    url("/images/files/prometheus-cave-illuminated-chamber-imereti-georgia-768w.avif") type("image/avif"),
+    url("/images/files/prometheus-cave-illuminated-chamber-imereti-georgia-768w.webp") type("image/webp")
+  );
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+@media (min-width: 768px) {
+  .hero--tskaltubo {
+    background-image: image-set(
+      url("/images/files/prometheus-cave-illuminated-chamber-imereti-georgia-1200w.avif") type("image/avif"),
+      url("/images/files/prometheus-cave-illuminated-chamber-imereti-georgia-1200w.webp") type("image/webp")
+    );
+  }
+}
+@media (min-width: 1200px) {
+  .hero--tskaltubo {
+    background-image: image-set(
+      url("/images/files/prometheus-cave-illuminated-chamber-imereti-georgia-1448w.avif") type("image/avif"),
+      url("/images/files/prometheus-cave-illuminated-chamber-imereti-georgia-1448w.webp") type("image/webp")
+    );
+  }
+}
+@media (min-width: 1448px) {
+  .hero--tskaltubo {
+    background-image: image-set(
+      url("/images/files/prometheus-cave-illuminated-chamber-imereti-georgia-1536w.avif") type("image/avif"),
+      url("/images/files/prometheus-cave-illuminated-chamber-imereti-georgia-1536w.webp") type("image/webp")
+    );
+  }
+}
+/* Native is 1536 — that is the top rung. Do not add a 2000/2400 breakpoint. */
+
 /* Khvamli Mountain hero — replaces the generic georgia-home.jpg placeholder,
    from the supplied pre-encoded package.
 
