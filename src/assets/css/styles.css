@@ -1959,6 +1959,71 @@ section {
 }
 /* Native is 1672 — that is the top rung. Do not add a 2000/2400 breakpoint. */
 
+/* Guria region hero — replaces the generic georgia-home.jpg placeholder. The
+   Ureki shoreline is the only subject this page describes that a photograph
+   exists for. Landscape 4:3 (1448x1086), ladder 768/1200/1448, files referenced
+   in place under /images/files/ — nothing copied. Position chosen by rendering:
+   the sea sits left of centre and the beach recedes to the right, so a plain
+   centre crop keeps water, dark sand and the wooded shore all in frame. */
+.hero--guria {
+  background-image: url("/images/files/ureki-beach-shoreline-guria-georgia-768.webp");
+  background-image: image-set(
+    url("/images/files/ureki-beach-shoreline-guria-georgia-768.avif") type("image/avif"),
+    url("/images/files/ureki-beach-shoreline-guria-georgia-768.webp") type("image/webp")
+  );
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+@media (min-width: 768px) {
+  .hero--guria {
+    background-image: image-set(
+      url("/images/files/ureki-beach-shoreline-guria-georgia-1200.avif") type("image/avif"),
+      url("/images/files/ureki-beach-shoreline-guria-georgia-1200.webp") type("image/webp")
+    );
+  }
+}
+@media (min-width: 1200px) {
+  .hero--guria {
+    background-image: image-set(
+      url("/images/files/ureki-beach-shoreline-guria-georgia-1448.avif") type("image/avif"),
+      url("/images/files/ureki-beach-shoreline-guria-georgia-1448.webp") type("image/webp")
+    );
+  }
+}
+/* Native is 1448 — that is the top rung. Do not add a 1600/2400 breakpoint. */
+
+/* Things to Do in Guria hero — deliberately a DIFFERENT Ureki frame from
+   .hero--guria above and from the Ureki Beach site page hero, so the three
+   linked pages each open on their own image. Same ladder and native ceiling. */
+.hero--things-to-do-guria {
+  background-image: url("/images/files/ureki-beach-umbrellas-loungers-georgia-768.webp");
+  background-image: image-set(
+    url("/images/files/ureki-beach-umbrellas-loungers-georgia-768.avif") type("image/avif"),
+    url("/images/files/ureki-beach-umbrellas-loungers-georgia-768.webp") type("image/webp")
+  );
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+@media (min-width: 768px) {
+  .hero--things-to-do-guria {
+    background-image: image-set(
+      url("/images/files/ureki-beach-umbrellas-loungers-georgia-1200.avif") type("image/avif"),
+      url("/images/files/ureki-beach-umbrellas-loungers-georgia-1200.webp") type("image/webp")
+    );
+  }
+}
+@media (min-width: 1200px) {
+  .hero--things-to-do-guria {
+    background-image: image-set(
+      url("/images/files/ureki-beach-umbrellas-loungers-georgia-1448.avif") type("image/avif"),
+      url("/images/files/ureki-beach-umbrellas-loungers-georgia-1448.webp") type("image/webp")
+    );
+  }
+}
+/* Native is 1448 — that is the top rung. Do not add a 1600/2400 breakpoint. */
+
 /* Things to Do in Samegrelo hero — replaces the generic georgia-home.jpg
    placeholder. Deliberately the emerald-pool frame, INVERTING the Samegrelo
    region page (which opens on the turquoise rapids and carries the pool as its

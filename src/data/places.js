@@ -349,12 +349,175 @@ export const regions = [
   {
     slug: 'guria', name: 'Guria', published: true,
     seoKey: 'guria', contentKey: 'guria',
-    image: '/images/files/georgia-home.jpg',
+    // Hero = the Ureki shoreline, replacing the generic georgia-home.jpg
+    // placeholder. ⚠️ Ureki is the ONLY subject this page describes that any
+    // photograph exists for: the page's other topics — tea plantations, Gomi
+    // Mountain's sea of clouds, Ozurgeti, Lanchkhuti, the Choloki and Natanebi —
+    // have no photo anywhere in the library. Shekvetili's parks (Musicians',
+    // Georgia in Miniatures, Dendrological, Tsitsinatela) DO have photos and are
+    // in Guria, but neither Guria page mentions them even once, so they are not
+    // used here. All four Ureki frames already ship on the Ureki Beach site page;
+    // roles are set so neither Guria page opens on that page's hero.
+    image: '/images/files/ureki-beach-shoreline-guria-georgia-1448.webp',
+    imageAvif: '/images/files/ureki-beach-shoreline-guria-georgia-1448.avif',
+    heroClass: 'hero--guria',
+    // Landscape 4:3 hero, so og:image can safely fall back to `image` — no
+    // ogImage needed here (unlike Samegrelo's portrait hero). `alt` only: this is
+    // what prerender.js emits as the per-locale og:image:alt.
+    imageMeta: {
+      alt: {
+        en: 'The dark-sand shoreline at Ureki on the Black Sea coast of Guria, Georgia',
+        de: 'Der dunkle Sandstrand von Ureki an der Schwarzmeerküste Gurias, Georgien',
+        fr: 'Le rivage de sable sombre à Ureki, sur la côte de la mer Noire en Gourie, Géorgie',
+        es: 'La orilla de arena oscura de Ureki, en la costa del mar Negro de Guria, Georgia',
+        nl: 'De donkere zandkust bij Ureki aan de Zwarte Zee in Guria, Georgië',
+        cs: 'Tmavé písečné pobřeží v Ureki na černomořském pobřeží Gurie, Gruzie',
+        pl: 'Ciemny piaszczysty brzeg w Ureki na wybrzeżu Morza Czarnego w Gurii, Gruzja',
+      },
+    },
+    // Region ImageObjects come from this list; the `hero: true` entry becomes
+    // representativeOfPage. No noCredit here — these are the company's own
+    // photographs and take the default Hikasus Travel credit, matching the Ureki
+    // Beach page (contrast the licensed Martvili stock, which sets noCredit).
+    inlineImageObjects: [
+      {
+        base: 'ureki-beach-shoreline-guria-georgia',
+        width: 1448,
+        height: 1086,
+        anchor: 'hero-image',
+        dir: '/images/files',
+        hero: true,
+        description: 'The dark volcanic sand of the beach at Ureki running along the Black Sea, with parasols on the sand and a wooded shore behind, Guria, Georgia (the country).',
+        locationName: 'Ureki, Guria, Georgia',
+        locality: 'Ureki',
+        region: 'Guria',
+        name: {
+          en: 'The dark-sand beach at Ureki on the Black Sea coast of Guria, Georgia',
+          de: 'Der dunkle Sandstrand von Ureki an der Schwarzmeerküste Gurias, Georgien',
+          fr: 'La plage de sable sombre à Ureki, sur la côte de la mer Noire en Gourie, Géorgie',
+          es: 'La playa de arena oscura de Ureki, en la costa del mar Negro de Guria, Georgia',
+          nl: 'Het donkere zandstrand bij Ureki aan de Zwarte Zee in Guria, Georgië',
+          cs: 'Tmavá písečná pláž v Ureki na černomořském pobřeží Gurie, Gruzie',
+          pl: 'Ciemna piaszczysta plaża w Ureki na wybrzeżu Morza Czarnego w Gurii, Gruzja',
+        },
+        caption: {
+          en: 'Dark sand and open sea at Ureki, where Guria meets the Black Sea, with the wooded shore behind.',
+          de: 'Dunkler Sand und offenes Meer bei Ureki, wo Gurien auf das Schwarze Meer trifft, dahinter das bewaldete Ufer.',
+          fr: 'Sable sombre et mer ouverte à Ureki, là où la Gourie rejoint la mer Noire, le rivage boisé en arrière-plan.',
+          es: 'Arena oscura y mar abierto en Ureki, donde Guria se encuentra con el mar Negro, con la orilla arbolada detrás.',
+          nl: 'Donker zand en open zee bij Ureki, waar Guria de Zwarte Zee raakt, met de beboste kust erachter.',
+          cs: 'Tmavý písek a otevřené moře v Ureki, kde se Gurie setkává s Černým mořem, v pozadí zalesněné pobřeží.',
+          pl: 'Ciemny piasek i otwarte morze w Ureki, gdzie Guria styka się z Morzem Czarnym, w tle zalesiony brzeg.',
+        },
+      },
+      {
+        base: 'ureki-black-magnetic-sand-beach-guria-georgia',
+        width: 1448,
+        height: 1086,
+        anchor: 'inline-black-sand',
+        dir: '/images/files',
+        description: 'Loungers and parasols set out on the iron-rich black sand of the beach at Ureki, with the Black Sea beyond, Guria, Georgia (the country).',
+        locationName: 'Ureki, Guria, Georgia',
+        locality: 'Ureki',
+        region: 'Guria',
+        name: {
+          en: 'Loungers and parasols on the iron-rich black sand at Ureki, Guria, Georgia',
+          de: 'Liegen und Sonnenschirme auf dem eisenhaltigen schwarzen Sand von Ureki, Gurien, Georgien',
+          fr: 'Transats et parasols sur le sable noir riche en fer à Ureki, Gourie, Géorgie',
+          es: 'Tumbonas y sombrillas sobre la arena negra rica en hierro de Ureki, Guria, Georgia',
+          nl: 'Ligbedden en parasols op het ijzerrijke zwarte zand bij Ureki, Guria, Georgië',
+          cs: 'Lehátka a slunečníky na černém písku bohatém na železo v Ureki, Gurie, Gruzie',
+          pl: 'Leżaki i parasole na bogatym w żelazo czarnym piasku w Ureki, Guria, Gruzja',
+        },
+        caption: {
+          en: 'The iron-rich black sand Ureki is known for, with loungers and parasols set out along the shore.',
+          de: 'Der eisenhaltige schwarze Sand, für den Ureki bekannt ist, mit Liegen und Sonnenschirmen entlang des Ufers.',
+          fr: "Le sable noir riche en fer qui a fait la réputation d'Ureki, avec transats et parasols le long du rivage.",
+          es: 'La arena negra rica en hierro por la que se conoce Ureki, con tumbonas y sombrillas a lo largo de la orilla.',
+          nl: 'Het ijzerrijke zwarte zand waar Ureki om bekendstaat, met ligbedden en parasols langs de kustlijn.',
+          cs: 'Černý písek bohatý na železo, kterým je Ureki známé, s lehátky a slunečníky podél břehu.',
+          pl: 'Bogaty w żelazo czarny piasek, z którego słynie Ureki, z leżakami i parasolami wzdłuż brzegu.',
+        },
+      },
+    ],
     // Region-level "things to do" guide, served (like Adjara's) at
     // /georgia/guria/things-to-do-in-guria via the CitySubPage dispatcher.
     thingsToDo: {
       seoKey: 'thingsToDoGuria', contentKey: 'thingsToDoGuria',
-      image: '/images/files/georgia-home.jpg',
+      // Hero = the sunlit umbrellas-and-loungers frame. Same inventory limit as
+      // the region page above: of this guide's six activities — tea farms, Gomi
+      // Mountain, Ureki, the green hills, Gurian hospitality, combining coast and
+      // mountains — only Ureki has a photograph. The four Ureki frames are split
+      // so that this guide, the region page and the Ureki Beach site page each
+      // lead with a different one and no image appears on two of them.
+      image: '/images/files/ureki-beach-umbrellas-loungers-georgia-1448.webp',
+      imageAvif: '/images/files/ureki-beach-umbrellas-loungers-georgia-1448.avif',
+      heroClass: 'hero--things-to-do-guria',
+      heroPreload: '/images/files/ureki-beach-umbrellas-loungers-georgia-1200.avif',
+      // Landscape 4:3, so og:image falls back to `image` — no ogImage, matching
+      // every other region things-to-do guide.
+      imageMeta: {
+        width: 1448,
+        height: 1086,
+        imageId: 'hero-image',
+        name: 'Umbrellas and loungers on the beach at Ureki, Guria, Georgia',
+        description: 'Parasols and sun loungers spread across the dark sand of the beach at Ureki under a bright summer sky, with the Black Sea to the left, Guria, Georgia (the country).',
+        locationName: 'Ureki, Guria, Georgia',
+        locality: 'Ureki',
+        region: 'Guria',
+        country: 'GE',
+        alt: {
+          en: 'Umbrellas and loungers on the dark sand at Ureki on the Guria coast, Georgia',
+          de: 'Sonnenschirme und Liegen auf dem dunklen Sand von Ureki an der Küste Gurias, Georgien',
+          fr: 'Parasols et transats sur le sable sombre à Ureki, sur la côte de Gourie, Géorgie',
+          es: 'Sombrillas y tumbonas sobre la arena oscura de Ureki, en la costa de Guria, Georgia',
+          nl: 'Parasols en ligbedden op het donkere zand bij Ureki aan de kust van Guria, Georgië',
+          cs: 'Slunečníky a lehátka na tmavém písku v Ureki na pobřeží Gurie, Gruzie',
+          pl: 'Parasole i leżaki na ciemnym piasku w Ureki na wybrzeżu Gurii, Gruzja',
+        },
+        caption: {
+          en: "Umbrellas and loungers spread along the dark sand at Ureki, on Guria's Black Sea coast.",
+          de: 'Sonnenschirme und Liegen reihen sich über den dunklen Sand von Ureki an Gurias Schwarzmeerküste.',
+          fr: 'Parasols et transats se déploient sur le sable sombre à Ureki, sur la côte de la mer Noire en Gourie.',
+          es: 'Sombrillas y tumbonas se extienden por la arena oscura de Ureki, en la costa del mar Negro de Guria.',
+          nl: 'Parasols en ligbedden staan verspreid over het donkere zand bij Ureki, aan de Zwarte Zeekust van Guria.',
+          cs: 'Slunečníky a lehátka se rozprostírají po tmavém písku v Ureki na černomořském pobřeží Gurie.',
+          pl: 'Parasole i leżaki rozciągają się po ciemnym piasku w Ureki, na czarnomorskim wybrzeżu Gurii.',
+        },
+      },
+      // ONE body figure — placed under "Relax on the black sands of Ureki", the
+      // only section of this guide any photograph matches.
+      inlineImageObjects: [
+        {
+          base: 'ureki-beach-summer-black-sea-georgia',
+          width: 1448,
+          height: 1086,
+          anchor: 'inline-ureki-summer',
+          dir: '/images/files',
+          description: 'A summer afternoon on the dark sand of the beach at Ureki, parasols along the water and the wooded Gurian shore stretching away to the north, Guria, Georgia (the country).',
+          locationName: 'Ureki, Guria, Georgia',
+          locality: 'Ureki',
+          region: 'Guria',
+          name: {
+            en: 'Summer afternoon on the black-sand beach at Ureki, Guria, Georgia',
+            de: 'Sommernachmittag am schwarzen Sandstrand von Ureki, Gurien, Georgien',
+            fr: "Après-midi d'été sur la plage de sable noir à Ureki, Gourie, Géorgie",
+            es: 'Tarde de verano en la playa de arena negra de Ureki, Guria, Georgia',
+            nl: 'Zomermiddag op het zwarte zandstrand bij Ureki, Guria, Georgië',
+            cs: 'Letní odpoledne na pláži s černým pískem v Ureki, Gurie, Gruzie',
+            pl: 'Letnie popołudnie na plaży z czarnym piaskiem w Ureki, Guria, Gruzja',
+          },
+          caption: {
+            en: 'A summer afternoon on the black sand at Ureki, the Black Sea on one side and the green Gurian shore on the other.',
+            de: 'Ein Sommernachmittag am schwarzen Sand von Ureki, auf der einen Seite das Schwarze Meer, auf der anderen die grüne gurische Küste.',
+            fr: "Un après-midi d'été sur le sable noir d'Ureki, la mer Noire d'un côté et le rivage verdoyant de Gourie de l'autre.",
+            es: 'Una tarde de verano sobre la arena negra de Ureki, con el mar Negro a un lado y la verde costa de Guria al otro.',
+            nl: 'Een zomermiddag op het zwarte zand bij Ureki, aan de ene kant de Zwarte Zee en aan de andere de groene kust van Guria.',
+            cs: 'Letní odpoledne na černém písku v Ureki, na jedné straně Černé moře, na druhé zelené gurijské pobřeží.',
+            pl: 'Letnie popołudnie na czarnym piasku w Ureki, z jednej strony Morze Czarne, z drugiej zielone wybrzeże Gurii.',
+          },
+        },
+      ],
       address: { addressRegion: 'Guria' },
       attractions: [
         'Family Tea Farms', 'Gomi Mountain', 'Ureki', 'Ozurgeti', 'Lanchkhuti',
