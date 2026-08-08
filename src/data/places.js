@@ -5924,7 +5924,95 @@ export const cities = [
   },
   {
     slug: 'zugdidi', name: 'Zugdidi', region: 'samegrelo', published: true,
-    seoKey: 'zugdidi', contentKey: 'zugdidi', image: '/images/files/georgia-home.jpg',
+    seoKey: 'zugdidi', contentKey: 'zugdidi',
+    // ⚠️ THESE ARE NOT PHOTOGRAPHS OF ZUGDIDI — none exist. Nothing in the
+    // library shows the city, the Dadiani Palace, the Enguri Dam, Anaklia, the
+    // market or Mingrelian food; the only "Dadiani Palace Zugdidi" file anywhere
+    // is a SCALE MODEL in the Miniatures Park. What this page does carry is an
+    // explicit "Gateway to Svaneti" section — it is in the H1, names Svaneti 11
+    // times and Mestia 7 — so Svan imagery is used strictly in that role, and
+    // every alt/caption says Svaneti and frames it as the road's destination.
+    // Never presented as Zugdidi itself.
+    // Both frames already head other pages (Mestia city / Svan Towers) — only two
+    // Svan-tower photographs exist, so that overlap is unavoidable.
+    image: '/images/files/mestia-svan-tower-houses-svaneti-georgia-1541.webp',
+    imageAvif: '/images/files/mestia-svan-tower-houses-svaneti-georgia-1541.avif',
+    heroClass: 'hero--zugdidi',
+    heroPreload: '/images/files/mestia-svan-tower-houses-svaneti-georgia-1200.avif',
+    ogImage: { src: '/images/files/mestia-svan-tower-houses-svaneti-georgia-og.jpg', width: 1200, height: 630 },
+    imageMeta: {
+      width: 1541,
+      height: 1020,
+      imageId: 'hero-image',
+      name: 'Svan tower houses in Mestia, Upper Svaneti — the destination of the road north from Zugdidi, Georgia',
+      description: 'Svan stone tower houses in Mestia, seen past a dry-stone wall, with shingle-roofed dwellings at their base and a forested slope behind. Mestia is the administrative centre of Mestia Municipality in Samegrelo-Zemo Svaneti, reached from Zugdidi by the road north, Georgia (the country).',
+      // contentLocation is MESTIA, where the photograph was taken — reused
+      // verbatim from the Mestia city page rather than claiming Zugdidi. Both
+      // towns sit in the same administrative region, Samegrelo-Zemo Svaneti.
+      locationName: 'Mestia, Mestia Municipality, Samegrelo-Zemo Svaneti, Georgia',
+      locality: 'Mestia',
+      region: 'Samegrelo-Zemo Svaneti',
+      country: 'GE',
+      geo: { lat: 43.04556, lng: 42.72972 },
+      // No noCredit: matches how the Mestia city page and the Svan Towers page
+      // already treat these same photographs (default brand credit).
+      alt: {
+        en: 'Svan stone tower houses in Mestia, Upper Svaneti, reached by the road north from Zugdidi, Georgia',
+        de: 'Svanische Wohntürme in Mestia, Oberswanetien, erreichbar über die Straße von Zugdidi nach Norden, Georgien',
+        fr: 'Tours-maisons svanes à Mestia, en Haute-Svanétie, au bout de la route qui monte depuis Zougdidi, Géorgie',
+        es: 'Casas-torre svanas en Mestia, en la Alta Esvanetia, al final de la carretera que sube desde Zugdidi, Georgia',
+        nl: 'Svanetische woontorens in Mestia, Boven-Svanetië, aan het eind van de weg noordwaarts vanuit Zugdidi, Georgië',
+        cs: 'Svanské obytné věže v Mestii v Horní Svanetii, na konci silnice vedoucí na sever ze Zugdidi, Gruzie',
+        pl: 'Swańskie wieże mieszkalne w Mestii w Górnej Swanetii, na końcu drogi biegnącej na północ z Zugdidi, Gruzja',
+      },
+      caption: {
+        en: 'The Svan tower houses of Mestia — the destination of the mountain road that begins in Zugdidi.',
+        de: 'Die svanischen Wohntürme von Mestia – das Ziel der Bergstraße, die in Zugdidi beginnt.',
+        fr: 'Les tours-maisons svanes de Mestia — le terminus de la route de montagne qui part de Zougdidi.',
+        es: 'Las casas-torre svanas de Mestia: el destino de la carretera de montaña que arranca en Zugdidi.',
+        nl: 'De Svanetische woontorens van Mestia — het eindpunt van de bergweg die in Zugdidi begint.',
+        cs: 'Svanské obytné věže v Mestii — cíl horské silnice, která začíná v Zugdidi.',
+        pl: 'Swańskie wieże mieszkalne w Mestii — cel górskiej drogi, która zaczyna się w Zugdidi.',
+      },
+    },
+    // ⚠️ `portraitInlines`, not `imageObjects`: these files ship WITHOUT the
+    // `-<width>w` suffix, and CityPage renders this list itself per `afterChunk`
+    // (no figure is spliced into the body). It also resolves alt/caption per
+    // locale, so the figure stays LOCALIZED even though this page's body copy is
+    // English-only on all seven locales.
+    // afterChunk 5 = the "Gateway to Svaneti" section (chunks split at each <h2>).
+    portraitInlines: [
+      {
+        base: 'svan-towers-svaneti-georgia',
+        width: 1024,
+        height: 1536,
+        afterChunk: 5,
+        anchor: 'inline-svan-towers',
+        widths: [768, 1024],
+        dir: '/images/files',
+        description: 'Two medieval Svan defensive tower-houses of drystone with machicolated parapets, attached to slate-roofed dwellings in a village of Upper Svaneti, with a green mountain slope and a snow-capped Caucasus peak behind, Georgia (the country).',
+        locationName: 'Upper Svaneti, Mestia Municipality, Samegrelo-Zemo Svaneti, Georgia',
+        region: 'Samegrelo-Zemo Svaneti',
+        alt: {
+          en: 'Medieval Svan tower houses in a village of Upper Svaneti with a snow-capped Caucasus peak behind, Georgia',
+          de: 'Mittelalterliche svanische Wohntürme in einem Dorf Oberswanetiens, dahinter ein schneebedeckter Kaukasusgipfel, Georgien',
+          fr: 'Tours-maisons svanes médiévales dans un village de Haute-Svanétie, un sommet enneigé du Caucase en arrière-plan, Géorgie',
+          es: 'Casas-torre svanas medievales en una aldea de la Alta Esvanetia, con un pico nevado del Cáucaso al fondo, Georgia',
+          nl: 'Middeleeuwse Svanetische woontorens in een dorp in Boven-Svanetië, met een besneeuwde Kaukasustop erachter, Georgië',
+          cs: 'Středověké svanské obytné věže ve vesnici v Horní Svanetii, za nimi zasněžený vrchol Kavkazu, Gruzie',
+          pl: 'Średniowieczne swańskie wieże mieszkalne we wsi w Górnej Swanetii, z ośnieżonym szczytem Kaukazu w tle, Gruzja',
+        },
+        caption: {
+          en: 'Svan tower houses in Upper Svaneti, the region the road north from Zugdidi opens up.',
+          de: 'Svanische Wohntürme in Oberswanetien – der Region, die die Straße von Zugdidi nach Norden erschließt.',
+          fr: 'Tours-maisons svanes en Haute-Svanétie, la région que dessert la route partant de Zougdidi vers le nord.',
+          es: 'Casas-torre svanas en la Alta Esvanetia, la región a la que da acceso la carretera que sale de Zugdidi hacia el norte.',
+          nl: 'Svanetische woontorens in Boven-Svanetië, de streek die de weg noordwaarts vanuit Zugdidi ontsluit.',
+          cs: 'Svanské obytné věže v Horní Svanetii — kraji, který otevírá silnice vedoucí na sever ze Zugdidi.',
+          pl: 'Swańskie wieże mieszkalne w Górnej Swanetii — regionie, który otwiera droga biegnąca na północ z Zugdidi.',
+        },
+      },
+    ],
     thingsToDo: {
       seoKey: 'thingsToDoZugdidi', contentKey: 'thingsToDoZugdidi', image: '/images/files/georgia-home.jpg',
       address: { addressLocality: 'Zugdidi' },
