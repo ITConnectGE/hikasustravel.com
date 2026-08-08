@@ -1,6 +1,7 @@
-import { readFileSync, writeFileSync } from 'fs'
+import { readFileSync, writeFileSync, existsSync } from 'fs'
 import { fileURLToPath, pathToFileURL } from 'url'
 import { dirname, join } from 'path'
+import { createHash } from 'crypto'
 
 const __dirname = dirname(fileURLToPath(import.meta.url))
 
@@ -17,6 +18,23 @@ const { publishedDestinationPages } = await import(
 // Published border-crossing pages (overview guide + individual crossings).
 const { publishedBorderPages } = await import(
   pathToFileURL(join(__dirname, '../src/data/borders.js')).href
+)
+
+// Registry arrays + path helpers, used only to attach each URL to the data that
+// actually renders it, so <lastmod> can track real content changes (see below).
+const {
+  regions, cities, sites, regionPath, cityPath, sitePath, thingsToDoPath,
+} = await import(pathToFileURL(join(__dirname, '../src/data/places.js')).href)
+
+// Full tour objects for the same purpose. The path list below still comes from
+// the regex scan, so the set of emitted URLs is unaffected by this import.
+const { tours: tourObjects } = await import(
+  pathToFileURL(join(__dirname, '../src/data/tours.js')).href
+)
+
+// Blog posts keep their copy in blogData, not in pages.json.
+const { blogArticles } = await import(
+  pathToFileURL(join(__dirname, '../src/data/blogData.js')).href
 )
 
 // Generated "<Entity> Tours" listing pages (destination/attraction -> tours).
@@ -96,6 +114,123 @@ for (const bp of publishedBorderPages()) {
   allPaths.push({ path: bp.path, changefreq: 'monthly', priority: '0.7' })
 }
 
+/* ---------------------------------------------------------------------------
+ * <lastmod> without per-deploy churn
+ *
+ * lastmod used to be `new Date()`, so every deploy restamped all ~2,700 URLs
+ * with the build date whether or not anything had changed. Crawlers discount a
+ * lastmod that moves on every fetch, so the signal was worth nothing.
+ *
+ * Instead we hash the data that actually renders each URL (its body copy, its
+ * SEO entry and its registry object) and keep the date in a tracked manifest.
+ * A rebuild with no content change reuses the stored date, so the sitemap is
+ * byte-identical; only pages whose own content moved get today's date.
+ * ------------------------------------------------------------------------- */
+
+const sha1 = (s) => createHash('sha1').update(s).digest('hex').slice(0, 16)
+
+// Key order must not depend on object construction order, or an unrelated
+// refactor would look like a content change.
+const stableStringify = (value) => {
+  if (value === null || typeof value !== 'object') return JSON.stringify(value) ?? 'null'
+  if (Array.isArray(value)) return `[${value.map(stableStringify).join(',')}]`
+  return `{${Object.keys(value).sort()
+    .map((k) => `${JSON.stringify(k)}:${stableStringify(value[k])}`)
+    .join(',')}}`
+}
+
+// Per-locale body copy and SEO metadata. generate-en-fallback and
+// generate-seo-locales both run before this script, so these are current.
+const localeContent = {}
+const localeSeo = {}
+const localeContentHash = {}
+for (const lang of languages) {
+  localeContent[lang] = JSON.parse(
+    readFileSync(join(__dirname, `../src/i18n/locales/${lang}/pages.json`), 'utf-8'))
+  localeSeo[lang] = JSON.parse(
+    readFileSync(join(__dirname, `../src/data/seo/${lang}.json`), 'utf-8'))
+  localeContentHash[lang] = sha1(stableStringify(localeContent[lang]))
+}
+const enFallback = JSON.parse(
+  readFileSync(join(__dirname, '../src/i18n/locales/en-fallback.json'), 'utf-8'))
+
+// path -> the registry object that renders it. Paths in allPaths carry no
+// leading slash; the path helpers return one.
+const strip = (p) => p.replace(/^\//, '')
+const registryData = new Map()
+for (const r of regions) registryData.set(strip(regionPath(r.slug)), r)
+for (const c of cities) {
+  registryData.set(strip(cityPath(c.slug)), c)
+  registryData.set(strip(thingsToDoPath(c.slug)), c)
+}
+for (const s of sites) registryData.set(strip(sitePath(s)), s)
+
+const tourBySlug = new Map(tourObjects.map((t) => [t.slug, t]))
+const entityPageByPath = new Map(entityTourPages.map((ep) => [ep.path, ep]))
+const blogBySlug = new Map(blogArticles.map((a) => [a.slug, a]))
+
+// `private-tours/<slug>` / `group-tours/<slug>` -> the tour slug, else null.
+const tourSlugOf = (path) => path.match(/^(?:private-tours|group-tours)\/(.+)$/)?.[1] ?? null
+const blogSlugOf = (path) => path.match(/^blog\/(.+)$/)?.[1] ?? null
+const seoKeyByPath = new Map()
+for (const d of publishedDestinationPages()) seoKeyByPath.set(d.path, d.seoKey)
+for (const bp of publishedBorderPages()) seoKeyByPath.set(bp.path, bp.seoKey)
+
+// Static pages are keyed inconsistently across pages.json / seo (`terms`,
+// `shuttle`, `tbilisiMetro`...), so try the plausible spellings and use EN as
+// the canonical keyspace so every locale agrees on the key.
+const camel = (s) => s.replace(/[/-]([a-z0-9])/g, (_, c) => c.toUpperCase()).replace(/[/-]/g, '')
+const resolveStaticKey = (path) => {
+  if (!path) return 'home'
+  const last = path.split('/').pop()
+  for (const cand of [camel(path), camel(last), path, last]) {
+    if (localeContent.en[cand] !== undefined || localeSeo.en[cand] !== undefined) return cand
+  }
+  return null
+}
+
+const unresolved = new Set()
+const contentKeyByPath = new Map()
+for (const { path } of allPaths) {
+  const key = seoKeyByPath.get(path) ?? resolveStaticKey(path)
+  contentKeyByPath.set(path, key)
+  const hasOwnData = registryData.has(path)
+    || entityPageByPath.has(path)
+    || tourBySlug.has(tourSlugOf(path))
+    || blogBySlug.has(blogSlugOf(path))
+  if (key === null && !hasOwnData) unresolved.add(path)
+}
+
+// The signature for one URL: everything that decides what the page renders.
+const signatureFor = (lang, path, changefreq, priority) => {
+  const key = contentKeyByPath.get(path) ?? null
+  const entityPage = entityPageByPath.get(path) ?? null
+
+  const payload = {
+    path,
+    changefreq,
+    priority,
+    key,
+    content: key ? (localeContent[lang]?.[key] ?? enFallback?.[key] ?? null) : null,
+    seo: key ? (localeSeo[lang]?.[key] ?? null) : null,
+    registry: registryData.get(path) ?? null,
+    tour: tourBySlug.get(tourSlugOf(path)) ?? null,
+    blog: blogBySlug.get(blogSlugOf(path)) ?? null,
+    entity: entityPage,
+    // A tours listing page renders the tours it links to.
+    entityTours: entityPage
+      ? entityPage.tourSlugs.map((s) => tourBySlug.get(s) ?? s)
+      : null,
+  }
+
+  // Pages we cannot key precisely (a handful of static routes rendered from
+  // components) fall back to the whole-locale copy hash: conservative, so they
+  // may restamp when unrelated copy changes, but they never go stale.
+  if (unresolved.has(path)) payload.localeFallback = localeContentHash[lang]
+
+  return sha1(stableStringify(payload))
+}
+
 // Generate URL entries with hreflang alternates
 const urlEntries = []
 
@@ -116,8 +251,56 @@ for (const lang of languages) {
     const xDefaultUrl = withTrailingSlash(path ? `${SITE_URL}/en/${path}` : `${SITE_URL}/en`)
     hreflangs.push(`      <xhtml:link rel="alternate" hreflang="x-default" href="${xDefaultUrl}" />`)
 
-    urlEntries.push({ loc, lastmod: today, changefreq, priority, hreflangs })
+    urlEntries.push({
+      loc,
+      sig: signatureFor(lang, path, changefreq, priority),
+      changefreq,
+      priority,
+      hreflangs,
+    })
   }
+}
+
+/* Reconcile against the stored manifest: same signature keeps its date. */
+const manifestPath = join(__dirname, '../src/data/sitemap-lastmod.json')
+let stored = {}
+if (existsSync(manifestPath)) {
+  try {
+    stored = JSON.parse(readFileSync(manifestPath, 'utf-8')).urls ?? {}
+  } catch {
+    console.warn('sitemap-lastmod.json unreadable — rebuilding it from scratch')
+  }
+}
+
+const nextUrls = {}
+let reused = 0
+let restamped = 0
+let added = 0
+for (const u of urlEntries) {
+  const prev = stored[u.loc]
+  if (prev && prev.sig === u.sig) {
+    u.lastmod = prev.lastmod
+    reused++
+  } else {
+    u.lastmod = today
+    if (prev) restamped++
+    else added++
+  }
+  nextUrls[u.loc] = { sig: u.sig, lastmod: u.lastmod }
+}
+const removed = Object.keys(stored).filter((loc) => !(loc in nextUrls))
+
+// Sorted keys so the file is stable regardless of iteration order.
+const sortedUrls = {}
+for (const loc of Object.keys(nextUrls).sort()) sortedUrls[loc] = nextUrls[loc]
+const manifestJson = `${JSON.stringify({ version: 1, urls: sortedUrls }, null, 2)}\n`
+
+// Compare ignoring line endings (core.autocrlf rewrites the checked-out file),
+// and only write when something really moved, so rebuilds leave it untouched.
+const previousJson = existsSync(manifestPath) ? readFileSync(manifestPath, 'utf-8') : null
+const manifestChanged = (previousJson ?? '').replace(/\r/g, '') !== manifestJson
+if (manifestChanged) {
+  writeFileSync(manifestPath, manifestJson, 'utf-8')
 }
 
 const xml = `<?xml version="1.0" encoding="UTF-8"?>
@@ -136,3 +319,12 @@ ${u.hreflangs.join('\n')}
 const outPath = join(__dirname, '../public/sitemap.xml')
 writeFileSync(outPath, xml, 'utf-8')
 console.log(`Sitemap generated: ${urlEntries.length} URLs written to public/sitemap.xml`)
+console.log(
+  `  lastmod: ${reused} unchanged, ${restamped} restamped, ${added} new` +
+  (removed.length ? `, ${removed.length} pruned` : ''))
+if (unresolved.size) {
+  console.log(`  ${unresolved.size} route(s) use the locale-wide fallback: ${[...unresolved].join(', ')}`)
+}
+if (manifestChanged) {
+  console.log('  src/data/sitemap-lastmod.json updated — COMMIT IT, or the dates restamp on the next deploy.')
+}
