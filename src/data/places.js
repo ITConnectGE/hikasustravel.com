@@ -7983,7 +7983,121 @@ export const sites = [
     slug: 'dmanisi-sioni-cathedral', name: 'Dmanisi Sioni Cathedral',
     parentType: 'city', parent: 'dmanisi', published: true,
     seoKey: 'dmanisiSioniCathedral', contentKey: 'dmanisiSioniCathedral',
-    image: '/images/files/georgia-home.jpg',
+    // Hero: the church seen across the ruins of the medieval town (owner's photo),
+    // via the `.hero--dmanisi-sioni` image-set() ladder. REPLACES the site-wide
+    // georgia-home.jpg placeholder, which this page shipped as hero AND og:image.
+    // ⚠️ georgia-home.jpg itself must stay — it is the fallback `image` for ~200
+    // other registry entries plus several page components, so only this page's
+    // reference moved. This page previously had NO imageMeta, no ladder, no AVIF
+    // and ZERO ImageObject nodes in its graph.
+    //
+    // ⚠️ FIRST Dmanisi photographs in the project, and the first files in the new
+    // /images/dmanisi/ folder. The sibling Dmanisi Museum Reserve page and the
+    // Dmanisi city page still carry the placeholder — these two frames are the
+    // CHURCH specifically, so they stay on this page and are not borrowed sideways.
+    //
+    // Both landscape 4:3, native 1448x1086 → ladder 768/1200/1448 only; no
+    // 1600/2400, no upscale, files copied byte-identical from the package.
+    image: '/images/dmanisi/dmanisi-sioni-cathedral-georgia-1448.webp',
+    imageAvif: '/images/dmanisi/dmanisi-sioni-cathedral-georgia-1448.avif',
+    heroClass: 'hero--dmanisi-sioni',
+    // LCP hero preload: the 1200 AVIF rung with fetchpriority=high (none before).
+    // Dedicated 1.91:1 social image; the matching -og.webp ships alongside but is
+    // unreferenced — useSEO/prerender emit a single og:image.
+    heroPreload: '/images/dmanisi/dmanisi-sioni-cathedral-georgia-1200.avif',
+    ogImage: { src: '/images/dmanisi/dmanisi-sioni-cathedral-georgia-og.jpg', width: 1200, height: 630 },
+    // Hero image SEO/AEO metadata (owner's own photos → brand credit, applied by
+    // SitePage's default credit path — no `noCredit`; see the credit note below).
+    // The hero is a CSS background (no <img alt>), so the localized alt lives here
+    // and feeds og:image:alt / twitter:image:alt per locale, while `caption` feeds
+    // the hero ImageObject. Both maps verbatim from dmanisi-sioni-SEO-package.md.
+    //
+    // ⚠️ DATING IS DISPUTED across sources (6th vs 9th–10th c.), so every string
+    // says only "early medieval" and commits to a date solely for the 13th-century
+    // portico, which is well established. The body copy makes the same call. Do not
+    // "sharpen" these to a century.
+    // ⚠️ The ~1.8-million-year-old hominin fossils belong to the wider Dmanisi
+    // archaeological site, NOT to the church. No image string may imply otherwise.
+    imageMeta: {
+      width: 1448, height: 1086, imageId: 'hero-image',
+      name: 'Dmanisi Sioni church, Dmanisi historic site, Kvemo Kartli, Georgia',
+      description: 'The Dmanisi Sioni church — an early medieval three-nave basilica with a red-tiled roof — standing among the excavated stone ruins of the medieval town of Dmanisi, on a promontory above the confluence of the Mashavera and Pinezauri rivers, with the mountains of Kvemo Kartli beyond, Georgia (the country).',
+      locationName: 'Dmanisi Sioni, Dmanisi, Kvemo Kartli, Georgia',
+      locality: 'Dmanisi', region: 'Kvemo Kartli', country: 'GE',
+      alt: {
+        en: 'The Dmanisi Sioni church with its red-tiled roof standing among medieval town ruins on a promontory, with mountains beyond, Kvemo Kartli, Georgia',
+        de: 'Die Dmanisi-Sioni-Kirche mit ihrem rot gedeckten Dach zwischen den Ruinen der mittelalterlichen Stadt auf einem Bergsporn, dahinter Berge, Niederkartlien, Georgien',
+        fr: "L'église de Dmanisi Sioni au toit de tuiles rouges parmi les ruines de la ville médiévale, sur un promontoire, avec des montagnes au loin, Basse-Kartlie, Géorgie",
+        es: 'La iglesia de Dmanisi Sioni con su tejado de tejas rojas entre las ruinas de la ciudad medieval, sobre un promontorio, con montañas al fondo, Kvemo Kartli, Georgia',
+        nl: 'De kerk van Dmanisi Sioni met haar rode dakpannen tussen de ruïnes van de middeleeuwse stad op een landtong, met bergen daarachter, Kvemo Kartli, Georgië',
+        cs: 'Kostel Dmanisi Sioni s červenou střechou mezi ruinami středověkého města na ostrohu, v pozadí hory, Kvemo Kartli, Gruzie',
+        pl: 'Kościół Dmanisi Sioni z czerwonym dachem wśród ruin średniowiecznego miasta na cyplu, z górami w tle, Kwemo Kartli, Gruzja',
+      },
+      caption: {
+        en: 'Dmanisi Sioni — an early medieval basilica standing amid the ruins of the medieval town of Dmanisi in Kvemo Kartli, on a promontory above the Mashavera and Pinezauri rivers.',
+        de: 'Dmanisi Sioni – eine frühmittelalterliche Basilika inmitten der Ruinen der mittelalterlichen Stadt Dmanisi in Niederkartlien, auf einem Bergsporn über den Flüssen Maschawera und Pinesauri.',
+        fr: 'Dmanisi Sioni — une basilique du haut Moyen Âge au milieu des ruines de la ville médiévale de Dmanisi, en Basse-Kartlie, sur un promontoire dominant les rivières Machavera et Pinezaouri.',
+        es: 'Dmanisi Sioni: una basílica altomedieval entre las ruinas de la ciudad medieval de Dmanisi, en Kvemo Kartli, sobre un promontorio dominando los ríos Mashavera y Pinezauri.',
+        nl: 'Dmanisi Sioni — een vroegmiddeleeuwse basiliek tussen de ruïnes van de middeleeuwse stad Dmanisi in Kvemo Kartli, op een landtong boven de rivieren Mashavera en Pinezauri.',
+        cs: 'Dmanisi Sioni — raně středověká bazilika mezi ruinami středověkého města Dmanisi v Kvemo Kartli, na ostrohu nad řekami Mašavera a Pinezauri.',
+        pl: 'Dmanisi Sioni — wczesnośredniowieczna bazylika wśród ruin średniowiecznego miasta Dmanisi w Kwemo Kartli, na cyplu nad rzekami Maszawera i Pinezauri.',
+      },
+    },
+    // ONE contextual inline body photo — the carved portico — rendered as a real
+    // <figure class="body-img"> block spliced into each locale's body HTML (this
+    // page had no inline images before). This array supplies its @graph node via
+    // SitePage's inlineImageObjects map: stable @id, contentUrl at the top rung
+    // (these files ship WITHOUT the `w` suffix), localized name (=alt) + caption,
+    // brand credit, and NEVER representativeOfPage — that stays the hero's.
+    // `dir` points it at /images/dmanisi/ instead of the default /images/files/.
+    //
+    // Splice point: after LINE INDEX 13 in all 7 locales (the body is 28 lines and
+    // every locale shares the shape, H2s at 4/7/12/16/20). Line 13 is the first
+    // paragraph of the "Architecture" H2 and closes on the carved ornament — "the
+    // main concentration of carved ornament being the later (12th–13th-century)
+    // portal" — which is exactly what this frame shows.
+    // ⚠️ The body calls the feature the "portal"; the package captions call it the
+    // "portico"/"narthex". Both name the same 13th-century carved addition and the
+    // captions are approved package copy, so they ship verbatim.
+    //
+    // ⚠️ CREDIT — the package flagged `credit: "brand-CONFIRM"` (EXIF stripped).
+    // Ownership is confirmed at PROJECT level by the same test used for the Dadiani
+    // Palace hero: brand credit applies unless the frame came from outside the
+    // owner's own library (the two `noCredit` sets, Martvili Canyon and Khvamli,
+    // turned out to be licensed stock). Both Dmanisi frames are owner-supplied
+    // originals at the package's exact native size, with no third-party provenance
+    // recorded anywhere. If that is ever disproved, add `noCredit: true` to this
+    // entry and to imageMeta above rather than editing the fields away.
+    inlineImageObjects: [
+      {
+        base: 'dmanisi-sioni-portico-georgia',
+        width: 1448,
+        height: 1086,
+        anchor: 'inline-portico',
+        dir: '/images/dmanisi',
+        description: 'The richly carved stone portico of the Dmanisi Sioni church — a narthex added in the early 13th century — with a deep pointed arch, an ornamented cross above it and carved side arcades, Dmanisi, Kvemo Kartli, Georgia (the country).',
+        locationName: 'Dmanisi Sioni, Dmanisi, Kvemo Kartli, Georgia',
+        locality: 'Dmanisi', region: 'Kvemo Kartli',
+        name: {
+          en: 'The richly carved stone portico of the Dmanisi Sioni church, with a pointed arch and an ornamented cross, Kvemo Kartli, Georgia',
+          de: 'Der reich verzierte steinerne Portikus der Dmanisi-Sioni-Kirche, mit Spitzbogen und ornamentiertem Kreuz, Niederkartlien, Georgien',
+          fr: "Le portique de pierre richement sculpté de l'église de Dmanisi Sioni, avec un arc brisé et une croix ornementée, Basse-Kartlie, Géorgie",
+          es: 'El pórtico de piedra ricamente tallado de la iglesia de Dmanisi Sioni, con un arco apuntado y una cruz ornamentada, Kvemo Kartli, Georgia',
+          nl: 'Het rijk gebeeldhouwde stenen portiek van de kerk van Dmanisi Sioni, met een spitsboog en een versierd kruis, Kvemo Kartli, Georgië',
+          cs: 'Bohatě zdobený kamenný portikus kostela Dmanisi Sioni, s lomeným obloukem a ornamentovaným křížem, Kvemo Kartli, Gruzie',
+          pl: 'Bogato rzeźbiony kamienny portyk kościoła Dmanisi Sioni, z ostrołukowym łukiem i zdobionym krzyżem, Kwemo Kartli, Gruzja',
+        },
+        caption: {
+          en: "The Dmanisi Sioni church's carved portico — a richly ornamented narthex added in the early 13th century to the front of the early medieval basilica.",
+          de: 'Der geschnitzte Portikus der Dmanisi-Sioni-Kirche – ein reich verzierter Narthex, der im frühen 13. Jahrhundert an die frühmittelalterliche Basilika angefügt wurde.',
+          fr: "Le portique sculpté de l'église de Dmanisi Sioni — un narthex richement orné ajouté au début du XIIIe siècle à la basilique du haut Moyen Âge.",
+          es: 'El pórtico tallado de la iglesia de Dmanisi Sioni: un nártex ricamente ornamentado añadido a principios del siglo XIII a la basílica altomedieval.',
+          nl: 'Het gebeeldhouwde portiek van de kerk van Dmanisi Sioni — een rijk versierde narthex die in het begin van de 13e eeuw aan de vroegmiddeleeuwse basiliek werd toegevoegd.',
+          cs: 'Vyřezávaný portikus kostela Dmanisi Sioni — bohatě zdobený narthex připojený počátkem 13. století k raně středověké bazilice.',
+          pl: 'Rzeźbiony portyk kościoła Dmanisi Sioni — bogato zdobiony narteks dodany na początku XIII wieku do wczesnośredniowiecznej bazyliki.',
+        },
+      },
+    ],
   },
   {
     slug: 'rustavi-central-park', name: 'Rustavi Central Park',

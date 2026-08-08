@@ -3361,6 +3361,50 @@ section {
   }
 }
 /* No rung above 1448 exists (Dadiani Palace). Do not add a 1600/2400 breakpoint. */
+/* Dmanisi Sioni hero — per-page CSS background, REPLACING the generic
+   georgia-home.jpg placeholder this page shipped with. ⚠️ georgia-home.jpg is NOT
+   deleted: it is the site-wide fallback for ~200 other registry entries, so only
+   this page's reference moved. Landscape 4:3, native 1448x1086 → ladder exactly
+   768/1200/1448, top breakpoint at min-width:1200. NO 1600/2400 rung, no upscale.
+   Served from the new /images/dmanisi/ folder.
+   ⚠️ `background-position: 70% center` — NOT the usual `center center`. This is an
+   OFF-CENTRE composition: the church sits in the right third of the frame (x
+   ≈ 0.52–0.85) above ruins that fill the left and bottom. The cover crop was
+   rendered at 360/390/430/768/1440/1920 before choosing: at `center` the phone
+   crop (which keeps only the central 42% of the width) SLICES THE CHURCH'S EAST
+   END OFF, leaving a hero of grass and rubble. At 70% the whole church — porch,
+   nave and apse — stays framed down to 360px. The X offset is inert at >=1024px,
+   where the crop is vertical only, so desktop is unaffected. Do not "tidy" this
+   back to center.
+   No extra scrim — the shared .coverme::after overlay carries the text. The plain
+   url() line = image-set() fallback for browsers without image-set(). */
+.hero--dmanisi-sioni {
+  background-image: url("/images/dmanisi/dmanisi-sioni-cathedral-georgia-1200.webp");
+  background-image: image-set(
+    url("/images/dmanisi/dmanisi-sioni-cathedral-georgia-768.avif") type("image/avif"),
+    url("/images/dmanisi/dmanisi-sioni-cathedral-georgia-768.webp") type("image/webp")
+  );
+  background-position: 70% center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+@media (min-width: 768px) {
+  .hero--dmanisi-sioni {
+    background-image: image-set(
+      url("/images/dmanisi/dmanisi-sioni-cathedral-georgia-1200.avif") type("image/avif"),
+      url("/images/dmanisi/dmanisi-sioni-cathedral-georgia-1200.webp") type("image/webp")
+    );
+  }
+}
+@media (min-width: 1200px) {
+  .hero--dmanisi-sioni {
+    background-image: image-set(
+      url("/images/dmanisi/dmanisi-sioni-cathedral-georgia-1448.avif") type("image/avif"),
+      url("/images/dmanisi/dmanisi-sioni-cathedral-georgia-1448.webp") type("image/webp")
+    );
+  }
+}
+/* No rung above 1448 exists (Dmanisi Sioni). Do not add a 1600/2400 breakpoint. */
 .centerme {
   text-align: center !important;
 }
