@@ -7510,7 +7510,142 @@ export const sites = [
     slug: 'khvamli-mountain', name: 'Khvamli Mountain',
     parentType: 'region', parent: 'racha-lechkhumi', published: true,
     seoKey: 'khvamliMountain', contentKey: 'khvamliMountain',
-    image: '/images/files/georgia-home.jpg',
+    // Supplied pre-encoded package (khvamli-mountain-images), copied as-is into
+    // /images/racha-lechkhumi/. ⚠️ ALL FOUR ARE PORTRAIT 1086x1448, so the ladder
+    // caps at 768 + 1086 — a 1200/1448 rung would upscale. Do not add one.
+    image: '/images/racha-lechkhumi/khvamli-mountain-georgia-1086.webp',
+    imageAvif: '/images/racha-lechkhumi/khvamli-mountain-georgia-1086.avif',
+    heroClass: 'hero--khvamli-mountain',
+    // The hero renders as a CSS background (HeroSection), so the package's
+    // `object-position: center 55%` is applied as `background-position` in the
+    // scoped class, and its loading=eager/fetchpriority=high is carried by the
+    // preload link SitePage emits from heroPreload.
+    heroPreload: '/images/racha-lechkhumi/khvamli-mountain-georgia-1086.avif',
+    // Portrait-derived 1.91:1 band supplied with the package.
+    ogImage: { src: '/images/racha-lechkhumi/khvamli-mountain-georgia-og.jpg', width: 1086, height: 570 },
+    imageMeta: {
+      width: 1086,
+      height: 1448,
+      imageId: 'hero-image',
+      name: 'The limestone crag of Khvamli Mountain above a wildflower meadow, with the Caucasus beyond, Racha-Lechkhumi, Georgia',
+      description: 'A limestone crag on the grassy summit plateau of Khvamli Mountain, a 2,002-metre massif in the Lechkhumi highlands, with wildflowers in the foreground and the Greater Caucasus range along the horizon, Racha-Lechkhumi and Kvemo Svaneti, Georgia (the country).',
+      locationName: 'Khvamli Mountain',
+      region: 'Racha-Lechkhumi and Kvemo Svaneti',
+      country: 'GE',
+      // ⚠️ CREDIT OMITTED ON ALL FOUR NODES. The package states EXIF was stripped
+      // and marks every entry `"credit":"brand-CONFIRM"` — i.e. ownership is NOT
+      // confirmed. Schema.org treats absent credit as unknown, which is honest;
+      // asserting authorship we cannot evidence is not. Flip this only once the
+      // owner confirms the photographs are ours.
+      noCredit: true,
+      alt: {
+        en: 'The limestone crag of Khvamli Mountain rising above a wildflower meadow, with the Caucasus range beyond, Racha-Lechkhumi, Georgia',
+        de: 'Der Kalksteinfels des Berges Khvamli erhebt sich über einer Blumenwiese, dahinter die Kette des Kaukasus, Ratscha-Letschchumi, Georgien',
+        fr: "Le piton calcaire du mont Khvamli s'élevant au-dessus d'une prairie fleurie, avec la chaîne du Caucase au loin, Ratcha-Letchkhoumi, Géorgie",
+        es: 'El peñasco calizo del monte Khvamli alzándose sobre un prado de flores silvestres, con la cordillera del Cáucaso al fondo, Racha-Lechjumi, Georgia',
+        nl: 'De kalkstenen rots van de berg Khvamli die oprijst boven een bloemenweide, met de Kaukasus daarachter, Racha-Letsjchoemi, Georgië',
+        cs: 'Vápencový útes hory Khvamli se tyčí nad květnatou loukou, v pozadí pohoří Kavkaz, Rača-Lečchumi, Gruzie',
+        pl: 'Wapienna skała góry Chwamli wznosząca się nad łąką pełną kwiatów, z pasmem Kaukazu w tle, Racza-Leczchumi, Gruzja',
+      },
+      caption: {
+        en: 'Khvamli Mountain in Lechkhumi — a 2,002-metre limestone massif whose grassy heights look out over the Greater Caucasus, a place tied in legend to Prometheus and to a hidden Georgian royal treasury.',
+        de: 'Der Berg Khvamli in Letschchumi – ein 2.002 Meter hohes Kalksteinmassiv, dessen grasbewachsene Höhen über den Großen Kaukasus blicken, in der Sage mit Prometheus und einem verborgenen georgischen Königsschatz verbunden.',
+        fr: 'Le mont Khvamli en Letchkhoumi — un massif calcaire de 2 002 mètres dont les hauteurs herbeuses dominent le Grand Caucase, lié dans la légende à Prométhée et à un trésor royal géorgien caché.',
+        es: 'El monte Khvamli en Lechjumi: un macizo calizo de 2.002 metros cuyas alturas cubiertas de hierba dominan el Gran Cáucaso, ligado en la leyenda a Prometeo y a un tesoro real georgiano oculto.',
+        nl: 'De berg Khvamli in Letsjchoemi — een 2.002 meter hoog kalksteenmassief waarvan de begroeide hoogten uitkijken over de Grote Kaukasus, in de legende verbonden met Prometheus en een verborgen Georgische koningsschat.',
+        cs: 'Hora Khvamli v Lečchumi — 2 002 metrů vysoký vápencový masiv, jehož travnaté výšiny shlížejí na Velký Kavkaz, v pověsti spjatý s Prométheem a ukrytým gruzínským královským pokladem.',
+        pl: 'Góra Chwamli w Leczchumi — wapienny masyw o wysokości 2002 metrów, którego trawiaste szczyty spoglądają na Wielki Kaukaz, w legendzie związany z Prometeuszem i ukrytym gruzińskim skarbem królewskim.',
+      },
+    },
+    inlineImageObjects: [
+      {
+        base: 'khvamli-mountain-rocky-slopes-georgia',
+        width: 1086,
+        height: 1448,
+        anchor: 'inline-ridge',
+        dir: '/images/racha-lechkhumi',
+        description: 'Rocky limestone outcrops and evergreen forest along the ridge of Khvamli Mountain under a clear sky, Racha-Lechkhumi and Kvemo Svaneti, Georgia (the country).',
+        locationName: 'Khvamli Mountain',
+        region: 'Racha-Lechkhumi and Kvemo Svaneti',
+        noCredit: true,
+        name: {
+          en: 'Rocky limestone outcrops and evergreen forest along the ridge of Khvamli Mountain, Racha-Lechkhumi, Georgia',
+          de: 'Felsige Kalksteinvorsprünge und immergrüner Wald entlang des Kamms des Berges Khvamli, Ratscha-Letschchumi, Georgien',
+          fr: 'Des affleurements calcaires rocheux et une forêt de conifères le long de la crête du mont Khvamli, Ratcha-Letchkhoumi, Géorgie',
+          es: 'Afloramientos calizos rocosos y bosque perenne a lo largo de la cresta del monte Khvamli, Racha-Lechjumi, Georgia',
+          nl: 'Rotsige kalksteenformaties en groenblijvend bos langs de bergkam van de Khvamli, Racha-Letsjchoemi, Georgië',
+          cs: 'Skalnaté vápencové výchozy a stálezelený les podél hřebene hory Khvamli, Rača-Lečchumi, Gruzie',
+          pl: 'Skaliste wapienne wychodnie i zimozielony las wzdłuż grani góry Chwamli, Racza-Leczchumi, Gruzja',
+        },
+        caption: {
+          en: "The rugged limestone ridge of Khvamli, its Cretaceous rock forming the massif's distinctive double cuesta.",
+          de: 'Der zerklüftete Kalksteinkamm des Khvamli, dessen kreidezeitliches Gestein die markante doppelte Cuesta des Massivs bildet.',
+          fr: 'La crête calcaire accidentée du Khvamli, dont la roche crétacée forme la double cuesta caractéristique du massif.',
+          es: 'La escarpada cresta caliza del Khvamli, cuya roca cretácica forma la característica doble cuesta del macizo.',
+          nl: 'De ruige kalksteenkam van de Khvamli, waarvan het krijtgesteente de kenmerkende dubbele cuesta van het massief vormt.',
+          cs: 'Rozeklaný vápencový hřeben Khvamli, jehož křídové horniny tvoří charakteristickou dvojitou cuestu masivu.',
+          pl: 'Poszarpana wapienna grań Chwamli, której kredowe skały tworzą charakterystyczną podwójną kuestę masywu.',
+        },
+      },
+      {
+        base: 'khvamli-mountain-limestone-crags-georgia',
+        width: 1086,
+        height: 1448,
+        anchor: 'inline-crags',
+        dir: '/images/racha-lechkhumi',
+        description: 'Weathered karst limestone crags and firs on the slopes of Khvamli Mountain under a clear blue sky, Racha-Lechkhumi and Kvemo Svaneti, Georgia (the country).',
+        locationName: 'Khvamli Mountain',
+        region: 'Racha-Lechkhumi and Kvemo Svaneti',
+        noCredit: true,
+        name: {
+          en: 'Weathered limestone crags and conifers on the slopes of Khvamli Mountain under a clear blue sky, Racha-Lechkhumi, Georgia',
+          de: 'Verwitterte Kalksteinfelsen und Nadelbäume an den Hängen des Berges Khvamli unter klarem blauem Himmel, Ratscha-Letschchumi, Georgien',
+          fr: 'Des rochers calcaires érodés et des conifères sur les pentes du mont Khvamli sous un ciel bleu limpide, Ratcha-Letchkhoumi, Géorgie',
+          es: 'Peñascos calizos erosionados y coníferas en las laderas del monte Khvamli bajo un cielo azul despejado, Racha-Lechjumi, Georgia',
+          nl: 'Verweerde kalkstenen rotsen en naaldbomen op de hellingen van de berg Khvamli onder een heldere blauwe hemel, Racha-Letsjchoemi, Georgië',
+          cs: 'Zvětralé vápencové skály a jehličnany na svazích hory Khvamli pod jasně modrou oblohou, Rača-Lečchumi, Gruzie',
+          pl: 'Zwietrzałe wapienne skały i drzewa iglaste na zboczach góry Chwamli pod bezchmurnym błękitnym niebem, Racza-Leczchumi, Gruzja',
+        },
+        caption: {
+          en: 'Karst limestone crags and firs on the slopes of Khvamli, a massif honeycombed with caves and sinkholes.',
+          de: 'Karstige Kalksteinfelsen und Tannen an den Hängen des Khvamli, eines von Höhlen und Dolinen durchzogenen Massivs.',
+          fr: 'Rochers calcaires karstiques et sapins sur les pentes du Khvamli, un massif criblé de grottes et de dolines.',
+          es: 'Peñascos calizos kársticos y abetos en las laderas del Khvamli, un macizo horadado por cuevas y dolinas.',
+          nl: 'Karstige kalksteenrotsen en sparren op de hellingen van de Khvamli, een massief doorboord met grotten en zinkgaten.',
+          cs: 'Krasové vápencové skály a jedle na svazích Khvamli, masivu provrtaného jeskyněmi a závrty.',
+          pl: 'Krasowe wapienne skały i jodły na zboczach Chwamli, masywu podziurawionego jaskiniami i lejami krasowymi.',
+        },
+      },
+      {
+        base: 'khvamli-mountain-caucasus-view-georgia',
+        width: 1086,
+        height: 1448,
+        anchor: 'inline-view',
+        dir: '/images/racha-lechkhumi',
+        description: 'A view from Khvamli Mountain over the forested valleys of Lechkhumi toward the snow-streaked Greater Caucasus, with a limestone outcrop in the foreground, Racha-Lechkhumi and Kvemo Svaneti, Georgia (the country).',
+        locationName: 'Khvamli Mountain',
+        region: 'Racha-Lechkhumi and Kvemo Svaneti',
+        noCredit: true,
+        name: {
+          en: 'A view from Khvamli Mountain over forested valleys to the Caucasus range, with a limestone outcrop in the foreground, Georgia',
+          de: 'Ein Blick vom Berg Khvamli über bewaldete Täler zur Kaukasuskette, mit einem Kalksteinvorsprung im Vordergrund, Georgien',
+          fr: "Une vue depuis le mont Khvamli sur des vallées boisées jusqu'à la chaîne du Caucase, avec un éperon calcaire au premier plan, Géorgie",
+          es: 'Una vista desde el monte Khvamli sobre valles boscosos hasta la cordillera del Cáucaso, con un saliente calizo en primer plano, Georgia',
+          nl: 'Een uitzicht vanaf de berg Khvamli over beboste valleien naar de Kaukasus, met een kalksteenrichel op de voorgrond, Georgië',
+          cs: 'Pohled z hory Khvamli přes zalesněná údolí na pohoří Kavkaz, s vápencovým výběžkem v popředí, Gruzie',
+          pl: 'Widok z góry Chwamli ponad zalesionymi dolinami na pasmo Kaukazu, z wapiennym występem na pierwszym planie, Gruzja',
+        },
+        caption: {
+          en: 'The view from Khvamli across the valleys of Lechkhumi toward the snow-streaked Greater Caucasus.',
+          de: 'Der Blick vom Khvamli über die Täler von Letschchumi zum schneegestreiften Großen Kaukasus.',
+          fr: 'La vue depuis le Khvamli sur les vallées du Letchkhoumi vers le Grand Caucase strié de neige.',
+          es: 'La vista desde el Khvamli sobre los valles de Lechjumi hacia el Gran Cáucaso veteado de nieve.',
+          nl: 'Het uitzicht vanaf de Khvamli over de valleien van Letsjchoemi naar de met sneeuw doorregen Grote Kaukasus.',
+          cs: 'Pohled z Khvamli přes údolí Lečchumi k zasněženému Velkému Kavkazu.',
+          pl: 'Widok z Chwamli ponad dolinami Leczchumi ku pokrytemu śniegiem Wielkiemu Kaukazowi.',
+        },
+      },
+    ],
   },
   {
     slug: 'ghvirishi-waterfall', name: 'Ghvirishi Waterfall',

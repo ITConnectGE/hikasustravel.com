@@ -1959,6 +1959,36 @@ section {
 }
 /* Native is 1672 — that is the top rung. Do not add a 2000/2400 breakpoint. */
 
+/* Khvamli Mountain hero — replaces the generic georgia-home.jpg placeholder,
+   from the supplied pre-encoded package.
+
+   ⚠️ PORTRAIT SOURCE (1086x1448, exact 3:4) in a wide hero. The package asks for
+   `object-position: center 55%`; this hero is a CSS background (HeroSection), so
+   the equivalent is `background-position: center 55%` — which is what keeps the
+   crag and the Caucasus band in frame rather than the empty sky above them.
+   Ladder is 768/1086 ONLY: 1086 is native, so a 1200 or 1448 rung would upscale.
+   The vertical value is live on desktop and inert on narrow phones, where the
+   box aspect falls below 0.75 and the whole frame is shown. */
+.hero--khvamli-mountain {
+  background-image: url("/images/racha-lechkhumi/khvamli-mountain-georgia-768.webp");
+  background-image: image-set(
+    url("/images/racha-lechkhumi/khvamli-mountain-georgia-768.avif") type("image/avif"),
+    url("/images/racha-lechkhumi/khvamli-mountain-georgia-768.webp") type("image/webp")
+  );
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center 55%;
+}
+@media (min-width: 768px) {
+  .hero--khvamli-mountain {
+    background-image: image-set(
+      url("/images/racha-lechkhumi/khvamli-mountain-georgia-1086.avif") type("image/avif"),
+      url("/images/racha-lechkhumi/khvamli-mountain-georgia-1086.webp") type("image/webp")
+    );
+  }
+}
+/* Native is 1086 — that is the top rung. Do not add a 1200/1448 breakpoint. */
+
 /* Guria region hero — replaces the generic georgia-home.jpg placeholder. The
    Ureki shoreline is the only subject this page describes that a photograph
    exists for. Landscape 4:3 (1448x1086), ladder 768/1200/1448, files referenced
