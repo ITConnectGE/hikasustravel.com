@@ -1959,6 +1959,36 @@ section {
 }
 /* Native is 1672 — that is the top rung. Do not add a 2000/2400 breakpoint. */
 
+/* Things to Do in Samegrelo hero — replaces the generic georgia-home.jpg
+   placeholder. Deliberately the emerald-pool frame, INVERTING the Samegrelo
+   region page (which opens on the turquoise rapids and carries the pool as its
+   body figure), so the guide and its parent region page do not lead with the
+   same photograph. Files referenced in place under /images/martvili/.
+
+   ⚠️ PORTRAIT SOURCE (1086x1448, exact 3:4) in a wide hero. Same frame and same
+   finding as .hero--things-to-do-martvili: the pool sits in the bottom fifth, so
+   only `bottom` keeps water, walls and cleft in a wide crop. Re-rendered here
+   rather than assumed. Inert below a 0.75 box aspect (phones show the frame). */
+.hero--things-to-do-samegrelo {
+  background-image: url("/images/martvili/martvili-canyon-georgia-768.webp");
+  background-image: image-set(
+    url("/images/martvili/martvili-canyon-georgia-768.avif") type("image/avif"),
+    url("/images/martvili/martvili-canyon-georgia-768.webp") type("image/webp")
+  );
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center bottom;
+}
+@media (min-width: 768px) {
+  .hero--things-to-do-samegrelo {
+    background-image: image-set(
+      url("/images/martvili/martvili-canyon-georgia-1086.avif") type("image/avif"),
+      url("/images/martvili/martvili-canyon-georgia-1086.webp") type("image/webp")
+    );
+  }
+}
+/* Native is 1086 — that is the top rung. Do not add a 1200/1448 breakpoint. */
+
 /* Things to Do in Martvili hero — replaces the generic georgia-home.jpg
    placeholder. Deliberately the emerald-pool frame, NOT the turquoise rapids that
    head the Martvili city page this guide is linked from, so the two pages do not

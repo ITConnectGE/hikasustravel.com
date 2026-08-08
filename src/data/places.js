@@ -1850,7 +1850,91 @@ export const regions = [
     // /georgia/samegrelo/things-to-do-in-samegrelo via the CitySubPage dispatcher.
     thingsToDo: {
       seoKey: 'thingsToDoSamegrelo', contentKey: 'thingsToDoSamegrelo',
-      image: '/images/files/georgia-home.jpg',
+      // Hero = the emerald-pool frame, replacing the generic georgia-home.jpg
+      // placeholder. ⚠️ Martvili Canyon still supplies the ONLY two Samegrelo
+      // photographs in the project; this is their fifth page. Roles are INVERTED
+      // against the Samegrelo REGION page (rapids hero / pool inline), which is
+      // this guide's direct parent and the page a reader arrives from, so the two
+      // do not open on the same frame. Nine of this guide's sections — Balda,
+      // Tobavarchkhili, Zugdidi/Dadiani, the Mestia drive, countryside, cuisine,
+      // local life — have no photograph anywhere in the library and stay bare.
+      // ⚠️ PORTRAIT SOURCE (1086x1448) — native ceiling 1086, ladder 768/1086.
+      image: '/images/martvili/martvili-canyon-georgia-1086.webp',
+      imageAvif: '/images/martvili/martvili-canyon-georgia-1086.avif',
+      heroClass: 'hero--things-to-do-samegrelo',
+      heroPreload: '/images/martvili/martvili-canyon-georgia-1086.avif',
+      // ⚠️ The other region things-to-do guides declare no ogImage because their
+      // heroes are all landscape, so og:image can safely fall back to `image`.
+      // This one is 3:4, which makes a badly cropped social card. The 1086x570
+      // crop already exists in the repo — nothing generated — and the region
+      // thingsToDo branch of publishedDestinationPages() already forwards it.
+      ogImage: { src: '/images/martvili/martvili-canyon-georgia-og.jpg', width: 1086, height: 570 },
+      imageMeta: {
+        width: 1086,
+        height: 1448,
+        imageId: 'hero-image',
+        name: "Martvili Canyon's enclosed gorge on the Abasha River, Samegrelo, Georgia",
+        description: 'Vertical pale-limestone walls dropping to still emerald water in the narrow gorge cut by the Abasha River at Martvili Canyon, Samegrelo-Zemo Svaneti, Georgia (the country).',
+        // The canyon sits a few km outside Martvili town, so no addressLocality.
+        locationName: 'Martvili Canyon, Samegrelo-Zemo Svaneti, Georgia',
+        region: 'Samegrelo-Zemo Svaneti',
+        country: 'GE',
+        // ⚠️ Licensed stock — the licence requires no attribution. No
+        // creditText/creator here (owner-resolved 2026-08-02; do not revisit).
+        noCredit: true,
+        alt: {
+          en: "Martvili Canyon's enclosed gorge on the Abasha River, Samegrelo, Georgia",
+          de: 'Die enge Schlucht des Abascha im Martvili-Canyon, Samegrelo, Georgien',
+          fr: "La gorge encaissée de l'Abasha dans le canyon de Martvili, Samegrelo, Géorgie",
+          es: 'La garganta encajonada del río Abasha en el cañón de Martvili, Samegrelo, Georgia',
+          nl: 'De ingesloten kloof van de Abasha in Martvili Canyon, Samegrelo, Georgië',
+          cs: 'Sevřená soutěska řeky Abasha v kaňonu Martvili, Samegrelo, Gruzie',
+          pl: 'Zamknięty wąwóz rzeki Abasha w kanionie Martvili, Samegrelo, Gruzja',
+        },
+        caption: {
+          en: 'Vertical limestone walls close in around the Abasha River at Martvili Canyon, the best-known natural attraction in Samegrelo.',
+          de: 'Senkrechte Kalksteinwände schließen den Abascha im Martvili-Canyon ein, der bekanntesten Naturattraktion Samegrelos.',
+          fr: "Des parois calcaires verticales enserrent l'Abasha dans le canyon de Martvili, l'attraction naturelle la plus connue du Samegrelo.",
+          es: 'Paredes calizas verticales encierran el río Abasha en el cañón de Martvili, el atractivo natural más conocido de Samegrelo.',
+          nl: 'Verticale kalkstenen wanden sluiten de Abasha in bij Martvili Canyon, de bekendste natuurattractie van Samegrelo.',
+          cs: 'Svislé vápencové stěny sevřou řeku Abasha v kaňonu Martvili, nejznámější přírodní atrakci Samegrela.',
+          pl: 'Pionowe wapienne ściany zamykają rzekę Abasha w kanionie Martvili, najbardziej znanej atrakcji przyrodniczej Samegrelo.',
+        },
+      },
+      // ONE body figure — see the inventory note above. Placed under "Explore
+      // Martvili Canyon", the paragraph that names the turquoise water, the pale
+      // limestone and the dense vegetation this frame shows.
+      inlineImageObjects: [
+        {
+          base: 'martvili-canyon-turquoise-river-georgia',
+          width: 1086,
+          height: 1448,
+          anchor: 'inline-abasha-river',
+          dir: '/images/martvili',
+          description: 'Small rapids breaking over pale limestone where the Abasha River narrows between mossy, ivy-covered walls at Martvili Canyon, Samegrelo-Zemo Svaneti, Georgia (the country).',
+          locationName: 'Abasha River, Martvili Canyon, Samegrelo-Zemo Svaneti, Georgia',
+          region: 'Samegrelo-Zemo Svaneti',
+          noCredit: true,
+          name: {
+            en: 'Turquoise water below the limestone walls of Martvili Canyon, Samegrelo, Georgia',
+            de: 'Türkisfarbenes Wasser unterhalb der Kalksteinwände des Martvili-Canyons, Samegrelo, Georgien',
+            fr: 'Eau turquoise au pied des parois calcaires du canyon de Martvili, Samegrelo, Géorgie',
+            es: 'Agua turquesa bajo las paredes calizas del cañón de Martvili, Samegrelo, Georgia',
+            nl: 'Turkooizen water onder de kalkstenen wanden van Martvili Canyon, Samegrelo, Georgië',
+            cs: 'Tyrkysová voda pod vápencovými stěnami kaňonu Martvili, Samegrelo, Gruzie',
+            pl: 'Turkusowa woda pod wapiennymi ścianami kanionu Martvili, Samegrelo, Gruzja',
+          },
+          caption: {
+            en: 'Small rapids break over pale limestone where the gorge narrows, with dense vegetation crowding the rim.',
+            de: 'Kleine Stromschnellen brechen über hellen Kalkstein, wo sich die Schlucht verengt, dichte Vegetation drängt sich am Rand.',
+            fr: 'De petits rapides déferlent sur le calcaire clair là où la gorge se resserre, une végétation dense pressée sur les bords.',
+            es: 'Pequeños rápidos rompen sobre la caliza clara donde la garganta se estrecha, con vegetación densa apiñada en el borde.',
+            nl: 'Kleine stroomversnellingen breken over lichte kalksteen waar de kloof vernauwt, met dichte begroeiing tot aan de rand.',
+            cs: 'Malé peřeje se lámou přes světlý vápenec tam, kde se soutěska zužuje, hustá vegetace lemuje okraj.',
+            pl: 'Niewielkie bystrza łamią się na jasnym wapieniu tam, gdzie wąwóz się zwęża, a gęsta roślinność tłoczy się na krawędzi.',
+          },
+        },
+      ],
       address: { addressRegion: 'Samegrelo' },
       attractions: [
         'Martvili Canyon', 'Balda Canyon', 'Tobavarchkhili Lakes', 'Dadiani Palace', 'Zugdidi',
