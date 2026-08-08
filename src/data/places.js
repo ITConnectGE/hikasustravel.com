@@ -11501,7 +11501,77 @@ export const sites = [
     slug: 'dadiani-palace-museum', name: 'The Dadiani Palace Museum',
     parentType: 'city', parent: 'zugdidi', formerParent: 'samegrelo', published: true,
     seoKey: 'dadianiPalaceMuseum', contentKey: 'dadianiPalaceMuseum',
-    image: '/images/files/georgia-home.jpg',
+    // Hero: the palace's own neo-Gothic façade across the garden (owner's photo),
+    // via the `.hero--dadiani-palace` image-set() ladder. REPLACES the site-wide
+    // georgia-home.jpg placeholder, which this page shipped as hero AND og:image
+    // and which is NOT this building. ⚠️ georgia-home.jpg itself must stay — it is
+    // the fallback `image` for ~200 other registry entries plus several page
+    // components, so only this page's reference moved.
+    //
+    // ⚠️ FIRST photograph of Zugdidi in the project, and the first file in the new
+    // /images/zugdidi/ folder. The Zugdidi CITY page still has none (see its entry:
+    // its hero was deliberately removed in 45d2592a) — this frame is the Dadiani
+    // Palace specifically, so it stays on the palace's own page and is NOT
+    // borrowed upward to the city page.
+    //
+    // Landscape 4:3, native 1448x1086 (below the usual 1600 rung) → ladder
+    // 768/1200/1448 only; no 1600/2400, no upscale, files copied byte-identical
+    // from the package.
+    image: '/images/zugdidi/dadiani-palace-zugdidi-georgia-1448.webp',
+    imageAvif: '/images/zugdidi/dadiani-palace-zugdidi-georgia-1448.avif',
+    heroClass: 'hero--dadiani-palace',
+    // LCP hero preload: the 1200 AVIF rung with fetchpriority=high (this entry had
+    // none before). Dedicated 1.91:1 social image; the matching -og.webp ships
+    // alongside but is unreferenced — useSEO/prerender emit a single og:image.
+    heroPreload: '/images/zugdidi/dadiani-palace-zugdidi-georgia-1200.avif',
+    ogImage: { src: '/images/zugdidi/dadiani-palace-zugdidi-georgia-og.jpg', width: 1200, height: 630 },
+    // Hero image SEO/AEO metadata (owner's own photo → brand credit, applied by
+    // SitePage's default credit path — no `noCredit`). The hero is a CSS background
+    // (no <img alt>), so the localized alt lives here and feeds og:image:alt /
+    // twitter:image:alt per locale, while the `caption` map feeds the hero
+    // ImageObject caption. Both maps verbatim from
+    // dadiani-palace-zugdidi-SEO-package.md. width/height = the 1448 rung.
+    // `imageId: 'hero-image'` gives the node a stable page-scoped @id.
+    //
+    // ⚠️ CREDIT — the package flagged `credit: "brand-CONFIRM"` (EXIF stripped),
+    // the same wording the Batumi Dolphinarium package used before that hero
+    // shipped with brand credit. Ownership is confirmed at PROJECT level here: the
+    // source frame is the owner's own
+    // `Pictures for the website (Final)/Heros only/Dadiani Palace Zugdidi/`, the
+    // library that also supplies the Alaverdi, Bagrati, Gelati, Gergeti, Narikala,
+    // Rabati, Truso, Khertvisi and Paravani heroes — none of which sets noCredit.
+    // Contrast the Martvili Canyon / Khvamli sets, which were NOT in that library
+    // and turned out to be licensed stock. If that provenance is ever disproved,
+    // add `noCredit: true` here rather than editing the fields away.
+    //
+    // ⚠️ The death-mask count is disputed across sources (three vs four), so the
+    // captions say "one of Napoleon Bonaparte's death masks" with no number. Do not
+    // "correct" this to a count.
+    imageMeta: {
+      width: 1448, height: 1086, imageId: 'hero-image',
+      name: 'Dadiani Palace, Zugdidi',
+      description: "The neo-Gothic façade of the Dadiani Palace in Zugdidi, its pointed-arch windows, crenellations and ornamental turrets seen across the landscaped garden of the palace complex. Former residence of the Dadiani princes who ruled Samegrelo, and since 1840 one of Georgia's oldest museums, in Samegrelo-Zemo Svaneti, Georgia (the country).",
+      locationName: 'Dadiani Palaces Museum, Zugdidi, Samegrelo-Zemo Svaneti, Georgia',
+      locality: 'Zugdidi', region: 'Samegrelo-Zemo Svaneti', country: 'GE',
+      alt: {
+        en: 'The neo-Gothic façade of the Dadiani Palace in Zugdidi, with pointed-arch windows and ornamental turrets above a landscaped garden, Samegrelo, Georgia',
+        de: 'Die neugotische Fassade des Dadiani-Palastes in Zugdidi, mit spitzbogigen Fenstern und Ziertürmchen über einem gepflegten Garten, Samegrelo, Georgien',
+        fr: "La façade néogothique du palais Dadiani à Zougdidi, avec ses fenêtres en arc brisé et ses tourelles ornementales au-dessus d'un jardin paysager, Samegrelo, Géorgie",
+        es: 'La fachada neogótica del palacio Dadiani en Zugdidi, con ventanas de arco apuntado y torretas ornamentales sobre un jardín ajardinado, Samegrelo, Georgia',
+        nl: 'De neogotische gevel van het Dadiani-paleis in Zugdidi, met spitsboogramen en sierlijke torentjes boven een aangelegde tuin, Samegrelo, Georgië',
+        cs: 'Novogotické průčelí paláce Dadiani v Zugdidi, s okny s lomenými oblouky a ozdobnými věžičkami nad upravenou zahradou, Samegrelo, Gruzie',
+        pl: 'Neogotycka fasada pałacu Dadiani w Zugdidi, z oknami o ostrych łukach i ozdobnymi wieżyczkami nad urządzonym ogrodem, Samegrelo, Gruzja',
+      },
+      caption: {
+        en: "The Dadiani Palace in Zugdidi — the neo-Gothic residence of the Dadiani princes who ruled Samegrelo, now a museum founded in 1840 whose collection includes one of Napoleon Bonaparte's death masks.",
+        de: 'Der Dadiani-Palast in Zugdidi – die neugotische Residenz der Dadiani-Fürsten, die Samegrelo regierten, heute ein 1840 gegründetes Museum, dessen Sammlung eine der Totenmasken Napoleon Bonapartes enthält.',
+        fr: "Le palais Dadiani à Zougdidi — la résidence néogothique des princes Dadiani qui régnaient sur la Samegrelo, aujourd'hui un musée fondé en 1840 dont la collection comprend l'un des masques mortuaires de Napoléon Bonaparte.",
+        es: 'El palacio Dadiani en Zugdidi: la residencia neogótica de los príncipes Dadiani que gobernaron Samegrelo, hoy un museo fundado en 1840 cuya colección incluye una de las mascarillas mortuorias de Napoleón Bonaparte.',
+        nl: 'Het Dadiani-paleis in Zugdidi — de neogotische residentie van de Dadiani-vorsten die Samegrelo bestuurden, nu een in 1840 gesticht museum met in de collectie een van de dodenmaskers van Napoleon Bonaparte.',
+        cs: 'Palác Dadiani v Zugdidi — novogotické sídlo knížat Dadiani, kteří vládli Samegrelu, dnes muzeum založené roku 1840, jehož sbírka zahrnuje jednu z posmrtných masek Napoleona Bonaparta.',
+        pl: 'Pałac Dadiani w Zugdidi — neogotycka rezydencja książąt Dadiani, którzy władali Samegrelo, dziś muzeum założone w 1840 roku, którego kolekcja obejmuje jedną z masek pośmiertnych Napoleona Bonapartego.',
+      },
+    },
   },
   {
     slug: 'enguri-dam', name: 'The Enguri Dam',

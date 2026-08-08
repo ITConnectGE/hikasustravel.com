@@ -3319,6 +3319,48 @@ section {
   }
 }
 /* No rung above 1448 exists (Things to Do in Batumi). Do not add a 1600/2400 breakpoint. */
+/* Dadiani Palace (Zugdidi) hero — per-page CSS background, REPLACING the generic
+   georgia-home.jpg placeholder this page shipped with (it had no ladder, no AVIF
+   and no dedicated social image). ⚠️ georgia-home.jpg is NOT deleted: it is the
+   site-wide fallback for ~200 other registry entries and several page components,
+   so only this page's reference moved. Landscape 4:3, native 1448x1086 — just
+   under the usual 1600 rung — so the ladder is exactly 768/1200/1448 with the top
+   breakpoint at min-width:1200. NO 1600/2400 rung, nothing upscaled. Served from
+   the new /images/zugdidi/ folder (Zugdidi had none before). `background-position:
+   center center`: the façade sits mid-frame with open sky above (the H1 zone) and
+   lawn below, and the cover crop was rendered at 360/390/430/768/1440/1920 before
+   choosing it — the palace stays fully framed at every one, and the narrow phone
+   crop lands on the central entrance bay and its two turrets. No extra scrim — the
+   shared .coverme::after overlay (rgba(0,0,0,0.35)) supplies the readable text
+   layer. The plain url() line = image-set() fallback for browsers without
+   image-set(). */
+.hero--dadiani-palace {
+  background-image: url("/images/zugdidi/dadiani-palace-zugdidi-georgia-1200.webp");
+  background-image: image-set(
+    url("/images/zugdidi/dadiani-palace-zugdidi-georgia-768.avif") type("image/avif"),
+    url("/images/zugdidi/dadiani-palace-zugdidi-georgia-768.webp") type("image/webp")
+  );
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+@media (min-width: 768px) {
+  .hero--dadiani-palace {
+    background-image: image-set(
+      url("/images/zugdidi/dadiani-palace-zugdidi-georgia-1200.avif") type("image/avif"),
+      url("/images/zugdidi/dadiani-palace-zugdidi-georgia-1200.webp") type("image/webp")
+    );
+  }
+}
+@media (min-width: 1200px) {
+  .hero--dadiani-palace {
+    background-image: image-set(
+      url("/images/zugdidi/dadiani-palace-zugdidi-georgia-1448.avif") type("image/avif"),
+      url("/images/zugdidi/dadiani-palace-zugdidi-georgia-1448.webp") type("image/webp")
+    );
+  }
+}
+/* No rung above 1448 exists (Dadiani Palace). Do not add a 1600/2400 breakpoint. */
 .centerme {
   text-align: center !important;
 }
