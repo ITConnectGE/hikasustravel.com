@@ -1747,7 +1747,105 @@ export const regions = [
   {
     slug: 'samegrelo', name: 'Samegrelo', published: true,
     seoKey: 'samegrelo', contentKey: 'samegrelo',
-    image: '/images/files/georgia-home.jpg',
+    // Hero = the turquoise-rapids frame, replacing the generic georgia-home.jpg
+    // placeholder. ⚠️ Martvili Canyon supplies the ONLY two Samegrelo photographs
+    // that exist in the project, and both already ship on the canyon attraction
+    // page, the Martvili city page and the Martvili things-to-do guide. Reuse is
+    // unavoidable and owner-approved; the page's own H1 names Martvili Canyon.
+    // Roles are set against the guide (which opens on the emerald pool) so the two
+    // pages do not lead with the same frame.
+    // ⚠️ PORTRAIT SOURCE (1086x1448) — native ceiling 1086, ladder 768/1086 only.
+    image: '/images/martvili/martvili-canyon-turquoise-river-georgia-1086.webp',
+    imageAvif: '/images/martvili/martvili-canyon-turquoise-river-georgia-1086.avif',
+    heroClass: 'hero--samegrelo',
+    // ⚠️ DELIBERATE DEVIATION from the other regions, which declare no `ogImage`:
+    // every existing region hero is landscape, so letting og:image fall back to
+    // `image` is fine for them. This hero is 3:4, and an un-cropped portrait makes
+    // a badly cropped social card. The 1086x570 crop already exists in the repo —
+    // nothing was generated. ⚠️ Declaring it here is NOT enough: the region branch
+    // of publishedDestinationPages() dropped the image-SEO extras, so this field
+    // was inert until that branch was fixed to match the other four.
+    ogImage: { src: '/images/martvili/martvili-canyon-turquoise-river-georgia-og.jpg', width: 1086, height: 570 },
+    // Only `alt` is set here: regions carry no other imageMeta, and this is what
+    // prerender.js emits as the per-locale og:image:alt / twitter:image:alt.
+    imageMeta: {
+      alt: {
+        en: 'Turquoise water of the Abasha River in Martvili Canyon, Samegrelo, Georgia',
+        de: 'Türkisfarbenes Wasser des Abascha in der Martvili-Schlucht, Samegrelo, Georgien',
+        fr: "Eau turquoise de l'Abasha dans le canyon de Martvili, Samegrelo, Géorgie",
+        es: 'Agua turquesa del río Abasha en el cañón de Martvili, Samegrelo, Georgia',
+        nl: 'Turkooizen water van de Abasha in Martvili Canyon, Samegrelo, Georgië',
+        cs: 'Tyrkysová voda řeky Abasha v kaňonu Martvili, Samegrelo, Gruzie',
+        pl: 'Turkusowa woda rzeki Abasha w kanionie Martvili, Samegrelo, Gruzja',
+      },
+    },
+    // Region ImageObjects come from this list; the entry flagged `hero: true`
+    // becomes representativeOfPage. name/caption are localized per locale.
+    // ⚠️ No creditText/creator on either node — licensed stock whose licence
+    // requires no attribution (owner-resolved 2026-08-02; do not revisit).
+    inlineImageObjects: [
+      {
+        base: 'martvili-canyon-turquoise-river-georgia',
+        width: 1086,
+        height: 1448,
+        anchor: 'hero-image',
+        dir: '/images/martvili',
+        hero: true,
+        description: 'Turquoise water of the Abasha River running over pale limestone between mossy, ivy-covered walls at Martvili Canyon, Samegrelo-Zemo Svaneti, Georgia (the country).',
+        // The canyon is a few km outside Martvili town, so no addressLocality is
+        // claimed — same call the canyon attraction page makes.
+        locationName: 'Martvili Canyon',
+        region: 'Samegrelo-Zemo Svaneti',
+        noCredit: true,
+        name: {
+          en: 'Turquoise water of the Abasha River in Martvili Canyon, Samegrelo, Georgia',
+          de: 'Türkisfarbenes Wasser des Abascha in der Martvili-Schlucht, Samegrelo, Georgien',
+          fr: "Eau turquoise de l'Abasha dans le canyon de Martvili, Samegrelo, Géorgie",
+          es: 'Agua turquesa del río Abasha en el cañón de Martvili, Samegrelo, Georgia',
+          nl: 'Turkooizen water van de Abasha in Martvili Canyon, Samegrelo, Georgië',
+          cs: 'Tyrkysová voda řeky Abasha v kaňonu Martvili, Samegrelo, Gruzie',
+          pl: 'Turkusowa woda rzeki Abasha w kanionie Martvili, Samegrelo, Gruzja',
+        },
+        caption: {
+          en: 'The Abasha River runs turquoise over pale limestone at Martvili Canyon, the most visited natural site in Samegrelo.',
+          de: 'Der Abascha fließt türkisfarben über hellen Kalkstein in der Martvili-Schlucht, dem meistbesuchten Naturziel Samegrelos.',
+          fr: "L'Abasha coule, turquoise, sur le calcaire clair du canyon de Martvili, le site naturel le plus visité du Samegrelo.",
+          es: 'El río Abasha corre turquesa sobre la caliza clara del cañón de Martvili, el paraje natural más visitado de Samegrelo.',
+          nl: 'De Abasha stroomt turkoois over lichte kalksteen in Martvili Canyon, de meest bezochte natuurplek van Samegrelo.',
+          cs: 'Řeka Abasha teče tyrkysově přes světlý vápenec v kaňonu Martvili, nejnavštěvovanějším přírodním místě Samegrela.',
+          pl: 'Rzeka Abasha płynie turkusowo po jasnym wapieniu w kanionie Martvili, najczęściej odwiedzanym obiekcie przyrodniczym Samegrelo.',
+        },
+      },
+      {
+        base: 'martvili-canyon-georgia',
+        width: 1086,
+        height: 1448,
+        anchor: 'inline-martvili-canyon',
+        dir: '/images/martvili',
+        description: 'A still emerald pool in the narrow limestone gorge of Martvili Canyon, its walls overhung with ferns, moss and subtropical vegetation, Samegrelo-Zemo Svaneti, Georgia (the country).',
+        locationName: 'Martvili Canyon',
+        region: 'Samegrelo-Zemo Svaneti',
+        noCredit: true,
+        name: {
+          en: 'The emerald pool in the gorge of Martvili Canyon, Samegrelo, Georgia',
+          de: 'Der smaragdgrüne Gumpen in der Martvili-Schlucht, Samegrelo, Georgien',
+          fr: 'Le bassin émeraude au fond du canyon de Martvili, Samegrelo, Géorgie',
+          es: 'La poza esmeralda en el cañón de Martvili, Samegrelo, Georgia',
+          nl: 'De smaragdgroene kom in de kloof van Martvili Canyon, Samegrelo, Georgië',
+          cs: 'Smaragdová tůň v soutěsce kaňonu Martvili, Samegrelo, Gruzie',
+          pl: 'Szmaragdowa sadzawka w wąwozie kanionu Martvili, Samegrelo, Gruzja',
+        },
+        caption: {
+          en: 'Deeper in the gorge the water stills to emerald, the limestone walls overhung with ferns and subtropical greenery.',
+          de: 'Tiefer in der Schlucht steht das Wasser smaragdgrün still, die Kalksteinwände von Farnen und subtropischem Grün überhangen.',
+          fr: "Plus loin dans la gorge, l'eau s'immobilise en émeraude, les parois calcaires surplombées de fougères et d'une végétation subtropicale.",
+          es: 'Más adentro del desfiladero el agua se remansa en tonos esmeralda, con paredes calizas cubiertas de helechos y vegetación subtropical.',
+          nl: 'Dieper in de kloof komt het water smaragdgroen tot rust, de kalkstenen wanden vol varens en subtropisch groen.',
+          cs: 'Hlouběji v soutěsce se voda zklidňuje do smaragdové barvy, vápencové stěny porůstá kapradí a subtropická zeleň.',
+          pl: 'Głębiej w wąwozie woda uspokaja się w szmaragdowy odcień, a wapienne ściany porastają paprocie i subtropikalna zieleń.',
+        },
+      },
+    ],
     // Region-level "things to do" guide, served (like Adjara's/Guria's) at
     // /georgia/samegrelo/things-to-do-in-samegrelo via the CitySubPage dispatcher.
     thingsToDo: {
@@ -11482,7 +11580,20 @@ export function siteLocation(site) {
 export function publishedDestinationPages() {
   const pages = []
   for (const r of regions) if (r.published) {
-    pages.push({ path: cleanPath(regionPath(r.slug)), seoKey: r.seoKey, image: r.image })
+    pages.push({
+      path: cleanPath(regionPath(r.slug)), seoKey: r.seoKey, image: r.image,
+      // The region branch was the only one of the five here that dropped these
+      // extras, so a region setting ogImage/imageMeta/heroPreload rendered them
+      // client-side but never into the prerendered <head> — the same gap the
+      // things-to-do branch below documents. Inert for every existing region:
+      // none of them defines any of these three (first consumer: Samegrelo,
+      // whose hero is portrait and so needs a real 1.91:1 social crop).
+      ogImage: r.ogImage?.src,
+      ogImageWidth: r.ogImage?.width,
+      ogImageHeight: r.ogImage?.height,
+      imageAlt: r.imageMeta?.alt,
+      heroPreload: r.heroPreload,
+    })
     if (r.thingsToDo) {
       pages.push({
         path: cleanPath(thingsToDoPath(r.slug)),

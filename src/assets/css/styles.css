@@ -1322,6 +1322,41 @@ section {
    Native width is 1445, so that is the top rung: do not add a 1600 or 2400
    breakpoint. The bridge runs across the middle band with the canyon below and the
    plateau above, so centre-centre holds the composition from 360px to 1920px. */
+/* Samegrelo region hero — replaces the generic georgia-home.jpg placeholder.
+   Same turquoise-rapids frame that heads the Martvili city page: Martvili Canyon
+   supplies the only two Samegrelo photographs in the project, and the region
+   page's own H1 names the canyon. Files are referenced in place under
+   /images/martvili/ — nothing copied or re-encoded.
+
+   ⚠️ PORTRAIT SOURCE (1086x1448, exact 3:4) in a wide hero, so the vertical
+   position is live on desktop and inert on narrow phones (box aspect below 0.75
+   shows the whole frame). Value chosen by RENDERING candidates, not computed. */
+.hero--samegrelo {
+  background-image: url("/images/martvili/martvili-canyon-turquoise-river-georgia-768.webp");
+  background-image: image-set(
+    url("/images/martvili/martvili-canyon-turquoise-river-georgia-768.avif") type("image/avif"),
+    url("/images/martvili/martvili-canyon-turquoise-river-georgia-768.webp") type("image/webp")
+  );
+  /* Rendered 20/35/50% at 1440 and compared. 35% brings the turquoise water and
+     pale limestone forward — what this page's Martvili Canyon section describes —
+     while keeping the mossy walls that make it read as a canyon. It also frames
+     the shared source differently from .hero--martvili (20%), so the region page
+     and the city page do not look like the same picture. Inert below a 0.75 box
+     aspect, so phones are unaffected either way. */
+  background-position: center 35%;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+@media (min-width: 768px) {
+  .hero--samegrelo {
+    background-image: image-set(
+      url("/images/martvili/martvili-canyon-turquoise-river-georgia-1086.avif") type("image/avif"),
+      url("/images/martvili/martvili-canyon-turquoise-river-georgia-1086.webp") type("image/webp")
+    );
+  }
+}
+/* Native is 1086 — that is the top rung. Do not add a 1200/1448 breakpoint. */
+
 .hero--kvemo-kartli {
   background-image: url("/images/kvemo-kartli/diamond-bridge-dashbashi-canyon-georgia-1200.webp");
   background-image: image-set(
