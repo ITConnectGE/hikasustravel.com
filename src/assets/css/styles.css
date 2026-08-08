@@ -1923,6 +1923,72 @@ section {
   }
 }
 /* Native is 1672 — that is the top rung. Do not add a 2000/2400 breakpoint. */
+
+/* Things to Do in Martvili hero — replaces the generic georgia-home.jpg
+   placeholder. Deliberately the emerald-pool frame, NOT the turquoise rapids that
+   head the Martvili city page this guide is linked from, so the two pages do not
+   open on the same photograph.
+
+   ⚠️ PORTRAIT SOURCE (1086x1448, exact 3:4) in a wide hero, so the vertical
+   background-position is live on desktop and inert on narrow phones (where the
+   box aspect falls below 0.75 and the whole frame fits). The value below was
+   chosen by RENDERING candidates and looking, not computed. */
+.hero--things-to-do-martvili {
+  background-image: url("/images/martvili/martvili-canyon-georgia-768.webp");
+  background-image: image-set(
+    url("/images/martvili/martvili-canyon-georgia-768.avif") type("image/avif"),
+    url("/images/martvili/martvili-canyon-georgia-768.webp") type("image/webp")
+  );
+  background-size: cover;
+  background-repeat: no-repeat;
+  /* ⚠️ RENDERED, not computed: 20/35/50/65/80/90/100% were screenshotted at 1440.
+     The emerald pool sits in the bottom fifth of the portrait frame, so every
+     value up to 65% showed nothing but foliage and rock and stopped reading as a
+     canyon at all. Only `bottom` brings the pool, both mossy walls and the dark
+     cleft into the wide crop. Inert below a 0.75 box aspect (phones show the
+     whole frame), so this is a desktop-only correction. */
+  background-position: center bottom;
+}
+@media (min-width: 768px) {
+  .hero--things-to-do-martvili {
+    background-image: image-set(
+      url("/images/martvili/martvili-canyon-georgia-1086.avif") type("image/avif"),
+      url("/images/martvili/martvili-canyon-georgia-1086.webp") type("image/webp")
+    );
+  }
+}
+/* Native is 1086 — that is the top rung. Do not add a 1200/1448 breakpoint. */
+
+/* Things to Do in Mtskheta hero — replaces the generic georgia-home.jpg
+   placeholder. The Jvari confluence aerial that heads the Mtskheta city page is
+   deliberately NOT reused here: it sits outside the approved source folder. */
+.hero--things-to-do-mtskheta {
+  background-image: url("/images/files/svetitskhoveli-cathedral-mtskheta-georgia-768.webp");
+  background-image: image-set(
+    url("/images/files/svetitskhoveli-cathedral-mtskheta-georgia-768.avif") type("image/avif"),
+    url("/images/files/svetitskhoveli-cathedral-mtskheta-georgia-768.webp") type("image/webp")
+  );
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+@media (min-width: 768px) {
+  .hero--things-to-do-mtskheta {
+    background-image: image-set(
+      url("/images/files/svetitskhoveli-cathedral-mtskheta-georgia-1200.avif") type("image/avif"),
+      url("/images/files/svetitskhoveli-cathedral-mtskheta-georgia-1200.webp") type("image/webp")
+    );
+  }
+}
+@media (min-width: 1200px) {
+  .hero--things-to-do-mtskheta {
+    background-image: image-set(
+      url("/images/files/svetitskhoveli-cathedral-mtskheta-georgia-1540.avif") type("image/avif"),
+      url("/images/files/svetitskhoveli-cathedral-mtskheta-georgia-1540.webp") type("image/webp")
+    );
+  }
+}
+/* Native is 1540 — that is the top rung. Do not add a 2000/2400 breakpoint. */
 /* Martvili Canyon hero — per-page CSS background (same opt-in mechanism as
    .hero--akhaltsikhe above). FIRST Samegrelo photograph in the project; replaces
    the generic georgia-home.jpg placeholder.

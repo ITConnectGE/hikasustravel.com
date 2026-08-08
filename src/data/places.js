@@ -4485,7 +4485,144 @@ export const cities = [
       },
     ],
     thingsToDo: {
-      seoKey: 'thingsToDoMtskheta', contentKey: 'thingsToDoMtskheta', image: '/images/files/georgia-home.jpg',
+      seoKey: 'thingsToDoMtskheta', contentKey: 'thingsToDoMtskheta',
+      // Hero = the Svetitskhoveli exterior, replacing the generic georgia-home.jpg
+      // placeholder. The approved folder holds exactly FOUR Mtskheta photographs
+      // (5 files: two are one photo at two crops) and all four already ship, so
+      // reuse is unavoidable. Role chosen to differ from the CITY page this guide
+      // is linked from: that page opens on the Jvari confluence aerial, which is
+      // deliberately NOT used here (it sits outside the approved source folder).
+      image: '/images/files/svetitskhoveli-cathedral-mtskheta-georgia-1540.webp',
+      imageAvif: '/images/files/svetitskhoveli-cathedral-mtskheta-georgia-1540.avif',
+      heroClass: 'hero--things-to-do-mtskheta',
+      heroPreload: '/images/files/svetitskhoveli-cathedral-mtskheta-georgia-1200.avif',
+      ogImage: { src: '/images/files/svetitskhoveli-cathedral-mtskheta-georgia-og.jpg', width: 1200, height: 630 },
+      imageMeta: {
+        width: 1540,
+        height: 1021,
+        imageId: 'hero-image',
+        name: 'Svetitskhoveli Cathedral and its bell tower in Mtskheta, Mtskheta-Mtianeti, Georgia',
+        description: 'The stone bulk of Svetitskhoveli Cathedral with its conical dome, seen across the lawn of its walled enclosure with the free-standing bell tower to the right, in Mtskheta, Mtskheta-Mtianeti, Georgia (the country).',
+        locationName: 'Svetitskhoveli Cathedral, Mtskheta, Mtskheta-Mtianeti, Georgia',
+        locality: 'Mtskheta',
+        region: 'Mtskheta-Mtianeti',
+        country: 'GE',
+        // ⚠️ No credit fields: provenance for these Mtskheta frames is not
+        // asserted anywhere in the repo, so ownership is not claimed.
+        noCredit: true,
+        alt: {
+          en: 'Svetitskhoveli Cathedral and its bell tower inside the walled enclosure in Mtskheta, Georgia',
+          de: 'Die Swetizchoweli-Kathedrale und ihr Glockenturm im ummauerten Hof in Mtskheta, Georgien',
+          fr: "La cathédrale de Svetitskhoveli et son clocher dans l'enceinte fortifiée de Mtskheta, Géorgie",
+          es: 'La catedral de Svetitskhoveli y su campanario en el recinto amurallado de Mtskheta, Georgia',
+          nl: 'De Svetitskhoveli-kathedraal en haar klokkentoren binnen de ommuurde hof in Mtskheta, Georgië',
+          cs: 'Katedrála Svetitskhoveli a její zvonice v hrazeném areálu v Mtskhetě, Gruzie',
+          pl: 'Katedra Svetitskhoveli i jej dzwonnica w obwarowanym dziedzińcu w Mtskhecie, Gruzja',
+        },
+        caption: {
+          en: 'Svetitskhoveli Cathedral stands at the centre of its walled enclosure in Mtskheta.',
+          de: 'Die Swetizchoweli-Kathedrale steht im Zentrum ihres ummauerten Hofes in Mtskheta.',
+          fr: "La cathédrale de Svetitskhoveli se dresse au centre de son enceinte fortifiée, à Mtskheta.",
+          es: 'La catedral de Svetitskhoveli se alza en el centro de su recinto amurallado en Mtskheta.',
+          nl: 'De Svetitskhoveli-kathedraal staat midden in haar ommuurde hof in Mtskheta.',
+          cs: 'Katedrála Svetitskhoveli stojí uprostřed svého hrazeného areálu v Mtskhetě.',
+          pl: 'Katedra Svetitskhoveli stoi pośrodku swojego obwarowanego dziedzińca w Mtskhecie.',
+        },
+      },
+      // Three body figures, each spliced under the section it actually depicts.
+      // No photograph exists anywhere in the library for Samtavro, Shio-Mgvime,
+      // Armaztsikhe-Bagineti, Zedazeni or Bebristsikhe, so those sections stay
+      // unillustrated rather than being padded with wrong-subject material.
+      inlineImageObjects: [
+        {
+          base: 'jvari-monastery-hilltop-mtskheta-georgia',
+          width: 1448,
+          height: 1086,
+          anchor: 'inline-jvari-hilltop',
+          dir: '/images/files',
+          description: 'The 6th-century Jvari Monastery on its bare hilltop above Mtskheta, with the wooded ridges of the Saguramo Range behind, Mtskheta-Mtianeti, Georgia (the country).',
+          locationName: 'Jvari Monastery, Mtskheta-Mtianeti, Georgia',
+          region: 'Mtskheta-Mtianeti',
+          noCredit: true,
+          name: {
+            en: 'Jvari Monastery on the hilltop above Mtskheta, Mtskheta-Mtianeti, Georgia',
+            de: 'Das Jvari-Kloster auf der Anhöhe über Mtskheta, Mtskheta-Mtianeti, Georgien',
+            fr: 'Le monastère de Jvari sur la colline dominant Mtskheta, Mtskheta-Mtianeti, Géorgie',
+            es: 'El monasterio de Jvari en la colina sobre Mtskheta, Mtskheta-Mtianeti, Georgia',
+            nl: 'Het Jvari-klooster op de heuvel boven Mtskheta, Mtskheta-Mtianeti, Georgië',
+            cs: 'Klášter Jvari na kopci nad Mtskhetou, Mtskheta-Mtianeti, Gruzie',
+            pl: 'Klasztor Jvari na wzgórzu nad Mtskhetą, Mtskheta-Mtianeti, Gruzja',
+          },
+          caption: {
+            en: 'Jvari Monastery stands alone on the hilltop above Mtskheta, with the wooded ridges behind it.',
+            de: 'Das Jvari-Kloster steht allein auf der Anhöhe über Mtskheta, dahinter die bewaldeten Bergrücken.',
+            fr: 'Le monastère de Jvari se dresse seul sur la colline au-dessus de Mtskheta, adossé aux crêtes boisées.',
+            es: 'El monasterio de Jvari se alza solo en la colina sobre Mtskheta, con las crestas boscosas detrás.',
+            nl: 'Het Jvari-klooster staat alleen op de heuvel boven Mtskheta, met de beboste bergruggen erachter.',
+            cs: 'Klášter Jvari stojí osamoceně na kopci nad Mtskhetou, za ním zalesněné hřebeny.',
+            pl: 'Klasztor Jvari stoi samotnie na wzgórzu nad Mtskhetą, z zalesionymi grzbietami w tle.',
+          },
+        },
+        {
+          base: 'svetitskhoveli-bell-tower-wall-mtskheta-georgia',
+          width: 1448,
+          height: 1086,
+          anchor: 'inline-bell-tower-wall',
+          dir: '/images/files',
+          description: 'The free-standing bell tower and the crenellated defensive wall enclosing Svetitskhoveli Cathedral in Mtskheta, Mtskheta-Mtianeti, Georgia (the country).',
+          locationName: 'Svetitskhoveli Cathedral, Mtskheta, Mtskheta-Mtianeti, Georgia',
+          locality: 'Mtskheta',
+          region: 'Mtskheta-Mtianeti',
+          noCredit: true,
+          name: {
+            en: 'The bell tower and crenellated wall enclosing Svetitskhoveli Cathedral, Mtskheta, Georgia',
+            de: 'Glockenturm und Zinnenmauer um die Swetizchoweli-Kathedrale, Mtskheta, Georgien',
+            fr: "Le clocher et le mur crénelé entourant la cathédrale de Svetitskhoveli, Mtskheta, Géorgie",
+            es: 'El campanario y la muralla almenada que rodean la catedral de Svetitskhoveli, Mtskheta, Georgia',
+            nl: 'De klokkentoren en gekanteelde muur rond de Svetitskhoveli-kathedraal, Mtskheta, Georgië',
+            cs: 'Zvonice a cimbuřím zakončená hradba kolem katedrály Svetitskhoveli, Mtskheta, Gruzie',
+            pl: 'Dzwonnica i blankowany mur otaczający katedrę Svetitskhoveli, Mtskheta, Gruzja',
+          },
+          caption: {
+            en: 'The bell tower and crenellated wall that enclose Svetitskhoveli, at the heart of the old town.',
+            de: 'Glockenturm und Zinnenmauer, die Swetizchoweli umschließen, im Herzen der Altstadt.',
+            fr: "Le clocher et le mur crénelé qui enserrent Svetitskhoveli, au cœur de la vieille ville.",
+            es: 'El campanario y la muralla almenada que cierran Svetitskhoveli, en el corazón del casco antiguo.',
+            nl: 'De klokkentoren en gekanteelde muur rond Svetitskhoveli, in het hart van de oude stad.',
+            cs: 'Zvonice a cimbuřová hradba obepínající Svetitskhoveli v srdci starého města.',
+            pl: 'Dzwonnica i blankowany mur okalający Svetitskhoveli, w sercu starego miasta.',
+          },
+        },
+        {
+          base: 'jvari-monastery-walls-mtskheta-georgia',
+          width: 1448,
+          height: 1086,
+          anchor: 'inline-jvari-walls',
+          dir: '/images/files',
+          description: 'The stone drum and tiled dome of Jvari Monastery rising above the ruined walls of its enclosure, Mtskheta-Mtianeti, Georgia (the country).',
+          locationName: 'Jvari Monastery, Mtskheta-Mtianeti, Georgia',
+          region: 'Mtskheta-Mtianeti',
+          noCredit: true,
+          name: {
+            en: 'The dome of Jvari Monastery above the ruined walls of its enclosure, Mtskheta-Mtianeti, Georgia',
+            de: 'Die Kuppel des Jvari-Klosters über den verfallenen Mauern seines Hofes, Mtskheta-Mtianeti, Georgien',
+            fr: "La coupole du monastère de Jvari au-dessus des murs ruinés de son enceinte, Mtskheta-Mtianeti, Géorgie",
+            es: 'La cúpula del monasterio de Jvari sobre los muros en ruinas de su recinto, Mtskheta-Mtianeti, Georgia',
+            nl: 'De koepel van het Jvari-klooster boven de vervallen muren van zijn hof, Mtskheta-Mtianeti, Georgië',
+            cs: 'Kupole kláštera Jvari nad zbořenými hradbami jeho areálu, Mtskheta-Mtianeti, Gruzie',
+            pl: 'Kopuła klasztoru Jvari nad zrujnowanymi murami jego dziedzińca, Mtskheta-Mtianeti, Gruzja',
+          },
+          caption: {
+            en: 'The tiled dome of Jvari rises above the ruined walls of its enclosure, close up.',
+            de: 'Die ziegelgedeckte Kuppel von Jvari erhebt sich aus der Nähe über den verfallenen Mauern des Hofes.',
+            fr: "De près, la coupole de tuiles de Jvari s'élève au-dessus des murs ruinés de son enceinte.",
+            es: 'De cerca, la cúpula de tejas de Jvari se alza sobre los muros en ruinas de su recinto.',
+            nl: 'Van dichtbij verrijst de betegelde koepel van Jvari boven de vervallen muren van de hof.',
+            cs: 'Zblízka se taškami krytá kupole Jvari tyčí nad zbořenými hradbami areálu.',
+            pl: 'Z bliska pokryta dachówką kopuła Jvari wznosi się nad zrujnowanymi murami dziedzińca.',
+          },
+        },
+      ],
       address: { addressLocality: 'Mtskheta' },
       attractions: ['Svetitskhoveli Cathedral', 'Jvari Monastery', 'Samtavro Monastery', 'Shio-Mgvime Monastery', 'Armaztsikhe-Bagineti', 'Zedazeni Monastery', 'Bebristsikhe Fortress'],
     },
@@ -5312,7 +5449,89 @@ export const cities = [
       },
     ],
     thingsToDo: {
-      seoKey: 'thingsToDoMartvili', contentKey: 'thingsToDoMartvili', image: '/images/files/georgia-home.jpg',
+      seoKey: 'thingsToDoMartvili', contentKey: 'thingsToDoMartvili',
+      // Hero = the emerald-pool frame, replacing the generic georgia-home.jpg
+      // placeholder. Only TWO Martvili photographs exist in the whole library and
+      // both already ship (canyon attraction page + city page), so reuse is
+      // unavoidable here. The role is chosen to differ from the CITY page, which
+      // this guide is linked from: the city page opens on the turquoise rapids,
+      // so this guide opens on the pool and carries the rapids as its body figure.
+      // ⚠️ PORTRAIT SOURCE (1086x1448) — native ceiling is 1086, so the ladder is
+      // 768/1086 only. Never add a 1200/1448 rung; there is nothing to upscale from.
+      image: '/images/martvili/martvili-canyon-georgia-1086.webp',
+      imageAvif: '/images/martvili/martvili-canyon-georgia-1086.avif',
+      heroClass: 'hero--things-to-do-martvili',
+      heroPreload: '/images/martvili/martvili-canyon-georgia-1086.avif',
+      // Ready-made 1.91:1 crop already in the repo — real dimensions declared, not
+      // a fake 1200x630 (same call the canyon page's og makes).
+      ogImage: { src: '/images/martvili/martvili-canyon-georgia-og.jpg', width: 1086, height: 570 },
+      imageMeta: {
+        width: 1086,
+        height: 1448,
+        imageId: 'hero-image',
+        name: 'The emerald pool of Martvili Canyon below overhanging greenery, Samegrelo-Zemo Svaneti, Georgia',
+        description: 'Still emerald water in a narrow limestone canyon, its walls overhung with ferns, moss and subtropical vegetation, at Martvili Canyon in Samegrelo-Zemo Svaneti, Georgia (the country).',
+        // The canyon is a few km outside the town, so no addressLocality is
+        // claimed here — same call the Martvili Canyon attraction page makes.
+        locationName: 'Martvili Canyon, Samegrelo-Zemo Svaneti, Georgia',
+        region: 'Samegrelo-Zemo Svaneti',
+        country: 'GE',
+        // ⚠️ Licensed stock, not our photograph: the licence requires no
+        // attribution. Do NOT add creditText/creator here (see the REPLACE-BRAND
+        // incident) — noCredit is the deliberate, owner-resolved answer.
+        noCredit: true,
+        alt: {
+          en: 'Emerald water in the narrow gorge of Martvili Canyon, Samegrelo-Zemo Svaneti, Georgia',
+          de: 'Smaragdgrünes Wasser in der engen Schlucht des Martvili-Canyons, Samegrelo-Zemo Swanetien, Georgien',
+          fr: 'Eau émeraude dans les gorges étroites du canyon de Martvili, Samegrelo-Zemo Svaneti, Géorgie',
+          es: 'Agua esmeralda en el estrecho desfiladero del cañón de Martvili, Samegrelo-Zemo Svaneti, Georgia',
+          nl: 'Smaragdgroen water in de nauwe kloof van de Martvili-canyon, Samegrelo-Zemo Svaneti, Georgië',
+          cs: 'Smaragdová voda v úzké soutěsce kaňonu Martvili, Samegrelo-Zemo Svaneti, Gruzie',
+          pl: 'Szmaragdowa woda w wąskim wąwozie kanionu Martvili, Samegrelo-Zemo Svaneti, Gruzja',
+        },
+        caption: {
+          en: 'The emerald pool of Martvili Canyon, its walls overhung with ferns and subtropical greenery.',
+          de: 'Der smaragdgrüne Gumpen des Martvili-Canyons, dessen Wände von Farnen und subtropischem Grün überhangen sind.',
+          fr: "Le bassin émeraude du canyon de Martvili, dont les parois sont surplombées de fougères et d'une végétation subtropicale.",
+          es: 'La poza esmeralda del cañón de Martvili, con paredes cubiertas de helechos y vegetación subtropical.',
+          nl: 'De smaragdgroene kom van de Martvili-canyon, met wanden vol varens en subtropisch groen.',
+          cs: 'Smaragdová tůň kaňonu Martvili se stěnami porostlými kapradím a subtropickou zelení.',
+          pl: 'Szmaragdowa sadzawka kanionu Martvili, ze ścianami porośniętymi paprociami i subtropikalną zielenią.',
+        },
+      },
+      // ONE body figure only — see the inventory note above. Spliced after the
+      // "Visit Martvili Canyon" paragraph, which names the turquoise water.
+      inlineImageObjects: [
+        {
+          base: 'martvili-canyon-turquoise-river-georgia',
+          width: 1086,
+          height: 1448,
+          anchor: 'inline-turquoise-river',
+          dir: '/images/martvili',
+          description: 'Turquoise water of the Abasha River running over pale rock between mossy, ivy-covered canyon walls at Martvili Canyon, Samegrelo-Zemo Svaneti, Georgia (the country).',
+          locationName: 'Martvili Canyon, Samegrelo-Zemo Svaneti, Georgia',
+          region: 'Samegrelo-Zemo Svaneti',
+          noCredit: true,
+          name: {
+            en: 'Turquoise water of the Abasha River running through Martvili Canyon, Samegrelo-Zemo Svaneti, Georgia',
+            de: 'Türkisfarbenes Wasser des Abascha im Martvili-Canyon, Samegrelo-Zemo Swanetien, Georgien',
+            fr: "Eau turquoise de l'Abasha traversant le canyon de Martvili, Samegrelo-Zemo Svaneti, Géorgie",
+            es: 'Agua turquesa del río Abasha atravesando el cañón de Martvili, Samegrelo-Zemo Svaneti, Georgia',
+            nl: 'Turkooizen water van de Abasha door de Martvili-canyon, Samegrelo-Zemo Svaneti, Georgië',
+            cs: 'Tyrkysová voda řeky Abasha protékající kaňonem Martvili, Samegrelo-Zemo Svaneti, Gruzie',
+            pl: 'Turkusowa woda rzeki Abasha płynąca kanionem Martvili, Samegrelo-Zemo Svaneti, Gruzja',
+          },
+          caption: {
+            en: 'Turquoise water of the Abasha River runs over pale rock between the mossy walls of Martvili Canyon.',
+            de: 'Türkisfarbenes Wasser des Abascha fließt über helles Gestein zwischen den bemoosten Wänden des Martvili-Canyons.',
+            fr: "L'eau turquoise de l'Abasha court sur la roche claire entre les parois moussues du canyon de Martvili.",
+            es: 'El agua turquesa del río Abasha corre sobre roca clara entre las paredes cubiertas de musgo del cañón de Martvili.',
+            nl: 'Turkooizen water van de Abasha stroomt over lichte rots tussen de bemoste wanden van de Martvili-canyon.',
+            cs: 'Tyrkysová voda řeky Abasha teče přes světlou skálu mezi mechem porostlými stěnami kaňonu Martvili.',
+            pl: 'Turkusowa woda rzeki Abasha płynie po jasnej skale między omszałymi ścianami kanionu Martvili.',
+          },
+        },
+      ],
       address: { addressLocality: 'Martvili' },
       attractions: ['Martvili Canyon', 'Martvili Monastery', 'Balda Canyon', 'Abasha River'],
     },
