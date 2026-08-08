@@ -1564,7 +1564,99 @@ export const regions = [
   {
     slug: 'lechkhumi', name: 'Lechkhumi', published: true,
     seoKey: 'lechkhumi', contentKey: 'lechkhumi',
-    image: '/images/files/georgia-home.jpg',
+    // ⚠️ The ONLY Lechkhumi photographs in the project are the four Khvamli
+    // Mountain frames. Nothing exists for what this page is actually about —
+    // Tvishi, Usakhelouri, Lailashi, Green Lake, the Rioni or Tskhenistskali
+    // valleys, Tsageri or the villages. Khvamli is anchored by exactly one clause
+    // here ("Tsageri… sits beneath the dramatic Khvamli massif"), which is why the
+    // things-to-do guide got nothing: it never names Khvamli at all.
+    // ⚠️ PORTRAIT SOURCE (1086x1448) — ladder caps at 768/1086; no 1200/1448 rung.
+    image: '/images/racha-lechkhumi/khvamli-mountain-georgia-1086.webp',
+    imageAvif: '/images/racha-lechkhumi/khvamli-mountain-georgia-1086.avif',
+    heroClass: 'hero--lechkhumi',
+    // Regions normally declare no ogImage, but this hero is 3:4 and would make a
+    // badly cropped social card. The package's own 1086x570 band is used — the
+    // only frame that has one, which is why it heads this page even though it
+    // also heads the Khvamli Mountain page. Nothing was generated or re-encoded.
+    ogImage: { src: '/images/racha-lechkhumi/khvamli-mountain-georgia-og.jpg', width: 1086, height: 570 },
+    // `alt` only — this is what prerender.js emits as the per-locale og:image:alt.
+    imageMeta: {
+      alt: {
+        en: 'The Khvamli massif rising above a meadow in Lechkhumi, with the Caucasus range beyond, Georgia',
+        de: 'Das Khvamli-Massiv erhebt sich über einer Wiese in Letschchumi, dahinter die Kette des Kaukasus, Georgien',
+        fr: 'Le massif de Khvamli dominant une prairie en Letchkhoumi, avec la chaîne du Caucase au loin, Géorgie',
+        es: 'El macizo de Khvamli alzándose sobre un prado en Lechjumi, con la cordillera del Cáucaso al fondo, Georgia',
+        nl: 'Het Khvamli-massief boven een weide in Letsjchoemi, met de Kaukasus daarachter, Georgië',
+        cs: 'Masiv Khvamli se tyčí nad loukou v Lečchumi, v pozadí pohoří Kavkaz, Gruzie',
+        pl: 'Masyw Chwamli wznoszący się nad łąką w Leczchumi, z pasmem Kaukazu w tle, Gruzja',
+      },
+    },
+    // ⚠️ noCredit on BOTH nodes, carried forward from the Khvamli package, whose
+    // manifest marks every entry `brand-CONFIRM` — ownership is NOT confirmed.
+    // The same photographs must not be credited two different ways across pages.
+    inlineImageObjects: [
+      {
+        base: 'khvamli-mountain-georgia',
+        width: 1086,
+        height: 1448,
+        anchor: 'hero-image',
+        dir: '/images/racha-lechkhumi',
+        hero: true,
+        description: 'A limestone crag on the grassy heights of the Khvamli massif above a wildflower meadow, with the Greater Caucasus along the horizon, Lechkhumi, Georgia (the country).',
+        // Administrative region is Racha-Lechkhumi and Kvemo Svaneti; the captions
+        // say Lechkhumi, the historical region this page is about. Both are true.
+        locationName: 'Khvamli Mountain, Lechkhumi',
+        region: 'Racha-Lechkhumi and Kvemo Svaneti',
+        noCredit: true,
+        name: {
+          en: 'The Khvamli massif above a meadow in Lechkhumi, with the Caucasus beyond, Georgia',
+          de: 'Das Khvamli-Massiv über einer Wiese in Letschchumi, dahinter der Kaukasus, Georgien',
+          fr: 'Le massif de Khvamli au-dessus d’une prairie en Letchkhoumi, le Caucase au loin, Géorgie',
+          es: 'El macizo de Khvamli sobre un prado en Lechjumi, con el Cáucaso al fondo, Georgia',
+          nl: 'Het Khvamli-massief boven een weide in Letsjchoemi, met de Kaukasus daarachter, Georgië',
+          cs: 'Masiv Khvamli nad loukou v Lečchumi, v pozadí Kavkaz, Gruzie',
+          pl: 'Masyw Chwamli nad łąką w Leczchumi, z Kaukazem w tle, Gruzja',
+        },
+        caption: {
+          en: 'The Khvamli massif, the landmark rising above Tsageri in Lechkhumi, with the Greater Caucasus along the horizon.',
+          de: 'Das Khvamli-Massiv, das Wahrzeichen über Tsageri in Letschchumi, am Horizont der Große Kaukasus.',
+          fr: 'Le massif de Khvamli, le repère qui domine Tsageri en Letchkhoumi, le Grand Caucase à l’horizon.',
+          es: 'El macizo de Khvamli, el hito que se alza sobre Tsageri en Lechjumi, con el Gran Cáucaso en el horizonte.',
+          nl: 'Het Khvamli-massief, het baken boven Tsageri in Letsjchoemi, met de Grote Kaukasus aan de horizon.',
+          cs: 'Masiv Khvamli, dominanta tyčící se nad Tsageri v Lečchumi, na obzoru Velký Kavkaz.',
+          pl: 'Masyw Chwamli, dominanta wznosząca się nad Tsageri w Leczchumi, z Wielkim Kaukazem na horyzoncie.',
+        },
+      },
+      {
+        base: 'khvamli-mountain-limestone-crags-georgia',
+        width: 1086,
+        height: 1448,
+        anchor: 'inline-khvamli-crags',
+        dir: '/images/racha-lechkhumi',
+        description: 'Weathered limestone crags and conifers on the slopes of the Khvamli massif under a clear sky, Lechkhumi, Georgia (the country).',
+        locationName: 'Khvamli Mountain, Lechkhumi',
+        region: 'Racha-Lechkhumi and Kvemo Svaneti',
+        noCredit: true,
+        name: {
+          en: 'Weathered limestone crags on the slopes of the Khvamli massif in Lechkhumi, Georgia',
+          de: 'Verwitterte Kalksteinfelsen an den Hängen des Khvamli-Massivs in Letschchumi, Georgien',
+          fr: 'Rochers calcaires érodés sur les pentes du massif de Khvamli en Letchkhoumi, Géorgie',
+          es: 'Peñascos calizos erosionados en las laderas del macizo de Khvamli en Lechjumi, Georgia',
+          nl: 'Verweerde kalkstenen rotsen op de hellingen van het Khvamli-massief in Letsjchoemi, Georgië',
+          cs: 'Zvětralé vápencové skály na svazích masivu Khvamli v Lečchumi, Gruzie',
+          pl: 'Zwietrzałe wapienne skały na zboczach masywu Chwamli w Leczchumi, Gruzja',
+        },
+        caption: {
+          en: 'The limestone crags of the Khvamli massif, which rises above Tsageri, the historical capital of Lechkhumi.',
+          de: 'Die Kalksteinfelsen des Khvamli-Massivs, das sich über Tsageri erhebt, der historischen Hauptstadt Letschchumis.',
+          fr: 'Les rochers calcaires du massif de Khvamli, qui domine Tsageri, capitale historique du Letchkhoumi.',
+          es: 'Los peñascos calizos del macizo de Khvamli, que se alza sobre Tsageri, capital histórica de Lechjumi.',
+          nl: 'De kalkstenen rotsen van het Khvamli-massief, dat oprijst boven Tsageri, de historische hoofdstad van Letsjchoemi.',
+          cs: 'Vápencové skály masivu Khvamli, který se tyčí nad Tsageri, historickým hlavním městem Lečchumi.',
+          pl: 'Wapienne skały masywu Chwamli, który wznosi się nad Tsageri, historyczną stolicą Leczchumi.',
+        },
+      },
+    ],
     // Region-level "things to do" guide, served (like Kvemo Kartli's) at
     // /georgia/lechkhumi/things-to-do-in-lechkhumi via the CitySubPage dispatcher.
     thingsToDo: {

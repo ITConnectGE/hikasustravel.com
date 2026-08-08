@@ -1959,6 +1959,35 @@ section {
 }
 /* Native is 1672 — that is the top rung. Do not add a 2000/2400 breakpoint. */
 
+/* Lechkhumi region hero — replaces the generic georgia-home.jpg placeholder.
+   Same Khvamli frame that heads the Khvamli Mountain page: it is the only
+   Lechkhumi photograph with a 1.91:1 OG band, and the only four Lechkhumi
+   photographs that exist are all of this one massif.
+
+   ⚠️ PORTRAIT SOURCE (1086x1448, exact 3:4) in a wide hero. Value chosen by
+   RENDERING, matching the finding on the Khvamli page: the crag and the Caucasus
+   band sit mid-frame, so `center 55%` keeps them rather than the empty sky.
+   Inert below a 0.75 box aspect, so phones show the whole frame either way. */
+.hero--lechkhumi {
+  background-image: url("/images/racha-lechkhumi/khvamli-mountain-georgia-768.webp");
+  background-image: image-set(
+    url("/images/racha-lechkhumi/khvamli-mountain-georgia-768.avif") type("image/avif"),
+    url("/images/racha-lechkhumi/khvamli-mountain-georgia-768.webp") type("image/webp")
+  );
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center 55%;
+}
+@media (min-width: 768px) {
+  .hero--lechkhumi {
+    background-image: image-set(
+      url("/images/racha-lechkhumi/khvamli-mountain-georgia-1086.avif") type("image/avif"),
+      url("/images/racha-lechkhumi/khvamli-mountain-georgia-1086.webp") type("image/webp")
+    );
+  }
+}
+/* Native is 1086 — that is the top rung. Do not add a 1200/1448 breakpoint. */
+
 /* Tskaltubo hero — replaces the generic georgia-home.jpg placeholder. ⚠️ This is
    Prometheus Cave, ~5 km outside the town: no photograph of Tskaltubo itself
    exists, and the cave is named in this page's own H1. Deliberately the amber
