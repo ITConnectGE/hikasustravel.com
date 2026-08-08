@@ -1959,6 +1959,34 @@ section {
 }
 /* Native is 1672 — that is the top rung. Do not add a 2000/2400 breakpoint. */
 
+/* Things to Do in Lechkhumi hero — deliberately the caucasus-view frame, so this
+   guide and the Lechkhumi region page it is linked from share no image at all
+   (that page uses the panorama and the limestone crags).
+
+   ⚠️ PORTRAIT SOURCE (1086x1448, exact 3:4) in a wide hero. `center 55%` matches
+   the finding on the other two Khvamli pages: it keeps the outcrop, the valleys
+   and the Caucasus band rather than the empty sky above them. Inert below a 0.75
+   box aspect. Ladder 768/1086 — 1086 is native, a higher rung would upscale. */
+.hero--things-to-do-lechkhumi {
+  background-image: url("/images/racha-lechkhumi/khvamli-mountain-caucasus-view-georgia-768.webp");
+  background-image: image-set(
+    url("/images/racha-lechkhumi/khvamli-mountain-caucasus-view-georgia-768.avif") type("image/avif"),
+    url("/images/racha-lechkhumi/khvamli-mountain-caucasus-view-georgia-768.webp") type("image/webp")
+  );
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center 55%;
+}
+@media (min-width: 768px) {
+  .hero--things-to-do-lechkhumi {
+    background-image: image-set(
+      url("/images/racha-lechkhumi/khvamli-mountain-caucasus-view-georgia-1086.avif") type("image/avif"),
+      url("/images/racha-lechkhumi/khvamli-mountain-caucasus-view-georgia-1086.webp") type("image/webp")
+    );
+  }
+}
+/* Native is 1086 — that is the top rung. Do not add a 1200/1448 breakpoint. */
+
 /* Lechkhumi region hero — replaces the generic georgia-home.jpg placeholder.
    Same Khvamli frame that heads the Khvamli Mountain page: it is the only
    Lechkhumi photograph with a 1.91:1 OG band, and the only four Lechkhumi

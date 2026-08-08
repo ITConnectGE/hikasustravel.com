@@ -1661,7 +1661,89 @@ export const regions = [
     // /georgia/lechkhumi/things-to-do-in-lechkhumi via the CitySubPage dispatcher.
     thingsToDo: {
       seoKey: 'thingsToDoLechkhumi', contentKey: 'thingsToDoLechkhumi',
-      image: '/images/files/georgia-home.jpg',
+      // ⚠️ This guide NEVER names Khvamli — unlike the region page, which anchors
+      // it in one clause. Owner asked for it filled anyway, on the narrower
+      // ground that the guide does describe Lechkhumi's mountains and valleys and
+      // these frames genuinely are a Lechkhumi mountain landscape. Captions name
+      // Khvamli explicitly so nothing is passed off as somewhere it isn't.
+      // Nothing exists for what the guide is really about — Tvishi, Usakhelouri,
+      // Lailashi, the Green Lake, the villages or the food.
+      // Frames chosen so this guide shares NO image with the region page it is
+      // linked from (that page uses the panorama + the limestone crags).
+      // ⚠️ PORTRAIT SOURCE (1086x1448) — ladder caps at 768/1086.
+      image: '/images/racha-lechkhumi/khvamli-mountain-caucasus-view-georgia-1086.webp',
+      imageAvif: '/images/racha-lechkhumi/khvamli-mountain-caucasus-view-georgia-1086.avif',
+      heroClass: 'hero--things-to-do-lechkhumi',
+      heroPreload: '/images/racha-lechkhumi/khvamli-mountain-caucasus-view-georgia-1086.avif',
+      // ⚠️ NO ogImage: no 1.91:1 band exists for this frame, and the package's
+      // only band belongs to a different photograph. og:image therefore auto-
+      // derives from `image` (og:image:width/height vanish) — the same call every
+      // other region things-to-do guide makes. Platforms centre-crop the 3:4
+      // frame to roughly the valley-and-Caucasus band, which is the subject.
+      imageMeta: {
+        width: 1086,
+        height: 1448,
+        imageId: 'hero-image',
+        name: 'A view over the forested valleys of Lechkhumi to the Caucasus range from the Khvamli massif, Georgia',
+        description: 'A limestone outcrop in the foreground and forested valleys falling away toward the snow-streaked Greater Caucasus, seen from the Khvamli massif in Lechkhumi, Georgia (the country).',
+        locationName: 'Khvamli Mountain, Lechkhumi',
+        region: 'Racha-Lechkhumi and Kvemo Svaneti',
+        country: 'GE',
+        // ⚠️ Ownership unconfirmed — see the Khvamli package's brand-CONFIRM
+        // marker. Same photographs, same treatment as every other page.
+        noCredit: true,
+        alt: {
+          en: 'A view over the forested valleys of Lechkhumi to the Caucasus range from the Khvamli massif, Georgia',
+          de: 'Blick über die bewaldeten Täler Letschchumis zur Kaukasuskette vom Khvamli-Massiv aus, Georgien',
+          fr: 'Vue sur les vallées boisées du Letchkhoumi jusqu’à la chaîne du Caucase depuis le massif de Khvamli, Géorgie',
+          es: 'Vista sobre los valles boscosos de Lechjumi hacia la cordillera del Cáucaso desde el macizo de Khvamli, Georgia',
+          nl: 'Uitzicht over de beboste valleien van Letsjchoemi naar de Kaukasus vanaf het Khvamli-massief, Georgië',
+          cs: 'Pohled přes zalesněná údolí Lečchumi k pohoří Kavkaz z masivu Khvamli, Gruzie',
+          pl: 'Widok ponad zalesionymi dolinami Leczchumi na pasmo Kaukazu z masywu Chwamli, Gruzja',
+        },
+        caption: {
+          en: 'The view from the Khvamli massif over the forested valleys of Lechkhumi toward the Greater Caucasus.',
+          de: 'Der Blick vom Khvamli-Massiv über die bewaldeten Täler Letschchumis zum Großen Kaukasus.',
+          fr: 'La vue depuis le massif de Khvamli sur les vallées boisées du Letchkhoumi vers le Grand Caucase.',
+          es: 'La vista desde el macizo de Khvamli sobre los valles boscosos de Lechjumi hacia el Gran Cáucaso.',
+          nl: 'Het uitzicht vanaf het Khvamli-massief over de beboste valleien van Letsjchoemi naar de Grote Kaukasus.',
+          cs: 'Pohled z masivu Khvamli přes zalesněná údolí Lečchumi k Velkému Kavkazu.',
+          pl: 'Widok z masywu Chwamli ponad zalesionymi dolinami Leczchumi ku Wielkiemu Kaukazowi.',
+        },
+      },
+      // ONE body figure, under "Drive the Rioni and Tskhenistskali valleys" —
+      // the section this landscape actually illustrates.
+      inlineImageObjects: [
+        {
+          base: 'khvamli-mountain-rocky-slopes-georgia',
+          width: 1086,
+          height: 1448,
+          anchor: 'inline-khvamli-ridge',
+          dir: '/images/racha-lechkhumi',
+          description: 'Rocky limestone outcrops and evergreen forest along the ridge of the Khvamli massif above the valleys of Lechkhumi, Georgia (the country).',
+          locationName: 'Khvamli Mountain, Lechkhumi',
+          region: 'Racha-Lechkhumi and Kvemo Svaneti',
+          noCredit: true,
+          name: {
+            en: 'Rocky limestone outcrops along the ridge of the Khvamli massif in Lechkhumi, Georgia',
+            de: 'Felsige Kalksteinvorsprünge entlang des Kamms des Khvamli-Massivs in Letschchumi, Georgien',
+            fr: 'Affleurements calcaires rocheux le long de la crête du massif de Khvamli en Letchkhoumi, Géorgie',
+            es: 'Afloramientos calizos rocosos a lo largo de la cresta del macizo de Khvamli en Lechjumi, Georgia',
+            nl: 'Rotsige kalksteenformaties langs de kam van het Khvamli-massief in Letsjchoemi, Georgië',
+            cs: 'Skalnaté vápencové výchozy podél hřebene masivu Khvamli v Lečchumi, Gruzie',
+            pl: 'Skaliste wapienne wychodnie wzdłuż grani masywu Chwamli w Leczchumi, Gruzja',
+          },
+          caption: {
+            en: 'The rocky limestone ridge of the Khvamli massif, high above the valley roads of Lechkhumi.',
+            de: 'Der felsige Kalksteinkamm des Khvamli-Massivs, hoch über den Talstraßen Letschchumis.',
+            fr: 'La crête calcaire du massif de Khvamli, bien au-dessus des routes de vallée du Letchkhoumi.',
+            es: 'La cresta caliza del macizo de Khvamli, muy por encima de las carreteras del valle de Lechjumi.',
+            nl: 'De rotsige kalksteenkam van het Khvamli-massief, hoog boven de valleiwegen van Letsjchoemi.',
+            cs: 'Skalnatý vápencový hřeben masivu Khvamli, vysoko nad údolními silnicemi Lečchumi.',
+            pl: 'Skalista wapienna grań masywu Chwamli, wysoko nad dolinnymi drogami Leczchumi.',
+          },
+        },
+      ],
       address: { addressRegion: 'Lechkhumi' },
       attractions: [
         'Tvishi Family Wineries', 'Lailashi', 'Green Lake',
