@@ -1959,41 +1959,6 @@ section {
 }
 /* Native is 1672 — that is the top rung. Do not add a 2000/2400 breakpoint. */
 
-/* Zugdidi hero — replaces the generic georgia-home.jpg placeholder. ⚠️ This is
-   MESTIA, not Zugdidi: no photograph of Zugdidi exists, and this page's own H1
-   and a dedicated section make it the gateway to Svaneti, so the Svan towers
-   stand for the road's destination. Every alt/caption says so.
-   Landscape 1.51:1, native 1541 — top rung; ladder 768/1200/1541. The towers sit
-   centre-frame with the forested slope behind, so the default centre crop holds
-   them at every viewport; confirmed by rendering rather than assumed. */
-.hero--zugdidi {
-  background-image: url("/images/files/mestia-svan-tower-houses-svaneti-georgia-768.webp");
-  background-image: image-set(
-    url("/images/files/mestia-svan-tower-houses-svaneti-georgia-768.avif") type("image/avif"),
-    url("/images/files/mestia-svan-tower-houses-svaneti-georgia-768.webp") type("image/webp")
-  );
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-}
-@media (min-width: 768px) {
-  .hero--zugdidi {
-    background-image: image-set(
-      url("/images/files/mestia-svan-tower-houses-svaneti-georgia-1200.avif") type("image/avif"),
-      url("/images/files/mestia-svan-tower-houses-svaneti-georgia-1200.webp") type("image/webp")
-    );
-  }
-}
-@media (min-width: 1200px) {
-  .hero--zugdidi {
-    background-image: image-set(
-      url("/images/files/mestia-svan-tower-houses-svaneti-georgia-1541.avif") type("image/avif"),
-      url("/images/files/mestia-svan-tower-houses-svaneti-georgia-1541.webp") type("image/webp")
-    );
-  }
-}
-/* Native is 1541 — that is the top rung. Do not add a 1600/2400 breakpoint. */
-
 /* Things to Do in Lechkhumi hero — deliberately the caucasus-view frame, so this
    guide and the Lechkhumi region page it is linked from share no image at all
    (that page uses the panorama and the limestone crags).

@@ -5925,56 +5925,18 @@ export const cities = [
   {
     slug: 'zugdidi', name: 'Zugdidi', region: 'samegrelo', published: true,
     seoKey: 'zugdidi', contentKey: 'zugdidi',
-    // ⚠️ THESE ARE NOT PHOTOGRAPHS OF ZUGDIDI — none exist. Nothing in the
-    // library shows the city, the Dadiani Palace, the Enguri Dam, Anaklia, the
-    // market or Mingrelian food; the only "Dadiani Palace Zugdidi" file anywhere
-    // is a SCALE MODEL in the Miniatures Park. What this page does carry is an
-    // explicit "Gateway to Svaneti" section — it is in the H1, names Svaneti 11
-    // times and Mestia 7 — so Svan imagery is used strictly in that role, and
-    // every alt/caption says Svaneti and frames it as the road's destination.
-    // Never presented as Zugdidi itself.
-    // Both frames already head other pages (Mestia city / Svan Towers) — only two
-    // Svan-tower photographs exist, so that overlap is unavoidable.
-    image: '/images/files/mestia-svan-tower-houses-svaneti-georgia-1541.webp',
-    imageAvif: '/images/files/mestia-svan-tower-houses-svaneti-georgia-1541.avif',
-    heroClass: 'hero--zugdidi',
-    heroPreload: '/images/files/mestia-svan-tower-houses-svaneti-georgia-1200.avif',
-    ogImage: { src: '/images/files/mestia-svan-tower-houses-svaneti-georgia-og.jpg', width: 1200, height: 630 },
-    imageMeta: {
-      width: 1541,
-      height: 1020,
-      imageId: 'hero-image',
-      name: 'Svan tower houses in Mestia, Upper Svaneti — the destination of the road north from Zugdidi, Georgia',
-      description: 'Svan stone tower houses in Mestia, seen past a dry-stone wall, with shingle-roofed dwellings at their base and a forested slope behind. Mestia is the administrative centre of Mestia Municipality in Samegrelo-Zemo Svaneti, reached from Zugdidi by the road north, Georgia (the country).',
-      // contentLocation is MESTIA, where the photograph was taken — reused
-      // verbatim from the Mestia city page rather than claiming Zugdidi. Both
-      // towns sit in the same administrative region, Samegrelo-Zemo Svaneti.
-      locationName: 'Mestia, Mestia Municipality, Samegrelo-Zemo Svaneti, Georgia',
-      locality: 'Mestia',
-      region: 'Samegrelo-Zemo Svaneti',
-      country: 'GE',
-      geo: { lat: 43.04556, lng: 42.72972 },
-      // No noCredit: matches how the Mestia city page and the Svan Towers page
-      // already treat these same photographs (default brand credit).
-      alt: {
-        en: 'Svan stone tower houses in Mestia, Upper Svaneti, reached by the road north from Zugdidi, Georgia',
-        de: 'Svanische Wohntürme in Mestia, Oberswanetien, erreichbar über die Straße von Zugdidi nach Norden, Georgien',
-        fr: 'Tours-maisons svanes à Mestia, en Haute-Svanétie, au bout de la route qui monte depuis Zougdidi, Géorgie',
-        es: 'Casas-torre svanas en Mestia, en la Alta Esvanetia, al final de la carretera que sube desde Zugdidi, Georgia',
-        nl: 'Svanetische woontorens in Mestia, Boven-Svanetië, aan het eind van de weg noordwaarts vanuit Zugdidi, Georgië',
-        cs: 'Svanské obytné věže v Mestii v Horní Svanetii, na konci silnice vedoucí na sever ze Zugdidi, Gruzie',
-        pl: 'Swańskie wieże mieszkalne w Mestii w Górnej Swanetii, na końcu drogi biegnącej na północ z Zugdidi, Gruzja',
-      },
-      caption: {
-        en: 'The Svan tower houses of Mestia — the destination of the mountain road that begins in Zugdidi.',
-        de: 'Die svanischen Wohntürme von Mestia – das Ziel der Bergstraße, die in Zugdidi beginnt.',
-        fr: 'Les tours-maisons svanes de Mestia — le terminus de la route de montagne qui part de Zougdidi.',
-        es: 'Las casas-torre svanas de Mestia: el destino de la carretera de montaña que arranca en Zugdidi.',
-        nl: 'De Svanetische woontorens van Mestia — het eindpunt van de bergweg die in Zugdidi begint.',
-        cs: 'Svanské obytné věže v Mestii — cíl horské silnice, která začíná v Zugdidi.',
-        pl: 'Swańskie wieże mieszkalne w Mestii — cel górskiej drogi, która zaczyna się w Zugdidi.',
-      },
-    },
+    // ⚠️ NO HERO PHOTOGRAPH. There is no image of Zugdidi anywhere in the
+    // library — not the city, the Dadiani Palace, the Enguri Dam, Anaklia, the
+    // market or Mingrelian food (the only "Dadiani Palace Zugdidi" file is a
+    // SCALE MODEL in the Miniatures Park). A Mestia/Svaneti hero was shipped
+    // briefly under this page's gateway-to-Svaneti framing and then REMOVED at
+    // the owner's request: a photograph of a mountain village three hours up the
+    // road should not front the Zugdidi city page. Back to the placeholder every
+    // un-illustrated page uses, so og:image auto-derives from it as before.
+    // ⚠️ Do NOT re-add a Svaneti hero here. The body figure below stays: it
+    // sits inside the page's own "Gateway to Svaneti" section, where Svan towers
+    // are what the text is actually about.
+    image: '/images/files/georgia-home.jpg',
     // ⚠️ `portraitInlines`, not `imageObjects`: these files ship WITHOUT the
     // `-<width>w` suffix, and CityPage renders this list itself per `afterChunk`
     // (no figure is spliced into the body). It also resolves alt/caption per
