@@ -12041,7 +12041,133 @@ export const sites = [
     slug: 'borjomi-central-park', name: 'Borjomi Central Park',
     parentType: 'city', parent: 'borjomi', published: true,
     seoKey: 'borjomiCentralPark', contentKey: 'borjomiCentralPark',
-    image: '/images/files/georgia-home.jpg',
+    // Hero: the turquoise glass-domed mineral-water pavilion (owner's photo), via
+    // the `.hero--borjomi-central-park` image-set() ladder. REPLACES the site-wide
+    // georgia-home.jpg placeholder, which this page shipped as hero AND og:image.
+    // ⚠️ georgia-home.jpg itself must stay — it is the fallback `image` for ~200
+    // other registry entries plus several page components, so only this page's
+    // reference moved. This page previously had NO imageMeta, no ladder, no AVIF
+    // and ZERO ImageObject nodes in its graph.
+    //
+    // ⚠️ FIRST REAL BORJOMI PHOTOGRAPHS in the project. Until now the only Borjomi
+    // frame anywhere was `/images/files/borjomi-town.jpg` — a snowy suburban back
+    // street under power lines, which illustrates nothing these pages describe and
+    // is NOT touched here. These two frames are Central Park specifically, so they
+    // stay on this page; they are not borrowed up to the Borjomi city page.
+    //
+    // ⚠️ The hero is the project's FIRST 16:9 SOURCE (1672x941) and its first
+    // FOUR-rung ladder: 768/1200/1600/1672. 1672 is the native ceiling — no 2400
+    // rung, nothing upscaled. The inline statue is the usual 4:3 (1448x1086) with
+    // the usual 768/1200/1448. All 16 files copied byte-identical from the package.
+    image: '/images/borjomi/borjomi-central-park-pavilion-georgia-1672.webp',
+    imageAvif: '/images/borjomi/borjomi-central-park-pavilion-georgia-1672.avif',
+    heroClass: 'hero--borjomi-central-park',
+    // LCP hero preload: the 1200 AVIF rung with fetchpriority=high (none before).
+    // Dedicated 1.91:1 social image; the matching -og.webp ships alongside but is
+    // unreferenced — useSEO/prerender emit a single og:image.
+    heroPreload: '/images/borjomi/borjomi-central-park-pavilion-georgia-1200.avif',
+    ogImage: { src: '/images/borjomi/borjomi-central-park-pavilion-georgia-og.jpg', width: 1200, height: 630 },
+    // Hero image SEO/AEO metadata (owner's own photos → brand credit, applied by
+    // SitePage's default credit path — no `noCredit`; see the credit note below).
+    // The hero is a CSS background (no <img alt>), so the localized alt lives here
+    // and feeds og:image:alt / twitter:image:alt per locale, while `caption` feeds
+    // the hero ImageObject. Maps from borjomi-central-park-SEO-package.md.
+    //
+    // ⚠️ ONE STRING IS **NOT** VERBATIM FROM THE PACKAGE — the cs alt. The package
+    // table ships `Mineral<U+00AD>ní` — i.e. the word is misspelled `Mineralní`
+    // (plain `a`, missing the acute) AND carries an invisible SOFT HYPHEN. Correct
+    // Czech is `Minerální`, which is also what this page's own H2 uses ("Minerální
+    // pramen"). The corrected form is used here. Every other one of the 28
+    // alt/caption strings is byte-identical to the package.
+    //
+    // ⚠️ DATES: the captions say the spa park dates from the 1850s, which matches
+    // the body ("created in 1850"). The package's global notes claim Borjomi water
+    // has been "bottled since 1890" while the body says 1854 — the captions state
+    // NO bottling year, so the disagreement does not ship. Do not add one.
+    imageMeta: {
+      width: 1672, height: 941, imageId: 'hero-image',
+      name: 'Borjomi Central Park mineral water pavilion',
+      description: "The turquoise glass-domed pavilion over the mineral spring in Borjomi Central Park, seen across lawns, clipped shrubs and marigold beds, with the wooded slopes of the Borjomi Gorge rising behind, Samtskhe-Javakheti, Georgia (the country).",
+      locationName: 'Borjomi Central Park, Borjomi, Samtskhe-Javakheti, Georgia',
+      locality: 'Borjomi', region: 'Samtskhe-Javakheti', country: 'GE',
+      alt: {
+        en: 'The turquoise glass-domed mineral water pavilion in Borjomi Central Park, set among lawns, flowerbeds and forested slopes, Samtskhe-Javakheti, Georgia',
+        de: 'Der türkisfarbene, glasgedeckte Mineralwasserpavillon im Zentralpark von Borjomi, umgeben von Rasenflächen, Blumenbeeten und bewaldeten Hängen, Samzche-Dschawachetien, Georgien',
+        fr: "Le pavillon d'eau minérale à coupole de verre turquoise dans le parc central de Borjomi, entouré de pelouses, de parterres de fleurs et de pentes boisées, Samtskhé-Djavakhétie, Géorgie",
+        es: 'El pabellón de agua mineral con cúpula de cristal turquesa en el parque central de Borjomi, entre céspedes, parterres y laderas boscosas, Samtskhe-Yavajeti, Georgia',
+        nl: 'Het mineraalwaterpaviljoen met turkooizen glazen koepel in het centraal park van Borjomi, tussen gazons, bloembedden en beboste hellingen, Samtsche-Dzjavacheti, Georgië',
+        // ⚠️ Corrected — see the note above. Package ships `Mineral­ní`.
+        cs: 'Minerální pavilon s tyrkysovou skleněnou kupolí v centrálním parku v Borjomi, obklopený trávníky, záhony a zalesněnými svahy, Samcche-Džavacheti, Gruzie',
+        pl: 'Pawilon wody mineralnej z turkusową szklaną kopułą w parku centralnym w Borjomi, wśród trawników, kwietników i zalesionych zboczy, Samcche-Dżawachetia, Gruzja',
+      },
+      caption: {
+        en: "Borjomi Central Park — the turquoise glass-domed pavilion over the mineral spring at the heart of the 1850s spa park in the wooded Borjomi Gorge, source of Georgia's famous Borjomi water.",
+        de: 'Der Zentralpark von Borjomi – der türkisfarbene Glaskuppelpavillon über der Mineralquelle im Herzen des um 1850 angelegten Kurparks in der bewaldeten Borjomi-Schlucht, Quelle des berühmten georgischen Borjomi-Wassers.',
+        fr: 'Le parc central de Borjomi — le pavillon à coupole de verre turquoise au-dessus de la source minérale, au cœur du parc thermal créé dans les années 1850 dans la gorge boisée de Borjomi, source de la célèbre eau géorgienne Borjomi.',
+        es: 'El parque central de Borjomi: el pabellón de cúpula de cristal turquesa sobre el manantial mineral, en el corazón del parque termal creado en la década de 1850 en la boscosa garganta de Borjomi, origen de la famosa agua georgiana Borjomi.',
+        nl: 'Het centraal park van Borjomi — het paviljoen met turkooizen glazen koepel boven de minerale bron, in het hart van het rond 1850 aangelegde kuurpark in de beboste Borjomi-kloof, bron van het beroemde Georgische Borjomi-water.',
+        cs: 'Centrální park v Borjomi — pavilon s tyrkysovou skleněnou kupolí nad minerálním pramenem v srdci lázeňského parku z 50. let 19. století v zalesněné Borjomské soutěsce, zdroj proslulé gruzínské vody Borjomi.',
+        pl: 'Park centralny w Borjomi — pawilon z turkusową szklaną kopułą nad źródłem mineralnym w sercu uzdrowiskowego parku z lat 50. XIX wieku w zalesionym wąwozie Borjomi, źródło słynnej gruzińskiej wody Borjomi.',
+      },
+    },
+    // ONE contextual inline body photo — the bronze photographer statue — rendered
+    // as a real <figure class="body-img"> spliced into each locale's body HTML
+    // (this page had no inline images before). This array supplies its @graph node
+    // via SitePage's inlineImageObjects map: stable @id, contentUrl at the top rung
+    // (these files ship WITHOUT the `w` suffix), localized name (=alt) + caption,
+    // brand credit, and NEVER representativeOfPage — that stays the hero's.
+    // `dir` points it at /images/borjomi/ instead of the default /images/files/.
+    //
+    // Splice point: after LINE INDEX 9 in all 7 locales (the body is 23 lines and
+    // every locale shares the shape, H2s at 1/3/5/8/13/15). Line 9 is the first
+    // paragraph under the "The park" H2 — the walking-paths/promenade paragraph
+    // ("The walking paths run along both banks of the Borjomula…"), which is the
+    // page's strolling-the-park section and the natural home for a promenade
+    // sculpture.
+    // ⚠️ The caption calls it "one of the playful bronze sculptures along the
+    // promenade" — the page names the promenade but never mentions sculptures. That
+    // plural is the package's approved wording and is a description of the setting,
+    // not a claim the body has to support. Left verbatim; do not "align" it to the
+    // body by inventing a replacement.
+    //
+    // ⚠️ CREDIT — the package flagged `credit: "brand-CONFIRM"` (EXIF stripped),
+    // the same wording every recent package uses. Ownership is confirmed at PROJECT
+    // level: both frames are owner originals from
+    // `Pictures for the website (Final)/AAA completed/Borjomi Park/`, at exactly the
+    // package's native sizes. Brand credit is the site-wide default; the only two
+    // `noCredit` sets (Martvili Canyon, Khvamli) came from OUTSIDE the owner's
+    // library and proved to be licensed stock. If that is ever disproved, add
+    // `noCredit: true` here and to imageMeta rather than editing the fields away.
+    inlineImageObjects: [
+      {
+        base: 'borjomi-central-park-photographer-statue-georgia',
+        width: 1448,
+        height: 1086,
+        anchor: 'inline-photographer-statue',
+        dir: '/images/borjomi',
+        description: 'A whimsical bronze sculpture of an old-fashioned photographer — the figure\'s body an antique box camera standing on tripod legs — beside a paved path in Borjomi Central Park, with clipped hedges, lawns and autumn trees behind, Samtskhe-Javakheti, Georgia (the country).',
+        locationName: 'Borjomi Central Park, Borjomi, Samtskhe-Javakheti, Georgia',
+        locality: 'Borjomi', region: 'Samtskhe-Javakheti',
+        name: {
+          en: 'A whimsical bronze statue of an old-fashioned photographer with a box camera on tripod legs in Borjomi Central Park, Georgia',
+          de: 'Eine verspielte Bronzestatue eines altmodischen Fotografen mit einer Boxkamera auf Stativbeinen im Zentralpark von Borjomi, Georgien',
+          fr: "Une statue en bronze fantaisiste d'un photographe à l'ancienne avec un appareil à soufflet sur des pieds de trépied, dans le parc central de Borjomi, Géorgie",
+          es: 'Una pintoresca estatua de bronce de un fotógrafo antiguo con una cámara de cajón sobre patas de trípode, en el parque central de Borjomi, Georgia',
+          nl: 'Een speels bronzen beeld van een ouderwetse fotograaf met een boxcamera op statiefpoten in het centraal park van Borjomi, Georgië',
+          cs: 'Hravá bronzová socha starosvětského fotografa s krabicovým fotoaparátem na stativových nohách v centrálním parku v Borjomi, Gruzie',
+          pl: 'Żartobliwy brązowy posąg dawnego fotografa ze skrzynkowym aparatem na nogach statywu w parku centralnym w Borjomi, Gruzja',
+        },
+        caption: {
+          en: 'One of the playful bronze sculptures along the promenade of Borjomi Central Park — a photographer whose body is an old box camera on tripod legs.',
+          de: 'Eine der verspielten Bronzeskulpturen an der Promenade des Zentralparks von Borjomi – ein Fotograf, dessen Körper eine alte Boxkamera auf Stativbeinen ist.',
+          fr: "L'une des sculptures en bronze ludiques de la promenade du parc central de Borjomi — un photographe dont le corps est un vieil appareil photo à soufflet sur des pieds de trépied.",
+          es: 'Una de las divertidas esculturas de bronce del paseo del parque central de Borjomi: un fotógrafo cuyo cuerpo es una vieja cámara de cajón sobre patas de trípode.',
+          nl: 'Een van de speelse bronzen sculpturen langs de promenade van het centraal park van Borjomi — een fotograaf wiens lichaam een oude boxcamera op statiefpoten is.',
+          cs: 'Jedna z hravých bronzových soch na promenádě centrálního parku v Borjomi — fotograf, jehož tělem je starý krabicový fotoaparát na stativových nohách.',
+          pl: 'Jedna z żartobliwych brązowych rzeźb na promenadzie parku centralnego w Borjomi — fotograf, którego ciałem jest stary skrzynkowy aparat na nogach statywu.',
+        },
+      },
+    ],
   },
   {
     slug: 'borjomi-sulphur-pools', name: 'Borjomi Sulphur Pools',

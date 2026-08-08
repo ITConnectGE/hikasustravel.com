@@ -3405,6 +3405,63 @@ section {
   }
 }
 /* No rung above 1448 exists (Dmanisi Sioni). Do not add a 1600/2400 breakpoint. */
+/* Borjomi Central Park hero — per-page CSS background, REPLACING the generic
+   georgia-home.jpg placeholder this page shipped with. ⚠️ georgia-home.jpg is NOT
+   deleted: it is the site-wide fallback for ~200 other registry entries, so only
+   this page's reference moved. Served from the new /images/borjomi/ folder.
+   ⚠️ FIRST 16:9 HERO ON THE SITE and the first FOUR-rung ladder: native is
+   1672x941 (1.777), not the usual 4:3, so the rungs are 768/1200/1600/1672 with
+   breakpoints at 768/1200/1600 — the same four-step shape as .hero--juta, whose
+   top rung is 2400. 1672 is the native ceiling; there is NO 2400 rung and nothing
+   is upscaled.
+   ⚠️ `background-position: 30% center` — NOT centre. A 16:9 source in a 100dvh
+   hero is the most aggressive crop on the site: a 390px phone keeps only 26% of
+   the frame's width (360px keeps 32%). The pavilion sits left of centre
+   (x ≈ 0.24–0.47), so at `center` the dome is SLICED IN HALF at the left edge and
+   the hero becomes trees and colonnade — verified by rendering the crop. At 30%
+   the whole dome is centred with the path and flowerbed leading in, at every width
+   from 360 up. The offset is nearly inert at >=1366px (there the frame is almost
+   uncropped), so desktop looks the same either way — do not "tidy" it to center on
+   the strength of a desktop screenshot.
+   Vertically nothing is ever cropped on a phone (a 16:9 source scaled to fill a
+   tall viewport overflows horizontally only), so the position's Y stays `center`.
+   No extra scrim — the shared .coverme::after overlay carries the text. The plain
+   url() line = image-set() fallback for browsers without image-set(). */
+.hero--borjomi-central-park {
+  background-image: url("/images/borjomi/borjomi-central-park-pavilion-georgia-1200.webp");
+  background-image: image-set(
+    url("/images/borjomi/borjomi-central-park-pavilion-georgia-768.avif") type("image/avif"),
+    url("/images/borjomi/borjomi-central-park-pavilion-georgia-768.webp") type("image/webp")
+  );
+  background-position: 30% center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+@media (min-width: 768px) {
+  .hero--borjomi-central-park {
+    background-image: image-set(
+      url("/images/borjomi/borjomi-central-park-pavilion-georgia-1200.avif") type("image/avif"),
+      url("/images/borjomi/borjomi-central-park-pavilion-georgia-1200.webp") type("image/webp")
+    );
+  }
+}
+@media (min-width: 1200px) {
+  .hero--borjomi-central-park {
+    background-image: image-set(
+      url("/images/borjomi/borjomi-central-park-pavilion-georgia-1600.avif") type("image/avif"),
+      url("/images/borjomi/borjomi-central-park-pavilion-georgia-1600.webp") type("image/webp")
+    );
+  }
+}
+@media (min-width: 1600px) {
+  .hero--borjomi-central-park {
+    background-image: image-set(
+      url("/images/borjomi/borjomi-central-park-pavilion-georgia-1672.avif") type("image/avif"),
+      url("/images/borjomi/borjomi-central-park-pavilion-georgia-1672.webp") type("image/webp")
+    );
+  }
+}
+/* 1672 is the native ceiling (Borjomi Central Park). Do not add a 2400 breakpoint. */
 .centerme {
   text-align: center !important;
 }
