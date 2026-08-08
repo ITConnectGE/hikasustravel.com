@@ -17,9 +17,21 @@ const SITE_URL = 'https://www.hikasustravel.com'
 // The four ways into the Destinations section. Wineries are intentionally
 // omitted until winery pages are published.
 const SUBHUBS = [
-  { to: '/georgia/regions', image: '/images/files/georgia-home.jpg', labelKey: 'nav.regions' },
+  // ⚠️ Card covers must live under /images/files/ AND have a matching file in
+  // /images/files-thumb/ — BlurUpBackground derives the blur placeholder by
+  // string-replacing that folder. A path outside /images/files/ silently makes
+  // the placeholder resolve to the full-size file instead.
+  // Regions: broad Georgian countryside, no people, no single landmark — it
+  // stands for regional variety rather than one place. (Ushguli was the obvious
+  // scenic pick and was rejected twice over: its provenance is unresolved
+  // — flagged as an upscaled stock download — and Ushguli is a featured city on
+  // this same page, so the card would have sat beside an identical tile.)
+  { to: '/georgia/regions', image: '/images/files/kakheti-vineyard.jpg', labelKey: 'nav.regions' },
   { to: '/georgia/cities', image: '/images/files/tbilisi-old-town-narikala-mtkvari-georgia-1200.webp', labelKey: 'nav.cities' },
-  { to: '/georgia/places-to-visit', image: '/images/files/georgia-home.jpg', labelKey: 'nav.placesToVisit' },
+  // Places to visit: a recognisable landmark — the Ananuri fortress and church
+  // above the Zhinvali reservoir. Distinct from the Regions cover, from the hero
+  // and from all 18 featured-city tiles on this page.
+  { to: '/georgia/places-to-visit', image: '/images/files/Ananuri Fortress and Zhinvali Reservoir.jpg', labelKey: 'nav.placesToVisit' },
 ]
 
 // Existing important destination pages — the published city guides. Entries
