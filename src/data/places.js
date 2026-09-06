@@ -8821,6 +8821,27 @@ export const cities = [
     noHero: true,
     heroTitleAsH1: true,
     noAutolink: true,
+    // Companion guide at /armenia/garni/things-to-do — the same block shape
+    // Yerevan and every Georgian city use, and the reason no new routing was
+    // needed: the shared armenia/:citySlug/things-to-do route already existed.
+    // The guide inherits this record's `noAutolink` (ThingsToDoCityPage reads
+    // the parent place's flag), so its body stays free of editorial links too.
+    thingsToDo: {
+      seoKey: 'thingsToDoGarni', contentKey: 'thingsToDoGarni',
+      noHero: true,
+      address: { addressLocality: 'Garni' },
+      // Drawn from the guide's own body, in the order it covers them. Feeds the
+      // page's ItemList node and the search index's keywords. Everything here
+      // is IN Garni: Geghard Monastery and the Charents Arch appear in the body
+      // as a continuation up the valley and a stop on the road from Yerevan,
+      // and are deliberately absent — listing them would assert they sit in the
+      // village. Same rule Yerevan's block already follows for its day trips.
+      attractions: [
+        'Temple of Garni', 'Garni royal complex', 'Garni bathhouse',
+        'Symphony of Stones', 'Azat gorge', 'Garni village',
+        'Saint Mashtots Church',
+      ],
+    },
   },
   // ---------------------------------------------------------------------------
   // Planned Armenian city guides, scaffolded ahead of their content.
