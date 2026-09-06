@@ -8911,7 +8911,33 @@ export const cities = [
   { slug: 'oshakan', name: 'Oshakan', region: 'aragatsotn', published: false, country: 'armenia' },
   { slug: 'sevan', name: 'Sevan', region: 'gegharkunik', published: false, country: 'armenia' },
   { slug: 'sisian', name: 'Sisian', region: 'syunik', published: false, country: 'armenia' },
-  { slug: 'tsaghkadzor', name: 'Tsaghkadzor', region: 'kotayk', published: false, country: 'armenia' },
+  // Tsaghkadzor — the scaffolded entry completed IN PLACE, like Goris before
+  // it: same slug, same region, same country, now published with its content
+  // and SEO keys. It keeps the /armenia/tsaghkadzor URL the scaffold always
+  // implied, one level under the country while carrying `region: 'kotayk'`.
+  //
+  // Parent-ready with nothing pre-created: publishing it as a CITY is what
+  // lets a Things to Do in Tsaghkadzor guide and a Kecharis Monastery
+  // attraction hang off this record later, through the shared
+  // armenia/:citySlug/things-to-do and armenia/:citySlug/:sub routes that
+  // already exist. No `thingsToDo` block is added here, so no CTA and no
+  // /things-to-do URL exist yet, and no Kecharis record is created.
+  //
+  // `noHero` while no approved Tsaghkadzor photograph exists — deliberately
+  // NOT a borrowed ski-resort image: Gudauri is Georgian and any other
+  // snow-slope photo would misrepresent this mountain. `noAutolink` because
+  // the body ships with zero editorial links by request (Kecharis, Lake
+  // Sevan, Sevanavank, Dilijan, Garni, Geghard and Mount Ararat stay plain
+  // text); `heroTitleAsH1` because the supplied H1 is the authored headline.
+  {
+    slug: 'tsaghkadzor', name: 'Tsaghkadzor', region: 'kotayk', published: true, country: 'armenia',
+    seoKey: 'tsaghkadzor', contentKey: 'tsaghkadzor',
+    // AM-KT is Kotayk's ISO 3166-2 code; the coordinates are the town's.
+    geoMeta: { region: 'AM-KT', placename: 'Tsaghkadzor', lat: '40.5333', lng: '44.7167' },
+    noHero: true,
+    heroTitleAsH1: true,
+    noAutolink: true,
+  },
 ]
 
 // ---------------------------------------------------------------------------
