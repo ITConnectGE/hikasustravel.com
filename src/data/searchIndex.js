@@ -58,6 +58,7 @@ const STATIC_PAGES = [
   { path: 'about-georgia', seoKey: 'aboutGeorgia', type: 'info' },
   { path: 'georgian-lari-currency-guide', seoKey: 'lariGuide', type: 'info' },
   { path: 'georgia-visa-entry-requirements', seoKey: 'visaGuide', type: 'info' },
+  { path: 'armenia-visa-entry-requirements', seoKey: 'armeniaVisaGuide', type: 'info' },
   { path: 'languages-of-georgia', seoKey: 'languagesGuide', type: 'info' },
   { path: 'kutaisi-international-airport', seoKey: 'airportGuide', type: 'info' },
   { path: 'tbilisi-international-airport', seoKey: 'tbilisiAirportGuide', type: 'info' },

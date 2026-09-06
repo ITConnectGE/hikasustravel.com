@@ -72,6 +72,7 @@ export function AppRoutes() {
           <Route path="about-georgia" element={<AboutGeorgiaPage />} />
           <Route path="georgian-lari-currency-guide" element={<CurrencyGuidePage />} />
           <Route path="georgia-visa-entry-requirements" element={<VisaPage />} />
+          <Route path="armenia-visa-entry-requirements" element={<VisaPage country="armenia" />} />
           <Route path="languages-of-georgia" element={<LanguagesPage />} />
           <Route path="kutaisi-international-airport" element={<AirportGuidePage />} />
           <Route path="tbilisi-international-airport" element={<TbilisiAirportGuidePage />} />

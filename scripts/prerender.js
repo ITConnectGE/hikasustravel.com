@@ -289,6 +289,7 @@ const seoPageMap = {
   'about-georgia': 'aboutGeorgia',
   'georgian-lari-currency-guide': 'lariGuide',
   'georgia-visa-entry-requirements': 'visaGuide',
+  'armenia-visa-entry-requirements': 'armeniaVisaGuide',
   'languages-of-georgia': 'languagesGuide',
   'kutaisi-international-airport': 'airportGuide',
   'tbilisi-international-airport': 'tbilisiAirportGuide',
@@ -325,6 +326,7 @@ const staticPageImages = {
   // Armenia's own 1.91:1 social crop. Without it this page inherited the
   // site-wide georgia-home.jpg default — a Georgian photo on an Armenian page.
   'armenia': '/images/files/khor-virap-monastery-ararat-armenia-og.jpg',
+  'armenia-visa-entry-requirements': '/images/files/khor-virap-monastery-ararat-armenia-og.jpg',
 }
 
 // ---------------------------------------------------------------------------

@@ -62,6 +62,7 @@ const STATIC_PAGES = [
   ['blog', 'blog'],
   ['embassies', 'embassies'],
   ['georgia-visa-entry-requirements', 'visaGuide'],
+  ['armenia-visa-entry-requirements', 'armeniaVisaGuide'],
   ['georgian-lari-currency-guide', 'lariGuide'],
   ['languages-of-georgia', 'languagesGuide'],
   ['tbilisi-international-airport', 'tbilisiAirportGuide'],
