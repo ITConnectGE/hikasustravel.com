@@ -289,7 +289,12 @@ export default function SitePage() {
     // a dedicated social crop instead via `jsonLdImage` (first consumer: Batumi
     // Boulevard, whose og:image/twitter:image use the same 1.91:1 file). Entries
     // that omit the field are unchanged — `undefined || hero` is the hero.
-    const primaryImage = `${SITE_URL}${site.jsonLdImage || heroImage}`
+    // A site with NO photograph must emit no `image`: building the URL
+    // unconditionally produced the literal "…hikasustravel.comundefined".
+    // Mirrors the build-time guard in scripts/seo-jsonld.js exactly, so the
+    // prerendered and hydrated graphs cannot disagree.
+    const primarySrc = site.jsonLdImage || heroImage
+    const imageProp = primarySrc ? { image: `${SITE_URL}${primarySrc}` } : {}
     const primaryNode =
       site.schemaType === 'TravelGuide' || site.schemaType === 'Article'
         ? {
@@ -298,7 +303,7 @@ export default function SitePage() {
             headline: (page && page.heroTitle) || site.name,
             description: seo.description,
             url,
-            image: primaryImage,
+            ...imageProp,
             inLanguage: lang,
             about: { '@type': 'Place', name: 'Kakheti, Georgia' },
           }
@@ -307,7 +312,7 @@ export default function SitePage() {
             name: site.name,
             description: seo.description,
             url,
-            image: primaryImage,
+            ...imageProp,
             // Reads the site's country instead of asserting Georgia, so an
             // attraction under another country never claims the wrong one.
             containedInPlace: { '@type': 'Country', name: countryName(country) },

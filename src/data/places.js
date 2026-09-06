@@ -14259,11 +14259,19 @@ export const sites = [
   // than the site-wide georgia-home.jpg default, so the og:image and the
   // JSON-LD image are at least Armenian; swap both for a real Amberd photo when
   // one arrives.
+  //
+  // `noAutolink` added after the fact: the owner brief for this page asked for
+  // ZERO editorial body links, but the record shipped without the flag and the
+  // shared autolinker turned Yerevan (x3) and — once Garni published — Garni
+  // into links inside the prose. Every Armenia page shipped since carries the
+  // flag; this brings Amberd in line rather than leaving one page linking and
+  // the rest not.
   {
     slug: 'amberd-fortress', name: 'Amberd Fortress',
     parentType: 'region', parent: 'aragatsotn', published: true,
     seoKey: 'amberdFortress', contentKey: 'amberdFortress',
     noHero: true,
+    noAutolink: true,
     image: '/images/files/khor-virap-monastery-ararat-armenia-og.jpg',
   },
   // Etchmiadzin is NOT here: it is a published CITY (see the cities array
@@ -14408,11 +14416,15 @@ export const getSite = (slug) => sites.find((s) => s.slug === slug) || null
 // else yet, so a crumb pointing at /armenia/cities would be a dead link — the
 // trail omits the hub level instead of inventing a page. Georgia declares all
 // three, so every Georgian trail is byte-identical to what it has always been.
+// `socialImage` is the og:image/twitter:image fallback for a destination page
+// in that country that has no photograph of its own. Georgia's is the value
+// every page used to inherit unconditionally, so Georgian pages are unchanged;
+// Armenia's is its own 1.91:1 crop, the same one the /armenia landing uses.
 const COUNTRIES = {
-  georgia: { base: '/georgia', name: 'Georgia', code: 'GE', regionsHub: true, citiesHub: true, placesHub: true },
+  georgia: { base: '/georgia', name: 'Georgia', code: 'GE', regionsHub: true, citiesHub: true, placesHub: true, socialImage: '/images/files/georgia-home.jpg' },
   // Armenia publishes all three sub-hubs. `placesHub` is the single field that
   // drives the hub route, the landing tile and the attraction breadcrumb level.
-  armenia: { base: '/armenia', name: 'Armenia', code: 'AM', regionsHub: true, citiesHub: true, placesHub: true },
+  armenia: { base: '/armenia', name: 'Armenia', code: 'AM', regionsHub: true, citiesHub: true, placesHub: true, socialImage: '/images/files/khor-virap-monastery-ararat-armenia-og.jpg' },
 }
 export const DEFAULT_COUNTRY = 'georgia'
 /** A record's country id, defaulting to Georgia for every record without one. */
@@ -14422,6 +14434,12 @@ const countryConf = (country) => COUNTRIES[country] || COUNTRIES[DEFAULT_COUNTRY
 export const countryBase = (country) => countryConf(country).base
 /** Country name as asserted in schema.org `containedInPlace`. */
 export const countryName = (country) => countryConf(country).name
+/**
+ * og:image/twitter:image fallback for a destination page in this country that
+ * has no image of its own. NOT used for JSON-LD: a page with no photograph
+ * still emits no ImageObject, so this never claims a page depicts this place.
+ */
+export const countrySocialImage = (country) => countryConf(country).socialImage
 /** ISO country code as asserted in schema.org `addressCountry`. */
 export const countryCode = (country) => countryConf(country).code
 /** That country's regions hub, e.g. '/armenia/regions'. */
@@ -14534,6 +14552,8 @@ export function publishedDestinationPages() {
     pages.push({
       path: cleanPath(regionPath(r.slug)), seoKey: r.seoKey, image: r.image,
       geo: r.geoMeta,
+      // Drives the country-aware og:image fallback in prerender.js.
+      country: countryOf(r),
       // The region branch was the only one of the five here that dropped these
       // extras, so a region setting ogImage/imageMeta/heroPreload rendered them
       // client-side but never into the prerendered <head> — the same gap the
@@ -14551,6 +14571,7 @@ export function publishedDestinationPages() {
         path: cleanPath(thingsToDoPath(r.slug)),
         seoKey: r.thingsToDo.seoKey,
         image: r.thingsToDo.image || r.image,
+        country: countryOf(r),
         // Same optional image-SEO extras the city/site branches carry. Without
         // these, a things-to-do block that sets ogImage/imageMeta/heroPreload
         // renders them client-side but NOT into the prerendered <head>, so
@@ -14566,6 +14587,7 @@ export function publishedDestinationPages() {
   for (const c of cities) if (c.published) {
     pages.push({
       path: cleanPath(cityPath(c.slug)), seoKey: c.seoKey, image: c.image,
+      country: countryOf(c),
       // Optional per-place geo (`geoMeta`) for the page's geo.region /
       // geo.placename / geo.position / ICBM tags. A record without it emits no
       // geo tags at all — better than the hardcoded Tbilisi every page used to
@@ -14585,6 +14607,7 @@ export function publishedDestinationPages() {
         path: cleanPath(thingsToDoPath(c.slug)),
         seoKey: c.thingsToDo.seoKey,
         image: c.thingsToDo.image || c.image,
+        country: countryOf(c),
         // Same optional image-SEO extras as the city branch above — see the
         // region thingsToDo branch for why these are required (first consumer:
         // Batumi's things-to-do page).
@@ -14598,6 +14621,7 @@ export function publishedDestinationPages() {
   }
   for (const s of sites) if (s.published) pages.push({
     path: cleanPath(sitePath(s)), seoKey: s.seoKey, image: s.image,
+    country: countryOfSite(s),
     // Optional image-SEO extras (only sites that define them). The dedicated
     // social image + its dimensions and the per-locale alt text feed the static
     // og:image / og:image:alt tags emitted by prerender.js.

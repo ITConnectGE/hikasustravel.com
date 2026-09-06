@@ -240,7 +240,12 @@ export function createJsonLdBuilder({ seoFor }) {
       // a dedicated social crop instead via `jsonLdImage` (first consumer: Batumi
       // Boulevard, whose og:image/twitter:image use the same 1.91:1 file). Entries
       // that omit the field are unchanged — `undefined || hero` is the hero.
-      const primaryImage = `${SITE_URL}${s.jsonLdImage || s.image}`
+      // A site with NO photograph must emit no `image` at all. Building the URL
+      // unconditionally produced the literal "…hikasustravel.comundefined", since
+      // `${SITE_URL}${undefined}` stringifies. Guarded the way the cities and
+      // regions branches already are; inert for every site that has an image.
+      const primarySrc = s.jsonLdImage || s.image
+      const imageProp = primarySrc ? { image: `${SITE_URL}${primarySrc}` } : {}
       const primary = isArticleType
         ? {
             '@type': s.schemaType,
@@ -248,7 +253,7 @@ export function createJsonLdBuilder({ seoFor }) {
             headline: heroTitle(s.contentKey) || s.name,
             description: seo.description,
             url,
-            image: primaryImage,
+            ...imageProp,
             inLanguage: lang,
           }
         : {
@@ -256,7 +261,7 @@ export function createJsonLdBuilder({ seoFor }) {
             name: s.name,
             description: seo.description,
             url,
-            image: primaryImage,
+            ...imageProp,
             containedInPlace: { '@type': 'Country', name: countryName(country) },
           }
       const trail = [HOME, countryCrumb(country)]

@@ -24,7 +24,7 @@ const { withTrailingSlash } = await import(
 
 // Destination registry (regions / cities / sites) — published detail pages and
 // the legacy flat-city URLs that must redirect to their new nested location.
-const { publishedDestinationPages, legacyRedirects } = await import(
+const { publishedDestinationPages, legacyRedirects, countrySocialImage } = await import(
   pathToFileURL(join(__dirname, '../src/data/places.js')).href
 )
 
@@ -628,7 +628,12 @@ for (const lang of LANGS) {
       description: data.description,
       keywords: data.keywords,
       canonical,
-      image: dest.image || '/images/files/georgia-home.jpg',
+      // Country-aware social fallback. A destination with its own photograph is
+      // unchanged; one without gets ITS COUNTRY'S image instead of the site-wide
+      // Georgian default, which was putting a Georgian photo on every Armenian
+      // page's social card. countrySocialImage('georgia') is that same default,
+      // so every Georgian page is byte-identical.
+      image: dest.image || countrySocialImage(dest.country),
       // Optional image-SEO extras (only sites that define them, e.g. Batonis
       // Tsikhe): dedicated social image + dimensions + per-locale alt text.
       ogImage: dest.ogImage,
