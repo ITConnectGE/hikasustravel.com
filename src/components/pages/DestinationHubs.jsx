@@ -7,21 +7,73 @@ import {
   cityPath,
   sitePath,
   siteLocation,
+  countryOfSite,
+  countryBase,
+  regionsHubPathFor,
+  citiesHubPathFor,
+  placesHubPathFor,
   regionsOfCountry,
-  armeniaBase,
   DEFAULT_COUNTRY,
 } from '../../data/places'
 
 const HERO_IMAGE = '/images/files/tbilisi-old-town-narikala-mtkvari-georgia-1200.webp'
 
-export function RegionsHubPage() {
+/**
+ * Per-country configuration for the three sub-hubs.
+ *
+ * All three hubs are the ONE shared <DestinationHub>; this table only says which
+ * content key, which hero treatment and which listing rules each country uses.
+ * Georgia's entries are verbatim what the three functions passed inline before,
+ * so its hubs render byte-identically.
+ *
+ * `includeUnpublished` is the one genuine behavioural difference between the two
+ * countries, and it is deliberate: Georgia's hubs are mature, so a "guide coming
+ * soon" card there is informative. Armenia's are not, and ten coming-soon cards
+ * would be noise, so it lists only what is published.
+ *
+ * A country simply omits a hub it does not publish — Armenia has no `places`
+ * entry because /armenia/places-to-visit does not exist. That is enforced
+ * independently by COUNTRIES in places.js (placesHubPathFor returns null), which
+ * is what the breadcrumb builders and the country landing page read.
+ */
+const COUNTRY_HUBS = {
+  georgia: {
+    heroImage: HERO_IMAGE,
+    regions: { pageKey: 'destinationsRegions', seoKey: 'destinationsRegions', includeUnpublished: true },
+    cities: { pageKey: 'destinationsCities', seoKey: 'destinationsCities', includeUnpublished: true, pinFirst: 'tbilisi' },
+    places: { pageKey: 'destinationsPlaces', seoKey: 'destinationsPlaces' },
+  },
+  armenia: {
+    // `noHero` until an approved Armenia photograph exists (the same flag the
+    // region pages themselves use); it renders the solid `.dest-title-band`
+    // carrying the H1, not an empty hero.
+    noHero: true,
+    regions: { pageKey: 'armeniaRegions', seoKey: 'armeniaRegions', includeUnpublished: false },
+    cities: { pageKey: 'armeniaCities', seoKey: 'armeniaCities', includeUnpublished: false, pinFirst: 'yerevan' },
+  },
+}
+
+const clean = (p) => String(p).replace(/^\//, '')
+
+/**
+ * Country crumb between Home and a hub. Georgia keeps its long-standing "All
+ * Destinations" -> /georgia crumb (DestinationHub's own default, so passing null
+ * leaves it exactly as it was); another country uses its own name, from the same
+ * ui key the Destinations dropdown already ships in all 7 locales.
+ */
+function useCountryCrumb(country) {
+  const t = useT()
+  if (country === DEFAULT_COUNTRY) return null
+  return { name: t(`nav.destinations.${country}`), to: countryBase(country) }
+}
+
+export function RegionsHubPage({ country = DEFAULT_COUNTRY }) {
+  const conf = COUNTRY_HUBS[country].regions
+  const countryCrumb = useCountryCrumb(country)
   // `hideFromHub` entries (e.g. the combined Racha-Lechkhumi, kept for its
   // dependents) stay in the registry but are excluded from the listing.
-  // Scoped to Georgia's regions: `regions` is one array across all countries
-  // now, and this hub is /georgia/regions. Every record without a `country`
-  // counts as Georgian, so the listing is exactly what it was before.
-  const entries = regionsOfCountry('georgia')
-    .filter((r) => !r.hideFromHub)
+  const entries = regionsOfCountry(country)
+    .filter((r) => !r.hideFromHub && (conf.includeUnpublished || r.published))
     .map((r) => ({
       slug: r.slug,
       fallbackName: r.name,
@@ -41,10 +93,12 @@ export function RegionsHubPage() {
     }))
   return (
     <DestinationHub
-      pageKey="destinationsRegions"
-      seoKey="destinationsRegions"
-      path="georgia/regions"
-      heroImage={HERO_IMAGE}
+      pageKey={conf.pageKey}
+      seoKey={conf.seoKey}
+      path={clean(regionsHubPathFor(country))}
+      heroImage={COUNTRY_HUBS[country].heroImage}
+      noHero={COUNTRY_HUBS[country].noHero}
+      countryCrumb={countryCrumb}
       entries={entries}
       currentLabelKey="nav.regions"
       ctaKey="destinations.exploreRegion"
@@ -52,47 +106,9 @@ export function RegionsHubPage() {
   )
 }
 
-/**
- * Armenia's regions hub — the same shared DestinationHub the three Georgia hubs
- * use, pointed at Armenia's own registry slice, content key and breadcrumb
- * parent. No second hub implementation.
- *
- * Only PUBLISHED Armenia regions are listed: the other seeded marzer have no
- * page yet, and a "guide coming soon" card for ten of them would be noise. The
- * Georgia hub keeps listing unpublished regions as it always has — that is a
- * mature hub where the coming-soon cards are informative.
- *
- * `noHero` until an approved Armenia photograph exists (same flag as the region
- * pages themselves); it renders the solid `.dest-title-band` carrying the H1,
- * not an empty hero.
- */
-export function ArmeniaRegionsHubPage() {
-  const t = useT()
-  const entries = regionsOfCountry('armenia')
-    .filter((r) => r.published && !r.hideFromHub)
-    .map((r) => ({
-      slug: r.slug,
-      fallbackName: r.name,
-      published: true,
-      to: regionPath(r.slug),
-      image: r.cardImage,
-      imagePosition: r.cardPosition,
-    }))
-  return (
-    <DestinationHub
-      pageKey="armeniaRegions"
-      seoKey="armeniaRegions"
-      path="armenia/regions"
-      noHero
-      countryCrumb={{ name: t('nav.destinations.armenia'), to: armeniaBase }}
-      entries={entries}
-      currentLabelKey="nav.regions"
-      ctaKey="destinations.exploreRegion"
-    />
-  )
-}
-
-export function CitiesHubPage() {
+export function CitiesHubPage({ country = DEFAULT_COUNTRY }) {
+  const conf = COUNTRY_HUBS[country].cities
+  const countryCrumb = useCountryCrumb(country)
   // Cities are shown with the capital first, then alphabetically (registry order
   // is unaffected). The A–Z pass happens in DestinationHub via `sortByName`,
   // because that is where the visible localized card name is resolved — sorting
@@ -100,10 +116,8 @@ export function CitiesHubPage() {
   // of order in every other language. Entries reclassified as a place to visit
   // (e.g. the highland resort Gomismta) are excluded here and listed on the
   // Places to Visit hub instead.
-  // Scoped to Georgia's cities, for the same reason RegionsHubPage is scoped:
-  // `cities` is one array across countries now and this hub is /georgia/cities.
-  const entries = citiesOfCountry(DEFAULT_COUNTRY)
-    .filter((c) => c.classifyAs !== 'place')
+  const entries = citiesOfCountry(country)
+    .filter((c) => c.classifyAs !== 'place' && (conf.includeUnpublished || c.published))
     .map((c) => ({
       slug: c.slug,
       fallbackName: c.name,
@@ -111,31 +125,42 @@ export function CitiesHubPage() {
       published: c.published,
       to: c.published ? cityPath(c.slug) : null,
       // Card cover. Read straight from the registry — the SAME `cities[].image`
-      // field the featured-city strip on /georgia renders — so the two pages can
-      // never drift: a city's photo is changed in one place and both follow.
-      // Matching is by slug because it is the entry itself being mapped.
+      // field the featured-city strip on the country landing renders — so the
+      // two pages can never drift: a city's photo is changed in one place and
+      // both follow. A city without one renders the text-only card unchanged.
       image: c.image,
     }))
   return (
     <DestinationHub
-      pageKey="destinationsCities"
-      seoKey="destinationsCities"
-      path="georgia/cities"
-      heroImage={HERO_IMAGE}
+      pageKey={conf.pageKey}
+      seoKey={conf.seoKey}
+      path={clean(citiesHubPathFor(country))}
+      heroImage={COUNTRY_HUBS[country].heroImage}
+      noHero={COUNTRY_HUBS[country].noHero}
+      countryCrumb={countryCrumb}
       entries={entries}
       currentLabelKey="nav.cities"
       ctaKey="destinations.exploreCity"
       sortByName
-      pinFirst="tbilisi"
-      // Bakhmaro has no curated card entry; this shows its authored SEO
-      // summary rather than an empty card. A no-op for the other 25.
+      pinFirst={conf.pinFirst}
+      // Falls back to a city's own authored per-language SEO entry for the card
+      // title and one-line summary. On Georgia only Bakhmaro needs it (the other
+      // 25 have curated card text); on Armenia it carries every card, which is
+      // what lets Yerevan render as Jerewan/Erevan/Ereván/Erywań with a real
+      // localized summary and no card copy authored twice.
       seoFallback
     />
   )
 }
 
-export function PlacesToVisitHubPage() {
-  const siteEntries = sites.map((s) => ({
+export function PlacesToVisitHubPage({ country = DEFAULT_COUNTRY }) {
+  const conf = COUNTRY_HUBS[country].places
+  const countryCrumb = useCountryCrumb(country)
+  // Scoped to this country's sites: `sites` is one array across countries now.
+  // A site's country is its parent's (countryOfSite), and every record whose
+  // parent has no `country` counts as Georgian — so this listing is exactly what
+  // it was before.
+  const siteEntries = sites.filter((s) => countryOfSite(s) === country).map((s) => ({
     slug: s.slug,
     fallbackName: s.name,
     seoKey: s.seoKey,
@@ -146,9 +171,9 @@ export function PlacesToVisitHubPage() {
     location: siteLocation(s),
   }))
   // Entries classified as a place but kept in the cities registry for their
-  // existing /georgia/<slug> detail page (e.g. Gomismta). They link to that same
-  // detail URL and carry their own structured `placeLocation`.
-  const placeCityEntries = citiesOfCountry(DEFAULT_COUNTRY)
+  // existing /<country>/<slug> detail page (e.g. Gomismta). They link to that
+  // same detail URL and carry their own structured `placeLocation`.
+  const placeCityEntries = citiesOfCountry(country)
     .filter((c) => c.classifyAs === 'place')
     .map((c) => ({
       slug: c.slug,
@@ -161,10 +186,12 @@ export function PlacesToVisitHubPage() {
   const entries = [...siteEntries, ...placeCityEntries]
   return (
     <DestinationHub
-      pageKey="destinationsPlaces"
-      seoKey="destinationsPlaces"
-      path="georgia/places-to-visit"
-      heroImage={HERO_IMAGE}
+      pageKey={conf.pageKey}
+      seoKey={conf.seoKey}
+      path={clean(placesHubPathFor(country))}
+      heroImage={COUNTRY_HUBS[country].heroImage}
+      noHero={COUNTRY_HUBS[country].noHero}
+      countryCrumb={countryCrumb}
       entries={entries}
       currentLabelKey="nav.placesToVisit"
       ctaKey="destinations.explorePlace"

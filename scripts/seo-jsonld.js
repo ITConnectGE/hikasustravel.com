@@ -34,8 +34,9 @@ const src = (p) => pathToFileURL(join(__dirname, '..', 'src', p)).href
 
 const {
   regions, cities, sites, getCity, getRegion,
-  regionPath, cityPath, thingsToDoPath, countryOf, countryBase, countryName,
-  regionsHubPathFor, DEFAULT_COUNTRY,
+  regionPath, cityPath, sitePath, thingsToDoPath, countryOf, countryOfSite,
+  countryBase, countryName,
+  regionsHubPathFor, citiesHubPathFor, placesHubPathFor, DEFAULT_COUNTRY,
 } = await import(src('data/places.js'))
 const { publishedBorderPages, borderCrossings, borderOverview } = await import(src('data/borders.js'))
 
@@ -218,7 +219,14 @@ export function createJsonLdBuilder({ seoFor }) {
 
     // --- tourist sites ----------------------------------------------------
     for (const s of sites.filter((x) => x.published)) {
-      const path = `georgia/${s.parent}/${s.slug}`
+      // Country-aware, exactly like the regions and cities branches above and
+      // like SitePage's own runtime graph: the path comes from sitePath()
+      // instead of a hardcoded /georgia prefix, the country crumb and
+      // containedInPlace read the site's parent country, and a sub-hub crumb is
+      // emitted only for a country that HAS that hub. Every Georgian site keeps
+      // the identical graph it had.
+      const country = countryOfSite(s)
+      const path = clean(sitePath(s))
       const url = `${SITE_URL}/${lang}/${path}`
       const seo = seoFor(s.seoKey, lang)
       const isArticleType = s.schemaType === 'TravelGuide' || s.schemaType === 'Article'
@@ -243,20 +251,24 @@ export function createJsonLdBuilder({ seoFor }) {
             description: seo.description,
             url,
             image: primaryImage,
-            containedInPlace: { '@type': 'Country', name: 'Georgia' },
+            containedInPlace: { '@type': 'Country', name: countryName(country) },
           }
-      const trail = [HOME, ALL_DEST]
+      const trail = [HOME, countryCrumb(country)]
+      const placesHub = placesHubPathFor(country)
+      const citiesHub = citiesHubPathFor(country)
+      const regionsHub = regionsHubPathFor(country)
       if (s.parentType === 'place') {
-        trail.push({ name: t('nav.placesToVisit'), to: '/georgia/places-to-visit' })
+        if (placesHub) trail.push({ name: t('nav.placesToVisit'), to: placesHub })
       } else {
         const parent = s.parentType === 'city' ? getCity(s.parent) : getRegion(s.parent)
-        trail.push(s.parentType === 'city'
-          ? { name: t('nav.cities'), to: '/georgia/cities' }
-          : { name: t('nav.regions'), to: '/georgia/regions' })
+        const hub = s.parentType === 'city'
+          ? (citiesHub && { name: t('nav.cities'), to: citiesHub })
+          : (regionsHub && { name: t('nav.regions'), to: regionsHub })
+        if (hub) trail.push(hub)
         trail.push({
           name: parent ? parent.name : s.parent,
           to: parent && parent.published
-            ? (s.parentType === 'city' ? `/georgia/${s.parent}` : `/georgia/regions/${s.parent}`)
+            ? (s.parentType === 'city' ? cityPath(s.parent) : regionPath(s.parent))
             : undefined,
         })
       }

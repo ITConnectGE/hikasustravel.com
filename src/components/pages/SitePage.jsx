@@ -10,7 +10,11 @@ import useT from '../../i18n/useT'
 import useLang from '../../i18n/useLang'
 import useSEO from '../../hooks/useSEO'
 import { getSEO } from '../../data/seoData'
-import { getSite, getCity, getRegion, cityPath, regionPath, sitePath } from '../../data/places'
+import {
+  getSite, getCity, getRegion, cityPath, regionPath, sitePath,
+  countryOfSite, countryBase, countryName, destinationsBase,
+  regionsHubPathFor, citiesHubPathFor, placesHubPathFor, DEFAULT_COUNTRY,
+} from '../../data/places'
 import { autolinkHtml } from '../../utils/autolink'
 import asset from '../../utils/basePath'
 import NotFoundPage from './NotFoundPage'
@@ -206,23 +210,40 @@ export default function SitePage() {
       : site.parentType === 'region' ? getRegion(site.parent)
       : null)
     : null
+  // A site's country is its parent's (see countryOfSite in places.js). It picks
+  // the country crumb, the sub-hub crumbs and the schema country below, so a
+  // site under a new country needs no code here — only a parent record.
+  const country = published ? countryOfSite(site) : DEFAULT_COUNTRY
   let trail = []
   if (published) {
     trail = [
       { name: t('breadcrumb.home'), to: '/' },
-      { name: t('nav.allDestinations'), to: '/georgia' },
+      // Georgia keeps its long-standing "All Destinations" -> /georgia crumb;
+      // another country uses its own name (the same ui key the Destinations
+      // dropdown already ships in all 7 locales) pointing at its own landing
+      // page. Mirrors RegionPage, CityPage and scripts/seo-jsonld.js.
+      country === DEFAULT_COUNTRY
+        ? { name: t('nav.allDestinations'), to: destinationsBase }
+        : { name: t(`nav.destinations.${country}`), to: countryBase(country) },
     ]
+    // The sub-hub crumb is emitted only where that country actually publishes
+    // the hub. Georgia declares all three, so its trails are unchanged; Armenia
+    // publishes only a regions hub, so a city-parented Armenian site goes
+    // Home -> Armenia -> <City> -> <Site> rather than through a /armenia/cities
+    // page that does not exist.
+    const placesHub = placesHubPathFor(country)
+    const citiesHub = citiesHubPathFor(country)
+    const regionsHub = regionsHubPathFor(country)
     if (site.parentType === 'place') {
       // Sites parented on a local destination without its own landing page use
       // the Places to Visit hub as their intermediate crumb (that's where their
       // card lives), avoiding a dead link to a town page that doesn't exist.
-      trail.push({ name: t('nav.placesToVisit'), to: '/georgia/places-to-visit' })
+      if (placesHub) trail.push({ name: t('nav.placesToVisit'), to: placesHub })
     } else {
-      trail.push(
-        site.parentType === 'city'
-          ? { name: t('nav.cities'), to: '/georgia/cities' }
-          : { name: t('nav.regions'), to: '/georgia/regions' },
-      )
+      const hub = site.parentType === 'city'
+        ? (citiesHub && { name: t('nav.cities'), to: citiesHub })
+        : (regionsHub && { name: t('nav.regions'), to: regionsHub })
+      if (hub) trail.push(hub)
       trail.push({
         name: parent ? parent.name : site.parent,
         // Only link the parent crumb when its landing page actually exists
@@ -278,7 +299,9 @@ export default function SitePage() {
             description: seo.description,
             url,
             image: primaryImage,
-            containedInPlace: { '@type': 'Country', name: 'Georgia' },
+            // Reads the site's country instead of asserting Georgia, so an
+            // attraction under another country never claims the wrong one.
+            containedInPlace: { '@type': 'Country', name: countryName(country) },
           }
     // Image SEO/AEO: a standalone ImageObject describing the hero. Because the
     // hero is a CSS background (not an indexable <img>), this keeps the image

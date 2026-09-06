@@ -14081,9 +14081,20 @@ export const getSite = (slug) => sites.find((s) => s.slug === slug) || null
 // Cities and sites remain Georgia-only for now; the country dimension is read
 // from region records, which is the only place it is currently set.
 // ---------------------------------------------------------------------------
+// `regionsHub` / `citiesHub` / `placesHub` declare which sub-hubs a country
+// actually publishes. They are read by the breadcrumb builders (SitePage and
+// its build-time mirror in scripts/seo-jsonld.js), which previously hardcoded
+// Georgia's three hubs into every trail. Armenia has a regions hub and nothing
+// else yet, so a crumb pointing at /armenia/cities would be a dead link — the
+// trail omits the hub level instead of inventing a page. Georgia declares all
+// three, so every Georgian trail is byte-identical to what it has always been.
 const COUNTRIES = {
-  georgia: { base: '/georgia', name: 'Georgia', code: 'GE' },
-  armenia: { base: '/armenia', name: 'Armenia', code: 'AM' },
+  georgia: { base: '/georgia', name: 'Georgia', code: 'GE', regionsHub: true, citiesHub: true, placesHub: true },
+  // Armenia publishes a regions hub and a cities hub (Yerevan and Dilijan). It
+  // has no places-to-visit hub because it has no published attraction records
+  // yet — flip `placesHub` once it does and the landing tile, the breadcrumb
+  // level and the hub route all follow from this one field.
+  armenia: { base: '/armenia', name: 'Armenia', code: 'AM', regionsHub: true, citiesHub: true, placesHub: false },
 }
 export const DEFAULT_COUNTRY = 'georgia'
 /** A record's country id, defaulting to Georgia for every record without one. */
@@ -14097,6 +14108,12 @@ export const countryName = (country) => countryConf(country).name
 export const countryCode = (country) => countryConf(country).code
 /** That country's regions hub, e.g. '/armenia/regions'. */
 export const regionsHubPathFor = (country) => `${countryBase(country)}/regions`
+/** That country's cities hub, or null where it publishes none (Armenia today). */
+export const citiesHubPathFor = (country) =>
+  (countryConf(country).citiesHub ? `${countryBase(country)}/cities` : null)
+/** That country's places-to-visit hub, or null where it publishes none. */
+export const placesHubPathFor = (country) =>
+  (countryConf(country).placesHub ? `${countryBase(country)}/places-to-visit` : null)
 /** Regions belonging to one country (Georgia covers every record without one). */
 export const regionsOfCountry = (country) => regions.filter((r) => countryOf(r) === country)
 
@@ -14150,7 +14167,23 @@ export const thingsToDoPath = (citySlug) => {
 // — region and city slug namespaces are disjoint, so there is no collision. The
 // region LANDING pages stay at /georgia/regions/<slug>; old region-site URLs
 // (/georgia/regions/<region>/<slug>) 301-redirect here (see legacyRedirects()).
-export const sitePath = (site) => `/georgia/${site.parent}/${site.slug}`
+//
+// A site's country is its PARENT's country, resolved from the registry rather
+// than duplicated onto the site record: a site cannot be in a different country
+// from the city or region it hangs off, so deriving it removes a whole class of
+// mismatch (a record whose `country` and whose parent disagree, producing a URL
+// that resolves nowhere). A `parentType: 'place'` site has no parent record —
+// its parent is a town with no landing page — so it falls back to its own
+// optional `country` and then to Georgia, which is what it has always been.
+export const countryOfSite = (site) => {
+  const parent = site.parentType === 'city' ? getCity(site.parent)
+    : site.parentType === 'region' ? getRegion(site.parent)
+    : null
+  return countryOf(parent || site)
+}
+// Every Georgian site (i.e. every site whose parent has no `country`) returns
+// the identical string this function has always returned.
+export const sitePath = (site) => `${countryBase(countryOfSite(site))}/${site.parent}/${site.slug}`
 
 // Stable location IDs for a tourist site, derived from its structured parent
 // (never from its title or URL text). A city-parented site reports that city
@@ -14291,14 +14324,20 @@ export function legacyRedirects() {
   }
   // Region-parented Places to Visit dropped the /regions/ segment:
   //   /georgia/regions/<region>/<slug>  ->  /georgia/<region>/<slug>
-  for (const s of sites) if (s.published && s.parentType === 'region') {
+  // Georgia only, for the same reason the city and region loops above are:
+  // /georgia/regions/<region>/<slug> is a Georgia-era URL shape that a Georgian
+  // site genuinely used to live at. A site added under another country never had
+  // it, so emitting the rule would invent a legacy that never existed — and it
+  // would point a `georgia/...` URL at an `/armenia/...` page.
+  for (const s of sites) if (s.published && s.parentType === 'region' && countryOfSite(s) === DEFAULT_COUNTRY) {
     out.push({ from: `georgia/regions/${s.parent}/${s.slug}`, to: cleanPath(sitePath(s)) })
   }
   // Places to Visit re-parented from a region slug to a more specific local
   // destination (city/town/resort). The old regional URL — and its even older
   // /regions/<region>/<slug> form — 301-redirect directly to the new URL. Driven
   // by each site's `formerParent`, so adding a re-parented site needs no new rule.
-  for (const s of sites) if (s.published && s.formerParent) {
+  // Georgia only, as above: both `from` shapes are literal /georgia URLs.
+  for (const s of sites) if (s.published && s.formerParent && countryOfSite(s) === DEFAULT_COUNTRY) {
     out.push({ from: `georgia/${s.formerParent}/${s.slug}`, to: cleanPath(sitePath(s)) })
     out.push({ from: `georgia/regions/${s.formerParent}/${s.slug}`, to: cleanPath(sitePath(s)) })
   }

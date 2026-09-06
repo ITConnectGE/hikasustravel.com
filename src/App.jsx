@@ -28,7 +28,6 @@ const AbkhaziaPage = routeComponent(() => import('./components/pages/AbkhaziaPag
 const DestinationsPage = routeComponent(() => import('./components/pages/DestinationsPage'))
 // Named exports need unwrapping — React.lazy resolves the `default` binding.
 const RegionsHubPage = routeComponent(() => import('./components/pages/DestinationHubs'), (m) => m.RegionsHubPage)
-const ArmeniaRegionsHubPage = routeComponent(() => import('./components/pages/DestinationHubs'), (m) => m.ArmeniaRegionsHubPage)
 const CountryStubPage = routeComponent(() => import('./components/pages/CountryStubPage'))
 const CitiesHubPage = routeComponent(() => import('./components/pages/DestinationHubs'), (m) => m.CitiesHubPage)
 const PlacesToVisitHubPage = routeComponent(() => import('./components/pages/DestinationHubs'), (m) => m.PlacesToVisitHubPage)
@@ -113,12 +112,26 @@ export function AppRoutes() {
               Router ranks them above `armenia/:citySlug` and the regions tree
               cannot be shadowed by a city slug. Region guides keep nesting under
               their region as a static `things-to-do` segment. */}
-          <Route path="armenia" element={<CountryStubPage pageKey="armenia" seoKey="armenia" path="armenia" links={[{ to: '/armenia/regions', labelKey: 'nav.regions' }, { to: '/armenia/yerevan', labelKey: 'nav.yerevan' }, { to: '/armenia/dilijan', labelKey: 'nav.dilijan' }]} />} />
-          <Route path="armenia/regions" element={<ArmeniaRegionsHubPage />} />
+          <Route path="armenia" element={<CountryStubPage pageKey="armenia" seoKey="armenia" path="armenia" links={[{ to: '/armenia/regions', labelKey: 'nav.regions' }, { to: '/armenia/cities', labelKey: 'nav.cities' }, { to: '/armenia/yerevan', labelKey: 'nav.yerevan' }, { to: '/armenia/dilijan', labelKey: 'nav.dilijan' }]} />} />
+          <Route path="armenia/regions" element={<RegionsHubPage country="armenia" />} />
+          <Route path="armenia/cities" element={<CitiesHubPage country="armenia" />} />
           <Route path="armenia/regions/:regionSlug" element={<RegionPage />} />
           <Route path="armenia/regions/:regionSlug/things-to-do" element={<ThingsToDoCityPage />} />
           <Route path="armenia/:citySlug" element={<CityPage />} />
           <Route path="armenia/:citySlug/things-to-do" element={<ThingsToDoCityPage />} />
+          {/* /armenia/<parent>/<slug> — the same CitySubPage dispatcher Georgia
+              uses one level down, so a tourist site works identically under
+              either country and no attraction needs a route of its own. The
+              parent segment is a city OR a region slug (the two namespaces are
+              disjoint), which is what lets a region-parented attraction such as
+              Aragatsotn's sit at /armenia/aragatsotn/<slug> while the region
+              LANDING page stays at /armenia/regions/aragatsotn.
+
+              React Router ranks static segments above dynamic ones, so the
+              `armenia/regions/...` tree and the `things-to-do` guide above both
+              outrank this route and cannot be swallowed by it. Anything that
+              matches neither a guide nor a registered site renders the 404. */}
+          <Route path="armenia/:citySlug/:sub" element={<CitySubPage />} />
           {/* Legacy URL redirects -> their new /georgia home (mirror the static
               redirect stubs emitted by scripts/prerender.js). */}
           <Route path="destinations/*" element={<DestinationsRedirect />} />

@@ -28,7 +28,9 @@ const __dirname = dirname(fileURLToPath(import.meta.url))
 const src = (p) => pathToFileURL(join(__dirname, '..', 'src', p)).href
 
 const {
-  regions, cities, sites, regionPath, cityPath, thingsToDoPath, countryOf, DEFAULT_COUNTRY,
+  regions, cities, sites, regionPath, cityPath, sitePath, thingsToDoPath,
+  countryOf, countryOfSite, countryBase, regionsHubPathFor, placesHubPathFor,
+  DEFAULT_COUNTRY,
 } = await import(src('data/places.js'))
 const { publishedBorderPages, borderHubPath } = await import(src('data/borders.js'))
 const { entityTourPages } = await import(src('data/entityTours.js'))
@@ -52,6 +54,7 @@ const STATIC_PAGES = [
   ['georgia/places-to-visit', 'destinationsPlaces'],
   ['armenia', 'armenia'],
   ['armenia/regions', 'armeniaRegions'],
+  ['armenia/cities', 'armeniaCities'],
   ['private-tours', 'privateTours'],
   ['group-tours', 'groupTours'],
   ['shuttle-service', 'shuttle'],
@@ -90,12 +93,25 @@ const PLACES_HUB = 'georgia/places-to-visit'
 const GEORGIA_HUB = 'georgia'
 const ARMENIA_HUB = 'armenia'
 const ARMENIA_REGIONS_HUB = 'armenia/regions'
+const ARMENIA_CITIES_HUB = 'armenia/cities'
 // A published region's country decides which hub pair it hangs off and which
 // URLs its links use. Georgia covers every record with no `country`.
 const isGeorgian = (r) => countryOf(r) === DEFAULT_COUNTRY
 const hubsFor = (r) => (isGeorgian(r)
-  ? { country: GEORGIA_HUB, regions: REGIONS_HUB }
-  : { country: ARMENIA_HUB, regions: ARMENIA_REGIONS_HUB })
+  ? { country: GEORGIA_HUB, regions: REGIONS_HUB, cities: CITIES_HUB }
+  : { country: ARMENIA_HUB, regions: ARMENIA_REGIONS_HUB, cities: ARMENIA_CITIES_HUB })
+// A site's country is its PARENT's (countryOfSite), so its hubs are derived
+// rather than assumed. `places` is null for a country that publishes no Places
+// to Visit hub, which is why every use of it below is guarded.
+const hubsForSite = (s) => {
+  const c = countryOfSite(s)
+  const places = placesHubPathFor(c)
+  return {
+    country: clean(countryBase(c)),
+    regions: clean(regionsHubPathFor(c)),
+    places: places ? clean(places) : null,
+  }
+}
 const BORDER_HUB = clean(borderHubPath)
 
 // How many same-parent siblings a detail page links laterally. Enough to give
@@ -197,20 +213,23 @@ export function createLinkGraph({ tours, blogArticles, tourTitle, blogTitle, seo
       put(h.country, clean(regionPath(r.slug)), regionLabel.get(r.slug))
       put(h.regions, clean(regionPath(r.slug)), regionLabel.get(r.slug))
     }
-    // Armenia's own hub pair, mirroring the Georgia block above it. Armenia has
-    // no cities/places-to-visit hub yet, so its country hub links one sub-hub.
+    // Armenia's own hubs, mirroring the Georgia block above it. Armenia has no
+    // places-to-visit hub yet (no published attraction records), so its country
+    // hub links the two sub-hubs that exist.
     put(ARMENIA_HUB, ARMENIA_REGIONS_HUB, labelOfStatic(ARMENIA_REGIONS_HUB))
     put(ARMENIA_REGIONS_HUB, ARMENIA_HUB, labelOfStatic(ARMENIA_HUB))
+    put(ARMENIA_HUB, ARMENIA_CITIES_HUB, labelOfStatic(ARMENIA_CITIES_HUB))
+    put(ARMENIA_CITIES_HUB, ARMENIA_HUB, labelOfStatic(ARMENIA_HUB))
     for (const c of pubCities) {
-      // A city hangs off its own country hub, and is listed on the cities hub
-      // only where one exists (Georgia). Armenia has no cities hub yet, so
-      // Yerevan is linked from /armenia directly — the same pattern the
-      // Armenia regions block above uses.
+      // A city hangs off its own country hub and is listed on that country's
+      // cities hub. Both countries now have one, so this is symmetric.
       put(hubsFor(c).country, clean(cityPath(c.slug)), cityLabel.get(c.slug))
-      if (isGeorgian(c)) put(CITIES_HUB, `georgia/${c.slug}`, cityLabel.get(c.slug))
+      put(hubsFor(c).cities, clean(cityPath(c.slug)), cityLabel.get(c.slug))
     }
-    for (const s of pubSites) {
-      put(PLACES_HUB, `georgia/${s.parent}/${s.slug}`, siteLabel.get(s.slug))
+    // The Places to Visit hub is Georgia's, so it lists Georgia's sites. A site
+    // under another country is reached from that country's own hubs instead.
+    for (const s of pubSites.filter((x) => hubsForSite(x).places === PLACES_HUB)) {
+      put(PLACES_HUB, clean(sitePath(s)), siteLabel.get(s.slug))
     }
 
     // --- region detail pages -------------------------------------------
@@ -233,24 +252,30 @@ export function createLinkGraph({ tours, blogArticles, tourTitle, blogTitle, seo
         put(`georgia/${c.slug}`, self, regionLabel.get(r.slug))
       }
       for (const s of pubSites.filter((s) => s.parentType === 'region' && s.parent === r.slug)) {
-        put(self, `georgia/${s.parent}/${s.slug}`, siteLabel.get(s.slug))
+        put(self, clean(sitePath(s)), siteLabel.get(s.slug))
       }
     }
 
     // --- city detail pages ----------------------------------------------
     for (const c of pubCities) {
       const self = clean(cityPath(c.slug))
-      if (isGeorgian(c)) put(self, CITIES_HUB, labelOfStatic(CITIES_HUB))
+      put(self, hubsFor(c).cities, labelOfStatic(hubsFor(c).cities))
       put(self, hubsFor(c).country, labelOfStatic(hubsFor(c).country))
       if (c.thingsToDo) {
-        const ttd = `georgia/${c.slug}/things-to-do-in-${c.slug}`
+        // The guide's OWN canonical path. This was built as
+        // `georgia/<slug>/things-to-do-in-<slug>`, which is correct for a
+        // Georgian city but emitted a link to a URL that does not exist on an
+        // Armenian one — /armenia/yerevan shipped a link to
+        // /georgia/yerevan/things-to-do-in-yerevan, a 404.
+        const ttd = clean(thingsToDoPath(c.slug))
         const text = ttdLabel(c, cityLabel.get(c.slug))
         put(self, ttd, text)
         put(ttd, self, cityLabel.get(c.slug))
-        put(ttd, CITIES_HUB, labelOfStatic(CITIES_HUB))
+        // Back up to that country's cities hub, exactly as the city page above.
+        put(ttd, hubsFor(c).cities, labelOfStatic(hubsFor(c).cities))
       }
       for (const s of pubSites.filter((s) => s.parentType === 'city' && s.parent === c.slug)) {
-        put(self, `georgia/${s.parent}/${s.slug}`, siteLabel.get(s.slug))
+        put(self, clean(sitePath(s)), siteLabel.get(s.slug))
       }
     }
 
@@ -261,20 +286,25 @@ export function createLinkGraph({ tours, blogArticles, tourTitle, blogTitle, seo
       list.push(s)
     }
     for (const s of pubSites) {
-      const self = `georgia/${s.parent}/${s.slug}`
-      put(self, PLACES_HUB, labelOfStatic(PLACES_HUB))
+      const h = hubsForSite(s)
+      const self = clean(sitePath(s))
+      // Up to the hub this site is actually listed on: Places to Visit where
+      // the country has one, otherwise its country hub. Never a hub that does
+      // not exist, and never another country's.
+      if (h.places) put(self, h.places, labelOfStatic(h.places))
+      else put(self, h.country, labelOfStatic(h.country))
       // Structural parent. A site parented on a plain place (a town with no
       // landing page of its own) reports its region instead, matching
       // siteLocation() in places.js.
       if (s.parentType === 'city' && publishedCitySlugs.has(s.parent)) {
-        put(self, `georgia/${s.parent}`, cityLabel.get(s.parent))
+        put(self, clean(cityPath(s.parent)), cityLabel.get(s.parent))
       } else if (s.parentType === 'region' && publishedRegionSlugs.has(s.parent)) {
-        put(self, `georgia/regions/${s.parent}`, regionLabel.get(s.parent))
+        put(self, clean(regionPath(s.parent)), regionLabel.get(s.parent))
       } else if (s.region && publishedRegionSlugs.has(s.region)) {
-        put(self, `georgia/regions/${s.region}`, regionLabel.get(s.region))
+        put(self, clean(regionPath(s.region)), regionLabel.get(s.region))
       }
       for (const sib of (byParent.get(s.parent) || []).filter((x) => x.slug !== s.slug).slice(0, SIBLING_LIMIT)) {
-        put(self, `georgia/${sib.parent}/${sib.slug}`, siteLabel.get(sib.slug))
+        put(self, clean(sitePath(sib)), siteLabel.get(sib.slug))
       }
     }
 

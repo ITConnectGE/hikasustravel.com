@@ -74,10 +74,12 @@ const staticPages = [
   { path: 'georgia/regions', changefreq: 'monthly', priority: '0.7' },
   { path: 'georgia/cities', changefreq: 'monthly', priority: '0.7' },
   { path: 'georgia/places-to-visit', changefreq: 'monthly', priority: '0.7' },
-  // Armenia's two hub pages. Its region detail pages and their things-to-do
-  // guides come from the destination registry below, exactly as Georgia's do.
+  // Armenia's hub pages. Its region and city detail pages, and their
+  // things-to-do guides, come from the destination registry below, exactly as
+  // Georgia's do.
   { path: 'armenia', changefreq: 'monthly', priority: '0.7' },
   { path: 'armenia/regions', changefreq: 'monthly', priority: '0.7' },
+  { path: 'armenia/cities', changefreq: 'monthly', priority: '0.7' },
   // City detail pages and their things-to-do guides come from the destination
   // registry below (publishedDestinationPages), so they are not listed here.
   { path: 'private-tours', changefreq: 'weekly', priority: '0.9' },
