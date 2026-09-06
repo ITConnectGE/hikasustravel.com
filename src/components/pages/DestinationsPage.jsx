@@ -89,11 +89,21 @@ const COUNTRY_LANDING = {
     // The capital leads, exactly as Tbilisi does on /georgia. Matched on the
     // stable slug, never the label, which is localized.
     pinFirstCity: 'yerevan',
-    // ⏳ OWNER-SUPPLIED. Armenia publishes a regions hub and a cities hub, so it
-    // gets those two tiles; `places` is absent because /armenia/places-to-visit
-    // does not exist while Armenia has no published attraction records. Adding a
-    // cover here is all a tile needs once its hub is real.
-    subhubImages: { regions: null, cities: null },
+    // Regions: the Khor Virap landscape at its 768 rung. Reusing the hero file
+    // as a tile cover is this page's own established pattern — Georgia's Cities
+    // tile is literally the same file as its Georgia hero. It is an honest fit
+    // here too: a wide view of the Ararat plain standing for regional variety,
+    // exactly as the Kakheti vineyard does for Georgia.
+    //
+    // `cities` stays null on purpose. The only Armenian photograph that exists
+    // is this one, and putting Khor Virap — a monastery on the Ararat plain —
+    // behind a "Cities" tile, or on a Yerevan or Dilijan card, would tell a
+    // traveller those places look like something they do not. A missing tile is
+    // honest; a wrong one is not. Both need one real photograph each.
+    subhubImages: {
+      regions: '/images/files/khor-virap-monastery-ararat-armenia-768.webp',
+      cities: null,
+    },
   },
 }
 
