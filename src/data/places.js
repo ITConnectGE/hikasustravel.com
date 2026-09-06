@@ -14098,9 +14098,24 @@ export const sites = [
   //   * Saint Mesrop Mashtots Church is in Oshakan, which is itself a planned
   //     city above; re-parent it onto that city once Oshakan is published.
   // Slugs are provisional for the same reason as the cities'.
+  // Amberd Fortress — the first published Armenian attraction. Region-parented
+  // on Aragatsotn, because the fortress stands on Mount Aragats above Byurakan
+  // and neither Byurakan nor Ashtarak has a city page; inventing one purely to
+  // host it would be worse than parenting it on the marz it actually sits in.
+  // Resolves to /armenia/aragatsotn/amberd-fortress through the shared
+  // country-aware resolver — no route of its own.
+  //
+  // `noHero` until an approved Amberd photograph exists (the same flag every
+  // other Armenia page uses). `image` carries the Khor Virap social crop rather
+  // than the site-wide georgia-home.jpg default, so the og:image and the
+  // JSON-LD image are at least Armenian; swap both for a real Amberd photo when
+  // one arrives.
   {
     slug: 'amberd-fortress', name: 'Amberd Fortress',
-    parentType: 'region', parent: 'aragatsotn', published: false,
+    parentType: 'region', parent: 'aragatsotn', published: true,
+    seoKey: 'amberdFortress', contentKey: 'amberdFortress',
+    noHero: true,
+    image: '/images/files/khor-virap-monastery-ararat-armenia-og.jpg',
   },
   {
     slug: 'etchmiadzin', name: 'Etchmiadzin',
