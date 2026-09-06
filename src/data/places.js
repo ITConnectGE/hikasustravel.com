@@ -14318,9 +14318,29 @@ export const sites = [
     noHero: true,
     noAutolink: true,
   },
+  // Haghpat Monastery — published in place as a REGION-parented site, which
+  // is what puts it at /armenia/lori/haghpat-monastery through the shared
+  // country-aware resolver. Region-parented rather than city-parented
+  // because there is no Haghpat destination page to hang it off: the village
+  // has no record of its own, so Lori is its only real parent. (Geghard is
+  // city-parented only because the Garni city page exists.)
+  //
+  // `noAutolink` because the owner copy carries ZERO editorial body links;
+  // without it the shared autolinker would turn Sanahin, Odzun, Akhtala,
+  // Alaverdi, Vanadzor and Dilijan into links inside the article.
+  //
+  // Deliberately NO `image`, on the Geghard precedent: the only Armenian
+  // social crop on hand is Khor Virap, and Haghpat is a monastery too — a
+  // card showing one monastery labelled as another is exactly the misleading
+  // substitution the brief rules out. og:image now falls back to the Armenia
+  // country social image, and the Places to Visit hub passes no image, so
+  // omitting it costs nothing visible.
   {
     slug: 'haghpat-monastery', name: 'Haghpat Monastery',
-    parentType: 'region', parent: 'lori', published: false,
+    parentType: 'region', parent: 'lori', published: true,
+    seoKey: 'haghpatMonastery', contentKey: 'haghpatMonastery',
+    noHero: true,
+    noAutolink: true,
   },
   {
     slug: 'khor-virap-monastery', name: 'Khor Virap Monastery',
