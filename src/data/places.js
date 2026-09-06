@@ -14438,6 +14438,29 @@ export const sites = [
     slug: 'sevanavank-monastery', name: 'Sevanavank Monastery',
     parentType: 'region', parent: 'gegharkunik', published: false,
   },
+  // Noratus Cemetery — region-parented on Gegharkunik INDEPENDENTLY, not
+  // nested under Lake Sevan. Nesting is not possible and would not be right
+  // even if it were: `parentType` accepts only 'city', 'region' and 'place',
+  // and a site's parent is looked up in `cities` or `regions` - Lake Sevan is
+  // itself a `sites` entry, so it cannot be anything's parent without a new
+  // data model. Noratus is also a separate place NEAR the lake rather than
+  // part of it, and the same logic will apply to Sevanavank and Hayravank
+  // when they are published: all siblings under the region.
+  //
+  // `noAutolink` because the owner copy carries ZERO editorial body links;
+  // without it the autolinker would turn Hayravank, Sevanavank, Gavar, Lake
+  // Sevan and Vayots Dzor into links inside the article.
+  //
+  // No `image`: the only Armenian photograph in public/images/files is the
+  // Khor Virap crop, which is a monastery in Ararat and shows no khachkar.
+  // og:image falls back to the Armenia country social image.
+  {
+    slug: 'noratus-cemetery', name: 'Noratus Cemetery',
+    parentType: 'region', parent: 'gegharkunik', published: true,
+    seoKey: 'noratusCemetery', contentKey: 'noratusCemetery',
+    noHero: true,
+    noAutolink: true,
+  },
   {
     slug: 'saint-mesrop-mashtots-church', name: 'Saint Mesrop Mashtots Church',
     parentType: 'region', parent: 'aragatsotn', published: false,
