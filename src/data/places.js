@@ -10411,7 +10411,7 @@ export const sites = [
           de: 'Eines der Schauaquarien im Delfinarium Batumi, mit Goldfischen zwischen begrünter Bepflanzung unter der blauen Kuppel der Halle.',
           fr: "L'un des aquariums d'exposition du delphinarium de Batumi, ses poissons rouges parmi une végétation plantée sous la coupole bleue de la halle.",
           es: 'Uno de los acuarios de exhibición del delfinario de Batumi, con sus peces dorados entre vegetación plantada bajo la cúpula azul de la sala.',
-          nl: 'Een van de show­aquaria in het Dolfinarium Batumi, met goudvissen tussen beplanting onder de blauwe koepel van de hal.',
+          nl: 'Een van de showaquaria in het Dolfinarium Batumi, met goudvissen tussen beplanting onder de blauwe koepel van de hal.',
           cs: 'Jedno z výstavních akvárií v delfináriu v Batumi, se zlatými rybkami mezi zelení pod modrou kupolí haly.',
           pl: 'Jedno z akwariów wystawowych w delfinarium w Batumi, ze złotymi rybkami wśród roślinności pod niebieską kopułą hali.',
         },

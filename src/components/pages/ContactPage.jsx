@@ -10,6 +10,10 @@ import { useLinkedHtml } from '../../utils/autolinkReact'
 import useSEO from '../../hooks/useSEO'
 import { getSEO } from '../../data/seoData'
 import { shuttleRoutes } from '../../data/shuttleData'
+// Single source of truth for the phone numbers and email, shared with
+// Footer.jsx. This page used to hand-type its own second copy, and an
+// invisible character got into the hand-typed tel: href.
+import { contactInfo } from '../../data/siteData'
 
 export default function ContactPage() {
   const { pages } = useContext(I18nContext)
@@ -38,24 +42,24 @@ export default function ContactPage() {
           <div className="contact-intro" dangerouslySetInnerHTML={{ __html: linkedIntro }} />
 
           <div className="contact-cards">
-            <a href="mailto:info@hikasustravel.com" className="contact-card">
+            <a href={`mailto:${contactInfo.email}`} className="contact-card">
               <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
                 <rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/>
               </svg>
               <span className="contact-card__label">{t('contact.email')}</span>
-              <span className="contact-card__value">info@hikasustravel.com</span>
+              <span className="contact-card__value">{contactInfo.email}</span>
             </a>
 
-            <a href="tel:+3246832069​8" className="contact-card">
+            <a href={`tel:${contactInfo.phoneBelgium.replace(/\s/g, '')}`} className="contact-card">
               <span className="contact-flag">🇧🇪</span>
               <span className="contact-card__label">{t('contact.belgiumOffice')}</span>
-              <span className="contact-card__value">+32 468 32 06 98</span>
+              <span className="contact-card__value">{contactInfo.phoneBelgium}</span>
             </a>
 
-            <a href="tel:+995551098077" className="contact-card">
+            <a href={`tel:${contactInfo.phoneGeorgia.replace(/\s/g, '')}`} className="contact-card">
               <span className="contact-flag">🇬🇪</span>
               <span className="contact-card__label">{t('contact.georgiaOffice')}</span>
-              <span className="contact-card__value">+995 551 098 077</span>
+              <span className="contact-card__value">{contactInfo.phoneGeorgia}</span>
             </a>
           </div>
 

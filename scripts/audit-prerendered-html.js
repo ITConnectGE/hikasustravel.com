@@ -20,6 +20,12 @@
  *   8. A referenced /images/… file that is not on disk. Two blur-up
  *      placeholders 404'd on every homepage visit for want of a thumb twin;
  *      nothing showed, because the full image arrives a moment later.
+ *   9. An invisible character (zero-width space, soft hyphen, BOM, a
+ *      bidi control) in visible text, in a speaking attribute, or in a
+ *      tel:/mailto: href. These survive review because nothing shows: a
+ *      zero-width space sat inside the Contact page's tel: number, where it
+ *      was part of the dial string, and nine soft hyphens sat inside single
+ *      Dutch, Czech and Polish words, breaking find-in-page and copy-paste.
  *
  * Deliberately NOT checked here: anything requiring a network request, and
  * anything inside the JS bundles — a token in a compiled string table is not a
@@ -57,6 +63,10 @@ function walk(dir, out = []) {
 }
 
 const rel = (f) => path.relative(DIST, f).split(path.sep).join('/')
+
+// Zero-width and formatting characters that render as nothing. Deliberately
+// excludes U+00A0 (a non-breaking space is visible and often intentional).
+const INVISIBLE_RE = /[\u200B-\u200F\u202A-\u202E\u2060-\u206F\uFEFF\u00AD]/
 
 const errors = []
 const add = (file, kind, detail) => errors.push({ file: rel(file), kind, detail })
@@ -124,6 +134,24 @@ for (const file of files) {
     const m = text.match(TOKEN_RE)
     if (m) {
       add(file, 'template-token', `${m[0]} in "${text.trim().slice(0, 90)}"`)
+      break
+    }
+  }
+
+  // --- 9. invisible characters ------------------------------------------
+  // Reuses the same `visible` set as check 1 — text a person reads plus the
+  // attributes that speak — and adds the hrefs a device acts on, because a
+  // zero-width space in a tel: URI is dialled, not displayed.
+  const speaking = []
+  $('a[href^="tel:"], a[href^="mailto:"]').each((_, el) => {
+    const v = $(el).attr('href')
+    if (v) speaking.push(v)
+  })
+  for (const text of visible.concat(speaking)) {
+    const m = text.match(INVISIBLE_RE)
+    if (m) {
+      const cp = 'U+' + m[0].codePointAt(0).toString(16).toUpperCase()
+      add(file, 'invisible-char', `${cp} in "${text.trim().slice(0, 90)}"`)
       break
     }
   }
