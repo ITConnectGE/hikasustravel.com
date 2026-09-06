@@ -14346,9 +14346,37 @@ export const sites = [
     slug: 'khor-virap-monastery', name: 'Khor Virap Monastery',
     parentType: 'region', parent: 'ararat', published: false,
   },
+  // Mount Ararat — the one entry in this registry whose subject is NOT in the
+  // country it is routed under. The mountain stands in TURKEY; it is parented
+  // on Armenia's Ararat region purely as a routing necessity, because `sites`
+  // has exactly three parentTypes (city, region, place) and sitePath() is
+  // `<countryBase>/<parent>/<slug>` — there is no country-level or
+  // multi-region site type that would give /armenia/mount-ararat, and none
+  // was invented for this.
+  //
+  // The URL therefore reads /armenia/ararat/mount-ararat, and the ARTICLE
+  // carries the correction: it states in every locale that the mountain is in
+  // eastern Turkey, not the Republic of Armenia, and devotes a whole section
+  // to the fact that it is NOT inside the administrative Ararat Region either.
+  //
+  // `jsonLdCountry` keeps the structured data honest: without it the shared
+  // builder would emit containedInPlace: { Country: "Armenia" }, a false
+  // claim. It is an opt-in override on the existing model, mirroring
+  // `jsonLdImage`, and is inert for every other site.
+  //
+  // `jsonLdImage` names the Khor Virap crop deliberately and truthfully: the
+  // photograph shows BOTH Ararat cones — Lesser on the left, snow-capped
+  // Greater on the right — over the plain with the monastery in front, which
+  // is exactly the composition this article calls the classic Ararat view. It
+  // is also the Armenia country social image, so og:image and the graph agree.
   {
     slug: 'mount-ararat', name: 'Mount Ararat',
-    parentType: 'region', parent: 'ararat', published: false,
+    parentType: 'region', parent: 'ararat', published: true,
+    seoKey: 'mountArarat', contentKey: 'mountArarat',
+    jsonLdCountry: 'Turkey',
+    jsonLdImage: '/images/files/khor-virap-monastery-ararat-armenia-og.jpg',
+    noHero: true,
+    noAutolink: true,
   },
   {
     slug: 'noraduz-cemetery', name: 'Noraduz Cemetery',

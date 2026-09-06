@@ -262,7 +262,12 @@ export function createJsonLdBuilder({ seoFor }) {
             description: seo.description,
             url,
             ...imageProp,
-            containedInPlace: { '@type': 'Country', name: countryName(country) },
+            // A region-parented site is not always physically inside its parent
+            // country. Mount Ararat routes under Armenia's Ararat region because
+            // the schema has no country-level site type, but the mountain stands
+            // in Turkey; asserting Armenia here would be false. Opt-in override,
+            // exactly like `jsonLdImage`; inert wherever it is absent.
+            containedInPlace: { '@type': 'Country', name: s.jsonLdCountry || countryName(country) },
           }
       const trail = [HOME, countryCrumb(country)]
       const placesHub = placesHubPathFor(country)

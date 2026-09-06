@@ -315,7 +315,12 @@ export default function SitePage() {
             ...imageProp,
             // Reads the site's country instead of asserting Georgia, so an
             // attraction under another country never claims the wrong one.
-            containedInPlace: { '@type': 'Country', name: countryName(country) },
+            // `jsonLdCountry` overrides even that, for a site routed under one
+            // country but physically located in another (Mount Ararat is parented
+            // on Armenia's Ararat region but stands in Turkey). Mirrors the
+            // build-time guard in scripts/seo-jsonld.js so the prerendered and
+            // hydrated graphs cannot disagree.
+            containedInPlace: { '@type': 'Country', name: site.jsonLdCountry || countryName(country) },
           }
     // Image SEO/AEO: a standalone ImageObject describing the hero. Because the
     // hero is a CSS background (not an indexable <img>), this keeps the image
