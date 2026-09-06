@@ -68,11 +68,17 @@ const COUNTRY_LANDING = {
   armenia: {
     pageKey: 'armenia',
     seoKey: 'armenia',
-    // ⏳ OWNER-SUPPLIED. Until a real Armenian photograph exists this stays null
-    // and the page renders the solid `.dest-title-band` carrying its H1 — the
-    // same `noHero` treatment every other Armenia page already uses. No
-    // placeholder, no borrowed Georgian image, no reserved empty hero.
-    hero: null,
+    // Khor Virap monastery with Mount Ararat behind it — owner-supplied, the
+    // first genuine Armenian photograph in the repo. Portrait 1086x1448 (the
+    // native size; no upscale), so the hero crops it centrally the way every
+    // `.coverme` hero does. `heroAvif` feeds HeroSection's image-set() upgrade,
+    // exactly as the packaged ladder intends.
+    hero: '/images/files/khor-virap-monastery-ararat-armenia-1086.webp',
+    heroAvif: '/images/files/khor-virap-monastery-ararat-armenia-1086.avif',
+    // Dedicated 1.91:1 social crop. Without it og:image would inherit the
+    // site-wide georgia-home.jpg — a Georgian photo on an Armenian page — or,
+    // worse, the portrait hero, which social scrapers letterbox badly.
+    ogImage: '/images/files/khor-virap-monastery-ararat-armenia-og.jpg',
     crumbKey: null, // -> nav.destinations.armenia
     itemListName: 'Destinations in Armenia',
     // No curated Armenia city-card block yet. The resolver falls through to the
@@ -195,12 +201,15 @@ export default function DestinationsPage({ country = DEFAULT_COUNTRY }) {
     }
   }, [lang, t, path, crumbName, conf.itemListName, subhubs])
 
-  useSEO({ ...seo, lang, path, ...(conf.hero ? { image: conf.hero } : {}), jsonLd })
+  // og:image/twitter:image prefer a dedicated 1.91:1 social crop where the
+  // country ships one, else the hero. A country with neither emits none.
+  const socialImage = conf.ogImage || conf.hero
+  useSEO({ ...seo, lang, path, ...(socialImage ? { image: socialImage } : {}), jsonLd })
 
   return (
     <>
       {conf.hero ? (
-        <HeroSection className="hero--compact" image={conf.hero} title={page.heroTitle} />
+        <HeroSection className="hero--compact" image={conf.hero} imageAvif={conf.heroAvif} title={page.heroTitle} />
       ) : (
         /* No photo hero until an approved image exists — the same solid
            `.dest-title-band` CityPage/SitePage/RegionPage use for `noHero`. It

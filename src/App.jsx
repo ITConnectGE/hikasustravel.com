@@ -28,7 +28,6 @@ const AbkhaziaPage = routeComponent(() => import('./components/pages/AbkhaziaPag
 const DestinationsPage = routeComponent(() => import('./components/pages/DestinationsPage'))
 // Named exports need unwrapping — React.lazy resolves the `default` binding.
 const RegionsHubPage = routeComponent(() => import('./components/pages/DestinationHubs'), (m) => m.RegionsHubPage)
-const CountryStubPage = routeComponent(() => import('./components/pages/CountryStubPage'))
 const CitiesHubPage = routeComponent(() => import('./components/pages/DestinationHubs'), (m) => m.CitiesHubPage)
 const PlacesToVisitHubPage = routeComponent(() => import('./components/pages/DestinationHubs'), (m) => m.PlacesToVisitHubPage)
 const CityPage = routeComponent(() => import('./components/pages/CityPage'))
@@ -112,7 +111,7 @@ export function AppRoutes() {
               Router ranks them above `armenia/:citySlug` and the regions tree
               cannot be shadowed by a city slug. Region guides keep nesting under
               their region as a static `things-to-do` segment. */}
-          <Route path="armenia" element={<CountryStubPage pageKey="armenia" seoKey="armenia" path="armenia" links={[{ to: '/armenia/regions', labelKey: 'nav.regions' }, { to: '/armenia/cities', labelKey: 'nav.cities' }, { to: '/armenia/yerevan', labelKey: 'nav.yerevan' }, { to: '/armenia/dilijan', labelKey: 'nav.dilijan' }]} />} />
+          <Route path="armenia" element={<DestinationsPage country="armenia" />} />
           <Route path="armenia/regions" element={<RegionsHubPage country="armenia" />} />
           <Route path="armenia/cities" element={<CitiesHubPage country="armenia" />} />
           <Route path="armenia/regions/:regionSlug" element={<RegionPage />} />

@@ -321,6 +321,9 @@ const staticPageImages = {
   'tbilisi-international-airport': '/images/files/tbilisi-old-town-narikala-mtkvari-georgia-1200.webp',
   'tbilisi-metro': '/images/files/tbilisi-metekhi-mtatsminda.jpg',
   'tbilisi-railway-station': '/images/files/old-tbilisi.jpg',
+  // Armenia's own 1.91:1 social crop. Without it this page inherited the
+  // site-wide georgia-home.jpg default — a Georgian photo on an Armenian page.
+  'armenia': '/images/files/khor-virap-monastery-ararat-armenia-og.jpg',
 }
 
 // ---------------------------------------------------------------------------
