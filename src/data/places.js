@@ -8861,7 +8861,33 @@ export const cities = [
   // Slugs follow the repository's existing transliteration (Tsaghkadzor, not
   // Tsakhkadzor) but are provisional: nothing is routed until published, so each
   // one can still change when its content arrives.
-  { slug: 'goris', name: 'Goris', region: 'syunik', published: false, country: 'armenia' },
+  // Goris — the scaffolded entry above it in this list, completed IN PLACE
+  // rather than replaced: same slug, same region, same country, now published
+  // with its content and SEO keys. It keeps the /armenia/goris URL the
+  // scaffold always implied, one level under the country while carrying
+  // `region: 'syunik'` - region association and URL hierarchy stay separate,
+  // exactly as on Garni, Dilijan and Etchmiadzin.
+  //
+  // No `thingsToDo` block: the companion guide is a separate task, so no CTA
+  // and no /things-to-do URL exist yet. The shared
+  // armenia/:citySlug/things-to-do and armenia/:citySlug/:sub routes already
+  // exist, so both a guide and future attractions (Old Khndzoresk, Tatev) can
+  // hang off this record later with no routing work.
+  //
+  // `noHero` while no approved Goris photograph exists; `noAutolink` because
+  // the body ships with zero editorial links by request (Tatev, Old
+  // Khndzoresk, Hin Khot, Sisian, Zorats Karer, the Shaki Waterfall, Vayots
+  // Dzor, Kapan and Etchmiadzin all stay plain text); `heroTitleAsH1` because
+  // the supplied H1 is the authored headline, not the bare town name.
+  {
+    slug: 'goris', name: 'Goris', region: 'syunik', published: true, country: 'armenia',
+    seoKey: 'goris', contentKey: 'goris',
+    // AM-SU is Syunik's ISO 3166-2 code; the coordinates are the town's.
+    geoMeta: { region: 'AM-SU', placename: 'Goris', lat: '39.5108', lng: '46.3403' },
+    noHero: true,
+    heroTitleAsH1: true,
+    noAutolink: true,
+  },
   { slug: 'gyumri', name: 'Gyumri', region: 'shirak', published: false, country: 'armenia' },
   { slug: 'jermuk', name: 'Jermuk', region: 'vayots-dzor', published: false, country: 'armenia' },
   { slug: 'oshakan', name: 'Oshakan', region: 'aragatsotn', published: false, country: 'armenia' },
