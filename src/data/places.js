@@ -14145,6 +14145,28 @@ export const sites = [
     slug: 'noraduz-cemetery', name: 'Noraduz Cemetery',
     parentType: 'region', parent: 'gegharkunik', published: false,
   },
+  // Areni-1 Cave. Region-parented on Vayots Dzor: Areni itself is a village
+  // with no destination record, and creating a thin Areni page purely to host
+  // the cave would be worse than parenting it on the marz it sits in. Resolves
+  // to /armenia/vayots-dzor/areni-1-cave through the shared country-aware
+  // resolver, with the region page itself staying at /armenia/regions/vayots-dzor.
+  //
+  // `noAutolink` because the owner copy is written to carry ZERO editorial body
+  // links; without it the shared autolinker turns Yerevan into a link, as it
+  // already does on the Amberd page.
+  //
+  // `noHero` until an approved Areni-1 photograph exists. `image` carries the
+  // Khor Virap social crop rather than the site-wide georgia-home.jpg default,
+  // so og:image is at least Armenian; swap it for a real cave photo when one
+  // arrives.
+  {
+    slug: 'areni-1-cave', name: 'Areni-1 Cave',
+    parentType: 'region', parent: 'vayots-dzor', published: true,
+    seoKey: 'areni1Cave', contentKey: 'areni1Cave',
+    noHero: true,
+    noAutolink: true,
+    image: '/images/files/khor-virap-monastery-ararat-armenia-og.jpg',
+  },
   {
     slug: 'noravank-monastery', name: 'Noravank Monastery',
     parentType: 'region', parent: 'vayots-dzor', published: false,

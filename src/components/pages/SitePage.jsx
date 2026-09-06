@@ -160,13 +160,22 @@ export default function SitePage() {
     () => [excludeKey, ...(noAutolinkKeys ? noAutolinkKeys.split(',') : [])].filter(Boolean),
     [excludeKey, noAutolinkKeys],
   )
+  // A page may opt out of contextual auto-linking entirely with `noAutolink` —
+  // the same flag region records already carry. Some editorial pages are written
+  // to carry ZERO body links, and excluding entities one at a time through
+  // `noAutolinkKeys` cannot express that. Without the flag every existing site
+  // page auto-links exactly as it did before.
+  const skipAutolink = published && !!site.noAutolink
   const linkedContent = useMemo(
-    () => (page ? autolinkHtml(page.content, lang, pages, excludeKeys) : ''),
-    [page, lang, pages, excludeKeys],
+    () => (page ? (skipAutolink ? page.content : autolinkHtml(page.content, lang, pages, excludeKeys)) : ''),
+    [page, lang, pages, excludeKeys, skipAutolink],
   )
   const linkedFaq = useMemo(
-    () => faqItems.map((it) => ({ ...it, content: autolinkHtml(it.content, lang, pages, excludeKeys) })),
-    [faqItems, lang, pages, excludeKeys],
+    () => faqItems.map((it) => ({
+      ...it,
+      content: skipAutolink ? it.content : autolinkHtml(it.content, lang, pages, excludeKeys),
+    })),
+    [faqItems, lang, pages, excludeKeys, skipAutolink],
   )
   const path = published ? sitePath(site).replace(/^\//, '') : ''
   const heroImage = published ? site.image : null
