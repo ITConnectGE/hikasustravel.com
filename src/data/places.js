@@ -8794,6 +8794,34 @@ export const cities = [
     heroTitleAsH1: true,
     noAutolink: true,
   },
+  // Garni — the village below the temple, and Armenia's fourth published city.
+  // `region: 'kotayk'` points at the published Kotayk region record, while the
+  // page itself stays one level under the country at /armenia/garni: cities are
+  // NOT nested under regions on either country (Georgia has /georgia/telavi,
+  // not /georgia/kakheti/telavi). Region association and URL hierarchy are
+  // deliberately separate.
+  //
+  // Publishing it as a CITY rather than a site is what makes it a parent: the
+  // shared routes armenia/:citySlug/things-to-do and armenia/:citySlug/:sub
+  // already exist, so a Things to Do in Garni guide and a Geghard Monastery
+  // attraction can later hang off this record with no new routing. Neither is
+  // created here, and no `thingsToDo` block is added, so no CTA and no
+  // /things-to-do URL exist yet.
+  //
+  // `noHero` while no approved Garni photograph exists; `noAutolink` because
+  // the body ships with zero editorial links by request (Geghard, the Symphony
+  // of Stones, the Charents Arch, Mount Ararat, Kotayk and Yerevan all stay
+  // plain text); `heroTitleAsH1` because the supplied H1 is the authored
+  // headline, not the bare village name.
+  {
+    slug: 'garni', name: 'Garni', region: 'kotayk', published: true, country: 'armenia',
+    seoKey: 'garni', contentKey: 'garni',
+    // AM-KT is Kotayk's ISO 3166-2 code; the coordinates are the village's.
+    geoMeta: { region: 'AM-KT', placename: 'Garni', lat: '40.1122', lng: '44.7297' },
+    noHero: true,
+    heroTitleAsH1: true,
+    noAutolink: true,
+  },
   // ---------------------------------------------------------------------------
   // Planned Armenian city guides, scaffolded ahead of their content.
   //
@@ -14153,9 +14181,14 @@ export const sites = [
   // put a second, non-clickable Etchmiadzin card on /armenia/places-to-visit
   // beside the real one on /armenia/cities, and reserve a competing
   // /armenia/armavir/etchmiadzin route for the same subject.
+  // Re-parented from the Kotayk region onto the Garni city record now that it
+  // is published, exactly as the note above prescribes for Saint Mesrop
+  // Mashtots Church once Oshakan publishes. Still unpublished, so this changes
+  // no URL today; it means the page will land at /armenia/garni/garni-temple
+  // rather than under the marz when its content arrives.
   {
     slug: 'garni-temple', name: 'Garni Temple',
-    parentType: 'region', parent: 'kotayk', published: false,
+    parentType: 'city', parent: 'garni', published: false,
   },
   {
     slug: 'geghard-monastery', name: 'Geghard Monastery',
