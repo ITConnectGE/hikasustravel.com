@@ -14384,9 +14384,27 @@ export const sites = [
     slug: 'sanahin-monastery', name: 'Sanahin Monastery',
     parentType: 'region', parent: 'lori', published: false,
   },
+  // Lake Sevan — published in place as a REGION-parented site, which puts it
+  // at /armenia/gegharkunik/lake-sevan through the shared country-aware
+  // resolver. `sites` is the ONLY shape that yields /<country>/<region>/<slug>:
+  // a `cities` record (the repo's "destination" type) resolves through
+  // cityPath() to a flat /armenia/lake-sevan, which the brief rules out. So
+  // the region-parented attraction record is both the required route and the
+  // closest thing the schema has to a destination-scale entry.
+  //
+  // `noAutolink` because the owner copy carries ZERO editorial body links;
+  // without it the shared autolinker would turn Sevanavank, Hayravank,
+  // Noratus, Gavar, Dilijan, Vayots Dzor and Tsaghkadzor into links.
+  //
+  // No `image`: public/images/files holds exactly one Armenian photograph,
+  // the Khor Virap crop, which is a monastery in Ararat and not this lake.
+  // og:image falls back to the Armenia country social image.
   {
     slug: 'lake-sevan', name: 'Lake Sevan',
-    parentType: 'region', parent: 'gegharkunik', published: false,
+    parentType: 'region', parent: 'gegharkunik', published: true,
+    seoKey: 'lakeSevan', contentKey: 'lakeSevan',
+    noHero: true,
+    noAutolink: true,
   },
   {
     slug: 'sevanavank-monastery', name: 'Sevanavank Monastery',
