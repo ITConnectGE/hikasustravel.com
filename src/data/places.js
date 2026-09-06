@@ -14211,9 +14211,34 @@ export const sites = [
     slug: 'garni-temple', name: 'Garni Temple',
     parentType: 'city', parent: 'garni', published: false,
   },
+  // Geghard Monastery — re-parented from the Kotayk region onto the published
+  // Garni city and published. `parentType: 'city'` is what puts it at
+  // /armenia/garni/geghard-monastery through the shared country-aware
+  // resolver: the same destination-child shape Georgia uses for
+  // /georgia/sighnaghi/bodbe-monastery. No route of its own, and no bare
+  // /armenia/geghard-monastery page exists.
+  //
+  // It is a sibling of the Things to Do in Garni guide, which hangs off the
+  // same city record — both are children of Garni, neither is nested under
+  // the Kotayk marz in the public URL.
+  //
+  // `noAutolink` because the owner copy carries ZERO editorial body links;
+  // without it the shared autolinker would turn Garni, Etchmiadzin and the
+  // Symphony of Stones into links.
+  //
+  // Deliberately NO `image`. Amberd and Areni-1 borrow the Khor Virap social
+  // crop so their og:image is at least Armenian, but Geghard is a MONASTERY
+  // and Khor Virap is a monastery: a social card showing one labelled as the
+  // other is exactly the misleading substitution the brief rules out. A site's
+  // `image` is not a hub-card cover (the Places to Visit hub passes no image),
+  // so omitting it costs nothing visible and og:image falls back to the
+  // site-wide default until a real Geghard photograph exists.
   {
     slug: 'geghard-monastery', name: 'Geghard Monastery',
-    parentType: 'region', parent: 'kotayk', published: false,
+    parentType: 'city', parent: 'garni', published: true,
+    seoKey: 'geghardMonastery', contentKey: 'geghardMonastery',
+    noHero: true,
+    noAutolink: true,
   },
   {
     slug: 'haghpat-monastery', name: 'Haghpat Monastery',
