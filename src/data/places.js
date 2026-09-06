@@ -8887,6 +8887,24 @@ export const cities = [
     noHero: true,
     heroTitleAsH1: true,
     noAutolink: true,
+    // Companion guide at /armenia/goris/things-to-do — the same block shape
+    // Yerevan and Garni use. No new routing: the shared
+    // armenia/:citySlug/things-to-do route already existed. The guide inherits
+    // this record's `noAutolink`, so its body stays free of editorial links.
+    thingsToDo: {
+      seoKey: 'thingsToDoGoris', contentKey: 'thingsToDoGoris',
+      noHero: true,
+      address: { addressLocality: 'Goris' },
+      // Only what is IN Goris. The guide's excursions — Old Khndzoresk, Hin
+      // Khot, Tatev, the Wings of Tatev, Devil's Bridge, Zorats Karer, the
+      // Shaki Waterfall, Sisian, Kapan and Meghri — are elsewhere in Syunik
+      // and beyond, and listing them here would assert they sit in the town.
+      // Same rule Yerevan's and Garni's blocks already follow.
+      attractions: [
+        'Old Goris', 'Stone Forest', 'Goris Local Lore Museum',
+        'Aksel Bakunts House-Museum', 'Goris historic centre',
+      ],
+    },
   },
   { slug: 'gyumri', name: 'Gyumri', region: 'shirak', published: false, country: 'armenia' },
   { slug: 'jermuk', name: 'Jermuk', region: 'vayots-dzor', published: false, country: 'armenia' },
