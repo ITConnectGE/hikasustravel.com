@@ -8764,6 +8764,31 @@ export const cities = [
       ],
     },
   },
+  // ---------------------------------------------------------------------------
+  // Planned Armenian city guides, scaffolded ahead of their content.
+  //
+  // `published: false` is what makes these safe to add now: an unpublished city
+  // emits NO route, NO prerendered page, NO sitemap entry and NO search entry.
+  // It appears only on /armenia/cities, as the non-clickable "guide coming soon"
+  // card DestinationHub already renders for any unpublished entry — so there is
+  // no dead link anywhere. The featured-city strip on /armenia filters on
+  // `published`, so these do not appear there either.
+  //
+  // Deliberately NO seoKey: DestinationHub's seoFallback would otherwise resolve
+  // a missing SEO entry to the literal string 'Hikasus Travel' and print THAT as
+  // the card name on every non-English page. Without it the card falls through
+  // to `name` below, which is correct in all seven locales.
+  //
+  // Slugs follow the repository's existing transliteration (Tsaghkadzor, not
+  // Tsakhkadzor) but are provisional: nothing is routed until published, so each
+  // one can still change when its content arrives.
+  { slug: 'goris', name: 'Goris', region: 'syunik', published: false, country: 'armenia' },
+  { slug: 'gyumri', name: 'Gyumri', region: 'shirak', published: false, country: 'armenia' },
+  { slug: 'jermuk', name: 'Jermuk', region: 'vayots-dzor', published: false, country: 'armenia' },
+  { slug: 'oshakan', name: 'Oshakan', region: 'aragatsotn', published: false, country: 'armenia' },
+  { slug: 'sevan', name: 'Sevan', region: 'gegharkunik', published: false, country: 'armenia' },
+  { slug: 'sisian', name: 'Sisian', region: 'syunik', published: false, country: 'armenia' },
+  { slug: 'tsaghkadzor', name: 'Tsaghkadzor', region: 'kotayk', published: false, country: 'armenia' },
 ]
 
 // ---------------------------------------------------------------------------
@@ -14056,6 +14081,83 @@ export const sites = [
     noHero: true, // TEMPORARY — no authentic photograph of this place yet (see the noHero note at the top of this file)
     image: '/images/files/georgia-home.jpg',
   },
+  // ---------------------------------------------------------------------------
+  // Planned Armenian Places to Visit, scaffolded ahead of their content.
+  //
+  // Same contract as the planned cities above: `published: false` means no
+  // route, no page, no sitemap or search entry, and a non-clickable "guide
+  // coming soon" card on /armenia/places-to-visit. No seoKey, for the same
+  // reason. Each becomes a real page by supplying its content and flipping the
+  // flag — the country-aware resolver already routes it at
+  // /armenia/<parent>/<slug> with no further wiring.
+  //
+  // All fifteen are region-parented, because no Armenian city that could host
+  // them is published yet. Two are worth re-checking when their content lands:
+  //   * Mount Ararat stands in TURKEY. It is parented on Ararat province, the
+  //     Armenian region it is seen and named from, not because it is in it.
+  //   * Saint Mesrop Mashtots Church is in Oshakan, which is itself a planned
+  //     city above; re-parent it onto that city once Oshakan is published.
+  // Slugs are provisional for the same reason as the cities'.
+  {
+    slug: 'amberd-fortress', name: 'Amberd Fortress',
+    parentType: 'region', parent: 'aragatsotn', published: false,
+  },
+  {
+    slug: 'etchmiadzin', name: 'Etchmiadzin',
+    parentType: 'region', parent: 'armavir', published: false,
+  },
+  {
+    slug: 'garni-temple', name: 'Garni Temple',
+    parentType: 'region', parent: 'kotayk', published: false,
+  },
+  {
+    slug: 'geghard-monastery', name: 'Geghard Monastery',
+    parentType: 'region', parent: 'kotayk', published: false,
+  },
+  {
+    slug: 'haghpat-monastery', name: 'Haghpat Monastery',
+    parentType: 'region', parent: 'lori', published: false,
+  },
+  {
+    slug: 'khor-virap-monastery', name: 'Khor Virap Monastery',
+    parentType: 'region', parent: 'ararat', published: false,
+  },
+  {
+    slug: 'mount-ararat', name: 'Mount Ararat',
+    parentType: 'region', parent: 'ararat', published: false,
+  },
+  {
+    slug: 'noraduz-cemetery', name: 'Noraduz Cemetery',
+    parentType: 'region', parent: 'gegharkunik', published: false,
+  },
+  {
+    slug: 'noravank-monastery', name: 'Noravank Monastery',
+    parentType: 'region', parent: 'vayots-dzor', published: false,
+  },
+  {
+    slug: 'sanahin-monastery', name: 'Sanahin Monastery',
+    parentType: 'region', parent: 'lori', published: false,
+  },
+  {
+    slug: 'lake-sevan', name: 'Lake Sevan',
+    parentType: 'region', parent: 'gegharkunik', published: false,
+  },
+  {
+    slug: 'sevanavank-monastery', name: 'Sevanavank Monastery',
+    parentType: 'region', parent: 'gegharkunik', published: false,
+  },
+  {
+    slug: 'saint-mesrop-mashtots-church', name: 'Saint Mesrop Mashtots Church',
+    parentType: 'region', parent: 'aragatsotn', published: false,
+  },
+  {
+    slug: 'tatev-monastery', name: 'Tatev Monastery',
+    parentType: 'region', parent: 'syunik', published: false,
+  },
+  {
+    slug: 'zvartnots-temple', name: 'Zvartnots Temple',
+    parentType: 'region', parent: 'armavir', published: false,
+  },
 ]
 
 // Wineries are intentionally an empty, scaffolded list — no winery pages are
@@ -14090,11 +14192,9 @@ export const getSite = (slug) => sites.find((s) => s.slug === slug) || null
 // three, so every Georgian trail is byte-identical to what it has always been.
 const COUNTRIES = {
   georgia: { base: '/georgia', name: 'Georgia', code: 'GE', regionsHub: true, citiesHub: true, placesHub: true },
-  // Armenia publishes a regions hub and a cities hub (Yerevan and Dilijan). It
-  // has no places-to-visit hub because it has no published attraction records
-  // yet — flip `placesHub` once it does and the landing tile, the breadcrumb
-  // level and the hub route all follow from this one field.
-  armenia: { base: '/armenia', name: 'Armenia', code: 'AM', regionsHub: true, citiesHub: true, placesHub: false },
+  // Armenia publishes all three sub-hubs. `placesHub` is the single field that
+  // drives the hub route, the landing tile and the attraction breadcrumb level.
+  armenia: { base: '/armenia', name: 'Armenia', code: 'AM', regionsHub: true, citiesHub: true, placesHub: true },
 }
 export const DEFAULT_COUNTRY = 'georgia'
 /** A record's country id, defaulting to Georgia for every record without one. */

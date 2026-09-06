@@ -114,6 +114,7 @@ export function AppRoutes() {
           <Route path="armenia" element={<DestinationsPage country="armenia" />} />
           <Route path="armenia/regions" element={<RegionsHubPage country="armenia" />} />
           <Route path="armenia/cities" element={<CitiesHubPage country="armenia" />} />
+          <Route path="armenia/places-to-visit" element={<PlacesToVisitHubPage country="armenia" />} />
           <Route path="armenia/regions/:regionSlug" element={<RegionPage />} />
           <Route path="armenia/regions/:regionSlug/things-to-do" element={<ThingsToDoCityPage />} />
           <Route path="armenia/:citySlug" element={<CityPage />} />

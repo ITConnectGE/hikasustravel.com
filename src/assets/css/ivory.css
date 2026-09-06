@@ -1859,6 +1859,18 @@
   text-align: center;
 }
 
+/* A destination tile whose photograph has not been supplied yet. `.tour-tile-
+   overlay` prints white text over a gradient that fades to transparent, so an
+   image-less tile would be white-on-white — present in the DOM and invisible on
+   screen. Filling it with the brand pine keeps the label readable at 8.4:1,
+   well past AA, while making it obvious the photo is still to come. Everything
+   else about the tile — ratio, radius, hover lift, grid behaviour — is
+   inherited unchanged, so supplying the cover swaps the colour for the picture
+   and nothing moves. Inert for Georgia: all of its tiles have photographs. */
+.theme-ivory .tour-tile-image--placeholder {
+  background-color: var(--accent);
+}
+
 /* --- Tables ---------------------------------------------------------------- */
 
 .theme-ivory table,

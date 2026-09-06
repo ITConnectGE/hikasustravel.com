@@ -80,6 +80,7 @@ const staticPages = [
   { path: 'armenia', changefreq: 'monthly', priority: '0.7' },
   { path: 'armenia/regions', changefreq: 'monthly', priority: '0.7' },
   { path: 'armenia/cities', changefreq: 'monthly', priority: '0.7' },
+  { path: 'armenia/places-to-visit', changefreq: 'monthly', priority: '0.7' },
   // City detail pages and their things-to-do guides come from the destination
   // registry below (publishedDestinationPages), so they are not listed here.
   { path: 'private-tours', changefreq: 'weekly', priority: '0.9' },

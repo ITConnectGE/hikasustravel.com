@@ -302,6 +302,7 @@ const seoPageMap = {
   'armenia': 'armenia',
   'armenia/regions': 'armeniaRegions',
   'armenia/cities': 'armeniaCities',
+  'armenia/places-to-visit': 'armeniaPlaces',
   // City detail pages + their things-to-do guides are emitted from the
   // destination registry (publishedDestinationPages), not from this map.
   'private-tours': 'privateTours',

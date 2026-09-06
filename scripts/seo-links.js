@@ -55,6 +55,7 @@ const STATIC_PAGES = [
   ['armenia', 'armenia'],
   ['armenia/regions', 'armeniaRegions'],
   ['armenia/cities', 'armeniaCities'],
+  ['armenia/places-to-visit', 'armeniaPlaces'],
   ['private-tours', 'privateTours'],
   ['group-tours', 'groupTours'],
   ['shuttle-service', 'shuttle'],
@@ -94,6 +95,7 @@ const GEORGIA_HUB = 'georgia'
 const ARMENIA_HUB = 'armenia'
 const ARMENIA_REGIONS_HUB = 'armenia/regions'
 const ARMENIA_CITIES_HUB = 'armenia/cities'
+const ARMENIA_PLACES_HUB = 'armenia/places-to-visit'
 // A published region's country decides which hub pair it hangs off and which
 // URLs its links use. Georgia covers every record with no `country`.
 const isGeorgian = (r) => countryOf(r) === DEFAULT_COUNTRY
@@ -220,6 +222,8 @@ export function createLinkGraph({ tours, blogArticles, tourTitle, blogTitle, seo
     put(ARMENIA_REGIONS_HUB, ARMENIA_HUB, labelOfStatic(ARMENIA_HUB))
     put(ARMENIA_HUB, ARMENIA_CITIES_HUB, labelOfStatic(ARMENIA_CITIES_HUB))
     put(ARMENIA_CITIES_HUB, ARMENIA_HUB, labelOfStatic(ARMENIA_HUB))
+    put(ARMENIA_HUB, ARMENIA_PLACES_HUB, labelOfStatic(ARMENIA_PLACES_HUB))
+    put(ARMENIA_PLACES_HUB, ARMENIA_HUB, labelOfStatic(ARMENIA_HUB))
     for (const c of pubCities) {
       // A city hangs off its own country hub and is listed on that country's
       // cities hub. Both countries now have one, so this is symmetric.

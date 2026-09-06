@@ -20,7 +20,7 @@ import {
   regions, cities, sites,
   regionPath, cityPath, sitePath, thingsToDoPath, siteLocation,
   destinationsBase, regionsHubPath, citiesHubPath, placesHubPath,
-  armeniaBase, armeniaRegionsHubPath, citiesHubPathFor,
+  armeniaBase, armeniaRegionsHubPath, citiesHubPathFor, placesHubPathFor,
 } from './places.js'
 import { tours } from './tours.js'
 import { blogArticles } from './blogData.js'
@@ -81,6 +81,7 @@ const STATIC_PAGES = [
   { path: armeniaBase, seoKey: 'armenia', type: 'info' },
   { path: armeniaRegionsHubPath, seoKey: 'armeniaRegions', type: 'info' },
   { path: citiesHubPathFor('armenia'), seoKey: 'armeniaCities', type: 'info' },
+  { path: placesHubPathFor('armenia'), seoKey: 'armeniaPlaces', type: 'info' },
 ]
 
 const clean = (p) => String(p || '').replace(/^\//, '')

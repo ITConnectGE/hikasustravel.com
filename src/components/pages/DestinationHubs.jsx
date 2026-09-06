@@ -26,15 +26,15 @@ const HERO_IMAGE = '/images/files/tbilisi-old-town-narikala-mtkvari-georgia-1200
  * Georgia's entries are verbatim what the three functions passed inline before,
  * so its hubs render byte-identically.
  *
- * `includeUnpublished` is the one genuine behavioural difference between the two
- * countries, and it is deliberate: Georgia's hubs are mature, so a "guide coming
- * soon" card there is informative. Armenia's are not, and ten coming-soon cards
- * would be noise, so it lists only what is published.
+ * `includeUnpublished` decides whether a hub also lists what is scaffolded but
+ * not yet written, as DestinationHub's non-clickable "guide coming soon" card.
+ * Armenia's Cities and Places hubs do, so the seven planned city guides and the
+ * fifteen planned attractions are visible as forthcoming; its Regions hub does
+ * not, because all ten Armenian regions are already published.
  *
- * A country simply omits a hub it does not publish — Armenia has no `places`
- * entry because /armenia/places-to-visit does not exist. That is enforced
- * independently by COUNTRIES in places.js (placesHubPathFor returns null), which
- * is what the breadcrumb builders and the country landing page read.
+ * A country still omits a hub it does not publish, enforced independently by
+ * COUNTRIES in places.js (placesHubPathFor and friends return null), which is
+ * what the breadcrumb builders and the country landing page read.
  */
 const COUNTRY_HUBS = {
   georgia: {
@@ -49,7 +49,12 @@ const COUNTRY_HUBS = {
     // carrying the H1, not an empty hero.
     noHero: true,
     regions: { pageKey: 'armeniaRegions', seoKey: 'armeniaRegions', includeUnpublished: false },
-    cities: { pageKey: 'armeniaCities', seoKey: 'armeniaCities', includeUnpublished: false, pinFirst: 'yerevan' },
+    // Cities and Places list their scaffolded entries: the seven planned city
+    // guides and the fifteen planned attractions render as DestinationHub's
+    // non-clickable 'guide coming soon' cards, which is how a visitor sees what
+    // is on the way. Regions stays published-only — all ten already exist.
+    cities: { pageKey: 'armeniaCities', seoKey: 'armeniaCities', includeUnpublished: true, pinFirst: 'yerevan' },
+    places: { pageKey: 'armeniaPlaces', seoKey: 'armeniaPlaces' },
   },
 }
 

@@ -100,9 +100,13 @@ const COUNTRY_LANDING = {
     // behind a "Cities" tile, or on a Yerevan or Dilijan card, would tell a
     // traveller those places look like something they do not. A missing tile is
     // honest; a wrong one is not. Both need one real photograph each.
+    // Regions carries the Khor Virap landscape at its 768 rung; Cities and
+    // Places have no photograph yet and render on the brand tone until one
+    // arrives. Supplying a path here is all either tile needs.
     subhubImages: {
       regions: '/images/files/khor-virap-monastery-ararat-armenia-768.webp',
       cities: null,
+      places: null,
     },
   },
 }
@@ -124,10 +128,11 @@ export default function DestinationsPage({ country = DEFAULT_COUNTRY }) {
   const seo = getSEO(conf.seoKey, lang)
   const path = countryBase(country).replace(/^\//, '')
 
-  // The sub-hubs this country actually publishes AND has a cover for. Both
-  // conditions are load-bearing: the first stops a tile linking to a page that
-  // does not exist, the second stops a tile rendering as an empty block (a
-  // cover-less BlurUpBackground emits no background-image at all).
+  // Every sub-hub this country actually publishes. The `to` check is what stops
+  // a tile linking to a page that does not exist (Armenia has no
+  // places-to-visit hub yet). A hub whose cover has not been supplied still gets
+  // its tile — it renders on the brand tone via --placeholder rather than being
+  // hidden, so the page keeps its navigation while photography catches up.
   const subhubs = useMemo(() => {
     const candidates = [
       { key: 'regions', to: regionsHubPathFor(country), labelKey: 'nav.regions' },
@@ -136,16 +141,16 @@ export default function DestinationsPage({ country = DEFAULT_COUNTRY }) {
     ]
     return candidates
       .map((c) => ({ ...c, image: conf.subhubImages[c.key] }))
-      .filter((c) => c.to && c.image)
+      .filter((c) => c.to)
   }, [country, conf])
 
   // Published city guides for this country. Entries reclassified as a place to
   // visit (e.g. Gomismta) are not cities, so they are excluded from the strip.
-  // A city with no cover is excluded for the same reason a cover-less sub-hub is
-  // — an image tile with no image is not a card. Inert for Georgia: all 26 of
-  // its featured cities have one.
+  // A city without a cover still gets its card, on the same brand-tone
+  // placeholder the sub-hub tiles use. Inert for Georgia: all 26 of its featured
+  // cities have a photograph, so every Georgia tile takes the image branch.
   const featuredCities = useMemo(
-    () => citiesOfCountry(country).filter((c) => c.published && c.classifyAs !== 'place' && c.image),
+    () => citiesOfCountry(country).filter((c) => c.published && c.classifyAs !== 'place'),
     [country],
   )
 
@@ -253,7 +258,9 @@ export default function DestinationsPage({ country = DEFAULT_COUNTRY }) {
                   return (
                     <div className="tour-tile" key={d.to}>
                       <LocaleLink to={d.to} className="tour-tile-link" aria-label={title}>
-                        <BlurUpBackground src={d.image} className="tour-tile-image" />
+                        {d.image
+                          ? <BlurUpBackground src={d.image} className="tour-tile-image" />
+                          : <div className="tour-tile-image tour-tile-image--placeholder" />}
                         <div className="tour-tile-overlay">
                           {/* These tiles are the page's first section and sit
                               directly under its <h1>, so an <h3> here skipped a
@@ -289,7 +296,9 @@ export default function DestinationsPage({ country = DEFAULT_COUNTRY }) {
                     return (
                       <div className="tour-tile" key={c.slug}>
                         <LocaleLink to={cityPath(c.slug)} className="tour-tile-link" aria-label={title}>
-                          <BlurUpBackground src={c.image} className="tour-tile-image" />
+                          {c.image
+                            ? <BlurUpBackground src={c.image} className="tour-tile-image" />
+                            : <div className="tour-tile-image tour-tile-image--placeholder" />}
                           <div className="tour-tile-overlay">
                             <h3>{title}</h3>
                           </div>
