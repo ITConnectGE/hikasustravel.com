@@ -13,7 +13,7 @@ import useSEO from '../../hooks/useSEO'
 import { getSEO } from '../../data/seoData'
 import {
   getCity, cityPath, thingsToDoPath, legacyRedirects,
-  countryOf, countryBase, countryName, destinationsBase, citiesHubPath, placesHubPath, DEFAULT_COUNTRY,
+  countryOf, countryBase, countryName, destinationsBase, citiesHubPathFor, placesHubPathFor, DEFAULT_COUNTRY,
 } from '../../data/places'
 import { autolinkHtml } from '../../utils/autolink'
 import asset from '../../utils/basePath'
@@ -154,9 +154,6 @@ export default function CityPage() {
   // (e.g. Gomismta) while keeping this /georgia/<slug> detail page — their
   // breadcrumb points back to the Places to Visit hub, where their card lives.
   const isPlace = published && city.classifyAs === 'place'
-  const parentCrumb = isPlace
-    ? { name: t('nav.placesToVisit'), to: placesHubPath }
-    : { name: t('nav.cities'), to: citiesHubPath }
   // Country-aware, mirroring RegionPage. Georgia keeps the trail it has always
   // had — "All Destinations" pointing at /georgia, then the Cities (or Places
   // to Visit) hub. Another country uses its own name for the country crumb and
@@ -164,6 +161,16 @@ export default function CityPage() {
   // point at a page that exists.
   const country = countryOf(published ? city : null)
   const isGeorgia = country === DEFAULT_COUNTRY
+  // The hub crumb, resolved per country rather than assumed to be Georgia's.
+  // citiesHubPathFor('georgia') IS the old citiesHubPath constant, so every
+  // Georgian trail is byte-identical; a country that does not publish the hub
+  // gets null and the trail omits that level rather than linking a page that
+  // does not exist — the guard SitePage already uses. Armenia publishes
+  // /armenia/cities, so its cities carry the Cities crumb.
+  const hubPath = isPlace ? placesHubPathFor(country) : citiesHubPathFor(country)
+  const parentCrumb = hubPath
+    ? { name: t(isPlace ? 'nav.placesToVisit' : 'nav.cities'), to: hubPath }
+    : null
   // H1. Every Georgian city has always shown the bare city name here, and each
   // keeps it: the authored `heroTitle` in pages.json is a longer, SEO-shaped
   // headline that those pages deliberately do not display. A city whose brief
@@ -177,7 +184,7 @@ export default function CityPage() {
         isGeorgia
           ? { name: t('nav.allDestinations'), to: destinationsBase }
           : { name: t('nav.destinations.armenia'), to: countryBase(country) },
-        ...(isGeorgia ? [parentCrumb] : []),
+        ...(parentCrumb ? [parentCrumb] : []),
         { name: city.name },
       ]
     : []

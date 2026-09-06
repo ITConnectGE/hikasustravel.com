@@ -8764,6 +8764,36 @@ export const cities = [
       ],
     },
   },
+  // Etchmiadzin — Armenia's third published city, and the reason the stale
+  // `etchmiadzin` stub was removed from `sites` below. `region: 'armavir'`
+  // points at the published Armavir region record; like Dilijan it still
+  // lives one level under the country at /armenia/etchmiadzin, because cities
+  // are NOT nested under regions on either country (Georgia has
+  // /georgia/telavi, not /georgia/kakheti/telavi). Region association and URL
+  // hierarchy are deliberately separate things here.
+  //
+  // The city's official name has been Vagharshapat since 1995; Etchmiadzin is
+  // the travel-facing name the owner selected, and no /armenia/vagharshapat
+  // alias is created — one subject, one URL.
+  //
+  // `noHero` while no approved Etchmiadzin photograph exists; `noAutolink`
+  // because the body ships with zero editorial links by request (Zvartnots,
+  // Sardarapat, Mount Ararat, Armavir and Yerevan all stay plain text);
+  // `heroTitleAsH1` because the supplied H1 is the authored headline, not the
+  // bare city name.
+  //
+  // No `thingsToDo` block: no companion guide exists yet, so no CTA and no
+  // /things-to-do URL.
+  {
+    slug: 'etchmiadzin', name: 'Etchmiadzin', region: 'armavir', published: true, country: 'armenia',
+    seoKey: 'etchmiadzin', contentKey: 'etchmiadzin',
+    // Per-page geo tags. AM-AV is Armavir's ISO 3166-2 code; the coordinates
+    // are Vagharshapat's, the city this page is about.
+    geoMeta: { region: 'AM-AV', placename: 'Etchmiadzin', lat: '40.1622', lng: '44.2911' },
+    noHero: true,
+    heroTitleAsH1: true,
+    noAutolink: true,
+  },
   // ---------------------------------------------------------------------------
   // Planned Armenian city guides, scaffolded ahead of their content.
   //
@@ -14117,10 +14147,12 @@ export const sites = [
     noHero: true,
     image: '/images/files/khor-virap-monastery-ararat-armenia-og.jpg',
   },
-  {
-    slug: 'etchmiadzin', name: 'Etchmiadzin',
-    parentType: 'region', parent: 'armavir', published: false,
-  },
+  // Etchmiadzin is NOT here: it is a published CITY (see the cities array
+  // above), living at /armenia/etchmiadzin. It was scaffolded here as a
+  // planned place to visit before that page existed; leaving the stub would
+  // put a second, non-clickable Etchmiadzin card on /armenia/places-to-visit
+  // beside the real one on /armenia/cities, and reserve a competing
+  // /armenia/armavir/etchmiadzin route for the same subject.
   {
     slug: 'garni-temple', name: 'Garni Temple',
     parentType: 'region', parent: 'kotayk', published: false,

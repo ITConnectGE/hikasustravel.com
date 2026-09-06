@@ -185,12 +185,18 @@ export function createJsonLdBuilder({ seoFor }) {
       const path = clean(cityPath(c.slug))
       const url = `${SITE_URL}/${lang}/${path}`
       const seo = seoFor(c.seoKey, lang)
-      const parentCrumb = c.classifyAs === 'place'
-        ? { name: t('nav.placesToVisit'), to: '/georgia/places-to-visit' }
-        : { name: t('nav.cities'), to: '/georgia/cities' }
+      // Hub crumb per country, mirroring CityPage exactly. The helpers return
+      // Georgia's two long-standing paths for Georgia, so its graph is
+      // unchanged; a country publishing the hub (Armenia) now carries the
+      // crumb, and one that does not still omits the level.
+      const isPlace = c.classifyAs === 'place'
+      const hubPath = isPlace ? placesHubPathFor(country) : citiesHubPathFor(country)
+      const parentCrumb = hubPath
+        ? { name: t(isPlace ? 'nav.placesToVisit' : 'nav.cities'), to: hubPath }
+        : null
       const trail = country === DEFAULT_COUNTRY
-        ? [HOME, ALL_DEST, parentCrumb, { name: c.name }]
-        : [HOME, countryCrumb(country), { name: c.name }]
+        ? [HOME, ALL_DEST, ...(parentCrumb ? [parentCrumb] : []), { name: c.name }]
+        : [HOME, countryCrumb(country), ...(parentCrumb ? [parentCrumb] : []), { name: c.name }]
       put(path, [
         {
           '@type': 'TouristDestination',
