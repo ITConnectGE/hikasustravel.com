@@ -292,8 +292,9 @@ export default function TourDetailPage() {
 
       {/* The standalone interactive route map used to sit here. It was removed
           because the route is already shown by the route-map image inside the
-          gallery. `tour.map` data stays in tours.js — MapboxMap itself is still
-          used by HomePage. */}
+          gallery. `tour.map` data stays in tours.js. MapboxMap and the rest of
+          the Mapbox infrastructure are kept but currently have no consumer —
+          the homepage map, its last one, has since been removed too. */}
 
       {/* The FAQ section sat here, between What's Included/Not Included and the
           inquiry form, as its own `<div class="td-layout">` wrapper with a
