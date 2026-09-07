@@ -8906,7 +8906,27 @@ export const cities = [
       ],
     },
   },
-  { slug: 'gyumri', name: 'Gyumri', region: 'shirak', published: false, country: 'armenia' },
+  // Gyumri — the scaffolded entry completed IN PLACE, like Goris and
+  // Tsaghkadzor before it: same slug, same region, same country, now
+  // published with its content and SEO keys. cityPath() puts it at
+  // /armenia/gyumri; the `region` field carries the Shirak association
+  // WITHOUT putting Shirak in the URL or the breadcrumb, exactly as Dilijan
+  // carries Tavush. No routing change was needed.
+  //
+  // `noAutolink` so the body carries only the four hand-authored links
+  // (Shirak, Yerevan, Lori, Aragatsotn). Marmashen, Harichavank, Lake Arpi
+  // and Vanadzor have no pages and stay plain text.
+  //
+  // No `image`: the only Armenian photograph on disk shows Khor Virap.
+  {
+    slug: 'gyumri', name: 'Gyumri', region: 'shirak', published: true, country: 'armenia',
+    seoKey: 'gyumri', contentKey: 'gyumri',
+    // AM-SH is Shirak's ISO 3166-2 code.
+    geoMeta: { region: 'AM-SH', placename: 'Gyumri', lat: '40.7894', lng: '43.8475' },
+    noHero: true,
+    heroTitleAsH1: true,
+    noAutolink: true,
+  },
   { slug: 'jermuk', name: 'Jermuk', region: 'vayots-dzor', published: false, country: 'armenia' },
   { slug: 'oshakan', name: 'Oshakan', region: 'aragatsotn', published: false, country: 'armenia' },
   { slug: 'sevan', name: 'Sevan', region: 'gegharkunik', published: false, country: 'armenia' },
