@@ -14450,9 +14450,22 @@ export const sites = [
     noHero: true,
     noAutolink: true,
   },
+  // Sanahin — published in place as a REGION-parented site under Lori, the
+  // same shape the stub already had and the same shape Haghpat uses. The two
+  // monasteries are one UNESCO property but two separate pages, exactly as
+  // the owner copy describes them.
+  //
+  // `noAutolink` because the owner copy carries ZERO editorial body links:
+  // Haghpat, Akhtala, Odzun, Kobayr, Alaverdi, Dilijan, Vanadzor and Lake
+  // Sevan all stay plain text.
+  //
+  // No `image`: the only Armenian photograph on disk shows Khor Virap.
   {
     slug: 'sanahin-monastery', name: 'Sanahin Monastery',
-    parentType: 'region', parent: 'lori', published: false,
+    parentType: 'region', parent: 'lori', published: true,
+    seoKey: 'sanahinMonastery', contentKey: 'sanahinMonastery',
+    noHero: true,
+    noAutolink: true,
   },
   // Lake Sevan — published in place as a REGION-parented site, which puts it
   // at /armenia/gegharkunik/lake-sevan through the shared country-aware
