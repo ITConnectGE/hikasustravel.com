@@ -14283,15 +14283,14 @@ export const sites = [
   // put a second, non-clickable Etchmiadzin card on /armenia/places-to-visit
   // beside the real one on /armenia/cities, and reserve a competing
   // /armenia/armavir/etchmiadzin route for the same subject.
-  // Re-parented from the Kotayk region onto the Garni city record now that it
-  // is published, exactly as the note above prescribes for Saint Mesrop
-  // Mashtots Church once Oshakan publishes. Still unpublished, so this changes
-  // no URL today; it means the page will land at /armenia/garni/garni-temple
-  // rather than under the marz when its content arrives.
-  {
-    slug: 'garni-temple', name: 'Garni Temple',
-    parentType: 'city', parent: 'garni', published: false,
-  },
+  // Garni Temple is NOT here either, for the same reason, and it was removed
+  // at the owner's request. The temple is not an unwritten page: the published
+  // Garni city page at /armenia/garni gives it four of its ten sections and 17
+  // mentions, and Things to Do in Garni adds 14 more. Keeping an unpublished
+  // stub put a second, non-clickable "Garni Temple" card on
+  // /armenia/places-to-visit for a subject already covered in depth, and
+  // reserved /armenia/garni/garni-temple for it. If the temple ever warrants
+  // its own page, re-add the record then — nothing else depends on it.
   // Geghard Monastery — re-parented from the Kotayk region onto the published
   // Garni city and published. `parentType: 'city'` is what puts it at
   // /armenia/garni/geghard-monastery through the shared country-aware
@@ -14397,10 +14396,13 @@ export const sites = [
     noHero: true,
     noAutolink: true,
   },
-  {
-    slug: 'noraduz-cemetery', name: 'Noraduz Cemetery',
-    parentType: 'region', parent: 'gegharkunik', published: false,
-  },
+  // Noraduz Cemetery is NOT here: it is the SAME place as the published
+  // noratus-cemetery record above, under the alternate spelling. The Noratus
+  // brief made "Noratus" the primary spelling site-wide, and this leftover
+  // stub was putting a pending "Noraduz Cemetery" card on
+  // /armenia/places-to-visit two rows from the live "Noratus Cemetery" one,
+  // as well as reserving a competing /armenia/gegharkunik/noraduz-cemetery
+  // route for the same cemetery.
   // Areni-1 Cave. Region-parented on Vayots Dzor: Areni itself is a village
   // with no destination record, and creating a thin Areni page purely to host
   // the cave would be worse than parenting it on the marz it sits in. Resolves
