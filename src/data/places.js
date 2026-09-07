@@ -8970,7 +8970,27 @@ export const cities = [
     heroTitleAsH1: true,
     noAutolink: true,
   },
-  { slug: 'sevan', name: 'Sevan', region: 'gegharkunik', published: false, country: 'armenia' },
+  // Sevan — the CITY, completed IN PLACE at /armenia/sevan. Three separate
+  // records now share the name and must not be conflated: this city, the
+  // `lake-sevan` site at /armenia/gegharkunik/lake-sevan, and the
+  // `sevanavank-monastery` site at /armenia/gegharkunik/sevanavank-monastery.
+  // Both keep their published region-parented routes; the page body makes the
+  // distinction explicitly and links to each.
+  //
+  // `noAutolink` so the body carries only the six hand-authored links (Lake
+  // Sevan, Gegharkunik, Yerevan, Dilijan, Sevanavank, Noratus Cemetery).
+  // Hayravank and Gavar have no pages and stay plain text.
+  //
+  // No `image`: the only Armenian photograph on disk shows Khor Virap.
+  {
+    slug: 'sevan', name: 'Sevan', region: 'gegharkunik', published: true, country: 'armenia',
+    seoKey: 'sevan', contentKey: 'sevan',
+    // AM-GR is Gegharkunik's ISO 3166-2 code.
+    geoMeta: { region: 'AM-GR', placename: 'Sevan', lat: '40.5497', lng: '44.9519' },
+    noHero: true,
+    heroTitleAsH1: true,
+    noAutolink: true,
+  },
   // Sisian — completed IN PLACE at /armenia/sisian.
   //
   // The nearby attractions the copy names — Zorats Karer, Shaki Waterfall,
