@@ -14492,6 +14492,27 @@ export const sites = [
   // /armenia/places-to-visit for a subject already covered in depth, and
   // reserved /armenia/garni/garni-temple for it. If the temple ever warrants
   // its own page, re-add the record then — nothing else depends on it.
+  // Zorats Karer — REGION-parented onto Syunik, at
+  // /armenia/syunik/zorats-karer. That is the brief's own preferred route and
+  // it matches Tatev Monastery, the other published Syunik attraction: both
+  // are region-parented even though Sisian and Goris are published cities.
+  // The alternative /armenia/sisian/zorats-karer would have been supported by
+  // the resolver, but choosing it would have split Syunik's attractions across
+  // two parenting styles for no gain, and the brief is explicit that ONE
+  // canonical route is wanted with the Sisian relationship carried by links.
+  //
+  // `noAutolink`: four hand-authored links only (Sisian, Syunik, Goris,
+  // Tatev). Shaki Waterfall, Ukhtasar, Vorotnavank and Aghitu have no pages
+  // and stay plain text.
+  //
+  // No `image`, on the same precedent as the other Armenian sites.
+  {
+    slug: 'zorats-karer', name: 'Zorats Karer',
+    parentType: 'region', parent: 'syunik', published: true,
+    seoKey: 'zoratsKarer', contentKey: 'zoratsKarer',
+    noHero: true,
+    noAutolink: true,
+  },
   // Mount Aragats — REGION-parented onto Aragatsotn, at
   // /armenia/aragatsotn/mount-aragats, the same shape as Amberd Fortress
   // directly below it. Region rather than city because the massif spans the
