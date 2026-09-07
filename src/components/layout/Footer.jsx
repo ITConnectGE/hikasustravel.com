@@ -27,6 +27,18 @@ export default function Footer({ variant = 'default' }) {
             >
               {contactInfo.instagramHandle}
             </a>
+            {/* Same shape as the Instagram link above — external, new tab, glyph
+                via a ::before background SVG, visible label. The label is kept
+                because this social row already shows one (the handle). */}
+            <a
+              href={contactInfo.tripadvisorUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="tripadvisor"
+              aria-label="Hikasus Travel on Tripadvisor"
+            >
+              {contactInfo.tripadvisorLabel}
+            </a>
           </div>
         </div>
 

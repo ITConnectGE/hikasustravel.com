@@ -6865,6 +6865,16 @@ footer {
   margin-right: 8px;
   vertical-align: middle;
 }
+/* Same glyph treatment as Instagram, so the two footer social links sit at the
+   same size, weight and baseline. */
+.tripadvisor::before {
+  content: url("../img/tripadvisor.svg");
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  margin-right: 8px;
+  vertical-align: middle;
+}
 .taxi-footer {
   background-color: var(--color-h3);
   color: var(--color-h2);
@@ -6897,6 +6907,14 @@ footer {
   opacity: 0.7;
   line-height: 1.7;
   margin-bottom: 20px;
+}
+/* Two social links now share this row, so it needs an explicit gap; a single
+   link is unaffected by the flex context. */
+.footer-social {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 18px;
 }
 .footer-social a {
   color: var(--color-bg);

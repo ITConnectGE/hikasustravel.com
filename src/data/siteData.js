@@ -121,4 +121,9 @@ export const contactInfo = {
   email: 'info@hikasustravel.com',
   instagramUrl: 'https://www.instagram.com/hikasus_travel',
   instagramHandle: 'hikasus_travel',
+  // The company's own TripAdvisor listing. Kept here rather than in the Footer
+  // component so both social links come from the same single source.
+  tripadvisorUrl:
+    'https://www.tripadvisor.com/Attraction_Review-g294195-d33097839-Reviews-Hikasus_Travel-Tbilisi.html',
+  tripadvisorLabel: 'Tripadvisor',
 }

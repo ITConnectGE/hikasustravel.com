@@ -1470,10 +1470,11 @@
   color: var(--sub);
 }
 
-/* The footer's Instagram glyph is a cream SVG injected through `content:url()`,
-   so it cannot be recoloured by `color`. Darkening it is the only way to keep
-   it visible on the surface-white footer. */
-.theme-ivory .instagram::before {
+/* The footer's Instagram and Tripadvisor glyphs are cream SVGs injected through
+   `content:url()`, so they cannot be recoloured by `color`. Darkening them is
+   the only way to keep them visible on the surface-white footer. */
+.theme-ivory .instagram::before,
+.theme-ivory .tripadvisor::before {
   filter: brightness(0) opacity(0.72);
 }
 
