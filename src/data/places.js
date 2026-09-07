@@ -9038,6 +9038,33 @@ export const cities = [
     heroTitleAsH1: true,
     noAutolink: true,
   },
+  // Armenian Khachkar — a COUNTRY-LEVEL cultural-heritage guide, not a city and
+  // not an attraction. It lives here for one reason: `/armenia/:citySlug` is
+  // the only route in the app that renders a country-level page from
+  // pages.json, so a record in this array is what puts the guide at
+  // /armenia/armenian-khachkar — the route the brief asks for — with no new
+  // routing and no one-off page component, both of which the brief rules out.
+  //
+  // `classifyAs: 'place'` is the existing mechanism for exactly this decoupling
+  // (see Gomismta, a highland resort kept in this array for its /georgia/<slug>
+  // page): the Cities hub and the featured-cities strip skip it, the Places to
+  // Visit hub lists it. That is the one compromise here — a cultural TOPIC ends
+  // up carded on Places to Visit. The alternative, a third `classifyAs` value
+  // excluded from both hubs, would have meant editing five shared consumers
+  // (both hubs, DestinationsPage, searchIndex and seo-jsonld) for one page.
+  //
+  // `placeLocation` is deliberately country-wide with no region: khachkars are
+  // not a Gegharkunik or Lori subject, and pinning the card to one marz would
+  // misdescribe the topic.
+  {
+    slug: 'armenian-khachkar', name: 'Armenian Khachkar', region: null, published: true, country: 'armenia',
+    seoKey: 'armenianKhachkar', contentKey: 'armenianKhachkar',
+    noHero: true,
+    heroTitleAsH1: true,
+    noAutolink: true,
+    classifyAs: 'place',
+    placeLocation: { cityId: null, municipalityId: null, regionId: null },
+  },
 ]
 
 // ---------------------------------------------------------------------------
