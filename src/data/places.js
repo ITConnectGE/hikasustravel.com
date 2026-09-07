@@ -14402,6 +14402,26 @@ export const sites = [
     noHero: true,
     noAutolink: true,
   },
+  // Opera and Ballet Theatre — the second CITY-parented child of Yerevan,
+  // at /armenia/yerevan/opera-and-ballet-theatre, same shape as Cascade
+  // Monument above. The page keeps the two halls of the complex distinct
+  // (the Spendiaryan opera auditorium and the Aram Khachaturian Concert
+  // Hall added in 1963) and separates the 1932/1933 institution chronology
+  // from the multi-phase building chronology; neither distinction depends
+  // on anything in this record.
+  //
+  // `noAutolink`: the body carries three hand-authored links (Yerevan,
+  // Things to Do in Yerevan, Cascade Monument) and nothing else.
+  //
+  // No `image`, on the Geghard/Haghpat/Cascade precedent — the only Armenian
+  // social crop on disk shows Khor Virap.
+  {
+    slug: 'opera-and-ballet-theatre', name: 'Opera and Ballet Theatre',
+    parentType: 'city', parent: 'yerevan', published: true,
+    seoKey: 'operaAndBalletTheatre', contentKey: 'operaAndBalletTheatre',
+    noHero: true,
+    noAutolink: true,
+  },
   // Etchmiadzin is NOT here: it is a published CITY (see the cities array
   // above), living at /armenia/etchmiadzin. It was scaffolded here as a
   // planned place to visit before that page existed; leaving the stub would
