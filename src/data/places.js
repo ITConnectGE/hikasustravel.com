@@ -14377,6 +14377,31 @@ export const sites = [
     // COUNTRIES.armenia.socialImage — the SAME file — so the social card is
     // unchanged, while the JSON-LD no longer claims the photo depicts this.
   },
+  // Cascade Monument — a CITY-parented site beneath the published Yerevan
+  // city page, which is what puts it at /armenia/yerevan/cascade-monument
+  // through the shared country-aware resolver. Same shape as Geghard under
+  // Garni (and Georgia's /georgia/sighnaghi/bodbe-monastery): no route of its
+  // own, and no bare /armenia/cascade-monument or region-parented
+  // /armenia/kotayk/... page exists. It is the FIRST child of Yerevan, and a
+  // sibling of the Things to Do in Yerevan guide that hangs off the same city
+  // record — both children of Yerevan, neither nested under a marz in the URL.
+  //
+  // `noAutolink` because the body carries three hand-authored links (Mount
+  // Ararat, Yerevan, Things to Do in Yerevan) and nothing else; without it the
+  // shared autolinker would also turn Matenadaran, Lake Sevan, Garni and every
+  // other matching entity into links inside the owner's locked copy.
+  //
+  // Deliberately NO `image`, on the Geghard/Haghpat precedent: the only
+  // Armenian social crop on disk shows Khor Virap, which is a different place
+  // entirely. og:image falls back to the Armenia country social image, and the
+  // Places to Visit hub passes no image, so omitting it costs nothing visible.
+  {
+    slug: 'cascade-monument', name: 'Cascade Monument',
+    parentType: 'city', parent: 'yerevan', published: true,
+    seoKey: 'cascadeMonument', contentKey: 'cascadeMonument',
+    noHero: true,
+    noAutolink: true,
+  },
   // Etchmiadzin is NOT here: it is a published CITY (see the cities array
   // above), living at /armenia/etchmiadzin. It was scaffolded here as a
   // planned place to visit before that page existed; leaving the stub would
