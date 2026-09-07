@@ -8927,7 +8927,26 @@ export const cities = [
     heroTitleAsH1: true,
     noAutolink: true,
   },
-  { slug: 'jermuk', name: 'Jermuk', region: 'vayots-dzor', published: false, country: 'armenia' },
+  // Jermuk — completed IN PLACE like Gyumri above it. cityPath() puts it at
+  // /armenia/jermuk; `region: 'vayots-dzor'` carries the association without
+  // entering the URL or the breadcrumb.
+  //
+  // `noAutolink` so the body carries only the five hand-authored links
+  // (Vayots Dzor, Yerevan, Tsaghkadzor, Noravank, Dilijan). Areni is left
+  // PLAIN on purpose: the copy means the village and its wineries, and the
+  // only Areni page is areni-1-cave, an archaeological site — linking it
+  // there would send readers somewhere the sentence does not mean.
+  //
+  // No `image`: the only Armenian photograph on disk shows Khor Virap.
+  {
+    slug: 'jermuk', name: 'Jermuk', region: 'vayots-dzor', published: true, country: 'armenia',
+    seoKey: 'jermuk', contentKey: 'jermuk',
+    // AM-VD is Vayots Dzor's ISO 3166-2 code.
+    geoMeta: { region: 'AM-VD', placename: 'Jermuk', lat: '39.8417', lng: '45.6694' },
+    noHero: true,
+    heroTitleAsH1: true,
+    noAutolink: true,
+  },
   { slug: 'oshakan', name: 'Oshakan', region: 'aragatsotn', published: false, country: 'armenia' },
   { slug: 'sevan', name: 'Sevan', region: 'gegharkunik', published: false, country: 'armenia' },
   { slug: 'sisian', name: 'Sisian', region: 'syunik', published: false, country: 'armenia' },
