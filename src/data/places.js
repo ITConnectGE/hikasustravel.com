@@ -14459,6 +14459,25 @@ export const sites = [
     noHero: true,
     noAutolink: true,
   },
+  // Tsitsernakaberd Memorial Complex — the fifth CITY-parented child of
+  // Yerevan, at /armenia/yerevan/tsitsernakaberd-memorial-complex. It is a
+  // DIFFERENT page from the Armenian Genocide Museum above, and the two are
+  // deliberately kept apart: the memorial opened in 1967, the Museum-Institute
+  // in 1995, in a separate adjacent building. This page covers the memorial's
+  // architecture, symbolism, 24 April and outdoor etiquette; the museum page
+  // covers the exhibition, hours, admission and guided tours. Their FAQ sets
+  // were authored not to overlap, and neither repeats the other's body text.
+  //
+  // `noAutolink`: two hand-authored links only (the museum page, Yerevan).
+  //
+  // No `image`, on the same precedent as the other Armenian sites.
+  {
+    slug: 'tsitsernakaberd-memorial-complex', name: 'Tsitsernakaberd Memorial Complex',
+    parentType: 'city', parent: 'yerevan', published: true,
+    seoKey: 'tsitsernakaberdMemorial', contentKey: 'tsitsernakaberdMemorial',
+    noHero: true,
+    noAutolink: true,
+  },
   // Etchmiadzin is NOT here: it is a published CITY (see the cities array
   // above), living at /armenia/etchmiadzin. It was scaffolded here as a
   // planned place to visit before that page existed; leaving the stub would
@@ -14473,6 +14492,25 @@ export const sites = [
   // /armenia/places-to-visit for a subject already covered in depth, and
   // reserved /armenia/garni/garni-temple for it. If the temple ever warrants
   // its own page, re-add the record then — nothing else depends on it.
+  // Symphony of Stones — CITY-parented onto the published Garni city page, at
+  // /armenia/garni/symphony-of-stones, exactly like Geghard below it. The
+  // basalt columns sit in the Garni gorge about 2 km below the village, so
+  // Garni is the honest parent; the Kotayk marz does not enter the URL.
+  //
+  // `noAutolink`: three hand-authored links only (Garni, Geghard Monastery,
+  // Yerevan). There is NO separate "Garni Temple" page — that record was
+  // removed at the owner's request and the Garni city page covers the temple
+  // in depth — so every "Garni Temple" mention in the body stays plain text
+  // and the one Garni link is anchored on "Garni village" instead.
+  //
+  // No `image`, on the same precedent as the other Armenian sites.
+  {
+    slug: 'symphony-of-stones', name: 'Symphony of Stones',
+    parentType: 'city', parent: 'garni', published: true,
+    seoKey: 'symphonyOfStones', contentKey: 'symphonyOfStones',
+    noHero: true,
+    noAutolink: true,
+  },
   // Geghard Monastery — re-parented from the Kotayk region onto the published
   // Garni city and published. `parentType: 'city'` is what puts it at
   // /armenia/garni/geghard-monastery through the shared country-aware
