@@ -14542,9 +14542,23 @@ export const sites = [
     slug: 'saint-mesrop-mashtots-church', name: 'Saint Mesrop Mashtots Church',
     parentType: 'region', parent: 'aragatsotn', published: false,
   },
+  // Tatev — region-parented under Syunik, like every other Armenian
+  // attraction. Goris is the practical base the copy recommends, but a city
+  // cannot parent a site here unless the site's `parent` names it, and Tatev
+  // is not in Goris: the registry parent stays the region.
+  //
+  // `noAutolink` so the body carries only the six hand-authored links the
+  // brief asked for (Syunik, Goris, Yerevan, Khor Virap, Lake Sevan,
+  // Noravank). Devil's Bridge, the Great Hermitage of Tatev, Zorats Karer,
+  // Shaki Waterfall and Old Khndzoresk have NO pages and stay plain text.
+  //
+  // No `image`: the only Armenian photograph on disk shows Khor Virap.
   {
     slug: 'tatev-monastery', name: 'Tatev Monastery',
-    parentType: 'region', parent: 'syunik', published: false,
+    parentType: 'region', parent: 'syunik', published: true,
+    seoKey: 'tatevMonastery', contentKey: 'tatevMonastery',
+    noHero: true,
+    noAutolink: true,
   },
   {
     slug: 'zvartnots-temple', name: 'Zvartnots Temple',
