@@ -44,10 +44,12 @@ export const destinationCountries = [
     // Armenia now has its own landing page, so the level-1 label is a link.
     //
     // Level 2 lists HUBS, mirroring Georgia — not individual regions. Georgia
-    // shows four hub links and none of its twelve regions; Armenia shows the two
-    // hubs that exist (it has no cities or places-to-visit hub yet). An
-    // individual region is reached from /armenia/regions, exactly as Kakheti is
-    // reached from /georgia/regions.
+    // shows four hub links and none of its twelve regions; Armenia now shows the
+    // same four, since /armenia/cities and /armenia/places-to-visit both exist
+    // (src/App.jsx routes them to the shared CitiesHubPage and
+    // PlacesToVisitHubPage with country="armenia"). An individual region is
+    // reached from /armenia/regions, exactly as Kakheti is reached from
+    // /georgia/regions.
     //
     // The eleven seeded region entries below stay `published: false`: they are
     // inert placeholders, and Aragatsotn — the one published Armenia region —
@@ -60,6 +62,8 @@ export const destinationCountries = [
     regions: [
       { to: '/armenia', labelKey: 'nav.allDestinations', published: true },
       { to: '/armenia/regions', labelKey: 'nav.regions', published: true },
+      { to: '/armenia/cities', labelKey: 'nav.cities', published: true },
+      { to: '/armenia/places-to-visit', labelKey: 'nav.placesToVisit', published: true },
       // Yerevan holds separate capital status: it is NOT one of the ten marzer,
       // so it never belonged under /armenia/regions. Corrected to its real route.
       // Still inert here, like every other seeded entry below — individual
