@@ -14428,9 +14428,27 @@ export const sites = [
     // COUNTRIES.armenia.socialImage — the SAME file — so the social card is
     // unchanged, while the JSON-LD no longer claims the photo depicts this.
   },
+  // Noravank — published in place as a REGION-parented site under Vayots
+  // Dzor, the same shape the stub already had.
+  //
+  // The brief asked whether the Areni-1 precedent implied nesting under an
+  // Areni destination instead. Checked rather than assumed: areni-1-cave is
+  // parentType 'region' / parent 'vayots-dzor', live at
+  // /armenia/vayots-dzor/areni-1-cave, and /armenia/areni/areni-1-cave is a
+  // 404 — there is no Areni destination record at all. So the precedent is
+  // region-parenting, and Noravank follows it.
+  //
+  // `noAutolink` because the owner copy carries ZERO editorial body links:
+  // Areni, Areni-1 Cave, Khor Virap, Jermuk, Yeghegnadzor, Sisian, Goris and
+  // Tatev all stay plain text.
+  //
+  // No `image`: the only Armenian photograph on disk shows Khor Virap.
   {
     slug: 'noravank-monastery', name: 'Noravank Monastery',
-    parentType: 'region', parent: 'vayots-dzor', published: false,
+    parentType: 'region', parent: 'vayots-dzor', published: true,
+    seoKey: 'noravankMonastery', contentKey: 'noravankMonastery',
+    noHero: true,
+    noAutolink: true,
   },
   {
     slug: 'sanahin-monastery', name: 'Sanahin Monastery',
