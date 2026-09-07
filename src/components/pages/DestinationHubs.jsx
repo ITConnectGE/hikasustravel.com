@@ -41,7 +41,7 @@ const COUNTRY_HUBS = {
     heroImage: HERO_IMAGE,
     regions: { pageKey: 'destinationsRegions', seoKey: 'destinationsRegions', includeUnpublished: true },
     cities: { pageKey: 'destinationsCities', seoKey: 'destinationsCities', includeUnpublished: true, pinFirst: 'tbilisi' },
-    places: { pageKey: 'destinationsPlaces', seoKey: 'destinationsPlaces' },
+    places: { pageKey: 'destinationsPlaces', seoKey: 'destinationsPlaces', filterable: true },
   },
   armenia: {
     // `noHero` until an approved Armenia photograph exists (the same flag the
@@ -54,6 +54,8 @@ const COUNTRY_HUBS = {
     // non-clickable 'guide coming soon' cards, which is how a visitor sees what
     // is on the way. Regions stays published-only — all ten already exist.
     cities: { pageKey: 'armeniaCities', seoKey: 'armeniaCities', includeUnpublished: true, pinFirst: 'yerevan' },
+    // No `filterable`: Armenia's Places hub renders the cards directly, with no
+    // search box and no region/city facets. Georgia keeps its filter bar.
     places: { pageKey: 'armeniaPlaces', seoKey: 'armeniaPlaces' },
   },
 }
@@ -202,7 +204,7 @@ export function PlacesToVisitHubPage({ country = DEFAULT_COUNTRY }) {
       ctaKey="destinations.explorePlace"
       sortByName
       seoFallback
-      filterable
+      filterable={!!conf.filterable}
     />
   )
 }
