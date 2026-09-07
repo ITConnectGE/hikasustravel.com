@@ -14578,9 +14578,21 @@ export const sites = [
     noHero: true,
     noAutolink: true,
   },
+  // Zvartnots — region-parented under Armavir. The owner copy is explicit that
+  // this was never a pagan temple: 'Temple' survives only as the common
+  // tourism name, so the registry name keeps it while the body corrects it.
+  //
+  // `noAutolink` so the body carries only the three hand-authored links
+  // (Etchmiadzin, Yerevan, Armavir). Saint Hripsime and Saint Gayane have no
+  // pages and stay plain text.
+  //
+  // No `image`: the only Armenian photograph on disk shows Khor Virap.
   {
     slug: 'zvartnots-temple', name: 'Zvartnots Temple',
-    parentType: 'region', parent: 'armavir', published: false,
+    parentType: 'region', parent: 'armavir', published: true,
+    seoKey: 'zvartnotsTemple', contentKey: 'zvartnotsTemple',
+    noHero: true,
+    noAutolink: true,
   },
 ]
 
