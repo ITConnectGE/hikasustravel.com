@@ -14272,7 +14272,10 @@ export const sites = [
     seoKey: 'amberdFortress', contentKey: 'amberdFortress',
     noHero: true,
     noAutolink: true,
-    image: '/images/files/khor-virap-monastery-ararat-armenia-og.jpg',
+    // No `image`: the only Armenian photograph on disk is the Khor Virap
+    // crop, which shows a different place. og:image falls back to
+    // COUNTRIES.armenia.socialImage — the SAME file — so the social card is
+    // unchanged, while the JSON-LD no longer claims the photo depicts this.
   },
   // Etchmiadzin is NOT here: it is a published CITY (see the cities array
   // above), living at /armenia/etchmiadzin. It was scaffolded here as a
@@ -14342,9 +14345,25 @@ export const sites = [
     noHero: true,
     noAutolink: true,
   },
+  // Khor Virap — published in place as a REGION-parented site under Ararat,
+  // exactly the shape the stub already had.
+  //
+  // The ONLY page in the Armenia tree that carries a photograph OF ITS OWN
+  // SUBJECT. public/images/files holds one Armenian photograph and it is this
+  // monastery: Khor Virap in the plain with both Ararat cones behind it. Every
+  // other Armenia page ships `noHero` with no image rather than borrow it,
+  // because for them it would depict somewhere else. Here it is simply true.
+  // A files-thumb twin exists, so nothing 404s.
+  //
+  // `noAutolink` keeps the body free of editorial links, as everywhere in this
+  // arc: Areni, Noravank, Dvin, Artashat, Vayots Dzor and Yerevan stay plain.
   {
     slug: 'khor-virap-monastery', name: 'Khor Virap Monastery',
-    parentType: 'region', parent: 'ararat', published: false,
+    parentType: 'region', parent: 'ararat', published: true,
+    seoKey: 'khorVirapMonastery', contentKey: 'khorVirapMonastery',
+    image: '/images/files/khor-virap-monastery-ararat-armenia-og.jpg',
+    noHero: true,
+    noAutolink: true,
   },
   // Mount Ararat — the one entry in this registry whose subject is NOT in the
   // country it is routed under. The mountain stands in TURKEY; it is parented
@@ -14402,7 +14421,10 @@ export const sites = [
     seoKey: 'areni1Cave', contentKey: 'areni1Cave',
     noHero: true,
     noAutolink: true,
-    image: '/images/files/khor-virap-monastery-ararat-armenia-og.jpg',
+    // No `image`: the only Armenian photograph on disk is the Khor Virap
+    // crop, which shows a different place. og:image falls back to
+    // COUNTRIES.armenia.socialImage — the SAME file — so the social card is
+    // unchanged, while the JSON-LD no longer claims the photo depicts this.
   },
   {
     slug: 'noravank-monastery', name: 'Noravank Monastery',
