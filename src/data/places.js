@@ -8971,7 +8971,26 @@ export const cities = [
     noAutolink: true,
   },
   { slug: 'sevan', name: 'Sevan', region: 'gegharkunik', published: false, country: 'armenia' },
-  { slug: 'sisian', name: 'Sisian', region: 'syunik', published: false, country: 'armenia' },
+  // Sisian — completed IN PLACE at /armenia/sisian.
+  //
+  // The nearby attractions the copy names — Zorats Karer, Shaki Waterfall,
+  // Ukhtasar, Vorotnavank, Aghitu, Tolors — have NO pages yet and stay plain
+  // text; Tatev keeps its published region-parented route rather than being
+  // re-parented onto this city.
+  //
+  // `noAutolink` so the body carries only the six hand-authored links
+  // (Syunik, Goris, Tatev, Yerevan, Vayots Dzor, Noravank).
+  //
+  // No `image`: the only Armenian photograph on disk shows Khor Virap.
+  {
+    slug: 'sisian', name: 'Sisian', region: 'syunik', published: true, country: 'armenia',
+    seoKey: 'sisian', contentKey: 'sisian',
+    // AM-SU is Syunik's ISO 3166-2 code.
+    geoMeta: { region: 'AM-SU', placename: 'Sisian', lat: '39.5231', lng: '46.0322' },
+    noHero: true,
+    heroTitleAsH1: true,
+    noAutolink: true,
+  },
   // Tsaghkadzor — the scaffolded entry completed IN PLACE, like Goris before
   // it: same slug, same region, same country, now published with its content
   // and SEO keys. It keeps the /armenia/tsaghkadzor URL the scaffold always
