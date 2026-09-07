@@ -14439,6 +14439,26 @@ export const sites = [
     noHero: true,
     noAutolink: true,
   },
+  // Armenian Genocide Museum — the fourth CITY-parented child of Yerevan, at
+  // /armenia/yerevan/armenian-genocide-museum. It covers the Museum-Institute
+  // (opened 1995); the Tsitsernakaberd Memorial Complex itself (opened 1967)
+  // is a separate page and the two must stay distinct — the copy on both
+  // sides states the distinction outright.
+  //
+  // `noAutolink`: two hand-authored links only (Yerevan, Republic Square).
+  // The Things to Do in Yerevan guide is deliberately NOT linked from here —
+  // the brief forbids surfacing entertainment-heavy related content beside
+  // this page, and that guide is exactly that.
+  //
+  // No `image`: no Armenian photograph on disk, and substituting an unrelated
+  // one here would be worse than on any other page.
+  {
+    slug: 'armenian-genocide-museum', name: 'Armenian Genocide Museum',
+    parentType: 'city', parent: 'yerevan', published: true,
+    seoKey: 'armenianGenocideMuseum', contentKey: 'armenianGenocideMuseum',
+    noHero: true,
+    noAutolink: true,
+  },
   // Etchmiadzin is NOT here: it is a published CITY (see the cities array
   // above), living at /armenia/etchmiadzin. It was scaffolded here as a
   // planned place to visit before that page existed; leaving the stub would
