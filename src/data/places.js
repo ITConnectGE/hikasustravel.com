@@ -14538,9 +14538,27 @@ export const sites = [
     noHero: true,
     noAutolink: true,
   },
+  // Saint Mesrop Mashtots Church — region-parented under Aragatsotn, the
+  // shape every Armenian attraction uses. The church is in Oshakan, and
+  // Oshakan is a `cities` record, so a city parent would be possible here —
+  // but Oshakan is not published yet, and a site is only reachable at the URL
+  // whose parent segment matches its registry parent, so city-parenting an
+  // unpublished city would 404 the page. Region-parenting keeps it live and
+  // consistent with its siblings; the Oshakan relationship is carried in the
+  // body copy instead.
+  //
+  // `noAutolink` so the body carries only the three hand-authored links
+  // (Aragatsotn, Yerevan, Amberd Fortress). Ashtarak, Saghmosavank,
+  // Hovhannavank, Artashavan and the Armenian Alphabet Monument have no pages
+  // and stay plain text.
+  //
+  // No `image`: the only Armenian photograph on disk shows Khor Virap.
   {
     slug: 'saint-mesrop-mashtots-church', name: 'Saint Mesrop Mashtots Church',
-    parentType: 'region', parent: 'aragatsotn', published: false,
+    parentType: 'region', parent: 'aragatsotn', published: true,
+    seoKey: 'saintMesropMashtotsChurch', contentKey: 'saintMesropMashtotsChurch',
+    noHero: true,
+    noAutolink: true,
   },
   // Tatev — region-parented under Syunik, like every other Armenian
   // attraction. Goris is the practical base the copy recommends, but a city
