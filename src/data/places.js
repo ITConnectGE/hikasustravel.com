@@ -8947,7 +8947,29 @@ export const cities = [
     heroTitleAsH1: true,
     noAutolink: true,
   },
-  { slug: 'oshakan', name: 'Oshakan', region: 'aragatsotn', published: false, country: 'armenia' },
+  // Oshakan — completed IN PLACE at /armenia/oshakan.
+  //
+  // Saint Mesrop Mashtots Church STAYS at its published region-parented URL,
+  // /armenia/aragatsotn/saint-mesrop-mashtots-church. Re-parenting it onto
+  // this city would move a live route for no gain and break the one canonical
+  // page; the two are tied together by reciprocal links instead — the Oshakan
+  // body links out to the church guide, and the church body links back here.
+  //
+  // `noAutolink` so the body carries only the four hand-authored links
+  // (Aragatsotn, Yerevan, the church, Amberd Fortress). Ashtarak,
+  // Saghmosavank, Hovhannavank, Artashavan and the Armenian Alphabet
+  // Monument have no pages and stay plain text.
+  //
+  // No `image`: the only Armenian photograph on disk shows Khor Virap.
+  {
+    slug: 'oshakan', name: 'Oshakan', region: 'aragatsotn', published: true, country: 'armenia',
+    seoKey: 'oshakan', contentKey: 'oshakan',
+    // AM-AG is Aragatsotn's ISO 3166-2 code.
+    geoMeta: { region: 'AM-AG', placename: 'Oshakan', lat: '40.2617', lng: '44.3106' },
+    noHero: true,
+    heroTitleAsH1: true,
+    noAutolink: true,
+  },
   { slug: 'sevan', name: 'Sevan', region: 'gegharkunik', published: false, country: 'armenia' },
   { slug: 'sisian', name: 'Sisian', region: 'syunik', published: false, country: 'armenia' },
   // Tsaghkadzor — the scaffolded entry completed IN PLACE, like Goris before
