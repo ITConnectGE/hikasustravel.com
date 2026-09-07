@@ -14492,6 +14492,28 @@ export const sites = [
   // /armenia/places-to-visit for a subject already covered in depth, and
   // reserved /armenia/garni/garni-temple for it. If the temple ever warrants
   // its own page, re-add the record then — nothing else depends on it.
+  // Mount Aragats — REGION-parented onto Aragatsotn, at
+  // /armenia/aragatsotn/mount-aragats, the same shape as Amberd Fortress
+  // directly below it. Region rather than city because the massif spans the
+  // marz and has no single village parent: Byurakan, Ashtarak and Amberd
+  // itself are all on or near its slopes, and none of them is the mountain's
+  // home in the way Garni is the Symphony of Stones'.
+  //
+  // `noAutolink`: four hand-authored links only (Aragatsotn, Yerevan, Mount
+  // Ararat and Amberd Fortress). The Armenian Alphabet Monument, Byurakan
+  // and Ashtarak have no pages and stay plain text; there is no Kari Lake
+  // page, so Kari Lake stays plain text throughout.
+  //
+  // No `image` — and here the reason is sharper than elsewhere: the only
+  // Armenian crop on disk shows Khor Virap with ARARAT behind it, and this
+  // page exists partly to stop readers confusing Aragats with Ararat.
+  {
+    slug: 'mount-aragats', name: 'Mount Aragats',
+    parentType: 'region', parent: 'aragatsotn', published: true,
+    seoKey: 'mountAragats', contentKey: 'mountAragats',
+    noHero: true,
+    noAutolink: true,
+  },
   // Symphony of Stones — CITY-parented onto the published Garni city page, at
   // /armenia/garni/symphony-of-stones, exactly like Geghard below it. The
   // basalt columns sit in the Garni gorge about 2 km below the village, so
