@@ -14422,6 +14422,23 @@ export const sites = [
     noHero: true,
     noAutolink: true,
   },
+  // Republic Square — the third CITY-parented child of Yerevan, at
+  // /armenia/yerevan/republic-square. Note this is a DIFFERENT square from
+  // Freedom Square, which is covered on the Opera and Ballet Theatre page;
+  // the two must not be conflated, and the Republic Square copy never
+  // mentions Freedom Square (its gate forbids it).
+  //
+  // `noAutolink`: four hand-authored links only (Yerevan, Things to Do in
+  // Yerevan, Opera and Ballet Theatre, Cascade Monument).
+  //
+  // No `image`, on the same precedent as the other Armenian sites.
+  {
+    slug: 'republic-square', name: 'Republic Square',
+    parentType: 'city', parent: 'yerevan', published: true,
+    seoKey: 'republicSquare', contentKey: 'republicSquare',
+    noHero: true,
+    noAutolink: true,
+  },
   // Etchmiadzin is NOT here: it is a published CITY (see the cities array
   // above), living at /armenia/etchmiadzin. It was scaffolded here as a
   // planned place to visit before that page existed; leaving the stub would
