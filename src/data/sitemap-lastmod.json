@@ -18,7 +18,7 @@
       "lastmod": "2026-09-02"
     },
     "https://www.hikasustravel.com/cs/armenia-visa-entry-requirements/": {
-      "sig": "22ff90d88c0ae67c",
+      "sig": "430fc60af67c97f0",
       "lastmod": "2026-09-07"
     },
     "https://www.hikasustravel.com/cs/armenia/": {
@@ -62,12 +62,16 @@
       "lastmod": "2026-09-06"
     },
     "https://www.hikasustravel.com/cs/armenia/gegharkunik/lake-sevan/": {
-      "sig": "be882d80e39b0fc7",
-      "lastmod": "2026-09-06"
+      "sig": "86ee61dfc3f15347",
+      "lastmod": "2026-09-07"
     },
     "https://www.hikasustravel.com/cs/armenia/gegharkunik/noratus-cemetery/": {
       "sig": "4c055f6869dd7096",
       "lastmod": "2026-09-06"
+    },
+    "https://www.hikasustravel.com/cs/armenia/gegharkunik/sevanavank-monastery/": {
+      "sig": "729b36cf24e450af",
+      "lastmod": "2026-09-07"
     },
     "https://www.hikasustravel.com/cs/armenia/goris/": {
       "sig": "25fd6307cc44fc7d",
@@ -81,8 +85,12 @@
       "sig": "42b35aa7178e2eb2",
       "lastmod": "2026-09-06"
     },
+    "https://www.hikasustravel.com/cs/armenia/lori/sanahin-monastery/": {
+      "sig": "c23c5169903150f2",
+      "lastmod": "2026-09-07"
+    },
     "https://www.hikasustravel.com/cs/armenia/places-to-visit/": {
-      "sig": "7688b19de25d2ee7",
+      "sig": "ef1cc1ee58cff381",
       "lastmod": "2026-09-07"
     },
     "https://www.hikasustravel.com/cs/armenia/regions/": {
@@ -177,6 +185,10 @@
       "sig": "ef4db23fbdbf7c4e",
       "lastmod": "2026-09-07"
     },
+    "https://www.hikasustravel.com/cs/armenia/vayots-dzor/noravank-monastery/": {
+      "sig": "a605e4d04066ed82",
+      "lastmod": "2026-09-07"
+    },
     "https://www.hikasustravel.com/cs/armenia/yerevan/": {
       "sig": "eb1f3ce8b34a9181",
       "lastmod": "2026-09-05"
@@ -218,11 +230,11 @@
       "lastmod": "2026-08-22"
     },
     "https://www.hikasustravel.com/cs/georgia-visa-entry-requirements/": {
-      "sig": "f4b3731a30ef7efa",
+      "sig": "8e4d32b1f6fa25da",
       "lastmod": "2026-09-07"
     },
     "https://www.hikasustravel.com/cs/georgia/": {
-      "sig": "b96832817f7f7902",
+      "sig": "b52273a2bcd9cf83",
       "lastmod": "2026-09-07"
     },
     "https://www.hikasustravel.com/cs/georgia/abastumani/abastumani-observatory/": {
@@ -458,7 +470,7 @@
       "lastmod": "2026-08-22"
     },
     "https://www.hikasustravel.com/cs/georgia/cities/": {
-      "sig": "227bc01551380885",
+      "sig": "2f40d2c1cff5196c",
       "lastmod": "2026-09-07"
     },
     "https://www.hikasustravel.com/cs/georgia/dmanisi/": {
@@ -830,7 +842,7 @@
       "lastmod": "2026-08-22"
     },
     "https://www.hikasustravel.com/cs/georgia/places-to-visit/": {
-      "sig": "bf0dee5b2a032550",
+      "sig": "89ecb58815bdb19a",
       "lastmod": "2026-09-07"
     },
     "https://www.hikasustravel.com/cs/georgia/racha-lechkhumi/askhi-massif/": {
@@ -910,7 +922,7 @@
       "lastmod": "2026-08-22"
     },
     "https://www.hikasustravel.com/cs/georgia/regions/": {
-      "sig": "9092a6e9621ee7a5",
+      "sig": "93ef7922797e362b",
       "lastmod": "2026-09-07"
     },
     "https://www.hikasustravel.com/cs/georgia/regions/adjara/": {
@@ -1322,7 +1334,7 @@
       "lastmod": "2026-08-22"
     },
     "https://www.hikasustravel.com/cs/georgian-lari-currency-guide/": {
-      "sig": "22a0af404429c4d9",
+      "sig": "d0d2dd9bfd7f371e",
       "lastmod": "2026-09-07"
     },
     "https://www.hikasustravel.com/cs/group-tours/": {
@@ -1334,11 +1346,11 @@
       "lastmod": "2026-09-01"
     },
     "https://www.hikasustravel.com/cs/kutaisi-international-airport/": {
-      "sig": "c05042f3f7f5bd99",
+      "sig": "5245523cae04c8e0",
       "lastmod": "2026-09-07"
     },
     "https://www.hikasustravel.com/cs/languages-of-georgia/": {
-      "sig": "aa30ad1b3e239718",
+      "sig": "4679df3ab8029b2b",
       "lastmod": "2026-09-07"
     },
     "https://www.hikasustravel.com/cs/privacy-policy/": {
@@ -1458,11 +1470,11 @@
       "lastmod": "2026-08-30"
     },
     "https://www.hikasustravel.com/cs/shuttle-service/": {
-      "sig": "b9557ae59cbd8683",
+      "sig": "a30e898f8ffa102d",
       "lastmod": "2026-09-07"
     },
     "https://www.hikasustravel.com/cs/tbilisi-international-airport/": {
-      "sig": "ab79cf9e2cb84dcb",
+      "sig": "0dc70ec78c3b03ac",
       "lastmod": "2026-09-07"
     },
     "https://www.hikasustravel.com/cs/tbilisi-metro/": {
@@ -1474,7 +1486,7 @@
       "lastmod": "2026-08-22"
     },
     "https://www.hikasustravel.com/cs/terms-and-conditions/": {
-      "sig": "bfa92fbb39696d44",
+      "sig": "b4f7da8213d6a23f",
       "lastmod": "2026-09-07"
     },
     "https://www.hikasustravel.com/cs/tours/abanotubani-sulfur-baths-tours/": {
@@ -1766,7 +1778,7 @@
       "lastmod": "2026-09-02"
     },
     "https://www.hikasustravel.com/de/armenia-visa-entry-requirements/": {
-      "sig": "4b3fea4b16f868fd",
+      "sig": "f58ad1176acac6d5",
       "lastmod": "2026-09-07"
     },
     "https://www.hikasustravel.com/de/armenia/": {
@@ -1810,12 +1822,16 @@
       "lastmod": "2026-09-06"
     },
     "https://www.hikasustravel.com/de/armenia/gegharkunik/lake-sevan/": {
-      "sig": "18af929e932e93a2",
-      "lastmod": "2026-09-06"
+      "sig": "5e7530552a9798c1",
+      "lastmod": "2026-09-07"
     },
     "https://www.hikasustravel.com/de/armenia/gegharkunik/noratus-cemetery/": {
       "sig": "570761487304b7c8",
       "lastmod": "2026-09-06"
+    },
+    "https://www.hikasustravel.com/de/armenia/gegharkunik/sevanavank-monastery/": {
+      "sig": "9f91a4550b6900cb",
+      "lastmod": "2026-09-07"
     },
     "https://www.hikasustravel.com/de/armenia/goris/": {
       "sig": "33abbdd469b41948",
@@ -1829,8 +1845,12 @@
       "sig": "f3a47ae3c2259163",
       "lastmod": "2026-09-06"
     },
+    "https://www.hikasustravel.com/de/armenia/lori/sanahin-monastery/": {
+      "sig": "0389fe8909bc794d",
+      "lastmod": "2026-09-07"
+    },
     "https://www.hikasustravel.com/de/armenia/places-to-visit/": {
-      "sig": "9cb8c319c7cbc9d1",
+      "sig": "6ca27020746fa5d7",
       "lastmod": "2026-09-07"
     },
     "https://www.hikasustravel.com/de/armenia/regions/": {
@@ -1925,6 +1945,10 @@
       "sig": "b75414f0538916b6",
       "lastmod": "2026-09-07"
     },
+    "https://www.hikasustravel.com/de/armenia/vayots-dzor/noravank-monastery/": {
+      "sig": "842a5c9c99f27ce5",
+      "lastmod": "2026-09-07"
+    },
     "https://www.hikasustravel.com/de/armenia/yerevan/": {
       "sig": "a64a8e67001383bc",
       "lastmod": "2026-09-05"
@@ -1966,11 +1990,11 @@
       "lastmod": "2026-08-22"
     },
     "https://www.hikasustravel.com/de/georgia-visa-entry-requirements/": {
-      "sig": "ea6310f02fa2b80b",
+      "sig": "5ad1932d17bfffa4",
       "lastmod": "2026-09-07"
     },
     "https://www.hikasustravel.com/de/georgia/": {
-      "sig": "e7d18f3bfa30f66b",
+      "sig": "c3a1e6b42e316332",
       "lastmod": "2026-09-07"
     },
     "https://www.hikasustravel.com/de/georgia/abastumani/abastumani-observatory/": {
@@ -2206,7 +2230,7 @@
       "lastmod": "2026-08-22"
     },
     "https://www.hikasustravel.com/de/georgia/cities/": {
-      "sig": "fa95de760b0cd4b2",
+      "sig": "67a8f0a8084607c9",
       "lastmod": "2026-09-07"
     },
     "https://www.hikasustravel.com/de/georgia/dmanisi/": {
@@ -2578,7 +2602,7 @@
       "lastmod": "2026-08-22"
     },
     "https://www.hikasustravel.com/de/georgia/places-to-visit/": {
-      "sig": "a808bc9b626822a8",
+      "sig": "140a1155e4ced3e7",
       "lastmod": "2026-09-07"
     },
     "https://www.hikasustravel.com/de/georgia/racha-lechkhumi/askhi-massif/": {
@@ -2658,7 +2682,7 @@
       "lastmod": "2026-08-22"
     },
     "https://www.hikasustravel.com/de/georgia/regions/": {
-      "sig": "77fcf796189f6aba",
+      "sig": "12c7c1d063986c07",
       "lastmod": "2026-09-07"
     },
     "https://www.hikasustravel.com/de/georgia/regions/adjara/": {
@@ -3070,7 +3094,7 @@
       "lastmod": "2026-08-22"
     },
     "https://www.hikasustravel.com/de/georgian-lari-currency-guide/": {
-      "sig": "73ae2b9f68485e47",
+      "sig": "7d6ac11c0913d81b",
       "lastmod": "2026-09-07"
     },
     "https://www.hikasustravel.com/de/group-tours/": {
@@ -3082,11 +3106,11 @@
       "lastmod": "2026-09-01"
     },
     "https://www.hikasustravel.com/de/kutaisi-international-airport/": {
-      "sig": "777cb5688f5b2c6c",
+      "sig": "833494cf87912320",
       "lastmod": "2026-09-07"
     },
     "https://www.hikasustravel.com/de/languages-of-georgia/": {
-      "sig": "73be15d6fcdc6f97",
+      "sig": "0da0745d6ab9c6bd",
       "lastmod": "2026-09-07"
     },
     "https://www.hikasustravel.com/de/privacy-policy/": {
@@ -3206,11 +3230,11 @@
       "lastmod": "2026-08-30"
     },
     "https://www.hikasustravel.com/de/shuttle-service/": {
-      "sig": "9b40510b214e0fbf",
+      "sig": "54404190ea6f280c",
       "lastmod": "2026-09-07"
     },
     "https://www.hikasustravel.com/de/tbilisi-international-airport/": {
-      "sig": "984919a4e8ddee22",
+      "sig": "02a9cbf2dbed0a0c",
       "lastmod": "2026-09-07"
     },
     "https://www.hikasustravel.com/de/tbilisi-metro/": {
@@ -3222,7 +3246,7 @@
       "lastmod": "2026-08-22"
     },
     "https://www.hikasustravel.com/de/terms-and-conditions/": {
-      "sig": "36d1fdcebc367050",
+      "sig": "7eb853d77a49c1b2",
       "lastmod": "2026-09-07"
     },
     "https://www.hikasustravel.com/de/tours/abanotubani-sulfur-baths-tours/": {
@@ -3514,7 +3538,7 @@
       "lastmod": "2026-09-02"
     },
     "https://www.hikasustravel.com/en/armenia-visa-entry-requirements/": {
-      "sig": "1037a711b7f7782b",
+      "sig": "ff1f189fc3c8ed21",
       "lastmod": "2026-09-07"
     },
     "https://www.hikasustravel.com/en/armenia/": {
@@ -3558,12 +3582,16 @@
       "lastmod": "2026-09-06"
     },
     "https://www.hikasustravel.com/en/armenia/gegharkunik/lake-sevan/": {
-      "sig": "93ba58e5d3c98c7f",
-      "lastmod": "2026-09-06"
+      "sig": "d6fbd2b1da260a5b",
+      "lastmod": "2026-09-07"
     },
     "https://www.hikasustravel.com/en/armenia/gegharkunik/noratus-cemetery/": {
       "sig": "5edbe7b03794e63b",
       "lastmod": "2026-09-06"
+    },
+    "https://www.hikasustravel.com/en/armenia/gegharkunik/sevanavank-monastery/": {
+      "sig": "8fcdacc9527546ed",
+      "lastmod": "2026-09-07"
     },
     "https://www.hikasustravel.com/en/armenia/goris/": {
       "sig": "dde99125d049d692",
@@ -3577,8 +3605,12 @@
       "sig": "be622a795a0cc19c",
       "lastmod": "2026-09-06"
     },
+    "https://www.hikasustravel.com/en/armenia/lori/sanahin-monastery/": {
+      "sig": "1cdd07ee461867d8",
+      "lastmod": "2026-09-07"
+    },
     "https://www.hikasustravel.com/en/armenia/places-to-visit/": {
-      "sig": "4812cc136d8696d3",
+      "sig": "0d367d924f66b798",
       "lastmod": "2026-09-07"
     },
     "https://www.hikasustravel.com/en/armenia/regions/": {
@@ -3673,6 +3705,10 @@
       "sig": "1714a10c3685f83d",
       "lastmod": "2026-09-07"
     },
+    "https://www.hikasustravel.com/en/armenia/vayots-dzor/noravank-monastery/": {
+      "sig": "4e3a230de40c18da",
+      "lastmod": "2026-09-07"
+    },
     "https://www.hikasustravel.com/en/armenia/yerevan/": {
       "sig": "1345fd077d2588b3",
       "lastmod": "2026-09-05"
@@ -3714,11 +3750,11 @@
       "lastmod": "2026-08-22"
     },
     "https://www.hikasustravel.com/en/georgia-visa-entry-requirements/": {
-      "sig": "a1f8336a251dec40",
+      "sig": "e58fa3d287c146e2",
       "lastmod": "2026-09-07"
     },
     "https://www.hikasustravel.com/en/georgia/": {
-      "sig": "dbcf051fa6eed547",
+      "sig": "127a642511c7cd65",
       "lastmod": "2026-09-07"
     },
     "https://www.hikasustravel.com/en/georgia/abastumani/abastumani-observatory/": {
@@ -3954,7 +3990,7 @@
       "lastmod": "2026-08-22"
     },
     "https://www.hikasustravel.com/en/georgia/cities/": {
-      "sig": "251529c89a9a4a0e",
+      "sig": "b00d7bac40c61653",
       "lastmod": "2026-09-07"
     },
     "https://www.hikasustravel.com/en/georgia/dmanisi/": {
@@ -4326,7 +4362,7 @@
       "lastmod": "2026-08-22"
     },
     "https://www.hikasustravel.com/en/georgia/places-to-visit/": {
-      "sig": "e98187342ae5c11e",
+      "sig": "afaef7566441599d",
       "lastmod": "2026-09-07"
     },
     "https://www.hikasustravel.com/en/georgia/racha-lechkhumi/askhi-massif/": {
@@ -4406,7 +4442,7 @@
       "lastmod": "2026-08-22"
     },
     "https://www.hikasustravel.com/en/georgia/regions/": {
-      "sig": "ce5f9ccc1209e8e6",
+      "sig": "a18532c38740a1f2",
       "lastmod": "2026-09-07"
     },
     "https://www.hikasustravel.com/en/georgia/regions/adjara/": {
@@ -4818,7 +4854,7 @@
       "lastmod": "2026-08-22"
     },
     "https://www.hikasustravel.com/en/georgian-lari-currency-guide/": {
-      "sig": "00514d0fbf14a20c",
+      "sig": "b9dff71c9d8a0ba0",
       "lastmod": "2026-09-07"
     },
     "https://www.hikasustravel.com/en/group-tours/": {
@@ -4830,11 +4866,11 @@
       "lastmod": "2026-09-01"
     },
     "https://www.hikasustravel.com/en/kutaisi-international-airport/": {
-      "sig": "7b65c9f7ce090cad",
+      "sig": "fa6586b25f229d28",
       "lastmod": "2026-09-07"
     },
     "https://www.hikasustravel.com/en/languages-of-georgia/": {
-      "sig": "607f8d674bdcf6a8",
+      "sig": "59b228d0da03a80b",
       "lastmod": "2026-09-07"
     },
     "https://www.hikasustravel.com/en/privacy-policy/": {
@@ -4954,11 +4990,11 @@
       "lastmod": "2026-08-30"
     },
     "https://www.hikasustravel.com/en/shuttle-service/": {
-      "sig": "5fe8432d5b5b0100",
+      "sig": "ce9ea1404a6084ba",
       "lastmod": "2026-09-07"
     },
     "https://www.hikasustravel.com/en/tbilisi-international-airport/": {
-      "sig": "bec8f45be44582be",
+      "sig": "5a4f7cbe7e8d767b",
       "lastmod": "2026-09-07"
     },
     "https://www.hikasustravel.com/en/tbilisi-metro/": {
@@ -4970,7 +5006,7 @@
       "lastmod": "2026-08-22"
     },
     "https://www.hikasustravel.com/en/terms-and-conditions/": {
-      "sig": "1c5692ba091f456c",
+      "sig": "5b0bbb7db50eed63",
       "lastmod": "2026-09-07"
     },
     "https://www.hikasustravel.com/en/tours/abanotubani-sulfur-baths-tours/": {
@@ -5262,7 +5298,7 @@
       "lastmod": "2026-09-02"
     },
     "https://www.hikasustravel.com/es/armenia-visa-entry-requirements/": {
-      "sig": "8576c0005a995498",
+      "sig": "f053012677cf2ea0",
       "lastmod": "2026-09-07"
     },
     "https://www.hikasustravel.com/es/armenia/": {
@@ -5306,12 +5342,16 @@
       "lastmod": "2026-09-06"
     },
     "https://www.hikasustravel.com/es/armenia/gegharkunik/lake-sevan/": {
-      "sig": "566716c01d2e699b",
-      "lastmod": "2026-09-06"
+      "sig": "4b925010c92a5306",
+      "lastmod": "2026-09-07"
     },
     "https://www.hikasustravel.com/es/armenia/gegharkunik/noratus-cemetery/": {
       "sig": "978e6bb33151f603",
       "lastmod": "2026-09-06"
+    },
+    "https://www.hikasustravel.com/es/armenia/gegharkunik/sevanavank-monastery/": {
+      "sig": "3aa5dc4021d6bc1d",
+      "lastmod": "2026-09-07"
     },
     "https://www.hikasustravel.com/es/armenia/goris/": {
       "sig": "0d664be22090e93c",
@@ -5325,8 +5365,12 @@
       "sig": "f77af35e8e593bb3",
       "lastmod": "2026-09-06"
     },
+    "https://www.hikasustravel.com/es/armenia/lori/sanahin-monastery/": {
+      "sig": "9e0fc2b35611d02d",
+      "lastmod": "2026-09-07"
+    },
     "https://www.hikasustravel.com/es/armenia/places-to-visit/": {
-      "sig": "901c6948e7397fbb",
+      "sig": "fa1c5e11e8605281",
       "lastmod": "2026-09-07"
     },
     "https://www.hikasustravel.com/es/armenia/regions/": {
@@ -5421,6 +5465,10 @@
       "sig": "24c6b0fa4773007f",
       "lastmod": "2026-09-07"
     },
+    "https://www.hikasustravel.com/es/armenia/vayots-dzor/noravank-monastery/": {
+      "sig": "c83b8718d1aca969",
+      "lastmod": "2026-09-07"
+    },
     "https://www.hikasustravel.com/es/armenia/yerevan/": {
       "sig": "24efe713be7c8a8b",
       "lastmod": "2026-09-05"
@@ -5462,11 +5510,11 @@
       "lastmod": "2026-08-22"
     },
     "https://www.hikasustravel.com/es/georgia-visa-entry-requirements/": {
-      "sig": "323f768eb32a2e84",
+      "sig": "d8dd1daa45ec4b1e",
       "lastmod": "2026-09-07"
     },
     "https://www.hikasustravel.com/es/georgia/": {
-      "sig": "b434fc2ef16a5900",
+      "sig": "f3bb3d49c360d68f",
       "lastmod": "2026-09-07"
     },
     "https://www.hikasustravel.com/es/georgia/abastumani/abastumani-observatory/": {
@@ -5702,7 +5750,7 @@
       "lastmod": "2026-08-22"
     },
     "https://www.hikasustravel.com/es/georgia/cities/": {
-      "sig": "35b5d904482edafe",
+      "sig": "1bda07ace879df61",
       "lastmod": "2026-09-07"
     },
     "https://www.hikasustravel.com/es/georgia/dmanisi/": {
@@ -6074,7 +6122,7 @@
       "lastmod": "2026-08-22"
     },
     "https://www.hikasustravel.com/es/georgia/places-to-visit/": {
-      "sig": "c51f9af5ac2e1d2e",
+      "sig": "2623f2c57540d1f5",
       "lastmod": "2026-09-07"
     },
     "https://www.hikasustravel.com/es/georgia/racha-lechkhumi/askhi-massif/": {
@@ -6154,7 +6202,7 @@
       "lastmod": "2026-08-22"
     },
     "https://www.hikasustravel.com/es/georgia/regions/": {
-      "sig": "c75860697d58bc0f",
+      "sig": "6c1ab7e0a09ab368",
       "lastmod": "2026-09-07"
     },
     "https://www.hikasustravel.com/es/georgia/regions/adjara/": {
@@ -6566,7 +6614,7 @@
       "lastmod": "2026-08-22"
     },
     "https://www.hikasustravel.com/es/georgian-lari-currency-guide/": {
-      "sig": "11ca223ecbc9755f",
+      "sig": "17f887ce476d5b7f",
       "lastmod": "2026-09-07"
     },
     "https://www.hikasustravel.com/es/group-tours/": {
@@ -6578,11 +6626,11 @@
       "lastmod": "2026-09-01"
     },
     "https://www.hikasustravel.com/es/kutaisi-international-airport/": {
-      "sig": "8fee8a6204ce757d",
+      "sig": "718b5016f02bebca",
       "lastmod": "2026-09-07"
     },
     "https://www.hikasustravel.com/es/languages-of-georgia/": {
-      "sig": "035bb3491652d47e",
+      "sig": "82048bf83df85dd8",
       "lastmod": "2026-09-07"
     },
     "https://www.hikasustravel.com/es/privacy-policy/": {
@@ -6702,11 +6750,11 @@
       "lastmod": "2026-08-30"
     },
     "https://www.hikasustravel.com/es/shuttle-service/": {
-      "sig": "9a006a4dcfa2fb26",
+      "sig": "aafcfd7217f70ceb",
       "lastmod": "2026-09-07"
     },
     "https://www.hikasustravel.com/es/tbilisi-international-airport/": {
-      "sig": "06dc39972966e2e6",
+      "sig": "abd1e26576b81a77",
       "lastmod": "2026-09-07"
     },
     "https://www.hikasustravel.com/es/tbilisi-metro/": {
@@ -6718,7 +6766,7 @@
       "lastmod": "2026-08-22"
     },
     "https://www.hikasustravel.com/es/terms-and-conditions/": {
-      "sig": "55aa095b2b3a44a1",
+      "sig": "c3b6004d2aa0fc92",
       "lastmod": "2026-09-07"
     },
     "https://www.hikasustravel.com/es/tours/abanotubani-sulfur-baths-tours/": {
@@ -7010,7 +7058,7 @@
       "lastmod": "2026-09-02"
     },
     "https://www.hikasustravel.com/fr/armenia-visa-entry-requirements/": {
-      "sig": "74e31103f9224398",
+      "sig": "193eea5dd876acbb",
       "lastmod": "2026-09-07"
     },
     "https://www.hikasustravel.com/fr/armenia/": {
@@ -7054,12 +7102,16 @@
       "lastmod": "2026-09-06"
     },
     "https://www.hikasustravel.com/fr/armenia/gegharkunik/lake-sevan/": {
-      "sig": "30cf092dd3cf909c",
-      "lastmod": "2026-09-06"
+      "sig": "b506ae61aee14c0b",
+      "lastmod": "2026-09-07"
     },
     "https://www.hikasustravel.com/fr/armenia/gegharkunik/noratus-cemetery/": {
       "sig": "f723d3fa7aa55339",
       "lastmod": "2026-09-06"
+    },
+    "https://www.hikasustravel.com/fr/armenia/gegharkunik/sevanavank-monastery/": {
+      "sig": "930c2f5514b45653",
+      "lastmod": "2026-09-07"
     },
     "https://www.hikasustravel.com/fr/armenia/goris/": {
       "sig": "2cdbae82cbb8bf8e",
@@ -7073,8 +7125,12 @@
       "sig": "dc42e97a8e24c453",
       "lastmod": "2026-09-06"
     },
+    "https://www.hikasustravel.com/fr/armenia/lori/sanahin-monastery/": {
+      "sig": "06e00cb7a8e8f238",
+      "lastmod": "2026-09-07"
+    },
     "https://www.hikasustravel.com/fr/armenia/places-to-visit/": {
-      "sig": "fa5e6b38b498bd13",
+      "sig": "5af27dcd92757273",
       "lastmod": "2026-09-07"
     },
     "https://www.hikasustravel.com/fr/armenia/regions/": {
@@ -7169,6 +7225,10 @@
       "sig": "0b58fe9b3655338c",
       "lastmod": "2026-09-07"
     },
+    "https://www.hikasustravel.com/fr/armenia/vayots-dzor/noravank-monastery/": {
+      "sig": "1cd3a17fd23c2635",
+      "lastmod": "2026-09-07"
+    },
     "https://www.hikasustravel.com/fr/armenia/yerevan/": {
       "sig": "ada730737a897cb5",
       "lastmod": "2026-09-05"
@@ -7210,11 +7270,11 @@
       "lastmod": "2026-08-22"
     },
     "https://www.hikasustravel.com/fr/georgia-visa-entry-requirements/": {
-      "sig": "7a9e83480b18068c",
+      "sig": "d49d6cda81fc0e95",
       "lastmod": "2026-09-07"
     },
     "https://www.hikasustravel.com/fr/georgia/": {
-      "sig": "7a813c89bd91fdbc",
+      "sig": "b451064903c18105",
       "lastmod": "2026-09-07"
     },
     "https://www.hikasustravel.com/fr/georgia/abastumani/abastumani-observatory/": {
@@ -7450,7 +7510,7 @@
       "lastmod": "2026-08-22"
     },
     "https://www.hikasustravel.com/fr/georgia/cities/": {
-      "sig": "47014e4d24376718",
+      "sig": "32dad49d52e56d75",
       "lastmod": "2026-09-07"
     },
     "https://www.hikasustravel.com/fr/georgia/dmanisi/": {
@@ -7822,7 +7882,7 @@
       "lastmod": "2026-08-22"
     },
     "https://www.hikasustravel.com/fr/georgia/places-to-visit/": {
-      "sig": "96f375482249b949",
+      "sig": "54f51a1f17ef1175",
       "lastmod": "2026-09-07"
     },
     "https://www.hikasustravel.com/fr/georgia/racha-lechkhumi/askhi-massif/": {
@@ -7902,7 +7962,7 @@
       "lastmod": "2026-08-22"
     },
     "https://www.hikasustravel.com/fr/georgia/regions/": {
-      "sig": "7a856b8b072de050",
+      "sig": "8b7410472a9cc47a",
       "lastmod": "2026-09-07"
     },
     "https://www.hikasustravel.com/fr/georgia/regions/adjara/": {
@@ -8314,7 +8374,7 @@
       "lastmod": "2026-08-22"
     },
     "https://www.hikasustravel.com/fr/georgian-lari-currency-guide/": {
-      "sig": "b0635d92a381cfca",
+      "sig": "6aaf4341f225d2be",
       "lastmod": "2026-09-07"
     },
     "https://www.hikasustravel.com/fr/group-tours/": {
@@ -8326,11 +8386,11 @@
       "lastmod": "2026-09-01"
     },
     "https://www.hikasustravel.com/fr/kutaisi-international-airport/": {
-      "sig": "2b9a6947547f2f9a",
+      "sig": "88ee8c85d3ad283e",
       "lastmod": "2026-09-07"
     },
     "https://www.hikasustravel.com/fr/languages-of-georgia/": {
-      "sig": "5143458d0b39fee5",
+      "sig": "c098a6efe77fd8fb",
       "lastmod": "2026-09-07"
     },
     "https://www.hikasustravel.com/fr/privacy-policy/": {
@@ -8450,11 +8510,11 @@
       "lastmod": "2026-08-30"
     },
     "https://www.hikasustravel.com/fr/shuttle-service/": {
-      "sig": "2f167d2d04dfe1d6",
+      "sig": "f5c7b0b5c080a4d7",
       "lastmod": "2026-09-07"
     },
     "https://www.hikasustravel.com/fr/tbilisi-international-airport/": {
-      "sig": "1f56b1d4edb378a4",
+      "sig": "ebd30e2ef491e48b",
       "lastmod": "2026-09-07"
     },
     "https://www.hikasustravel.com/fr/tbilisi-metro/": {
@@ -8466,7 +8526,7 @@
       "lastmod": "2026-08-22"
     },
     "https://www.hikasustravel.com/fr/terms-and-conditions/": {
-      "sig": "e3ca4ef8ed99f5df",
+      "sig": "b0aa10a3ddfb57cd",
       "lastmod": "2026-09-07"
     },
     "https://www.hikasustravel.com/fr/tours/abanotubani-sulfur-baths-tours/": {
@@ -8758,7 +8818,7 @@
       "lastmod": "2026-09-02"
     },
     "https://www.hikasustravel.com/nl/armenia-visa-entry-requirements/": {
-      "sig": "5ac26d5e3bcb4302",
+      "sig": "9bab43cf52dc5ceb",
       "lastmod": "2026-09-07"
     },
     "https://www.hikasustravel.com/nl/armenia/": {
@@ -8802,12 +8862,16 @@
       "lastmod": "2026-09-06"
     },
     "https://www.hikasustravel.com/nl/armenia/gegharkunik/lake-sevan/": {
-      "sig": "fcaa728c1439c4af",
-      "lastmod": "2026-09-06"
+      "sig": "73aa864599690daf",
+      "lastmod": "2026-09-07"
     },
     "https://www.hikasustravel.com/nl/armenia/gegharkunik/noratus-cemetery/": {
       "sig": "d78384bdff8cbb3c",
       "lastmod": "2026-09-06"
+    },
+    "https://www.hikasustravel.com/nl/armenia/gegharkunik/sevanavank-monastery/": {
+      "sig": "998ebd5bd7d1ce2a",
+      "lastmod": "2026-09-07"
     },
     "https://www.hikasustravel.com/nl/armenia/goris/": {
       "sig": "0eb6e020ee63b0da",
@@ -8821,8 +8885,12 @@
       "sig": "ea6605fa71917d74",
       "lastmod": "2026-09-06"
     },
+    "https://www.hikasustravel.com/nl/armenia/lori/sanahin-monastery/": {
+      "sig": "778e46dd39582c96",
+      "lastmod": "2026-09-07"
+    },
     "https://www.hikasustravel.com/nl/armenia/places-to-visit/": {
-      "sig": "ef56be8c334eac6b",
+      "sig": "958dede300f1a06b",
       "lastmod": "2026-09-07"
     },
     "https://www.hikasustravel.com/nl/armenia/regions/": {
@@ -8917,6 +8985,10 @@
       "sig": "6681a32740628e2d",
       "lastmod": "2026-09-07"
     },
+    "https://www.hikasustravel.com/nl/armenia/vayots-dzor/noravank-monastery/": {
+      "sig": "48980a38f8ceee10",
+      "lastmod": "2026-09-07"
+    },
     "https://www.hikasustravel.com/nl/armenia/yerevan/": {
       "sig": "782982613b7a3b31",
       "lastmod": "2026-09-05"
@@ -8958,11 +9030,11 @@
       "lastmod": "2026-08-22"
     },
     "https://www.hikasustravel.com/nl/georgia-visa-entry-requirements/": {
-      "sig": "4bcd2c79e5c7c737",
+      "sig": "c32f69a6828ab491",
       "lastmod": "2026-09-07"
     },
     "https://www.hikasustravel.com/nl/georgia/": {
-      "sig": "08689fe1340f112a",
+      "sig": "efefce1446492c5e",
       "lastmod": "2026-09-07"
     },
     "https://www.hikasustravel.com/nl/georgia/abastumani/abastumani-observatory/": {
@@ -9198,7 +9270,7 @@
       "lastmod": "2026-08-22"
     },
     "https://www.hikasustravel.com/nl/georgia/cities/": {
-      "sig": "3a8dc0d097d0bc0c",
+      "sig": "88221cc2c72b61c3",
       "lastmod": "2026-09-07"
     },
     "https://www.hikasustravel.com/nl/georgia/dmanisi/": {
@@ -9570,7 +9642,7 @@
       "lastmod": "2026-08-22"
     },
     "https://www.hikasustravel.com/nl/georgia/places-to-visit/": {
-      "sig": "c64450fabb120220",
+      "sig": "e36684bad2c42b88",
       "lastmod": "2026-09-07"
     },
     "https://www.hikasustravel.com/nl/georgia/racha-lechkhumi/askhi-massif/": {
@@ -9650,7 +9722,7 @@
       "lastmod": "2026-09-06"
     },
     "https://www.hikasustravel.com/nl/georgia/regions/": {
-      "sig": "7678faa0e83d1922",
+      "sig": "11751ae7fefa179c",
       "lastmod": "2026-09-07"
     },
     "https://www.hikasustravel.com/nl/georgia/regions/adjara/": {
@@ -10062,7 +10134,7 @@
       "lastmod": "2026-08-22"
     },
     "https://www.hikasustravel.com/nl/georgian-lari-currency-guide/": {
-      "sig": "2f7d60dd118f1235",
+      "sig": "60c66a218fc96c74",
       "lastmod": "2026-09-07"
     },
     "https://www.hikasustravel.com/nl/group-tours/": {
@@ -10074,11 +10146,11 @@
       "lastmod": "2026-09-01"
     },
     "https://www.hikasustravel.com/nl/kutaisi-international-airport/": {
-      "sig": "d8ae80f0570bc007",
+      "sig": "c611048ecf94f872",
       "lastmod": "2026-09-07"
     },
     "https://www.hikasustravel.com/nl/languages-of-georgia/": {
-      "sig": "5e5f3671ec01d469",
+      "sig": "9037b0fd7313c999",
       "lastmod": "2026-09-07"
     },
     "https://www.hikasustravel.com/nl/privacy-policy/": {
@@ -10198,11 +10270,11 @@
       "lastmod": "2026-08-30"
     },
     "https://www.hikasustravel.com/nl/shuttle-service/": {
-      "sig": "104bb19ee63414b3",
+      "sig": "b0307c6e165a339b",
       "lastmod": "2026-09-07"
     },
     "https://www.hikasustravel.com/nl/tbilisi-international-airport/": {
-      "sig": "2cb8c3cde18084c8",
+      "sig": "1fe1262f3bf0bf49",
       "lastmod": "2026-09-07"
     },
     "https://www.hikasustravel.com/nl/tbilisi-metro/": {
@@ -10214,7 +10286,7 @@
       "lastmod": "2026-08-22"
     },
     "https://www.hikasustravel.com/nl/terms-and-conditions/": {
-      "sig": "3ceed71235787305",
+      "sig": "6cf3cd13c06acb9a",
       "lastmod": "2026-09-07"
     },
     "https://www.hikasustravel.com/nl/tours/abanotubani-sulfur-baths-tours/": {
@@ -10506,7 +10578,7 @@
       "lastmod": "2026-09-02"
     },
     "https://www.hikasustravel.com/pl/armenia-visa-entry-requirements/": {
-      "sig": "5cbcf63473764cdb",
+      "sig": "cb8f50559c66b081",
       "lastmod": "2026-09-07"
     },
     "https://www.hikasustravel.com/pl/armenia/": {
@@ -10550,12 +10622,16 @@
       "lastmod": "2026-09-06"
     },
     "https://www.hikasustravel.com/pl/armenia/gegharkunik/lake-sevan/": {
-      "sig": "c691acc40c38359f",
-      "lastmod": "2026-09-06"
+      "sig": "e0847ff3d211c0ac",
+      "lastmod": "2026-09-07"
     },
     "https://www.hikasustravel.com/pl/armenia/gegharkunik/noratus-cemetery/": {
       "sig": "a1cd7dffb23e67be",
       "lastmod": "2026-09-06"
+    },
+    "https://www.hikasustravel.com/pl/armenia/gegharkunik/sevanavank-monastery/": {
+      "sig": "c1dd3a2bdeb64750",
+      "lastmod": "2026-09-07"
     },
     "https://www.hikasustravel.com/pl/armenia/goris/": {
       "sig": "5f3deb07178999ff",
@@ -10569,8 +10645,12 @@
       "sig": "0e58fb84a60e7282",
       "lastmod": "2026-09-06"
     },
+    "https://www.hikasustravel.com/pl/armenia/lori/sanahin-monastery/": {
+      "sig": "6ebfe8c18cb35e4c",
+      "lastmod": "2026-09-07"
+    },
     "https://www.hikasustravel.com/pl/armenia/places-to-visit/": {
-      "sig": "b616dd03b1fe03ac",
+      "sig": "01aac22b9dc6e961",
       "lastmod": "2026-09-07"
     },
     "https://www.hikasustravel.com/pl/armenia/regions/": {
@@ -10665,6 +10745,10 @@
       "sig": "a7835dd12c8adf29",
       "lastmod": "2026-09-07"
     },
+    "https://www.hikasustravel.com/pl/armenia/vayots-dzor/noravank-monastery/": {
+      "sig": "99d2247ad31e269a",
+      "lastmod": "2026-09-07"
+    },
     "https://www.hikasustravel.com/pl/armenia/yerevan/": {
       "sig": "8833f47a48976b9a",
       "lastmod": "2026-09-05"
@@ -10706,11 +10790,11 @@
       "lastmod": "2026-08-22"
     },
     "https://www.hikasustravel.com/pl/georgia-visa-entry-requirements/": {
-      "sig": "f032b8e48fdb49c1",
+      "sig": "b8ce81d6405e128e",
       "lastmod": "2026-09-07"
     },
     "https://www.hikasustravel.com/pl/georgia/": {
-      "sig": "bec95262840e2027",
+      "sig": "e85a5a75a8ee1800",
       "lastmod": "2026-09-07"
     },
     "https://www.hikasustravel.com/pl/georgia/abastumani/abastumani-observatory/": {
@@ -10946,7 +11030,7 @@
       "lastmod": "2026-08-22"
     },
     "https://www.hikasustravel.com/pl/georgia/cities/": {
-      "sig": "55f2de51656a331b",
+      "sig": "5603233a5619a74d",
       "lastmod": "2026-09-07"
     },
     "https://www.hikasustravel.com/pl/georgia/dmanisi/": {
@@ -11318,7 +11402,7 @@
       "lastmod": "2026-08-22"
     },
     "https://www.hikasustravel.com/pl/georgia/places-to-visit/": {
-      "sig": "fb6822ae17136adf",
+      "sig": "645a77972625b021",
       "lastmod": "2026-09-07"
     },
     "https://www.hikasustravel.com/pl/georgia/racha-lechkhumi/askhi-massif/": {
@@ -11398,7 +11482,7 @@
       "lastmod": "2026-08-22"
     },
     "https://www.hikasustravel.com/pl/georgia/regions/": {
-      "sig": "a5328edfceeefa2d",
+      "sig": "a0d86aea37e4e3cc",
       "lastmod": "2026-09-07"
     },
     "https://www.hikasustravel.com/pl/georgia/regions/adjara/": {
@@ -11810,7 +11894,7 @@
       "lastmod": "2026-08-22"
     },
     "https://www.hikasustravel.com/pl/georgian-lari-currency-guide/": {
-      "sig": "493e3a22994883f0",
+      "sig": "ac15cc09e8bf0da5",
       "lastmod": "2026-09-07"
     },
     "https://www.hikasustravel.com/pl/group-tours/": {
@@ -11822,11 +11906,11 @@
       "lastmod": "2026-09-01"
     },
     "https://www.hikasustravel.com/pl/kutaisi-international-airport/": {
-      "sig": "ede47f0d497ff0e5",
+      "sig": "f733f2636819cd0c",
       "lastmod": "2026-09-07"
     },
     "https://www.hikasustravel.com/pl/languages-of-georgia/": {
-      "sig": "0900e5e89d463c4f",
+      "sig": "17f8338fd4d52a16",
       "lastmod": "2026-09-07"
     },
     "https://www.hikasustravel.com/pl/privacy-policy/": {
@@ -11946,11 +12030,11 @@
       "lastmod": "2026-08-30"
     },
     "https://www.hikasustravel.com/pl/shuttle-service/": {
-      "sig": "540bfd5b76397fb1",
+      "sig": "38b35633eb2e901a",
       "lastmod": "2026-09-07"
     },
     "https://www.hikasustravel.com/pl/tbilisi-international-airport/": {
-      "sig": "45860b6b4bfe3143",
+      "sig": "6cc4e22b16c2ea4d",
       "lastmod": "2026-09-07"
     },
     "https://www.hikasustravel.com/pl/tbilisi-metro/": {
@@ -11962,7 +12046,7 @@
       "lastmod": "2026-08-22"
     },
     "https://www.hikasustravel.com/pl/terms-and-conditions/": {
-      "sig": "9d99377bd9c2b3a2",
+      "sig": "5f7dd89ff0ae74ff",
       "lastmod": "2026-09-07"
     },
     "https://www.hikasustravel.com/pl/tours/abanotubani-sulfur-baths-tours/": {

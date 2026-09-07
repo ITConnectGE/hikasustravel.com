@@ -14489,9 +14489,31 @@ export const sites = [
     noHero: true,
     noAutolink: true,
   },
+  // Sevanavank — published in place as a REGION-parented site under
+  // Gegharkunik, exactly as the Noratus comment above predicted it would be.
+  // The brief asked whether it should nest under the Lake Sevan attraction
+  // instead: it cannot. `parentType` accepts only 'city', 'region' and
+  // 'place', and a site's parent is resolved in `cities` or `regions` — Lake
+  // Sevan is itself a `sites` entry, so it can never be a parent without a
+  // new data model. Region-parenting is both the only option and the right
+  // one: Sevanavank is a separate monument beside the lake, not part of it.
+  //
+  // `noAutolink` so the body carries ONLY the
+  // five hand-authored links the brief asked for (Lake Sevan, Gegharkunik,
+  // Yerevan, Dilijan, Noratus Cemetery), written into the locale content in
+  // the same shape autolink.js emits. Hand-authoring is what makes them work
+  // in all seven locales: autolink links a `sites` entry outside English only
+  // when it has a curated localized name in pages.destinationsPlaces.items,
+  // and no Armenian place has one, so the autolinker alone would have linked
+  // Lake Sevan in English and nowhere else.
+  //
+  // No `image`: the only Armenian photograph on disk shows Khor Virap.
   {
     slug: 'sevanavank-monastery', name: 'Sevanavank Monastery',
-    parentType: 'region', parent: 'gegharkunik', published: false,
+    parentType: 'region', parent: 'gegharkunik', published: true,
+    seoKey: 'sevanavankMonastery', contentKey: 'sevanavankMonastery',
+    noHero: true,
+    noAutolink: true,
   },
   // Noratus Cemetery — region-parented on Gegharkunik INDEPENDENTLY, not
   // nested under Lake Sevan. Nesting is not possible and would not be right
