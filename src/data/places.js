@@ -15053,15 +15053,56 @@ export const sites = [
   // without it the shared autolinker would turn Sevanavank, Hayravank,
   // Noratus, Gavar, Dilijan, Vayots Dzor and Tsaghkadzor into links.
   //
-  // No `image`: public/images/files holds exactly one Armenian photograph,
-  // the Khor Virap crop, which is a monastery in Ararat and not this lake.
-  // og:image falls back to the Armenia country social image.
+  // HERO SHIPPED (owner package, Lake Sevan): the lake itself. `noHero` and the
+  // fallback to the Armenia country social image (the Khor Virap crop, a
+  // monastery in Ararat and not this lake) are both gone — `ogImage` names this
+  // page's own 1200x630 file.
+  //
+  // ⚠️ Unlike the twelve pages shipped alongside it, the localized alt below is
+  // NOT owner-supplied: this package arrived without a brief, and the owner
+  // asked for the hero anyway. The alt describes only what is actually in the
+  // frame (deep blue water, a wooded near shore, a village under bare hills on
+  // the far shore) and is the first thing to replace if the owner sends their
+  // own wording.
   {
     slug: 'lake-sevan', name: 'Lake Sevan',
     parentType: 'region', parent: 'gegharkunik', published: true,
     seoKey: 'lakeSevan', contentKey: 'lakeSevan',
-    noHero: true,
+    // Hero: the lake across to the far shore. Landscape 16:9 (1672x941 native),
+    // ladder 768/1200/1600/1672 — the same four rungs as `.hero--racha`,
+    // nothing upscaled. `image` is the top WebP rung; `heroClass` moves the
+    // background into CSS so all four apply. The 768 rung is ALSO the Places to
+    // Visit tile cover on /armenia (with its files-thumb twin) — one family,
+    // two uses, which is why the tile and this hero can never drift apart.
+    image: '/images/files/lake-sevan-armenia-1672.webp',
+    imageAvif: '/images/files/lake-sevan-armenia-1672.avif',
+    heroClass: 'hero--lake-sevan',
+    // LCP hero preload: the 1200 AVIF rung, fetchpriority=high.
+    heroPreload: '/images/files/lake-sevan-armenia-1200.avif',
+    // Dedicated 1.91:1 social image; the matching `-og.webp` ships alongside
+    // unreferenced (one og:image URL only).
+    ogImage: { src: '/images/files/lake-sevan-armenia-og.jpg', width: 1200, height: 630 },
     noAutolink: true,
+    // Hero image SEO/AEO metadata — the hero is a CSS background, so this is
+    // where the localized alt lives; it feeds og:image:alt / twitter:image:alt
+    // per locale and the hero ImageObject caption. width/height describe the
+    // 1672 rung.
+    imageMeta: {
+      width: 1672, height: 941, imageId: 'hero-image',
+      name: 'Lake Sevan looking across to the far shore, Gegharkunik, Armenia',
+      description: 'The deep blue water of Lake Sevan under a summer sky of scattered cumulus, with a wooded shore in the foreground and a lakeside village spread along the far shore below bare brown hills, in Gegharkunik Province, Armenia.',
+      locationName: 'Lake Sevan, Gegharkunik, Armenia',
+      region: 'Gegharkunik', country: 'AM',
+      alt: {
+        en: 'The deep blue water of Lake Sevan under a summer sky, with a wooded shore in the foreground and a lakeside village below bare hills on the far shore, Gegharkunik, Armenia',
+        de: 'Das tiefblaue Wasser des Sewansees unter sommerlichem Himmel, im Vordergrund ein bewaldetes Ufer, am gegenüberliegenden Ufer ein Dorf unter kahlen Hügeln, Gegharkunik, Armenien',
+        fr: "Les eaux d'un bleu profond du lac Sevan sous un ciel d'été, avec une rive boisée au premier plan et un village au bord de l'eau au pied de collines dénudées sur la rive opposée, Gegharkunik, Arménie",
+        es: 'Las aguas de un azul profundo del lago Seván bajo un cielo de verano, con una orilla arbolada en primer plano y un pueblo a la orilla del agua al pie de colinas peladas en la ribera opuesta, Gegharkunik, Armenia',
+        nl: 'Het diepblauwe water van het Sevanmeer onder een zomerse hemel, met een beboste oever op de voorgrond en een dorp aan het water onder kale heuvels aan de overkant, Gegharkunik, Armenië',
+        cs: 'Sytě modrá voda Sevanského jezera pod letní oblohou, v popředí zalesněný břeh a na protějším břehu vesnice pod holými kopci, Gegharkunik, Arménie',
+        pl: 'Głęboko niebieska woda jeziora Sewan pod letnim niebem, z zalesionym brzegiem na pierwszym planie i wioską nad wodą u stóp nagich wzgórz na przeciwległym brzegu, Gegharkunik, Armenia',
+      },
+    },
   },
   // Sevanavank — published in place as a REGION-parented site under
   // Gegharkunik, exactly as the Noratus comment above predicted it would be.

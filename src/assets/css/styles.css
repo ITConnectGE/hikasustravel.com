@@ -11576,3 +11576,45 @@ select option:checked {
   }
 }
 /* Native is 1672 — that is the top rung. Do not add a wider breakpoint. */
+
+/* Lake Sevan. Landscape 16:9 source (1672x941), four rungs as .hero--racha.
+   `center` was RENDERED at 390x780 and 1440x900: the water fills the middle of
+   the frame, so the narrow crop still holds the wooded near shore, the open
+   lake and the village under the hills opposite. The 768 rung doubles as the
+   Places to Visit tile cover on /armenia — that one needs its files-thumb
+   twin, this one does not (a hero is a background, not a blur-up card). */
+.hero--lake-sevan {
+  background-image: url("/images/files/lake-sevan-armenia-768.webp");
+  background-image: image-set(
+    url("/images/files/lake-sevan-armenia-768.avif") type("image/avif"),
+    url("/images/files/lake-sevan-armenia-768.webp") type("image/webp")
+  );
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+@media (min-width: 768px) {
+  .hero--lake-sevan {
+    background-image: image-set(
+      url("/images/files/lake-sevan-armenia-1200.avif") type("image/avif"),
+      url("/images/files/lake-sevan-armenia-1200.webp") type("image/webp")
+    );
+  }
+}
+@media (min-width: 1200px) {
+  .hero--lake-sevan {
+    background-image: image-set(
+      url("/images/files/lake-sevan-armenia-1600.avif") type("image/avif"),
+      url("/images/files/lake-sevan-armenia-1600.webp") type("image/webp")
+    );
+  }
+}
+@media (min-width: 1600px) {
+  .hero--lake-sevan {
+    background-image: image-set(
+      url("/images/files/lake-sevan-armenia-1672.avif") type("image/avif"),
+      url("/images/files/lake-sevan-armenia-1672.webp") type("image/webp")
+    );
+  }
+}
+/* Native is 1672 — that is the top rung. Do not add a wider breakpoint. */
