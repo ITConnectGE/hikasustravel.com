@@ -10672,6 +10672,11 @@ select option:checked {
   padding-bottom: 0;
   font-size: 1.2rem;
   color: var(--color-h2);
+  /* ⚠️ A global `h3 { text-align: center }` inside the mobile media query would
+     otherwise centre the country-landing card titles (which are h3 because they
+     sit under a section h2) while every hub card title — an h2 — stays left.
+     Asserting it here is inert for the h2 cards, which already compute left. */
+  text-align: left;
 }
 /* Secondary location line ("City, Region") on Places to Visit cards. Sits just
    under the title: smaller, muted, clearly readable, and visually distinct from
