@@ -95,18 +95,30 @@ const COUNTRY_LANDING = {
     // here too: a wide view of the Ararat plain standing for regional variety,
     // exactly as the Kakheti vineyard does for Georgia.
     //
-    // `cities` stays null on purpose. The only Armenian photograph that exists
-    // is this one, and putting Khor Virap — a monastery on the Ararat plain —
-    // behind a "Cities" tile, or on a Yerevan or Dilijan card, would tell a
-    // traveller those places look like something they do not. A missing tile is
-    // honest; a wrong one is not. Both need one real photograph each.
-    // Regions carries the Khor Virap landscape at its 768 rung; Cities and
-    // Places have no photograph yet and render on the brand tone until one
-    // arrives. Supplying a path here is all either tile needs.
+    // All three tiles now carry a real Armenian photograph, each the smallest
+    // rung of a family that already exists here — the listing never pulls a
+    // full-size hero. `cities` and `places` were deliberately null while Khor
+    // Virap was the only Armenian photo in the repo (a monastery on the Ararat
+    // plain behind a "Cities" tile would have told a traveller something
+    // untrue); the owner packages since delivered have made both honest:
+    //   regions → the Khor Virap landscape, a wide view of the Ararat plain
+    //   cities  → the Yerevan Cascade, the capital's best-known landmark
+    //   places  → Lake Sevan, the country's best-known natural site
+    // ⚠️ Both new covers needed a `/images/files-thumb/` twin: BlurUpBackground
+    // derives the blur placeholder by string-replacing that folder, so a cover
+    // without one requests a 404 as its placeholder. Generated at the project's
+    // own 20px/quality-50 setting (`scripts/generate-thumbnails.js`).
+    //
+    // The tiles are `.tour-tile` — a 1:1 box painted by `.tour-tile-image`,
+    // which already sets `background-size: cover` and `background-position:
+    // center`. Both crops were rendered at 420x420 and looked at before being
+    // chosen: the portrait Cascade keeps its obelisk, terraces and arcades, and
+    // the 16:9 Lake Sevan keeps the water, the far shore and the ridge behind.
+    // Neither needs a tile-specific position, so none is introduced.
     subhubImages: {
       regions: '/images/files/khor-virap-monastery-ararat-armenia-768.webp',
-      cities: null,
-      places: null,
+      cities: '/images/files/yerevan-cascade-armenia-768.webp',
+      places: '/images/files/lake-sevan-armenia-768.webp',
     },
   },
 }
