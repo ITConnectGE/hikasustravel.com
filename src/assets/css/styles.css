@@ -11121,3 +11121,458 @@ select option:checked {
   }
 }
 /* Native is 1086 — that is the top rung. Do not add a 1200/1448 breakpoint. */
+
+
+/* --------------------------------------------------------------------------
+   Armenia attraction heroes (owner packages, 2026-09-08). Each replaces a
+   `.dest-title-band` no-hero placeholder on its page. The heroes on this site
+   are CSS backgrounds, not <img>, so the AVIF-first/WebP-fallback pair rides
+   on image-set() and the width rungs are BREAKPOINTS rather than a srcset;
+   background-size: cover is the object-fit equivalent and background-position
+   the object-position one.
+   -------------------------------------------------------------------------- */
+
+/* Amberd Fortress. ⚠️ PORTRAIT SOURCE (1086x1448, exact 3:4) in a wide hero,
+   same shape as .hero--things-to-do-martvili: the vertical crop is live on
+   desktop and inert on narrow phones (where the box aspect falls below 0.75
+   and almost the whole frame fits). `center` was RENDERED at 1440x820 and at
+   390x780 before being chosen — the towers sit across the middle of the frame,
+   so a centred crop keeps every tower and the rock spur in view at both. */
+.hero--amberd-fortress {
+  background-image: url("/images/files/amberd-fortress-aragats-armenia-768.webp");
+  background-image: image-set(
+    url("/images/files/amberd-fortress-aragats-armenia-768.avif") type("image/avif"),
+    url("/images/files/amberd-fortress-aragats-armenia-768.webp") type("image/webp")
+  );
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+@media (min-width: 768px) {
+  .hero--amberd-fortress {
+    background-image: image-set(
+      url("/images/files/amberd-fortress-aragats-armenia-1086.avif") type("image/avif"),
+      url("/images/files/amberd-fortress-aragats-armenia-1086.webp") type("image/webp")
+    );
+  }
+}
+/* Native is 1086 — that is the top rung. Do not add a 1200/1448 breakpoint. */
+
+/* Yerevan Cascade. ⚠️ PORTRAIT SOURCE (1024x1536, exact 2:3) in a wide hero,
+   so the vertical value is a desktop-only concern. `center` was RENDERED at
+   1440x820: it holds the obelisk, the terrace arches and the planted flanks,
+   cropping only the sky above and the fountain plaza at the foot. */
+.hero--cascade-monument {
+  background-image: url("/images/files/yerevan-cascade-armenia-768.webp");
+  background-image: image-set(
+    url("/images/files/yerevan-cascade-armenia-768.avif") type("image/avif"),
+    url("/images/files/yerevan-cascade-armenia-768.webp") type("image/webp")
+  );
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+@media (min-width: 768px) {
+  .hero--cascade-monument {
+    background-image: image-set(
+      url("/images/files/yerevan-cascade-armenia-1024.avif") type("image/avif"),
+      url("/images/files/yerevan-cascade-armenia-1024.webp") type("image/webp")
+    );
+  }
+}
+/* Native is 1024 — that is the top rung. Do not add a 1200/1448 breakpoint. */
+
+/* Geghard Monastery. Landscape 16:9 source (1672x941) — the four rungs match
+   .hero--racha exactly.
+   ⚠️ HORIZONTAL bias, RENDERED not computed: a 16:9 frame in a 100dvh box
+   crops hard from the sides on phones, and at `center` the church's conical
+   dome — the subject every locale's alt names — was sliced by the right edge
+   at 390px. 60% brings the dome, the cross and the courtyard fully into the
+   narrow crop. Near-inert on desktop (at 1440x900 the whole frame is only
+   160px wider than the box, so 60% moves it 16px). */
+.hero--geghard-monastery {
+  background-image: url("/images/files/geghard-monastery-armenia-768.webp");
+  background-image: image-set(
+    url("/images/files/geghard-monastery-armenia-768.avif") type("image/avif"),
+    url("/images/files/geghard-monastery-armenia-768.webp") type("image/webp")
+  );
+  background-position: 60% center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+@media (min-width: 768px) {
+  .hero--geghard-monastery {
+    background-image: image-set(
+      url("/images/files/geghard-monastery-armenia-1200.avif") type("image/avif"),
+      url("/images/files/geghard-monastery-armenia-1200.webp") type("image/webp")
+    );
+  }
+}
+@media (min-width: 1200px) {
+  .hero--geghard-monastery {
+    background-image: image-set(
+      url("/images/files/geghard-monastery-armenia-1600.avif") type("image/avif"),
+      url("/images/files/geghard-monastery-armenia-1600.webp") type("image/webp")
+    );
+  }
+}
+@media (min-width: 1600px) {
+  .hero--geghard-monastery {
+    background-image: image-set(
+      url("/images/files/geghard-monastery-armenia-1672.avif") type("image/avif"),
+      url("/images/files/geghard-monastery-armenia-1672.webp") type("image/webp")
+    );
+  }
+}
+/* Native is 1672 — that is the top rung. Do not add a 2400 breakpoint. */
+
+/* Haghpat Monastery. Landscape 16:9 source (1672x941), same four rungs.
+   `center` was RENDERED at 390x780 and 1440x900: the church of Saint Nshan
+   sits dead centre, so the narrow crop keeps the tiled conical dome, the cross
+   and the gavit whole and no bias is needed. */
+.hero--haghpat-monastery {
+  background-image: url("/images/files/haghpat-monastery-armenia-768.webp");
+  background-image: image-set(
+    url("/images/files/haghpat-monastery-armenia-768.avif") type("image/avif"),
+    url("/images/files/haghpat-monastery-armenia-768.webp") type("image/webp")
+  );
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+@media (min-width: 768px) {
+  .hero--haghpat-monastery {
+    background-image: image-set(
+      url("/images/files/haghpat-monastery-armenia-1200.avif") type("image/avif"),
+      url("/images/files/haghpat-monastery-armenia-1200.webp") type("image/webp")
+    );
+  }
+}
+@media (min-width: 1200px) {
+  .hero--haghpat-monastery {
+    background-image: image-set(
+      url("/images/files/haghpat-monastery-armenia-1600.avif") type("image/avif"),
+      url("/images/files/haghpat-monastery-armenia-1600.webp") type("image/webp")
+    );
+  }
+}
+@media (min-width: 1600px) {
+  .hero--haghpat-monastery {
+    background-image: image-set(
+      url("/images/files/haghpat-monastery-armenia-1672.avif") type("image/avif"),
+      url("/images/files/haghpat-monastery-armenia-1672.webp") type("image/webp")
+    );
+  }
+}
+/* Native is 1672 — that is the top rung. Do not add a 2400 breakpoint. */
+
+/* Khor Virap Monastery. ⚠️ PORTRAIT SOURCE (1086x1448, exact 3:4) in a wide
+   hero, using the assets already on disk — nothing new, nothing re-encoded.
+   `center` per the owner brief, RENDERED at 1440x820 first: phones and portrait
+   tablets see essentially the whole frame, but a 16:9 desktop window holds only
+   the monastery and the plain — the Ararat cones sit in the top fifth and fall
+   outside it. No single value keeps both (the monastery alone spans 47-78% of
+   the frame), so this is reported, not silently biased. */
+.hero--khor-virap-monastery {
+  background-image: url("/images/files/khor-virap-monastery-ararat-armenia-768.webp");
+  background-image: image-set(
+    url("/images/files/khor-virap-monastery-ararat-armenia-768.avif") type("image/avif"),
+    url("/images/files/khor-virap-monastery-ararat-armenia-768.webp") type("image/webp")
+  );
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+@media (min-width: 768px) {
+  .hero--khor-virap-monastery {
+    background-image: image-set(
+      url("/images/files/khor-virap-monastery-ararat-armenia-1086.avif") type("image/avif"),
+      url("/images/files/khor-virap-monastery-ararat-armenia-1086.webp") type("image/webp")
+    );
+  }
+}
+/* Native is 1086 — that is the top rung. Do not add a 1200/1448 breakpoint. */
+
+/* Mount Ararat. Landscape 4:3 source (1448x1086 native), ladder
+   768/1200/1448 — nothing upscaled. `center` was RENDERED at 390x780 and
+   1440x900 first: the snow-capped summit sits dead centre of the frame, so a
+   phone-width crop of the 4:3 source still holds the peak, the volcanic
+   slopes and a band of the green plain. */
+.hero--mount-ararat {
+  background-image: url("/images/files/mount-ararat-armenia-768.webp");
+  background-image: image-set(
+    url("/images/files/mount-ararat-armenia-768.avif") type("image/avif"),
+    url("/images/files/mount-ararat-armenia-768.webp") type("image/webp")
+  );
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+@media (min-width: 768px) {
+  .hero--mount-ararat {
+    background-image: image-set(
+      url("/images/files/mount-ararat-armenia-1200.avif") type("image/avif"),
+      url("/images/files/mount-ararat-armenia-1200.webp") type("image/webp")
+    );
+  }
+}
+@media (min-width: 1200px) {
+  .hero--mount-ararat {
+    background-image: image-set(
+      url("/images/files/mount-ararat-armenia-1448.avif") type("image/avif"),
+      url("/images/files/mount-ararat-armenia-1448.webp") type("image/webp")
+    );
+  }
+}
+/* Native is 1448 — that is the top rung. Do not add a wider breakpoint. */
+
+/* Noratus Cemetery. Landscape 16:9 source (1672x941), four rungs as
+   .hero--racha.
+   ⚠️ HORIZONTAL bias, RENDERED not computed: at `center` a 390px-wide crop of
+   this 16:9 frame is mostly sky with distant stones — the carved khachkar
+   faces are in the left half. 20% fills the narrow crop with them. Near-inert
+   on desktop (at 1440x900 the frame is only 160px wider than the box). The
+   small chapel at the very left edge stays outside the phone crop either way;
+   it is present in the 1.91:1 social crop and on desktop. */
+.hero--noratus-cemetery {
+  background-image: url("/images/files/noratus-cemetery-khachkars-armenia-768.webp");
+  background-image: image-set(
+    url("/images/files/noratus-cemetery-khachkars-armenia-768.avif") type("image/avif"),
+    url("/images/files/noratus-cemetery-khachkars-armenia-768.webp") type("image/webp")
+  );
+  background-position: 20% center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+@media (min-width: 768px) {
+  .hero--noratus-cemetery {
+    background-image: image-set(
+      url("/images/files/noratus-cemetery-khachkars-armenia-1200.avif") type("image/avif"),
+      url("/images/files/noratus-cemetery-khachkars-armenia-1200.webp") type("image/webp")
+    );
+  }
+}
+@media (min-width: 1200px) {
+  .hero--noratus-cemetery {
+    background-image: image-set(
+      url("/images/files/noratus-cemetery-khachkars-armenia-1600.avif") type("image/avif"),
+      url("/images/files/noratus-cemetery-khachkars-armenia-1600.webp") type("image/webp")
+    );
+  }
+}
+@media (min-width: 1600px) {
+  .hero--noratus-cemetery {
+    background-image: image-set(
+      url("/images/files/noratus-cemetery-khachkars-armenia-1672.avif") type("image/avif"),
+      url("/images/files/noratus-cemetery-khachkars-armenia-1672.webp") type("image/webp")
+    );
+  }
+}
+/* Native is 1672 — that is the top rung. Do not add a wider breakpoint. */
+
+/* Noravank Monastery. Landscape 16:9 source (1672x941), four rungs as
+   .hero--racha. `center` was RENDERED at 390x780: the two-storey Burtelashen
+   and its conical dome sit in the middle of the frame, so the narrow crop
+   keeps the churches, the precinct wall and the cliffs above them. */
+.hero--noravank-monastery {
+  background-image: url("/images/files/noravank-monastery-armenia-768.webp");
+  background-image: image-set(
+    url("/images/files/noravank-monastery-armenia-768.avif") type("image/avif"),
+    url("/images/files/noravank-monastery-armenia-768.webp") type("image/webp")
+  );
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+@media (min-width: 768px) {
+  .hero--noravank-monastery {
+    background-image: image-set(
+      url("/images/files/noravank-monastery-armenia-1200.avif") type("image/avif"),
+      url("/images/files/noravank-monastery-armenia-1200.webp") type("image/webp")
+    );
+  }
+}
+@media (min-width: 1200px) {
+  .hero--noravank-monastery {
+    background-image: image-set(
+      url("/images/files/noravank-monastery-armenia-1600.avif") type("image/avif"),
+      url("/images/files/noravank-monastery-armenia-1600.webp") type("image/webp")
+    );
+  }
+}
+@media (min-width: 1600px) {
+  .hero--noravank-monastery {
+    background-image: image-set(
+      url("/images/files/noravank-monastery-armenia-1672.avif") type("image/avif"),
+      url("/images/files/noravank-monastery-armenia-1672.webp") type("image/webp")
+    );
+  }
+}
+/* Native is 1672 — that is the top rung. Do not add a wider breakpoint. */
+
+/* Republic Square. Landscape 16:9 source (1672x941), four rungs as
+   .hero--racha. `center` was RENDERED at 390x780: it holds the museum arcade,
+   the fountain pool and the flowerbeds. Government House's clock tower is at
+   the far right of the frame and falls outside a phone-width crop — it is in
+   the 1.91:1 social crop the alt text accompanies, and on desktop. A right
+   bias would keep it only by dropping the arcade, which is the larger
+   subject, so centre stays. */
+.hero--republic-square {
+  background-image: url("/images/files/republic-square-yerevan-armenia-768.webp");
+  background-image: image-set(
+    url("/images/files/republic-square-yerevan-armenia-768.avif") type("image/avif"),
+    url("/images/files/republic-square-yerevan-armenia-768.webp") type("image/webp")
+  );
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+@media (min-width: 768px) {
+  .hero--republic-square {
+    background-image: image-set(
+      url("/images/files/republic-square-yerevan-armenia-1200.avif") type("image/avif"),
+      url("/images/files/republic-square-yerevan-armenia-1200.webp") type("image/webp")
+    );
+  }
+}
+@media (min-width: 1200px) {
+  .hero--republic-square {
+    background-image: image-set(
+      url("/images/files/republic-square-yerevan-armenia-1600.avif") type("image/avif"),
+      url("/images/files/republic-square-yerevan-armenia-1600.webp") type("image/webp")
+    );
+  }
+}
+@media (min-width: 1600px) {
+  .hero--republic-square {
+    background-image: image-set(
+      url("/images/files/republic-square-yerevan-armenia-1672.avif") type("image/avif"),
+      url("/images/files/republic-square-yerevan-armenia-1672.webp") type("image/webp")
+    );
+  }
+}
+/* Native is 1672 — that is the top rung. Do not add a wider breakpoint. */
+
+/* Sevanavank Monastery. Landscape 16:9 source (1672x941), four rungs as
+   .hero--racha.
+   ⚠️ HORIZONTAL bias, RENDERED not computed: the two churches stand at the
+   left and right edges of this frame with sky and rubble wall between them, so
+   `center` gave a 390px crop of empty sky. 80% fills it with the larger basalt
+   church, its tiled conical dome and cross. Near-inert on desktop (at 1440x900
+   the frame is only 160px wider than the box), where both churches show. */
+.hero--sevanavank-monastery {
+  background-image: url("/images/files/sevanavank-monastery-armenia-768.webp");
+  background-image: image-set(
+    url("/images/files/sevanavank-monastery-armenia-768.avif") type("image/avif"),
+    url("/images/files/sevanavank-monastery-armenia-768.webp") type("image/webp")
+  );
+  background-position: 80% center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+@media (min-width: 768px) {
+  .hero--sevanavank-monastery {
+    background-image: image-set(
+      url("/images/files/sevanavank-monastery-armenia-1200.avif") type("image/avif"),
+      url("/images/files/sevanavank-monastery-armenia-1200.webp") type("image/webp")
+    );
+  }
+}
+@media (min-width: 1200px) {
+  .hero--sevanavank-monastery {
+    background-image: image-set(
+      url("/images/files/sevanavank-monastery-armenia-1600.avif") type("image/avif"),
+      url("/images/files/sevanavank-monastery-armenia-1600.webp") type("image/webp")
+    );
+  }
+}
+@media (min-width: 1600px) {
+  .hero--sevanavank-monastery {
+    background-image: image-set(
+      url("/images/files/sevanavank-monastery-armenia-1672.avif") type("image/avif"),
+      url("/images/files/sevanavank-monastery-armenia-1672.webp") type("image/webp")
+    );
+  }
+}
+/* Native is 1672 — that is the top rung. Do not add a wider breakpoint. */
+
+/* Tatev Monastery. Landscape 16:9 source (1672x941), four rungs as
+   .hero--racha. `center` was RENDERED at 390x780 and 1440x900: the monastery
+   sits just left of centre on its cliff, and the narrow crop still holds the
+   domed church, the curtain wall, the rock it stands on and the gorge behind
+   it. No bias needed. */
+.hero--tatev-monastery {
+  background-image: url("/images/files/tatev-monastery-armenia-768.webp");
+  background-image: image-set(
+    url("/images/files/tatev-monastery-armenia-768.avif") type("image/avif"),
+    url("/images/files/tatev-monastery-armenia-768.webp") type("image/webp")
+  );
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+@media (min-width: 768px) {
+  .hero--tatev-monastery {
+    background-image: image-set(
+      url("/images/files/tatev-monastery-armenia-1200.avif") type("image/avif"),
+      url("/images/files/tatev-monastery-armenia-1200.webp") type("image/webp")
+    );
+  }
+}
+@media (min-width: 1200px) {
+  .hero--tatev-monastery {
+    background-image: image-set(
+      url("/images/files/tatev-monastery-armenia-1600.avif") type("image/avif"),
+      url("/images/files/tatev-monastery-armenia-1600.webp") type("image/webp")
+    );
+  }
+}
+@media (min-width: 1600px) {
+  .hero--tatev-monastery {
+    background-image: image-set(
+      url("/images/files/tatev-monastery-armenia-1672.avif") type("image/avif"),
+      url("/images/files/tatev-monastery-armenia-1672.webp") type("image/webp")
+    );
+  }
+}
+/* Native is 1672 — that is the top rung. Do not add a wider breakpoint. */
+
+/* Zvartnots. Landscape 16:9 source (1672x941), four rungs as .hero--racha.
+   `center` was RENDERED at 390x780: the reconstructed arcade of round arches
+   and its carved capitals — the thing every locale's alt names — sits across
+   the middle of the frame and survives the narrow crop whole. */
+.hero--zvartnots-temple {
+  background-image: url("/images/files/zvartnots-cathedral-armenia-768.webp");
+  background-image: image-set(
+    url("/images/files/zvartnots-cathedral-armenia-768.avif") type("image/avif"),
+    url("/images/files/zvartnots-cathedral-armenia-768.webp") type("image/webp")
+  );
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+@media (min-width: 768px) {
+  .hero--zvartnots-temple {
+    background-image: image-set(
+      url("/images/files/zvartnots-cathedral-armenia-1200.avif") type("image/avif"),
+      url("/images/files/zvartnots-cathedral-armenia-1200.webp") type("image/webp")
+    );
+  }
+}
+@media (min-width: 1200px) {
+  .hero--zvartnots-temple {
+    background-image: image-set(
+      url("/images/files/zvartnots-cathedral-armenia-1600.avif") type("image/avif"),
+      url("/images/files/zvartnots-cathedral-armenia-1600.webp") type("image/webp")
+    );
+  }
+}
+@media (min-width: 1600px) {
+  .hero--zvartnots-temple {
+    background-image: image-set(
+      url("/images/files/zvartnots-cathedral-armenia-1672.avif") type("image/avif"),
+      url("/images/files/zvartnots-cathedral-armenia-1672.webp") type("image/webp")
+    );
+  }
+}
+/* Native is 1672 — that is the top rung. Do not add a wider breakpoint. */

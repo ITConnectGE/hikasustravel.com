@@ -14381,11 +14381,11 @@ export const sites = [
   // Resolves to /armenia/aragatsotn/amberd-fortress through the shared
   // country-aware resolver — no route of its own.
   //
-  // `noHero` until an approved Amberd photograph exists (the same flag every
-  // other Armenia page uses). `image` carries the Khor Virap social crop rather
-  // than the site-wide georgia-home.jpg default, so the og:image and the
-  // JSON-LD image are at least Armenian; swap both for a real Amberd photo when
-  // one arrives.
+  // HERO SHIPPED (owner package, Amberd Fortress): `noHero` is GONE — this is
+  // the first Armenian page whose own subject is photographed, other than Khor
+  // Virap. The borrowed Khor Virap social crop goes with it: `ogImage` now
+  // names this page's own 1.91:1 crop, so og:image / twitter:image / the hero
+  // ImageObject all describe Amberd instead of a monastery 90 km away.
   //
   // `noAutolink` added after the fact: the owner brief for this page asked for
   // ZERO editorial body links, but the record shipped without the flag and the
@@ -14397,12 +14397,48 @@ export const sites = [
     slug: 'amberd-fortress', name: 'Amberd Fortress',
     parentType: 'region', parent: 'aragatsotn', published: true,
     seoKey: 'amberdFortress', contentKey: 'amberdFortress',
-    noHero: true,
+    // Hero: the fortress itself, the clustered basalt towers on their spur
+    // below Aragats. PORTRAIT source (1086x1448, exact 3:4) in a wide hero —
+    // the same shape as the Things to Do in Martvili hero, so the crop is a
+    // desktop concern and phones show almost the whole frame. Ladder is
+    // 768/1086 ONLY: 1086 is native, nothing is upscaled (cf. `.hero--bakhmaro`).
+    // `image` is the top WebP rung — it feeds HeroSection's fallback and the
+    // hero ImageObject's contentUrl; `heroClass` moves the background into CSS
+    // so both rungs actually apply (an inline style can carry only one width).
+    image: '/images/files/amberd-fortress-aragats-armenia-1086.webp',
+    imageAvif: '/images/files/amberd-fortress-aragats-armenia-1086.avif',
+    heroClass: 'hero--amberd-fortress',
+    // LCP hero preload: the top AVIF rung with fetchpriority=high, matching the
+    // other 768/1086 portrait hero (Things to Do in Martvili).
+    heroPreload: '/images/files/amberd-fortress-aragats-armenia-1086.avif',
+    // Dedicated 1.91:1 social image. The owner package ships TWO 1200x630
+    // variants — a cover CROP and a contain-padded one — and the brief picks
+    // the crop. The padded `-og.jpg` and both `-og*.webp` sit on disk
+    // unreferenced; useSEO/prerender emit exactly one og:image.
+    ogImage: { src: '/images/files/amberd-fortress-aragats-armenia-og-crop.jpg', width: 1200, height: 630 },
     noAutolink: true,
-    // No `image`: the only Armenian photograph on disk is the Khor Virap
-    // crop, which shows a different place. og:image falls back to
-    // COUNTRIES.armenia.socialImage — the SAME file — so the social card is
-    // unchanged, while the JSON-LD no longer claims the photo depicts this.
+    // Hero image SEO/AEO metadata. The hero is a CSS background (there is no
+    // <img alt> anywhere on this site), so the localized alt lives here and is
+    // what feeds og:image:alt / twitter:image:alt per locale and the hero
+    // ImageObject caption. width/height describe the 1086 rung `image` names.
+    // contentLocation is name-only: this record ships no coordinate for the
+    // fortress, and both SitePage and seo-jsonld handle a geo-less one.
+    imageMeta: {
+      width: 1086, height: 1448, imageId: 'hero-image',
+      name: 'The ruins of Amberd Fortress on the southern slopes of Mount Aragats, Aragatsotn, Armenia',
+      description: 'The clustered round basalt towers and curtain walls of Amberd Fortress standing on a rocky, grass-covered spur on the southern slopes of Mount Aragats under a clear blue summer sky, in Aragatsotn Province, Armenia.',
+      locationName: 'Amberd Fortress, Mount Aragats, Aragatsotn, Armenia',
+      locality: 'Byurakan', region: 'Aragatsotn', country: 'AM',
+      alt: {
+        en: 'Ruins of Amberd Fortress — clustered round basalt tower walls on a rocky grassy hill under a clear blue sky, on the slopes of Mount Aragats, Aragatsotn, Armenia',
+        de: 'Ruinen der Festung Amberd — gedrängte runde Basalttürme und Mauern auf einem felsigen, grasbewachsenen Hügel unter klarem blauem Himmel, an den Hängen des Aragats, Aragazotn, Armenien',
+        fr: "Ruines de la forteresse d'Amberd — tours et murailles rondes en basalte serrées sur une colline rocheuse et herbeuse sous un ciel bleu limpide, sur les pentes du mont Aragats, Aragatsotn, Arménie",
+        es: 'Ruinas de la fortaleza de Amberd — torres y muros redondos de basalto agrupados sobre una colina rocosa y cubierta de hierba bajo un cielo azul despejado, en las laderas del monte Aragats, Aragatsotn, Armenia',
+        nl: 'Ruïnes van de vesting Amberd — samengeklonterde ronde basalttorens en muren op een rotsachtige, grazige heuvel onder een strakblauwe hemel, op de hellingen van de berg Aragats, Aragatsotn, Armenië',
+        cs: 'Zřícenina pevnosti Amberd — shluk kulatých čedičových věží a hradeb na skalnatém travnatém kopci pod jasně modrou oblohou, na svazích hory Aragac, Aragacotn, Arménie',
+        pl: 'Ruiny twierdzy Amberd — skupisko okrągłych bazaltowych baszt i murów na skalistym, trawiastym wzgórzu pod bezchmurnym błękitnym niebem, na zboczach góry Aragac, Aragatsotn, Armenia',
+      },
+    },
   },
   // Cascade Monument — a CITY-parented site beneath the published Yerevan
   // city page, which is what puts it at /armenia/yerevan/cascade-monument
@@ -14418,16 +14454,53 @@ export const sites = [
   // shared autolinker would also turn Matenadaran, Lake Sevan, Garni and every
   // other matching entity into links inside the owner's locked copy.
   //
-  // Deliberately NO `image`, on the Geghard/Haghpat precedent: the only
-  // Armenian social crop on disk shows Khor Virap, which is a different place
-  // entirely. og:image falls back to the Armenia country social image, and the
-  // Places to Visit hub passes no image, so omitting it costs nothing visible.
+  // HERO SHIPPED (owner package, Yerevan Cascade): `noHero` is gone and the
+  // borrowed Khor Virap social image with it — `ogImage` names this page's own
+  // 1200x630 file, so og:image / twitter:image / the hero ImageObject all
+  // describe the Cascade instead of a monastery in another marz.
   {
     slug: 'cascade-monument', name: 'Cascade Monument',
     parentType: 'city', parent: 'yerevan', published: true,
     seoKey: 'cascadeMonument', contentKey: 'cascadeMonument',
-    noHero: true,
+    // Hero: the Cascade seen head-on from Tamanyan Park, the whole stairway up
+    // to the obelisk. PORTRAIT source (1024x1536, exact 2:3) in a wide hero, so
+    // the vertical crop is a desktop concern and phones see nearly the whole
+    // frame. Ladder is 768/1024 ONLY — 1024 is native, nothing is upscaled.
+    // `image` is the top WebP rung (HeroSection's fallback + the hero
+    // ImageObject's contentUrl); `heroClass` moves the background into CSS so
+    // both rungs apply.
+    image: '/images/files/yerevan-cascade-armenia-1024.webp',
+    imageAvif: '/images/files/yerevan-cascade-armenia-1024.avif',
+    heroClass: 'hero--cascade-monument',
+    // LCP hero preload: the top AVIF rung, fetchpriority=high.
+    heroPreload: '/images/files/yerevan-cascade-armenia-1024.avif',
+    // Dedicated 1.91:1 social image. The package ships two 1200x630 variants —
+    // a cover crop and a contain-padded one that keeps the whole portrait frame
+    // on a blurred backdrop — and the brief picks the PADDED `-og.jpg`. The
+    // `-og-crop.*` pair and `-og.webp` sit on disk unreferenced; useSEO and
+    // prerender emit exactly one og:image.
+    ogImage: { src: '/images/files/yerevan-cascade-armenia-og.jpg', width: 1200, height: 630 },
     noAutolink: true,
+    // Hero image SEO/AEO metadata. The hero is a CSS background (this site has
+    // no <img> heroes at all), so the localized alt lives here and feeds
+    // og:image:alt / twitter:image:alt per locale and the hero ImageObject
+    // caption. width/height describe the 1024 rung `image` names.
+    imageMeta: {
+      width: 1024, height: 1536, imageId: 'hero-image',
+      name: 'The Yerevan Cascade stairway and its terraced gardens below the Soviet-era obelisk, Yerevan, Armenia',
+      description: 'The monumental limestone stairway of the Yerevan Cascade rising in planted terraces, with fountains and modern bronze sculptures at its foot and the Soviet-era obelisk of the Mother Armenia hillside above it, under a blue sky with scattered cloud, in Yerevan, Armenia.',
+      locationName: 'The Cascade, Yerevan, Armenia',
+      locality: 'Yerevan', region: 'Yerevan', country: 'AM',
+      alt: {
+        en: 'The Yerevan Cascade — a monumental limestone stairway with terraced gardens, fountains and modern bronze sculptures, rising toward a Soviet-era obelisk under a blue sky, Yerevan, Armenia',
+        de: 'Die Kaskade von Eriwan — eine monumentale Kalksteintreppe mit terrassierten Gärten, Brunnen und modernen Bronzeskulpturen, ansteigend zu einem sowjetischen Obelisken unter blauem Himmel, Eriwan, Armenien',
+        fr: "La Cascade d'Erevan — un escalier monumental en calcaire avec jardins en terrasses, fontaines et sculptures de bronze modernes, s'élevant vers un obélisque de l'époque soviétique sous un ciel bleu, Erevan, Arménie",
+        es: 'La Cascada de Ereván — una monumental escalinata de piedra caliza con jardines aterrazados, fuentes y esculturas de bronce modernas, ascendiendo hacia un obelisco de la época soviética bajo un cielo azul, Ereván, Armenia',
+        nl: 'De Cascade van Jerevan — een monumentale kalkstenen trap met terrastuinen, fonteinen en moderne bronzen sculpturen, oplopend naar een Sovjet-obelisk onder een blauwe hemel, Jerevan, Armenië',
+        cs: 'Jerevanská Kaskáda — monumentální vápencové schodiště s terasovými zahradami, fontánami a moderními bronzovými sochami, stoupající k sovětskému obelisku pod modrou oblohou, Jerevan, Arménie',
+        pl: 'Kaskada w Erywaniu — monumentalne wapienne schody z tarasowymi ogrodami, fontannami i nowoczesnymi rzeźbami z brązu, wznoszące się ku sowieckiemu obeliskowi pod błękitnym niebem, Erywań, Armenia',
+      },
+    },
   },
   // Opera and Ballet Theatre — the second CITY-parented child of Yerevan,
   // at /armenia/yerevan/opera-and-ballet-theatre, same shape as Cascade
@@ -14458,13 +14531,49 @@ export const sites = [
   // `noAutolink`: four hand-authored links only (Yerevan, Things to Do in
   // Yerevan, Opera and Ballet Theatre, Cascade Monument).
   //
-  // No `image`, on the same precedent as the other Armenian sites.
+  // HERO SHIPPED (owner package, Republic Square): `noHero` is gone and the
+  // fallback to the Armenia country social image with it — `ogImage` names this
+  // page's own 1200x630 file rather than the Khor Virap crop.
   {
     slug: 'republic-square', name: 'Republic Square',
     parentType: 'city', parent: 'yerevan', published: true,
     seoKey: 'republicSquare', contentKey: 'republicSquare',
-    noHero: true,
+    // Hero: the square across the fountain pool. Landscape 16:9 (1672x941
+    // native), ladder 768/1200/1600/1672 — the same four rungs as
+    // `.hero--racha`, nothing upscaled. `image` is the top WebP rung;
+    // `heroClass` moves the background into CSS so all four apply.
+    image: '/images/files/republic-square-yerevan-armenia-1672.webp',
+    imageAvif: '/images/files/republic-square-yerevan-armenia-1672.avif',
+    heroClass: 'hero--republic-square',
+    // LCP hero preload: the 1200 AVIF rung, fetchpriority=high.
+    heroPreload: '/images/files/republic-square-yerevan-armenia-1200.avif',
+    // Dedicated 1.91:1 social image; the matching `-og.webp` ships alongside
+    // unreferenced (one og:image URL only).
+    ogImage: { src: '/images/files/republic-square-yerevan-armenia-og.jpg', width: 1200, height: 630 },
     noAutolink: true,
+    // Hero image SEO/AEO metadata — the hero is a CSS background, so this is
+    // where the localized alt lives; it feeds og:image:alt / twitter:image:alt
+    // per locale and the hero ImageObject caption. width/height describe the
+    // 1672 rung. ⚠️ The alt names Government House's clock tower, which stands
+    // at the far RIGHT of the frame: it is in the 1.91:1 social crop the alt
+    // accompanies and on desktop, but a phone-width crop of a 16:9 source
+    // cannot hold both it and the museum arcade opposite.
+    imageMeta: {
+      width: 1672, height: 941, imageId: 'hero-image',
+      name: 'Republic Square in Yerevan, with the Singing Fountains and the museum arcade, Armenia',
+      description: 'Republic Square in Yerevan: the pink-and-yellow tuff neoclassical arcade of the museum building on one side of the Singing Fountains pool, the clock tower of Government House flying the Armenian flag on the other, and flowerbeds along the near edge of the square, under a clear blue sky, in Yerevan, Armenia.',
+      locationName: 'Republic Square, Yerevan, Armenia',
+      locality: 'Yerevan', region: 'Yerevan', country: 'AM',
+      alt: {
+        en: "Republic Square in Yerevan — pink-and-yellow tuff neoclassical buildings around the Singing Fountains pool, with Government House's clock tower flying the Armenian flag and flowerbeds in the foreground under a clear blue sky, Armenia",
+        de: 'Der Platz der Republik in Eriwan — neoklassizistische Gebäude aus rosa-gelbem Tuffstein rund um das Becken der Singenden Fontänen, mit dem Uhrturm des Regierungsgebäudes und der armenischen Flagge sowie Blumenbeeten im Vordergrund unter klarem blauem Himmel, Armenien',
+        fr: "La place de la République à Erevan — des bâtiments néoclassiques en tuf rose et jaune autour du bassin des Fontaines chantantes, avec la tour de l'horloge de la Maison du gouvernement arborant le drapeau arménien et des parterres de fleurs au premier plan sous un ciel bleu limpide, Arménie",
+        es: 'La plaza de la República en Ereván — edificios neoclásicos de toba rosa y amarilla en torno al estanque de las Fuentes Cantarinas, con la torre del reloj de la Casa de Gobierno ondeando la bandera armenia y parterres de flores en primer plano bajo un cielo azul despejado, Armenia',
+        nl: 'Het Republiekplein in Jerevan — neoclassicistische gebouwen van roze-gele tufsteen rond het bassin van de Zingende Fonteinen, met de klokkentoren van het Regeringsgebouw en de Armeense vlag en bloemperken op de voorgrond onder een strakblauwe hemel, Armenië',
+        cs: 'Náměstí Republiky v Jerevanu — novoklasicistní budovy z růžovo-žlutého tufu kolem bazénu Zpívajících fontán, s hodinovou věží vládní budovy a arménskou vlajkou a květinovými záhony v popředí pod jasně modrou oblohou, Arménie',
+        pl: 'Plac Republiki w Erywaniu — neoklasycystyczne budynki z różowo-żółtego tufu wokół basenu Śpiewających Fontann, z wieżą zegarową Domu Rządowego z flagą Armenii i rabatami kwiatowymi na pierwszym planie pod bezchmurnym błękitnym niebem, Armenia',
+      },
+    },
   },
   // Armenian Genocide Museum — the fourth CITY-parented child of Yerevan, at
   // /armenia/yerevan/armenian-genocide-museum. It covers the Museum-Institute
@@ -14596,19 +14705,49 @@ export const sites = [
   // without it the shared autolinker would turn Garni, Etchmiadzin and the
   // Symphony of Stones into links.
   //
-  // Deliberately NO `image`. Amberd and Areni-1 borrow the Khor Virap social
-  // crop so their og:image is at least Armenian, but Geghard is a MONASTERY
-  // and Khor Virap is a monastery: a social card showing one labelled as the
-  // other is exactly the misleading substitution the brief rules out. A site's
-  // `image` is not a hub-card cover (the Places to Visit hub passes no image),
-  // so omitting it costs nothing visible and og:image falls back to the
-  // site-wide default until a real Geghard photograph exists.
+  // HERO SHIPPED (owner package, Geghard Monastery): the real photograph the
+  // note below was waiting for. `noHero` is gone, and so is the fallback to the
+  // Armenia country social image — `ogImage` names this page's own 1200x630
+  // file, so nothing here shows Khor Virap labelled as Geghard.
   {
     slug: 'geghard-monastery', name: 'Geghard Monastery',
     parentType: 'city', parent: 'garni', published: true,
     seoKey: 'geghardMonastery', contentKey: 'geghardMonastery',
-    noHero: true,
+    // Hero: the domed church in its paved courtyard under the Azat gorge cliffs.
+    // Landscape 1672x941 (16:9) native, ladder 768/1200/1600/1672 — the same
+    // four rungs as `.hero--racha`, nothing upscaled. `image` is the top WebP
+    // rung; `heroClass` moves the background into CSS so all four apply.
+    image: '/images/files/geghard-monastery-armenia-1672.webp',
+    imageAvif: '/images/files/geghard-monastery-armenia-1672.avif',
+    heroClass: 'hero--geghard-monastery',
+    // LCP hero preload: the 1200 AVIF rung, fetchpriority=high.
+    heroPreload: '/images/files/geghard-monastery-armenia-1200.avif',
+    // Dedicated 1.91:1 social image. The matching `-og.webp` ships alongside and
+    // stays unreferenced — useSEO/prerender emit a single og:image URL.
+    ogImage: { src: '/images/files/geghard-monastery-armenia-og.jpg', width: 1200, height: 630 },
     noAutolink: true,
+    // Hero image SEO/AEO metadata. The hero is a CSS background (no <img alt>
+    // anywhere on this site), so the localized alt lives here and feeds
+    // og:image:alt / twitter:image:alt per locale plus the hero ImageObject
+    // caption. width/height describe the 1672 rung `image` names.
+    // contentLocation carries the marz but no locality: the monastery stands
+    // above Goght, not in Garni, and this record ships no coordinate.
+    imageMeta: {
+      width: 1672, height: 941, imageId: 'hero-image',
+      name: 'The domed church of the UNESCO-listed Geghard Monastery below the cliffs of the upper Azat valley, Armenia',
+      description: 'The medieval domed stone church of Geghard Monastery standing in its paved courtyard beneath the steep rocky cliffs of the upper Azat valley, a UNESCO World Heritage site in Kotayk Province, Armenia.',
+      locationName: 'Geghard Monastery, upper Azat valley, Kotayk, Armenia',
+      region: 'Kotayk', country: 'AM',
+      alt: {
+        en: 'The UNESCO-listed Geghard Monastery — its medieval domed stone church in a paved courtyard below steep rocky cliffs, Upper Azat Valley, Armenia',
+        de: 'Das UNESCO-gelistete Kloster Geghard — seine mittelalterliche kuppelbekrönte Steinkirche in einem gepflasterten Hof unter steilen Felswänden, oberes Azat-Tal, Armenien',
+        fr: "Le monastère de Geghard, inscrit à l'UNESCO — son église médiévale en pierre à coupole dans une cour pavée au pied de falaises abruptes, haute vallée de l'Azat, Arménie",
+        es: 'El monasterio de Geghard, declarado por la UNESCO — su iglesia medieval de piedra con cúpula en un patio empedrado al pie de escarpados acantilados, alto valle del Azat, Armenia',
+        nl: 'Het door UNESCO erkende klooster Geghard — de middeleeuwse stenen koepelkerk op een geplaveide binnenplaats onder steile rotswanden, boven-Azatdal, Armenië',
+        cs: 'Klášter Geghard zapsaný na seznamu UNESCO — jeho středověký kamenný kostel s kupolí na dlážděném nádvoří pod strmými skalními stěnami, horní údolí Azat, Arménie',
+        pl: 'Wpisany na listę UNESCO klasztor Geghard — jego średniowieczny kamienny kościół z kopułą na brukowanym dziedzińcu u stóp stromych skalnych ścian, górna dolina Azat, Armenia',
+      },
+    },
   },
   // Haghpat Monastery — published in place as a REGION-parented site, which
   // is what puts it at /armenia/lori/haghpat-monastery through the shared
@@ -14621,27 +14760,65 @@ export const sites = [
   // without it the shared autolinker would turn Sanahin, Odzun, Akhtala,
   // Alaverdi, Vanadzor and Dilijan into links inside the article.
   //
-  // Deliberately NO `image`, on the Geghard precedent: the only Armenian
-  // social crop on hand is Khor Virap, and Haghpat is a monastery too — a
-  // card showing one monastery labelled as another is exactly the misleading
-  // substitution the brief rules out. og:image now falls back to the Armenia
-  // country social image, and the Places to Visit hub passes no image, so
-  // omitting it costs nothing visible.
+  // HERO SHIPPED (owner package, Haghpat Monastery): the photograph the note
+  // below was waiting for. `noHero` is gone and the fallback to the Armenia
+  // country social image with it — `ogImage` names this page's own 1200x630
+  // file, so no card shows Khor Virap labelled as Haghpat.
   {
     slug: 'haghpat-monastery', name: 'Haghpat Monastery',
     parentType: 'region', parent: 'lori', published: true,
     seoKey: 'haghpatMonastery', contentKey: 'haghpatMonastery',
-    noHero: true,
+    // Hero: the church of Saint Nshan with its tiled conical dome on the
+    // hillside. Landscape 1672x941 (16:9) native, ladder 768/1200/1600/1672 —
+    // the same four rungs as `.hero--racha` and the Geghard hero above,
+    // nothing upscaled. `image` is the top WebP rung; `heroClass` moves the
+    // background into CSS so all four rungs apply.
+    image: '/images/files/haghpat-monastery-armenia-1672.webp',
+    imageAvif: '/images/files/haghpat-monastery-armenia-1672.avif',
+    heroClass: 'hero--haghpat-monastery',
+    // LCP hero preload: the 1200 AVIF rung, fetchpriority=high.
+    heroPreload: '/images/files/haghpat-monastery-armenia-1200.avif',
+    // Dedicated 1.91:1 social image; the matching `-og.webp` ships alongside
+    // unreferenced (one og:image URL only).
+    ogImage: { src: '/images/files/haghpat-monastery-armenia-og.jpg', width: 1200, height: 630 },
     noAutolink: true,
+    // Hero image SEO/AEO metadata — the hero is a CSS background, so this is
+    // where the localized alt lives; it feeds og:image:alt / twitter:image:alt
+    // per locale and the hero ImageObject caption. width/height describe the
+    // 1672 rung. contentLocation is name/address only: no coordinate ships
+    // with this record.
+    imageMeta: {
+      width: 1672, height: 941, imageId: 'hero-image',
+      name: 'The basalt church of Saint Nshan at the UNESCO-listed Haghpat Monastery, Lori, Armenia',
+      description: 'The medieval basalt church of Saint Nshan at Haghpat Monastery, its tiled conical dome rising above the gavit and side chapels, standing on a grassy hillside under a clear blue sky — a UNESCO World Heritage site in Lori Province, Armenia.',
+      locationName: 'Haghpat Monastery, Haghpat, Lori, Armenia',
+      locality: 'Haghpat', region: 'Lori', country: 'AM',
+      alt: {
+        en: 'The UNESCO-listed Haghpat Monastery — the medieval basalt church of Saint Nshan with its tiled conical dome on a grassy hillside under a clear blue sky, Lori, Armenia',
+        de: 'Das UNESCO-gelistete Kloster Haghpat — die mittelalterliche Basaltkirche Surb Nschan mit ihrer ziegelgedeckten Kegelkuppel auf einem grasbewachsenen Hang unter klarem blauem Himmel, Lori, Armenien',
+        fr: "Le monastère de Haghpat, inscrit à l'UNESCO — l'église médiévale en basalte de Saint-Nshan et sa coupole conique en tuiles sur un versant herbeux sous un ciel bleu limpide, Lori, Arménie",
+        es: 'El monasterio de Haghpat, declarado por la UNESCO — la iglesia medieval de basalto de San Nshan con su cúpula cónica de tejas en una ladera cubierta de hierba bajo un cielo azul despejado, Lori, Armenia',
+        nl: 'Het door UNESCO erkende klooster Haghpat — de middeleeuwse basaltkerk Sint-Nshan met haar met dakpannen bedekte kegelkoepel op een grazige helling onder een strakblauwe hemel, Lori, Armenië',
+        cs: 'Klášter Haghpat zapsaný na seznamu UNESCO — středověký čedičový kostel svatého Nšana s taškovou kuželovou kupolí na travnatém svahu pod jasně modrou oblohou, Lori, Arménie',
+        pl: 'Wpisany na listę UNESCO klasztor Haghpat — średniowieczny bazaltowy kościół św. Nszana z krytą dachówką stożkową kopułą na trawiastym zboczu pod bezchmurnym błękitnym niebem, Lori, Armenia',
+      },
+    },
   },
   // Khor Virap — published in place as a REGION-parented site under Ararat,
   // exactly the shape the stub already had.
   //
-  // The ONLY page in the Armenia tree that carries a photograph OF ITS OWN
-  // SUBJECT. public/images/files holds one Armenian photograph and it is this
-  // monastery: Khor Virap in the plain with both Ararat cones behind it. Every
-  // other Armenia page ships `noHero` with no image rather than borrow it,
-  // because for them it would depict somewhere else. Here it is simply true.
+  // For a long time the ONLY page in the Armenia tree carrying a photograph of
+  // its own subject — Khor Virap in the plain with both Ararat cones behind it.
+  // Owner packages have since given Amberd, the Cascade, Geghard and Haghpat
+  // their own heroes, so the borrowing this note used to describe is over.
+  //
+  // HERO SHIPPED: the page held the 1.91:1 social crop in `image` and rendered
+  // `.dest-title-band` instead of a hero. It now renders the full portrait
+  // photograph through the 768/1086 `.hero--khor-virap-monastery` ladder.
+  // `ogImage` + `jsonLdImage` PIN og:image / twitter:image and the
+  // TouristAttraction node to the same `-og.jpg` they already named, so the
+  // social card and the graph are byte-identical to before this change; only
+  // the visible hero and the new hero ImageObject are added.
   // A files-thumb twin exists, so nothing 404s.
   //
   // `noAutolink` keeps the body free of editorial links, as everywhere in this
@@ -14650,9 +14827,46 @@ export const sites = [
     slug: 'khor-virap-monastery', name: 'Khor Virap Monastery',
     parentType: 'region', parent: 'ararat', published: true,
     seoKey: 'khorVirapMonastery', contentKey: 'khorVirapMonastery',
-    image: '/images/files/khor-virap-monastery-ararat-armenia-og.jpg',
-    noHero: true,
+    // Hero: the existing aerial, no new or re-encoded asset. PORTRAIT source
+    // (1086x1448, exact 3:4) in a wide hero — phones and portrait tablets see
+    // essentially the whole frame, wide desktops crop it vertically.
+    // ⚠️ At `center` (what the brief asks for) a 16:9 desktop window shows the
+    // monastery and the green plain but NOT the Ararat cones, which sit in the
+    // top fifth; no single value holds both, since the monastery alone spans
+    // 47-78% of the frame. Reported to the owner rather than silently biased.
+    image: '/images/files/khor-virap-monastery-ararat-armenia-1086.webp',
+    imageAvif: '/images/files/khor-virap-monastery-ararat-armenia-1086.avif',
+    heroClass: 'hero--khor-virap-monastery',
+    // LCP hero preload: the top AVIF rung, fetchpriority=high.
+    heroPreload: '/images/files/khor-virap-monastery-ararat-armenia-1086.avif',
+    // og:image / twitter:image were ALREADY correct (this page owns the crop
+    // that every other Armenia page used to borrow). `image` now names the hero
+    // rung, so the social crop is pinned explicitly here rather than inherited
+    // — the emitted URL is unchanged, and `jsonLdImage` keeps the
+    // TouristAttraction node on that same file, exactly as before.
+    ogImage: { src: '/images/files/khor-virap-monastery-ararat-armenia-og.jpg', width: 1200, height: 630 },
+    jsonLdImage: '/images/files/khor-virap-monastery-ararat-armenia-og.jpg',
     noAutolink: true,
+    // Hero image SEO/AEO metadata. The hero is a CSS background (no <img alt>),
+    // so the localized alt lives here; it feeds og:image:alt /
+    // twitter:image:alt per locale — which this page previously had NONE of —
+    // and the hero ImageObject caption. width/height describe the 1086 rung.
+    imageMeta: {
+      width: 1086, height: 1448, imageId: 'hero-image',
+      name: 'Khor Virap Monastery above the Ararat plain, with Mount Ararat behind, Armenia',
+      description: 'An aerial view of the walled Khor Virap Monastery on its hill above the green, field-patterned Ararat plain, with the twin snow-capped peaks of Mount Ararat rising on the horizon behind it, in Ararat Province, Armenia.',
+      locationName: 'Khor Virap Monastery, Ararat plain, Ararat Province, Armenia',
+      region: 'Ararat', country: 'AM',
+      alt: {
+        en: 'Aerial view of Khor Virap Monastery on a hill above the green Ararat plain, with the twin snow-capped peaks of Mount Ararat behind, Armenia',
+        de: 'Luftaufnahme des Klosters Chor Virap auf einem Hügel über der grünen Araratebene, dahinter die beiden schneebedeckten Gipfel des Ararat, Armenien',
+        fr: "Vue aérienne du monastère de Khor Virap sur une colline dominant la plaine verdoyante de l'Ararat, avec les deux sommets enneigés du mont Ararat en arrière-plan, Arménie",
+        es: 'Vista aérea del monasterio de Khor Virap sobre una colina dominando la verde llanura del Ararat, con las dos cumbres nevadas del monte Ararat al fondo, Armenia',
+        nl: 'Luchtfoto van het klooster Chor Virap op een heuvel boven de groene Araratvlakte, met daarachter de twee besneeuwde toppen van de berg Ararat, Armenië',
+        cs: 'Letecký pohled na klášter Chor Virap na kopci nad zelenou Araratskou nížinou, v pozadí dva zasněžené vrcholy hory Ararat, Arménie',
+        pl: 'Widok z lotu ptaka na klasztor Chor Wirap na wzgórzu nad zieloną Równiną Araratską, w tle dwa ośnieżone szczyty góry Ararat, Armenia',
+      },
+    },
   },
   // Mount Ararat — the one entry in this registry whose subject is NOT in the
   // country it is routed under. The mountain stands in TURKEY; it is parented
@@ -14672,19 +14886,55 @@ export const sites = [
   // claim. It is an opt-in override on the existing model, mirroring
   // `jsonLdImage`, and is inert for every other site.
   //
-  // `jsonLdImage` names the Khor Virap crop deliberately and truthfully: the
-  // photograph shows BOTH Ararat cones — Lesser on the left, snow-capped
-  // Greater on the right — over the plain with the monastery in front, which
-  // is exactly the composition this article calls the classic Ararat view. It
-  // is also the Armenia country social image, so og:image and the graph agree.
+  // HERO SHIPPED (owner package, Mount Ararat): the page now has a photograph
+  // of the mountain ITSELF — Greater Ararat over the plain — so the borrowed
+  // Khor Virap crop is gone from both `ogImage` and `jsonLdImage`. The crop was
+  // a defensible stand-in (it shows both cones behind the monastery) but it is
+  // a picture of a monastery; this one is not. og:image and the graph still
+  // name the same single file as each other.
   {
     slug: 'mount-ararat', name: 'Mount Ararat',
     parentType: 'region', parent: 'ararat', published: true,
     seoKey: 'mountArarat', contentKey: 'mountArarat',
     jsonLdCountry: 'Turkey',
-    jsonLdImage: '/images/files/khor-virap-monastery-ararat-armenia-og.jpg',
-    noHero: true,
+    // Hero: Greater Ararat over the plain. Landscape 4:3 (1448x1086 native),
+    // ladder 768/1200/1448 — nothing upscaled. `image` is the top WebP rung;
+    // `heroClass` moves the background into CSS so all three rungs apply.
+    image: '/images/files/mount-ararat-armenia-1448.webp',
+    imageAvif: '/images/files/mount-ararat-armenia-1448.avif',
+    heroClass: 'hero--mount-ararat',
+    // LCP hero preload: the 1200 AVIF rung, fetchpriority=high.
+    heroPreload: '/images/files/mount-ararat-armenia-1200.avif',
+    // This page's own 1.91:1 social crop, replacing the Khor Virap one. The
+    // matching `-og.webp` ships alongside unreferenced (one og:image URL only).
+    ogImage: { src: '/images/files/mount-ararat-armenia-og.jpg', width: 1200, height: 630 },
+    // Keep the TouristAttraction node on the same social crop as og:image, as
+    // this record already did — only the file changes.
+    jsonLdImage: '/images/files/mount-ararat-armenia-og.jpg',
     noAutolink: true,
+    // Hero image SEO/AEO metadata. The hero is a CSS background (no <img alt>),
+    // so the localized alt lives here and feeds og:image:alt /
+    // twitter:image:alt per locale plus the hero ImageObject caption.
+    // width/height describe the 1448 rung.
+    // ⚠️ contentLocation says TURKEY, matching `jsonLdCountry` above and the
+    // article itself: the photograph was taken from Armenia, but the mountain
+    // it depicts stands across the border. Every locale's alt says so too.
+    imageMeta: {
+      width: 1448, height: 1086, imageId: 'hero-image',
+      name: 'The snow-capped summit of Mount Ararat above the Ararat plain, seen from Armenia',
+      description: 'The snow-capped summit of Greater Ararat rising above brown volcanic slopes and the green, tree-lined Ararat plain under a clear blue sky, photographed from Armenia; the mountain itself stands across the border in eastern Turkey.',
+      locationName: 'Mount Ararat, seen across the Ararat plain from Armenia',
+      country: 'TR',
+      alt: {
+        en: 'Snow-capped summit of Mount Ararat (Greater Ararat) rising above brown volcanic slopes and the green Ararat plain under a clear blue sky, seen from Armenia — the mountain lies across the border in Turkey',
+        de: 'Schneebedeckter Gipfel des Ararat (Großer Ararat) über braunen Vulkanhängen und der grünen Araratebene unter klarem blauem Himmel, von Armenien aus gesehen — der Berg liegt jenseits der Grenze in der Türkei',
+        fr: "Sommet enneigé du mont Ararat (Grand Ararat) dominant des pentes volcaniques brunes et la plaine verdoyante de l'Ararat sous un ciel bleu limpide, vu depuis l'Arménie — la montagne se trouve de l'autre côté de la frontière, en Turquie",
+        es: 'Cumbre nevada del monte Ararat (Ararat Mayor) alzándose sobre laderas volcánicas pardas y la verde llanura del Ararat bajo un cielo azul despejado, vista desde Armenia — la montaña se encuentra al otro lado de la frontera, en Turquía',
+        nl: 'Besneeuwde top van de berg Ararat (Grote Ararat) boven bruine vulkanische hellingen en de groene Araratvlakte onder een strakblauwe hemel, gezien vanuit Armenië — de berg ligt over de grens in Turkije',
+        cs: 'Zasněžený vrchol hory Ararat (Velký Ararat) tyčící se nad hnědými sopečnými svahy a zelenou Araratskou nížinou pod jasně modrou oblohou, pohled z Arménie — hora leží za hranicí v Turecku',
+        pl: 'Ośnieżony szczyt góry Ararat (Wielki Ararat) wznoszący się nad brązowymi wulkanicznymi zboczami i zieloną Równiną Araratską pod bezchmurnym błękitnym niebem, widziany z Armenii — góra leży po drugiej stronie granicy, w Turcji',
+      },
+    },
   },
   // Noraduz Cemetery is NOT here: it is the SAME place as the published
   // noratus-cemetery record above, under the alternate spelling. The Noratus
@@ -14732,13 +14982,47 @@ export const sites = [
   // Areni, Areni-1 Cave, Khor Virap, Jermuk, Yeghegnadzor, Sisian, Goris and
   // Tatev all stay plain text.
   //
-  // No `image`: the only Armenian photograph on disk shows Khor Virap.
+  // HERO SHIPPED (owner package, Noravank Monastery): the monastery in the
+  // Amaghu gorge. `noHero` and the fallback to the Armenia country social image
+  // (the Khor Virap crop) are both gone — `ogImage` names this page's own
+  // 1200x630 file.
   {
     slug: 'noravank-monastery', name: 'Noravank Monastery',
     parentType: 'region', parent: 'vayots-dzor', published: true,
     seoKey: 'noravankMonastery', contentKey: 'noravankMonastery',
-    noHero: true,
+    // Hero: the walled precinct under the Amaghu cliffs. Landscape 16:9
+    // (1672x941 native), ladder 768/1200/1600/1672 — the same four rungs as
+    // `.hero--racha`, nothing upscaled. `image` is the top WebP rung;
+    // `heroClass` moves the background into CSS so all four apply.
+    image: '/images/files/noravank-monastery-armenia-1672.webp',
+    imageAvif: '/images/files/noravank-monastery-armenia-1672.avif',
+    heroClass: 'hero--noravank-monastery',
+    // LCP hero preload: the 1200 AVIF rung, fetchpriority=high.
+    heroPreload: '/images/files/noravank-monastery-armenia-1200.avif',
+    // Dedicated 1.91:1 social image; the matching `-og.webp` ships alongside
+    // unreferenced (one og:image URL only).
+    ogImage: { src: '/images/files/noravank-monastery-armenia-og.jpg', width: 1200, height: 630 },
     noAutolink: true,
+    // Hero image SEO/AEO metadata — the hero is a CSS background, so this is
+    // where the localized alt lives; it feeds og:image:alt / twitter:image:alt
+    // per locale and the hero ImageObject caption. width/height describe the
+    // 1672 rung.
+    imageMeta: {
+      width: 1672, height: 941, imageId: 'hero-image',
+      name: 'The churches of Noravank Monastery below the Amaghu gorge cliffs, Vayots Dzor, Armenia',
+      description: 'The medieval golden-stone churches of Noravank Monastery, among them the two-storey Burtelashen with its columned drum and conical dome, standing inside their walled precinct on a green slope beneath the red-and-grey limestone cliffs of the Amaghu gorge, in Vayots Dzor Province, Armenia.',
+      locationName: 'Noravank Monastery, Amaghu gorge, Vayots Dzor, Armenia',
+      region: 'Vayots Dzor', country: 'AM',
+      alt: {
+        en: 'Noravank Monastery — its medieval golden-stone churches with conical domes, including the two-storey Burtelashen, on a green slope below red-and-grey limestone cliffs, Amaghu Gorge, Vayots Dzor, Armenia',
+        de: 'Kloster Noravank — seine mittelalterlichen Kirchen aus goldfarbenem Stein mit Kegelkuppeln, darunter die zweistöckige Burtelaschen, an einem grünen Hang unter rot-grauen Kalksteinfelsen, Amaghu-Schlucht, Wajoz Dsor, Armenien',
+        fr: "Le monastère de Noravank — ses églises médiévales en pierre dorée à coupoles coniques, dont la Bourtelachen à deux étages, sur un versant verdoyant au pied de falaises calcaires rouges et grises, gorge d'Amaghou, Vayots Dzor, Arménie",
+        es: 'El monasterio de Noravank — sus iglesias medievales de piedra dorada con cúpulas cónicas, incluida la Burtelashen de dos plantas, en una ladera verde al pie de acantilados calizos rojos y grises, garganta de Amaghu, Vayots Dzor, Armenia',
+        nl: 'Klooster Noravank — de middeleeuwse goudkleurige stenen kerken met kegelkoepels, waaronder de tweelaagse Burtelashen, op een groene helling onder rood-grijze kalkstenen kliffen, Amaghu-kloof, Vajots Dzor, Armenië',
+        cs: 'Klášter Noravank — jeho středověké kostely ze zlatavého kamene s kuželovými kupolemi, včetně dvoupatrové Burtelašen, na zeleném svahu pod červeno-šedými vápencovými útesy, soutěska Amaghu, Vajoc Dzor, Arménie',
+        pl: 'Klasztor Noravank — jego średniowieczne kościoły ze złocistego kamienia ze stożkowymi kopułami, w tym dwukondygnacyjny Burtelaszen, na zielonym zboczu u stóp czerwono-szarych wapiennych klifów, wąwóz Amaghu, Wajoc Dzor, Armenia',
+      },
+    },
   },
   // Sanahin — published in place as a REGION-parented site under Lori, the
   // same shape the stub already had and the same shape Haghpat uses. The two
@@ -14797,13 +15081,50 @@ export const sites = [
   // and no Armenian place has one, so the autolinker alone would have linked
   // Lake Sevan in English and nowhere else.
   //
-  // No `image`: the only Armenian photograph on disk shows Khor Virap.
+  // HERO SHIPPED (owner package, Sevanavank Monastery): the two churches on the
+  // peninsula. `noHero` and the fallback to the Armenia country social image
+  // (the Khor Virap crop) are both gone — `ogImage` names this page's own
+  // 1200x630 file.
   {
     slug: 'sevanavank-monastery', name: 'Sevanavank Monastery',
     parentType: 'region', parent: 'gegharkunik', published: true,
     seoKey: 'sevanavankMonastery', contentKey: 'sevanavankMonastery',
-    noHero: true,
+    // Hero: both churches on the peninsula. Landscape 16:9 (1672x941 native),
+    // ladder 768/1200/1600/1672 — the same four rungs as `.hero--racha`,
+    // nothing upscaled. `image` is the top WebP rung; `heroClass` moves the
+    // background into CSS so all four apply.
+    image: '/images/files/sevanavank-monastery-armenia-1672.webp',
+    imageAvif: '/images/files/sevanavank-monastery-armenia-1672.avif',
+    heroClass: 'hero--sevanavank-monastery',
+    // LCP hero preload: the 1200 AVIF rung, fetchpriority=high.
+    heroPreload: '/images/files/sevanavank-monastery-armenia-1200.avif',
+    // Dedicated 1.91:1 social image; the matching `-og.webp` ships alongside
+    // unreferenced (one og:image URL only).
+    ogImage: { src: '/images/files/sevanavank-monastery-armenia-og.jpg', width: 1200, height: 630 },
     noAutolink: true,
+    // Hero image SEO/AEO metadata — the hero is a CSS background, so this is
+    // where the localized alt lives; it feeds og:image:alt / twitter:image:alt
+    // per locale and the hero ImageObject caption. width/height describe the
+    // 1672 rung. ⚠️ The photograph shows the two churches and the precinct
+    // walls; Lake Sevan itself is NOT in frame, so the owner alt's "above Lake
+    // Sevan" reads as location, not as something visible. Left exactly as
+    // supplied and reported rather than reworded.
+    imageMeta: {
+      width: 1672, height: 941, imageId: 'hero-image',
+      name: 'The two ninth-century churches of Sevanavank Monastery on the Sevan peninsula, Gegharkunik, Armenia',
+      description: 'The two ninth-century churches of Sevanavank Monastery, built of dark basalt with tiled conical domes, standing behind the rubble walls of the monastery precinct on the Sevan peninsula above Lake Sevan under a blue sky, in Gegharkunik Province, Armenia.',
+      locationName: 'Sevanavank Monastery, Sevan peninsula, Gegharkunik, Armenia',
+      locality: 'Sevan', region: 'Gegharkunik', country: 'AM',
+      alt: {
+        en: 'Sevanavank Monastery — its two 9th-century dark basalt churches with tiled conical domes on the Sevan peninsula above Lake Sevan under a blue sky, Gegharkunik, Armenia',
+        de: 'Kloster Sevanavank — seine beiden Kirchen aus dunklem Basalt aus dem 9. Jahrhundert mit ziegelgedeckten Kegelkuppeln auf der Sewan-Halbinsel über dem Sewansee unter blauem Himmel, Gegharkunik, Armenien',
+        fr: "Le monastère de Sevanavank — ses deux églises du IXe siècle en basalte sombre, coiffées de coupoles coniques en tuiles, sur la presqu'île de Sevan au-dessus du lac Sevan sous un ciel bleu, Gegharkunik, Arménie",
+        es: 'El monasterio de Sevanavank — sus dos iglesias del siglo IX de basalto oscuro con cúpulas cónicas de tejas en la península de Seván sobre el lago Seván bajo un cielo azul, Gegharkunik, Armenia',
+        nl: 'Klooster Sevanavank — de twee 9e-eeuwse kerken van donker basalt met met dakpannen bedekte kegelkoepels op het schiereiland Sevan boven het Sevanmeer onder een blauwe hemel, Gegharkunik, Armenië',
+        cs: 'Klášter Sevanavank — jeho dva kostely z 9. století z tmavého čediče s taškovými kuželovými kupolemi na Sevanském poloostrově nad Sevanským jezerem pod modrou oblohou, Gegharkunik, Arménie',
+        pl: 'Klasztor Sewanawank — jego dwa kościoły z IX wieku z ciemnego bazaltu z krytymi dachówką stożkowymi kopułami na półwyspie Sewan nad jeziorem Sewan pod błękitnym niebem, Gegharkunik, Armenia',
+      },
+    },
   },
   // Noratus Cemetery — region-parented on Gegharkunik INDEPENDENTLY, not
   // nested under Lake Sevan. Nesting is not possible and would not be right
@@ -14818,15 +15139,50 @@ export const sites = [
   // without it the autolinker would turn Hayravank, Sevanavank, Gavar, Lake
   // Sevan and Vayots Dzor into links inside the article.
   //
-  // No `image`: the only Armenian photograph in public/images/files is the
-  // Khor Virap crop, which is a monastery in Ararat and shows no khachkar.
-  // og:image falls back to the Armenia country social image.
+  // HERO SHIPPED (owner package, Noratus Cemetery): the khachkar field itself.
+  // `noHero` and the fallback to the Armenia country social image (the Khor
+  // Virap crop, a monastery in Ararat with no khachkar in it) are both gone —
+  // `ogImage` names this page's own 1200x630 file.
   {
     slug: 'noratus-cemetery', name: 'Noratus Cemetery',
     parentType: 'region', parent: 'gegharkunik', published: true,
     seoKey: 'noratusCemetery', contentKey: 'noratusCemetery',
-    noHero: true,
+    // Hero: rows of khachkars in the summer grassland. Landscape 16:9
+    // (1672x941 native), ladder 768/1200/1600/1672 — the same four rungs as
+    // `.hero--racha`, nothing upscaled. `image` is the top WebP rung;
+    // `heroClass` moves the background into CSS so all four apply.
+    image: '/images/files/noratus-cemetery-khachkars-armenia-1672.webp',
+    imageAvif: '/images/files/noratus-cemetery-khachkars-armenia-1672.avif',
+    heroClass: 'hero--noratus-cemetery',
+    // LCP hero preload: the 1200 AVIF rung, fetchpriority=high.
+    heroPreload: '/images/files/noratus-cemetery-khachkars-armenia-1200.avif',
+    // Dedicated 1.91:1 social image; the matching `-og.webp` ships alongside
+    // unreferenced (one og:image URL only).
+    ogImage: { src: '/images/files/noratus-cemetery-khachkars-armenia-og.jpg', width: 1200, height: 630 },
     noAutolink: true,
+    // Hero image SEO/AEO metadata — the hero is a CSS background, so this is
+    // where the localized alt lives; it feeds og:image:alt / twitter:image:alt
+    // per locale and the hero ImageObject caption. width/height describe the
+    // 1672 rung. ⚠️ The alt names the small stone chapel, which stands at the
+    // far left of the frame: it is present in the 1.91:1 social crop the alt
+    // actually accompanies, and on desktop, but a phone-width hero crop of the
+    // 16:9 source cannot hold both it and the khachkars.
+    imageMeta: {
+      width: 1672, height: 941, imageId: 'hero-image',
+      name: 'Medieval khachkars in the Noratus cemetery, Gegharkunik, Armenia',
+      description: 'Rows of medieval Armenian khachkars — carved stone cross-slabs, many of them lichen-covered — standing in golden summer grassland at the Noratus cemetery beside a small stone chapel, under a blue sky with scattered cloud, in Gegharkunik Province, Armenia.',
+      locationName: 'Noratus Cemetery, Noratus, Gegharkunik, Armenia',
+      locality: 'Noratus', region: 'Gegharkunik', country: 'AM',
+      alt: {
+        en: 'A field of medieval Armenian khachkars — carved stone cross-slabs — standing in golden grassland beside a small stone chapel under a blue sky with clouds, Noratus, Gegharkunik, Armenia',
+        de: 'Ein Feld mittelalterlicher armenischer Chatschkare — behauene steinerne Kreuzsteine — auf goldenem Grasland neben einer kleinen Steinkapelle unter blauem Wolkenhimmel, Noratus, Gegharkunik, Armenien',
+        fr: "Un champ de khatchkars arméniens médiévaux — des stèles de pierre sculptées en forme de croix — dans une prairie dorée près d'une petite chapelle en pierre sous un ciel bleu nuageux, Noratus, Gegharkunik, Arménie",
+        es: 'Un campo de jachkares armenios medievales — lápidas de piedra talladas con cruces — en un pastizal dorado junto a una pequeña capilla de piedra bajo un cielo azul con nubes, Noratus, Gegharkunik, Armenia',
+        nl: 'Een veld met middeleeuwse Armeense chatsjkars — uitgehouwen stenen kruissteles — in goudkleurig grasland naast een kleine stenen kapel onder een blauwe bewolkte hemel, Noratus, Gegharkunik, Armenië',
+        cs: 'Pole středověkých arménských chačkarů — tesaných kamenných křížových stél — ve zlaté trávě u malé kamenné kaple pod modrou oblohou s mraky, Noratus, Gegharkunik, Arménie',
+        pl: 'Pole średniowiecznych ormiańskich chaczkarów — rzeźbionych kamiennych stel z krzyżami — na złocistej łące obok małej kamiennej kaplicy pod błękitnym, zachmurzonym niebem, Noratus, Gegharkunik, Armenia',
+      },
+    },
   },
   // Saint Mesrop Mashtots Church — region-parented under Aragatsotn, the
   // shape every Armenian attraction uses. The church is in Oshakan, and
@@ -14860,13 +15216,47 @@ export const sites = [
   // Noravank). Devil's Bridge, the Great Hermitage of Tatev, Zorats Karer,
   // Shaki Waterfall and Old Khndzoresk have NO pages and stay plain text.
   //
-  // No `image`: the only Armenian photograph on disk shows Khor Virap.
+  // HERO SHIPPED (owner package, Tatev Monastery): the complex on its plateau
+  // above the Vorotan gorge. `noHero` and the fallback to the Armenia country
+  // social image (the Khor Virap crop) are both gone — `ogImage` names this
+  // page's own 1200x630 file.
   {
     slug: 'tatev-monastery', name: 'Tatev Monastery',
     parentType: 'region', parent: 'syunik', published: true,
     seoKey: 'tatevMonastery', contentKey: 'tatevMonastery',
-    noHero: true,
+    // Hero: the monastery on its cliff with the gorge behind. Landscape 16:9
+    // (1672x941 native), ladder 768/1200/1600/1672 — the same four rungs as
+    // `.hero--racha`, nothing upscaled. `image` is the top WebP rung;
+    // `heroClass` moves the background into CSS so all four apply.
+    image: '/images/files/tatev-monastery-armenia-1672.webp',
+    imageAvif: '/images/files/tatev-monastery-armenia-1672.avif',
+    heroClass: 'hero--tatev-monastery',
+    // LCP hero preload: the 1200 AVIF rung, fetchpriority=high.
+    heroPreload: '/images/files/tatev-monastery-armenia-1200.avif',
+    // Dedicated 1.91:1 social image; the matching `-og.webp` ships alongside
+    // unreferenced (one og:image URL only).
+    ogImage: { src: '/images/files/tatev-monastery-armenia-og.jpg', width: 1200, height: 630 },
     noAutolink: true,
+    // Hero image SEO/AEO metadata — the hero is a CSS background, so this is
+    // where the localized alt lives; it feeds og:image:alt / twitter:image:alt
+    // per locale and the hero ImageObject caption. width/height describe the
+    // 1672 rung.
+    imageMeta: {
+      width: 1672, height: 941, imageId: 'hero-image',
+      name: 'Tatev Monastery on its plateau above the Vorotan Gorge, Syunik, Armenia',
+      description: 'The fortified medieval complex of Tatev Monastery — its domed dark-stone church inside high curtain walls — standing on a plateau at the edge of the deep Vorotan Gorge, with wooded mountain ridges all around under a blue sky, in Syunik Province, Armenia.',
+      locationName: 'Tatev Monastery, Vorotan Gorge, Syunik, Armenia',
+      locality: 'Tatev', region: 'Syunik', country: 'AM',
+      alt: {
+        en: 'Tatev Monastery — a fortified medieval complex with a domed dark-stone church on a plateau above the deep Vorotan Gorge, surrounded by mountains under a blue sky, Syunik, Armenia',
+        de: 'Kloster Tatew — eine befestigte mittelalterliche Anlage mit einer kuppelbekrönten Kirche aus dunklem Stein auf einem Plateau über der tiefen Worotan-Schlucht, umgeben von Bergen unter blauem Himmel, Sjunik, Armenien',
+        fr: "Le monastère de Tatev — un ensemble médiéval fortifié à l'église en pierre sombre coiffée d'une coupole, sur un plateau dominant les profondes gorges du Vorotan, entouré de montagnes sous un ciel bleu, Syunik, Arménie",
+        es: 'El monasterio de Tatev — un complejo medieval fortificado con una iglesia de piedra oscura y cúpula sobre una meseta que domina el profundo desfiladero del Vorotán, rodeado de montañas bajo un cielo azul, Syunik, Armenia',
+        nl: 'Klooster Tatev — een versterkt middeleeuws complex met een koepelkerk van donkere steen op een plateau boven de diepe Vorotan-kloof, omringd door bergen onder een blauwe hemel, Syunik, Armenië',
+        cs: 'Klášter Tatev — opevněný středověký komplex s kupolovým kostelem z tmavého kamene na plošině nad hlubokou Vorotanskou soutěskou, obklopený horami pod modrou oblohou, Sjunik, Arménie',
+        pl: 'Klasztor Tatew — ufortyfikowany średniowieczny kompleks z kopułowym kościołem z ciemnego kamienia na płaskowyżu nad głębokim wąwozem Worotan, otoczony górami pod błękitnym niebem, Sjunik, Armenia',
+      },
+    },
   },
   // Zvartnots — region-parented under Armavir. The owner copy is explicit that
   // this was never a pagan temple: 'Temple' survives only as the common
@@ -14876,13 +15266,51 @@ export const sites = [
   // (Etchmiadzin, Yerevan, Armavir). Saint Hripsime and Saint Gayane have no
   // pages and stay plain text.
   //
-  // No `image`: the only Armenian photograph on disk shows Khor Virap.
+  // HERO SHIPPED (owner package, Zvartnots): the excavated foundations and the
+  // reconstructed arcade. `noHero` and the fallback to the Armenia country
+  // social image (the Khor Virap crop) are both gone — `ogImage` names this
+  // page's own 1200x630 file.
   {
     slug: 'zvartnots-temple', name: 'Zvartnots Temple',
     parentType: 'region', parent: 'armavir', published: true,
     seoKey: 'zvartnotsTemple', contentKey: 'zvartnotsTemple',
-    noHero: true,
+    // Hero: the arcade of round arches on their carved capitals above the
+    // excavated foundation. Landscape 16:9 (1672x941 native), ladder
+    // 768/1200/1600/1672 — the same four rungs as `.hero--racha`, nothing
+    // upscaled. `image` is the top WebP rung; `heroClass` moves the background
+    // into CSS so all four apply. ⚠️ The asset family is named
+    // `zvartnots-cathedral-*` while the registry slug stays `zvartnots-temple`:
+    // the URL is not touched by this pass, and the body copy already explains
+    // that "Temple" is only the common tourism name for a cathedral.
+    image: '/images/files/zvartnots-cathedral-armenia-1672.webp',
+    imageAvif: '/images/files/zvartnots-cathedral-armenia-1672.avif',
+    heroClass: 'hero--zvartnots-temple',
+    // LCP hero preload: the 1200 AVIF rung, fetchpriority=high.
+    heroPreload: '/images/files/zvartnots-cathedral-armenia-1200.avif',
+    // Dedicated 1.91:1 social image; the matching `-og.webp` ships alongside
+    // unreferenced (one og:image URL only).
+    ogImage: { src: '/images/files/zvartnots-cathedral-armenia-og.jpg', width: 1200, height: 630 },
     noAutolink: true,
+    // Hero image SEO/AEO metadata — the hero is a CSS background, so this is
+    // where the localized alt lives; it feeds og:image:alt / twitter:image:alt
+    // per locale and the hero ImageObject caption. width/height describe the
+    // 1672 rung.
+    imageMeta: {
+      width: 1672, height: 941, imageId: 'hero-image',
+      name: 'The reconstructed arcade and excavated foundations of Zvartnots, Armavir, Armenia',
+      description: 'The ruins of Zvartnots: the excavated foundations of a monumental seventh-century Armenian cathedral, with a reconstructed arcade of round arches standing on carved column capitals, under a clear blue sky in Armavir Province, Armenia.',
+      locationName: 'Zvartnots, Armavir, Armenia',
+      region: 'Armavir', country: 'AM',
+      alt: {
+        en: 'Ruins of Zvartnots — the excavated foundation, reconstructed arcade of round arches and carved column capitals of a monumental 7th-century Armenian cathedral, under a clear blue sky, Armavir, Armenia',
+        de: 'Ruinen von Zwartnoz — das ausgegrabene Fundament, die rekonstruierte Arkade aus Rundbögen und die behauenen Säulenkapitelle einer monumentalen armenischen Kathedrale des 7. Jahrhunderts unter klarem blauem Himmel, Armawir, Armenien',
+        fr: "Ruines de Zvartnots — les fondations dégagées, l'arcade reconstituée d'arcs en plein cintre et les chapiteaux sculptés d'une monumentale cathédrale arménienne du VIIe siècle, sous un ciel bleu limpide, Armavir, Arménie",
+        es: 'Ruinas de Zvartnots — los cimientos excavados, la arcada reconstruida de arcos de medio punto y los capiteles tallados de una monumental catedral armenia del siglo VII, bajo un cielo azul despejado, Armavir, Armenia',
+        nl: 'Ruïnes van Zvartnots — de opgegraven fundering, de gereconstrueerde arcade van rondbogen en de gebeeldhouwde zuilkapitelen van een monumentale 7e-eeuwse Armeense kathedraal, onder een strakblauwe hemel, Armavir, Armenië',
+        cs: 'Zřícenina Zvartnots — odkryté základy, rekonstruovaná arkáda půlkruhových oblouků a tesané hlavice sloupů monumentální arménské katedrály ze 7. století pod jasně modrou oblohou, Armavir, Arménie',
+        pl: 'Ruiny Zwartnoc — odsłonięte fundamenty, zrekonstruowana arkada półkolistych łuków i rzeźbione głowice kolumn monumentalnej ormiańskiej katedry z VII wieku pod bezchmurnym błękitnym niebem, Armawir, Armenia',
+      },
+    },
   },
 ]
 
