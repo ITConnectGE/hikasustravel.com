@@ -1,7 +1,6 @@
 import { contactInfo } from '../../data/siteData'
 import useT from '../../i18n/useT'
 import LocaleLink from '../../i18n/LocaleLink'
-import LanguageSwitcher from './LanguageSwitcher'
 import asset from '../../utils/basePath'
 
 export default function Footer({ variant = 'default' }) {
@@ -103,7 +102,6 @@ export default function Footer({ variant = 'default' }) {
         <div className="footer-bottom__right">
           <LocaleLink to="/privacy-policy">{t('footer.privacyPolicy')}</LocaleLink>
           <LocaleLink to="/terms-and-conditions">{t('footer.termsConditions')}</LocaleLink>
-          <LanguageSwitcher />
         </div>
       </div>
     </footer>
