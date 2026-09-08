@@ -6485,7 +6485,42 @@
   },
   "armeniaCities": {
     "heroTitle": "Städte Armeniens",
-    "intro": "Von Jerewans Boulevards aus rosafarbenem Tuffstein bis zu Dilijans waldreicher Lage in den Bergen von Tavush bieten Armeniens Städte sehr unterschiedliche Möglichkeiten, das Land zu erleben. Entdecken Sie unsere wachsende Sammlung von Stadtführern, beginnend mit Jerewan und Dilijan."
+    "intro": "Von Jerewans Boulevards aus rosafarbenem Tuffstein bis zu Dilijans waldreicher Lage in den Bergen von Tavush bieten Armeniens Städte sehr unterschiedliche Möglichkeiten, das Land zu erleben. Entdecken Sie unsere wachsende Sammlung von Stadtführern, beginnend mit Jerewan und Dilijan.",
+    "items": {
+      "yerevan": {
+        "description": "Armeniens Hauptstadt verbindet Architektur aus rosa Tuffstein mit lebhaften Cafés, Museen und weiten Ausblicken — im Herzen der Platz der Republik und die Kaskade."
+      },
+      "dilijan": {
+        "description": "Grüne Bergstadt, bekannt für Waldwege, traditionelle Architektur und die Nähe zu Klöstern und den Landschaften des Nationalparks Dilijan."
+      },
+      "etchmiadzin": {
+        "description": "Das geistliche Zentrum Armeniens mit dem Mutterstuhl von Etchmiadzin und bedeutenden frühchristlichen Kirchen, nur eine kurze Fahrt von Jerewan entfernt."
+      },
+      "garni": {
+        "description": "Historisches Dorf, berühmt für den Tempel von Garni und die eindrucksvolle Azat-Schlucht, mit der Steinsymphonie und dem Kloster Geghard in der Nähe."
+      },
+      "goris": {
+        "description": "Charaktervolle Stadt im Süden, umgeben von markanten Felsformationen, traditionellen Steinhäusern und einigen der schönsten Berglandschaften Syuniks."
+      },
+      "gyumri": {
+        "description": "Armeniens zweitgrößte Stadt ist bekannt für ihre Architektur des 19. Jahrhunderts, Bauten aus schwarzem und orangefarbenem Tuff und eine eigenständige Kulturszene."
+      },
+      "jermuk": {
+        "description": "Ruhiger Kurort im Gebirge mit Mineralquellen, bewaldeten Hängen und Wasserfällen, mit leichtem Zugang zu den Hochlandlandschaften von Vayots Dzor."
+      },
+      "oshakan": {
+        "description": "Historisches Dorf rund um das Grab von Mesrop Mashtots, dem Schöpfer des armenischen Alphabets, eng verbunden mit Armeniens literarischem Erbe."
+      },
+      "sevan": {
+        "description": "Stadt am Ufer und Tor zum Sewansee, mit kurzem Weg zum Kloster Sevanavank, zu den Stränden und den Hochlandlandschaften von Gegharkunik."
+      },
+      "sisian": {
+        "description": "Entspannte Stadt im Süden, umgeben von offenem Hochland, prähistorischen Stätten und eindrucksvoller Landschaft, darunter Zorats Karer und das Vorotan-Tal."
+      },
+      "tsaghkadzor": {
+        "description": "Bergresort für Ski und Wanderungen mit frischer Alpenluft, dem Kloster Kecharis und bewaldeten Hängen direkt am Rand des Ortes."
+      }
+    }
   },
   "armeniaPlaces": {
     "heroTitle": "Sehenswürdigkeiten in Armenien",

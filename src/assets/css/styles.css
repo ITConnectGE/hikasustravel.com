@@ -10666,7 +10666,8 @@ select option:checked {
 @media (max-width: 480px) {
   .dest-hub-card__image { height: 190px; }
 }
-.dest-hub-card h2 {
+.dest-hub-card h2,
+.dest-hub-card h3 {
   margin: 0 0 10px;
   padding-bottom: 0;
   font-size: 1.2rem;
@@ -10675,7 +10676,8 @@ select option:checked {
 /* Secondary location line ("City, Region") on Places to Visit cards. Sits just
    under the title: smaller, muted, clearly readable, and visually distinct from
    the gold accent and the CTA so it never reads as a button or category tag. */
-.dest-hub-card h2:has(+ .dest-hub-card__loc) { margin-bottom: 4px; }
+.dest-hub-card h2:has(+ .dest-hub-card__loc),
+.dest-hub-card h3:has(+ .dest-hub-card__loc) { margin-bottom: 4px; }
 .dest-hub-card__loc {
   display: block;
   margin: 0 0 12px;
@@ -11618,3 +11620,126 @@ select option:checked {
   }
 }
 /* Native is 1672 — that is the top rung. Do not add a wider breakpoint. */
+
+/* Yerevan city hub. Landscape 4:3 source (1448x1086), ladder 768/1200/1448.
+   `center` was RENDERED at 390x780 and 1440x900 first: Government House, its
+   clock tower with the flag and the reflection in the fountain pool all survive
+   the narrow crop, so no bias is needed.
+   ⚠️ THREE separate Yerevan families exist — this hub is `yerevan-armenia`,
+   .hero--cascade-monument is `yerevan-cascade-armenia`, and
+   .hero--republic-square is `republic-square-yerevan-armenia`. */
+.hero--yerevan {
+  background-image: url("/images/files/yerevan-armenia-768.webp");
+  background-image: image-set(
+    url("/images/files/yerevan-armenia-768.avif") type("image/avif"),
+    url("/images/files/yerevan-armenia-768.webp") type("image/webp")
+  );
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+@media (min-width: 768px) {
+  .hero--yerevan {
+    background-image: image-set(
+      url("/images/files/yerevan-armenia-1200.avif") type("image/avif"),
+      url("/images/files/yerevan-armenia-1200.webp") type("image/webp")
+    );
+  }
+}
+@media (min-width: 1200px) {
+  .hero--yerevan {
+    background-image: image-set(
+      url("/images/files/yerevan-armenia-1448.avif") type("image/avif"),
+      url("/images/files/yerevan-armenia-1448.webp") type("image/webp")
+    );
+  }
+}
+/* Native is 1448 — that is the top rung. Do not add a wider breakpoint. */
+
+/* Etchmiadzin city hub — the Mother Cathedral. Landscape 4:3 source
+   (1448x1086), ladder 768/1200/1448. `center` was RENDERED at 390x780 and
+   1440x900 first: the cruciform church, its central conical dome and both
+   corner bell-towers stay whole in the narrow crop, so no bias is needed. */
+.hero--etchmiadzin {
+  background-image: url("/images/files/etchmiadzin-cathedral-armenia-768.webp");
+  background-image: image-set(
+    url("/images/files/etchmiadzin-cathedral-armenia-768.avif") type("image/avif"),
+    url("/images/files/etchmiadzin-cathedral-armenia-768.webp") type("image/webp")
+  );
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+@media (min-width: 768px) {
+  .hero--etchmiadzin {
+    background-image: image-set(
+      url("/images/files/etchmiadzin-cathedral-armenia-1200.avif") type("image/avif"),
+      url("/images/files/etchmiadzin-cathedral-armenia-1200.webp") type("image/webp")
+    );
+  }
+}
+@media (min-width: 1200px) {
+  .hero--etchmiadzin {
+    background-image: image-set(
+      url("/images/files/etchmiadzin-cathedral-armenia-1448.avif") type("image/avif"),
+      url("/images/files/etchmiadzin-cathedral-armenia-1448.webp") type("image/webp")
+    );
+  }
+}
+/* Native is 1448 — that is the top rung. Do not add a wider breakpoint. */
+
+/* Garni city hub — the Temple of Garni. Landscape 4:3 source (1448x1086),
+   ladder 768/1200/1448. `center` was RENDERED at 390x780 first: the colonnade,
+   the pediment and the stepped podium all stay in the narrow crop. */
+.hero--garni {
+  background-image: url("/images/files/garni-temple-armenia-768.webp");
+  background-image: image-set(
+    url("/images/files/garni-temple-armenia-768.avif") type("image/avif"),
+    url("/images/files/garni-temple-armenia-768.webp") type("image/webp")
+  );
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+@media (min-width: 768px) {
+  .hero--garni {
+    background-image: image-set(
+      url("/images/files/garni-temple-armenia-1200.avif") type("image/avif"),
+      url("/images/files/garni-temple-armenia-1200.webp") type("image/webp")
+    );
+  }
+}
+@media (min-width: 1200px) {
+  .hero--garni {
+    background-image: image-set(
+      url("/images/files/garni-temple-armenia-1448.avif") type("image/avif"),
+      url("/images/files/garni-temple-armenia-1448.webp") type("image/webp")
+    );
+  }
+}
+/* Native is 1448 — that is the top rung. Do not add a wider breakpoint. */
+
+/* Jermuk city hub — the waterfall. ⚠️ PORTRAIT source (1024x1536, exact 2:3)
+   in a wide hero, and only TWO rungs exist. `center` was RENDERED at 1440x820
+   and 390x780: the fanning falls sit in the middle of the frame, so the wide
+   desktop crop keeps the fan and the stream below it, and the phone crop keeps
+   almost the whole frame. */
+.hero--jermuk {
+  background-image: url("/images/files/jermuk-waterfall-armenia-768.webp");
+  background-image: image-set(
+    url("/images/files/jermuk-waterfall-armenia-768.avif") type("image/avif"),
+    url("/images/files/jermuk-waterfall-armenia-768.webp") type("image/webp")
+  );
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+@media (min-width: 768px) {
+  .hero--jermuk {
+    background-image: image-set(
+      url("/images/files/jermuk-waterfall-armenia-1024.avif") type("image/avif"),
+      url("/images/files/jermuk-waterfall-armenia-1024.webp") type("image/webp")
+    );
+  }
+}
+/* Native is 1024 — that is the top rung. Do not add a wider breakpoint. */

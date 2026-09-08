@@ -6485,7 +6485,42 @@
   },
   "armeniaCities": {
     "heroTitle": "Miasta Armenii",
-    "intro": "Od bulwarów z różowego tufu w Erywaniu po leśne otoczenie Dilijanu w górach Tavushu, miasta Armenii oferują bardzo różne sposoby poznawania kraju. Poznaj naszą rosnącą kolekcję przewodników po miastach, począwszy od Erywania i Dilijanu."
+    "intro": "Od bulwarów z różowego tufu w Erywaniu po leśne otoczenie Dilijanu w górach Tavushu, miasta Armenii oferują bardzo różne sposoby poznawania kraju. Poznaj naszą rosnącą kolekcję przewodników po miastach, począwszy od Erywania i Dilijanu.",
+    "items": {
+      "yerevan": {
+        "description": "Stolica Armenii łączy architekturę z różowego tufu z gwarnymi kawiarniami, muzeami i szerokimi widokami; w jej sercu leżą Plac Republiki i Kaskada."
+      },
+      "dilijan": {
+        "description": "Zielone górskie miasto znane z leśnych szlaków, tradycyjnej architektury oraz bliskości klasztorów i krajobrazów Parku Narodowego Dilijan."
+      },
+      "etchmiadzin": {
+        "description": "Duchowe centrum Armenii, siedziba Matki Stolicy w Etchmiadzinie i ważnych wczesnochrześcijańskich kościołów, blisko Erywania."
+      },
+      "garni": {
+        "description": "Historyczna wieś słynąca ze świątyni w Garni i malowniczego wąwozu Azat, z Symfonią Kamieni i klasztorem Geghard tuż obok."
+      },
+      "goris": {
+        "description": "Charakterystyczne miasto na południu, otoczone niezwykłymi formacjami skalnymi, tradycyjnymi kamiennymi domami i najpiękniejszymi górami Syuniku."
+      },
+      "gyumri": {
+        "description": "Drugie co do wielkości miasto Armenii słynie z XIX-wiecznej architektury, budynków z czarnego i pomarańczowego tufu oraz własnej sceny kulturalnej."
+      },
+      "jermuk": {
+        "description": "Spokojne górskie uzdrowisko ze źródłami mineralnymi, zalesionymi zboczami i wodospadami, blisko wyżynnych krajobrazów Vayots Dzor."
+      },
+      "oshakan": {
+        "description": "Historyczna wieś skupiona wokół grobu Mesropa Masztoca, twórcy alfabetu ormiańskiego, ściśle związana z dziedzictwem literackim kraju."
+      },
+      "sevan": {
+        "description": "Miasto nad wodą i brama do jeziora Sewan, z klasztorem Sewanawank, plażami i wysoko położonymi krajobrazami Gegharkuniku."
+      },
+      "sisian": {
+        "description": "Spokojne miasto na południu, otoczone otwartą wyżyną, stanowiskami prehistorycznymi i imponującym krajobrazem, w tym Zorats Karer i doliną Worotanu."
+      },
+      "tsaghkadzor": {
+        "description": "Górski kurort ceniony za narciarstwo, wędrówki i świeże alpejskie powietrze, z klasztorem Kecharis i zalesionymi zboczami przy centrum."
+      }
+    }
   },
   "armeniaPlaces": {
     "heroTitle": "Miejsca do zwiedzania w Armenii",

@@ -7577,7 +7577,42 @@
   },
   "armeniaCities": {
     "heroTitle": "Cities of Armenia",
-    "intro": "From Yerevan's pink-tuff boulevards to Dilijan's forested setting in the Tavush mountains, Armenia's cities offer very different ways to experience the country. Explore our growing collection of city guides, beginning with Yerevan and Dilijan."
+    "intro": "From Yerevan's pink-tuff boulevards to Dilijan's forested setting in the Tavush mountains, Armenia's cities offer very different ways to experience the country. Explore our growing collection of city guides, beginning with Yerevan and Dilijan.",
+    "items": {
+      "yerevan": {
+        "description": "Armenia's capital blends pink-tuff architecture, lively cafés, museums and wide city views, with Republic Square and the Cascade at its heart."
+      },
+      "dilijan": {
+        "description": "A green mountain town known for forest trails, traditional architecture and easy access to monasteries and the landscapes of Dilijan National Park."
+      },
+      "etchmiadzin": {
+        "description": "Armenia's spiritual centre, home to the Mother See of Holy Etchmiadzin and important early Christian churches within easy reach of Yerevan."
+      },
+      "garni": {
+        "description": "A historic village best known for Garni Temple, the dramatic Azat Gorge and easy access to the Symphony of Stones and Geghard Monastery."
+      },
+      "goris": {
+        "description": "A characterful southern town surrounded by dramatic rock formations, traditional stone houses and some of Syunik's most memorable mountain scenery."
+      },
+      "gyumri": {
+        "description": "Armenia's second-largest city is known for 19th-century architecture, black-and-orange tuff buildings, creative culture and a distinctive local character."
+      },
+      "jermuk": {
+        "description": "A peaceful mountain spa town with mineral springs, forested slopes, waterfalls and easy access to the highland landscapes of Vayots Dzor."
+      },
+      "oshakan": {
+        "description": "A historic village centred on the tomb of Mesrop Mashtots, creator of the Armenian alphabet, with strong links to Armenia's literary heritage."
+      },
+      "sevan": {
+        "description": "A lakeside town and gateway to Lake Sevan, offering easy access to Sevanavank Monastery, beaches and the high-altitude landscapes of Gegharkunik."
+      },
+      "sisian": {
+        "description": "A relaxed southern town surrounded by open highlands, prehistoric sites and dramatic scenery, including nearby Zorats Karer and the Vorotan landscapes."
+      },
+      "tsaghkadzor": {
+        "description": "A mountain resort popular for skiing, hiking and fresh alpine scenery, with Kecharis Monastery and forested slopes close to the town centre."
+      }
+    }
   },
   "armeniaPlaces": {
     "heroTitle": "Places to Visit in Armenia",

@@ -6485,7 +6485,42 @@
   },
   "armeniaCities": {
     "heroTitle": "Ciudades de Armenia",
-    "intro": "Desde las avenidas de toba rosada de Ereván hasta el entorno boscoso de Dilijan en las montañas de Tavush, las ciudades de Armenia ofrecen formas muy distintas de descubrir el país. Explora nuestra creciente colección de guías de ciudades, empezando por Ereván y Dilijan."
+    "intro": "Desde las avenidas de toba rosada de Ereván hasta el entorno boscoso de Dilijan en las montañas de Tavush, las ciudades de Armenia ofrecen formas muy distintas de descubrir el país. Explora nuestra creciente colección de guías de ciudades, empezando por Ereván y Dilijan.",
+    "items": {
+      "yerevan": {
+        "description": "La capital de Armenia combina arquitectura de toba rosa, cafés animados, museos y amplias vistas, con la plaza de la República y la Cascada en su corazón."
+      },
+      "dilijan": {
+        "description": "Ciudad verde de montaña, conocida por sus senderos forestales, su arquitectura tradicional y la cercanía de monasterios y del parque nacional de Dilijan."
+      },
+      "etchmiadzin": {
+        "description": "El centro espiritual de Armenia, sede de la Santa Sede de Etchmiadzin y de importantes iglesias paleocristianas, a poca distancia de Ereván."
+      },
+      "garni": {
+        "description": "Pueblo histórico famoso por el templo de Garni y el espectacular desfiladero del Azat, muy cerca de la Sinfonía de las Piedras y del monasterio de Geghard."
+      },
+      "goris": {
+        "description": "Ciudad del sur con carácter, rodeada de formaciones rocosas espectaculares, casas de piedra tradicionales y algunos de los mejores paisajes de Syunik."
+      },
+      "gyumri": {
+        "description": "La segunda ciudad de Armenia destaca por su arquitectura del siglo XIX, sus edificios de toba negra y naranja y una vida cultural muy propia."
+      },
+      "jermuk": {
+        "description": "Tranquila ciudad balneario de montaña con manantiales minerales, laderas boscosas y cascadas, cerca de los paisajes de altura de Vayots Dzor."
+      },
+      "oshakan": {
+        "description": "Pueblo histórico en torno a la tumba de Mesrop Mashtots, creador del alfabeto armenio, muy ligado al patrimonio literario del país."
+      },
+      "sevan": {
+        "description": "Ciudad junto al agua y puerta de entrada al lago Seván, con el monasterio de Sevanavank, playas y los paisajes de altura de Gegharkunik."
+      },
+      "sisian": {
+        "description": "Ciudad tranquila del sur, rodeada de altiplanos abiertos, yacimientos prehistóricos y paisajes imponentes, entre ellos Zorats Karer y el valle del Vorotán."
+      },
+      "tsaghkadzor": {
+        "description": "Estación de montaña popular para esquiar y caminar, con aire alpino, el monasterio de Kecharis y laderas boscosas junto al centro del pueblo."
+      }
+    }
   },
   "armeniaPlaces": {
     "heroTitle": "Qué visitar en Armenia",

@@ -6485,7 +6485,42 @@
   },
   "armeniaCities": {
     "heroTitle": "Města Arménie",
-    "intro": "Od bulvárů z růžového tufu v Jerevanu po lesnaté okolí Dilijanu v horách Tavushe nabízejí arménská města velmi rozdílné způsoby, jak zemi poznat. Prozkoumejte naši rostoucí sbírku průvodců po městech, počínaje Jerevanem a Dilijanem."
+    "intro": "Od bulvárů z růžového tufu v Jerevanu po lesnaté okolí Dilijanu v horách Tavushe nabízejí arménská města velmi rozdílné způsoby, jak zemi poznat. Prozkoumejte naši rostoucí sbírku průvodců po městech, počínaje Jerevanem a Dilijanem.",
+    "items": {
+      "yerevan": {
+        "description": "Hlavní město Arménie spojuje architekturu z růžového tufu, živé kavárny, muzea a široké výhledy; v jeho srdci leží Náměstí Republiky a Kaskáda."
+      },
+      "dilijan": {
+        "description": "Zelené horské město známé lesními stezkami, tradiční architekturou a snadnou dostupností klášterů i krajiny národního parku Dilijan."
+      },
+      "etchmiadzin": {
+        "description": "Duchovní centrum Arménie se sídlem Matky stolce v Etchmiadzinu a s významnými raně křesťanskými kostely, jen kousek od Jerevanu."
+      },
+      "garni": {
+        "description": "Historická vesnice proslulá chrámem v Garni a dramatickou soutěskou Azat, s Kamennou symfonií a klášterem Geghard nedaleko."
+      },
+      "goris": {
+        "description": "Svérázné jižní město obklopené nápadnými skalními útvary, tradičními kamennými domy a jednou z nejkrásnějších horských krajin Syuniku."
+      },
+      "gyumri": {
+        "description": "Druhé největší město Arménie je známé architekturou 19. století, stavbami z černého a oranžového tufu a svébytnou kulturní scénou."
+      },
+      "jermuk": {
+        "description": "Klidné horské lázeňské město s minerálními prameny, zalesněnými svahy a vodopády, blízko vysokohorské krajiny Vayots Dzoru."
+      },
+      "oshakan": {
+        "description": "Historická vesnice kolem hrobu Mesropa Maštoce, tvůrce arménské abecedy, úzce spjatá s literárním dědictvím země."
+      },
+      "sevan": {
+        "description": "Město na břehu a brána k Sevanskému jezeru, s klášterem Sevanavank, plážemi a vysoko položenou krajinou Gegharkuniku."
+      },
+      "sisian": {
+        "description": "Poklidné jižní město obklopené otevřenou vysočinou, pravěkými lokalitami a působivou krajinou včetně Zorats Kareru a údolí Vorotanu."
+      },
+      "tsaghkadzor": {
+        "description": "Horské středisko oblíbené pro lyžování a turistiku, se svěžím horským vzduchem, klášterem Kecharis a zalesněnými svahy u centra."
+      }
+    }
   },
   "armeniaPlaces": {
     "heroTitle": "Místa k návštěvě v Arménii",

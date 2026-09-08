@@ -6485,7 +6485,42 @@
   },
   "armeniaCities": {
     "heroTitle": "Les villes d'Arménie",
-    "intro": "Des boulevards en tuf rose d'Erevan au cadre forestier de Dilijan dans les montagnes du Tavush, les villes d'Arménie offrent des façons très différentes de découvrir le pays. Explorez notre collection grandissante de guides de villes, à commencer par Erevan et Dilijan."
+    "intro": "Des boulevards en tuf rose d'Erevan au cadre forestier de Dilijan dans les montagnes du Tavush, les villes d'Arménie offrent des façons très différentes de découvrir le pays. Explorez notre collection grandissante de guides de villes, à commencer par Erevan et Dilijan.",
+    "items": {
+      "yerevan": {
+        "description": "La capitale arménienne mêle architecture en tuf rose, cafés animés, musées et larges panoramas, avec la place de la République et la Cascade en son cœur."
+      },
+      "dilijan": {
+        "description": "Ville verte de montagne, connue pour ses sentiers forestiers, son architecture traditionnelle et la proximité des monastères et du parc national de Dilijan."
+      },
+      "etchmiadzin": {
+        "description": "Le centre spirituel de l'Arménie, siège du Saint-Siège d'Etchmiadzin et de grandes églises paléochrétiennes, à courte distance d'Erevan."
+      },
+      "garni": {
+        "description": "Village historique célèbre pour le temple de Garni et les gorges spectaculaires de l'Azat, tout près de la Symphonie des pierres et du monastère de Geghard."
+      },
+      "goris": {
+        "description": "Ville du sud pleine de caractère, entourée de formations rocheuses spectaculaires, de maisons de pierre traditionnelles et des plus beaux paysages du Syunik."
+      },
+      "gyumri": {
+        "description": "Deuxième ville d'Arménie, connue pour son architecture du XIXe siècle, ses bâtiments en tuf noir et orange et une vie culturelle bien à elle."
+      },
+      "jermuk": {
+        "description": "Paisible station thermale de montagne aux sources minérales, versants boisés et cascades, proche des paysages de hauts plateaux du Vayots Dzor."
+      },
+      "oshakan": {
+        "description": "Village historique organisé autour du tombeau de Mesrop Mashtots, créateur de l'alphabet arménien, étroitement lié au patrimoine littéraire du pays."
+      },
+      "sevan": {
+        "description": "Ville au bord de l'eau et porte d'entrée du lac Sevan, avec le monastère de Sevanavank, des plages et les hauts paysages du Gegharkunik."
+      },
+      "sisian": {
+        "description": "Ville tranquille du sud, entourée de hauts plateaux ouverts, de sites préhistoriques et de paysages saisissants, dont Zorats Karer et la vallée du Vorotan."
+      },
+      "tsaghkadzor": {
+        "description": "Station de montagne appréciée pour le ski, la randonnée et l'air alpin, avec le monastère de Kecharis et des pentes boisées près du centre."
+      }
+    }
   },
   "armeniaPlaces": {
     "heroTitle": "Que visiter en Arménie",

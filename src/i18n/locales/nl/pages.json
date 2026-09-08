@@ -6485,7 +6485,42 @@
   },
   "armeniaCities": {
     "heroTitle": "Steden van Armenië",
-    "intro": "Van de boulevards van roze tufsteen in Jerevan tot de bosrijke ligging van Dilijan in de bergen van Tavush bieden de steden van Armenië heel verschillende manieren om het land te ervaren. Ontdek onze groeiende verzameling stadsgidsen, te beginnen met Jerevan en Dilijan."
+    "intro": "Van de boulevards van roze tufsteen in Jerevan tot de bosrijke ligging van Dilijan in de bergen van Tavush bieden de steden van Armenië heel verschillende manieren om het land te ervaren. Ontdek onze groeiende verzameling stadsgidsen, te beginnen met Jerevan en Dilijan.",
+    "items": {
+      "yerevan": {
+        "description": "De hoofdstad van Armenië combineert architectuur van roze tufsteen met levendige cafés, musea en weidse uitzichten, met het Republiekplein en de Cascade als hart."
+      },
+      "dilijan": {
+        "description": "Groene bergstad, bekend om boswandelpaden, traditionele architectuur en de nabijheid van kloosters en de landschappen van Nationaal Park Dilijan."
+      },
+      "etchmiadzin": {
+        "description": "Het geestelijke centrum van Armenië, zetel van de Moederkerk van Etchmiadzin en van belangrijke vroegchristelijke kerken, vlak bij Jerevan."
+      },
+      "garni": {
+        "description": "Historisch dorp, vooral bekend om de tempel van Garni en de indrukwekkende Azat-kloof, dicht bij de Symfonie der Stenen en klooster Geghard."
+      },
+      "goris": {
+        "description": "Zuidelijke stad met karakter, omringd door opvallende rotsformaties, traditionele stenen huizen en enkele van de mooiste berglandschappen van Syunik."
+      },
+      "gyumri": {
+        "description": "De op een na grootste stad van Armenië staat bekend om 19e-eeuwse architectuur, gebouwen van zwarte en oranje tufsteen en een eigenzinnige cultuur."
+      },
+      "jermuk": {
+        "description": "Rustig kuuroord in de bergen met minerale bronnen, beboste hellingen en watervallen, dicht bij de hooglandlandschappen van Vayots Dzor."
+      },
+      "oshakan": {
+        "description": "Historisch dorp rond het graf van Mesrop Mashtots, de bedenker van het Armeense alfabet, nauw verbonden met het literaire erfgoed van het land."
+      },
+      "sevan": {
+        "description": "Stad aan het water en toegangspoort tot het Sevanmeer, met klooster Sevanavank, stranden en de hooggelegen landschappen van Gegharkunik."
+      },
+      "sisian": {
+        "description": "Rustige zuidelijke stad, omringd door open hoogland, prehistorische vindplaatsen en weids landschap, waaronder Zorats Karer en het Vorotan-dal."
+      },
+      "tsaghkadzor": {
+        "description": "Bergresort, geliefd om skiën, wandelen en frisse alpiene lucht, met klooster Kecharis en beboste hellingen vlak bij het centrum."
+      }
+    }
   },
   "armeniaPlaces": {
     "heroTitle": "Bezienswaardigheden in Armenië",

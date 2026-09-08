@@ -8733,7 +8733,51 @@ export const cities = [
   {
     slug: 'yerevan', name: 'Yerevan', region: null, published: true, country: 'armenia',
     seoKey: 'yerevan', contentKey: 'yerevan',
-    noHero: true,
+    // HERO SHIPPED (owner package, Yerevan city hub): Republic Square in winter,
+    // Government House reflected in the fountain pool. Landscape 4:3 (1448x1086
+    // native), ladder 768/1200/1448 in `.hero--yerevan`, nothing upscaled.
+    //
+    // ⚠️ `image` is the 1200 rung, NOT the top one, because on a city this field
+    // does double duty: the hero (only as HeroSection's fallback — `heroClass`
+    // owns the actual background) AND the card cover on /armenia and
+    // /armenia/cities. Tbilisi does exactly this. That double duty is also why
+    // the Republic Square attraction photo that briefly sat here as a card cover
+    // is gone: a city cannot show one photo on its card and another on its own
+    // page, and `cities[]` has no separate cardImage field (only regions do).
+    // ⚠️ Card covers need a /images/files-thumb/ twin for BlurUpBackground.
+    //
+    // Three DIFFERENT Yerevan image families are now in play and must not be
+    // confused: this hub is `yerevan-armenia`, /armenia/yerevan/cascade-monument
+    // is `yerevan-cascade-armenia`, and /armenia/yerevan/republic-square is
+    // `republic-square-yerevan-armenia`.
+    image: '/images/files/yerevan-armenia-1200.webp',
+    imageAvif: '/images/files/yerevan-armenia-1200.avif',
+    heroClass: 'hero--yerevan',
+    // LCP hero preload: the 1200 AVIF rung, fetchpriority=high.
+    heroPreload: '/images/files/yerevan-armenia-1200.avif',
+    // Dedicated 1.91:1 social image, replacing the Armenia country fallback
+    // (the Khor Virap crop). The matching `-og.webp` ships alongside unreferenced.
+    ogImage: { src: '/images/files/yerevan-armenia-og.jpg', width: 1200, height: 630 },
+    // Hero image SEO/AEO metadata. The hero is a CSS background (no <img alt>
+    // anywhere on this site), so the localized alt lives here and feeds
+    // og:image:alt / twitter:image:alt per locale and the hero ImageObject
+    // caption. width/height describe the 1200 rung `image` names.
+    imageMeta: {
+      width: 1200, height: 900, imageId: 'hero-image',
+      name: 'Republic Square in Yerevan in winter, with Government House reflected in the fountain pool, Armenia',
+      description: 'Republic Square in Yerevan on a clear winter day: the pink-tuff Government House with its clock tower and the Armenian flag, mirrored in the still water of the fountain pool, with bare trees along the square under a cloudless blue sky, in Yerevan, Armenia.',
+      locationName: 'Republic Square, Yerevan, Armenia',
+      locality: 'Yerevan', region: 'Yerevan', country: 'AM',
+      alt: {
+        en: 'Republic Square in Yerevan in winter — the pink-tuff Government House with its clock tower and the Armenian flag, mirrored in the still fountain pool, with bare trees under a clear blue sky, Armenia',
+        de: 'Der Platz der Republik in Eriwan im Winter — das Regierungsgebäude aus rosa Tuffstein mit Uhrturm und armenischer Flagge, gespiegelt im ruhigen Brunnenbecken, mit kahlen Bäumen unter klarem blauem Himmel, Armenien',
+        fr: "La place de la République à Erevan en hiver — la Maison du gouvernement en tuf rose, sa tour de l'horloge et le drapeau arménien, reflétée dans le bassin immobile, avec des arbres dénudés sous un ciel bleu limpide, Arménie",
+        es: 'La plaza de la República en Ereván en invierno — la Casa de Gobierno de toba rosa con su torre del reloj y la bandera armenia, reflejada en el estanque en calma, con árboles desnudos bajo un cielo azul despejado, Armenia',
+        nl: 'Het Republiekplein in Jerevan in de winter — het Regeringsgebouw van roze tufsteen met klokkentoren en Armeense vlag, weerspiegeld in het stille fonteinbassin, met kale bomen onder een strakblauwe hemel, Armenië',
+        cs: 'Náměstí Republiky v Jerevanu v zimě — vládní budova z růžového tufu s hodinovou věží a arménskou vlajkou, zrcadlící se v klidné vodní hladině bazénu, s holými stromy pod jasně modrou oblohou, Arménie',
+        pl: 'Plac Republiki w Erywaniu zimą — Dom Rządowy z różowego tufu z wieżą zegarową i flagą Armenii, odbity w spokojnym basenie fontanny, z bezlistnymi drzewami pod bezchmurnym błękitnym niebem, Armenia',
+      },
+    },
     // The brief specifies the authored headline as this page's H1; Georgian
     // cities keep showing the bare city name, which is why this is opt-in.
     heroTitleAsH1: true,
@@ -8790,7 +8834,48 @@ export const cities = [
     // Per-page geo tags. AM-AV is Armavir's ISO 3166-2 code; the coordinates
     // are Vagharshapat's, the city this page is about.
     geoMeta: { region: 'AM-AV', placename: 'Etchmiadzin', lat: '40.1622', lng: '44.2911' },
-    noHero: true,
+    // HERO SHIPPED (owner package, Etchmiadzin city hub): the Mother Cathedral
+    // itself. Landscape 4:3 (1448x1086 native), ladder 768/1200/1448 in
+    // `.hero--etchmiadzin`, nothing upscaled.
+    //
+    // ⚠️ `image` is the 1200 rung, not the top one, for the reason Yerevan and
+    // Tbilisi are: on a CITY this field is both the hero fallback (the actual
+    // background comes from `heroClass`) AND the card cover on /armenia and
+    // /armenia/cities. `cities[]` has no separate cardImage field — only regions
+    // do — so hero and card necessarily come from one file, which is the
+    // invariant that stops them drifting apart. Card covers need a
+    // /images/files-thumb/ twin for BlurUpBackground.
+    image: '/images/files/etchmiadzin-cathedral-armenia-1200.webp',
+    imageAvif: '/images/files/etchmiadzin-cathedral-armenia-1200.avif',
+    heroClass: 'hero--etchmiadzin',
+    // LCP hero preload: the 1200 AVIF rung, fetchpriority=high.
+    heroPreload: '/images/files/etchmiadzin-cathedral-armenia-1200.avif',
+    // Dedicated 1.91:1 social image, replacing the Armenia country fallback (the
+    // Khor Virap crop). The matching `-og.webp` ships alongside unreferenced.
+    ogImage: { src: '/images/files/etchmiadzin-cathedral-armenia-og.jpg', width: 1200, height: 630 },
+    // Hero image SEO/AEO metadata. The hero is a CSS background (no <img alt>
+    // anywhere on this site), so the localized alt lives here and feeds
+    // og:image:alt / twitter:image:alt per locale and the hero ImageObject
+    // caption. width/height describe the 1200 rung `image` names.
+    // ⚠️ This block does NOT touch `geoMeta` above it: the page already carries
+    // the correct AM-AV / Vagharshapat coordinates and they are left exactly as
+    // they were.
+    imageMeta: {
+      width: 1200, height: 900, imageId: 'hero-image',
+      name: 'The Mother Cathedral of Holy Etchmiadzin, Vagharshapat, Armenia',
+      description: 'The UNESCO-listed Mother Cathedral of Holy Etchmiadzin: a cruciform church of warm tuff stone with a carved central drum and conical dome, corner bell-towers and arched windows, standing behind autumn shrubs under a clear blue sky in Vagharshapat, Armavir Province, Armenia.',
+      locationName: 'Mother Cathedral of Holy Etchmiadzin, Vagharshapat, Armenia',
+      locality: 'Vagharshapat', region: 'Armavir', country: 'AM',
+      alt: {
+        en: 'The UNESCO-listed Mother Cathedral of Holy Etchmiadzin — a cruciform tuff-stone church with a central conical dome and corner bell-towers, behind autumn shrubs under a blue sky, Vagharshapat, Armenia',
+        de: 'Die UNESCO-gelistete Mutterkathedrale von Heilig-Etschmiadsin — eine kreuzförmige Kirche aus Tuffstein mit zentraler Kegelkuppel und Ecktürmen, hinter herbstlichen Sträuchern unter blauem Himmel, Wagharschapat, Armenien',
+        fr: "La cathédrale mère de Saint-Etchmiadzin, inscrite à l'UNESCO — une église cruciforme en tuf à coupole conique centrale et clochetons d'angle, derrière des arbustes automnaux sous un ciel bleu, Vagharchapat, Arménie",
+        es: 'La Catedral Madre de la Santa Etchmiadzin, declarada por la UNESCO — una iglesia cruciforme de toba con cúpula cónica central y campanarios en las esquinas, tras arbustos otoñales bajo un cielo azul, Vagharshapat, Armenia',
+        nl: 'De door UNESCO erkende Moederkathedraal van Heilig Etchmiadzin — een kruisvormige tufstenen kerk met een centrale kegelkoepel en hoektorentjes, achter herfstige struiken onder een blauwe hemel, Vagharsjapat, Armenië',
+        cs: 'Katedrála Matky Boží ve Svatém Ečmiadzinu zapsaná na seznamu UNESCO — křížový kostel z tufu s ústřední kuželovou kupolí a nárožními zvonicemi, za podzimními keři pod modrou oblohou, Vagharšapat, Arménie',
+        pl: 'Wpisana na listę UNESCO Katedra Matki Bożej w Świętym Eczmiadzynie — krzyżowy kościół z tufu z centralną stożkową kopułą i narożnymi dzwonnicami, za jesiennymi krzewami pod błękitnym niebem, Wagharszapat, Armenia',
+      },
+    },
     heroTitleAsH1: true,
     noAutolink: true,
   },
@@ -8818,7 +8903,48 @@ export const cities = [
     seoKey: 'garni', contentKey: 'garni',
     // AM-KT is Kotayk's ISO 3166-2 code; the coordinates are the village's.
     geoMeta: { region: 'AM-KT', placename: 'Garni', lat: '40.1122', lng: '44.7297' },
-    noHero: true,
+    // HERO SHIPPED (owner package, Garni city hub): the Temple of Garni.
+    // Landscape 4:3 (1448x1086 native), ladder 768/1200/1448 in `.hero--garni`,
+    // nothing upscaled.
+    //
+    // ⚠️ `image` is the 1200 rung, as on Yerevan, Etchmiadzin and Tbilisi: on a
+    // CITY this field is both the hero fallback (`heroClass` owns the real
+    // background) AND the card cover on /armenia and /armenia/cities, and
+    // `cities[]` has no separate cardImage field. Card covers need a
+    // /images/files-thumb/ twin for BlurUpBackground.
+    //
+    // ⚠️ The city hub takes the TEMPLE photo; the attractions that hang off this
+    // city keep their own: /armenia/garni/geghard-monastery is
+    // `geghard-monastery-armenia`, and Symphony of Stones has no photograph yet.
+    image: '/images/files/garni-temple-armenia-1200.webp',
+    imageAvif: '/images/files/garni-temple-armenia-1200.avif',
+    heroClass: 'hero--garni',
+    // LCP hero preload: the 1200 AVIF rung, fetchpriority=high.
+    heroPreload: '/images/files/garni-temple-armenia-1200.avif',
+    // Dedicated 1.91:1 social image, replacing the Armenia country fallback (the
+    // Khor Virap crop). The matching `-og.webp` ships alongside unreferenced.
+    ogImage: { src: '/images/files/garni-temple-armenia-og.jpg', width: 1200, height: 630 },
+    // Hero image SEO/AEO metadata. The hero is a CSS background (no <img alt>
+    // anywhere on this site), so the localized alt lives here and feeds
+    // og:image:alt / twitter:image:alt per locale and the hero ImageObject
+    // caption. width/height describe the 1200 rung `image` names.
+    // ⚠️ `geoMeta` above is deliberately untouched.
+    imageMeta: {
+      width: 1200, height: 900, imageId: 'hero-image',
+      name: 'The Temple of Garni on its podium above the Azat valley, Kotayk, Armenia',
+      description: 'The first-century Greco-Roman temple at Garni: a colonnaded peristyle of dark basalt on a raised podium reached by a steep flight of steps, standing under a blue sky with scattered cloud in Kotayk Province, Armenia.',
+      locationName: 'Temple of Garni, Garni, Kotayk, Armenia',
+      locality: 'Garni', region: 'Kotayk', country: 'AM',
+      alt: {
+        en: 'The Temple of Garni — a 1st-century Greco-Roman colonnaded temple of dark basalt on a raised podium, under a blue sky with clouds, Kotayk, Armenia',
+        de: 'Der Tempel von Garni — ein griechisch-römischer Säulentempel aus dunklem Basalt aus dem 1. Jahrhundert auf einem erhöhten Podium, unter blauem Wolkenhimmel, Kotayk, Armenien',
+        fr: 'Le temple de Garni — un temple gréco-romain à colonnes en basalte sombre du Ier siècle sur un podium surélevé, sous un ciel bleu nuageux, Kotayk, Arménie',
+        es: 'El templo de Garni — un templo grecorromano de columnas de basalto oscuro del siglo I sobre un podio elevado, bajo un cielo azul con nubes, Kotayk, Armenia',
+        nl: 'De tempel van Garni — een 1e-eeuwse Grieks-Romeinse zuilentempel van donker basalt op een verhoogd podium, onder een blauwe bewolkte hemel, Kotayk, Armenië',
+        cs: 'Chrám v Garni — řecko-římský sloupový chrám z tmavého čediče z 1. století na vyvýšeném podiu, pod modrou oblohou s mraky, Kotajk, Arménie',
+        pl: 'Świątynia w Garni — grecko-rzymska kolumnowa świątynia z ciemnego bazaltu z I wieku na podwyższonym podium, pod błękitnym, zachmurzonym niebem, Kotajk, Armenia',
+      },
+    },
     heroTitleAsH1: true,
     noAutolink: true,
     // Companion guide at /armenia/garni/things-to-do — the same block shape
@@ -8943,7 +9069,49 @@ export const cities = [
     seoKey: 'jermuk', contentKey: 'jermuk',
     // AM-VD is Vayots Dzor's ISO 3166-2 code.
     geoMeta: { region: 'AM-VD', placename: 'Jermuk', lat: '39.8417', lng: '45.6694' },
-    noHero: true,
+    // HERO SHIPPED (owner package, Jermuk city hub): the Jermuk waterfall.
+    // ⚠️ PORTRAIT source (1024x1536, exact 2:3) in a wide hero, and only TWO
+    // rungs — 768/1024 in `.hero--jermuk`, 1024 is native, nothing upscaled.
+    // `center` per the brief, rendered at 1440x820 and 390x780 first: the fan of
+    // the falls and the stream below it survive both crops.
+    //
+    // ⚠️ `image` is the 768 rung here, not the 1024 one: on a CITY this field is
+    // both the hero fallback (`heroClass` owns the real background) AND the card
+    // cover on /armenia and /armenia/cities, and with only two rungs the smaller
+    // one is the right card cover. Card covers need a /images/files-thumb/ twin
+    // for BlurUpBackground.
+    image: '/images/files/jermuk-waterfall-armenia-768.webp',
+    imageAvif: '/images/files/jermuk-waterfall-armenia-768.avif',
+    heroClass: 'hero--jermuk',
+    // LCP hero preload: the top (1024) AVIF rung, fetchpriority=high.
+    heroPreload: '/images/files/jermuk-waterfall-armenia-1024.avif',
+    // Dedicated 1.91:1 social image. The package ships TWO 1200x630 variants and
+    // the CROP is the one that works: the plain `-og.jpg` is the portrait frame
+    // letterboxed on a blurred backdrop, so the waterfall occupies a narrow strip
+    // in the middle, while `-og-crop.jpg` fills the card with the fan of the
+    // falls. Both `-og*.webp` ship alongside unreferenced.
+    ogImage: { src: '/images/files/jermuk-waterfall-armenia-og-crop.jpg', width: 1200, height: 630 },
+    // Hero image SEO/AEO metadata. The hero is a CSS background (no <img alt>
+    // anywhere on this site), so the localized alt lives here and feeds
+    // og:image:alt / twitter:image:alt per locale and the hero ImageObject
+    // caption. width/height describe the 768 rung `image` names.
+    // ⚠️ `geoMeta` above is deliberately untouched.
+    imageMeta: {
+      width: 768, height: 1152, imageId: 'hero-image',
+      name: 'The Jermuk waterfall in the Arpa gorge, Vayots Dzor, Armenia',
+      description: 'The Jermuk waterfall, known as Mermaid\'s Hair: a tall cascade fanning out over dark basalt cliffs into the Arpa gorge and running on over the rock below, framed by green trees under a clear blue sky, in Vayots Dzor Province, Armenia.',
+      locationName: 'Jermuk Waterfall, Jermuk, Vayots Dzor, Armenia',
+      locality: 'Jermuk', region: 'Vayots Dzor', country: 'AM',
+      alt: {
+        en: "The Jermuk Waterfall (\"Mermaid's Hair\") — a tall, fanning cascade dropping over basalt cliffs into the Arpa gorge, framed by green trees under a clear blue sky, Vayots Dzor, Armenia",
+        de: 'Der Jermuk-Wasserfall („Meerjungfrauenhaar“) — eine hohe, fächerförmige Kaskade, die über Basaltfelsen in die Arpa-Schlucht stürzt, umrahmt von grünen Bäumen unter klarem blauem Himmel, Wajoz Dsor, Armenien',
+        fr: "La cascade de Jermuk (« Cheveux de sirène ») — une haute cascade en éventail dévalant des falaises de basalte dans les gorges de l'Arpa, encadrée d'arbres verts sous un ciel bleu limpide, Vayots Dzor, Arménie",
+        es: 'La cascada de Jermuk («Cabello de sirena») — una alta cascada en abanico que cae por acantilados de basalto hacia el desfiladero del Arpa, enmarcada por árboles verdes bajo un cielo azul despejado, Vayots Dzor, Armenia',
+        nl: 'De Jermuk-waterval ("Zeemeerminnenhaar") — een hoge, waaiervormige cascade die over basaltkliffen de Arpa-kloof in valt, omlijst door groene bomen onder een strakblauwe hemel, Vajots Dzor, Armenië',
+        cs: 'Vodopád Jermuk („Vlasy mořské panny“) — vysoká vějířovitá kaskáda padající přes čedičové útesy do soutěsky Arpa, orámovaná zelenými stromy pod jasně modrou oblohou, Vajoc Dzor, Arménie',
+        pl: 'Wodospad Dżermuk („Włosy syreny“) — wysoka, wachlarzowata kaskada spadająca po bazaltowych klifach do wąwozu Arpa, otoczona zielonymi drzewami pod bezchmurnym błękitnym niebem, Wajoc Dzor, Armenia',
+      },
+    },
     heroTitleAsH1: true,
     noAutolink: true,
   },
@@ -8985,6 +9153,7 @@ export const cities = [
   {
     slug: 'sevan', name: 'Sevan', region: 'gegharkunik', published: true, country: 'armenia',
     seoKey: 'sevan', contentKey: 'sevan',
+    image: '/images/files/sevanavank-monastery-armenia-768.webp',
     // AM-GR is Gegharkunik's ISO 3166-2 code.
     geoMeta: { region: 'AM-GR', placename: 'Sevan', lat: '40.5497', lng: '44.9519' },
     noHero: true,

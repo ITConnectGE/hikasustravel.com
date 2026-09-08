@@ -2,6 +2,7 @@ import { useContext, useMemo } from 'react'
 import HeroSection from '../shared/HeroSection'
 import FadeUp from '../shared/FadeUp'
 import BlurUpBackground from '../shared/BlurUpBackground'
+import DestinationCard from '../shared/DestinationCard'
 import Breadcrumbs from '../shared/Breadcrumbs'
 import LocaleLink from '../../i18n/LocaleLink'
 import useT from '../../i18n/useT'
@@ -81,11 +82,22 @@ const COUNTRY_LANDING = {
     ogImage: '/images/files/khor-virap-monastery-ararat-armenia-og.jpg',
     crumbKey: null, // -> nav.destinations.armenia
     itemListName: 'Destinations in Armenia',
-    // No curated Armenia city-card block yet. The resolver falls through to the
-    // localized nav label (nav.yerevan is Jerewan / Erevan / Ereván / Erywań in
-    // the shipped locales), then to the registry name — never to raw English.
-    cityItemsKey: null,
+    // Armenia now has a curated city-card block. It carries DESCRIPTIONS only:
+    // every entry deliberately omits `name`, so the title still resolves the way
+    // it always did — through the localized nav label (nav.yerevan is Jerewan /
+    // Erevan / Ereván / Erywań in the shipped locales), then the registry name,
+    // never raw English. The same block feeds the Armenia Cities hub, so the two
+    // pages cannot drift.
+    cityItemsKey: 'armeniaCities',
     cityNameNavFallback: true,
+    // Render the featured cities as the site's standard destination CARD
+    // (DestinationCard — the same one every hub uses) instead of the square photo
+    // tiles. Georgia keeps the tiles: all 26 of its featured cities have a
+    // photograph, so a tile row there is a wall of pictures. Armenia has two
+    // photographed cities out of eleven, which as tiles meant nine brand-tone
+    // blocks; as cards it is eleven real summaries, with a cover where one
+    // honestly exists. Opt-in per country, so /georgia is byte-identical.
+    featuredCityCards: true,
     // The capital leads, exactly as Tbilisi does on /georgia. Matched on the
     // stable slug, never the label, which is localized.
     pinFirstCity: 'yerevan',
@@ -176,6 +188,11 @@ export default function DestinationsPage({ country = DEFAULT_COUNTRY }) {
   // curated tiers and are opt-in per country.
   const cityItems = (conf.cityItemsKey && pages[conf.cityItemsKey]?.items) || {}
   const enCityItems = (conf.cityItemsKey && enPages[conf.cityItemsKey]?.items) || {}
+  // One-line card summary, resolved through the same two tiers as the name:
+  // this locale first, then English, so a city whose text has not been
+  // translated yet still shows a summary rather than an empty card. Only the
+  // card layout reads it; the tile layout has nowhere to put it.
+  const cityDescription = (c) => cityItems[c.slug]?.description || enCityItems[c.slug]?.description || ''
   const cityTitle = (c) => {
     const navLabel = conf.cityNameNavFallback ? t(`nav.${c.slug}`) : null
     return cityItems[c.slug]?.name || enCityItems[c.slug]?.name
@@ -300,25 +317,47 @@ export default function DestinationsPage({ country = DEFAULT_COUNTRY }) {
                     where it applies: the stylesheet defines data-count 1-3 and
                     leaves four or more alone, so the attribute is emitted only
                     for a short row. Georgia's 26-tile strip is untouched. */}
-                <div
-                  className="tours-grid"
-                  {...(orderedCities.length < 4 ? { 'data-count': orderedCities.length } : {})}
-                >
-                  {orderedCities.map(({ city: c, title }) => {
-                    return (
-                      <div className="tour-tile" key={c.slug}>
-                        <LocaleLink to={cityPath(c.slug)} className="tour-tile-link" aria-label={title}>
-                          {c.image
-                            ? <BlurUpBackground src={c.image} className="tour-tile-image" />
-                            : <div className="tour-tile-image tour-tile-image--placeholder" />}
-                          <div className="tour-tile-overlay">
-                            <h3>{title}</h3>
-                          </div>
-                        </LocaleLink>
-                      </div>
-                    )
-                  })}
-                </div>
+                {conf.featuredCityCards ? (
+                  /* The site's standard destination card, one per city, in the
+                     hub's own grid. <h3> because these sit under the "Featured
+                     city guides" <h2>; the hub's cards are <h2> because they sit
+                     directly under their page's <h1>. */
+                  <ul className="dest-hub-grid">
+                    {orderedCities.map(({ city: c, title }) => (
+                      <li className="dest-hub-card" key={c.slug}>
+                        <DestinationCard
+                          name={title}
+                          description={cityDescription(c)}
+                          image={c.image}
+                          imagePosition={c.imagePosition}
+                          to={cityPath(c.slug)}
+                          ctaLabel={t('destinations.exploreCity')}
+                          headingLevel="h3"
+                        />
+                      </li>
+                    ))}
+                  </ul>
+                ) : (
+                  <div
+                    className="tours-grid"
+                    {...(orderedCities.length < 4 ? { 'data-count': orderedCities.length } : {})}
+                  >
+                    {orderedCities.map(({ city: c, title }) => {
+                      return (
+                        <div className="tour-tile" key={c.slug}>
+                          <LocaleLink to={cityPath(c.slug)} className="tour-tile-link" aria-label={title}>
+                            {c.image
+                              ? <BlurUpBackground src={c.image} className="tour-tile-image" />
+                              : <div className="tour-tile-image tour-tile-image--placeholder" />}
+                            <div className="tour-tile-overlay">
+                              <h3>{title}</h3>
+                            </div>
+                          </LocaleLink>
+                        </div>
+                      )
+                    })}
+                  </div>
+                )}
               </FadeUp>
             </>
           )}

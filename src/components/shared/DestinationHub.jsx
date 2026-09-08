@@ -1,7 +1,7 @@
 import { useContext, useMemo, useState } from 'react'
 import HeroSection from './HeroSection'
 import FadeUp from './FadeUp'
-import BlurUpBackground from './BlurUpBackground'
+import DestinationCard from './DestinationCard'
 import Breadcrumbs from './Breadcrumbs'
 import LocaleLink from '../../i18n/LocaleLink'
 import useT from '../../i18n/useT'
@@ -152,20 +152,9 @@ export default function DestinationHub({
   // `cities[].image` field the /georgia strip reads, and the Regions hub from
   // `regions[].cardImage` (the region's own hero family), so a card and its
   // detail page can never show different photos. An entry without `image`
-  // renders exactly the markup this component produced before covers existed —
-  // which is how Abkhazia and the Places to Visit hub stay text-only.
-  // `imagePosition` anchors the crop the way the detail-page hero anchors its
-  // background; omitting it keeps BlurUpBackground's 'center' default, so every
-  // Cities card is unaffected.
-  const cover = (e) =>
-    e.image
-      ? <BlurUpBackground src={e.image} position={e.imagePosition || 'center'} className="dest-hub-card__image" />
-      : null
-  // The cover has to bleed to the card's edges, but the padding lives on the
-  // link/pending element itself. Rather than restructure the card (which would
-  // move markup on all three hubs), the image is pulled out with negative
-  // margins and this modifier drops the now-redundant top padding.
-  const mediaClass = (e, base) => (e.image ? `${base} ${base}--media` : base)
+  // renders the text-only card — which is how Abkhazia and the Places to Visit
+  // hub look. Both the cover and its `--media` padding modifier now live in
+  // DestinationCard, which paints them identically for every surface.
 
   const country = t('destinations.country')
   const locationLabel = (loc) => {
@@ -304,27 +293,19 @@ export default function DestinationHub({
             <ul className="dest-hub-grid">
               {shown.map((e) => (
                 <li className="dest-hub-card" key={e.slug}>
-                  {e.published && e.to ? (
-                    <LocaleLink to={e.to} className={mediaClass(e, 'dest-hub-card__link')}>
-                      {cover(e)}
-                      <h2>{e.name}</h2>
-                      {locationLabel(e.location) && (
-                        <span className="dest-hub-card__loc">{locationLabel(e.location)}</span>
-                      )}
-                      {e.description && <p>{e.description}</p>}
-                      {ctaKey && <span className="dest-hub-card__cta">{t(ctaKey)}</span>}
-                    </LocaleLink>
-                  ) : (
-                    <div className={mediaClass(e, 'dest-hub-card__pending')}>
-                      {cover(e)}
-                      <h2>{e.name}</h2>
-                      {locationLabel(e.location) && (
-                        <span className="dest-hub-card__loc">{locationLabel(e.location)}</span>
-                      )}
-                      {e.description && <p>{e.description}</p>}
-                      <span className="dest-hub-card__soon">{t('destinations.comingSoon')}</span>
-                    </div>
-                  )}
+                  {/* The card markup itself now lives in DestinationCard, so the
+                      country landing page can render the SAME card rather than a
+                      copy of it. Output here is unchanged. */}
+                  <DestinationCard
+                    name={e.name}
+                    description={e.description}
+                    image={e.image}
+                    imagePosition={e.imagePosition}
+                    to={e.published && e.to ? e.to : null}
+                    locationLine={locationLabel(e.location)}
+                    ctaLabel={ctaKey ? t(ctaKey) : ''}
+                    soonLabel={t('destinations.comingSoon')}
+                  />
                 </li>
               ))}
             </ul>
