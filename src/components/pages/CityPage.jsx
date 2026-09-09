@@ -6,6 +6,7 @@ import Accordion from '../shared/Accordion'
 import Breadcrumbs from '../shared/Breadcrumbs'
 import LocaleLink from '../../i18n/LocaleLink'
 import EntityToursTag from '../shared/EntityToursTag'
+import ContentImageLightbox from '../shared/ContentImageLightbox'
 import { I18nContext } from '../../i18n/I18nContext'
 import useT from '../../i18n/useT'
 import useLang from '../../i18n/useLang'
@@ -579,6 +580,11 @@ export default function CityPage() {
             )
           })}
         </div>
+        {/* Body photos — the locale-HTML figures, the city-body-figure inlines
+            and the portrait inlines alike — open in the shared viewer; the hero
+            above and the things-to-do CTA below are outside contentRef and stay
+            as they are. */}
+        <ContentImageLightbox containerRef={contentRef} />
         {hasThingsToDo && (
           <FadeUp>
             <p className="city-ttd-cta">

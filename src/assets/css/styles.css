@@ -10091,6 +10091,16 @@ select option:checked {
 .body-img--portrait-narrow img {
   max-width: 420px;
 }
+/* Expandable body photo. ContentImageLightbox marks every editorial <img> in a
+   region/city/site/things-to-do body with `data-lightbox` once the page has
+   hydrated (and made it focusable), so the cursor appears only when a click
+   actually opens the viewer. The same plain pointer the Ivory tour gallery
+   uses — no zoom cursor, no overlay, no icon; the photo keeps its own
+   sizing, rounding and shadow. The focus ring is the tour tile's default. */
+img[data-lightbox] {
+  cursor: pointer;
+}
+
 /* Clickable body infographic (opens the shared lightbox). Affordance only —
    the <img> inside keeps its own sizing/rounding/shadow. */
 .body-img__btn {

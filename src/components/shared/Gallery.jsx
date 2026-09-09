@@ -87,9 +87,16 @@ export function GalleryLightbox({ images, startIndex, onClose, label, sideNav = 
      pipeline built. `src` is whatever width the tile's fallback happened to
      name — often the 768 rung — so when the item ships a `widths` ladder the
      top rung is used instead. Items without a ladder keep their own `src`. */
-  const fullSrc = image.base && image.widths?.length
-    ? asset(`${image.base}-${Math.max(...image.widths)}.webp`)
-    : asset(image.src)
+  /* `url` is an already-resolved URL used verbatim (no `asset()` prefixing).
+     ContentImageLightbox reads its sources off live DOM <img>/<source>
+     elements, which are absolute URLs; running those through asset() would
+     prepend the base path a second time. No gallery or hotel item carries this
+     key, so both existing callers resolve exactly as before. */
+  const fullSrc = image.url
+    ? image.url
+    : image.base && image.widths?.length
+      ? asset(`${image.base}-${Math.max(...image.widths)}.webp`)
+      : asset(image.src)
 
   const onTouchStart = (e) => { touchStartX.current = e.touches[0].clientX }
   const onTouchEnd = (e) => {

@@ -5,6 +5,7 @@ import FadeUp from '../shared/FadeUp'
 import Accordion from '../shared/Accordion'
 import Breadcrumbs from '../shared/Breadcrumbs'
 import EntityToursTag from '../shared/EntityToursTag'
+import ContentImageLightbox from '../shared/ContentImageLightbox'
 import { I18nContext } from '../../i18n/I18nContext'
 import useT from '../../i18n/useT'
 import useLang from '../../i18n/useLang'
@@ -325,6 +326,9 @@ export default function ThingsToDoCityPage() {
         <FadeUp>
           <div ref={contentRef} dangerouslySetInnerHTML={{ __html: linkedContent }} />
         </FadeUp>
+        {/* Body photos open in the shared viewer; the hero above is outside
+            contentRef and stays as it is. */}
+        <ContentImageLightbox containerRef={contentRef} />
       </section>
       {faqItems.length > 0 && (
         <section className="page-items faq" id="faq-section">

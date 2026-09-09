@@ -5,6 +5,7 @@ import FadeUp from '../shared/FadeUp'
 import Accordion from '../shared/Accordion'
 import Breadcrumbs from '../shared/Breadcrumbs'
 import EntityToursTag from '../shared/EntityToursTag'
+import ContentImageLightbox from '../shared/ContentImageLightbox'
 import { I18nContext } from '../../i18n/I18nContext'
 import useT from '../../i18n/useT'
 import useLang from '../../i18n/useLang'
@@ -610,6 +611,10 @@ export default function SitePage() {
             )
           })}
         </div>
+        {/* Body photos — the locale-HTML figures and the BodyFigure inlines
+            alike — open in the shared viewer; the hero above is outside
+            contentRef and stays as it is. */}
+        <ContentImageLightbox containerRef={contentRef} />
       </section>
       {site.imageCredit && (
         /* Hero photo attribution — required by the image's Creative Commons licence. */
