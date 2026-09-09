@@ -1,7 +1,8 @@
-import { useMemo } from 'react'
+import { useMemo, useRef } from 'react'
 import { useParams } from 'react-router-dom'
 import HeroSection from '../shared/HeroSection'
 import Accordion from '../shared/Accordion'
+import ContentImageLightbox from '../shared/ContentImageLightbox'
 import LocaleLink from '../../i18n/LocaleLink'
 import useT from '../../i18n/useT'
 import useLang from '../../i18n/useLang'
@@ -33,6 +34,7 @@ export default function BlogArticlePage() {
   const { lang } = useLang()
   const article = getBlogArticle(slug)
   const related = useMemo(() => article ? getRelatedArticles(slug) : [], [slug, article])
+  const contentRef = useRef(null)
 
   // Per-language article body/FAQ (falls back to the English base when no translation exists).
   const tr = article && lang !== 'en' ? (article.translations?.[lang] || null) : null
@@ -115,6 +117,9 @@ export default function BlogArticlePage() {
   }, [article, lang, slug, articleFaq, localizedDesc])
 
   const articleKeywords = useMemo(() => {
+    // A post may carry its own keyword list (the Armenia guide); every other
+    // article keeps the Georgia-prefixed tag keywords it has always had.
+    if (article?.keywords) return article.keywords
     if (!article?.tags?.length) return undefined
     const tagKeywords = article.tags.map(tag =>
       `Georgia ${tag.replace(/-/g, ' ')}`
@@ -193,7 +198,12 @@ export default function BlogArticlePage() {
           <span>{readTimeTemplate.replace('{min}', article.readTime)}</span>
         </div>
 
-        <div className="blog-article__content" dangerouslySetInnerHTML={{ __html: linkedArticle }} />
+        <div ref={contentRef} className="blog-article__content" dangerouslySetInnerHTML={{ __html: linkedArticle }} />
+        {/* Inline editorial photos open in the shared viewer — the same
+            ContentImageLightbox the destination pages use. The hero above is a
+            CSS background and the related-article cards below sit outside this
+            container, so neither becomes a trigger. */}
+        <ContentImageLightbox containerRef={contentRef} />
 
         {articleFaq?.length > 0 && (
           <div className="blog-article__faq">

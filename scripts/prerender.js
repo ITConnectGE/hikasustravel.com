@@ -257,6 +257,30 @@ const blogArticles = [
     },
     tags: ['history', 'culture', 'flag'],
   },
+  {
+    slug: 'ultimate-guide-to-traveling-to-armenia',
+    titleKey: 'blog.article5.title',
+    descKey: 'blog.article5.desc',
+    title: "The Ultimate Guide to Traveling to Armenia",
+    seoTitle: "The Ultimate Guide to Traveling to Armenia | Hikasus Travel",
+    excerpt: "Plan a trip to Armenia: best time to visit, trip length, Yerevan, monasteries, Lake Sevan, food and wine, transport, money, visas and practical advice.",
+    metaDescription: "Plan a trip to Armenia: best time to visit, trip length, Yerevan, monasteries, Lake Sevan, food and wine, transport, money, visas and practical advice.",
+    heroImage: '/images/files/khor-virap-monastery-ararat-armenia-1086.webp',
+    ogImage: '/images/files/khor-virap-monastery-ararat-armenia-og.jpg',
+    ogImageWidth: 1200,
+    ogImageHeight: 630,
+    ogImageAlt: {
+      en: "Khor Virap Monastery on the Ararat plain with Mount Ararat rising behind it, Armenia",
+      de: "Das Kloster Khor Virap in der Ararat-Ebene mit dem Berg Ararat im Hintergrund, Armenien",
+      fr: "Le monastère de Khor Virap dans la plaine de l'Ararat, avec le mont Ararat en arrière-plan, Arménie",
+      es: "El monasterio de Khor Virap en la llanura del Ararat, con el monte Ararat al fondo, Armenia",
+      nl: "Het Khor Virap-klooster op de Araratvlakte met de berg Ararat op de achtergrond, Armenië",
+      cs: "Klášter Khor Virap na Araratské planině s horou Ararat v pozadí, Arménie",
+      pl: "Klasztor Khor Virap na równinie Ararat z górą Ararat w tle, Armenia",
+    },
+    tags: ['armenia','travel-guide','planning','food','wine','culture'],
+    keywords: "Armenia travel guide, traveling to Armenia, travel to Armenia, Armenia travel tips, visit Armenia, best time to visit Armenia, places to visit in Armenia, things to do in Armenia, Armenia itinerary, Yerevan, Lake Sevan, Armenian monasteries, Armenia and Georgia trip",
+  },
 ]
 
 // Blog title translation for a given article key from ui.json
@@ -760,7 +784,7 @@ for (const lang of LANGS) {
     const tagKeywords = article.tags.flatMap(tag => [
       `Georgia ${tag.replace(/-/g, ' ')}`,
     ])
-    const keywords = [...tagKeywords, 'travel tips Georgia'].join(', ')
+    const keywords = article.keywords || [...tagKeywords, 'travel tips Georgia'].join(', ')
 
     const canonical = `${SITE_URL}/${lang}/blog/${article.slug}`
     const filePath = join(DIST, lang, 'blog', article.slug, 'index.html')
