@@ -1149,6 +1149,21 @@
     "description": "Een praktische geldgids voor Georgië: de lari (GEL), contant of kaart, geldautomaten, gangbare prijzen, de wisselkoers en fooien — wat reizigers moeten weten.",
     "keywords": "Georgische lari, valuta GEL, geld in Georgië, contant of kaart Georgië, geldautomaten Georgië, wisselkoers Georgië, lari naar euro, prijzen Georgië, fooien Georgië"
   },
+  "areni1Cave": {
+    "title": "Areni-1-grot, Armenië: de oudste wijnmakerij ter wereld",
+    "description": "Een gids voor de Areni-1-grot: de 6.100 jaar oude wijnmakerij, de oudste leren schoen ter wereld, prehistorische graven en de combinatie met Areni-wijn en Noravank.",
+    "keywords": "Areni-1-grot, Areni Armenië, oudste wijnmakerij, oudste leren schoen, Vayots Dzor, rivier Arpa, Areni Noir, Noravank, Armeense archeologie"
+  },
+  "amberdFortress": {
+    "title": "Vesting Amberd, Armenië: gids voor de burcht",
+    "description": "Een gids voor de vesting Amberd op de berg Aragats: de middeleeuwse burcht op 2.300 m, de Vahramashen-kerk uit 1026, het badhuis en hoe je er komt (wegen dicht in de winter).",
+    "keywords": "vesting Amberd, Amberd Armenië, berg Aragats, Vahramashen-kerk, Aragatsotn, Byurakan, Armeense vesting, Pahlavuni, Zakarian, middeleeuws Armenië"
+  },
+  "armeniaVisaGuide": {
+    "title": "Visum en inreis Armenië: gids 2026 | Hikasus Travel",
+    "description": "Visum- en inreisvoorwaarden voor Armenië: visumvrije landen, de 180-dagenregel, e-visum en kosten, en de tijdelijke vrijstelling voor verblijfsvergunningen.",
+    "keywords": "visum Armenië, inreis Armenië, Armenië visumvrij, e-visum Armenië, 180 dagen Armenië, reizen naar Armenië"
+  },
   "visaGuide": {
     "title": "Visum & inreisvereisten Georgië: gids 2026",
     "description": "Wie heeft een visum nodig voor Georgië? Visumvrije landen, e-Visum-geschiktheid, de nieuwe verzekeringsregel van 2026 en de inreisvereisten — met de link naar het officiële portaal.",
@@ -1479,10 +1494,40 @@
     "description": "De pagina die u zoekt bestaat niet. Keer terug naar de homepage om tours in Georgië te ontdekken.",
     "keywords": "pagina niet gevonden, 404, Hikasus Travel"
   },
+  "azerbaijan": {
+    "title": "Reisgids Azerbeidzjan | Hikasus Travel",
+    "description": "Reisgidsen over Azerbeidzjan: de regio's, steden en bezienswaardigheden, van Bakoe en het schiereiland Absheron tot Sheki, Quba en de uitlopers van de Kaukasus.",
+    "keywords": "reisgids Azerbeidzjan, regio's van Azerbeidzjan, Azerbeidzjan bezoeken, bestemmingen Azerbeidzjan, Bakoe, reizen Kaukasus"
+  },
+  "azerbaijanCities": {
+    "title": "Steden van Azerbeidzjan | Hikasus Travel",
+    "description": "De steden van Azerbeidzjan, van de hoofdstad Bakoe tot Sheki, Gabala, Quba, Ganja en Lankaran. De stadsgidsen worden één voor één toegevoegd.",
+    "keywords": "steden in Azerbeidzjan, Bakoe, Sheki, Gabala, Ganja, waarheen in Azerbeidzjan"
+  },
+  "azerbaijanPlaces": {
+    "title": "Bezienswaardigheden in Azerbeidzjan | Hikasus Travel",
+    "description": "Bezienswaardigheden in Azerbeidzjan: de oude stad van Bakoe, de rotstekeningen en moddervulkanen van Gobustan, het paleis van de khans van Sheki, Khinalig, het Goygol-meer en meer.",
+    "keywords": "bezienswaardigheden Azerbeidzjan, Gobustan, paleis van Sheki, Khinalig, Goygol, wat te zien in Azerbeidzjan"
+  },
+  "azerbaijanRegions": {
+    "title": "Regio's van Azerbeidzjan | Hikasus Travel",
+    "description": "De regio's van Azerbeidzjan, van Bakoe en het schiereiland Absheron tot Sheki-Zagatala, Quba-Khachmaz, Lankaran-Astara en Nachitsjevan. De regiogidsen worden één voor één toegevoegd.",
+    "keywords": "regio's van Azerbeidzjan, Absheron, Sheki-Zagatala, Quba-Khachmaz, Nachitsjevan"
+  },
   "armenia": {
     "title": "Reisgids Armenië | Hikasus Travel",
     "description": "Ontdek de groeiende verzameling reisgidsen over Armenië van Hikasus Travel, met praktische informatie over de regio's, landschappen, geschiedenis en cultuur van het land.",
     "keywords": "reisgids Armenië, regio's van Armenië, Armenië bezoeken, bestemmingen Armenië, reizen Kaukasus, Hikasus Travel"
+  },
+  "armeniaCities": {
+    "title": "Steden van Armenië: Jerevan en Dilijan | Hikasus Travel",
+    "description": "Een gids voor de steden van Armenië: de hoofdstad Jerevan en het bosrijke Dilijan in de bergen van Tavush. Wat te zien en hoe lang te blijven in elk.",
+    "keywords": "steden van Armenië, Armeense steden, Jerevan, Dilijan, waar naartoe in Armenië"
+  },
+  "armeniaPlaces": {
+    "title": "Bezienswaardigheden in Armenië: kloosters en tempels | Hikasus Travel",
+    "description": "Een gids voor de bezienswaardigheden van Armenië: Chor Virap onder de Ararat, Geghard, Tatev, Noravank en de tempel van Garni. Wat te zien en hoe er te komen.",
+    "keywords": "bezienswaardigheden Armenië, Armeense kloosters, Chor Virap, Geghard, Garni, Tatev, Noravank, Sevanmeer, Etsjmiadzin"
   },
   "armeniaRegions": {
     "title": "Regio's van Armenië: reisgidsen | Hikasus Travel",
@@ -1578,5 +1623,190 @@
     "title": "Wat te doen in Tavush, Armenië: complete gids",
     "description": "Het beste van Tavush: avontuur in Yenokavan en Lastiver, klooster Makaravank, afgelegen vestingen, wijn uit Tavush en de boskeuken van de regio.",
     "keywords": "wat te doen in Tavush, Yenokavan, Yell Extreme Park, Lastiver, Khachaghbyurkloof, Dilijan, nationaal park Dilijan, Haghartsin, Goshavank, Parzmeer, Goshmeer, Jukhtak, Matosavank, Ijevan, wijn uit Tavush, Kangun, Lalvari, Banants, Garan Dmak, Makaravank, Achajur, Nor Varagavank, Khoranashat, Aghjkaberd, Mantasheaberd, vesting Berdavan, berg Dimats, Shaghotwaterval, berg Apakekar, Transcaucasian Trail, Yell Sport Fest"
+  },
+  "vayotsDzor": {
+    "title": "Vayots Dzor, Armenië: Noravank en Areniwijn",
+    "description": "Een gids voor Vayots Dzor: klooster Noravank, Areni-1 en de oudste wijnmakerij ter wereld, de vesting Smbataberd, kuurplaats Jermuk en de Orbeliankaravanserai.",
+    "keywords": "Vayots Dzor, regio Vayots Dzor, Noravank, Amaghuvallei, Areni, grot Areni-1, oudste wijnmakerij, Areni Noir, Voskehat, Areni Wijnfestival, Gnishikkloof, Sint-Astvatsatsin Areni, Jermuk, Mineraalwatergalerij, Jermukwaterval, Kechutstuwmeer, Gndevank, Yeghegnadzor, universiteit van Gladzor, Spitakavor, Proshaberd, Yeghegis, Joodse begraafplaats Yeghegis, Zoratskerk, Smbataberd, Tsakhats Kar, Orbeliankaravanserai, Selimkaravanserai, Vardenyatspas, Martiros, klooster Arates, Mozrovgrot, beschermd landschap Arpa"
+  },
+  "thingsToDoVayotsDzor": {
+    "title": "Wat te doen in Vayots Dzor, Armenië: complete gids",
+    "description": "Het beste in Vayots Dzor: de grot Areni-1, Areniwijn, klooster Noravank, de vesting Smbataberd, de minerale bronnen van Jermuk en de Orbeliankaravanserai.",
+    "keywords": "wat te doen in Vayots Dzor, Areni, grot Areni-1, Areniwijn, Sev Areni, Voskehat, Sint-Astvatsatsinkerk Areni, Gnishikkloof, Noravank, Burtelashen, Momik, Jermuk, Mineraalwatergalerij, Jermukwaterval, Gndevank, Kechutstuwmeer, Yeghegis, Smbataberd, Tsakhats Kar, Joodse begraafplaats Yeghegis, Zoratskerk, Orbeliankaravanserai, Selimkaravanserai, Vardenyatspas, Spitakavor, Proshaberd, Martiros, klooster Arates, Magelhaengrot, Mozrovgrot, grotten verkennen Armenië, paardrijden Gomk, beschermd landschap Arpa, horats panir, kyalagosh"
+  },
+  "yerevan": {
+    "title": "Jerevan, Armenië: gids voor de roze stad",
+    "description": "Een gids voor Jerevan, de hoofdstad van Armenië: 2.800 jaar geschiedenis vanaf Erebuni, het centrum van roze tufsteen, uitzicht op de Ararat, eten, wijn en wanneer te gaan.",
+    "keywords": "Jerevan, Jerevan Armenië, roze stad, Erebuni, Arin Berd, Urartu, Argishti I, Plein van de Republiek, Cascade Jerevan, Matenadaran, Tsitsernakaberd, vesting Erebuni, Kond, uitzicht op de Ararat, Alexander Tamanjan, tufsteen, wijnbars Saryanstraat, Vernissagemarkt, GUM-markt, khorovats, dolma, harissa, lavash, luchthaven Zvartnots, Armeense dram, wanneer naar Jerevan"
+  },
+  "thingsToDoYerevan": {
+    "title": "Wat te doen in Jerevan: de 15 beste bezienswaardigheden & ideeën",
+    "description": "Het beste in Jerevan, Armenië: het Plein van de Republiek, de Cascade, het Matenadaran, Tsitsernakaberd, de vesting Erebuni, markten, wijnbars en meer.",
+    "keywords": "wat te doen in Jerevan, Plein van de Republiek, Cascade Jerevan, Cafesjian Center, Matenadaran, Tsitsernakaberd, gedenkteken Armeense genocide, vesting Erebuni, Historisch Museum van Armenië, Blauwe Moskee Jerevan, Vernissagemarkt, GUM-markt, Kond, khorovats, dolma, harissa, ghapama, lavash, sujukh, wijnbars Saryanstraat, Armeense brandy, Overwinningspark, Moeder Armenië, Katoghike, Zoravor, Sovjetarchitectuur Jerevan, metro Jerevan, Parajanovmuseum, dagtochten vanuit Jerevan"
+  },
+  "etchmiadzin": {
+    "title": "Etchmiadzin, Armenië: moederkathedraal en kerken",
+    "description": "Een gids voor Etchmiadzin: de moederkathedraal van de Armeense Kerk, Sint-Hripsime, Sint-Gayane, de Manoogian-schatkamer en het nabije Zvartnots.",
+    "keywords": "Etchmiadzin, Vagharshapat, Etchmiadzin Armenië, Moederzetel van Heilig Etchmiadzin, moederkathedraal, kathedraal van Etchmiadzin, Sint-Hripsime, Sint-Gayane, Sint-Shoghakat, Alex en Marie Manoogian-schatkamer, Gevorkian Theologisch Seminarie, Catholicos van alle Armeniërs, Zvartnots, UNESCO Armenië, Armavir, Armeense Apostolische Kerk, Tiridates III, Gregorius de Verlichter, Hovnatanian-fresco's, dagtrip vanuit Jerevan"
+  },
+  "thingsToDoGarni": {
+    "title": "Dingen om te doen in Garni, Armenië: tempel en kloof",
+    "description": "De beste dingen om te doen in Garni: de heidense tempel en het badhuis, de Symfonie van Stenen, kloofwandelingen, lavash bakken en het klooster Geghard verderop in het dal.",
+    "keywords": "dingen om te doen in Garni, tempel van Garni, badhuis van Garni, hypocaustum, mozaïekvloer, Symfonie van Stenen, Azatkloof, rivier de Azat, kloofwandeling Garni, lavash bakken, tonir, brduch, pulpulak, Sint-Mashtotskerk, klooster Geghard, rotskerken, Charentsboog, berg Ararat, Vardavar, Astghik, Alexander Sahinian, anastylose, Tiridates I, Mihr, Khosrovidukht, dagtrip vanuit Jerevan"
+  },
+  "armenianKhachkar": {
+    "title": "Armeense khachkar | Betekenis, symboliek en UNESCO-erfgoed",
+    "description": "Ontdek wat een Armeense khachkar is, wat de symbolen betekenen, hoe kruisstenen worden gehouwen, wat UNESCO erkent en waar je ze in Armenië kunt zien.",
+    "keywords": "Armeense khachkar, betekenis khachkar, kruissteen Armenië, symboliek khachkar, UNESCO immaterieel erfgoed khachkar, khachkars Noratus, Momik, khachkars Noravank, Amenaprkich-khachkar, khachkar Haghpat 1273, wiel van de eeuwigheid, Armeense steenhouwkunst, khachkarambacht, tuf Armenië, waar khachkars zien"
+  },
+  "zoratsKarer": {
+    "title": "Zorats Karer Armenië | Archeologische site en bezoekersgids",
+    "description": "Bezoek Zorats Karer bij Sisian, een prehistorische site met staande stenen in Syunik: geschiedenis, betwiste theorieën, bereikbaarheid en praktische informatie.",
+    "keywords": "Zorats Karer, Karahunj, Carahunge, Armeens Stonehenge, staande stenen Armenië, Sisian, Syunik, bronstijd Armenië, observatorium Zorats Karer, Elma Parsamyan, Paris Heruni, gaten in de stenen Zorats Karer, openingstijden Zorats Karer, entree Zorats Karer, archeologisch reservaat Armenië"
+  },
+  "mountAragats": {
+    "title": "Berg Aragats | Armeniës hoogste berg en wandelgids",
+    "description": "Ontdek de berg Aragats, met 4.090 m Armeniës hoogste berg: de vier toppen, het Karimeer, routes, seizoenen, bereikbaarheid en praktische veiligheidstips.",
+    "keywords": "Berg Aragats, Aragats Armenië, hoogste berg van Armenië, Karimeer, vier toppen van de Aragats, noordtop 4090, zuidtop Aragats wandeling, Aragatsotn, vesting Amberd, Aragats en Ararat, weg naar het Karimeer, magnetische heuvel Aragats, krater van de Aragats, wandelen in Armenië, Aragats dagtrip vanuit Jerevan"
+  },
+  "symphonyOfStones": {
+    "title": "Symfonie van Stenen Garni | Basaltzuilen en bezoekersgids",
+    "description": "Bezoek de Symfonie van Stenen in de Garnikloof: een natuurlijke wand van basaltzuilen onder de tempel van Garni. Toegang, geologie en praktische tips.",
+    "keywords": "Symfonie van Stenen, basaltorgel Armenië, Garnikloof, kloof van de Azat, basaltzuilen Armenië, zuilvormige afkoeling, tempel van Garni, klooster Geghard, Kotayk, entree Symfonie van Stenen, wandeling vanaf de tempel van Garni, Symfonie van Stenen vanuit Jerevan, bovenloop Azatvallei UNESCO, zeshoekige basaltzuilen, dagtrip Armenië"
+  },
+  "tsitsernakaberdMemorial": {
+    "title": "Gedenkteken Tsitsernakaberd Jerevan | Bezoekersgids",
+    "description": "Bezoek het gedenkcomplex Tsitsernakaberd in Jerevan, Armeniës belangrijkste gedenkteken voor de genocide: geschiedenis, symboliek, gedragsregels en praktische tips.",
+    "keywords": "Tsitsernakaberd, gedenkteken Armeense genocide, gedenkcomplex Tsitsernakaberd, eeuwige vlam Jerevan, heiligdom van de Eeuwigheid, stele Herboren Armenië, Muur van de Herinnering, Laan van de Herinnering, gedenkpark Tsitsernakaberd, Arthur Tarkhanyan, Sashur Kalashyan, 24 april herdenkingsdag, twaalf platen Tsitsernakaberd, heuvel Tsitsernakaberd, gedenkteken Jerevan"
+  },
+  "armenianGenocideMuseum": {
+    "title": "Museum van de Armeense Genocide Jerevan | Bezoekersgids",
+    "description": "Bezoek het Museum-Instituut van de Armeense Genocide en het gedenkteken Tsitsernakaberd in Jerevan: geschiedenis, toegang, openingstijden, rondleidingen en tips.",
+    "keywords": "Museum van de Armeense Genocide, Museum-Instituut van de Armeense Genocide, Tsitsernakaberd, gedenkteken Jerevan, eeuwige vlam Jerevan, stele Herboren Armenië, gedenkmuur Tsitsernakaberd, Herdenkingsdag Armeense Genocide, 24 april Jerevan, Arthur Tarkhanyan, Sashur Kalashyan, International Journal of Armenian Genocide Studies, museumtoegang Jerevan, rondleidingen Tsitsernakaberd, musea Jerevan"
+  },
+  "republicSquare": {
+    "title": "Plein van de Republiek Jerevan | Geschiedenis, gebouwen en fonteinen",
+    "description": "Bezoek het Plein van de Republiek in het centrum van Jerevan: roze tufarchitectuur, het Regeringsgebouw, musea en de seizoensgebonden zingende fonteinen.",
+    "keywords": "Plein van de Republiek Jerevan, Hraparak, zingende fonteinen Jerevan, Regeringsgebouw Jerevan, Historisch Museum van Armenië, Nationale Galerie van Armenië, Alexander Tamanjan, structuurplan 1924, Leninplein Jerevan, roze tuf Jerevan, metro Plein van de Republiek, Fluwelen Revolutie 2018, Noordelijke Laan, Plein van de Republiek bij nacht, bezienswaardigheden Jerevan"
+  },
+  "operaAndBalletTheatre": {
+    "title": "Opera- en Ballettheater Jerevan | Bezoekersgids",
+    "description": "Bezoek het Opera- en Ballettheater van Jerevan, ontworpen door Alexander Tamanjan: geschiedenis, architectuur, voorstellingen, rondleidingen en praktische tips.",
+    "keywords": "Opera Jerevan, Opera- en Ballettheater Jerevan, A. Spendiaryan Nationaal Academisch Opera- en Ballettheater, Armeense Nationale Opera, Alexander Tamanjan, Gevorg Tamanjan, Almast, Aram Khachaturian Concertzaal, Vrijheidsplein Jerevan, Theaterplein, Opera Tour Jerevan, Zwanenmeer Jerevan, Tumanyanstraat, operakaartjes Jerevan, bezienswaardigheden Jerevan"
+  },
+  "cascadeMonument": {
+    "title": "Cascade Jerevan | Kunst, uitzicht en bezoekersgids",
+    "description": "Bezoek de Cascade van Jerevan: een monumentale trap met 572 treden, hedendaagse kunst, Cafesjian-galerieën, stadsgezichten en uitzicht op de Ararat.",
+    "keywords": "Cascade Jerevan, Cascademonument, Cascadecomplex Jerevan, treden van de Cascade, 572 treden, Cafesjian Center for the Arts, Cafesjian-beeldentuin, roltrap Cascade, uitzicht op de Ararat vanaf de Cascade, Tamanjanstraat, Jim Torosyan, Gerard Cafesjian, Cascade Cultural Hub, is de Cascade af, bezienswaardigheden Jerevan"
+  },
+  "geghardMonastery": {
+    "title": "Klooster Geghard, Armenië: UNESCO-rotskerken",
+    "description": "Een gids voor het klooster Geghard in Armenië: door UNESCO erkende, in de klif uitgehakte kerken, de Heilige Lans, de Proshyan-graven, de akoestiek en het bezoek met Garni.",
+    "keywords": "klooster Geghard, Geghardavank, Ayrivank, Boven-Azatdal, Kotayk, rotskerken, Katoghike, gavit, Zakare, Ivane, Zakarian, koningin Tamar, Proshyan-graven, Heilige Lans, apostel Thaddeus, schatkamer Etchmiadzin, khachkar, UNESCO Armenië, Haags Verdrag, Gregorius de Verlichter, Garni, Symfonie van Stenen, Charentsboog, dagtrip vanuit Jerevan"
+  },
+  "thingsToDoGoris": {
+    "title": "Dingen om te doen in Goris, Armenië: complete gids",
+    "description": "De beste dingen om te doen in Goris: de grotwoningen van Oud-Khndzoresk, Hin Khot, het klooster Tatev en de Wings of Tatev, de Duivelsbrug en de weg naar Sisian.",
+    "keywords": "dingen om te doen in Goris, Oud-Khndzoresk, hangbrug Khndzoresk, grotwoningen, Hin Khot, Legends Trail, Oud-Goris, Stenen Woud, klooster Tatev, Wings of Tatev, Halidzor, Duivelsbrug, Vorotankloof, Tatev wandeling, Zorats Karer, Karahunj, Shakiwaterval, Sisian, Sisavan, Vayots Dzor, Kapan, berg Khustup, Vahanavank, fort Halidzor, Meghri, Zuid-Armenië"
+  },
+  "tsaghkadzor": {
+    "title": "Tsaghkadzor, Armenië: skigebied en kabelbaan",
+    "description": "Een gids voor Tsaghkadzor, het belangrijkste skigebied van Armenië op een uur van Jerevan: de hellingen van de berg Teghenis, de kabelbaan het hele jaar, het klooster Kecharis en wanneer te gaan.",
+    "keywords": "Tsaghkadzor, Tsaghkadzor Armenië, Kotayk, berg Teghenis, skigebied Tsaghkadzor, skiën in Armenië, kabelbaan, Leitner-stoeltjesliften, klooster Kecharis, Pahlavuni, Proshyan, gavit, khachkar, huismuseum gebroeders Orbeli, Olympisch Sportcomplex, Arsaciden, Hrazdan, Sevanmeer, Sevanavank, Dilijan, Garni, Geghard, berg Ararat, dagtrip vanuit Jerevan"
+  },
+  "sevan": {
+    "title": "Sevan, Armenië | Reisgids voor het Sevanmeer",
+    "description": "Bezoek Sevan, de Armeense poort naar het Sevanmeer: Sevanavank, stranden, lokale keuken, de rit vanuit Jerevan en praktische tips voor Gegharkunik.",
+    "keywords": "Sevan, stad Sevan Armenië, Sevanmeer, klooster Sevanavank, schiereiland Sevan, Gegharkunik, Yelenovka, Molokanen, Subbotniken, isjchan, Sevanforel, stranden Sevanmeer, Sevan vanuit Jerevan, Dilijan, Hayravank, Noratus, Gavar, meer in Armenië, Sevan in de winter"
+  },
+  "sisian": {
+    "title": "Sisian, Armenië | Zorats Karer, Shaki en reisgids",
+    "description": "Bezoek Sisian in het Armeense Syunik, hooglandbasis voor Zorats Karer, de Shaki-waterval, de petrogliefen van Ukhtasar, Sisavan en Zuid-Armenië.",
+    "keywords": "Sisian, Sisian Armenië, Zorats Karer, Karahunj, Shaki-waterval, petrogliefen van Ukhtasar, kerk Sisavan, historisch museum Sisian, Nikoghayos Adonts, Hamo Sahyan, Vorotan, Vorotnavank, Aghitu-monument, Tolorsstuwmeer, kerk Soerb Karapet, Syunik, Goris, Tatev, roadtrip Zuid-Armenië"
+  },
+  "oshakan": {
+    "title": "Oshakan, Armenië | Mesrop Mashtots en bezoekersgids",
+    "description": "Bezoek Oshakan in de Armeense provincie Aragatsotn, de begraafplaats van Mesrop Mashtots: de kerk, het erfgoed van het Armeense alfabet, geschiedenis en reistips.",
+    "keywords": "Oshakan, Oshakan Armenië, Mesrop Mashtots, Sint-Mesrop-Mashtotskerk, graf van Mesrop Mashtots, Armeens alfabet, Aragatsotn, Didikond, Urartische vesting, Vahan Amatuni, Hmayeak Mamikonian, Faustus, Pavstos Buzand, familie Amatuni, Ayrarat, monument van het Armeense alfabet, Artashavan, Ashtarak, katholikos Gevorg IV, monument uit 1962"
+  },
+  "jermuk": {
+    "title": "Jermuk, Armenië | Kuuroord, waterval en reisgids",
+    "description": "Bezoek Jermuk, het Armeense bergkuuroord in Vayots Dzor: minerale bronnen, de watergalerij, de waterval, natuur, wellness en praktische reistips.",
+    "keywords": "Jermuk, Jermuk Armenië, mineraalwatergalerij Jermuk, waterval van Jermuk, Zeemeerminhaar, Arpakloof, Vayots Dzor, klooster Gndevank, prinses Sopi van Syunik, Kechutstuwmeer, kabelbaan Jermuk, kuuroord Armenië, minerale bronnen Armenië, Jermuk vanuit Jerevan, Jermuk in de winter, Noravank, Areni, Tsaghkadzor, wellness Armenië"
+  },
+  "gyumri": {
+    "title": "Gyumri, Armenië | Reisgids en bezienswaardigheden",
+    "description": "Bezoek Gyumri, de op een na grootste stad van Armenië, bekend om de historische straten van Kumayri, zwarte tufarchitectuur, musea, eten en eigen karakter.",
+    "keywords": "Gyumri, Gyumri Armenië, Kumayri, historische wijk Kumayri, Alexandropol, Leninakan, Shirak, Vardanantsplein, Zwarte Fort, Sev Berd, kerk van de Heilige Verlosser, Amenaprkich, Dzitoghtsyan-museum, galerie van de zussen Aslamazyan, Avetik Isahakyan, Hovhannes Shiraz, Mher Mkrtchyan, Sergey Merkurov, luchthaven Shirak, panrkhash, yaghli, smeedkunst Gyumri, aardbeving van Spitak 1988, op een na grootste stad van Armenië"
+  },
+  "zvartnotsTemple": {
+    "title": "Zvartnots, Armenië | UNESCO-ruïne en bezoekersgids",
+    "description": "Bezoek Zvartnots, de ruïne van een monumentale Armeense kathedraal uit de 7e eeuw bij Etchmiadzin: UNESCO-geschiedenis, architectuur, Araratzicht en praktische tips.",
+    "keywords": "Zvartnots, kathedraal van Zvartnots, ruïne van Zvartnots, katholikos Nerses III, Nerses de Bouwer, Toros Toramanian, Khachik Dadian, tetraconch met omgang, Etchmiadzin, Vagharshapat, Armavir, Araratvlakte, berg Ararat, Constans II, Gregorius de Verlichter, Tiridates III, Rusa II, UNESCO Armenië, middeleeuwse Armeense architectuur, luchthaven Zvartnots"
+  },
+  "saintMesropMashtotsChurch": {
+    "title": "Sint-Mesrop-Mashtotskerk, Oshakan | Gids Armenië",
+    "description": "Bezoek de Sint-Mesrop-Mashtotskerk in Oshakan, de begraafplaats van de schepper van het Armeense alfabet: geschiedenis, graf, fresco's en praktische tips.",
+    "keywords": "Sint-Mesrop-Mashtotskerk, Mesrop Mashtots, graf van Mesrop Mashtots, Oshakan, Aragatsotn, Armeens alfabet, Vahan Amatuni, Hmayeak Mamikonian, Koriun, Movses Khorenatsi, katholikos Gevorg IV, Philippos Agbaketsi, Sahak Partev, Eer aan de Armeense letteren en literatuur, Hovhannes Minasian, Henrik Mamian, feest van de Heilige Vertalers, bisdom Aragatsotn, Ashtarak, monument van het Armeense alfabet"
+  },
+  "tatevMonastery": {
+    "title": "Klooster Tatev, Armenië: geschiedenis en Wings of Tatev",
+    "description": "Bezoek het klooster Tatev in Zuid-Armenië: de middeleeuwse geschiedenis, de universiteit van Tatev, de Gavazan-zuil, de kabelbaan Wings of Tatev en praktische tips.",
+    "keywords": "klooster Tatev, Tatev, Wings of Tatev, Vorotankloof, Syunik, Goris, Halidzor, universiteit van Tatev, Hovhan Vorotnetsi, Grigor Tatevatsi, Gavazan-zuil, Paulus en Petrus, Surb Astvatsatsin, metropolie Syunik, langste omkeerbare kabelbaan, Duivelsbrug, Grote Kluizenarij van Tatev, Oud-Khndzoresk, Zuid-Armenië, middeleeuwse Armeense architectuur"
+  },
+  "sevanavankMonastery": {
+    "title": "Klooster Sevanavank, Armenië: bezoekersgids aan het Sevanmeer",
+    "description": "Een gids voor het klooster Sevanavank aan het Sevanmeer: de kerken uit 874, de geschiedenis van eiland tot schiereiland, het uitzicht, de route vanuit Jerevan en praktische tips.",
+    "keywords": "klooster Sevanavank, Sevanavank, Sevanmeer, schiereiland Sevan, Gegharkunik, Surp Arakelots, Surp Astvatsatsin, Surb Harutyun, prinses Mariam, Ashot I, Bagratidische dynastie, Vasak Gabur, katholikos Mashtots, Sevan klooster Armenië, Sevanavank vanuit Jerevan, begraafplaats van Noratus, Dilijan, khachkar, middeleeuwse Armeense architectuur, dagtocht Armenië"
+  },
+  "sanahinMonastery": {
+    "title": "Klooster Sanahin, Armenië: UNESCO-gids voor Lori",
+    "description": "Een gids voor het klooster Sanahin in Lori: de academie, de handschriftentraditie, het Mikojan-broersmuseum, het UNESCO-erfgoed en het bezoek samen met Haghpat.",
+    "keywords": "klooster Sanahin, Sanahin, Lori, Debedkloof, Surb Astvatsatsin, Surb Amenaprkich, Sint-Hakob, Abas I Bagratuni, Ashot III de Barmhartige, Khosrovanush, academie van Gregorius Magistros, Anania Sanahnetsi, Hakobos Karapnetsi, Vache Vachutyan, Kiurikische dynastie, brug van Sanahin, Haghpat, Alaverdi, Anastas Mikojan, Artem Mikojan, Mikojan-Goerevitsj, MiG, Akhtala, Odzun, Kobayr, UNESCO Armenië, khachkar, gavit, scriptorium"
+  },
+  "noravankMonastery": {
+    "title": "Klooster Noravank, Armenië: Momiks meesterwerk",
+    "description": "Een gids voor het klooster Noravank: het tweelaagse ontwerp van Burtelashen, Momiks beeldhouwwerk en graf, de Orbeliandynastie, en het bezoek samen met Areni.",
+    "keywords": "klooster Noravank, Noravank, Amaghukloof, Amaghuvallei, Vayots Dzor, Orbelian, Burtel Orbelian, Burtelashen, Sint-Astvatsatsin, Sint-Karapet, Sint-Grigor, Momik, khachkar, gavit, Areni, Areni-1-grot, Khor Virap, Jermuk, Yeghegnadzor, Sisian, Goris, Tatev, voorlopige lijst van UNESCO, middeleeuwse Armeense architectuur, wapen van de Orbelians"
+  },
+  "khorVirapMonastery": {
+    "title": "Klooster Khor Virap, Armenië: het uitzicht op de Ararat",
+    "description": "Een gids voor Khor Virap: de put van Gregorius de Verlichter, de kerstening van Armenië in 301, het klassieke uitzicht op de berg Ararat en de ruïnes van het antieke Artashat.",
+    "keywords": "Khor Virap, klooster Khor Virap, regio Ararat, Gregorius de Verlichter, koning Tiridates III, diepe kerker, 301 n.Chr., christendom Armenië, Sint-Astvatsatsinkerk, Sint-Gevorgkapel, antiek Artashat, koning Artashes I, Artaxiadische dynastie, Dvin, uitzicht berg Ararat, Araratvlakte, Areni, Noravank, Vayots Dzor, dagtrip Jerevan, Armeens-Apostolisch"
+  },
+  "noratusCemetery": {
+    "title": "Begraafplaats van Noratus, Armenië: khachkargids",
+    "description": "Een gids voor de begraafplaats van Noratus: het grootste veld middeleeuwse khachkars van Armenië, de door UNESCO erkende ambachtstraditie, en het bezoek samen met het Sevanmeer.",
+    "keywords": "begraafplaats van Noratus, Noratus, Noraduz, khachkar, Armeense kruisstenen, Gegharkunik, Sevanmeer, Gavar, Hayravank, Sevanavank, Kiram Kazmogh, Arakel, Meliset, Catholicos Vazgen I, British Museum, Timur, Tamerlane, kerk van de Heilige Maagd, schiereiland Noratus, Vardenyatspas, karavanserai van de Orbelians, Vayots Dzor, middeleeuwse Armeense kunst, immaterieel cultureel erfgoed"
+  },
+  "mountArarat": {
+    "title": "Berg Ararat, Armenië: waar en hoe je hem ziet",
+    "description": "Een gids voor de berg Ararat: de beste uitzichtpunten vanaf Khor Virap, Jerevan en de Charentsboog, zijn symboliek, en waarom hij buiten de grenzen van Armenië ligt.",
+    "keywords": "berg Ararat, Ararat Armenië, Grote Ararat, Kleine Ararat, Masis, Khor Virap, Araratvlakte, regio Ararat, Armavir, Jerevan, Charentsboog, Voghjaberd, Rafayel Israyelian, Yeghishe Charents, Moeder Armenië, Sardarapat, berg Aragats, Garni, Geghard, Areni, Noravank, ark van Noach, wapen van Armenië, Araratuitzichtpunt, fotografie Armenië"
+  },
+  "lakeSevan": {
+    "title": "Sevanmeer, Armenië: Sevanavank en stranden",
+    "description": "Een gids voor het Sevanmeer: klooster Sevanavank, Hayravank en Noratus, stranden en watersport, en hoe je het combineert met Dilijan of Vayots Dzor.",
+    "keywords": "Sevanmeer, Sevan Armenië, Gegharkunik, Sevanavank, Surp Arakelots, Surp Astvatsatsin, Surb Harutyun, prinses Mariam, Ashot I, Vasak Gabur, Catholicos Mashtots, Hayravank, Noratus, Gavar, Shorzha, Nationaal Park Sevan, Ramsar, Ishkhan, Sevanforel, Grote Sevan, Kleine Sevan, Gegham, Vardenis, Pambak, Areguni, Dilijan, Vardenyatspas, karavanserai van de Orbelians, Vayots Dzor, Tsaghkadzor, watersport Armenië"
+  },
+  "haghpatMonastery": {
+    "title": "Klooster Haghpat, Armenië: UNESCO-gids voor Lori",
+    "description": "Een gids voor het klooster Haghpat in Lori: Sint-Nshan, middeleeuwse khachkars, het scriptorium en de refter, UNESCO-erfgoed en het bezoek samen met Sanahin.",
+    "keywords": "klooster Haghpat, Haghpat, Lori, Debedkloof, koningin Khosrovanush, Ashot III de Barmhartige, Bagratuni, Sint-Nshan, architect Trdat, kathedraal van Ani, Hagia Sophia, Sanahin, brug van Sanahin, Amenaprkich-khachkar, Hamazaspkapel, scriptorium, refter, vesting Kayan, Kayanberd, Aknaberd, Akhtala, Odzun, Alaverdi, Vanadzor, UNESCO Armenië, khachkar, gavit, Noord-Armenië"
+  },
+  "goris": {
+    "title": "Goris, Armenië: stenen huizen en grotdorpen — gids",
+    "description": "Een gids voor Goris: historische steenarchitectuur, de grotnederzetting Oud-Goris, het streekmuseum, en hoe u Tatev en Khndzoresk bereikt.",
+    "keywords": "Goris, Goris Armenië, Syunik, Zangezur, Oud-Goris, Kyores, Vararakn, Stenen Woud, streekmuseum Goris, Aksel Bakunts, Aksel Bakunts-huismuseum, Oud-Khndzoresk, hangbrug, Hin Khot, Legends Trail, HIKEArmenia, klooster Tatev, Wings of Tatev, Halidzor, Duivelsbrug, Vorotan, Zorats Karer, Karahunj, Sisian, Shakiwaterval, Kapan, kyalagosh, chorotan, ghavurma, Zuid-Armenië"
+  },
+  "garni": {
+    "title": "Tempel van Garni, Armenië: gids voor de heidense site",
+    "description": "Een gids voor Garni, Armenië: de 1e-eeuwse Grieks-Romeinse tempel boven de Azatkloof, de basaltzuilen van de Symfonie van Stenen en hoe u het met Geghard combineert.",
+    "keywords": "Garni, tempel van Garni, Garni Armenië, Kotayk, Azatkloof, rivier de Azat, Symfonie van Stenen, basaltzuilen, Tiridates I, Mihr, anastylose, Alexander Sahinian, aardbeving 1679, badhuis van Garni, hypocaustum, mozaïekvloer, Khosrovidukht, klooster Geghard, Charentsboog, berg Ararat, lavash, tonir, dagtrip vanuit Jerevan"
+  },
+  "dilijan": {
+    "title": "Dilijan, Armenië: bossen, kloosters en wandelingen",
+    "description": "Een gids voor Dilijan, het bosstadje van Armenië in Tavush: het Nationaal Park Dilijan, de kloosters Haghartsin en Goshavank, wandelpaden en wanneer te gaan.",
+    "keywords": "Dilijan, Dilijan Armenië, Tavush, Nationaal Park Dilijan, Haghartsin, Goshavank, Mkhitar Gosh, Jukhtak, Matosavank, Parzmeer, Goshmeer, berg Dimats, Aghstev, Sharambeyan Street, Armeens Textielmuseum, Transcaucasian Trail, wandelen Armenië, bossen van Armenië, kleine Zwitserland van Armenië, Ijevan, Yenokavan, Sevanmeer, gata, khorovats, wanneer naar Dilijan"
   }
 }

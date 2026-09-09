@@ -8,7 +8,7 @@ import useT from '../../i18n/useT'
 import useLang from '../../i18n/useLang'
 import { I18nContext } from '../../i18n/I18nContext'
 import useSEO from '../../hooks/useSEO'
-import { getSEO } from '../../data/seoData'
+import { getSEO, hasSEO } from '../../data/seoData'
 
 const SITE_URL = 'https://www.hikasustravel.com'
 
@@ -49,6 +49,10 @@ export default function DestinationHub({
   // own subject instead of the prerendered site default; the Georgia hubs pass
   // none and keep the hero-derived image they have always had.
   socialImage = null,
+  // Optional robots directive (e.g. 'noindex,follow') from countryHubMeta, for
+  // the hubs of a country that is still scaffolded. Georgia and Armenia pass
+  // none and their <head> is unchanged.
+  robots = null,
 }) {
   const t = useT()
   const { lang } = useLang()
@@ -74,7 +78,10 @@ export default function DestinationHub({
         // override, and new sites are covered automatically. The title fallback
         // is non-English only: English keeps its exact site name, while the SEO
         // *description* now backs every language so no card is left blank.
-        const seoCard = (seoFallback && e.seoKey) ? getSEO(e.seoKey, lang) : null
+        // `hasSEO` guards a scaffolded entry whose seoKey is pre-assigned but
+        // whose entry is not written yet: getSEO() would hand back the brand
+        // placeholder, which must never become a card title.
+        const seoCard = (seoFallback && e.seoKey && hasSEO(e.seoKey, lang)) ? getSEO(e.seoKey, lang) : null
         return {
           ...e,
           name:
@@ -143,7 +150,7 @@ export default function DestinationHub({
   }, [lang, path, resolved, seo.title])
 
   useSEO({
-    ...seo, lang, path, image: heroImage, jsonLd,
+    ...seo, lang, path, image: heroImage, jsonLd, robots,
     ...(socialImage ? {
       ogImage: socialImage.src,
       ogImageWidth: socialImage.width,

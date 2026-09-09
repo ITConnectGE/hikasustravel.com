@@ -3685,6 +3685,81 @@ export const regions = [
       ],
     },
   },
+  // ---------------------------------------------------------------------------
+  // Azerbaijan. Scaffolded as the third destination country: every record is
+  // `published: false` until its content exists, so nothing here builds a
+  // route, a sitemap entry, a redirect, a JSON-LD node or an internal link. The
+  // hubs list each entry as DestinationHub's non-clickable "guide coming soon"
+  // card, exactly as Armenia's scaffolded entries did.
+  //
+  // `seoKey` / `contentKey` are pre-assigned (camelCase of the slug) so that
+  // flipping `published` is the ONLY registry change a page needs once its
+  // seoData.source.js entry and its pages.json body exist. Flipping it before
+  // they exist fails the prerender, which is the intended guard.
+  //
+  // Karabakh, East Zangezur, Mil-Mughan and Shirvan-Salyan are deliberately
+  // absent — a content decision, not an omission.
+  // ---------------------------------------------------------------------------
+  {
+    slug: 'baku', name: 'Baku', published: false, country: 'azerbaijan',
+    seoKey: 'baku', contentKey: 'baku',
+    noHero: true,
+    noAutolink: true,
+  },
+  {
+    slug: 'absheron', name: 'Absheron Peninsula', published: false, country: 'azerbaijan',
+    seoKey: 'absheron', contentKey: 'absheron',
+    noHero: true,
+    noAutolink: true,
+  },
+  {
+    slug: 'mountainous-shirvan', name: 'Mountainous Shirvan', published: false, country: 'azerbaijan',
+    seoKey: 'mountainousShirvan', contentKey: 'mountainousShirvan',
+    noHero: true,
+    noAutolink: true,
+  },
+  {
+    slug: 'sheki-zagatala', name: 'Sheki-Zagatala', published: false, country: 'azerbaijan',
+    seoKey: 'shekiZagatala', contentKey: 'shekiZagatala',
+    noHero: true,
+    noAutolink: true,
+  },
+  {
+    slug: 'quba-khachmaz', name: 'Quba-Khachmaz', published: false, country: 'azerbaijan',
+    seoKey: 'qubaKhachmaz', contentKey: 'qubaKhachmaz',
+    noHero: true,
+    noAutolink: true,
+  },
+  {
+    slug: 'ganja-dashkasan', name: 'Ganja-Dashkasan', published: false, country: 'azerbaijan',
+    seoKey: 'ganjaDashkasan', contentKey: 'ganjaDashkasan',
+    noHero: true,
+    noAutolink: true,
+  },
+  {
+    slug: 'gazakh-tovuz', name: 'Gazakh-Tovuz', published: false, country: 'azerbaijan',
+    seoKey: 'gazakhTovuz', contentKey: 'gazakhTovuz',
+    noHero: true,
+    noAutolink: true,
+  },
+  {
+    slug: 'lankaran-astara', name: 'Lankaran-Astara', published: false, country: 'azerbaijan',
+    seoKey: 'lankaranAstara', contentKey: 'lankaranAstara',
+    noHero: true,
+    noAutolink: true,
+  },
+  {
+    slug: 'central-aran', name: 'Central Aran', published: false, country: 'azerbaijan',
+    seoKey: 'centralAran', contentKey: 'centralAran',
+    noHero: true,
+    noAutolink: true,
+  },
+  {
+    slug: 'nakhchivan', name: 'Nakhchivan', published: false, country: 'azerbaijan',
+    seoKey: 'nakhchivan', contentKey: 'nakhchivan',
+    noHero: true,
+    noAutolink: true,
+  },
 ]
 
 // ---------------------------------------------------------------------------
@@ -9233,6 +9308,242 @@ export const cities = [
     noAutolink: true,
     classifyAs: 'place',
     placeLocation: { cityId: null, municipalityId: null, regionId: null },
+  },
+  // ---------------------------------------------------------------------------
+  // Azerbaijan. All scaffolded (`published: false`); see the region block for
+  // the convention. `featured: true` marks the cities the /azerbaijan landing
+  // page shows in its "Featured city guides" strip, in this registry order.
+  // Baku is both a region and a city here (the capital is its own unit, like
+  // Tbilisi and Yerevan), so the two records share a slug — the region and city
+  // namespaces are otherwise disjoint.
+  // ---------------------------------------------------------------------------
+  {
+    slug: 'baku', name: 'Baku', region: 'baku', published: false, country: 'azerbaijan',
+    seoKey: 'baku', contentKey: 'baku',
+    featured: true,
+    noHero: true, heroTitleAsH1: true, noAutolink: true,
+  },
+  {
+    slug: 'mardakan', name: 'Mardakan', region: 'absheron', published: false, country: 'azerbaijan',
+    seoKey: 'mardakan', contentKey: 'mardakan',
+    noHero: true, heroTitleAsH1: true, noAutolink: true,
+  },
+  {
+    slug: 'bilgah', name: 'Bilgah', region: 'absheron', published: false, country: 'azerbaijan',
+    seoKey: 'bilgah', contentKey: 'bilgah',
+    noHero: true, heroTitleAsH1: true, noAutolink: true,
+  },
+  {
+    slug: 'altiagaj', name: 'Altiagaj', region: 'absheron', published: false, country: 'azerbaijan',
+    seoKey: 'altiagaj', contentKey: 'altiagaj',
+    noHero: true, heroTitleAsH1: true, noAutolink: true,
+  },
+  {
+    slug: 'shamakhi', name: 'Shamakhi', region: 'mountainous-shirvan', published: false, country: 'azerbaijan',
+    seoKey: 'shamakhi', contentKey: 'shamakhi',
+    noHero: true, heroTitleAsH1: true, noAutolink: true,
+  },
+  {
+    slug: 'ismayilli', name: 'Ismayilli', region: 'mountainous-shirvan', published: false, country: 'azerbaijan',
+    seoKey: 'ismayilli', contentKey: 'ismayilli',
+    noHero: true, heroTitleAsH1: true, noAutolink: true,
+  },
+  {
+    slug: 'lahij', name: 'Lahij', region: 'mountainous-shirvan', published: false, country: 'azerbaijan',
+    seoKey: 'lahij', contentKey: 'lahij',
+    featured: true,
+    noHero: true, heroTitleAsH1: true, noAutolink: true,
+  },
+  {
+    slug: 'basqal', name: 'Basqal', region: 'mountainous-shirvan', published: false, country: 'azerbaijan',
+    seoKey: 'basqal', contentKey: 'basqal',
+    noHero: true, heroTitleAsH1: true, noAutolink: true,
+  },
+  {
+    slug: 'ivanovka', name: 'Ivanovka', region: 'mountainous-shirvan', published: false, country: 'azerbaijan',
+    seoKey: 'ivanovka', contentKey: 'ivanovka',
+    noHero: true, heroTitleAsH1: true, noAutolink: true,
+  },
+  {
+    slug: 'sheki', name: 'Sheki', region: 'sheki-zagatala', published: false, country: 'azerbaijan',
+    seoKey: 'sheki', contentKey: 'sheki',
+    featured: true,
+    noHero: true, heroTitleAsH1: true, noAutolink: true,
+  },
+  {
+    slug: 'gabala', name: 'Gabala', region: 'sheki-zagatala', published: false, country: 'azerbaijan',
+    seoKey: 'gabala', contentKey: 'gabala',
+    featured: true,
+    noHero: true, heroTitleAsH1: true, noAutolink: true,
+  },
+  {
+    slug: 'zagatala', name: 'Zagatala', region: 'sheki-zagatala', published: false, country: 'azerbaijan',
+    seoKey: 'zagatala', contentKey: 'zagatala',
+    noHero: true, heroTitleAsH1: true, noAutolink: true,
+  },
+  {
+    slug: 'gakh', name: 'Gakh', region: 'sheki-zagatala', published: false, country: 'azerbaijan',
+    seoKey: 'gakh', contentKey: 'gakh',
+    noHero: true, heroTitleAsH1: true, noAutolink: true,
+  },
+  {
+    slug: 'balakan', name: 'Balakan', region: 'sheki-zagatala', published: false, country: 'azerbaijan',
+    seoKey: 'balakan', contentKey: 'balakan',
+    noHero: true, heroTitleAsH1: true, noAutolink: true,
+  },
+  {
+    slug: 'oghuz', name: 'Oghuz', region: 'sheki-zagatala', published: false, country: 'azerbaijan',
+    seoKey: 'oghuz', contentKey: 'oghuz',
+    noHero: true, heroTitleAsH1: true, noAutolink: true,
+  },
+  {
+    slug: 'kish', name: 'Kish', region: 'sheki-zagatala', published: false, country: 'azerbaijan',
+    seoKey: 'kish', contentKey: 'kish',
+    noHero: true, heroTitleAsH1: true, noAutolink: true,
+  },
+  {
+    slug: 'ilisu', name: 'Ilisu', region: 'sheki-zagatala', published: false, country: 'azerbaijan',
+    seoKey: 'ilisu', contentKey: 'ilisu',
+    noHero: true, heroTitleAsH1: true, noAutolink: true,
+  },
+  {
+    slug: 'nij', name: 'Nij', region: 'sheki-zagatala', published: false, country: 'azerbaijan',
+    seoKey: 'nij', contentKey: 'nij',
+    noHero: true, heroTitleAsH1: true, noAutolink: true,
+  },
+  {
+    slug: 'vandam', name: 'Vandam', region: 'sheki-zagatala', published: false, country: 'azerbaijan',
+    seoKey: 'vandam', contentKey: 'vandam',
+    noHero: true, heroTitleAsH1: true, noAutolink: true,
+  },
+  {
+    slug: 'quba', name: 'Quba', region: 'quba-khachmaz', published: false, country: 'azerbaijan',
+    seoKey: 'quba', contentKey: 'quba',
+    featured: true,
+    noHero: true, heroTitleAsH1: true, noAutolink: true,
+  },
+  {
+    slug: 'qusar', name: 'Qusar', region: 'quba-khachmaz', published: false, country: 'azerbaijan',
+    seoKey: 'qusar', contentKey: 'qusar',
+    noHero: true, heroTitleAsH1: true, noAutolink: true,
+  },
+  {
+    slug: 'khinalig', name: 'Khinalig', region: 'quba-khachmaz', published: false, country: 'azerbaijan',
+    seoKey: 'khinalig', contentKey: 'khinalig',
+    featured: true,
+    noHero: true, heroTitleAsH1: true, noAutolink: true,
+  },
+  {
+    slug: 'laza', name: 'Laza', region: 'quba-khachmaz', published: false, country: 'azerbaijan',
+    seoKey: 'laza', contentKey: 'laza',
+    noHero: true, heroTitleAsH1: true, noAutolink: true,
+  },
+  {
+    slug: 'red-village', name: 'Red Village (Qirmizi Qasaba)', region: 'quba-khachmaz', published: false, country: 'azerbaijan',
+    seoKey: 'redVillage', contentKey: 'redVillage',
+    noHero: true, heroTitleAsH1: true, noAutolink: true,
+  },
+  {
+    slug: 'qalaalti', name: 'Qalaalti', region: 'quba-khachmaz', published: false, country: 'azerbaijan',
+    seoKey: 'qalaalti', contentKey: 'qalaalti',
+    noHero: true, heroTitleAsH1: true, noAutolink: true,
+  },
+  {
+    slug: 'nabran', name: 'Nabran', region: 'quba-khachmaz', published: false, country: 'azerbaijan',
+    seoKey: 'nabran', contentKey: 'nabran',
+    noHero: true, heroTitleAsH1: true, noAutolink: true,
+  },
+  {
+    slug: 'ganja', name: 'Ganja', region: 'ganja-dashkasan', published: false, country: 'azerbaijan',
+    seoKey: 'ganja', contentKey: 'ganja',
+    featured: true,
+    noHero: true, heroTitleAsH1: true, noAutolink: true,
+  },
+  {
+    slug: 'naftalan', name: 'Naftalan', region: 'ganja-dashkasan', published: false, country: 'azerbaijan',
+    seoKey: 'naftalan', contentKey: 'naftalan',
+    noHero: true, heroTitleAsH1: true, noAutolink: true,
+  },
+  {
+    slug: 'goygol', name: 'Goygol', region: 'ganja-dashkasan', published: false, country: 'azerbaijan',
+    seoKey: 'goygol', contentKey: 'goygol',
+    noHero: true, heroTitleAsH1: true, noAutolink: true,
+  },
+  {
+    slug: 'hajikend', name: 'Hajikend', region: 'ganja-dashkasan', published: false, country: 'azerbaijan',
+    seoKey: 'hajikend', contentKey: 'hajikend',
+    noHero: true, heroTitleAsH1: true, noAutolink: true,
+  },
+  {
+    slug: 'gazakh', name: 'Gazakh', region: 'gazakh-tovuz', published: false, country: 'azerbaijan',
+    seoKey: 'gazakh', contentKey: 'gazakh',
+    noHero: true, heroTitleAsH1: true, noAutolink: true,
+  },
+  {
+    slug: 'gadabey', name: 'Gadabey', region: 'gazakh-tovuz', published: false, country: 'azerbaijan',
+    seoKey: 'gadabey', contentKey: 'gadabey',
+    noHero: true, heroTitleAsH1: true, noAutolink: true,
+  },
+  {
+    slug: 'shamkir', name: 'Shamkir', region: 'gazakh-tovuz', published: false, country: 'azerbaijan',
+    seoKey: 'shamkir', contentKey: 'shamkir',
+    noHero: true, heroTitleAsH1: true, noAutolink: true,
+  },
+  {
+    slug: 'tovuz', name: 'Tovuz', region: 'gazakh-tovuz', published: false, country: 'azerbaijan',
+    seoKey: 'tovuz', contentKey: 'tovuz',
+    noHero: true, heroTitleAsH1: true, noAutolink: true,
+  },
+  {
+    slug: 'slavyanka', name: 'Slavyanka', region: 'gazakh-tovuz', published: false, country: 'azerbaijan',
+    seoKey: 'slavyanka', contentKey: 'slavyanka',
+    noHero: true, heroTitleAsH1: true, noAutolink: true,
+  },
+  {
+    slug: 'lankaran', name: 'Lankaran', region: 'lankaran-astara', published: false, country: 'azerbaijan',
+    seoKey: 'lankaran', contentKey: 'lankaran',
+    featured: true,
+    noHero: true, heroTitleAsH1: true, noAutolink: true,
+  },
+  {
+    slug: 'lerik', name: 'Lerik', region: 'lankaran-astara', published: false, country: 'azerbaijan',
+    seoKey: 'lerik', contentKey: 'lerik',
+    noHero: true, heroTitleAsH1: true, noAutolink: true,
+  },
+  {
+    slug: 'astara', name: 'Astara', region: 'lankaran-astara', published: false, country: 'azerbaijan',
+    seoKey: 'astara', contentKey: 'astara',
+    noHero: true, heroTitleAsH1: true, noAutolink: true,
+  },
+  {
+    slug: 'masalli', name: 'Masalli', region: 'lankaran-astara', published: false, country: 'azerbaijan',
+    seoKey: 'masalli', contentKey: 'masalli',
+    noHero: true, heroTitleAsH1: true, noAutolink: true,
+  },
+  {
+    slug: 'mingachevir', name: 'Mingachevir', region: 'central-aran', published: false, country: 'azerbaijan',
+    seoKey: 'mingachevir', contentKey: 'mingachevir',
+    noHero: true, heroTitleAsH1: true, noAutolink: true,
+  },
+  {
+    slug: 'goychay', name: 'Goychay', region: 'central-aran', published: false, country: 'azerbaijan',
+    seoKey: 'goychay', contentKey: 'goychay',
+    noHero: true, heroTitleAsH1: true, noAutolink: true,
+  },
+  {
+    slug: 'nakhchivan-city', name: 'Nakhchivan City', region: 'nakhchivan', published: false, country: 'azerbaijan',
+    seoKey: 'nakhchivanCity', contentKey: 'nakhchivanCity',
+    noHero: true, heroTitleAsH1: true, noAutolink: true,
+  },
+  {
+    slug: 'ordubad', name: 'Ordubad', region: 'nakhchivan', published: false, country: 'azerbaijan',
+    seoKey: 'ordubad', contentKey: 'ordubad',
+    noHero: true, heroTitleAsH1: true, noAutolink: true,
+  },
+  {
+    slug: 'julfa', name: 'Julfa', region: 'nakhchivan', published: false, country: 'azerbaijan',
+    seoKey: 'julfa', contentKey: 'julfa',
+    noHero: true, heroTitleAsH1: true, noAutolink: true,
   },
 ]
 
@@ -15522,6 +15833,462 @@ export const sites = [
       },
     },
   },
+  // ---------------------------------------------------------------------------
+  // Azerbaijan. All scaffolded (`published: false`); see the region block for
+  // the convention. Every site is parented on its region, which is what gives
+  // it /azerbaijan/<region>/<slug> once published. Its country is derived from
+  // that parent (countryOfSite), never duplicated here.
+  // ---------------------------------------------------------------------------
+  {
+    slug: 'icherisheher', name: 'Icherisheher (Old City)',
+    parentType: 'region', parent: 'baku', published: false,
+    seoKey: 'icherisheher', contentKey: 'icherisheher',
+    noHero: true, noAutolink: true,
+  },
+  {
+    slug: 'maiden-tower', name: 'Maiden Tower',
+    parentType: 'region', parent: 'baku', published: false,
+    seoKey: 'maidenTower', contentKey: 'maidenTower',
+    noHero: true, noAutolink: true,
+  },
+  {
+    slug: 'palace-of-the-shirvanshahs', name: 'Palace of the Shirvanshahs',
+    parentType: 'region', parent: 'baku', published: false,
+    seoKey: 'palaceOfTheShirvanshahs', contentKey: 'palaceOfTheShirvanshahs',
+    noHero: true, noAutolink: true,
+  },
+  {
+    slug: 'flame-towers', name: 'Flame Towers',
+    parentType: 'region', parent: 'baku', published: false,
+    seoKey: 'flameTowers', contentKey: 'flameTowers',
+    noHero: true, noAutolink: true,
+  },
+  {
+    slug: 'heydar-aliyev-center', name: 'Heydar Aliyev Center',
+    parentType: 'region', parent: 'baku', published: false,
+    seoKey: 'heydarAliyevCenter', contentKey: 'heydarAliyevCenter',
+    noHero: true, noAutolink: true,
+  },
+  {
+    slug: 'baku-boulevard', name: 'Baku Boulevard',
+    parentType: 'region', parent: 'baku', published: false,
+    seoKey: 'bakuBoulevard', contentKey: 'bakuBoulevard',
+    noHero: true, noAutolink: true,
+  },
+  {
+    slug: 'carpet-museum', name: 'Azerbaijan Carpet Museum',
+    parentType: 'region', parent: 'baku', published: false,
+    seoKey: 'carpetMuseum', contentKey: 'carpetMuseum',
+    noHero: true, noAutolink: true,
+  },
+  {
+    slug: 'highland-park', name: 'Highland Park and Martyrs\' Lane',
+    parentType: 'region', parent: 'baku', published: false,
+    seoKey: 'highlandPark', contentKey: 'highlandPark',
+    noHero: true, noAutolink: true,
+  },
+  {
+    slug: 'fountains-square', name: 'Fountains Square and Nizami Street',
+    parentType: 'region', parent: 'baku', published: false,
+    seoKey: 'fountainsSquare', contentKey: 'fountainsSquare',
+    noHero: true, noAutolink: true,
+  },
+  {
+    slug: 'bibi-heybat-mosque', name: 'Bibi-Heybat Mosque',
+    parentType: 'region', parent: 'baku', published: false,
+    seoKey: 'bibiHeybatMosque', contentKey: 'bibiHeybatMosque',
+    noHero: true, noAutolink: true,
+  },
+  {
+    slug: 'taza-bazaar', name: 'Taza Bazaar',
+    parentType: 'region', parent: 'baku', published: false,
+    seoKey: 'tazaBazaar', contentKey: 'tazaBazaar',
+    noHero: true, noAutolink: true,
+  },
+  {
+    slug: 'national-museum-of-history', name: 'National Museum of History',
+    parentType: 'region', parent: 'baku', published: false,
+    seoKey: 'nationalMuseumOfHistory', contentKey: 'nationalMuseumOfHistory',
+    noHero: true, noAutolink: true,
+  },
+  {
+    slug: 'ateshgah-fire-temple', name: 'Ateshgah Fire Temple',
+    parentType: 'region', parent: 'absheron', published: false,
+    seoKey: 'ateshgahFireTempleAbsheron', contentKey: 'ateshgahFireTempleAbsheron',
+    noHero: true, noAutolink: true,
+  },
+  {
+    slug: 'yanar-dag', name: 'Yanar Dag',
+    parentType: 'region', parent: 'absheron', published: false,
+    seoKey: 'yanarDag', contentKey: 'yanarDag',
+    noHero: true, noAutolink: true,
+  },
+  {
+    slug: 'mardakan-castle', name: 'Mardakan Castle',
+    parentType: 'region', parent: 'absheron', published: false,
+    seoKey: 'mardakanCastle', contentKey: 'mardakanCastle',
+    noHero: true, noAutolink: true,
+  },
+  {
+    slug: 'gala-museum-complex', name: 'Gala Archaeological and Ethnographic Complex',
+    parentType: 'region', parent: 'absheron', published: false,
+    seoKey: 'galaMuseumComplex', contentKey: 'galaMuseumComplex',
+    noHero: true, noAutolink: true,
+  },
+  {
+    slug: 'candy-cane-mountains', name: 'Candy Cane Mountains',
+    parentType: 'region', parent: 'absheron', published: false,
+    seoKey: 'candyCaneMountains', contentKey: 'candyCaneMountains',
+    noHero: true, noAutolink: true,
+  },
+  {
+    slug: 'altiagac-national-park', name: 'Altiagac National Park',
+    parentType: 'region', parent: 'absheron', published: false,
+    seoKey: 'altiagacNationalPark', contentKey: 'altiagacNationalPark',
+    noHero: true, noAutolink: true,
+  },
+  {
+    slug: 'ramana-tower', name: 'Ramana Tower',
+    parentType: 'region', parent: 'absheron', published: false,
+    seoKey: 'ramanaTower', contentKey: 'ramanaTower',
+    noHero: true, noAutolink: true,
+  },
+  {
+    slug: 'gobustan-petroglyphs', name: 'Gobustan Petroglyphs',
+    parentType: 'region', parent: 'mountainous-shirvan', published: false,
+    seoKey: 'gobustanPetroglyphs', contentKey: 'gobustanPetroglyphs',
+    noHero: true, noAutolink: true,
+  },
+  {
+    slug: 'gobustan-mud-volcanoes', name: 'Gobustan Mud Volcanoes',
+    parentType: 'region', parent: 'mountainous-shirvan', published: false,
+    seoKey: 'gobustanMudVolcanoes', contentKey: 'gobustanMudVolcanoes',
+    noHero: true, noAutolink: true,
+  },
+  {
+    slug: 'shamakhi-juma-mosque', name: 'Shamakhi Juma Mosque',
+    parentType: 'region', parent: 'mountainous-shirvan', published: false,
+    seoKey: 'shamakhiJumaMosque', contentKey: 'shamakhiJumaMosque',
+    noHero: true, noAutolink: true,
+  },
+  {
+    slug: 'yeddi-gumbez-mausoleum', name: 'Yeddi Gumbez Mausoleum',
+    parentType: 'region', parent: 'mountainous-shirvan', published: false,
+    seoKey: 'yeddiGumbezMausoleum', contentKey: 'yeddiGumbezMausoleum',
+    noHero: true, noAutolink: true,
+  },
+  {
+    slug: 'diri-baba-mausoleum', name: 'Diri Baba Mausoleum',
+    parentType: 'region', parent: 'mountainous-shirvan', published: false,
+    seoKey: 'diriBabaMausoleum', contentKey: 'diriBabaMausoleum',
+    noHero: true, noAutolink: true,
+  },
+  {
+    slug: 'pirgulu-observatory', name: 'Shamakhi Astrophysical Observatory (Pirgulu)',
+    parentType: 'region', parent: 'mountainous-shirvan', published: false,
+    seoKey: 'pirguluObservatory', contentKey: 'pirguluObservatory',
+    noHero: true, noAutolink: true,
+  },
+  {
+    slug: 'ismayilli-state-reserve', name: 'Ismayilli State Reserve',
+    parentType: 'region', parent: 'mountainous-shirvan', published: false,
+    seoKey: 'ismayilliStateReserve', contentKey: 'ismayilliStateReserve',
+    noHero: true, noAutolink: true,
+  },
+  {
+    slug: 'palace-of-sheki-khans', name: 'Palace of the Sheki Khans',
+    parentType: 'region', parent: 'sheki-zagatala', published: false,
+    seoKey: 'palaceOfShekiKhans', contentKey: 'palaceOfShekiKhans',
+    noHero: true, noAutolink: true,
+  },
+  {
+    slug: 'sheki-caravanserai', name: 'Sheki Caravanserai',
+    parentType: 'region', parent: 'sheki-zagatala', published: false,
+    seoKey: 'shekiCaravanserai', contentKey: 'shekiCaravanserai',
+    noHero: true, noAutolink: true,
+  },
+  {
+    slug: 'kish-albanian-church', name: 'Kish Albanian Church',
+    parentType: 'region', parent: 'sheki-zagatala', published: false,
+    seoKey: 'kishAlbanianChurch', contentKey: 'kishAlbanianChurch',
+    noHero: true, noAutolink: true,
+  },
+  {
+    slug: 'gelersen-gorersen-fortress', name: 'Gelersen-Gorersen Fortress',
+    parentType: 'region', parent: 'sheki-zagatala', published: false,
+    seoKey: 'gelersenGorersenFortress', contentKey: 'gelersenGorersenFortress',
+    noHero: true, noAutolink: true,
+  },
+  {
+    slug: 'tufandag-mountain-resort', name: 'Tufandag Mountain Resort',
+    parentType: 'region', parent: 'sheki-zagatala', published: false,
+    seoKey: 'tufandagMountainResort', contentKey: 'tufandagMountainResort',
+    noHero: true, noAutolink: true,
+  },
+  {
+    slug: 'nohur-lake', name: 'Nohur Lake',
+    parentType: 'region', parent: 'sheki-zagatala', published: false,
+    seoKey: 'nohurLake', contentKey: 'nohurLake',
+    noHero: true, noAutolink: true,
+  },
+  {
+    slug: 'yeddi-gozel-waterfall', name: 'Yeddi Gozel Waterfall',
+    parentType: 'region', parent: 'sheki-zagatala', published: false,
+    seoKey: 'yeddiGozelWaterfall', contentKey: 'yeddiGozelWaterfall',
+    noHero: true, noAutolink: true,
+  },
+  {
+    slug: 'gabala-archaeological-centre', name: 'Gabala Archaeological Centre',
+    parentType: 'region', parent: 'sheki-zagatala', published: false,
+    seoKey: 'gabalaArchaeologicalCentre', contentKey: 'gabalaArchaeologicalCentre',
+    noHero: true, noAutolink: true,
+  },
+  {
+    slug: 'lekit-temple', name: 'Lekit Temple',
+    parentType: 'region', parent: 'sheki-zagatala', published: false,
+    seoKey: 'lekitTemple', contentKey: 'lekitTemple',
+    noHero: true, noAutolink: true,
+  },
+  {
+    slug: 'zagatala-nature-reserve', name: 'Zagatala Nature Reserve',
+    parentType: 'region', parent: 'sheki-zagatala', published: false,
+    seoKey: 'zagatalaNatureReserve', contentKey: 'zagatalaNatureReserve',
+    noHero: true, noAutolink: true,
+  },
+  {
+    slug: 'katekh-waterfall', name: 'Katekh Waterfall',
+    parentType: 'region', parent: 'sheki-zagatala', published: false,
+    seoKey: 'katekhWaterfall', contentKey: 'katekhWaterfall',
+    noHero: true, noAutolink: true,
+  },
+  {
+    slug: 'shahdag-mountain-resort', name: 'Shahdag Mountain Resort',
+    parentType: 'region', parent: 'quba-khachmaz', published: false,
+    seoKey: 'shahdagMountainResort', contentKey: 'shahdagMountainResort',
+    noHero: true, noAutolink: true,
+  },
+  {
+    slug: 'shahdag-national-park', name: 'Shahdag National Park',
+    parentType: 'region', parent: 'quba-khachmaz', published: false,
+    seoKey: 'shahdagNationalPark', contentKey: 'shahdagNationalPark',
+    noHero: true, noAutolink: true,
+  },
+  {
+    slug: 'laza-waterfalls', name: 'Laza Waterfalls',
+    parentType: 'region', parent: 'quba-khachmaz', published: false,
+    seoKey: 'lazaWaterfalls', contentKey: 'lazaWaterfalls',
+    noHero: true, noAutolink: true,
+  },
+  {
+    slug: 'museum-of-mountain-jews', name: 'Museum of Mountain Jews',
+    parentType: 'region', parent: 'quba-khachmaz', published: false,
+    seoKey: 'museumOfMountainJews', contentKey: 'museumOfMountainJews',
+    noHero: true, noAutolink: true,
+  },
+  {
+    slug: 'tenghi-canyon', name: 'Tenghi Canyon',
+    parentType: 'region', parent: 'quba-khachmaz', published: false,
+    seoKey: 'tenghiCanyon', contentKey: 'tenghiCanyon',
+    noHero: true, noAutolink: true,
+  },
+  {
+    slug: 'chirag-gala', name: 'Chirag Gala Fortress',
+    parentType: 'region', parent: 'quba-khachmaz', published: false,
+    seoKey: 'chiragGala', contentKey: 'chiragGala',
+    noHero: true, noAutolink: true,
+  },
+  {
+    slug: 'afurja-waterfall', name: 'Afurja Waterfall',
+    parentType: 'region', parent: 'quba-khachmaz', published: false,
+    seoKey: 'afurjaWaterfall', contentKey: 'afurjaWaterfall',
+    noHero: true, noAutolink: true,
+  },
+  {
+    slug: 'nizami-mausoleum', name: 'Nizami Mausoleum',
+    parentType: 'region', parent: 'ganja-dashkasan', published: false,
+    seoKey: 'nizamiMausoleum', contentKey: 'nizamiMausoleum',
+    noHero: true, noAutolink: true,
+  },
+  {
+    slug: 'imamzadeh-ganja', name: 'Imamzadeh Ganja',
+    parentType: 'region', parent: 'ganja-dashkasan', published: false,
+    seoKey: 'imamzadehGanja', contentKey: 'imamzadehGanja',
+    noHero: true, noAutolink: true,
+  },
+  {
+    slug: 'shah-abbas-mosque', name: 'Shah Abbas Mosque and Caravanserai',
+    parentType: 'region', parent: 'ganja-dashkasan', published: false,
+    seoKey: 'shahAbbasMosque', contentKey: 'shahAbbasMosque',
+    noHero: true, noAutolink: true,
+  },
+  {
+    slug: 'bottle-house', name: 'Bottle House',
+    parentType: 'region', parent: 'ganja-dashkasan', published: false,
+    seoKey: 'bottleHouse', contentKey: 'bottleHouse',
+    noHero: true, noAutolink: true,
+  },
+  {
+    slug: 'goygol-lake', name: 'Goygol Lake',
+    parentType: 'region', parent: 'ganja-dashkasan', published: false,
+    seoKey: 'goygolLake', contentKey: 'goygolLake',
+    noHero: true, noAutolink: true,
+  },
+  {
+    slug: 'maralgol-lake', name: 'Maralgol Lake',
+    parentType: 'region', parent: 'ganja-dashkasan', published: false,
+    seoKey: 'maralgolLake', contentKey: 'maralgolLake',
+    noHero: true, noAutolink: true,
+  },
+  {
+    slug: 'goygol-national-park', name: 'Goygol National Park',
+    parentType: 'region', parent: 'ganja-dashkasan', published: false,
+    seoKey: 'goygolNationalPark', contentKey: 'goygolNationalPark',
+    noHero: true, noAutolink: true,
+  },
+  {
+    slug: 'red-bridge', name: 'Red Bridge (Sinig Korpu)',
+    parentType: 'region', parent: 'gazakh-tovuz', published: false,
+    seoKey: 'redBridge', contentKey: 'redBridge',
+    noHero: true, noAutolink: true,
+  },
+  {
+    slug: 'avey-mountain', name: 'Avey Mountain',
+    parentType: 'region', parent: 'gazakh-tovuz', published: false,
+    seoKey: 'aveyMountain', contentKey: 'aveyMountain',
+    noHero: true, noAutolink: true,
+  },
+  {
+    slug: 'damjili-cave', name: 'Damjili Cave',
+    parentType: 'region', parent: 'gazakh-tovuz', published: false,
+    seoKey: 'damjiliCave', contentKey: 'damjiliCave',
+    noHero: true, noAutolink: true,
+  },
+  {
+    slug: 'hirkan-national-park', name: 'Hirkan National Park',
+    parentType: 'region', parent: 'lankaran-astara', published: false,
+    seoKey: 'hirkanNationalPark', contentKey: 'hirkanNationalPark',
+    noHero: true, noAutolink: true,
+  },
+  {
+    slug: 'khanbulan-lake', name: 'Khanbulan Lake',
+    parentType: 'region', parent: 'lankaran-astara', published: false,
+    seoKey: 'khanbulanLake', contentKey: 'khanbulanLake',
+    noHero: true, noAutolink: true,
+  },
+  {
+    slug: 'lankaran-fortress', name: 'Lankaran Fortress and Lighthouse',
+    parentType: 'region', parent: 'lankaran-astara', published: false,
+    seoKey: 'lankaranFortress', contentKey: 'lankaranFortress',
+    noHero: true, noAutolink: true,
+  },
+  {
+    slug: 'lankaran-tea-plantations', name: 'Lankaran Tea Plantations',
+    parentType: 'region', parent: 'lankaran-astara', published: false,
+    seoKey: 'lankaranTeaPlantations', contentKey: 'lankaranTeaPlantations',
+    noHero: true, noAutolink: true,
+  },
+  {
+    slug: 'lerik-longevity-museum', name: 'Lerik Longevity Museum',
+    parentType: 'region', parent: 'lankaran-astara', published: false,
+    seoKey: 'lerikLongevityMuseum', contentKey: 'lerikLongevityMuseum',
+    noHero: true, noAutolink: true,
+  },
+  {
+    slug: 'ballabur-castle', name: 'Ballabur Castle',
+    parentType: 'region', parent: 'lankaran-astara', published: false,
+    seoKey: 'ballaburCastle', contentKey: 'ballaburCastle',
+    noHero: true, noAutolink: true,
+  },
+  {
+    slug: 'istisu-hot-springs', name: 'Istisu Hot Springs',
+    parentType: 'region', parent: 'lankaran-astara', published: false,
+    seoKey: 'istisuHotSprings', contentKey: 'istisuHotSprings',
+    noHero: true, noAutolink: true,
+  },
+  {
+    slug: 'yanar-bulag', name: 'Yanar Bulag',
+    parentType: 'region', parent: 'lankaran-astara', published: false,
+    seoKey: 'yanarBulag', contentKey: 'yanarBulag',
+    noHero: true, noAutolink: true,
+  },
+  {
+    slug: 'gizilagaj-reserve', name: 'Gizilagaj State Reserve',
+    parentType: 'region', parent: 'lankaran-astara', published: false,
+    seoKey: 'gizilagajReserve', contentKey: 'gizilagajReserve',
+    noHero: true, noAutolink: true,
+  },
+  {
+    slug: 'sim-village', name: 'Sim Village',
+    parentType: 'region', parent: 'lankaran-astara', published: false,
+    seoKey: 'simVillage', contentKey: 'simVillage',
+    noHero: true, noAutolink: true,
+  },
+  {
+    slug: 'mingachevir-reservoir', name: 'Mingachevir Reservoir',
+    parentType: 'region', parent: 'central-aran', published: false,
+    seoKey: 'mingachevirReservoir', contentKey: 'mingachevirReservoir',
+    noHero: true, noAutolink: true,
+  },
+  {
+    slug: 'goychay-pomegranate-festival', name: 'Goychay Pomegranate Festival',
+    parentType: 'region', parent: 'central-aran', published: false,
+    seoKey: 'goychayPomegranateFestival', contentKey: 'goychayPomegranateFestival',
+    noHero: true, noAutolink: true,
+  },
+  {
+    slug: 'momine-khatun-mausoleum', name: 'Momine Khatun Mausoleum',
+    parentType: 'region', parent: 'nakhchivan', published: false,
+    seoKey: 'momineKhatunMausoleum', contentKey: 'momineKhatunMausoleum',
+    noHero: true, noAutolink: true,
+  },
+  {
+    slug: 'noahs-tomb', name: 'Noah\'s Tomb',
+    parentType: 'region', parent: 'nakhchivan', published: false,
+    seoKey: 'noahsTomb', contentKey: 'noahsTomb',
+    noHero: true, noAutolink: true,
+  },
+  {
+    slug: 'alinja-castle', name: 'Alinja Castle',
+    parentType: 'region', parent: 'nakhchivan', published: false,
+    seoKey: 'alinjaCastle', contentKey: 'alinjaCastle',
+    noHero: true, noAutolink: true,
+  },
+  {
+    slug: 'duzdag-salt-cave', name: 'Duzdag Salt Cave',
+    parentType: 'region', parent: 'nakhchivan', published: false,
+    seoKey: 'duzdagSaltCave', contentKey: 'duzdagSaltCave',
+    noHero: true, noAutolink: true,
+  },
+  {
+    slug: 'ashabi-kahf', name: 'Ashabi-Kahf',
+    parentType: 'region', parent: 'nakhchivan', published: false,
+    seoKey: 'ashabiKahf', contentKey: 'ashabiKahf',
+    noHero: true, noAutolink: true,
+  },
+  {
+    slug: 'garabaghlar-mausoleum', name: 'Garabaghlar Mausoleum',
+    parentType: 'region', parent: 'nakhchivan', published: false,
+    seoKey: 'garabaghlarMausoleum', contentKey: 'garabaghlarMausoleum',
+    noHero: true, noAutolink: true,
+  },
+  {
+    slug: 'gulustan-mausoleum', name: 'Gulustan Mausoleum',
+    parentType: 'region', parent: 'nakhchivan', published: false,
+    seoKey: 'gulustanMausoleum', contentKey: 'gulustanMausoleum',
+    noHero: true, noAutolink: true,
+  },
+  {
+    slug: 'batabat-lake', name: 'Batabat Lake',
+    parentType: 'region', parent: 'nakhchivan', published: false,
+    seoKey: 'batabatLake', contentKey: 'batabatLake',
+    noHero: true, noAutolink: true,
+  },
+  {
+    slug: 'ilandag', name: 'Ilandag',
+    parentType: 'region', parent: 'nakhchivan', published: false,
+    seoKey: 'ilandag', contentKey: 'ilandag',
+    noHero: true, noAutolink: true,
+  },
 ]
 
 // Wineries are intentionally an empty, scaffolded list — no winery pages are
@@ -15610,6 +16377,14 @@ const COUNTRIES = {
   // Armenia publishes all three sub-hubs. `placesHub` is the single field that
   // drives the hub route, the landing tile and the attraction breadcrumb level.
   armenia: { base: '/armenia', name: 'Armenia', code: 'AM', regionsHub: true, citiesHub: true, placesHub: true, socialImage: '/images/files/khor-virap-monastery-ararat-armenia-og.jpg', hubSocialImages: ARMENIA_HUB_SOCIAL },
+  // Azerbaijan is scaffolded: its landing page and three hubs exist, every
+  // region, city and site is `published: false`, and `hubMeta` puts a
+  // <meta name="robots"> on the four hub pages and keeps them out of the
+  // sitemap (see countryHubMeta below). Remove `hubMeta` once the landing has
+  // its intro copy and at least one published child. `socialImage` is the
+  // site-wide default every destination page used to inherit; no Azerbaijan
+  // page is published, so it is inert until a genuine photograph replaces it.
+  azerbaijan: { base: '/azerbaijan', name: 'Azerbaijan', code: 'AZ', regionsHub: true, citiesHub: true, placesHub: true, socialImage: '/images/files/georgia-home.jpg', hubMeta: 'noindex,follow' },
 }
 export const DEFAULT_COUNTRY = 'georgia'
 /** A record's country id, defaulting to Georgia for every record without one. */
@@ -15634,6 +16409,16 @@ export const countrySocialImage = (country) => countryConf(country).socialImage
 export const countryHubSocialImage = (country, hub) => (countryConf(country).hubSocialImages || {})[hub] || null
 /** ISO country code as asserted in schema.org `addressCountry`. */
 export const countryCode = (country) => countryConf(country).code
+/**
+ * Robots directive for a country's landing page and its three hubs, e.g.
+ * 'noindex,follow' while the country is scaffolded, or null (the default —
+ * Georgia and Armenia) when they are indexable. Read by useSEO on the client,
+ * by scripts/prerender.js for the static <head>, and by
+ * scripts/generate-sitemap.js, which drops the hub URLs of a country whose
+ * directive contains `noindex`.
+ */
+export const countryHubMeta = (country) => countryConf(country).hubMeta || null
+export const countryHubIndexable = (country) => !/noindex/i.test(countryHubMeta(country) || '')
 /** That country's regions hub, e.g. '/armenia/regions'. */
 export const regionsHubPathFor = (country) => `${countryBase(country)}/regions`
 /** That country's cities hub, or null where it publishes none (Armenia today). */

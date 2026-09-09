@@ -27,3 +27,14 @@ export function getSEO(pageKey, lang = 'en') {
   if (!entry) return { title: 'Hikasus Travel', description: '' }
   return entry
 }
+
+/**
+ * Whether an authored SEO entry exists for this key. Lets a card fallback tell
+ * a real per-language title apart from the brand-name placeholder getSEO()
+ * returns for a key that has not been written yet — a scaffolded destination
+ * pre-assigns its seoKey before its entry exists.
+ */
+export function hasSEO(pageKey, lang = 'en') {
+  const table = store[lang] || store.en
+  return !!(table && table[pageKey])
+}

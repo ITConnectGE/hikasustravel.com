@@ -11,7 +11,7 @@ import { I18nContext } from '../../i18n/I18nContext'
 import useSEO from '../../hooks/useSEO'
 import { getSEO } from '../../data/seoData'
 import {
-  citiesOfCountry, cityPath, countryBase, countryHubSocialImage,
+  citiesOfCountry, cityPath, countryBase, countryHubSocialImage, countryHubMeta,
   regionsHubPathFor, citiesHubPathFor, placesHubPathFor,
   DEFAULT_COUNTRY,
 } from '../../data/places'
@@ -133,6 +133,28 @@ const COUNTRY_LANDING = {
       places: '/images/files/lake-sevan-armenia-768.webp',
     },
   },
+  azerbaijan: {
+    pageKey: 'azerbaijan',
+    seoKey: 'azerbaijan',
+    // No approved Azerbaijani photograph yet: no `hero`, so the page renders
+    // the solid `.dest-title-band` with the H1, and no `ogImage`, so og:image
+    // is not asserted at all rather than borrowing another country's picture.
+    crumbKey: null, // -> nav.destinations.azerbaijan
+    itemListName: 'Destinations in Azerbaijan',
+    cityItemsKey: 'azerbaijanCities',
+    // The standard destination card, as on Armenia.
+    featuredCityCards: true,
+    // The strip is driven by the registry's `featured` flag rather than by
+    // "every published city": nothing is published yet, and the eight flagged
+    // cities are the ones chosen to lead. They render in registry order (the
+    // capital is first there), as non-clickable "coming soon" cards until each
+    // is flipped to `published: true`.
+    featuredByFlag: true,
+    pinFirstCity: 'baku',
+    // The three sub-hub tiles render on the brand-tone placeholder until a
+    // cover exists for each — the tile itself is never hidden.
+    subhubImages: { regions: null, cities: null, places: null },
+  },
 }
 
 /**
@@ -173,9 +195,15 @@ export default function DestinationsPage({ country = DEFAULT_COUNTRY }) {
   // A city without a cover still gets its card, on the same brand-tone
   // placeholder the sub-hub tiles use. Inert for Georgia: all 26 of its featured
   // cities have a photograph, so every Georgia tile takes the image branch.
+  //
+  // A country that opts into `featuredByFlag` lists its `featured: true` cities
+  // instead — published or not — so a scaffolded country can show which guides
+  // are coming without publishing anything. Georgia and Armenia do not opt in,
+  // so their strips are exactly what they were.
   const featuredCities = useMemo(
-    () => citiesOfCountry(country).filter((c) => c.published && c.classifyAs !== 'place'),
-    [country],
+    () => citiesOfCountry(country).filter((c) =>
+      c.classifyAs !== 'place' && (conf.featuredByFlag ? !!c.featured : c.published)),
+    [country, conf.featuredByFlag],
   )
 
   // The label a visitor actually reads. This resolves through exactly the same
@@ -205,8 +233,11 @@ export default function DestinationsPage({ country = DEFAULT_COUNTRY }) {
   // Sorted here rather than on a module-level constant because the label is
   // locale-dependent, so the order legitimately differs per language (Czech, for
   // instance, collates "Ch" after "H").
+  //
+  // A flag-driven strip (`featuredByFlag`) keeps the registry's own order
+  // instead: the flagged cities were chosen and sequenced by hand, capital first.
   const titled = featuredCities.map((c) => ({ city: c, title: cityTitle(c) }))
-  const orderedCities = [
+  const orderedCities = conf.featuredByFlag ? titled : [
     ...titled.filter((x) => x.city.slug === conf.pinFirstCity),
     ...titled
       .filter((x) => x.city.slug !== conf.pinFirstCity)
@@ -253,7 +284,7 @@ export default function DestinationsPage({ country = DEFAULT_COUNTRY }) {
   const landingSocial = countryHubSocialImage(country, 'landing')
   const socialImage = conf.ogImage || conf.hero
   useSEO({
-    ...seo, lang, path, jsonLd,
+    ...seo, lang, path, jsonLd, robots: countryHubMeta(country),
     ...(landingSocial
       ? { ogImage: landingSocial.src, ogImageWidth: landingSocial.width, ogImageHeight: landingSocial.height, imageAlt: landingSocial.alt?.[lang] || landingSocial.alt?.en }
       : (socialImage ? { image: socialImage } : {})),
@@ -334,13 +365,19 @@ export default function DestinationsPage({ country = DEFAULT_COUNTRY }) {
                   <ul className="dest-hub-grid">
                     {orderedCities.map(({ city: c, title }) => (
                       <li className="dest-hub-card" key={c.slug}>
+                        {/* An unpublished city (only possible on a flag-driven
+                            strip) gets no `to`, so DestinationCard renders its
+                            non-clickable "coming soon" form — the same one the
+                            hubs use. Every Armenian city here is published, so
+                            that page is unchanged. */}
                         <DestinationCard
                           name={title}
                           description={cityDescription(c)}
                           image={c.image}
                           imagePosition={c.imagePosition}
-                          to={cityPath(c.slug)}
+                          to={c.published ? cityPath(c.slug) : null}
                           ctaLabel={t('destinations.exploreCity')}
+                          soonLabel={t('destinations.comingSoon')}
                           headingLevel="h3"
                         />
                       </li>

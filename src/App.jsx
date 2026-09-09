@@ -133,6 +133,22 @@ export function AppRoutes() {
               outrank this route and cannot be swallowed by it. Anything that
               matches neither a guide nor a registered site renders the 404. */}
           <Route path="armenia/:citySlug/:sub" element={<CitySubPage />} />
+          {/* Azerbaijan: the same tree as Armenia, one route block per country
+              so the static-over-dynamic ranking notes above apply unchanged.
+              Every region, city and site behind these is scaffolded as
+              `published: false` in places.js, so the detail routes render the
+              404 until an entry is flipped; the landing and the three hubs
+              render now, listing everything as non-clickable "coming soon"
+              cards. */}
+          <Route path="azerbaijan" element={<DestinationsPage country="azerbaijan" />} />
+          <Route path="azerbaijan/regions" element={<RegionsHubPage country="azerbaijan" />} />
+          <Route path="azerbaijan/cities" element={<CitiesHubPage country="azerbaijan" />} />
+          <Route path="azerbaijan/places-to-visit" element={<PlacesToVisitHubPage country="azerbaijan" />} />
+          <Route path="azerbaijan/regions/:regionSlug" element={<RegionPage />} />
+          <Route path="azerbaijan/regions/:regionSlug/things-to-do" element={<ThingsToDoCityPage />} />
+          <Route path="azerbaijan/:citySlug" element={<CityPage />} />
+          <Route path="azerbaijan/:citySlug/things-to-do" element={<ThingsToDoCityPage />} />
+          <Route path="azerbaijan/:citySlug/:sub" element={<CitySubPage />} />
           {/* Legacy URL redirects -> their new /georgia home (mirror the static
               redirect stubs emitted by scripts/prerender.js). */}
           <Route path="destinations/*" element={<DestinationsRedirect />} />

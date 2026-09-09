@@ -34,7 +34,7 @@ function setLink(rel, href, attrs = {}) {
   el.setAttribute('href', href)
 }
 
-export default function useSEO({ title, description, keywords, lang = 'en', path = '', image, imageAlt, ogImage, ogImageWidth, ogImageHeight, preload, jsonLd } = {}) {
+export default function useSEO({ title, description, keywords, lang = 'en', path = '', image, imageAlt, ogImage, ogImageWidth, ogImageHeight, preload, jsonLd, robots } = {}) {
   useEffect(() => {
     // Title
     if (title) document.title = title
@@ -44,6 +44,12 @@ export default function useSEO({ title, description, keywords, lang = 'en', path
 
     // Meta keywords
     setMeta('keywords', keywords)
+
+    // Robots directive. Only a page that passes one (a scaffolded country's
+    // landing and hubs, via countryHubMeta) emits the tag; every other page
+    // passes nothing, and setMeta then removes any tag a previous page left,
+    // so a client-side navigation away from a noindex page clears it.
+    setMeta('robots', robots)
 
     // Canonical — trailing-slash form matches the URL the host actually serves
     // (200), instead of the slashless form that 301-redirects to it.
@@ -119,5 +125,5 @@ export default function useSEO({ title, description, keywords, lang = 'en', path
       document.querySelector('script[data-seo-jsonld]')?.remove()
       document.querySelector('link[data-seo-preload]')?.remove()
     }
-  }, [title, description, keywords, lang, path, image, imageAlt, ogImage, ogImageWidth, ogImageHeight, preload, jsonLd])
+  }, [title, description, keywords, lang, path, image, imageAlt, ogImage, ogImageWidth, ogImageHeight, preload, jsonLd, robots])
 }

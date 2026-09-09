@@ -6479,6 +6479,54 @@
       }
     ]
   },
+  "azerbaijan": {
+    "heroTitle": "Azerbaiyán",
+    "intro": ""
+  },
+  "azerbaijanCities": {
+    "heroTitle": "Ciudades de Azerbaiyán",
+    "intro": ""
+  },
+  "azerbaijanPlaces": {
+    "heroTitle": "Qué visitar en Azerbaiyán",
+    "intro": ""
+  },
+  "azerbaijanRegions": {
+    "heroTitle": "Regiones de Azerbaiyán",
+    "intro": "",
+    "items": {
+      "baku": {
+        "name": "Baku"
+      },
+      "absheron": {
+        "name": "Absheron Peninsula"
+      },
+      "mountainous-shirvan": {
+        "name": "Mountainous Shirvan"
+      },
+      "sheki-zagatala": {
+        "name": "Sheki-Zagatala"
+      },
+      "quba-khachmaz": {
+        "name": "Quba-Khachmaz"
+      },
+      "ganja-dashkasan": {
+        "name": "Ganja-Dashkasan"
+      },
+      "gazakh-tovuz": {
+        "name": "Gazakh-Tovuz"
+      },
+      "lankaran-astara": {
+        "name": "Lankaran-Astara"
+      },
+      "central-aran": {
+        "name": "Central Aran"
+      },
+      "nakhchivan": {
+        "name": "Nakhchivan"
+      }
+    }
+  },
   "armenia": {
     "heroTitle": "Armenia",
     "intro": "Descubre nuestra creciente colección de guías de viaje sobre Armenia, empezando por las regiones, los paisajes y los lugares culturales que definen el país."

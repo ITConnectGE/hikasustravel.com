@@ -1790,7 +1790,12 @@
 .theme-ivory .blog-item__tag,
 .theme-ivory .gallery-card__day,
 .theme-ivory .td-pricing__from,
-.theme-ivory .tour-item-card .date-chip {
+.theme-ivory .tour-item-card .date-chip,
+/* The "coming soon" note on a scaffolded destination card. Same chip as
+   every other tag here — surface, line border, pill radius — so a card that
+   is not a link yet reads as tagged rather than greyed out. The base sheet's
+   uppercase/letter-spacing stays; only the colour, box and size are the chip's. */
+.theme-ivory .dest-hub-card__soon {
   background: var(--surface);
   border: 1px solid var(--line);
   border-radius: var(--chipr);
@@ -1799,6 +1804,9 @@
   padding: 5px 12px;
   box-shadow: none;
 }
+/* The card body is a flex column, which would stretch the chip to the card's
+   full width; a tag hugs its text. */
+.theme-ivory .dest-hub-card__soon { align-self: flex-start; }
 
 .theme-ivory .tc__tag:hover,
 .theme-ivory .ptc-chip:hover {

@@ -10,8 +10,10 @@ const { withTrailingSlash } = await import(
   pathToFileURL(join(__dirname, '../src/utils/url.js')).href
 )
 
-// Published destination detail pages (regions / cities / sites) from the registry.
-const { publishedDestinationPages } = await import(
+// Published destination detail pages (regions / cities / sites) from the registry,
+// plus the per-country hub robots directive that keeps a scaffolded country's
+// landing and hubs out of the sitemap.
+const { publishedDestinationPages, countryHubIndexable } = await import(
   pathToFileURL(join(__dirname, '../src/data/places.js')).href
 )
 
@@ -82,6 +84,13 @@ const staticPages = [
   { path: 'armenia/regions', changefreq: 'monthly', priority: '0.7' },
   { path: 'armenia/cities', changefreq: 'monthly', priority: '0.7' },
   { path: 'armenia/places-to-visit', changefreq: 'monthly', priority: '0.7' },
+  // Azerbaijan's hub pages. `country` lets the filter below drop them while the
+  // country is scaffolded (its places.js record carries a noindex `hubMeta`);
+  // removing that directive is what admits them here, with no edit to this list.
+  { path: 'azerbaijan', changefreq: 'monthly', priority: '0.7', country: 'azerbaijan' },
+  { path: 'azerbaijan/regions', changefreq: 'monthly', priority: '0.7', country: 'azerbaijan' },
+  { path: 'azerbaijan/cities', changefreq: 'monthly', priority: '0.7', country: 'azerbaijan' },
+  { path: 'azerbaijan/places-to-visit', changefreq: 'monthly', priority: '0.7', country: 'azerbaijan' },
   // City detail pages and their things-to-do guides come from the destination
   // registry below (publishedDestinationPages), so they are not listed here.
   { path: 'private-tours', changefreq: 'weekly', priority: '0.9' },
@@ -104,6 +113,8 @@ const staticPages = [
 const allPaths = []
 
 for (const page of staticPages) {
+  // A country hub whose robots directive says noindex is not a sitemap URL.
+  if (page.country && !countryHubIndexable(page.country)) continue
   allPaths.push({ path: page.path, changefreq: page.changefreq, priority: page.priority })
 }
 

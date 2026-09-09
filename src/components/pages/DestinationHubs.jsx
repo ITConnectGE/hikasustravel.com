@@ -3,6 +3,7 @@ import useT from '../../i18n/useT'
 import {
   citiesOfCountry,
   countryHubSocialImage,
+  countryHubMeta,
   sites,
   regionPath,
   cityPath,
@@ -59,6 +60,18 @@ const COUNTRY_HUBS = {
     // search box and no region/city facets. Georgia keeps its filter bar.
     places: { pageKey: 'armeniaPlaces', seoKey: 'armeniaPlaces' },
   },
+  azerbaijan: {
+    // Scaffolded country: no photograph yet, so the solid `.dest-title-band`
+    // carries the H1, as on Armenia. All three hubs list every scaffolded
+    // entry as the non-clickable "coming soon" card — nothing is published
+    // yet, so a published-only listing would be three empty pages. Flipping
+    // an entry's `published` flag in places.js is what turns its card into a
+    // link; no change here is needed.
+    noHero: true,
+    regions: { pageKey: 'azerbaijanRegions', seoKey: 'azerbaijanRegions', includeUnpublished: true },
+    cities: { pageKey: 'azerbaijanCities', seoKey: 'azerbaijanCities', includeUnpublished: true, pinFirst: 'baku' },
+    places: { pageKey: 'azerbaijanPlaces', seoKey: 'azerbaijanPlaces' },
+  },
 }
 
 const clean = (p) => String(p).replace(/^\//, '')
@@ -108,6 +121,7 @@ export function RegionsHubPage({ country = DEFAULT_COUNTRY }) {
       noHero={COUNTRY_HUBS[country].noHero}
       socialImage={countryHubSocialImage(country, 'regions')}
       countryCrumb={countryCrumb}
+      robots={countryHubMeta(country)}
       entries={entries}
       currentLabelKey="nav.regions"
       ctaKey="destinations.exploreRegion"
@@ -148,6 +162,7 @@ export function CitiesHubPage({ country = DEFAULT_COUNTRY }) {
       noHero={COUNTRY_HUBS[country].noHero}
       socialImage={countryHubSocialImage(country, 'cities')}
       countryCrumb={countryCrumb}
+      robots={countryHubMeta(country)}
       entries={entries}
       currentLabelKey="nav.cities"
       ctaKey="destinations.exploreCity"
@@ -203,6 +218,7 @@ export function PlacesToVisitHubPage({ country = DEFAULT_COUNTRY }) {
       noHero={COUNTRY_HUBS[country].noHero}
       socialImage={countryHubSocialImage(country, 'places')}
       countryCrumb={countryCrumb}
+      robots={countryHubMeta(country)}
       entries={entries}
       currentLabelKey="nav.placesToVisit"
       ctaKey="destinations.explorePlace"

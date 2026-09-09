@@ -6479,6 +6479,54 @@
       }
     ]
   },
+  "azerbaijan": {
+    "heroTitle": "Azerbejdżan",
+    "intro": ""
+  },
+  "azerbaijanCities": {
+    "heroTitle": "Miasta Azerbejdżanu",
+    "intro": ""
+  },
+  "azerbaijanPlaces": {
+    "heroTitle": "Miejsca do zwiedzania w Azerbejdżanie",
+    "intro": ""
+  },
+  "azerbaijanRegions": {
+    "heroTitle": "Regiony Azerbejdżanu",
+    "intro": "",
+    "items": {
+      "baku": {
+        "name": "Baku"
+      },
+      "absheron": {
+        "name": "Absheron Peninsula"
+      },
+      "mountainous-shirvan": {
+        "name": "Mountainous Shirvan"
+      },
+      "sheki-zagatala": {
+        "name": "Sheki-Zagatala"
+      },
+      "quba-khachmaz": {
+        "name": "Quba-Khachmaz"
+      },
+      "ganja-dashkasan": {
+        "name": "Ganja-Dashkasan"
+      },
+      "gazakh-tovuz": {
+        "name": "Gazakh-Tovuz"
+      },
+      "lankaran-astara": {
+        "name": "Lankaran-Astara"
+      },
+      "central-aran": {
+        "name": "Central Aran"
+      },
+      "nakhchivan": {
+        "name": "Nakhchivan"
+      }
+    }
+  },
   "armenia": {
     "heroTitle": "Armenia",
     "intro": "Poznaj naszą rosnącą kolekcję przewodników po Armenii, zaczynając od regionów, krajobrazów i miejsc kultury, które kształtują ten kraj."

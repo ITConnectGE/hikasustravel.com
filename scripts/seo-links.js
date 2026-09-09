@@ -29,7 +29,7 @@ const src = (p) => pathToFileURL(join(__dirname, '..', 'src', p)).href
 
 const {
   regions, cities, sites, regionPath, cityPath, sitePath, thingsToDoPath,
-  countryOf, countryOfSite, countryBase, regionsHubPathFor, placesHubPathFor,
+  countryOf, countryOfSite, countryBase, regionsHubPathFor, citiesHubPathFor, placesHubPathFor,
   DEFAULT_COUNTRY,
 } = await import(src('data/places.js'))
 const { publishedBorderPages, borderHubPath } = await import(src('data/borders.js'))
@@ -56,6 +56,10 @@ const STATIC_PAGES = [
   ['armenia/regions', 'armeniaRegions'],
   ['armenia/cities', 'armeniaCities'],
   ['armenia/places-to-visit', 'armeniaPlaces'],
+  ['azerbaijan', 'azerbaijan'],
+  ['azerbaijan/regions', 'azerbaijanRegions'],
+  ['azerbaijan/cities', 'azerbaijanCities'],
+  ['azerbaijan/places-to-visit', 'azerbaijanPlaces'],
   ['private-tours', 'privateTours'],
   ['group-tours', 'groupTours'],
   ['shuttle-service', 'shuttle'],
@@ -97,12 +101,22 @@ const ARMENIA_HUB = 'armenia'
 const ARMENIA_REGIONS_HUB = 'armenia/regions'
 const ARMENIA_CITIES_HUB = 'armenia/cities'
 const ARMENIA_PLACES_HUB = 'armenia/places-to-visit'
+const AZERBAIJAN_HUB = 'azerbaijan'
+const AZERBAIJAN_REGIONS_HUB = 'azerbaijan/regions'
+const AZERBAIJAN_CITIES_HUB = 'azerbaijan/cities'
+const AZERBAIJAN_PLACES_HUB = 'azerbaijan/places-to-visit'
 // A published region's country decides which hub pair it hangs off and which
-// URLs its links use. Georgia covers every record with no `country`.
+// URLs its links use. Georgia covers every record with no `country`; any other
+// country resolves to its own hubs from places.js (for Armenia these are the
+// exact strings the constants above spell out).
 const isGeorgian = (r) => countryOf(r) === DEFAULT_COUNTRY
 const hubsFor = (r) => (isGeorgian(r)
   ? { country: GEORGIA_HUB, regions: REGIONS_HUB, cities: CITIES_HUB }
-  : { country: ARMENIA_HUB, regions: ARMENIA_REGIONS_HUB, cities: ARMENIA_CITIES_HUB })
+  : {
+      country: clean(countryBase(countryOf(r))),
+      regions: clean(regionsHubPathFor(countryOf(r))),
+      cities: clean(citiesHubPathFor(countryOf(r))),
+    })
 // A site's country is its PARENT's (countryOfSite), so its hubs are derived
 // rather than assumed. `places` is null for a country that publishes no Places
 // to Visit hub, which is why every use of it below is guarded.
@@ -225,6 +239,13 @@ export function createLinkGraph({ tours, blogArticles, tourTitle, blogTitle, seo
     put(ARMENIA_CITIES_HUB, ARMENIA_HUB, labelOfStatic(ARMENIA_HUB))
     put(ARMENIA_HUB, ARMENIA_PLACES_HUB, labelOfStatic(ARMENIA_PLACES_HUB))
     put(ARMENIA_PLACES_HUB, ARMENIA_HUB, labelOfStatic(ARMENIA_HUB))
+    // Azerbaijan's hubs, the same pairing. Its regions, cities and sites are
+    // all unpublished, so the published-only loops below add nothing under it;
+    // each hub links only its country landing and vice versa.
+    for (const hub of [AZERBAIJAN_REGIONS_HUB, AZERBAIJAN_CITIES_HUB, AZERBAIJAN_PLACES_HUB]) {
+      put(AZERBAIJAN_HUB, hub, labelOfStatic(hub))
+      put(hub, AZERBAIJAN_HUB, labelOfStatic(AZERBAIJAN_HUB))
+    }
     for (const c of pubCities) {
       // A city hangs off its own country hub and is listed on that country's
       // cities hub. Both countries now have one, so this is symmetric.

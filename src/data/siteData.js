@@ -83,6 +83,25 @@ export const destinationCountries = [
       { to: '/armenia/regions/syunik', label: 'Syunik', published: false },
     ],
   },
+  {
+    // Azerbaijan: the same four hub links as Georgia and Armenia, in the same
+    // order, reusing the same four ui keys. The landing page and hubs exist
+    // (src/App.jsx routes them to the shared components with
+    // country="azerbaijan"); every region, city and place behind them is
+    // scaffolded as `published: false` in places.js and appears on the hubs as
+    // a non-clickable "coming soon" card. Individual destinations are not
+    // surfaced here, exactly as on the other two countries.
+    id: 'azerbaijan',
+    labelKey: 'nav.destinations.azerbaijan',
+    published: true,
+    hubPath: '/azerbaijan',
+    regions: [
+      { to: '/azerbaijan', labelKey: 'nav.allDestinations', published: true },
+      { to: '/azerbaijan/regions', labelKey: 'nav.regions', published: true },
+      { to: '/azerbaijan/cities', labelKey: 'nav.cities', published: true },
+      { to: '/azerbaijan/places-to-visit', labelKey: 'nav.placesToVisit', published: true },
+    ],
+  },
 ]
 
 export const navLinks = [

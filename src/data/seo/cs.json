@@ -1149,6 +1149,21 @@
     "description": "Praktický průvodce penězi v Gruzii: lari (GEL), hotovost nebo karta, bankomaty, typické ceny, směnný kurz a spropitné — co cestovatel potřebuje vědět.",
     "keywords": "gruzínské lari, měna GEL, peníze v Gruzii, hotovost nebo karta Gruzie, bankomaty Gruzie, směnný kurz Gruzie, lari na euro, ceny Gruzie, spropitné Gruzie"
   },
+  "areni1Cave": {
+    "title": "Jeskyně Areni-1, Arménie: nejstarší vinařství na světě",
+    "description": "Průvodce jeskyní Areni-1: vinařství staré 6 100 let, nejstarší kožená bota na světě, pravěké pohřby a jak ji spojit s vínem z Areni a Noravankem.",
+    "keywords": "jeskyně Areni-1, Areni Arménie, nejstarší vinařství, nejstarší kožená bota, Vayots Dzor, řeka Arpa, Areni Noir, Noravank, arménská archeologie"
+  },
+  "amberdFortress": {
+    "title": "Pevnost Amberd, Arménie: průvodce hradem",
+    "description": "Průvodce pevností Amberd na hoře Aragats: středověký hrad ve 2 300 m, kostel Vahramashen z roku 1026, lázně a jak se tam dostat (silnice v zimě uzavřeny).",
+    "keywords": "pevnost Amberd, Amberd Arménie, hora Aragats, kostel Vahramashen, Aragatsotn, Byurakan, arménská pevnost, Pahlavuni, Zakarianové, středověká Arménie"
+  },
+  "armeniaVisaGuide": {
+    "title": "Vízum a vstup do Arménie: průvodce 2026 | Hikasus Travel",
+    "description": "Vízové a vstupní podmínky Arménie: bezvízové země, pravidlo 180 dní, e-vízum a poplatky a dočasné osvobození pro držitele povolení k pobytu.",
+    "keywords": "vízum Arménie, vstup do Arménie, Arménie bez víza, e-vízum Arménie, 180 dní Arménie, cesta do Arménie"
+  },
   "visaGuide": {
     "title": "Vízum a vstup do Gruzie: průvodce 2026",
     "description": "Kdo potřebuje vízum do Gruzie? Bezvízové země, způsobilost pro e-Vízum, nové pojistné pravidlo z roku 2026 a podmínky vstupu — s odkazem na oficiální portál.",
@@ -1479,10 +1494,40 @@
     "description": "Stránka, kterou hledáte, neexistuje. Vraťte se na hlavní stránku a prozkoumejte zájezdy v Gruzii.",
     "keywords": "stránka nenalezena, 404, Hikasus Travel"
   },
+  "azerbaijan": {
+    "title": "Průvodce Ázerbájdžánem | Hikasus Travel",
+    "description": "Průvodci po Ázerbájdžánu: regiony, města a místa k návštěvě, od Baku a Apšeronského poloostrova po Šeki, Qubu a úpatí Kavkazu.",
+    "keywords": "průvodce Ázerbájdžánem, regiony Ázerbájdžánu, návštěva Ázerbájdžánu, cíle v Ázerbájdžánu, Baku, cestování po Kavkaze"
+  },
+  "azerbaijanCities": {
+    "title": "Města Ázerbájdžánu | Hikasus Travel",
+    "description": "Města Ázerbájdžánu, od hlavního města Baku po Šeki, Gabalu, Qubu, Gandžu a Lenkoran. Průvodci po městech přibývají jeden po druhém.",
+    "keywords": "města Ázerbájdžánu, Baku, Šeki, Gabala, Gandža, kam v Ázerbájdžánu"
+  },
+  "azerbaijanPlaces": {
+    "title": "Místa k návštěvě v Ázerbájdžánu | Hikasus Travel",
+    "description": "Místa k návštěvě v Ázerbájdžánu: Staré město v Baku, petroglyfy a bahenní sopky v Gobustanu, palác šekijských chánů, Chinalug, jezero Göygöl a další.",
+    "keywords": "místa k návštěvě Ázerbájdžán, památky Ázerbájdžánu, Gobustan, palác Šeki, Chinalug, Göygöl"
+  },
+  "azerbaijanRegions": {
+    "title": "Regiony Ázerbájdžánu | Hikasus Travel",
+    "description": "Regiony Ázerbájdžánu, od Baku a Apšeronského poloostrova po Šeki-Zaqatalu, Qubu-Chačmaz, Lenkoran-Astaru a Nachičevan. Regionální průvodci přibývají jeden po druhém.",
+    "keywords": "regiony Ázerbájdžánu, Apšeron, Šeki-Zaqatala, Quba-Chačmaz, Nachičevan"
+  },
   "armenia": {
     "title": "Průvodce Arménií | Hikasus Travel",
     "description": "Prozkoumejte rostoucí sbírku průvodců po Arménii od Hikasus Travel s praktickými informacemi o regionech, krajině, historii a kultuře země.",
     "keywords": "průvodce Arménií, regiony Arménie, návštěva Arménie, cíle v Arménii, cestování po Kavkaze, Hikasus Travel"
+  },
+  "armeniaCities": {
+    "title": "Města Arménie: Jerevan a Dilijan | Hikasus Travel",
+    "description": "Průvodce městy Arménie: hlavní město Jerevan a lesnatý Dilijan v horách Tavushe. Co vidět a jak dlouho se zdržet v každém z nich.",
+    "keywords": "města Arménie, arménská města, Jerevan, Dilijan, kam v Arménii"
+  },
+  "armeniaPlaces": {
+    "title": "Místa k návštěvě v Arménii: kláštery a chrámy | Hikasus Travel",
+    "description": "Průvodce místy, která v Arménii navštívit: Chor Virap pod Araratem, Geghard, Tatev, Noravank a chrám v Garni. Co uvidíte a jak se tam dostanete.",
+    "keywords": "místa k návštěvě v Arménii, arménské kláštery, Chor Virap, Geghard, Garni, Tatev, Noravank, jezero Sevan, Ečmiadzin"
   },
   "armeniaRegions": {
     "title": "Regiony Arménie: průvodci | Hikasus Travel",
@@ -1578,5 +1623,190 @@
     "title": "Co dělat v Tavushi, Arménie: kompletní průvodce",
     "description": "To nejlepší v Tavushi: dobrodružství v Yenokavanu a Lastiveru, klášter Makaravank, odlehlé pevnosti, víno z Tavushe a lesní gastronomická kultura.",
     "keywords": "co dělat v Tavushi, Yenokavan, Yell Extreme Park, Lastiver, soutěska Khachaghbyur, Dilijan, národní park Dilijan, Haghartsin, Goshavank, jezero Parz, jezero Gosh, Jukhtak, Matosavank, Ijevan, víno z Tavushe, Kangun, Lalvari, Banants, Garan Dmak, Makaravank, Achajur, Nor Varagavank, Khoranashat, Aghjkaberd, Mantasheaberd, pevnost Berdavan, hora Dimats, vodopád Shaghot, hora Apakekar, Transcaucasian Trail, Yell Sport Fest"
+  },
+  "vayotsDzor": {
+    "title": "Vayots Dzor, Arménie: Noravank a víno z Areni",
+    "description": "Průvodce Vayots Dzorem: klášter Noravank, Areni-1 a nejstarší vinařská dílna světa, pevnost Smbataberd, lázeňský Jermuk a Orbelianský karavanseráj.",
+    "keywords": "Vayots Dzor, region Vayots Dzor, Noravank, údolí Amaghu, Areni, jeskyně Areni-1, nejstarší vinařská dílna, Areni Noir, Voskehat, Areniský vinný festival, Gnishikský kaňon, kostel svatého Astvatsatsina v Areni, Jermuk, Galerie minerální vody, vodopád Jermuk, přehrada Kechut, Gndevank, Yeghegnadzor, Gladzorská univerzita, Spitakavor, Proshaberd, Yeghegis, židovský hřbitov v Yeghegisu, kostel Zorats, Smbataberd, Tsakhats Kar, Orbelianský karavanseráj, Selimský karavanseráj, Vardenyatský průsmyk, Martiros, klášter Arates, jeskyně Mozrov, chráněná krajina Arpa"
+  },
+  "thingsToDoVayotsDzor": {
+    "title": "Co dělat ve Vayots Dzor, Arménie: kompletní průvodce",
+    "description": "To nejlepší ve Vayots Dzor: jeskyně Areni-1, areniské víno, klášter Noravank, pevnost Smbataberd, minerální prameny Jermuku a Orbelianský karavanseráj.",
+    "keywords": "co dělat ve Vayots Dzor, Areni, jeskyně Areni-1, areniské víno, Sev Areni, Voskehat, kostel svatého Astvatsatsina v Areni, Gnishikský kaňon, Noravank, Burtelashen, Momik, Jermuk, Galerie minerální vody, vodopád Jermuk, Gndevank, přehrada Kechut, Yeghegis, Smbataberd, Tsakhats Kar, židovský hřbitov v Yeghegisu, kostel Zorats, Orbelianský karavanseráj, Selimský karavanseráj, Vardenyatský průsmyk, Spitakavor, Proshaberd, Martiros, klášter Arates, Magellanova jeskyně, jeskyně Mozrov, jeskyňaření Arménie, jízda na koni Gomk, chráněná krajina Arpa, horats panir, kyalagosh"
+  },
+  "yerevan": {
+    "title": "Jerevan, Arménie: průvodce růžovým městem",
+    "description": "Průvodce Jerevanem, hlavním městem Arménie: 2 800 let dějin od Erebuni, centrum z růžového tufu, výhledy na Ararat, jídlo, víno a kdy jet.",
+    "keywords": "Jerevan, Jerevan Arménie, růžové město, Erebuni, Arin Berd, Urartu, Argishti I., náměstí Republiky, Kaskáda v Jerevanu, Matenadaran, Cicernakaberd, pevnost Erebuni, Kond, výhled na Ararat, Alexandr Tamanjan, sopečný tuf, vinné bary Sarjanova ulice, trh Vernissage, trh GUM, chorovac, dolma, harissa, lavaš, letiště Zvartnots, arménský dram, kdy jet do Jerevanu"
+  },
+  "thingsToDoYerevan": {
+    "title": "Co dělat v Jerevanu: 15 nejlepších míst a nápadů",
+    "description": "To nejlepší v Jerevanu v Arménii: náměstí Republiky, Kaskáda, Matenadaran, Cicernakaberd, pevnost Erebuni, trhy, vinné bary a další.",
+    "keywords": "co dělat v Jerevanu, náměstí Republiky, Kaskáda v Jerevanu, Cafesjianovo centrum, Matenadaran, Cicernakaberd, památník genocidy Arménů, pevnost Erebuni, Historické muzeum Arménie, Modrá mešita v Jerevanu, trh Vernissage, trh GUM, Kond, chorovac, dolma, harissa, ghapama, lavaš, sujukh, vinné bary Sarjanova ulice, arménská brandy, Park vítězství, Matka Arménie, Katoghike, Zoravor, sovětská architektura Jerevan, jerevanské metro, Muzeum Paradžanova, výlety z Jerevanu"
+  },
+  "etchmiadzin": {
+    "title": "Etchmiadzin, Arménie: Matka katedrála a kostely",
+    "description": "Průvodce Etchmiadzinem: Matka katedrála arménské církve, svatá Hripsime, svatá Gayane, Manoogianova klenotnice a nedaleký Zvartnots.",
+    "keywords": "Etchmiadzin, Vagharshapat, Etchmiadzin Arménie, Matka stolec svatého Etchmiadzinu, Matka katedrála, katedrála v Etchmiadzinu, svatá Hripsime, svatá Gayane, svatá Shoghakat, klenotnice Alexe a Marie Manoogianových, Gevorkianský teologický seminář, katolikos všech Arménů, Zvartnots, UNESCO Arménie, Armavir, Arménská apoštolská církev, Trdat III., Řehoř Osvětitel, Hovnatanianovy fresky, výlet z Jerevanu"
+  },
+  "thingsToDoGarni": {
+    "title": "Co dělat v Garni, Arménie: chrám a soutěska",
+    "description": "To nejlepší, co dělat v Garni: pohanský chrám a lázně, Symfonie kamenů, procházky soutěskou, pečení lavashe a klášter Geghard výše v údolí.",
+    "keywords": "co dělat v Garni, chrám v Garni, lázně v Garni, hypokaust, mozaiková podlaha, Symfonie kamenů, soutěska Azatu, řeka Azat, procházka soutěskou Garni, pečení lavashe, tonir, brduch, pulpulak, kostel svatého Mashtotse, klášter Geghard, skalní kostely, Charentsův oblouk, hora Ararat, Vardavar, Astghik, Alexander Sahinian, anastylóza, Trdat I., Mihr, Khosrovidukht, výlet z Jerevanu"
+  },
+  "armenianKhachkar": {
+    "title": "Arménský chačkar | Význam, symbolika a dědictví UNESCO",
+    "description": "Zjistěte, co je arménský chačkar, co znamenají jeho symboly, jak se křížové kameny tesají, co uznává UNESCO a kde je v Arménii vidět.",
+    "keywords": "Arménský chačkar, význam chačkaru, křížový kámen Arménie, symbolika chačkaru, nehmotné kulturní dědictví UNESCO chačkar, chačkary Noratus, Momik, chačkary Noravank, chačkar Amenaprkich, chačkar Haghpat 1273, kolo věčnosti, arménské kamenictví, řemeslo chačkarů, tuf Arménie, kde vidět chačkary"
+  },
+  "zoratsKarer": {
+    "title": "Zorats Karer Arménie | Archeologická lokalita a průvodce",
+    "description": "Navštivte Zorats Karer u Sisianu, pravěkou archeologickou lokalitu stojících kamenů v Syuniku: historie, sporné teorie, přístup a praktické informace.",
+    "keywords": "Zorats Karer, Karahunj, Carahunge, arménský Stonehenge, stojící kameny Arménie, Sisian, Syunik, doba bronzová Arménie, observatoř Zorats Karer, Elma Parsamyan, Paris Heruni, otvory v kamenech Zorats Karer, otevírací doba Zorats Karer, vstupné Zorats Karer, archeologická rezervace Arménie"
+  },
+  "mountAragats": {
+    "title": "Hora Aragats | Nejvyšší hora Arménie a průvodce túrami",
+    "description": "Poznejte horu Aragats, s 4 090 m nejvyšší arménskou horu: čtyři vrcholy, jezero Kari, trasy, sezonu, přístup a praktické rady k bezpečnosti.",
+    "keywords": "Hora Aragats, Aragats Arménie, nejvyšší hora Arménie, jezero Kari, čtyři vrcholy Aragatsu, severní vrchol 4090, jižní vrchol Aragats túra, Aragatsotn, pevnost Amberd, Aragats a Ararat, silnice k jezeru Kari, gravitační kopec Aragats, kráter Aragatsu, turistika v Arménii, Aragats výlet z Jerevanu"
+  },
+  "symphonyOfStones": {
+    "title": "Symfonie kamenů Garni | Čedičové sloupy a průvodce",
+    "description": "Navštivte Symfonii kamenů v soutěsce Garni: přírodní stěnu čedičových sloupů pod chrámem v Garni. Přístup, geologie a praktické rady pro návštěvu.",
+    "keywords": "Symfonie kamenů, čedičové varhany Arménie, soutěska Garni, kaňon řeky Azat, čedičové sloupy Arménie, sloupcovitá odlučnost, chrám v Garni, klášter Geghard, Kotayk, vstupné Symfonie kamenů, sestup od chrámu v Garni, Symfonie kamenů z Jerevanu, horní údolí Azatu UNESCO, šestiboké čedičové sloupy, výlet Arménie"
+  },
+  "tsitsernakaberdMemorial": {
+    "title": "Památník Cicernakaberd v Jerevanu | Průvodce pro návštěvníky",
+    "description": "Navštivte pamětní komplex Cicernakaberd v Jerevanu, hlavní arménský památník genocidy: historie, symbolika, pravidla chování a praktické informace.",
+    "keywords": "Cicernakaberd, památník genocidy Arménů, pamětní komplex Cicernakaberd, věčný oheň Jerevan, svatyně Věčnosti, stéla Znovuzrozená Arménie, Zeď paměti, Alej paměti, pamětní park Cicernakaberd, Arthur Tarkhanyan, Sashur Kalashyan, 24. dubna den památky, dvanáct desek Cicernakaberd, kopec Cicernakaberd, památník Jerevan"
+  },
+  "armenianGenocideMuseum": {
+    "title": "Muzeum genocidy Arménů v Jerevanu | Průvodce pro návštěvníky",
+    "description": "Navštivte Muzeum-institut genocidy Arménů a památník Cicernakaberd v Jerevanu: historie, vstupné, otevírací doba, prohlídky a praktické informace.",
+    "keywords": "Muzeum genocidy Arménů, Muzeum-institut genocidy Arménů, Cicernakaberd, památník Jerevan, věčný oheň Jerevan, stéla Znovuzrozená Arménie, pamětní zeď Cicernakaberd, Den památky obětí genocidy Arménů, 24. dubna Jerevan, Arthur Tarkhanyan, Sashur Kalashyan, International Journal of Armenian Genocide Studies, vstupné muzeum Jerevan, prohlídky Cicernakaberd, muzea v Jerevanu"
+  },
+  "republicSquare": {
+    "title": "Náměstí Republiky v Jerevanu | Historie, budovy a fontány",
+    "description": "Navštivte náměstí Republiky v centru Jerevanu: architektura z růžového tufu, Vládní dům, muzea a sezonní zpívající fontány.",
+    "keywords": "Náměstí Republiky Jerevan, Hraparak, zpívající fontány Jerevan, Vládní dům Jerevan, Historické muzeum Arménie, Národní galerie Arménie, Alexandr Tamanjan, generel z roku 1924, Leninovo náměstí Jerevan, růžový tuf Jerevan, metro náměstí Republiky, sametová revoluce 2018, Severní třída, náměstí Republiky v noci, co dělat v Jerevanu"
+  },
+  "operaAndBalletTheatre": {
+    "title": "Divadlo opery a baletu v Jerevanu | Průvodce",
+    "description": "Navštivte Divadlo opery a baletu v Jerevanu od Alexandra Tamanjana: historie, architektura, představení, prohlídky a praktické rady pro návštěvu.",
+    "keywords": "Opera Jerevan, Divadlo opery a baletu Jerevan, Národní akademické divadlo opery a baletu A. Spendiaryana, Arménská národní opera, Alexandr Tamanjan, Gevorg Tamanjan, Almast, Koncertní síň Arama Khachaturiana, náměstí Svobody Jerevan, Divadelní náměstí, Opera Tour Jerevan, Labutí jezero Jerevan, Tumanyanova ulice, vstupenky opera Jerevan, co dělat v Jerevanu"
+  },
+  "cascadeMonument": {
+    "title": "Kaskáda v Jerevanu | Umění, výhledy a průvodce",
+    "description": "Navštivte Kaskádu v Jerevanu: monumentální schodiště s 572 stupni, současné umění, galerie Cafesjian, výhledy na město i na Ararat.",
+    "keywords": "Kaskáda Jerevan, monument Kaskáda, komplex Kaskáda, stupně Kaskády, 572 stupňů, Cafesjian Center for the Arts, sochařská zahrada Cafesjian, eskalátor Kaskáda, výhled na Ararat z Kaskády, Tamanjanova ulice, Jim Torosyan, Gerard Cafesjian, Cascade Cultural Hub, je Kaskáda dokončená, co dělat v Jerevanu"
+  },
+  "geghardMonastery": {
+    "title": "Klášter Geghard, Arménie: skalní kostely UNESCO",
+    "description": "Průvodce klášterem Geghard v Arménii: do skály vytesané kostely zapsané na seznamu UNESCO, Svaté kopí, hrobky Proshyanů, akustika a návštěva spolu s Garni.",
+    "keywords": "klášter Geghard, Geghardavank, Ayrivank, horní údolí Azatu, Kotayk, skalní kostely, Katoghike, gavit, Zakare, Ivane, Zakariani, královna Tamar, hrobky Proshyanů, Svaté kopí, apoštol Tadeáš, klenotnice Etchmiadzin, chačkar, UNESCO Arménie, Haagská úmluva, Řehoř Osvětitel, Garni, Symfonie kamenů, Charentsův oblouk, výlet z Jerevanu"
+  },
+  "thingsToDoGoris": {
+    "title": "Co dělat v Gorisu, Arménie: kompletní průvodce",
+    "description": "To nejlepší, co dělat v Gorisu: jeskynní obydlí Starého Khndzoresku, Hin Khot, klášter Tatev a Wings of Tatev, Ďáblův most a silnice do Sisianu.",
+    "keywords": "co dělat v Gorisu, Starý Khndzoresk, visutý most Khndzoresk, jeskynní obydlí, Hin Khot, Legends Trail, Starý Goris, Kamenný les, klášter Tatev, Wings of Tatev, Halidzor, Ďáblův most, Vorotanská soutěska, túra Tatev, Zorats Karer, Karahunj, vodopád Shaki, Sisian, Sisavan, Vayots Dzor, Kapan, hora Khustup, Vahanavank, pevnost Halidzor, Meghri, jižní Arménie"
+  },
+  "tsaghkadzor": {
+    "title": "Tsaghkadzor, Arménie: lyžařské středisko a lanovka",
+    "description": "Průvodce Tsaghkadzorem, hlavním lyžařským střediskem Arménie hodinu od Jerevanu: svahy hory Teghenis, celoroční lanovka, klášter Kecharis a kdy jet.",
+    "keywords": "Tsaghkadzor, Tsaghkadzor Arménie, Kotayk, hora Teghenis, lyžařské středisko Tsaghkadzor, lyžování v Arménii, lanovka, sedačkové lanovky Leitner, klášter Kecharis, Pahlavuni, Proshyan, gavit, chačkar, dům-muzeum bratří Orbeliů, olympijský sportovní areál, Aršakovci, Hrazdan, jezero Sevan, Sevanavank, Dilijan, Garni, Geghard, hora Ararat, výlet z Jerevanu"
+  },
+  "sevan": {
+    "title": "Sevan, Arménie | Průvodce jezerem Sevan",
+    "description": "Navštivte Sevan, arménskou bránu k jezeru Sevan: Sevanavank, pláže, místní kuchyni, cestu z Jerevanu a praktické rady pro poznávání Gegharkuniku.",
+    "keywords": "Sevan, město Sevan Arménie, jezero Sevan, klášter Sevanavank, poloostrov Sevan, Gegharkunik, Yelenovka, molokani, subotníci, iškhan, sevanský pstruh, pláže jezera Sevan, Sevan z Jerevanu, Dilijan, Hayravank, Noratus, Gavar, arménské jezero, Sevan v zimě"
+  },
+  "sisian": {
+    "title": "Sisian, Arménie | Zorats Karer, Shaki a průvodce cestou",
+    "description": "Navštivte Sisian v arménském Syuniku, vysočinnou základnu pro Zorats Karer, vodopád Shaki, petroglyfy Ukhtasaru, Sisavan a jižní Arménii.",
+    "keywords": "Sisian, Sisian Arménie, Zorats Karer, Karahunj, vodopád Shaki, petroglyfy Ukhtasar, kostel Sisavan, historické muzeum Sisian, Nikoghayos Adonts, Hamo Sahyan, Vorotan, Vorotnavank, památník Aghitu, přehrada Tolors, kostel Surb Karapet, Syunik, Goris, Tatev, cesta jižní Arménií"
+  },
+  "oshakan": {
+    "title": "Oshakan, Arménie | Mesrop Mashtots a průvodce návštěvou",
+    "description": "Navštivte Oshakan v arménské provincii Aragatsotn, místo posledního odpočinku Mesropa Mashtotse: kostel, dědictví arménské abecedy, historie a rady k cestě.",
+    "keywords": "Oshakan, Oshakan Arménie, Mesrop Mashtots, kostel svatého Mesropa Mashtotse, hrob Mesropa Mashtotse, arménská abeceda, Aragatsotn, Didikond, urartská pevnost, Vahan Amatuni, Hmayeak Mamikonian, Faustus, Pavstos Buzand, rod Amatuni, Ayrarat, památník arménské abecedy, Artashavan, Ashtarak, katolikos Gevorg IV., památník z roku 1962"
+  },
+  "jermuk": {
+    "title": "Jermuk, Arménie | Lázně, vodopád a průvodce cestou",
+    "description": "Navštivte Jermuk, arménské horské lázeňské město ve Vayots Dzor: minerální prameny, pitnou halu, vodopád, přírodu, wellness a praktické rady k cestě.",
+    "keywords": "Jermuk, Jermuk Arménie, pitná hala minerální vody Jermuk, vodopád Jermuk, Vlasy mořské panny, soutěska Arpa, Vayots Dzor, klášter Gndevank, princezna Sopi ze Sjuniku, přehrada Kechut, lanovka Jermuk, lázeňské město Arménie, minerální prameny Arménie, Jermuk z Jerevanu, Jermuk v zimě, Noravank, Areni, Tsaghkadzor, wellness Arménie"
+  },
+  "gyumri": {
+    "title": "Gyumri, Arménie | Průvodce a co vidět",
+    "description": "Navštivte Gyumri, druhé největší město Arménie, známé historickými ulicemi Kumayri, architekturou z černého tufu, muzei, kuchyní a osobitým rázem.",
+    "keywords": "Gyumri, Gyumri Arménie, Kumayri, historická čtvrť Kumayri, Alexandropol, Leninakan, Shirak, náměstí Vardanants, Černá pevnost, Sev Berd, kostel svatého Spasitele, Amenaprkich, Dzitoghtsyanovo muzeum, galerie sester Aslamazyanových, Avetik Isahakyan, Hovhannes Shiraz, Mher Mkrtchyan, Sergey Merkurov, letiště Shirak, panrkhash, yaghli, kovářství Gyumri, zemětřesení ve Spitaku 1988, druhé největší město Arménie"
+  },
+  "zvartnotsTemple": {
+    "title": "Zvartnots, Arménie | Zřícenina UNESCO a průvodce návštěvou",
+    "description": "Navštivte Zvartnots, zříceninu monumentální arménské katedrály ze 7. století u Etchmiadzinu: dějiny UNESCO, architektura, výhled na Ararat a rady k návštěvě.",
+    "keywords": "Zvartnots, katedrála Zvartnots, zřícenina Zvartnots, katolikos Nerses III., Nerses Stavitel, Toros Toramanian, Khachik Dadian, tetrakoncha s ochozem, Etchmiadzin, Vagharshapat, Armavir, Araratská rovina, hora Ararat, Constans II., Řehoř Osvětitel, Trdat III., Rusa II., UNESCO Arménie, středověká arménská architektura, letiště Zvartnots"
+  },
+  "saintMesropMashtotsChurch": {
+    "title": "Kostel svatého Mesropa Mashtotse, Oshakan | Průvodce Arménií",
+    "description": "Navštivte kostel svatého Mesropa Mashtotse v Oshakanu, místo posledního odpočinku tvůrce arménské abecedy: historie, hrob, fresky a praktické rady k návštěvě.",
+    "keywords": "kostel svatého Mesropa Mashtotse, Mesrop Mashtots, hrob Mesropa Mashtotse, Oshakan, Aragatsotn, arménská abeceda, Vahan Amatuni, Hmayeak Mamikonian, Koriun, Movses Khorenatsi, katolikos Gevorg IV., Philippos Agbaketsi, Sahak Partev, Sláva arménskému písmu a literatuře, Hovhannes Minasian, Henrik Mamian, svátek svatých překladatelů, aragatsotnská diecéze, Ashtarak, památník arménské abecedy"
+  },
+  "tatevMonastery": {
+    "title": "Klášter Tatev, Arménie: historie a Wings of Tatev",
+    "description": "Navštivte klášter Tatev na jihu Arménie: jeho středověké dějiny, tatevskou univerzitu, sloup Gavazan, lanovku Wings of Tatev a praktické rady k návštěvě.",
+    "keywords": "klášter Tatev, Tatev, Wings of Tatev, Vorotanská soutěska, Syunik, Goris, Halidzor, tatevská univerzita, Hovhan Vorotnetsi, Grigor Tatevatsi, sloup Gavazan, svatý Pavel a Petr, Surb Astvatsatsin, syunikská metropolie, nejdelší kyvadlová lanovka, Ďáblův most, Velká poustevna Tatev, Starý Khndzoresk, jižní Arménie, středověká arménská architektura"
+  },
+  "sevanavankMonastery": {
+    "title": "Klášter Sevanavank, Arménie: průvodce návštěvou u jezera Sevan",
+    "description": "Průvodce klášterem Sevanavank u jezera Sevan: jeho kostely z roku 874, proměna ostrova v poloostrov, výhled, cesta z Jerevanu a praktické rady k návštěvě.",
+    "keywords": "klášter Sevanavank, Sevanavank, jezero Sevan, poloostrov Sevan, Gegharkunik, Surp Arakelots, Surp Astvatsatsin, Surb Harutyun, princezna Mariam, Ašot I., Bagratovci, Vasak Gabur, katolikos Mashtots, klášter Sevan Arménie, Sevanavank z Jerevanu, hřbitov v Noratusu, Dilijan, chačkar, středověká arménská architektura, výlet Arménie"
+  },
+  "sanahinMonastery": {
+    "title": "Klášter Sanahin, Arménie: průvodce památkou UNESCO v Lori",
+    "description": "Průvodce klášterem Sanahin v Lori: jeho akademie, rukopisná tradice, Muzeum bratří Mikojanových, dědictví UNESCO a návštěva společně s Haghpatem.",
+    "keywords": "klášter Sanahin, Sanahin, Lori, Debedský kaňon, Surb Astvatsatsin, Surb Amenaprkich, svatý Hakob, Abas I. Bagratuni, Ashot III. Milosrdný, Khosrovanush, akademie Řehoře Magistra, Anania Sanahnetsi, Hakobos Karapnetsi, Vache Vachutyan, Kiurikovci, Sanahinský most, Haghpat, Alaverdi, Anastas Mikojan, Artem Mikojan, Mikojan-Gurevič, MiG, Akhtala, Odzun, Kobayr, UNESCO Arménie, chačkar, gavit, skriptorium"
+  },
+  "noravankMonastery": {
+    "title": "Klášter Noravank, Arménie: Momikovo mistrovské dílo",
+    "description": "Průvodce klášterem Noravank: dvoupodlažní Burtelashen, Momikovy řezby a hrob, dynastie Orbelianů a návštěva společně s Areni.",
+    "keywords": "klášter Noravank, Noravank, soutěska Amaghu, údolí Amaghu, Vayots Dzor, Orbeliané, Burtel Orbelian, Burtelashen, svatá Astvatsatsin, svatý Karapet, svatý Grigor, Momik, chačkar, gavit, Areni, jeskyně Areni-1, Khor Virap, Jermuk, Yeghegnadzor, Sisian, Goris, Tatev, předběžný seznam UNESCO, středověká arménská architektura, erb Orbelianů"
+  },
+  "khorVirapMonastery": {
+    "title": "Klášter Khor Virap, Arménie: pohled na Ararat",
+    "description": "Průvodce Khor Virapem: jáma Řehoře Osvětitele, přijetí křesťanství Arménií roku 301, klasický pohled na horu Ararat a ruiny starověkého Artashatu.",
+    "keywords": "Khor Virap, klášter Khor Virap, region Ararat, Řehoř Osvětitel, král Trdat III., hluboká kobka, 301 n. l., křesťanství Arménie, kostel svaté Astvatsatsin, kaple svatého Gevorga, starověký Artashat, král Artashes I., artaxiovská dynastie, Dvin, pohled na horu Ararat, Araratská rovina, Areni, Noravank, Vayots Dzor, výlet z Jerevanu, arménská apoštolská církev"
+  },
+  "noratusCemetery": {
+    "title": "Hřbitov v Noratusu, Arménie: průvodce chačkary",
+    "description": "Průvodce hřbitovem v Noratusu: největší pole středověkých chačkarů v Arménii, řemeslná tradice uznaná UNESCO a návštěva společně s jezerem Sevan.",
+    "keywords": "hřbitov v Noratusu, Noratus, Noraduz, chačkar, arménské kamenné kříže, Gegharkunik, jezero Sevan, Gavar, Hayravank, Sevanavank, Kiram Kazmogh, Arakel, Meliset, katolikos Vazgen I., British Museum, Timur, Tamerlán, kostel Svaté Panny, poloostrov Noratus, průsmyk Vardenyats, karavanseráj Orbelianů, Vayots Dzor, středověké arménské umění, nemateriální kulturní dědictví"
+  },
+  "mountArarat": {
+    "title": "Hora Ararat, Arménie: kde a jak ji uvidíte",
+    "description": "Průvodce horou Ararat: nejlepší vyhlídky od Khor Virapu, z Jerevanu a od Charentsova oblouku, její symbolika a proč leží mimo hranice Arménie.",
+    "keywords": "hora Ararat, Ararat Arménie, Velký Ararat, Malý Ararat, Masis, Khor Virap, Araratská rovina, region Ararat, Armavir, Jerevan, Charentsův oblouk, Voghjaberd, Rafayel Israyelian, Yeghishe Charents, Matka Arménie, Sardarapat, hora Aragats, Garni, Geghard, Areni, Noravank, Noemova archa, státní znak Arménie, vyhlídka na Ararat, fotografování Arménie"
+  },
+  "lakeSevan": {
+    "title": "Jezero Sevan, Arménie: Sevanavank a pláže",
+    "description": "Průvodce jezerem Sevan: klášter Sevanavank, Hayravank a Noratus, pláže a vodní sporty a jak jezero spojit s Dilijanem nebo Vayots Dzorem.",
+    "keywords": "jezero Sevan, Sevan Arménie, Gegharkunik, Sevanavank, Surp Arakelots, Surp Astvatsatsin, Surb Harutyun, princezna Mariam, Ashot I., Vasak Gabur, katolikos Mashtots, Hayravank, Noratus, Gavar, Shorzha, Národní park Sevan, Ramsar, Ishkhan, sevanský pstruh, Velký Sevan, Malý Sevan, Gegham, Vardenis, Pambak, Areguni, Dilijan, průsmyk Vardenyats, karavanseráj Orbelianů, Vayots Dzor, Tsaghkadzor, vodní sporty Arménie"
+  },
+  "haghpatMonastery": {
+    "title": "Klášter Haghpat, Arménie: průvodce památkou UNESCO v Lori",
+    "description": "Průvodce klášterem Haghpat v Lori: svatý Nshan, středověké chačkary, skriptorium a refektář, dědictví UNESCO a návštěva společně se Sanahinem.",
+    "keywords": "klášter Haghpat, Haghpat, Lori, Debedský kaňon, královna Khosrovanush, Ashot III. Milosrdný, bagratovská dynastie, svatý Nshan, architekt Trdat, katedrála v Ani, Hagia Sofia, Sanahin, Sanahinský most, chačkar Amenaprkich, Hamazaspova kaple, skriptorium, refektář, pevnost Kayan, Kayanberd, Aknaberd, Akhtala, Odzun, Alaverdi, Vanadzor, UNESCO Arménie, chačkar, gavit, severní Arménie"
+  },
+  "goris": {
+    "title": "Goris, Arménie: kamenné domy a jeskynní vesnice",
+    "description": "Průvodce Gorisem: historická kamenná architektura, jeskynní osada Starý Goris, vlastivědné muzeum a jak se dostat do Tatevu a Khndzoresku.",
+    "keywords": "Goris, Goris Arménie, Syunik, Zangezur, Starý Goris, Kyores, Vararakn, Kamenný les, vlastivědné muzeum Goris, Aksel Bakunts, dům-muzeum Aksela Bakuntse, Starý Khndzoresk, visutý most, Hin Khot, Legends Trail, HIKEArmenia, klášter Tatev, Wings of Tatev, Halidzor, Ďáblův most, Vorotan, Zorats Karer, Karahunj, Sisian, vodopád Shaki, Kapan, kyalagosh, chorotan, ghavurma, jižní Arménie"
+  },
+  "garni": {
+    "title": "Chrám v Garni, Arménie: průvodce pohanskou lokalitou",
+    "description": "Průvodce arménským Garni: řecko-římský chrám z 1. století nad soutěskou Azatu, čedičové sloupy Symfonie kamenů a jak jej spojit s Geghardem.",
+    "keywords": "Garni, chrám v Garni, Garni Arménie, Kotayk, soutěska Azatu, řeka Azat, Symfonie kamenů, čedičové sloupy, Trdat I., Mihr, anastylóza, Alexander Sahinian, zemětřesení 1679, lázně v Garni, hypokaust, mozaiková podlaha, Khosrovidukht, klášter Geghard, Charentsův oblouk, hora Ararat, lavash, tonir, výlet z Jerevanu"
+  },
+  "dilijan": {
+    "title": "Dilijan, Arménie: lesy, kláštery a túry",
+    "description": "Průvodce Dilijanem, arménským lesním městem v Tavushi: Národní park Dilijan, kláštery Haghartsin a Goshavank, turistické stezky a kdy jet.",
+    "keywords": "Dilijan, Dilijan Arménie, Tavush, Národní park Dilijan, Haghartsin, Goshavank, Mkhitar Gosh, Jukhtak, Matosavank, jezero Parz, jezero Gosh, hora Dimats, Aghstev, Sharambeyan Street, Arménské muzeum textilu, Transcaucasian Trail, turistika Arménie, arménské lesy, malé Švýcarsko Arménie, Ijevan, Yenokavan, jezero Sevan, gata, chorovac, kdy jet do Dilijanu"
   }
 }

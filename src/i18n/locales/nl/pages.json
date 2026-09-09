@@ -6479,6 +6479,54 @@
       }
     ]
   },
+  "azerbaijan": {
+    "heroTitle": "Azerbeidzjan",
+    "intro": ""
+  },
+  "azerbaijanCities": {
+    "heroTitle": "Steden van Azerbeidzjan",
+    "intro": ""
+  },
+  "azerbaijanPlaces": {
+    "heroTitle": "Bezienswaardigheden in Azerbeidzjan",
+    "intro": ""
+  },
+  "azerbaijanRegions": {
+    "heroTitle": "Regio's van Azerbeidzjan",
+    "intro": "",
+    "items": {
+      "baku": {
+        "name": "Baku"
+      },
+      "absheron": {
+        "name": "Absheron Peninsula"
+      },
+      "mountainous-shirvan": {
+        "name": "Mountainous Shirvan"
+      },
+      "sheki-zagatala": {
+        "name": "Sheki-Zagatala"
+      },
+      "quba-khachmaz": {
+        "name": "Quba-Khachmaz"
+      },
+      "ganja-dashkasan": {
+        "name": "Ganja-Dashkasan"
+      },
+      "gazakh-tovuz": {
+        "name": "Gazakh-Tovuz"
+      },
+      "lankaran-astara": {
+        "name": "Lankaran-Astara"
+      },
+      "central-aran": {
+        "name": "Central Aran"
+      },
+      "nakhchivan": {
+        "name": "Nakhchivan"
+      }
+    }
+  },
   "armenia": {
     "heroTitle": "Armenië",
     "intro": "Ontdek onze groeiende verzameling reisgidsen over Armenië, te beginnen met de regio's, landschappen en culturele plekken die het land vormgeven."

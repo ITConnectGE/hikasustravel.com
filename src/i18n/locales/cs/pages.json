@@ -6479,6 +6479,54 @@
       }
     ]
   },
+  "azerbaijan": {
+    "heroTitle": "Ázerbájdžán",
+    "intro": ""
+  },
+  "azerbaijanCities": {
+    "heroTitle": "Města Ázerbájdžánu",
+    "intro": ""
+  },
+  "azerbaijanPlaces": {
+    "heroTitle": "Místa k návštěvě v Ázerbájdžánu",
+    "intro": ""
+  },
+  "azerbaijanRegions": {
+    "heroTitle": "Regiony Ázerbájdžánu",
+    "intro": "",
+    "items": {
+      "baku": {
+        "name": "Baku"
+      },
+      "absheron": {
+        "name": "Absheron Peninsula"
+      },
+      "mountainous-shirvan": {
+        "name": "Mountainous Shirvan"
+      },
+      "sheki-zagatala": {
+        "name": "Sheki-Zagatala"
+      },
+      "quba-khachmaz": {
+        "name": "Quba-Khachmaz"
+      },
+      "ganja-dashkasan": {
+        "name": "Ganja-Dashkasan"
+      },
+      "gazakh-tovuz": {
+        "name": "Gazakh-Tovuz"
+      },
+      "lankaran-astara": {
+        "name": "Lankaran-Astara"
+      },
+      "central-aran": {
+        "name": "Central Aran"
+      },
+      "nakhchivan": {
+        "name": "Nakhchivan"
+      }
+    }
+  },
   "armenia": {
     "heroTitle": "Arménie",
     "intro": "Prozkoumejte naši rostoucí sbírku cestovních průvodců po Arménii, počínaje regiony, krajinou a kulturními místy, která zemi utvářejí."

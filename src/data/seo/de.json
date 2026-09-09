@@ -1149,6 +1149,21 @@
     "description": "Ein praktischer Geldratgeber für Georgien: der Lari (GEL), Bargeld oder Karte, Geldautomaten, typische Preise, der Wechselkurs und Trinkgeld — was Reisende wissen müssen.",
     "keywords": "georgischer Lari, Währung GEL, Geld in Georgien, Bargeld oder Karte Georgien, Geldautomaten Georgien, Wechselkurs Georgien, Lari in Euro, Preise Georgien, Trinkgeld Georgien"
   },
+  "areni1Cave": {
+    "title": "Höhle Areni-1, Armenien: die älteste Weinkellerei der Welt",
+    "description": "Ein Führer zur Höhle Areni-1: die 6.100 Jahre alte Weinkellerei, der älteste Lederschuh der Welt, prähistorische Bestattungen und die Verbindung mit Areni-Wein und Noravank.",
+    "keywords": "Höhle Areni-1, Areni Armenien, älteste Weinkellerei, ältester Lederschuh, Vayots Dzor, Fluss Arpa, Areni Noir, Noravank, armenische Archäologie"
+  },
+  "amberdFortress": {
+    "title": "Festung Amberd, Armenien: Reiseführer zur Burg",
+    "description": "Ein Führer zur Festung Amberd am Berg Aragats: die mittelalterliche Burg auf 2.300 m, die Vahramashen-Kirche von 1026, das Badehaus und der Besuch (Straßen im Winter gesperrt).",
+    "keywords": "Festung Amberd, Amberd Armenien, Berg Aragats, Vahramashen-Kirche, Aragatsotn, Byurakan, armenische Festung, Pahlavuni, Zakarian, mittelalterliches Armenien"
+  },
+  "armeniaVisaGuide": {
+    "title": "Visum & Einreise Armenien: Leitfaden 2026 | Hikasus Travel",
+    "description": "Visum- und Einreisebestimmungen für Armenien: visumfreie Länder, die 180-Tage-Regel, e-Visum mit Gebühren und die befristete Befreiung für Aufenthaltstitel.",
+    "keywords": "Visum Armenien, Einreise Armenien, Armenien visumfrei, Armenien e-Visum, 180 Tage Armenien, Reise nach Armenien"
+  },
   "visaGuide": {
     "title": "Visum & Einreise nach Georgien: Leitfaden 2026",
     "description": "Wer braucht ein Visum für Georgien? Visumfreie Länder, e-Visum-Berechtigung, die neue Versicherungspflicht 2026 und die Einreisebestimmungen — mit Link zum offiziellen Portal.",
@@ -1479,10 +1494,40 @@
     "description": "Die gesuchte Seite existiert nicht. Kehren Sie zur Startseite zurück, um Touren in Georgien zu entdecken.",
     "keywords": "Seite nicht gefunden, 404, Hikasus Travel"
   },
+  "azerbaijan": {
+    "title": "Reiseführer Aserbaidschan | Hikasus Travel",
+    "description": "Reiseführer für Aserbaidschan: Regionen, Städte und Sehenswürdigkeiten, von Baku und der Halbinsel Absheron bis Sheki, Quba und den Ausläufern des Kaukasus.",
+    "keywords": "Reiseführer Aserbaidschan, Regionen Aserbaidschans, Aserbaidschan besuchen, Reiseziele Aserbaidschan, Baku, Reisen Kaukasus"
+  },
+  "azerbaijanCities": {
+    "title": "Städte Aserbaidschans | Hikasus Travel",
+    "description": "Die Städte Aserbaidschans, von der Hauptstadt Baku bis Sheki, Gabala, Quba, Ganja und Lankaran. Die Stadtführer werden nach und nach ergänzt.",
+    "keywords": "Städte in Aserbaidschan, Baku, Sheki, Gabala, Ganja, wohin in Aserbaidschan"
+  },
+  "azerbaijanPlaces": {
+    "title": "Sehenswürdigkeiten in Aserbaidschan | Hikasus Travel",
+    "description": "Sehenswürdigkeiten in Aserbaidschan: die Altstadt von Baku, die Petroglyphen und Schlammvulkane von Gobustan, der Palast der Sheki-Khane, Khinalig, der Göygöl-See und mehr.",
+    "keywords": "Sehenswürdigkeiten Aserbaidschan, Gobustan, Palast von Sheki, Khinalig, Göygöl, was sehen in Aserbaidschan"
+  },
+  "azerbaijanRegions": {
+    "title": "Regionen Aserbaidschans | Hikasus Travel",
+    "description": "Die Regionen Aserbaidschans, von Baku und der Halbinsel Absheron bis Sheki-Zagatala, Quba-Khachmaz, Lankaran-Astara und Nachitschewan. Die Regionalführer werden nach und nach ergänzt.",
+    "keywords": "Regionen Aserbaidschans, Absheron, Sheki-Zagatala, Quba-Khachmaz, Nachitschewan"
+  },
   "armenia": {
     "title": "Reiseführer Armenien | Hikasus Travel",
     "description": "Entdecken Sie die wachsende Sammlung von Armenien-Reiseführern von Hikasus Travel, mit praktischen Informationen zu den Regionen, Landschaften, zur Geschichte und Kultur des Landes.",
     "keywords": "Reiseführer Armenien, Regionen Armeniens, Armenien besuchen, Reiseziele Armenien, Reisen Kaukasus, Hikasus Travel"
+  },
+  "armeniaCities": {
+    "title": "Städte Armeniens: Jerewan & Dilijan | Hikasus Travel",
+    "description": "Ein Führer zu den Städten Armeniens: die Hauptstadt Jerewan und das waldreiche Dilijan in den Bergen von Tavush. Was man sehen sollte und wie lange man bleiben sollte.",
+    "keywords": "Städte Armeniens, armenische Städte, Jerewan, Dilijan, wohin in Armenien"
+  },
+  "armeniaPlaces": {
+    "title": "Sehenswürdigkeiten in Armenien: Klöster & Tempel | Hikasus Travel",
+    "description": "Ein Führer zu den Sehenswürdigkeiten Armeniens: Chor Virap unterhalb des Ararat, Geghard, Tatew, Noravank und der Tempel von Garni. Was man sieht und wie man hinkommt.",
+    "keywords": "Sehenswürdigkeiten Armenien, armenische Klöster, Chor Virap, Geghard, Garni, Tatew, Noravank, Sewansee, Etschmiadsin"
   },
   "armeniaRegions": {
     "title": "Regionen Armeniens: Reiseführer | Hikasus Travel",
@@ -1578,5 +1623,190 @@
     "title": "Aktivitäten in Tavush, Armenien: kompletter Guide",
     "description": "Das Beste in Tavush: Abenteuer in Yenokavan und Lastiver, das Kloster Makaravank, abgelegene Festungen, Wein aus Tavush und die Waldküche der Region.",
     "keywords": "Aktivitäten in Tavush, Yenokavan, Yell Extreme Park, Lastiver, Khachaghbyur-Schlucht, Dilijan, Dilijan-Nationalpark, Haghartsin, Goshavank, Parz-See, Gosh-See, Jukhtak, Matosavank, Ijevan, Wein aus Tavush, Kangun, Lalvari, Banants, Garan Dmak, Makaravank, Achajur, Nor Varagavank, Khoranashat, Aghjkaberd, Mantasheaberd, Festung Berdavan, Berg Dimats, Shaghot-Wasserfall, Berg Apakekar, Transcaucasian Trail, Yell Sport Fest"
+  },
+  "vayotsDzor": {
+    "title": "Vayots Dzor, Armenien: Noravank & Areni-Wein",
+    "description": "Ein Führer durch Vayots Dzor: das Kloster Noravank, Areni-1 und die älteste Weinkelterei der Welt, die Festung Smbataberd, der Kurort Jermuk und die Orbelian-Karawanserei.",
+    "keywords": "Vayots Dzor, Region Vayots Dzor, Noravank, Amaghu-Tal, Areni, Höhle Areni-1, älteste Weinkelterei, Areni Noir, Voskehat, Weinfest von Areni, Gnishik-Schlucht, Sankt Astvatsatsin Areni, Jermuk, Mineralwassergalerie, Jermuk-Wasserfall, Kechut-Stausee, Gndevank, Yeghegnadzor, Universität Gladzor, Spitakavor, Proshaberd, Yeghegis, jüdischer Friedhof Yeghegis, Zorats-Kirche, Smbataberd, Tsakhats Kar, Orbelian-Karawanserei, Selim-Karawanserei, Vardenyats-Pass, Martiros, Kloster Arates, Mozrov-Höhle, Arpa-Schutzlandschaft"
+  },
+  "thingsToDoVayotsDzor": {
+    "title": "Was tun in Vayots Dzor, Armenien: kompletter Führer",
+    "description": "Das Beste in Vayots Dzor: die Höhle Areni-1, Areni-Wein, das Kloster Noravank, die Festung Smbataberd, die Mineralquellen von Jermuk und die Orbelian-Karawanserei.",
+    "keywords": "was tun in Vayots Dzor, Areni, Höhle Areni-1, Areni-Wein, Sev Areni, Voskehat, Sankt Astvatsatsin Areni, Gnishik-Schlucht, Noravank, Burtelashen, Momik, Jermuk, Mineralwassergalerie, Jermuk-Wasserfall, Gndevank, Kechut-Stausee, Yeghegis, Smbataberd, Tsakhats Kar, jüdischer Friedhof Yeghegis, Zorats-Kirche, Orbelian-Karawanserei, Selim-Karawanserei, Vardenyats-Pass, Spitakavor, Proshaberd, Martiros, Kloster Arates, Magellan-Höhle, Mozrov-Höhle, Höhlentouren Armenien, Reiten Gomk, Arpa-Schutzlandschaft, Horats panir, Kyalagosh"
+  },
+  "yerevan": {
+    "title": "Jerewan, Armenien: Führer zur rosa Stadt",
+    "description": "Ein Führer durch Jerewan, Armeniens Hauptstadt: 2.800 Jahre Geschichte seit Erebuni, das Zentrum aus rosa Tuff, Blicke auf den Ararat, Essen, Wein und die beste Reisezeit.",
+    "keywords": "Jerewan, Jerewan Armenien, rosa Stadt, Erebuni, Arin Berd, Urartu, Argischti I., Platz der Republik, Kaskade Jerewan, Matenadaran, Zizernakaberd, Festung Erebuni, Kond, Ararat-Blick, Alexander Tamanjan, Tuffstein, Weinbars Sarjan-Straße, Vernissage-Markt, GUM-Markt, Chorowaz, Dolma, Harissa, Lawasch, Flughafen Zwartnoz, armenischer Dram, beste Reisezeit Jerewan"
+  },
+  "thingsToDoYerevan": {
+    "title": "Was tun in Jerewan: die 15 besten Sehenswürdigkeiten & Ideen",
+    "description": "Das Beste in Jerewan, Armenien: der Platz der Republik, die Kaskade, das Matenadaran, Zizernakaberd, die Festung Erebuni, Märkte, Weinbars und mehr.",
+    "keywords": "was tun in Jerewan, Platz der Republik, Kaskade Jerewan, Cafesjian Center, Matenadaran, Zizernakaberd, Genozid-Gedenkstätte, Festung Erebuni, Historisches Museum Armeniens, Blaue Moschee Jerewan, Vernissage-Markt, GUM-Markt, Kond, Chorowaz, Dolma, Harissa, Ghapama, Lawasch, Sujukh, Weinbars Sarjan-Straße, armenischer Brandy, Siegespark, Mutter Armenien, Katoghike, Zoravor, sowjetische Architektur Jerewan, Metro Jerewan, Parajanow-Museum, Tagesausflüge ab Jerewan"
+  },
+  "etchmiadzin": {
+    "title": "Etchmiadzin, Armenien: Mutterkathedrale & Kirchen",
+    "description": "Ein Führer durch Etchmiadzin: die Mutterkathedrale der armenischen Kirche, Sankt Hripsime, Sankt Gayane, die Manoogian-Schatzkammer und das nahe Zvartnots.",
+    "keywords": "Etchmiadzin, Vagharshapat, Etchmiadzin Armenien, Mutterstuhl von Heilig-Etchmiadzin, Mutterkathedrale, Kathedrale von Etchmiadzin, Sankt Hripsime, Sankt Gayane, Sankt Shoghakat, Schatzkammer Alex und Marie Manoogian, Gevorkian-Priesterseminar, Katholikos aller Armenier, Zvartnots, UNESCO Armenien, Armavir, Armenische Apostolische Kirche, Trdat III., Gregor der Erleuchter, Hovnatanian-Fresken, Tagesausflug von Jerewan"
+  },
+  "thingsToDoGarni": {
+    "title": "Aktivitäten in Garni, Armenien: Tempel & Schlucht",
+    "description": "Die besten Aktivitäten in Garni: der heidnische Tempel und das Bad, die Symphonie der Steine, Schluchtwanderungen, Lavash-Backen und das Kloster Geghard talaufwärts.",
+    "keywords": "Aktivitäten in Garni, Tempel von Garni, Bad von Garni, Hypokaustum, Mosaikboden, Symphonie der Steine, Azat-Schlucht, Fluss Azat, Schluchtwanderung Garni, Lavash backen, Tonir, Brduch, Pulpulak, Sankt-Mashtots-Kirche, Kloster Geghard, Felsenkirchen, Charents-Bogen, Berg Ararat, Vardavar, Astghik, Alexander Sahinian, Anastylose, Trdat I., Mihr, Khosrovidukht, Tagesausflug von Jerewan"
+  },
+  "armenianKhachkar": {
+    "title": "Armenischer Chatschkar | Bedeutung, Symbolik & UNESCO-Erbe",
+    "description": "Erfahren Sie, was ein armenischer Chatschkar ist, was seine Symbole bedeuten, wie Kreuzsteine entstehen, was die UNESCO anerkennt und wo man sie in Armenien sieht.",
+    "keywords": "Armenischer Chatschkar, Bedeutung Chatschkar, Kreuzstein Armenien, Symbolik Chatschkar, UNESCO immaterielles Kulturerbe Chatschkar, Chatschkare Noratus, Momik, Chatschkare Noravank, Amenaprkich-Chatschkar, Chatschkar Haghpat 1273, Rad der Ewigkeit, armenische Steinmetzkunst, Chatschkar-Handwerk, Tuffstein Armenien, wo Chatschkare sehen"
+  },
+  "zoratsKarer": {
+    "title": "Zorats Karer Armenien | Archäologische Stätte & Besucherguide",
+    "description": "Besuchen Sie Zorats Karer bei Sisian, eine prähistorische Stätte mit Steinreihen in Syunik: Geschichte, umstrittene Deutungen, Zugang und Hinweise für Besucher.",
+    "keywords": "Zorats Karer, Karahunj, Carahunge, Armenisches Stonehenge, Steinreihen Armenien, Sisian, Syunik, Bronzezeit Armenien, Zorats Karer Observatorium, Elma Parsamyan, Paris Heruni, Löcher in den Steinen Zorats Karer, Zorats Karer Öffnungszeiten, Zorats Karer Eintritt, archäologisches Reservat Armenien"
+  },
+  "mountAragats": {
+    "title": "Berg Aragats | Armeniens höchster Berg & Wanderguide",
+    "description": "Entdecken Sie den Berg Aragats, mit 4.090 m Armeniens höchsten Berg: die vier Gipfel, den Kari-See, Routen, Jahreszeiten, Zufahrt und praktische Sicherheitshinweise.",
+    "keywords": "Berg Aragats, Aragats Armenien, höchster Berg Armeniens, Kari-See, vier Gipfel des Aragats, Nordgipfel 4090, Südgipfel Aragats Wanderung, Aragatsotn, Festung Amberd, Aragats und Ararat, Straße zum Kari-See, Aragats Gravity Hill, Krater des Aragats, Wandern in Armenien, Aragats Tagesausflug ab Jerewan"
+  },
+  "symphonyOfStones": {
+    "title": "Symphonie der Steine Garni | Basaltsäulen & Besucherguide",
+    "description": "Besuchen Sie die Symphonie der Steine in der Garni-Schlucht: eine natürliche Wand aus Basaltsäulen unter dem Tempel von Garni. Zugang, Geologie und Hinweise.",
+    "keywords": "Symphonie der Steine, Basaltorgel Armenien, Garni-Schlucht, Schlucht des Azat, Basaltsäulen Armenien, Säulenabsonderung, Tempel von Garni, Kloster Geghard, Kotayk, Symphonie der Steine Eintritt, Wanderung vom Tempel von Garni, Symphonie der Steine ab Jerewan, Oberes Azat-Tal UNESCO, sechseckige Basaltsäulen, Tagesausflug Armenien"
+  },
+  "tsitsernakaberdMemorial": {
+    "title": "Gedenkstätte Zizernakaberd Jerewan | Besucherguide",
+    "description": "Besuchen Sie den Gedenkkomplex Zizernakaberd in Jerewan, Armeniens zentrale Gedenkstätte für den Völkermord: Geschichte, Symbolik, Verhalten und praktische Hinweise.",
+    "keywords": "Zizernakaberd, Gedenkstätte für den Völkermord an den Armeniern, Gedenkkomplex Zizernakaberd, Ewige Flamme Jerewan, Heiligtum der Ewigkeit, Stele Wiedergeborenes Armenien, Gedenkmauer, Allee der Erinnerung, Gedenkpark Zizernakaberd, Arthur Tarkhanyan, Sashur Kalashyan, 24. April Gedenktag, zwölf Platten Zizernakaberd, Hügel Zizernakaberd, Gedenkstätte Jerewan"
+  },
+  "armenianGenocideMuseum": {
+    "title": "Museum für den Völkermord an den Armeniern Jerewan | Besucherguide",
+    "description": "Besuchen Sie das Museum-Institut für den Völkermord an den Armeniern und die Gedenkstätte Zizernakaberd in Jerewan: Geschichte, Eintritt, Öffnungszeiten, Führungen und Hinweise.",
+    "keywords": "Museum für den Völkermord an den Armeniern, Museum-Institut für den Völkermord an den Armeniern, Zizernakaberd, Gedenkstätte Jerewan, Ewige Flamme Jerewan, Stele Wiedergeborenes Armenien, Gedenkmauer Zizernakaberd, Gedenktag für den Völkermord an den Armeniern, 24. April Jerewan, Arthur Tarkhanyan, Sashur Kalashyan, International Journal of Armenian Genocide Studies, Eintritt Museum Jerewan, Führungen Zizernakaberd, Museen Jerewan"
+  },
+  "republicSquare": {
+    "title": "Platz der Republik Jerewan | Geschichte, Bauten & Brunnen",
+    "description": "Besuchen Sie den Platz der Republik im Zentrum Jerewans: Tuffarchitektur, Regierungsgebäude, Museen und die saisonalen Singenden Brunnen.",
+    "keywords": "Platz der Republik Jerewan, Hraparak, Singende Brunnen Jerewan, Regierungsgebäude Jerewan, Historisches Museum Armeniens, Nationalgalerie Armeniens, Alexander Tamanjan, Generalplan 1924, Leninplatz Jerewan, rosa Tuff Jerewan, Metro Platz der Republik, Samtene Revolution 2018, Nordallee, Platz der Republik bei Nacht, Sehenswürdigkeiten Jerewan"
+  },
+  "operaAndBalletTheatre": {
+    "title": "Opern- und Balletttheater Jerewan | Besucherguide",
+    "description": "Besuchen Sie das Opern- und Balletttheater in Jerewan, entworfen von Alexander Tamanjan: Geschichte, Architektur, Vorstellungen, Führungen und praktische Hinweise.",
+    "keywords": "Opernhaus Jerewan, Opern- und Balletttheater Jerewan, A.-Spendiaryan-Nationaltheater für Oper und Ballett, Armenische Nationaloper, Alexander Tamanjan, Gevorg Tamanjan, Almast, Aram-Khachaturian-Konzertsaal, Freiheitsplatz Jerewan, Theaterplatz, Opera Tour Jerewan, Schwanensee Jerewan, Tumanyan-Straße, Opernkarten Jerewan, Sehenswürdigkeiten Jerewan"
+  },
+  "cascadeMonument": {
+    "title": "Kaskade Jerewan | Kunst, Aussicht & Besucherguide",
+    "description": "Besuchen Sie die Kaskade in Jerewan: eine monumentale Freitreppe mit 572 Stufen, Gegenwartskunst, Cafesjian-Galerien, Stadtblick und Ararat-Panorama.",
+    "keywords": "Kaskade Jerewan, Kaskaden-Monument, Kaskadenkomplex Jerewan, Kaskade Stufen, 572 Stufen, Cafesjian Center for the Arts, Cafesjian-Skulpturengarten, Kaskade Rolltreppe, Kaskade Ararat-Blick, Tamanjan-Straße, Jim Torosyan, Gerard Cafesjian, Cascade Cultural Hub, ist die Kaskade fertig, Sehenswürdigkeiten Jerewan"
+  },
+  "geghardMonastery": {
+    "title": "Kloster Geghard, Armenien: UNESCO-Felsenkirchen",
+    "description": "Ein Führer zum Kloster Geghard in Armenien: von der UNESCO gelistete, in den Fels gehauene Kirchen, die Heilige Lanze, die Proshyan-Gräber, die Akustik und der Besuch mit Garni.",
+    "keywords": "Kloster Geghard, Geghardavank, Ayrivank, oberes Azat-Tal, Kotayk, Felsenkirchen, Katoghike, Gavit, Zakare, Ivane, Zakarian, Königin Tamar, Proshyan-Gräber, Heilige Lanze, Apostel Thaddäus, Schatzkammer Etchmiadzin, Chatschkar, UNESCO Armenien, Haager Konvention, Gregor der Erleuchter, Garni, Symphonie der Steine, Charents-Bogen, Tagesausflug von Jerewan"
+  },
+  "thingsToDoGoris": {
+    "title": "Aktivitäten in Goris, Armenien: kompletter Führer",
+    "description": "Die besten Aktivitäten in Goris: die Höhlenwohnungen von Alt-Khndzoresk, Hin Khot, das Kloster Tatev und die Wings of Tatev, die Teufelsbrücke und die Straße nach Sisian.",
+    "keywords": "Aktivitäten in Goris, Alt-Khndzoresk, Hängebrücke Khndzoresk, Höhlenwohnungen, Hin Khot, Legends Trail, Alt-Goris, Steinwald, Kloster Tatev, Wings of Tatev, Halidzor, Teufelsbrücke, Vorotan-Schlucht, Tatev-Wanderung, Zorats Karer, Karahunj, Shaki-Wasserfall, Sisian, Sisavan, Vayots Dzor, Kapan, Berg Khustup, Vahanavank, Festung Halidzor, Meghri, Südarmenien"
+  },
+  "tsaghkadzor": {
+    "title": "Tsaghkadzor, Armenien: Skigebiet & Seilbahn",
+    "description": "Ein Führer durch Tsaghkadzor, Armeniens wichtigstes Skigebiet eine Stunde von Jerewan: die Hänge des Bergs Teghenis, die ganzjährige Seilbahn, das Kloster Kecharis und die beste Reisezeit.",
+    "keywords": "Tsaghkadzor, Tsaghkadzor Armenien, Kotayk, Berg Teghenis, Skigebiet Tsaghkadzor, Skifahren Armenien, Seilbahn, Leitner-Sessellifte, Kloster Kecharis, Pahlavuni, Proshyan, Gavit, Chatschkar, Hausmuseum der Brüder Orbeli, Olympischer Sportkomplex, Arsakiden, Hrazdan, Sewansee, Sevanavank, Dilijan, Garni, Geghard, Berg Ararat, Tagesausflug von Jerewan"
+  },
+  "sevan": {
+    "title": "Sevan, Armenien | Reiseführer zum Sevan-See",
+    "description": "Besuchen Sie Sevan, Armeniens Tor zum Sevan-See: Sevanavank, Strände am See, lokale Küche, Anfahrt ab Jerewan und praktische Hinweise für Gegharkunik.",
+    "keywords": "Sevan, Stadt Sevan Armenien, Sevan-See, Kloster Sevanavank, Sevan-Halbinsel, Gegharkunik, Yelenovka, Molokanen, Subbotniki, Ischchan, Sevan-Forelle, Strände am Sevan-See, Sevan ab Jerewan, Dilijan, Hayravank, Noratus, Gavar, See in Armenien, Sevan im Winter"
+  },
+  "sisian": {
+    "title": "Sisian, Armenien | Zorats Karer, Shaki und Reiseführer",
+    "description": "Besuchen Sie Sisian in Armeniens Provinz Syunik, Hochlandbasis für Zorats Karer, den Shaki-Wasserfall, die Ukhtasar-Petroglyphen, Sisavan und Südarmenien.",
+    "keywords": "Sisian, Sisian Armenien, Zorats Karer, Karahunj, Shaki-Wasserfall, Ukhtasar-Petroglyphen, Kirche Sisavan, Historisches Museum Sisian, Nikoghayos Adonts, Hamo Sahyan, Vorotan, Vorotnavank, Aghitu-Denkmal, Tolors-Stausee, Kirche Surb Karapet, Syunik, Goris, Tatev, Südarmenien-Rundreise"
+  },
+  "oshakan": {
+    "title": "Oshakan, Armenien | Mesrop Mashtots und Besucherguide",
+    "description": "Besuchen Sie Oshakan in Armeniens Provinz Aragatsotn, der Grabstätte von Mesrop Mashtots: Kirche, Erbe des armenischen Alphabets, Geschichte und Reisehinweise.",
+    "keywords": "Oshakan, Oshakan Armenien, Mesrop Mashtots, Mesrop-Mashtots-Kirche, Grab von Mesrop Mashtots, armenisches Alphabet, Aragatsotn, Didikond, urartäische Festung, Vahan Amatuni, Hmayeak Mamikonian, Faustus, Pavstos Buzand, Familie Amatuni, Ayrarat, Denkmal des armenischen Alphabets, Artashavan, Ashtarak, Katholikos Gevorg IV., Denkmal von 1962"
+  },
+  "jermuk": {
+    "title": "Jermuk, Armenien | Kurort, Wasserfall und Reiseführer",
+    "description": "Besuchen Sie Jermuk, Armeniens Bergkurort in Vayots Dzor: Mineralquellen, Trinkhalle, Wasserfall, Natur, Wellness und praktische Reisehinweise.",
+    "keywords": "Jermuk, Jermuk Armenien, Mineralwasser-Trinkhalle Jermuk, Wasserfall Jermuk, Meerjungfrauenhaar, Arpa-Schlucht, Vayots Dzor, Kloster Gndevank, Prinzessin Sopi von Sjunik, Kechut-Stausee, Seilbahn Jermuk, Kurort Armenien, Mineralquellen Armenien, Jermuk ab Jerewan, Jermuk im Winter, Noravank, Areni, Tsaghkadzor, Wellness Armenien"
+  },
+  "gyumri": {
+    "title": "Gyumri, Armenien | Reiseführer und Sehenswertes",
+    "description": "Besuchen Sie Gyumri, Armeniens zweitgrößte Stadt, bekannt für die historischen Straßen von Kumayri, schwarze Tuffarchitektur, Museen, Küche und eigenen Charakter.",
+    "keywords": "Gyumri, Gyumri Armenien, Kumayri, historisches Viertel Kumayri, Alexandropol, Leninakan, Shirak, Vardanants-Platz, Schwarze Festung, Sev Berd, Kirche des Heiligen Erlösers, Amenaprkich, Dzitoghtsyan-Museum, Galerie der Schwestern Aslamazyan, Avetik Isahakyan, Hovhannes Shiraz, Mher Mkrtchyan, Sergey Merkurov, Flughafen Shirak, Panrkhash, Yaghli, Schmiedehandwerk Gyumri, Erdbeben von Spitak 1988, zweitgrößte Stadt Armeniens"
+  },
+  "zvartnotsTemple": {
+    "title": "Zvartnots, Armenien | UNESCO-Ruine und Besucherguide",
+    "description": "Besuchen Sie Zvartnots, die Ruine einer monumentalen armenischen Kathedrale des 7. Jahrhunderts bei Etchmiadzin: UNESCO-Geschichte, Architektur, Ararat-Blick und Hinweise.",
+    "keywords": "Zvartnots, Kathedrale Zvartnots, Ruine Zvartnots, Katholikos Nerses III., Nerses der Erbauer, Toros Toramanian, Khachik Dadian, Tetrakonchos mit Umgang, Etchmiadzin, Vagharshapat, Armavir, Araratebene, Berg Ararat, Constans II., Gregor der Erleuchter, Trdat III., Rusa II., UNESCO Armenien, armenische mittelalterliche Architektur, Flughafen Zvartnots"
+  },
+  "saintMesropMashtotsChurch": {
+    "title": "Mesrop-Mashtots-Kirche, Oshakan | Armenien-Guide",
+    "description": "Besuchen Sie die Mesrop-Mashtots-Kirche in Oshakan, der Grabstätte des Schöpfers des armenischen Alphabets: Geschichte, Grab, Fresken und praktische Hinweise.",
+    "keywords": "Mesrop-Mashtots-Kirche, Mesrop Mashtots, Grab von Mesrop Mashtots, Oshakan, Aragatsotn, armenisches Alphabet, Vahan Amatuni, Hmayeak Mamikonian, Koriun, Movses Khorenatsi, Katholikos Gevorg IV., Philippos Agbaketsi, Sahak Partev, Ruhm den armenischen Buchstaben und der Literatur, Hovhannes Minasian, Henrik Mamian, Fest der Heiligen Übersetzer, Diözese Aragatsotn, Ashtarak, Denkmal des armenischen Alphabets"
+  },
+  "tatevMonastery": {
+    "title": "Kloster Tatev, Armenien: Geschichte und Wings of Tatev",
+    "description": "Besuchen Sie das Kloster Tatev in Südarmenien: seine mittelalterliche Geschichte, die Universität Tatev, die Gavazan-Säule, die Seilbahn Wings of Tatev und praktische Hinweise.",
+    "keywords": "Kloster Tatev, Tatev, Wings of Tatev, Vorotan-Schlucht, Syunik, Goris, Halidzor, Universität Tatev, Hovhan Vorotnetsi, Grigor Tatevatsi, Gavazan-Säule, Paulus und Petrus, Surb Astvatsatsin, Metropolie Syunik, längste umkehrbare Luftseilbahn, Teufelsbrücke, Große Einsiedelei von Tatev, Alt-Khndzoresk, Südarmenien, mittelalterliche armenische Architektur"
+  },
+  "sevanavankMonastery": {
+    "title": "Kloster Sevanavank, Armenien: Besucherguide am Sevan-See",
+    "description": "Ein Guide zum Kloster Sevanavank am Sevan-See: seine Kirchen von 874, die Insel-Halbinsel-Geschichte, der Ausblick, die Anfahrt ab Jerewan und praktische Hinweise.",
+    "keywords": "Kloster Sevanavank, Sevanavank, Sevan-See, Sevan-Halbinsel, Gegharkunik, Surp Arakelots, Surp Astvatsatsin, Surb Harutyun, Prinzessin Mariam, Aschot I., Bagratiden, Vasak Gabur, Katholikos Maschtots, Sevan Kloster Armenien, Sevanavank ab Jerewan, Friedhof von Noratus, Dilijan, Chatschkar, mittelalterliche armenische Architektur, Tagesausflug Armenien"
+  },
+  "sanahinMonastery": {
+    "title": "Kloster Sanahin, Armenien: UNESCO-Führer für Lori",
+    "description": "Ein Führer zum Kloster Sanahin in Lori: seine Akademie, die Handschriftentradition, das Mikojan-Brüder-Museum, das UNESCO-Erbe und der Besuch zusammen mit Haghpat.",
+    "keywords": "Kloster Sanahin, Sanahin, Lori, Debed-Schlucht, Surb Astvatsatsin, Surb Amenaprkich, Sankt Hakob, Abas I. Bagratuni, Ashot III. der Barmherzige, Khosrovanush, Akademie des Gregor Magistros, Anania Sanahnetsi, Hakobos Karapnetsi, Vache Vachutyan, Kiurikiden, Brücke von Sanahin, Haghpat, Alaverdi, Anastas Mikojan, Artem Mikojan, Mikojan-Gurewitsch, MiG, Akhtala, Odzun, Kobayr, UNESCO Armenien, Chatschkar, Gawit, Skriptorium"
+  },
+  "noravankMonastery": {
+    "title": "Kloster Noravank, Armenien: Momiks Meisterwerk",
+    "description": "Ein Führer zum Kloster Noravank: der zweigeschossige Bau von Burtelashen, Momiks Skulpturen und Grab, die Orbelian-Dynastie und der Besuch zusammen mit Areni.",
+    "keywords": "Kloster Noravank, Noravank, Amaghu-Schlucht, Amaghu-Tal, Vayots Dzor, Orbelian, Burtel Orbelian, Burtelashen, Sankt Astvatsatsin, Sankt Karapet, Sankt Grigor, Momik, Chatschkar, Gawit, Areni, Areni-1-Höhle, Khor Virap, Jermuk, Yeghegnadzor, Sisian, Goris, Tatev, UNESCO-Tentativliste, armenische mittelalterliche Architektur, Wappen der Orbelian"
+  },
+  "khorVirapMonastery": {
+    "title": "Kloster Khor Virap, Armenien: Blick zum Ararat",
+    "description": "Ein Führer zu Khor Virap: die Grube Gregors des Erleuchters, Armeniens Christianisierung 301 n. Chr., der klassische Blick zum Berg Ararat und die Ruinen des antiken Artashat.",
+    "keywords": "Khor Virap, Kloster Khor Virap, Region Ararat, Gregor der Erleuchter, König Trdat III., tiefes Verlies, 301 n. Chr., Christianisierung Armeniens, Sankt-Astvatsatsin-Kirche, Sankt-Gevorg-Kapelle, antikes Artashat, König Artashes I., Artaxiden, Dvin, Blick zum Berg Ararat, Ararat-Ebene, Areni, Noravank, Vayots Dzor, Tagesausflug Jerewan, armenisch-apostolisch"
+  },
+  "noratusCemetery": {
+    "title": "Friedhof von Noratus, Armenien: Chatschkar-Führer",
+    "description": "Ein Führer zum Friedhof von Noratus: Armeniens größtes Feld mittelalterlicher Chatschkare, die von der UNESCO anerkannte Handwerkstradition und der Besuch zusammen mit dem Sevan-See.",
+    "keywords": "Friedhof von Noratus, Noratus, Noraduz, Chatschkar, armenische Kreuzsteine, Gegharkunik, Sevan-See, Gavar, Hayravank, Sevanavank, Kiram Kazmogh, Arakel, Meliset, Katholikos Vazgen I., British Museum, Timur, Tamerlan, Kirche der Heiligen Jungfrau, Halbinsel Noratus, Vardenyats-Pass, Karawanserei der Orbelianer, Vayots Dzor, mittelalterliche armenische Kunst, immaterielles Kulturerbe"
+  },
+  "mountArarat": {
+    "title": "Berg Ararat, Armenien: wo und wie man ihn sieht",
+    "description": "Ein Führer zum Berg Ararat: die besten Aussichtspunkte von Khor Virap, Jerewan und dem Charents-Bogen, seine Symbolik und warum er außerhalb der Grenzen Armeniens liegt.",
+    "keywords": "Berg Ararat, Ararat Armenien, Großer Ararat, Kleiner Ararat, Masis, Khor Virap, Ararat-Ebene, Region Ararat, Armavir, Jerewan, Charents-Bogen, Voghjaberd, Rafayel Israyelian, Yeghishe Charents, Mutter Armenien, Sardarapat, Berg Aragats, Garni, Geghard, Areni, Noravank, Arche Noah, Wappen Armeniens, Ararat Aussichtspunkt, Fotografie Armenien"
+  },
+  "lakeSevan": {
+    "title": "Sevan-See, Armenien: Sevanavank & Strände",
+    "description": "Ein Führer zum Sevan-See: Kloster Sevanavank, Hayravank und Noratus, Strände und Wassersport und wie sich der See mit Dilijan oder Vayots Dzor verbinden lässt.",
+    "keywords": "Sevan-See, Sevan Armenien, Gegharkunik, Sevanavank, Surp Arakelots, Surp Astvatsatsin, Surb Harutyun, Prinzessin Mariam, Ashot I., Vasak Gabur, Katholikos Mashtots, Hayravank, Noratus, Gavar, Shorzha, Sevan-Nationalpark, Ramsar, Ishkhan, Sevanforelle, Großer Sevan, Kleiner Sevan, Gegham, Vardenis, Pambak, Areguni, Dilijan, Vardenyats-Pass, Karawanserei der Orbelianer, Vayots Dzor, Tsaghkadzor, Wassersport Armenien"
+  },
+  "haghpatMonastery": {
+    "title": "Kloster Haghpat, Armenien: UNESCO-Führer für Lori",
+    "description": "Ein Führer zum Kloster Haghpat in Lori: Sankt Nshan, mittelalterliche Chatschkare, Skriptorium und Refektorium, UNESCO-Erbe und der Besuch zusammen mit Sanahin.",
+    "keywords": "Kloster Haghpat, Haghpat, Lori, Debed-Schlucht, Königin Khosrovanush, Ashot III. der Barmherzige, Bagratuni, Sankt Nshan, Architekt Trdat, Kathedrale von Ani, Hagia Sophia, Sanahin, Brücke von Sanahin, Amenaprkich-Chatschkar, Hamazasp-Kapelle, Skriptorium, Refektorium, Festung Kayan, Kayanberd, Aknaberd, Akhtala, Odzun, Alaverdi, Vanadzor, UNESCO Armenien, Chatschkar, Gawit, Nordarmenien"
+  },
+  "goris": {
+    "title": "Goris, Armenien: Steinhäuser & Höhlendörfer — Führer",
+    "description": "Ein Führer durch Goris: historische Steinarchitektur, die Höhlensiedlung Alt-Goris, das Heimatkundemuseum und wie man Tatev und Khndzoresk erreicht.",
+    "keywords": "Goris, Goris Armenien, Syunik, Zangezur, Alt-Goris, Kyores, Vararakn, Steinwald, Heimatkundemuseum Goris, Aksel Bakunts, Aksel-Bakunts-Hausmuseum, Alt-Khndzoresk, Hängebrücke, Hin Khot, Legends Trail, HIKEArmenia, Kloster Tatev, Wings of Tatev, Halidzor, Teufelsbrücke, Vorotan, Zorats Karer, Karahunj, Sisian, Shaki-Wasserfall, Kapan, Kyalagosh, Chorotan, Ghavurma, Südarmenien"
+  },
+  "garni": {
+    "title": "Garni-Tempel, Armenien: Führer zur heidnischen Stätte",
+    "description": "Ein Führer durch Garni, Armenien: der griechisch-römische Tempel des 1. Jahrhunderts über der Azat-Schlucht, die Basaltsäulen der Symphonie der Steine und die Verbindung mit Geghard.",
+    "keywords": "Garni, Tempel von Garni, Garni-Tempel, Garni Armenien, Kotayk, Azat-Schlucht, Fluss Azat, Symphonie der Steine, Basaltsäulen, Trdat I., Mihr, Anastylose, Alexander Sahinian, Erdbeben 1679, Bad von Garni, Hypokaustum, Mosaikboden, Khosrovidukht, Kloster Geghard, Charents-Bogen, Berg Ararat, Lavash, Tonir, Tagesausflug von Jerewan"
+  },
+  "dilijan": {
+    "title": "Dilijan, Armenien: Wälder, Klöster & Wanderungen",
+    "description": "Ein Führer durch Dilijan, Armeniens Waldstadt in Tavush: der Dilijan-Nationalpark, die Klöster Haghartsin und Goshavank, Wanderwege und die beste Reisezeit.",
+    "keywords": "Dilijan, Dilijan Armenien, Tavush, Dilijan-Nationalpark, Haghartsin, Goshavank, Mkhitar Gosh, Jukhtak, Matosavank, Parz-See, Gosh-See, Berg Dimats, Aghstev, Sharambeyan Street, Armenisches Textilmuseum, Transcaucasian Trail, Wandern Armenien, Wald Armenien, kleine Schweiz Armeniens, Ijevan, Yenokavan, Sewansee, Gata, Chorowaz, beste Reisezeit Dilijan"
   }
 }

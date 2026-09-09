@@ -24,7 +24,7 @@ const { withTrailingSlash } = await import(
 
 // Destination registry (regions / cities / sites) — published detail pages and
 // the legacy flat-city URLs that must redirect to their new nested location.
-const { publishedDestinationPages, legacyRedirects, countrySocialImage, countryHubSocialImage } = await import(
+const { publishedDestinationPages, legacyRedirects, countrySocialImage, countryHubSocialImage, countryHubMeta } = await import(
   pathToFileURL(join(__dirname, '../src/data/places.js')).href
 )
 
@@ -328,6 +328,14 @@ const seoPageMap = {
   'armenia/regions': 'armeniaRegions',
   'armenia/cities': 'armeniaCities',
   'armenia/places-to-visit': 'armeniaPlaces',
+  // Azerbaijan's landing and hubs are prerendered like Armenia's; while the
+  // country is scaffolded, countryHubMeta('azerbaijan') puts a robots noindex
+  // on each of the four (see staticPageRobots below) and generate-sitemap.js
+  // leaves them out of the sitemap.
+  'azerbaijan': 'azerbaijan',
+  'azerbaijan/regions': 'azerbaijanRegions',
+  'azerbaijan/cities': 'azerbaijanCities',
+  'azerbaijan/places-to-visit': 'azerbaijanPlaces',
   // City detail pages + their things-to-do guides are emitted from the
   // destination registry (publishedDestinationPages), not from this map.
   'private-tours': 'privateTours',
@@ -363,6 +371,17 @@ const staticPageSocial = {
   'armenia/regions': countryHubSocialImage('armenia', 'regions'),
   'armenia/cities': countryHubSocialImage('armenia', 'cities'),
   'armenia/places-to-visit': countryHubSocialImage('armenia', 'places'),
+}
+
+// Robots directive for a country's landing page and hubs, from the same
+// places.js record the runtime reads (useSEO emits the identical tag on
+// hydrate). Only a scaffolded country declares one; every other static page
+// keeps a head with no robots meta at all, exactly as before.
+const staticPageRobots = {
+  'azerbaijan': countryHubMeta('azerbaijan'),
+  'azerbaijan/regions': countryHubMeta('azerbaijan'),
+  'azerbaijan/cities': countryHubMeta('azerbaijan'),
+  'azerbaijan/places-to-visit': countryHubMeta('azerbaijan'),
 }
 
 // ---------------------------------------------------------------------------
@@ -435,7 +454,7 @@ async function drainPages() {
   }
 }
 
-async function emitHtml(filePath, lang, { title, description, keywords, canonical, image, ogImage, ogImageAlt, ogImageWidth, ogImageHeight, heroPreload, ogLocale, jsonLd, geo }) {
+async function emitHtml(filePath, lang, { title, description, keywords, canonical, image, ogImage, ogImageAlt, ogImageWidth, ogImageHeight, heroPreload, ogLocale, jsonLd, geo, robots }) {
   // Use the trailing-slash form the host serves at 200; this also flows through
   // to the hreflang/x-default alternates and og:url derived from it below.
   canonical = withTrailingSlash(canonical)
@@ -449,6 +468,11 @@ async function emitHtml(filePath, lang, { title, description, keywords, canonica
 
   // meta description
   $('meta[name="description"]').attr('content', description)
+
+  // Robots directive — only for a page that passes one (a scaffolded country's
+  // landing and hubs). The template carries no robots meta, so every other
+  // page's head is untouched here.
+  if (robots) setOrAppendMeta($, 'robots', robots, 'name')
 
   // meta keywords
   if (keywords) {
@@ -657,6 +681,7 @@ for (const lang of LANGS) {
       // The two pages that really are about the company's own address keep the
       // geo tags the shared template used to give every page.
       geo: (path === '' || path === 'contact') ? COMPANY_GEO : undefined,
+      robots: staticPageRobots[path] || undefined,
     })
   }
 
