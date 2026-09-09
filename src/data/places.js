@@ -16300,7 +16300,15 @@ export const wineries = []
 // ---------------------------------------------------------------------------
 export const getRegion = (slug) => regions.find((r) => r.slug === slug) || null
 export const getCity = (slug) => cities.find((c) => c.slug === slug) || null
-export const getSite = (slug) => sites.find((s) => s.slug === slug) || null
+// A site slug is unique within its parent, not across the whole registry:
+// Tbilisi's `ateshgah-fire-temple` and Absheron's share one. Pass the URL's
+// parent segment to resolve the right record; without it, the first match is
+// returned exactly as before, which is unchanged for every unique slug.
+export const getSite = (slug, parent) => {
+  const matches = sites.filter((s) => s.slug === slug)
+  if (parent) return matches.find((s) => s.parent === parent) || matches[0] || null
+  return matches[0] || null
+}
 
 // ---------------------------------------------------------------------------
 // Countries.
@@ -16465,14 +16473,17 @@ export const citiesOfCountry = (country) => cities.filter((c) => countryOf(c) ==
 // under the region page instead: /armenia/regions/<slug>/things-to-do, which
 // keeps the URL a literal reading of the hierarchy it belongs to.
 export const thingsToDoPath = (citySlug) => {
-  const r = regions.find((x) => x.slug === citySlug)
-  if (r && countryOf(r) !== DEFAULT_COUNTRY) return `${regionPath(citySlug)}/things-to-do`
-  // A city outside Georgia nests its guide the same way: <city>/things-to-do,
-  // a literal reading of the hierarchy. Georgia's flat
+  // A city outside Georgia nests its guide as <city>/things-to-do, a literal
+  // reading of the hierarchy. Checked before regions so that where a capital is
+  // both a region and a city under one slug (Baku), the city — the unit the
+  // guide is written for — wins. No Armenian city shares a region slug, so
+  // every existing Armenian path is unchanged. Georgia's flat
   // /georgia/<city>/things-to-do-in-<city> shape is unchanged — it is the URL
   // those guides have always lived at.
   const c = cities.find((x) => x.slug === citySlug)
   if (c && countryOf(c) !== DEFAULT_COUNTRY) return `${cityPath(citySlug)}/things-to-do`
+  const r = regions.find((x) => x.slug === citySlug)
+  if (r && countryOf(r) !== DEFAULT_COUNTRY) return `${regionPath(citySlug)}/things-to-do`
   return `/georgia/${citySlug}/things-to-do-in-${citySlug}`
 }
 // Both city- and region-parented sites live directly under /georgia/<parent>/<slug>.

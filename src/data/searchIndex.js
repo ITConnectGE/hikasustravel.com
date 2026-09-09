@@ -21,6 +21,7 @@ import {
   regionPath, cityPath, sitePath, thingsToDoPath, siteLocation,
   destinationsBase, regionsHubPath, citiesHubPath, placesHubPath,
   armeniaBase, armeniaRegionsHubPath, citiesHubPathFor, placesHubPathFor,
+  countryBase, regionsHubPathFor, countryHubIndexable,
 } from './places.js'
 import { tours } from './tours.js'
 import { blogArticles } from './blogData.js'
@@ -83,6 +84,15 @@ const STATIC_PAGES = [
   { path: armeniaRegionsHubPath, seoKey: 'armeniaRegions', type: 'info' },
   { path: citiesHubPathFor('armenia'), seoKey: 'armeniaCities', type: 'info' },
   { path: placesHubPathFor('armenia'), seoKey: 'armeniaPlaces', type: 'info' },
+  // Azerbaijan's landing and hubs join site search only once they are
+  // indexable (places.js `hubMeta`): while the country is scaffolded they
+  // hold nothing but "coming soon" cards, which a search hit should not lead to.
+  ...(countryHubIndexable('azerbaijan') ? [
+    { path: countryBase('azerbaijan'), seoKey: 'azerbaijan', type: 'info' },
+    { path: regionsHubPathFor('azerbaijan'), seoKey: 'azerbaijanRegions', type: 'info' },
+    { path: citiesHubPathFor('azerbaijan'), seoKey: 'azerbaijanCities', type: 'info' },
+    { path: placesHubPathFor('azerbaijan'), seoKey: 'azerbaijanPlaces', type: 'info' },
+  ] : []),
 ]
 
 const clean = (p) => String(p || '').replace(/^\//, '')

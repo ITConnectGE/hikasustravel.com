@@ -57,7 +57,7 @@ export default function CitySubPage() {
   // A site lives at /<country>/<parent>/<slug> whether its parent is a city or
   // a region. Matching the site's canonical path covers the parent check and
   // the country check in one comparison.
-  const site = getSite(sub)
+  const site = getSite(sub, citySlug)
   if (site && sitePath(site) === here) {
     return <SitePage />
   }

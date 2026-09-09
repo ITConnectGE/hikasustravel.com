@@ -134,16 +134,17 @@ export default function SitePage() {
   // kept for backwards-compatibility with any legacy region URL shape.
   const { siteSlug: siteSlugParam, sub, citySlug, regionSlug } = useParams()
   const siteSlug = siteSlugParam || sub
-  const site = getSite(siteSlug)
+  // The site is only valid at the URL whose parent segment matches its registry
+  // parent (region slug now arrives via :citySlug, like a city slug). The
+  // parent also disambiguates a slug shared across parents (see getSite).
+  const parentSlug = citySlug || regionSlug
+  const site = getSite(siteSlug, parentSlug)
   const t = useT()
   const { pages, enPages } = useContext(I18nContext)
   const { lang } = useLang()
   const navigate = useNavigate()
   const contentRef = useRef(null)
 
-  // The site is only valid at the URL whose parent segment matches its registry
-  // parent (region slug now arrives via :citySlug, like a city slug).
-  const parentSlug = citySlug || regionSlug
   const parentMatches = site && parentSlug === site.parent
   const published = site && site.published && parentMatches
 
