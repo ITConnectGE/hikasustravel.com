@@ -24,7 +24,7 @@ const { withTrailingSlash } = await import(
 
 // Destination registry (regions / cities / sites) — published detail pages and
 // the legacy flat-city URLs that must redirect to their new nested location.
-const { publishedDestinationPages, legacyRedirects, countrySocialImage } = await import(
+const { publishedDestinationPages, legacyRedirects, countrySocialImage, countryHubSocialImage } = await import(
   pathToFileURL(join(__dirname, '../src/data/places.js')).href
 )
 
@@ -353,6 +353,18 @@ const staticPageImages = {
   'armenia-visa-entry-requirements': '/images/files/khor-virap-monastery-ararat-armenia-og.jpg',
 }
 
+// Dedicated social records ({ src, width, height, alt{lang} }) for a country's
+// landing page and hubs, from the same places.js data the runtime reads. The
+// three Armenia hubs used to fall through to the georgia-home.jpg default
+// above — a Georgian photo on an Armenian page. Georgia declares none, so its
+// landing and hubs keep the exact head they have always had.
+const staticPageSocial = {
+  'armenia': countryHubSocialImage('armenia', 'landing'),
+  'armenia/regions': countryHubSocialImage('armenia', 'regions'),
+  'armenia/cities': countryHubSocialImage('armenia', 'cities'),
+  'armenia/places-to-visit': countryHubSocialImage('armenia', 'places'),
+}
+
 // ---------------------------------------------------------------------------
 // 3. Build per-route HTML
 // ---------------------------------------------------------------------------
@@ -635,6 +647,12 @@ for (const lang of LANGS) {
       keywords: data.keywords,
       canonical,
       image: staticPageImages[path] || '/images/files/georgia-home.jpg',
+      ...(staticPageSocial[path] ? {
+        ogImage: staticPageSocial[path].src,
+        ogImageAlt: staticPageSocial[path].alt?.[lang] || staticPageSocial[path].alt?.en,
+        ogImageWidth: staticPageSocial[path].width,
+        ogImageHeight: staticPageSocial[path].height,
+      } : {}),
       ogLocale,
       // The two pages that really are about the company's own address keep the
       // geo tags the shared template used to give every page.

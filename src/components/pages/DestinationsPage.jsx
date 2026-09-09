@@ -11,7 +11,7 @@ import { I18nContext } from '../../i18n/I18nContext'
 import useSEO from '../../hooks/useSEO'
 import { getSEO } from '../../data/seoData'
 import {
-  citiesOfCountry, cityPath, countryBase,
+  citiesOfCountry, cityPath, countryBase, countryHubSocialImage,
   regionsHubPathFor, citiesHubPathFor, placesHubPathFor,
   DEFAULT_COUNTRY,
 } from '../../data/places'
@@ -247,8 +247,17 @@ export default function DestinationsPage({ country = DEFAULT_COUNTRY }) {
 
   // og:image/twitter:image prefer a dedicated 1.91:1 social crop where the
   // country ships one, else the hero. A country with neither emits none.
+  // A country with a shared landing social record (places.js, Armenia) also
+  // gets the crop's size and a concise localized alt; the previous branch is
+  // kept verbatim for a country without one (Georgia), so it is unchanged.
+  const landingSocial = countryHubSocialImage(country, 'landing')
   const socialImage = conf.ogImage || conf.hero
-  useSEO({ ...seo, lang, path, ...(socialImage ? { image: socialImage } : {}), jsonLd })
+  useSEO({
+    ...seo, lang, path, jsonLd,
+    ...(landingSocial
+      ? { ogImage: landingSocial.src, ogImageWidth: landingSocial.width, ogImageHeight: landingSocial.height, imageAlt: landingSocial.alt?.[lang] || landingSocial.alt?.en }
+      : (socialImage ? { image: socialImage } : {})),
+  })
 
   return (
     <>

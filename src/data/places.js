@@ -15558,11 +15558,58 @@ export const getSite = (slug) => sites.find((s) => s.slug === slug) || null
 // in that country that has no photograph of its own. Georgia's is the value
 // every page used to inherit unconditionally, so Georgian pages are unchanged;
 // Armenia's is its own 1.91:1 crop, the same one the /armenia landing uses.
+// Social images for the Armenia landing page and its three hubs — the same
+// subjects the landing cards show (Khor Virap for Regions, the Cascade for
+// Cities, Lake Sevan for Places). 1.91:1 crops with a concise per-locale alt,
+// read by DestinationsPage/DestinationHub at runtime and by prerender.js for
+// the static <head>. Without these the three hubs fell through to the
+// site-wide georgia-home.jpg default — a Georgian (Sighnaghi) photo on an
+// Armenian page. Georgia declares none, so its pages are unchanged.
+const KHOR_VIRAP_SOCIAL = {
+  src: '/images/files/khor-virap-monastery-ararat-armenia-og.jpg', width: 1200, height: 630,
+  alt: {
+    en: 'Khor Virap Monastery and Mount Ararat, Armenia',
+    de: 'Kloster Khor Virap und der Berg Ararat, Armenien',
+    fr: 'Le monastère de Khor Virap et le mont Ararat, Arménie',
+    es: 'El monasterio de Khor Virap y el monte Ararat, Armenia',
+    nl: 'Het klooster Khor Virap en de berg Ararat, Armenië',
+    cs: 'Klášter Khor Virap a hora Ararat, Arménie',
+    pl: 'Klasztor Khor Virap i góra Ararat, Armenia',
+  },
+}
+const ARMENIA_HUB_SOCIAL = {
+  landing: KHOR_VIRAP_SOCIAL,
+  regions: KHOR_VIRAP_SOCIAL,
+  cities: {
+    src: '/images/files/yerevan-cascade-armenia-og.jpg', width: 1200, height: 630,
+    alt: {
+      en: 'The Yerevan Cascade, Armenia',
+      de: 'Die Kaskade von Jerewan, Armenien',
+      fr: "La Cascade d'Erevan, Arménie",
+      es: 'La Cascada de Ereván, Armenia',
+      nl: 'De Cascade van Jerevan, Armenië',
+      cs: 'Jerevanská Kaskáda, Arménie',
+      pl: 'Kaskada w Erywaniu, Armenia',
+    },
+  },
+  places: {
+    src: '/images/files/lake-sevan-armenia-og.jpg', width: 1200, height: 630,
+    alt: {
+      en: 'Lake Sevan, Armenia',
+      de: 'Der Sevan-See, Armenien',
+      fr: 'Le lac Sevan, Arménie',
+      es: 'El lago Sevan, Armenia',
+      nl: 'Het Sevanmeer, Armenië',
+      cs: 'Jezero Sevan, Arménie',
+      pl: 'Jezioro Sewan, Armenia',
+    },
+  },
+}
 const COUNTRIES = {
   georgia: { base: '/georgia', name: 'Georgia', code: 'GE', regionsHub: true, citiesHub: true, placesHub: true, socialImage: '/images/files/georgia-home.jpg' },
   // Armenia publishes all three sub-hubs. `placesHub` is the single field that
   // drives the hub route, the landing tile and the attraction breadcrumb level.
-  armenia: { base: '/armenia', name: 'Armenia', code: 'AM', regionsHub: true, citiesHub: true, placesHub: true, socialImage: '/images/files/khor-virap-monastery-ararat-armenia-og.jpg' },
+  armenia: { base: '/armenia', name: 'Armenia', code: 'AM', regionsHub: true, citiesHub: true, placesHub: true, socialImage: '/images/files/khor-virap-monastery-ararat-armenia-og.jpg', hubSocialImages: ARMENIA_HUB_SOCIAL },
 }
 export const DEFAULT_COUNTRY = 'georgia'
 /** A record's country id, defaulting to Georgia for every record without one. */
@@ -15578,6 +15625,13 @@ export const countryName = (country) => countryConf(country).name
  * still emits no ImageObject, so this never claims a page depicts this place.
  */
 export const countrySocialImage = (country) => countryConf(country).socialImage
+/**
+ * Dedicated 1.91:1 social image for a country's landing page or one of its hubs
+ * ('landing' | 'regions' | 'cities' | 'places'): { src, width, height, alt{lang} }.
+ * Only Armenia declares these; any other country returns null and keeps the
+ * behaviour its landing and hubs have always had.
+ */
+export const countryHubSocialImage = (country, hub) => (countryConf(country).hubSocialImages || {})[hub] || null
 /** ISO country code as asserted in schema.org `addressCountry`. */
 export const countryCode = (country) => countryConf(country).code
 /** That country's regions hub, e.g. '/armenia/regions'. */

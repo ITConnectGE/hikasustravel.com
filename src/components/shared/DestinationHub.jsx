@@ -44,6 +44,11 @@ export default function DestinationHub({
   // Opt out of the photo hero while a genuine image is sourced — the same flag
   // and the same `.dest-title-band` replacement CityPage/SitePage/RegionPage use.
   noHero = false,
+  // Optional dedicated 1.91:1 social image ({ src, width, height, alt{lang} },
+  // from countryHubSocialImage). Armenia's hubs pass one so og:image is their
+  // own subject instead of the prerendered site default; the Georgia hubs pass
+  // none and keep the hero-derived image they have always had.
+  socialImage = null,
 }) {
   const t = useT()
   const { lang } = useLang()
@@ -137,7 +142,15 @@ export default function DestinationHub({
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [lang, path, resolved, seo.title])
 
-  useSEO({ ...seo, lang, path, image: heroImage, jsonLd })
+  useSEO({
+    ...seo, lang, path, image: heroImage, jsonLd,
+    ...(socialImage ? {
+      ogImage: socialImage.src,
+      ogImageWidth: socialImage.width,
+      ogImageHeight: socialImage.height,
+      imageAlt: socialImage.alt?.[lang] || socialImage.alt?.en,
+    } : {}),
+  })
 
   // Secondary "City, Region" / "City, Georgia" / "Region, Georgia" line for
   // Places to Visit cards. Stable city/region IDs (set on each entry from the

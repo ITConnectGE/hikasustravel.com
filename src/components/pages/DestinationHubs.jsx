@@ -2,6 +2,7 @@ import DestinationHub from '../shared/DestinationHub'
 import useT from '../../i18n/useT'
 import {
   citiesOfCountry,
+  countryHubSocialImage,
   sites,
   regionPath,
   cityPath,
@@ -105,6 +106,7 @@ export function RegionsHubPage({ country = DEFAULT_COUNTRY }) {
       path={clean(regionsHubPathFor(country))}
       heroImage={COUNTRY_HUBS[country].heroImage}
       noHero={COUNTRY_HUBS[country].noHero}
+      socialImage={countryHubSocialImage(country, 'regions')}
       countryCrumb={countryCrumb}
       entries={entries}
       currentLabelKey="nav.regions"
@@ -144,6 +146,7 @@ export function CitiesHubPage({ country = DEFAULT_COUNTRY }) {
       path={clean(citiesHubPathFor(country))}
       heroImage={COUNTRY_HUBS[country].heroImage}
       noHero={COUNTRY_HUBS[country].noHero}
+      socialImage={countryHubSocialImage(country, 'cities')}
       countryCrumb={countryCrumb}
       entries={entries}
       currentLabelKey="nav.cities"
@@ -198,6 +201,7 @@ export function PlacesToVisitHubPage({ country = DEFAULT_COUNTRY }) {
       path={clean(placesHubPathFor(country))}
       heroImage={COUNTRY_HUBS[country].heroImage}
       noHero={COUNTRY_HUBS[country].noHero}
+      socialImage={countryHubSocialImage(country, 'places')}
       countryCrumb={countryCrumb}
       entries={entries}
       currentLabelKey="nav.placesToVisit"
