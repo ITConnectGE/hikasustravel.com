@@ -146,9 +146,9 @@ const COUNTRY_LANDING = {
     featuredCityCards: true,
     // The strip is driven by the registry's `featured` flag rather than by
     // "every published city": nothing is published yet, and the eight flagged
-    // cities are the ones chosen to lead. They render in registry order (the
-    // capital is first there), as non-clickable "coming soon" cards until each
-    // is flipped to `published: true`.
+    // cities are the ones chosen to lead. They render capital first, then A–Z
+    // by canonical name (the same order in every locale), as non-clickable
+    // "coming soon" cards until each is flipped to `published: true`.
     featuredByFlag: true,
     pinFirstCity: 'baku',
     // The three sub-hub tiles render on the brand-tone placeholder until a
@@ -234,14 +234,18 @@ export default function DestinationsPage({ country = DEFAULT_COUNTRY }) {
   // locale-dependent, so the order legitimately differs per language (Czech, for
   // instance, collates "Ch" after "H").
   //
-  // A flag-driven strip (`featuredByFlag`) keeps the registry's own order
-  // instead: the flagged cities were chosen and sequenced by hand, capital first.
+  // A flag-driven strip (`featuredByFlag`) sorts A–Z by the registry's own
+  // canonical name instead of the visible label, so the order is the same in
+  // every locale: those cards are not localized yet, and the strip is meant to
+  // read as one stable list rather than reshuffle per language.
   const titled = featuredCities.map((c) => ({ city: c, title: cityTitle(c) }))
-  const orderedCities = conf.featuredByFlag ? titled : [
+  const sortKey = (x) => (conf.featuredByFlag ? x.city.name : x.title)
+  const sortLang = conf.featuredByFlag ? 'en' : lang
+  const orderedCities = [
     ...titled.filter((x) => x.city.slug === conf.pinFirstCity),
     ...titled
       .filter((x) => x.city.slug !== conf.pinFirstCity)
-      .sort((a, b) => a.title.localeCompare(b.title, lang, { sensitivity: 'base' })),
+      .sort((a, b) => sortKey(a).localeCompare(sortKey(b), sortLang, { sensitivity: 'base' })),
   ]
 
   const crumbName = conf.crumbKey ? t(conf.crumbKey) : t(`nav.destinations.${country}`)

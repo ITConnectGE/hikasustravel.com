@@ -9312,7 +9312,8 @@ export const cities = [
   // ---------------------------------------------------------------------------
   // Azerbaijan. All scaffolded (`published: false`); see the region block for
   // the convention. `featured: true` marks the cities the /azerbaijan landing
-  // page shows in its "Featured city guides" strip, in this registry order.
+  // page shows in its "Featured city guides" strip, capital first and then
+  // A–Z by this canonical name (the same order in every locale).
   // Baku is both a region and a city here (the capital is its own unit, like
   // Tbilisi and Yerevan), so the two records share a slug — the region and city
   // namespaces are otherwise disjoint.
