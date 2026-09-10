@@ -35,6 +35,7 @@ export default function DestinationHub({
   currentLabelKey,
   ctaKey,
   sortByName = false,
+  sortCanonical = false,
   pinFirst = null,
   seoFallback = false,
   filterable = false,
@@ -96,8 +97,13 @@ export default function DestinationHub({
       // locale-aware and case-insensitive — so every published site, including
       // newly added ones, appears in its correct A–Z position automatically
       // rather than in registry order. Sorting never drops an entry.
+      // `sortCanonical` sorts on the registry's own English name instead of
+      // the visible label, so a hub whose cards are not localized yet reads in
+      // one stable order in every language rather than reshuffling per locale.
       if (sortByName) {
-        list.sort((a, b) => a.name.localeCompare(b.name, lang, { sensitivity: 'base' }))
+        const key = (e) => (sortCanonical ? e.fallbackName || e.name : e.name)
+        const sortLang = sortCanonical ? 'en' : lang
+        list.sort((a, b) => key(a).localeCompare(key(b), sortLang, { sensitivity: 'base' }))
       }
       // One entry may be pinned ahead of the alphabetical run — the Cities hub
       // leads with the capital. Matched on the stable slug, never the label,
@@ -109,7 +115,7 @@ export default function DestinationHub({
       }
       return list
     },
-    [entries, page, pageKey, enPages, sortByName, pinFirst, seoFallback, lang],
+    [entries, page, pageKey, enPages, sortByName, sortCanonical, pinFirst, seoFallback, lang],
   )
 
   const trail = [

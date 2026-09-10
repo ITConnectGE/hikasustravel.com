@@ -68,7 +68,10 @@ const COUNTRY_HUBS = {
     // an entry's `published` flag in places.js is what turns its card into a
     // link; no change here is needed.
     noHero: true,
-    regions: { pageKey: 'azerbaijanRegions', seoKey: 'azerbaijanRegions', includeUnpublished: true },
+    // Regions sort A–Z by canonical name (Georgia and Armenia keep their
+    // curated registry order). Baku is not listed here: the capital is its own
+    // unit and lives on the Cities hub — its region record carries `hideFromHub`.
+    regions: { pageKey: 'azerbaijanRegions', seoKey: 'azerbaijanRegions', includeUnpublished: true, sortByName: true, sortCanonical: true },
     cities: { pageKey: 'azerbaijanCities', seoKey: 'azerbaijanCities', includeUnpublished: true, pinFirst: 'baku' },
     places: { pageKey: 'azerbaijanPlaces', seoKey: 'azerbaijanPlaces' },
   },
@@ -125,6 +128,9 @@ export function RegionsHubPage({ country = DEFAULT_COUNTRY }) {
       entries={entries}
       currentLabelKey="nav.regions"
       ctaKey="destinations.exploreRegion"
+      sortByName={!!conf.sortByName}
+      sortCanonical={!!conf.sortCanonical}
+      pinFirst={conf.pinFirst || null}
     />
   )
 }
