@@ -15094,6 +15094,25 @@ export const sites = [
     noHero: true,
     noAutolink: true,
   },
+  // Vernissage Market — the open-air crafts-and-souvenir market along Aram
+  // and Buzand streets, a few minutes from Republic Square. City-parented
+  // like the other central-Yerevan attractions, at /armenia/yerevan/vernissage-market.
+  // Distinct from the Saryan Park painters' market and from Dry Bridge, and
+  // NOT the online retailer vernissage.am — the page says so explicitly, and
+  // its opening-hours wording is deliberately hedged (sources conflict).
+  // 'Vernissage Market' is already in yerevan.thingsToDo.attractions, so the
+  // guide's ItemList needed no change; the guide, the city page and Republic
+  // Square each carry one hand-authored anchor back here in all 7 locales.
+  //
+  // No `image`: no photograph of the market exists in the repo, so it renders
+  // the solid `.dest-title-band` like the Opera and the Genocide Museum.
+  {
+    slug: 'vernissage-market', name: 'Vernissage Market',
+    parentType: 'city', parent: 'yerevan', published: true,
+    seoKey: 'vernissageMarket', contentKey: 'vernissageMarket',
+    noHero: true,
+    noAutolink: true,
+  },
   // Etchmiadzin is NOT here: it is a published CITY (see the cities array
   // above), living at /armenia/etchmiadzin. It was scaffolded here as a
   // planned place to visit before that page existed; leaving the stub would
