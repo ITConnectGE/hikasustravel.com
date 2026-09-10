@@ -3700,9 +3700,14 @@ export const regions = [
   // Karabakh, East Zangezur, Mil-Mughan and Shirvan-Salyan are deliberately
   // absent — a content decision, not an omission.
   // ---------------------------------------------------------------------------
+  // Baku is the capital as its own unit, like Tbilisi and Yerevan: it is listed
+  // on the Cities hub (its city record, below) and NOT on the Regions hub —
+  // `hideFromHub` keeps this region record off that listing while the record
+  // itself stays as the city's structural parent.
   {
     slug: 'baku', name: 'Baku', published: false, country: 'azerbaijan',
     seoKey: 'baku', contentKey: 'baku',
+    hideFromHub: true,
     noHero: true,
     noAutolink: true,
   },
