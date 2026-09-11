@@ -3746,7 +3746,7 @@ export const regions = [
     noAutolink: true,
   },
   {
-    slug: 'central-aran', name: 'Central Aran', published: false, country: 'azerbaijan',
+    slug: 'central-aran', name: 'Central Aran', published: true, country: 'azerbaijan',
     seoKey: 'centralAran', contentKey: 'centralAran',
     noHero: true,
     noAutolink: true,
