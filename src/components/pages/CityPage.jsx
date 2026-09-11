@@ -184,7 +184,9 @@ export default function CityPage() {
         { name: t('breadcrumb.home'), to: '/' },
         isGeorgia
           ? { name: t('nav.allDestinations'), to: destinationsBase }
-          : { name: t('nav.destinations.armenia'), to: countryBase(country) },
+          // Keyed by the record's country (see RegionPage), not hard-coded to
+          // Armenia, so a city of any later country names itself correctly.
+          : { name: t(`nav.destinations.${country}`), to: countryBase(country) },
         ...(parentCrumb ? [parentCrumb] : []),
         { name: city.name },
       ]

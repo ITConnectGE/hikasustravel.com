@@ -92,7 +92,10 @@ export default function RegionPage() {
         // country's own name — the same ui key the Destinations dropdown uses.
         isGeorgia
           ? { name: t('nav.allDestinations'), to: destinationsBase }
-          : { name: t('nav.destinations.armenia'), to: countryBase(country) },
+          // The country's own name, from the same ui key the Destinations
+          // dropdown uses — keyed by the record's country, so an Azerbaijani
+          // region reads "Azerbaijan" and an Armenian one "Armenia".
+          : { name: t(`nav.destinations.${country}`), to: countryBase(country) },
         { name: t('nav.regions'), to: regionsHubPathFor(country) },
         { name: region.name },
       ]
@@ -221,14 +224,17 @@ export default function RegionPage() {
             item: c.to ? `${SITE_URL}/${lang}${c.to === '/' ? '' : c.to}` : url,
           })),
         },
-        {
+        // Only a region that actually renders a FAQ asserts a FAQPage; an empty
+        // mainEntity would be an invalid node. Every Armenian region has one,
+        // so their graphs are unchanged.
+        ...(faqItems.length > 0 ? [{
           '@type': 'FAQPage',
           mainEntity: faqItems.map((item) => ({
             '@type': 'Question',
             name: item.title,
             acceptedAnswer: { '@type': 'Answer', text: item.content },
           })),
-        },
+        }] : []),
       ],
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps

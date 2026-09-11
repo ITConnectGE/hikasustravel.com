@@ -131,7 +131,8 @@ export default function ThingsToDoCityPage() {
           // Regions step, because its parent is not one — Yerevan holds separate
           // capital status and sits at /armenia/<city>, not under /armenia/regions.
           { name: t('breadcrumb.home'), to: '/' },
-          { name: t('nav.destinations.armenia'), to: countryBase(country) },
+          // Keyed by the record's country (see RegionPage), not hard-coded.
+          { name: t(`nav.destinations.${country}`), to: countryBase(country) },
           ...(isCity ? [] : [{ name: t('nav.regions'), to: regionsHubPathFor(country) }]),
           { name: place.name, to: placePath },
           { name: ttdLabel },

@@ -185,7 +185,7 @@ export function buildSearchIndex({ lang, pages = {}, t, tourTranslations = null 
   // Region card names/descriptions come from whichever regions hub owns the
   // region — Georgia's or Armenia's. Region slugs are unique across countries,
   // so merging the two maps can't collide, and Georgia's entries are unchanged.
-  const regionItems = { ...(pages.destinationsRegions?.items || {}), ...(pages.armeniaRegions?.items || {}) }
+  const regionItems = { ...(pages.destinationsRegions?.items || {}), ...(pages.armeniaRegions?.items || {}), ...(pages.azerbaijanRegions?.items || {}) }
   const cityItems = pages.destinationsCities?.items || {}
   const placeItems = pages.destinationsPlaces?.items || {}
 

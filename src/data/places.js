@@ -3718,8 +3718,11 @@ export const regions = [
     noHero: true,
     noAutolink: true,
   },
+  // Quba-Khachmaz is the first PUBLISHED Azerbaijani region: its guide lives in
+  // pages.json under `qubaKhachmaz` and its SEO entry in seoData.source.js. No
+  // photograph yet, so `noHero` keeps the title band; no `thingsToDo` guide.
   {
-    slug: 'quba-khachmaz', name: 'Quba-Khachmaz', published: false, country: 'azerbaijan',
+    slug: 'quba-khachmaz', name: 'Quba-Khachmaz', published: true, country: 'azerbaijan',
     seoKey: 'qubaKhachmaz', contentKey: 'qubaKhachmaz',
     noHero: true,
     noAutolink: true,
