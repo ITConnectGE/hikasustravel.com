@@ -37,6 +37,19 @@ const VISA_PAGES = {
     heroAvif: '/images/files/khor-virap-monastery-ararat-armenia-1086.avif',
     ogImage: '/images/files/khor-virap-monastery-ararat-armenia-og.jpg',
   },
+  azerbaijan: {
+    pageKey: 'azerbaijanVisaGuide',
+    seoKey: 'azerbaijanVisaGuide',
+    path: 'azerbaijan-visa-entry-requirements',
+    breadcrumbName: 'Azerbaijan Visa & Entry Requirements',
+    // No photograph of Azerbaijan exists in the repo yet. Rather than put a
+    // Georgian or Armenian picture on this page (and in its social card), it
+    // renders the solid `.dest-title-band` the destination pages use for the
+    // same situation, asserts no image in its Article node, and prerender.js
+    // strips the template og:image for its explicit null. Swap in a hero and
+    // og:image when an Azerbaijani photograph arrives.
+    noHero: true,
+  },
 }
 
 function formatDate(dateStr, lang) {
@@ -73,7 +86,7 @@ export default function VisaPage({ country = 'georgia' }) {
           description: seo.description,
           inLanguage: lang,
           mainEntityOfPage: url,
-          image: `${SITE_URL}${HERO_IMAGE}`,
+          ...(HERO_IMAGE ? { image: `${SITE_URL}${HERO_IMAGE}` } : {}),
           ...(published && { datePublished: published, dateModified: published }),
           author: { '@type': 'Organization', name: 'Hikasus Travel' },
           publisher: {
@@ -106,7 +119,15 @@ export default function VisaPage({ country = 'georgia' }) {
 
   return (
     <>
-      <HeroSection image={HERO_IMAGE} imageAvif={conf.heroAvif} title={page.heroTitle} />
+      {conf.noHero ? (
+        /* No approved photograph yet — the same solid title band the
+           destination pages use for `noHero`, carrying the page's single H1. */
+        <section className="dest-title-band">
+          <h1>{page.heroTitle}</h1>
+        </section>
+      ) : (
+        <HeroSection image={HERO_IMAGE} imageAvif={conf.heroAvif} title={page.heroTitle} />
+      )}
       <section className="page-items about-georgia">
         <FadeUp>
           {published && (

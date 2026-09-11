@@ -71,6 +71,7 @@ export default function Footer({ variant = 'default' }) {
             <li><LocaleLink to="/shuttle-service">{t('footer.shuttleService')}</LocaleLink></li>
             <li><LocaleLink to="/georgia-visa-entry-requirements">{t('footer.visa')}</LocaleLink></li>
             <li><LocaleLink to="/armenia-visa-entry-requirements">{t('footer.visaArmenia')}</LocaleLink></li>
+            <li><LocaleLink to="/azerbaijan-visa-entry-requirements">{t('footer.visaAzerbaijan')}</LocaleLink></li>
           </ul>
         </div>
 

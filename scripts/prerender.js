@@ -314,6 +314,7 @@ const seoPageMap = {
   'georgian-lari-currency-guide': 'lariGuide',
   'georgia-visa-entry-requirements': 'visaGuide',
   'armenia-visa-entry-requirements': 'armeniaVisaGuide',
+  'azerbaijan-visa-entry-requirements': 'azerbaijanVisaGuide',
   'languages-of-georgia': 'languagesGuide',
   'kutaisi-international-airport': 'airportGuide',
   'tbilisi-international-airport': 'tbilisiAirportGuide',
@@ -366,6 +367,7 @@ const staticPageImages = {
   'azerbaijan/regions': null,
   'azerbaijan/cities': null,
   'azerbaijan/places-to-visit': null,
+  'azerbaijan-visa-entry-requirements': null,
 }
 
 // Dedicated social records ({ src, width, height, alt{lang} }) for a country's

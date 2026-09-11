@@ -129,6 +129,7 @@ const FAMILIES = [
 const livePaths = [
   '', 'about-us', 'about-georgia', 'georgian-lari-currency-guide',
   'georgia-visa-entry-requirements', 'armenia-visa-entry-requirements',
+  'azerbaijan-visa-entry-requirements',
   'languages-of-georgia', 'kutaisi-international-airport',
   'tbilisi-international-airport', 'tbilisi-metro', 'tbilisi-railway-station', 'abkhazia',
   'georgia', 'georgia/regions', 'georgia/cities', 'georgia/places-to-visit',
