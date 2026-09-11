@@ -6495,9 +6495,6 @@
     "heroTitle": "Regio's van Azerbeidzjan",
     "intro": "",
     "items": {
-      "baku": {
-        "name": "Baku"
-      },
       "absheron": {
         "name": "Absheron Peninsula"
       },

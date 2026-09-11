@@ -6495,9 +6495,6 @@
     "heroTitle": "Les régions d'Azerbaïdjan",
     "intro": "",
     "items": {
-      "baku": {
-        "name": "Baku"
-      },
       "absheron": {
         "name": "Absheron Peninsula"
       },

@@ -359,6 +359,13 @@ const staticPageImages = {
   // site-wide georgia-home.jpg default — a Georgian photo on an Armenian page.
   'armenia': '/images/files/khor-virap-monastery-ararat-armenia-og.jpg',
   'armenia-visa-entry-requirements': '/images/files/khor-virap-monastery-ararat-armenia-og.jpg',
+  // Azerbaijan has no photograph of its own yet. `null` (not a missing key)
+  // tells emitHtml to strip the site-wide Georgian default rather than let a
+  // country's pages inherit another country's social card.
+  'azerbaijan': null,
+  'azerbaijan/regions': null,
+  'azerbaijan/cities': null,
+  'azerbaijan/places-to-visit': null,
 }
 
 // Dedicated social records ({ src, width, height, alt{lang} }) for a country's
@@ -502,13 +509,20 @@ async function emitHtml(filePath, lang, { title, description, keywords, canonica
   $('meta[property="og:url"]').attr('content', canonical)
   $('meta[property="og:locale"]').attr('content', ogLocale)
   // Prefer a dedicated 1.91:1 social image when supplied, otherwise the hero.
+  // An `image` of exactly `null` means "this page has no honest social image":
+  // the template's site-wide default (a Georgian photo) is REMOVED rather than
+  // inherited, so a page of another country never ships a Georgian social card.
+  // `undefined` keeps the long-standing behaviour: the template default stays.
   const ogImg = ogImage || image
+  const noSocial = !ogImg && image === null
   if (ogImg) {
     const imgUrl = ogImg.startsWith('http') ? ogImg : `${SITE_URL}${ogImg}`
     $('meta[property="og:image"]').attr('content', imgUrl)
     setOrAppendMeta($, 'og:image:alt', ogImageAlt, 'property')
     setOrAppendMeta($, 'og:image:width', ogImageWidth, 'property')
     setOrAppendMeta($, 'og:image:height', ogImageHeight, 'property')
+  } else if (noSocial) {
+    $('meta[property="og:image"]').remove()
   }
 
   // Twitter Card
@@ -518,6 +532,8 @@ async function emitHtml(filePath, lang, { title, description, keywords, canonica
     const imgUrl = ogImg.startsWith('http') ? ogImg : `${SITE_URL}${ogImg}`
     $('meta[name="twitter:image"]').attr('content', imgUrl)
     setOrAppendMeta($, 'twitter:image:alt', ogImageAlt, 'name')
+  } else if (noSocial) {
+    $('meta[name="twitter:image"]').remove()
   }
 
   // Remove existing og:locale:alternate tags
@@ -670,7 +686,9 @@ for (const lang of LANGS) {
       description: data.description,
       keywords: data.keywords,
       canonical,
-      image: staticPageImages[path] || '/images/files/georgia-home.jpg',
+      // A key set to `null` is an explicit "no social image" (see the map);
+      // only an absent key takes the site-wide default.
+      image: path in staticPageImages ? staticPageImages[path] : '/images/files/georgia-home.jpg',
       ...(staticPageSocial[path] ? {
         ogImage: staticPageSocial[path].src,
         ogImageAlt: staticPageSocial[path].alt?.[lang] || staticPageSocial[path].alt?.en,

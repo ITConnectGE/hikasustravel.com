@@ -3700,17 +3700,6 @@ export const regions = [
   // Karabakh, East Zangezur, Mil-Mughan and Shirvan-Salyan are deliberately
   // absent — a content decision, not an omission.
   // ---------------------------------------------------------------------------
-  // Baku is the capital as its own unit, like Tbilisi and Yerevan: it is listed
-  // on the Cities hub (its city record, below) and NOT on the Regions hub —
-  // `hideFromHub` keeps this region record off that listing while the record
-  // itself stays as the city's structural parent.
-  {
-    slug: 'baku', name: 'Baku', published: false, country: 'azerbaijan',
-    seoKey: 'baku', contentKey: 'baku',
-    hideFromHub: true,
-    noHero: true,
-    noAutolink: true,
-  },
   {
     slug: 'absheron', name: 'Absheron Peninsula', published: false, country: 'azerbaijan',
     seoKey: 'absheron', contentKey: 'absheron',
@@ -9319,12 +9308,12 @@ export const cities = [
   // the convention. `featured: true` marks the cities the /azerbaijan landing
   // page shows in its "Featured city guides" strip, capital first and then
   // A–Z by this canonical name (the same order in every locale).
-  // Baku is both a region and a city here (the capital is its own unit, like
-  // Tbilisi and Yerevan), so the two records share a slug — the region and city
-  // namespaces are otherwise disjoint.
+  // Baku is a CITY, not a region — the capital is its own unit, like Tbilisi
+  // and Yerevan, so it has `region: null` and no region record. Its twelve
+  // places are parented on the city (parentType: 'city').
   // ---------------------------------------------------------------------------
   {
-    slug: 'baku', name: 'Baku', region: 'baku', published: false, country: 'azerbaijan',
+    slug: 'baku', name: 'Baku', region: null, published: false, country: 'azerbaijan',
     seoKey: 'baku', contentKey: 'baku',
     featured: true,
     noHero: true, heroTitleAsH1: true, noAutolink: true,
@@ -15860,79 +15849,80 @@ export const sites = [
   },
   // ---------------------------------------------------------------------------
   // Azerbaijan. All scaffolded (`published: false`); see the region block for
-  // the convention. Every site is parented on its region, which is what gives
-  // it /azerbaijan/<region>/<slug> once published. Its country is derived from
-  // that parent (countryOfSite), never duplicated here.
+  // the convention. Baku's places are parented on the Baku CITY; every other
+  // site is parented on its region. Either way the URL is
+  // /azerbaijan/<parent>/<slug> once published, and the country is derived
+  // from the parent (countryOfSite), never duplicated here.
   // ---------------------------------------------------------------------------
   {
     slug: 'icherisheher', name: 'Icherisheher (Old City)',
-    parentType: 'region', parent: 'baku', published: false,
+    parentType: 'city', parent: 'baku', published: false,
     seoKey: 'icherisheher', contentKey: 'icherisheher',
     noHero: true, noAutolink: true,
   },
   {
     slug: 'maiden-tower', name: 'Maiden Tower',
-    parentType: 'region', parent: 'baku', published: false,
+    parentType: 'city', parent: 'baku', published: false,
     seoKey: 'maidenTower', contentKey: 'maidenTower',
     noHero: true, noAutolink: true,
   },
   {
     slug: 'palace-of-the-shirvanshahs', name: 'Palace of the Shirvanshahs',
-    parentType: 'region', parent: 'baku', published: false,
+    parentType: 'city', parent: 'baku', published: false,
     seoKey: 'palaceOfTheShirvanshahs', contentKey: 'palaceOfTheShirvanshahs',
     noHero: true, noAutolink: true,
   },
   {
     slug: 'flame-towers', name: 'Flame Towers',
-    parentType: 'region', parent: 'baku', published: false,
+    parentType: 'city', parent: 'baku', published: false,
     seoKey: 'flameTowers', contentKey: 'flameTowers',
     noHero: true, noAutolink: true,
   },
   {
     slug: 'heydar-aliyev-center', name: 'Heydar Aliyev Center',
-    parentType: 'region', parent: 'baku', published: false,
+    parentType: 'city', parent: 'baku', published: false,
     seoKey: 'heydarAliyevCenter', contentKey: 'heydarAliyevCenter',
     noHero: true, noAutolink: true,
   },
   {
     slug: 'baku-boulevard', name: 'Baku Boulevard',
-    parentType: 'region', parent: 'baku', published: false,
+    parentType: 'city', parent: 'baku', published: false,
     seoKey: 'bakuBoulevard', contentKey: 'bakuBoulevard',
     noHero: true, noAutolink: true,
   },
   {
     slug: 'carpet-museum', name: 'Azerbaijan Carpet Museum',
-    parentType: 'region', parent: 'baku', published: false,
+    parentType: 'city', parent: 'baku', published: false,
     seoKey: 'carpetMuseum', contentKey: 'carpetMuseum',
     noHero: true, noAutolink: true,
   },
   {
     slug: 'highland-park', name: 'Highland Park and Martyrs\' Lane',
-    parentType: 'region', parent: 'baku', published: false,
+    parentType: 'city', parent: 'baku', published: false,
     seoKey: 'highlandPark', contentKey: 'highlandPark',
     noHero: true, noAutolink: true,
   },
   {
     slug: 'fountains-square', name: 'Fountains Square and Nizami Street',
-    parentType: 'region', parent: 'baku', published: false,
+    parentType: 'city', parent: 'baku', published: false,
     seoKey: 'fountainsSquare', contentKey: 'fountainsSquare',
     noHero: true, noAutolink: true,
   },
   {
     slug: 'bibi-heybat-mosque', name: 'Bibi-Heybat Mosque',
-    parentType: 'region', parent: 'baku', published: false,
+    parentType: 'city', parent: 'baku', published: false,
     seoKey: 'bibiHeybatMosque', contentKey: 'bibiHeybatMosque',
     noHero: true, noAutolink: true,
   },
   {
     slug: 'taza-bazaar', name: 'Taza Bazaar',
-    parentType: 'region', parent: 'baku', published: false,
+    parentType: 'city', parent: 'baku', published: false,
     seoKey: 'tazaBazaar', contentKey: 'tazaBazaar',
     noHero: true, noAutolink: true,
   },
   {
     slug: 'national-museum-of-history', name: 'National Museum of History',
-    parentType: 'region', parent: 'baku', published: false,
+    parentType: 'city', parent: 'baku', published: false,
     seoKey: 'nationalMuseumOfHistory', contentKey: 'nationalMuseumOfHistory',
     noHero: true, noAutolink: true,
   },
@@ -15961,14 +15951,24 @@ export const sites = [
     noHero: true, noAutolink: true,
   },
   {
+    // NOT on the Absheron Peninsula: the striped hills lie in Khizi district on
+    // the northern route out of Baku. Khizi has no landing page, so the site
+    // is parented on the town (parentType 'place', which carries its own
+    // `country`), exactly as Abastumani's observatory is in Georgia. It stays
+    // on the Places to Visit hub; its URL becomes /azerbaijan/khizi/<slug>.
     slug: 'candy-cane-mountains', name: 'Candy Cane Mountains',
-    parentType: 'region', parent: 'absheron', published: false,
+    parentType: 'place', parent: 'khizi', country: 'azerbaijan', published: false,
     seoKey: 'candyCaneMountains', contentKey: 'candyCaneMountains',
     noHero: true, noAutolink: true,
   },
   {
+    // NOT on the Absheron Peninsula either: the park spans the Khizi and
+    // Siyazan administrative districts. The registry holds one parent per
+    // site, so it takes the same Khizi town parent as the Candy Cane
+    // Mountains (its entrance and visitor side), with Siyazan noted here
+    // rather than modelled. No Khizi page is created for this.
     slug: 'altiagac-national-park', name: 'Altiagac National Park',
-    parentType: 'region', parent: 'absheron', published: false,
+    parentType: 'place', parent: 'khizi', country: 'azerbaijan', published: false,
     seoKey: 'altiagacNationalPark', contentKey: 'altiagacNationalPark',
     noHero: true, noAutolink: true,
   },
@@ -15979,14 +15979,20 @@ export const sites = [
     noHero: true, noAutolink: true,
   },
   {
+    // The Gobustan Rock Art Cultural Landscape (UNESCO, 2007) and the mud
+    // volcanoes beside it lie south-west of Baku in Qaradagh district, around
+    // the Gobustan settlement — NOT in Qobustan rayon of Mountainous Shirvan,
+    // which merely shares the name. So neither is a Mountainous Shirvan child:
+    // both are parented on the Gobustan settlement (parentType 'place', no
+    // landing page of its own), giving /azerbaijan/gobustan/<slug>.
     slug: 'gobustan-petroglyphs', name: 'Gobustan Petroglyphs',
-    parentType: 'region', parent: 'mountainous-shirvan', published: false,
+    parentType: 'place', parent: 'gobustan', country: 'azerbaijan', published: false,
     seoKey: 'gobustanPetroglyphs', contentKey: 'gobustanPetroglyphs',
     noHero: true, noAutolink: true,
   },
   {
     slug: 'gobustan-mud-volcanoes', name: 'Gobustan Mud Volcanoes',
-    parentType: 'region', parent: 'mountainous-shirvan', published: false,
+    parentType: 'place', parent: 'gobustan', country: 'azerbaijan', published: false,
     seoKey: 'gobustanMudVolcanoes', contentKey: 'gobustanMudVolcanoes',
     noHero: true, noAutolink: true,
   },
@@ -16414,10 +16420,12 @@ const COUNTRIES = {
   // region, city and site is `published: false`, and `hubMeta` puts a
   // <meta name="robots"> on the four hub pages and keeps them out of the
   // sitemap (see countryHubMeta below). Remove `hubMeta` once the landing has
-  // its intro copy and at least one published child. `socialImage` is the
-  // site-wide default every destination page used to inherit; no Azerbaijan
-  // page is published, so it is inert until a genuine photograph replaces it.
-  azerbaijan: { base: '/azerbaijan', name: 'Azerbaijan', code: 'AZ', regionsHub: true, citiesHub: true, placesHub: true, socialImage: '/images/files/georgia-home.jpg', hubMeta: 'noindex,follow' },
+  // its intro copy and at least one published child. `socialImage` is `null`
+  // on purpose: no photograph of Azerbaijan exists in the repo yet, and a page
+  // here must never ship another country's picture as its social card —
+  // prerender.js strips the template default for an explicit null. Replace it
+  // with a genuine 1.91:1 Azerbaijani crop when one arrives.
+  azerbaijan: { base: '/azerbaijan', name: 'Azerbaijan', code: 'AZ', regionsHub: true, citiesHub: true, placesHub: true, socialImage: null, hubMeta: 'noindex,follow' },
 }
 export const DEFAULT_COUNTRY = 'georgia'
 /** A record's country id, defaulting to Georgia for every record without one. */
