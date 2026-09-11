@@ -1519,6 +1519,26 @@
     "description": "De regio's van Azerbeidzjan, van Bakoe en het schiereiland Absheron tot Sheki-Zagatala, Quba-Khachmaz, Lankaran-Astara en Nachitsjevan. De regiogidsen worden één voor één toegevoegd.",
     "keywords": "regio's van Azerbeidzjan, Absheron, Sheki-Zagatala, Quba-Khachmaz, Nachitsjevan"
   },
+  "shekiZagatala": {
+    "title": "Sheki-Zagatala, Azerbeidzjan | Sheki, Gabala & bergdorpen",
+    "description": "Ontdek Sheki-Zagatala: UNESCO-stad Sheki, het Paleis van de Khan, bergdorpen, Kaukasisch-Albanees erfgoed, Tufandag, watervallen en noordwestelijke keuken.",
+    "keywords": "Sheki-Zagatala, Sheki, Paleis van de Sheki-khans, shabaka, kerk van Kish, Gabala, Tufandag, Nohur-meer, Nij Udi, Gakh, Ilisu, Zagatala, regio's van Azerbeidzjan"
+  },
+  "mountainousShirvan": {
+    "title": "Mountainous Shirvan, Azerbeidzjan | Shamakhi, Lahij & Basqal",
+    "description": "Ontdek Mountainous Shirvan: erfgoed van de Shirvanshahs in Shamakhi, koperambacht van Lahij, zijde van Basqal, wijngaarden, bergwandelingen en sterrenhemels.",
+    "keywords": "Mountainous Shirvan, Shamakhi, Lahij, Basqal, kelaghayi, Diri Baba, Juma-moskee Shamakhi, sterrenwacht Pirgulu, Ivanovka, Meysari wijn, Garanohur, regio's van Azerbeidzjan"
+  },
+  "absheron": {
+    "title": "Schiereiland Absheron, Azerbeidzjan | Vuurtempels en stranden",
+    "description": "Ontdek het schiereiland Absheron: de vuurtempel van Ateshgah, Yanar Dag, middeleeuwse forten, Kaspische stranden en het nationaal park voorbij Bakoe.",
+    "keywords": "schiereiland Absheron, vuurtempel Ateshgah, Yanar Dag, Gala Qala, kasteel van Mardakan, Nationaal Park Absheron, stranden Absheron, excursies vanuit Bakoe, dagtochten Azerbeidzjan"
+  },
+  "baku": {
+    "title": "Bakoe, Azerbeidzjan | Oude stad, Flame Towers & reisgids",
+    "description": "Bezoek Bakoe, de Kaspische hoofdstad van Azerbeidzjan: UNESCO-erfgoed Icherisheher, Paleis van de Shirvanshahs, olieherenhuizen, Flame Towers en reistips.",
+    "keywords": "Bakoe, Bakoe Azerbeidzjan, Icherisheher, oude stad Bakoe, Maagdentoren, Paleis van de Shirvanshahs, Flame Towers, Heydar Aliyev Center, Boulevard van Bakoe, Tapijtmuseum Bakoe, wat te doen in Bakoe, reisgids Bakoe"
+  },
   "qubaKhachmaz": {
     "title": "Quba-Khachmaz, Azerbeidzjan | Khinalig, Shahdag & Red Village",
     "description": "Ontdek Quba-Khachmaz: Khinalig (UNESCO), Bergjoods erfgoed in Red Village, de toppen en het skiën van Shahdag, watervallen en de kust bij Nabran.",

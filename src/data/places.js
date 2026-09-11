@@ -3701,19 +3701,19 @@ export const regions = [
   // absent — a content decision, not an omission.
   // ---------------------------------------------------------------------------
   {
-    slug: 'absheron', name: 'Absheron Peninsula', published: false, country: 'azerbaijan',
+    slug: 'absheron', name: 'Absheron Peninsula', published: true, country: 'azerbaijan',
     seoKey: 'absheron', contentKey: 'absheron',
     noHero: true,
     noAutolink: true,
   },
   {
-    slug: 'mountainous-shirvan', name: 'Mountainous Shirvan', published: false, country: 'azerbaijan',
+    slug: 'mountainous-shirvan', name: 'Mountainous Shirvan', published: true, country: 'azerbaijan',
     seoKey: 'mountainousShirvan', contentKey: 'mountainousShirvan',
     noHero: true,
     noAutolink: true,
   },
   {
-    slug: 'sheki-zagatala', name: 'Sheki-Zagatala', published: false, country: 'azerbaijan',
+    slug: 'sheki-zagatala', name: 'Sheki-Zagatala', published: true, country: 'azerbaijan',
     seoKey: 'shekiZagatala', contentKey: 'shekiZagatala',
     noHero: true,
     noAutolink: true,
@@ -9316,7 +9316,7 @@ export const cities = [
   // places are parented on the city (parentType: 'city').
   // ---------------------------------------------------------------------------
   {
-    slug: 'baku', name: 'Baku', region: null, published: false, country: 'azerbaijan',
+    slug: 'baku', name: 'Baku', region: null, published: true, country: 'azerbaijan',
     seoKey: 'baku', contentKey: 'baku',
     featured: true,
     noHero: true, heroTitleAsH1: true, noAutolink: true,

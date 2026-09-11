@@ -1519,6 +1519,26 @@
     "description": "Die Regionen Aserbaidschans, von Baku und der Halbinsel Absheron bis Sheki-Zagatala, Quba-Khachmaz, Lankaran-Astara und Nachitschewan. Die Regionalführer werden nach und nach ergänzt.",
     "keywords": "Regionen Aserbaidschans, Absheron, Sheki-Zagatala, Quba-Khachmaz, Nachitschewan"
   },
+  "shekiZagatala": {
+    "title": "Sheki-Zagatala, Aserbaidschan | Sheki, Gabala & Bergdörfer",
+    "description": "Entdecken Sie Sheki-Zagatala: UNESCO-Stadt Sheki, Khan-Palast, Bergdörfer, kaukasisch-albanisches Erbe, Tufandag, Wasserfälle und die Küche des Nordwestens.",
+    "keywords": "Sheki-Zagatala, Sheki, Palast der Sheki-Khane, Shabaka, Kirche von Kish, Gabala, Tufandag, Nohur-See, Nij Udi, Gakh, Ilisu, Zagatala, Regionen Aserbaidschans"
+  },
+  "mountainousShirvan": {
+    "title": "Mountainous Shirvan, Aserbaidschan | Schamachi, Lahij & Basqal",
+    "description": "Entdecken Sie Mountainous Shirvan: Schirwanschah-Erbe in Schamachi, Kupferkunst in Lahij, Seide aus Basqal, Weinberge, Bergwanderungen und Sternenhimmel.",
+    "keywords": "Mountainous Shirvan, Schamachi, Lahij, Basqal, Kelaghayi, Diri Baba, Juma-Moschee Schamachi, Observatorium Pirgulu, Ivanovka, Meysari Wein, Garanohur, Regionen Aserbaidschans"
+  },
+  "absheron": {
+    "title": "Halbinsel Absheron, Aserbaidschan | Feuertempel, Dörfer & Strände",
+    "description": "Entdecken Sie die Halbinsel Absheron: Ateshgah-Feuertempel, Yanar Dag, mittelalterliche Festungen, Kaspische Strände und Nationalpark jenseits von Baku.",
+    "keywords": "Halbinsel Absheron, Ateshgah-Feuertempel, Yanar Dag, Gala Qala, Festung Mardakan, Absheron-Nationalpark, Strände Absheron, Ausflüge ab Baku, Tagesausflüge Aserbaidschan"
+  },
+  "baku": {
+    "title": "Baku, Aserbaidschan | Altstadt, Flame Towers & Reiseführer",
+    "description": "Baku, Aserbaidschans Hauptstadt am Kaspischen Meer: UNESCO-Altstadt Icherisheher, Palast der Schirwanschahs, Ölboom-Architektur, Flame Towers und Reisetipps.",
+    "keywords": "Baku, Baku Aserbaidschan, Icherisheher, Altstadt Baku, Jungfrauenturm, Palast der Schirwanschahs, Flame Towers, Heydar-Aliyev-Center, Baku-Boulevard, Teppichmuseum Baku, Baku Sehenswürdigkeiten, Baku Reiseführer"
+  },
   "qubaKhachmaz": {
     "title": "Quba-Khachmaz, Aserbaidschan | Khinalig, Shahdag & Red Village",
     "description": "Entdecken Sie Quba-Khachmaz: Khinalig (UNESCO), bergjüdisches Erbe in Red Village, Gipfel und Skifahren am Shahdag, Wasserfälle und Kaspische Küste bei Nabran.",

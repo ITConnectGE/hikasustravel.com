@@ -1519,6 +1519,26 @@
     "description": "Regiony Ázerbájdžánu, od Baku a Apšeronského poloostrova po Šeki-Zaqatalu, Qubu-Chačmaz, Lenkoran-Astaru a Nachičevan. Regionální průvodci přibývají jeden po druhém.",
     "keywords": "regiony Ázerbájdžánu, Apšeron, Šeki-Zaqatala, Quba-Chačmaz, Nachičevan"
   },
+  "shekiZagatala": {
+    "title": "Sheki-Zagatala, Ázerbájdžán | Şeki, Gabala a horské vesnice",
+    "description": "Objevte Sheki-Zagatalu: Şeki na seznamu UNESCO, chánův palác, horské vesnice, dědictví kavkazské Albánie, Tufandag, vodopády a kuchyni severozápadu.",
+    "keywords": "Sheki-Zagatala, Şeki, Palác şekijských chánů, šebeke, kostel v Kishi, Gabala, Tufandag, jezero Nohur, Nij Udiové, Gakh, Ilisu, Zagatala, regiony Ázerbájdžánu"
+  },
+  "mountainousShirvan": {
+    "title": "Mountainous Shirvan, Ázerbájdžán | Šamachy, Lahij a Basqal",
+    "description": "Objevte Mountainous Shirvan: dědictví šírvánšáhů v Šamachy, mědikovectví v Lahiji, hedvábí z Basqalu, vinice, horskou turistiku a pozorování hvězd.",
+    "keywords": "Mountainous Shirvan, Šamachy, Lahij, Basqal, kelaghayi, Diri Baba, mešita Juma Šamachy, observatoř Pirgulu, Ivanovka, víno Meysari, Garanohur, regiony Ázerbájdžánu"
+  },
+  "absheron": {
+    "title": "Apšeronský poloostrov, Ázerbájdžán | Chrámy ohně, vesnice a pláže",
+    "description": "Poznejte Apšeronský poloostrov v Ázerbájdžánu: chrám ohně Ateshgah, Yanar Dag, středověké pevnosti, kaspické pláže a Apšeronský národní park za hranicemi Baku.",
+    "keywords": "Apšeronský poloostrov, chrám ohně Ateshgah, Yanar Dag, Gala Qala, hrad Mardakan, Apšeronský národní park, pláže Absheron, výlety z Baku, jednodenní výlety Ázerbájdžán"
+  },
+  "baku": {
+    "title": "Baku, Ázerbájdžán | Staré město, Flame Towers a průvodce",
+    "description": "Navštivte Baku, kaspickou metropoli Ázerbájdžánu: Icherisheher na seznamu UNESCO, Palác Šírvánšáhů, architektura ropného boomu, Flame Towers a praktické rady.",
+    "keywords": "Baku, Baku Ázerbájdžán, Icherisheher, Staré město Baku, Panenská věž, Palác Šírvánšáhů, Flame Towers, Centrum Hejdara Alijeva, Bakuský bulvár, Muzeum koberců Baku, co dělat v Baku, průvodce Baku"
+  },
   "qubaKhachmaz": {
     "title": "Quba-Khachmaz, Ázerbájdžán | Khinalig, Shahdag a Red Village",
     "description": "Poznejte Quba-Khachmaz: Khinalig (UNESCO), dědictví horských Židů v Red Village, vrcholy a lyžování na Shahdagu, vodopády a kaspické pobřeží u Nabranu.",

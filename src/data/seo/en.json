@@ -1519,6 +1519,26 @@
     "description": "The regions of Azerbaijan, from Baku and the Absheron Peninsula to Sheki-Zagatala, Quba-Khachmaz, Lankaran-Astara and Nakhchivan. Regional guides are being added one by one.",
     "keywords": "regions of Azerbaijan, Azerbaijan regions, Absheron, Sheki-Zagatala, Quba-Khachmaz, Nakhchivan"
   },
+  "shekiZagatala": {
+    "title": "Sheki-Zagatala, Azerbaijan | Sheki, Gabala & Mountain Villages",
+    "description": "Explore Sheki-Zagatala: UNESCO-listed Sheki, the Khan's Palace, mountain villages, Caucasian Albanian heritage, Tufandag, waterfalls and northwestern food.",
+    "keywords": "Sheki-Zagatala, Sheki, Palace of the Sheki Khans, shabaka, Kish church, Gabala, Tufandag, Nohur Lake, Nij Udi, Gakh, Ilisu, Zagatala, Azerbaijan regions"
+  },
+  "mountainousShirvan": {
+    "title": "Mountainous Shirvan, Azerbaijan | Shamakhi, Lahij & Basqal",
+    "description": "Explore Mountainous Shirvan: Shamakhi's Shirvanshah heritage, Lahij's copper craftsmanship, Basqal's silk traditions, vineyards, mountain hiking and stargazing.",
+    "keywords": "Mountainous Shirvan, Shamakhi, Lahij, Basqal, kelaghayi, Diri Baba, Shamakhi Juma Mosque, Pirgulu observatory, Ivanovka, Meysari wine, Garanohur, Azerbaijan regions"
+  },
+  "absheron": {
+    "title": "Absheron Peninsula, Azerbaijan | Fire Temples, Villages & Beaches",
+    "description": "Explore Azerbaijan's Absheron Peninsula: Ateshgah Fire Temple, Yanar Dag, medieval fortresses, Caspian beaches and Absheron National Park beyond central Baku.",
+    "keywords": "Absheron Peninsula, Ateshgah Fire Temple, Yanar Dag, Gala Qala, Mardakan Castle, Absheron National Park, Absheron beaches, Baku excursions, Azerbaijan day trips"
+  },
+  "baku": {
+    "title": "Baku, Azerbaijan | Old City, Flame Towers & Travel Guide",
+    "description": "Visit Baku, Azerbaijan's Caspian capital. Discover UNESCO-listed Icherisheher, the Shirvanshahs' Palace, oil-boom architecture, Flame Towers and practical travel tips.",
+    "keywords": "Baku, Baku Azerbaijan, Icherisheher, Old City Baku, Maiden Tower, Palace of the Shirvanshahs, Flame Towers, Heydar Aliyev Center, Baku Boulevard, Carpet Museum Baku, things to do in Baku, Baku travel guide"
+  },
   "qubaKhachmaz": {
     "title": "Quba-Khachmaz, Azerbaijan | Khinalig, Shahdag & Red Village",
     "description": "Explore Quba-Khachmaz: UNESCO-listed Khinalig, Mountain Jewish heritage in Red Village, Shahdag's high peaks and skiing, waterfalls and Caspian coast at Nabran.",

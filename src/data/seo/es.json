@@ -1519,6 +1519,26 @@
     "description": "Las regiones de Azerbaiyán, desde Bakú y la península de Absheron hasta Sheki-Zagatala, Quba-Khachmaz, Lankaran-Astara y Najicheván. Las guías regionales se añaden una a una.",
     "keywords": "regiones de Azerbaiyán, Absheron, Sheki-Zagatala, Quba-Khachmaz, Najicheván"
   },
+  "shekiZagatala": {
+    "title": "Sheki-Zagatala, Azerbaiyán | Sheki, Gabala y aldeas de montaña",
+    "description": "Descubra Sheki-Zagatala: Sheki (UNESCO), el Palacio del Kan, aldeas de montaña, herencia de la Albania caucásica, Tufandag, cascadas y comida del noroeste.",
+    "keywords": "Sheki-Zagatala, Sheki, Palacio de los Kanes de Sheki, shabaka, iglesia de Kish, Gabala, Tufandag, lago Nohur, Nij udi, Gakh, Ilisu, Zagatala, regiones de Azerbaiyán"
+  },
+  "mountainousShirvan": {
+    "title": "Mountainous Shirvan, Azerbaiyán | Shamakhi, Lahij y Basqal",
+    "description": "Descubra Mountainous Shirvan: herencia de los shirvanshahs en Shamakhi, cobre de Lahij, seda de Basqal, viñedos, senderismo de montaña y cielos estrellados.",
+    "keywords": "Mountainous Shirvan, Shamakhi, Lahij, Basqal, kelaghayi, Diri Baba, mezquita Juma Shamakhi, observatorio Pirgulu, Ivanovka, vino Meysari, Garanohur, regiones de Azerbaiyán"
+  },
+  "absheron": {
+    "title": "Península de Absheron, Azerbaiyán | Templos del fuego y playas",
+    "description": "Explora la península de Absheron: el templo del fuego de Ateshgah, Yanar Dag, fortalezas medievales, playas del Caspio y el parque nacional más allá de Bakú.",
+    "keywords": "península de Absheron, templo del fuego de Ateshgah, Yanar Dag, Gala Qala, castillo de Mardakan, Parque Nacional de Absheron, playas de Absheron, excursiones desde Bakú, excursiones de un día Azerbaiyán"
+  },
+  "baku": {
+    "title": "Bakú, Azerbaiyán | Ciudad vieja, Flame Towers y guía de viaje",
+    "description": "Visita Bakú, la capital de Azerbaiyán en el Caspio: Icherisheher (UNESCO), el Palacio de los Shirvanshahs, el barrio petrolero, las Flame Towers y consejos.",
+    "keywords": "Bakú, Bakú Azerbaiyán, Icherisheher, ciudad vieja de Bakú, Torre de la Doncella, Palacio de los Shirvanshahs, Flame Towers, Centro Heydar Aliyev, bulevar de Bakú, Museo de la Alfombra Bakú, qué ver en Bakú, guía de viaje de Bakú"
+  },
   "qubaKhachmaz": {
     "title": "Quba-Khachmaz, Azerbaiyán | Khinalig, Shahdag y Red Village",
     "description": "Explora Quba-Khachmaz: Khinalig (UNESCO), el legado judío de Red Village, las cumbres y el esquí de Shahdag, cascadas y la costa del Caspio en Nabran.",

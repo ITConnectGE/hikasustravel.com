@@ -1519,6 +1519,26 @@
     "description": "Regiony Azerbejdżanu, od Baku i Półwyspu Apszerońskiego po Szeki-Zagatalę, Qubę-Chaczmaz, Lenkoran-Astarę i Nachiczewan. Przewodniki regionalne dodajemy jeden po drugim.",
     "keywords": "regiony Azerbejdżanu, Apszeron, Szeki-Zagatala, Quba-Chaczmaz, Nachiczewan"
   },
+  "shekiZagatala": {
+    "title": "Sheki-Zagatala, Azerbejdżan | Szeki, Gabala i górskie wsie",
+    "description": "Odkryj Sheki-Zagatalę: Szeki z listy UNESCO, Pałac Chana, górskie wsie, dziedzictwo Albanii Kaukaskiej, Tufandag, wodospady i kuchnię północnego zachodu.",
+    "keywords": "Sheki-Zagatala, Szeki, Pałac Chanów Szeki, szebeke, kościół w Kish, Gabala, Tufandag, jezioro Nohur, Nij Udinowie, Gakh, Ilisu, Zagatala, regiony Azerbejdżanu"
+  },
+  "mountainousShirvan": {
+    "title": "Mountainous Shirvan, Azerbejdżan | Szamachy, Lahij i Basqal",
+    "description": "Odkryj Mountainous Shirvan: dziedzictwo szyrwanszachów w Szamachy, kotlarstwo Lahij, jedwab z Basqal, winnice, górskie wędrówki i obserwację gwiazd.",
+    "keywords": "Mountainous Shirvan, Szamachy, Lahij, Basqal, kelaghayi, Diri Baba, meczet Dżuma Szamachy, obserwatorium Pirgulu, Ivanovka, wino Meysari, Garanohur, regiony Azerbejdżanu"
+  },
+  "absheron": {
+    "title": "Półwysep Apszeroński, Azerbejdżan | Świątynie ognia, wsie i plaże",
+    "description": "Poznaj Półwysep Apszeroński: świątynię ognia Ateshgah, Yanar Dag, średniowieczne twierdze, kaspijskie plaże i park narodowy poza centrum Baku.",
+    "keywords": "Półwysep Apszeroński, świątynia ognia Ateshgah, Yanar Dag, Gala Qala, zamek w Mardakanie, Park Narodowy Absheron, plaże Absheronu, wycieczki z Baku, jednodniowe wycieczki Azerbejdżan"
+  },
+  "baku": {
+    "title": "Baku, Azerbejdżan | Stare Miasto, Flame Towers i przewodnik",
+    "description": "Odwiedź Baku, kaspijską stolicę Azerbejdżanu: Icherisheher z listy UNESCO, Pałac Szirwanszachów, architekturę boomu naftowego, Flame Towers i praktyczne rady.",
+    "keywords": "Baku, Baku Azerbejdżan, Icherisheher, Stare Miasto Baku, Baszta Dziewicza, Pałac Szirwanszachów, Flame Towers, Centrum Hejdara Alijewa, Bulwar Bakijski, Muzeum Dywanów Baku, co zobaczyć w Baku, przewodnik po Baku"
+  },
   "qubaKhachmaz": {
     "title": "Quba-Khachmaz, Azerbejdżan | Khinalig, Shahdag i Red Village",
     "description": "Odkryj Quba-Khachmaz: Khinalig (UNESCO), dziedzictwo Żydów górskich w Red Village, szczyty i narciarstwo Shahdagu, wodospady i kaspijskie wybrzeże w Nabranie.",
