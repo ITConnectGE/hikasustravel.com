@@ -3744,7 +3744,14 @@ export const regions = [
     noAutolink: true,
   },
   {
-    slug: 'lankaran-astara', name: 'Lankaran-Astara', published: false, country: 'azerbaijan',
+    // Region article covers Hirkan National Park / UNESCO Hyrcanian Forests
+    // (precisely two components, not the whole park), Lankaran's fortress and
+    // tea, Lerik's longevity tradition (kept explicitly unverified), Astara's
+    // Iran border (kept distinct from Georgia's — same national land-entry
+    // rule, different neighbor), Yanar Bulag, Masalli's thermal springs (no
+    // medical claims) and Gizil Aghaj/Sim — one article, same pattern as
+    // Gazakh-Tovuz and Quba-Khachmaz.
+    slug: 'lankaran-astara', name: 'Lankaran-Astara', published: true, country: 'azerbaijan',
     seoKey: 'lankaranAstara', contentKey: 'lankaranAstara',
     noHero: true,
     noAutolink: true,
