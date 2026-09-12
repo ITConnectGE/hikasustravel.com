@@ -861,13 +861,15 @@ const hotelData = {
     // and facilities. No photographs are available from the hotel yet.
     description: 'A large hotel in the ski town of Bakuriani, on Koba Tsakadze Street between the resort\'s two ski zones. The property states that it has 153 rooms and space for up to 450 guests, along with a wellness centre containing a swimming pool, jacuzzis, a sauna, massage rooms and a gym. It sits in the pine forest on the northern slope of the Trialeti Range and is geared towards families and active guests.',
   },
-  // Yerevan hotels for the 10-Day Georgia and Armenia Tour. No photographs are
-  // available from any of the three properties yet -- HotelPanels.jsx already
-  // renders correctly with `images: []` (see the Bakuriani Inn entry above for
-  // the same pattern), showing description/amenities/locationHighlights with
-  // no photo grid. Facts verified against each property's own site and
-  // aggregator listings in September 2026; add real photos here later with no
-  // other code changes needed.
+  // Yerevan hotels for the 10-Day Georgia and Armenia Tour. Facts verified
+  // against each property's own site and aggregator listings in September
+  // 2026. Photo sourcing (September 2026, see
+  // docs/hotel-image-sources.md): Yerevan Place and Ani Central Inn now have
+  // four/three real photos from their own official sites; hilton.com blocks
+  // automated access (HTTP 403) and no Hilton press page exists for this
+  // property, so DoubleTree still has none -- `images: []` renders correctly
+  // with no photo grid (see the Bakuriani Inn entry above for the same
+  // pattern).
   'DoubleTree by Hilton Yerevan City Centre': {
     images: [],
     stars: 4,
@@ -886,7 +888,12 @@ const hotelData = {
     ],
   },
   'Yerevan Place': {
-    images: [],
+    images: [
+      { src: '/images/hotels/yerevan-place.webp', alt: 'Yerevan Place Hotel illuminated building exterior and entrance in central Yerevan, Armenia', category: 'Exterior' },
+      { src: '/images/hotels/yerevan-place-2.webp', alt: 'Reception desk at Yerevan Place Hotel, Yerevan', category: 'Lobby' },
+      { src: '/images/hotels/yerevan-place-3.webp', alt: 'Guest room at Yerevan Place Hotel with king bed and city view', category: 'Room' },
+      { src: '/images/hotels/yerevan-place-4.webp', alt: 'Guest bathroom at Yerevan Place Hotel with bathtub and walk-in shower', category: 'Bathroom' },
+    ],
     stars: 4,
     description: 'A comfortable 4-star hotel in the heart of Yerevan, just steps from Republic Square. Yerevan Place combines modern rooms with an exceptionally central location, along with a restaurant and bar, a gym and useful guest services — a convenient mid-range choice for exploring the Armenian capital on foot.',
     amenities: [
@@ -903,7 +910,16 @@ const hotelData = {
     ],
   },
   'Ani Central Inn': {
-    images: [],
+    // No exterior building photograph exists on the property's own site
+    // (checked homepage, about-us, contacts and hotel pages) -- the hotel
+    // appears to share a building with sister properties under the same
+    // operator (Dali Holding). Nothing was substituted; see
+    // docs/hotel-image-sources.md.
+    images: [
+      { src: '/images/hotels/ani-central-inn.webp', alt: 'Lounge and lobby area at Ani Central Inn, Yerevan, with grand piano and seating', category: 'Lobby' },
+      { src: '/images/hotels/ani-central-inn-2.webp', alt: 'Guest room at Ani Central Inn with double bed and work desk', category: 'Room' },
+      { src: '/images/hotels/ani-central-inn-3.webp', alt: 'Guest bathroom at Ani Central Inn with walk-in shower and toilet', category: 'Bathroom' },
+    ],
     stars: 4,
     description: 'A comfortable and good-value 4-star hotel in central Yerevan, within easy reach of Republic Square and the city\'s main sights. Ani Central Inn offers bright rooms, daily breakfast, an indoor swimming pool and a sauna, making it a practical Classic option with more facilities than its straightforward positioning might suggest.',
     amenities: [

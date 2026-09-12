@@ -416,3 +416,33 @@ substituted from a banned source (OTA, Google, Pinterest, social) to fill these.
 **26 hotels still have at least one gap.** Every one of them is clickable, has a
 description in all seven languages, and has correct alt text for the photographs it
 does hold — the gap is the photograph itself.
+
+---
+
+## 2026-09-12 — Yerevan hotel photos (10-Day Georgia and Armenia Tour)
+
+Two of the three Yerevan properties added to `hotelData.js` on 2026-09-11 (with
+`images: []`) now have real photographs, each pulled from the property's own official
+site and viewed individually before use — same process as the 2026-08-29 pass. No
+OTA, Google, review-site or social-media imagery was used. Converted to WebP, long
+edge capped at 1600 px, never upscaled.
+
+| Hotel | Category | Source URL (official site) | Local file | Size |
+|---|---|---|---|---|
+| Yerevan Place | exterior | https://yerevanplace.com/ (homepage hero) | `yerevan-place.webp` | 1600x583, 115 KB |
+| Yerevan Place | lobby / reception | https://yerevanplace.com/gallery/ | `yerevan-place-2.webp` | 600x365, 36 KB |
+| Yerevan Place | standard room | https://yerevanplace.com/rooms/standard-king-room/ | `yerevan-place-3.webp` | 1200x500, 46 KB |
+| Yerevan Place | bathroom | https://yerevanplace.com/rooms/standard-king-room/ | `yerevan-place-4.webp` | 1200x500, 42 KB |
+| Ani Central Inn | lobby | https://anicentralinnyerevan.com/ (homepage slide) | `ani-central-inn.webp` | 1500x1012, 181 KB |
+| Ani Central Inn | standard room | https://anicentralinnyerevan.com/rooms/double-twin/ | `ani-central-inn-2.webp` | 1110x720, 43 KB |
+| Ani Central Inn | bathroom | https://anicentralinnyerevan.com/rooms/double-twin/ | `ani-central-inn-3.webp` | 1110x720, 48 KB |
+
+**Still outstanding:**
+
+| Hotel | Missing category | Why it is still open |
+|---|---|---|
+| Ani Central Inn | exterior | No standalone building photograph anywhere on anicentralinnyerevan.com (homepage, about-us, contacts and hotel pages all checked). The hotel appears to share a building with sister properties under the same operator (Dali Holding); nothing was substituted. |
+| DoubleTree by Hilton Yerevan City Centre | exterior, lobby, room, bathroom | hilton.com returns HTTP 403 to automated access (bot protection) and no Hilton Press Center property page exists for this hotel. Hilton's general media-library terms restrict use to "editorial material about Hilton," which does not cover a commercial travel agency's own marketing site, so that library was not used either. Attempting to bypass the 403 was not attempted, consistent with this manifest's rules. |
+
+Log a reply date here if the hotel or Hikasus later supplies DoubleTree photos or an
+Ani Central Inn exterior shot, then follow the "Adding a new hotel image" checklist.

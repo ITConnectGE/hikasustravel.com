@@ -27,6 +27,12 @@
       "À quelques pas de la place de la République",
       "À distance de marche des principaux sites du centre d'Erevan",
       "Proche du musée d'Histoire, de l'Opéra et de la Cascade"
+    ],
+    "imageAlts": [
+      "Façade illuminée et entrée du Yerevan Place Hotel dans le centre d'Erevan, Arménie",
+      "Réception du Yerevan Place Hotel, Erevan",
+      "Chambre confortable du Yerevan Place Hotel avec lit king-size et vue sur la ville",
+      "Salle de bains avec baignoire et douche à l'italienne du Yerevan Place Hotel"
     ]
   },
   "Ani Central Inn": {
@@ -42,6 +48,11 @@
       "Situé dans le centre d'Erevan, avenue Tigran Mets",
       "À environ 10 minutes à pied de la place de la République",
       "À distance de marche de la Galerie nationale d'Arménie"
+    ],
+    "imageAlts": [
+      "Salon et hall du Ani Central Inn à Erevan, avec piano à queue et salon",
+      "Chambre double confortable de l'Ani Central Inn avec bureau",
+      "Salle de bains avec douche à l'italienne et WC de l'Ani Central Inn"
     ]
   },
   "Sandali Metekhi By Old Hospitality": {
