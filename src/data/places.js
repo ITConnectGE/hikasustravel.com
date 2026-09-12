@@ -3727,8 +3727,17 @@ export const regions = [
     noHero: true,
     noAutolink: true,
   },
+  // Region article covers Ganja (corrected Elisabethpol/Kirovabad chronology,
+  // Shah Abbas Mosque's 1606 build vs. 1776 minarets, Nizami kept
+  // non-polemical), Goygol/Helenendorf's German and wine heritage, Lake
+  // Goygol's 1139 formation, Dashkasan's hiking with the Chiragli-Dastafur
+  // no-bridge/rainy-season warning and the Azgilli restricted-area warning
+  // kept absolute, and Naftalan framed as wellness with no independent
+  // medical claims — one article, same pattern as the other Azerbaijan
+  // regions. Reciprocal links added: Central Aran and Gazakh-Tovuz's existing
+  // plain-text mentions of this region are now real links.
   {
-    slug: 'ganja-dashkasan', name: 'Ganja-Dashkasan', published: false, country: 'azerbaijan',
+    slug: 'ganja-dashkasan', name: 'Ganja-Dashkasan', published: true, country: 'azerbaijan',
     seoKey: 'ganjaDashkasan', contentKey: 'ganjaDashkasan',
     noHero: true,
     noAutolink: true,
