@@ -2,6 +2,7 @@ export const blogArticles = [
   {
     slug: 'ultimate-guide-to-traveling-to-georgia',
     titleKey: 'blog.article1.title',
+    descKey: 'blog.article1.desc',
     title: 'The Ultimate Guide to Traveling to Georgia: Everything You Need to Know Before You Go',
     excerpt: 'From visa requirements and the best time to visit, to must-try dishes, ancient wine traditions, and hidden gems most tourists never find — this is the only Georgia travel guide you will ever need.',
     author: 'Hikasus Travel',

@@ -239,6 +239,7 @@ for (const { path } of allPaths) {
 const signatureFor = (lang, path, changefreq, priority) => {
   const key = contentKeyByPath.get(path) ?? null
   const entityPage = entityPageByPath.get(path) ?? null
+  const blog = blogBySlug.get(blogSlugOf(path)) ?? null
 
   const payload = {
     path,
@@ -249,7 +250,13 @@ const signatureFor = (lang, path, changefreq, priority) => {
     seo: key ? (localeSeo[lang]?.[key] ?? null) : null,
     registry: registryData.get(path) ?? null,
     tour: tourBySlug.get(tourSlugOf(path)) ?? null,
-    blog: blogBySlug.get(blogSlugOf(path)) ?? null,
+    blog,
+    // A blog article's per-locale title/description live in ui.json under its
+    // titleKey/descKey (see blogData.js), so `blog` above — the article record
+    // itself — carries only the key *names*, which never change on a
+    // translation-only edit. Resolve them per locale so that edit still moves
+    // the fingerprint.
+    blogCopy: blog ? [blog.titleKey, blog.descKey].map((k) => localeUi[lang]?.[k] ?? null) : null,
     entity: entityPage,
     // A tours listing page renders the tours it links to.
     entityTours: entityPage
