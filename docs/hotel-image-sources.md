@@ -432,7 +432,7 @@ edge capped at 1600 px, never upscaled.
 | Yerevan Place | exterior | https://yerevanplace.com/ (homepage hero) | `yerevan-place.webp` | 1600x583, 115 KB |
 | Yerevan Place | lobby / reception | https://yerevanplace.com/gallery/ | `yerevan-place-2.webp` | 600x365, 36 KB |
 | Yerevan Place | standard room | https://yerevanplace.com/rooms/standard-king-room/ | `yerevan-place-3.webp` | 1200x500, 46 KB |
-| Yerevan Place | bathroom | https://yerevanplace.com/rooms/standard-king-room/ | `yerevan-place-4.webp` | 1200x500, 42 KB |
+| Yerevan Place | bathroom | https://yerevanplace.com/rooms/standard-king-room/ | `yerevan-place-4.webp` | 1200x500, 56 KB |
 | Ani Central Inn | lobby | https://anicentralinnyerevan.com/ (homepage slide) | `ani-central-inn.webp` | 1500x1012, 181 KB |
 | Ani Central Inn | standard room | https://anicentralinnyerevan.com/rooms/double-twin/ | `ani-central-inn-2.webp` | 1110x720, 43 KB |
 | Ani Central Inn | bathroom | https://anicentralinnyerevan.com/rooms/double-twin/ | `ani-central-inn-3.webp` | 1110x720, 48 KB |
