@@ -3733,8 +3733,12 @@ export const regions = [
     noHero: true,
     noAutolink: true,
   },
+  // Region article covers Gazakh/Avey/Damjili/Goyazan, Red Bridge (historic vs.
+  // current border status), Tovuz/Baltiya winery, Shamkir/Annenfeld, Gadabey/
+  // Siemens/Koroglu, and Slavyanka in one page — the same "one comprehensive
+  // article, no published children" pattern already used by Quba-Khachmaz.
   {
-    slug: 'gazakh-tovuz', name: 'Gazakh-Tovuz', published: false, country: 'azerbaijan',
+    slug: 'gazakh-tovuz', name: 'Gazakh-Tovuz', published: true, country: 'azerbaijan',
     seoKey: 'gazakhTovuz', contentKey: 'gazakhTovuz',
     noHero: true,
     noAutolink: true,
