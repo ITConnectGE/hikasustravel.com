@@ -1,4 +1,49 @@
 {
+  "DoubleTree by Hilton Yerevan City Centre": {
+    "description": "Uhlazený mezinárodní hotel nedaleko centra Jerevanu, který spojuje prostorné moderní pokoje se spolehlivým komfortem značky Hilton. DoubleTree by Hilton Yerevan City Centre leží asi 10 minut chůze od náměstí Republiky a nabízí vlastní restauraci, střešní terasu, spa a fitness centrum — pohodlnou prémiovou základnu pro tři noci v arménské metropoli.",
+    "amenities": [
+      "Wi-Fi zdarma",
+      "Restaurace a bar",
+      "Fitness centrum",
+      "Spa a wellness",
+      "Recepce 24/7"
+    ],
+    "locationHighlights": [
+      "Asi 10 minut chůze od náměstí Republiky",
+      "Centrální poloha s dobrou dostupností hlavních památek Jerevanu",
+      "Střešní terasa s výhledem na město"
+    ]
+  },
+  "Yerevan Place": {
+    "description": "Pohodlný 4hvězdičkový hotel v srdci Jerevanu, jen pár kroků od náměstí Republiky. Yerevan Place spojuje moderní pokoje s výjimečně centrální polohou a nabízí restauraci s barem, fitness centrum a užitečné hotelové služby — pohodlnou volbu ve střední kategorii pro poznávání arménské metropole pěšky.",
+    "amenities": [
+      "Wi-Fi zdarma",
+      "Restaurace a bar",
+      "Fitness centrum",
+      "Concierge a pokojová služba",
+      "Venkovní terasa"
+    ],
+    "locationHighlights": [
+      "Pár kroků od náměstí Republiky",
+      "Docházková vzdálenost k hlavním památkám centra Jerevanu",
+      "Blízko Historickému muzeu, opeře a Kaskádě"
+    ]
+  },
+  "Ani Central Inn": {
+    "description": "Pohodlný a cenově výhodný 4hvězdičkový hotel v centru Jerevanu, v dosahu náměstí Republiky a hlavních památek města. Ani Central Inn nabízí světlé pokoje, denní snídani, krytý bazén a saunu, díky čemuž jde o praktickou variantu kategorie Classic s větším vybavením, než by jeho jednoduché zařazení napovídalo.",
+    "amenities": [
+      "Wi-Fi zdarma",
+      "Každodenní snídaně",
+      "Krytý bazén",
+      "Sauna",
+      "Recepce 24/7"
+    ],
+    "locationHighlights": [
+      "Centrum Jerevanu, na třídě Tigran Mets",
+      "Asi 10 minut chůze od náměstí Republiky",
+      "Docházková vzdálenost k Národní galerii Arménie"
+    ]
+  },
   "Sandali Metekhi By Old Hospitality": {
     "description": "Butikový hotel ve stylu art deco v historické čtvrti Metechi v Tbilisi. Se střešním barem, který nabízí panoramatický výhled na pevnost Narikala a Staré Město, spojuje Sandali Metekhi gruzínské kouzlo s moderním pohodlím.",
     "amenities": ["Wi-Fi zdarma", "Střešní bar a restaurace", "Klimatizace", "Soukromé parkoviště", "Concierge 24/7"],

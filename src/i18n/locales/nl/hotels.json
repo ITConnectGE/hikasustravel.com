@@ -1,4 +1,49 @@
 {
+  "DoubleTree by Hilton Yerevan City Centre": {
+    "description": "Een verzorgd internationaal hotel dicht bij het centrum van Jerevan, met ruime eigentijdse kamers en het vertrouwde comfort van het Hilton-merk. Het DoubleTree by Hilton Yerevan City Centre ligt op ongeveer 10 minuten lopen van het Plein van de Republiek en beschikt over een eigen restaurant, een dakterras, een spa en een fitnessruimte — een comfortabele premium uitvalsbasis voor drie nachten in de Armeense hoofdstad.",
+    "amenities": [
+      "Gratis wifi",
+      "Restaurant & bar",
+      "Fitnessruimte",
+      "Spa & wellness",
+      "24/7-receptie"
+    ],
+    "locationHighlights": [
+      "Ongeveer 10 minuten lopen van het Plein van de Republiek",
+      "Centrale ligging met makkelijke toegang tot de belangrijkste bezienswaardigheden van Jerevan",
+      "Dakterras met uitzicht over de stad"
+    ]
+  },
+  "Yerevan Place": {
+    "description": "Een comfortabel 4-sterrenhotel in het hart van Jerevan, op een paar passen van het Plein van de Republiek. Yerevan Place combineert moderne kamers met een uitzonderlijk centrale ligging, samen met een restaurant met bar, een fitnessruimte en handige gastenservices — een praktische middenklassekeuze om de Armeense hoofdstad te voet te verkennen.",
+    "amenities": [
+      "Gratis wifi",
+      "Restaurant & bar",
+      "Fitnessruimte",
+      "Conciërge & roomservice",
+      "Buitenterras"
+    ],
+    "locationHighlights": [
+      "Op een paar passen van het Plein van de Republiek",
+      "Loopafstand van de belangrijkste bezienswaardigheden in het centrum van Jerevan",
+      "Dichtbij het Geschiedenismuseum, het operagebouw en de Cascade"
+    ]
+  },
+  "Ani Central Inn": {
+    "description": "Een comfortabel en voordelig 4-sterrenhotel in het centrum van Jerevan, op korte afstand van het Plein van de Republiek en de belangrijkste bezienswaardigheden van de stad. Ani Central Inn biedt lichte kamers, dagelijks ontbijt, een binnenzwembad en een sauna, waardoor het een praktische Classic-optie is met meer voorzieningen dan de eenvoudige positionering doet vermoeden.",
+    "amenities": [
+      "Gratis wifi",
+      "Dagelijks ontbijt",
+      "Binnenzwembad",
+      "Sauna",
+      "24/7-receptie"
+    ],
+    "locationHighlights": [
+      "Centraal gelegen aan de Tigran Mets-laan in Jerevan",
+      "Ongeveer 10 minuten lopen van het Plein van de Republiek",
+      "Loopafstand van de Nationale Galerie van Armenië"
+    ]
+  },
   "Sandali Metekhi By Old Hospitality": {
     "description": "Een art-decoboetiekhotel in de historische wijk Metekhi van Tbilisi. Met een dakbar die een weids uitzicht biedt op het Narikala-fort en de oude stad combineert Sandali Metekhi Georgische charme met modern comfort.",
     "amenities": ["Gratis wifi", "Dakbar & restaurant", "Airconditioning", "Privéparkeerplaats", "24/7-conciërge"],

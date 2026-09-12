@@ -1,4 +1,49 @@
 {
+  "DoubleTree by Hilton Yerevan City Centre": {
+    "description": "Un hotel internacional muy cuidado cerca del centro de Ereván, que combina habitaciones amplias y contemporáneas con la fiabilidad y el confort de la marca Hilton. El DoubleTree by Hilton Yerevan City Centre está a unos 10 minutos a pie de la plaza de la República y ofrece un restaurante propio, una terraza en la azotea, spa y gimnasio, lo que lo convierte en una cómoda base Premium para tres noches en la capital armenia.",
+    "amenities": [
+      "Wi-Fi gratuito",
+      "Restaurante y bar",
+      "Gimnasio",
+      "Spa y bienestar",
+      "Recepción 24 h"
+    ],
+    "locationHighlights": [
+      "A unos 10 minutos a pie de la plaza de la República",
+      "Ubicación céntrica con fácil acceso a los principales lugares de interés de Ereván",
+      "Terraza en la azotea con vistas a la ciudad"
+    ]
+  },
+  "Yerevan Place": {
+    "description": "Un cómodo hotel de 4 estrellas en el corazón de Ereván, a pocos pasos de la plaza de la República. El Yerevan Place combina habitaciones modernas con una ubicación excepcionalmente céntrica, además de un restaurante con bar, gimnasio y servicios prácticos para los huéspedes: una opción de gama media conveniente para recorrer la capital armenia a pie.",
+    "amenities": [
+      "Wi-Fi gratuito",
+      "Restaurante y bar",
+      "Gimnasio",
+      "Conserjería y servicio de habitaciones",
+      "Terraza al aire libre"
+    ],
+    "locationHighlights": [
+      "A pocos pasos de la plaza de la República",
+      "A poca distancia a pie de los principales lugares de interés del centro de Ereván",
+      "Cerca del Museo de Historia, el Teatro de la Ópera y la Cascada"
+    ]
+  },
+  "Ani Central Inn": {
+    "description": "Un hotel de 4 estrellas cómodo y de buena relación calidad-precio en el centro de Ereván, cerca de la plaza de la República y de los principales lugares de interés de la ciudad. El Ani Central Inn ofrece habitaciones luminosas, desayuno diario, piscina cubierta y sauna, lo que lo convierte en una opción Classic práctica con más instalaciones de las que su sencilla categoría podría sugerir.",
+    "amenities": [
+      "Wi-Fi gratuito",
+      "Desayuno diario",
+      "Piscina cubierta",
+      "Sauna",
+      "Recepción 24 h"
+    ],
+    "locationHighlights": [
+      "En el centro de Ereván, en la avenida Tigran Mets",
+      "A unos 10 minutos a pie de la plaza de la República",
+      "A poca distancia a pie de la Galería Nacional de Armenia"
+    ]
+  },
   "Sandali Metekhi By Old Hospitality": {
     "description": "Un hotel boutique art déco situado en el histórico barrio de Metekhi de Tiflis. Con un bar en la azotea que ofrece vistas panorámicas de la fortaleza de Narikala y el casco antiguo, el Sandali Metekhi combina el encanto georgiano con la comodidad moderna.",
     "amenities": ["Wi-Fi gratuito", "Bar y restaurante en la azotea", "Aire acondicionado", "Aparcamiento privado", "Conserjería 24 h"],

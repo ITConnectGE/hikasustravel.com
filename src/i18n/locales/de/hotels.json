@@ -1,4 +1,49 @@
 {
+  "DoubleTree by Hilton Yerevan City Centre": {
+    "description": "Ein gepflegtes internationales Hotel nahe der Innenstadt von Jerewan, das geräumige, zeitgemäße Zimmer mit dem verlässlichen Komfort der Marke Hilton verbindet. Das DoubleTree by Hilton Yerevan City Centre liegt etwa 10 Gehminuten vom Platz der Republik entfernt und bietet ein Restaurant, eine Dachterrasse, einen Spa-Bereich und einen Fitnessraum — eine komfortable Premium-Unterkunft für drei Nächte in der armenischen Hauptstadt.",
+    "amenities": [
+      "Kostenloses WLAN",
+      "Restaurant & Bar",
+      "Fitnessbereich",
+      "Spa & Wellness",
+      "24/7-Rezeption"
+    ],
+    "locationHighlights": [
+      "Etwa 10 Gehminuten vom Platz der Republik entfernt",
+      "Zentrale Lage mit gutem Zugang zu den wichtigsten Sehenswürdigkeiten Jerewans",
+      "Dachterrasse mit Blick über die Stadt"
+    ]
+  },
+  "Yerevan Place": {
+    "description": "Ein komfortables 4-Sterne-Hotel im Herzen von Jerewan, nur wenige Schritte vom Platz der Republik entfernt. Das Yerevan Place verbindet moderne Zimmer mit einer außergewöhnlich zentralen Lage sowie einem Restaurant mit Bar, einem Fitnessraum und praktischen Gästeservices — eine bequeme Mid-Range-Wahl, um die armenische Hauptstadt zu Fuß zu erkunden.",
+    "amenities": [
+      "Kostenloses WLAN",
+      "Restaurant & Bar",
+      "Fitnessbereich",
+      "Concierge & Zimmerservice",
+      "Dachterrasse"
+    ],
+    "locationHighlights": [
+      "Wenige Schritte vom Platz der Republik entfernt",
+      "Fußläufig zu den zentralen Sehenswürdigkeiten Jerewans",
+      "Nahe dem Geschichtsmuseum, der Oper und der Kaskade"
+    ]
+  },
+  "Ani Central Inn": {
+    "description": "Ein komfortables und preiswertes 4-Sterne-Hotel im Zentrum von Jerewan, in bequemer Reichweite des Platzes der Republik und der wichtigsten Sehenswürdigkeiten der Stadt. Das Ani Central Inn bietet helle Zimmer, tägliches Frühstück, ein Hallenbad und eine Sauna und ist damit eine praktische Classic-Option mit mehr Ausstattung, als seine schlichte Einordnung vermuten lässt.",
+    "amenities": [
+      "Kostenloses WLAN",
+      "Tägliches Frühstück",
+      "Hallenbad",
+      "Sauna",
+      "24/7-Rezeption"
+    ],
+    "locationHighlights": [
+      "Zentral gelegen an der Tigran-Mets-Allee in Jerewan",
+      "Etwa 10 Gehminuten vom Platz der Republik entfernt",
+      "Fußläufig zur Nationalgalerie von Armenien"
+    ]
+  },
   "Sandali Metekhi By Old Hospitality": {
     "description": "Ein Art-déco-Boutiquehotel im historischen Metekhi-Viertel von Tiflis. Mit einer Dachbar, die einen weiten Blick auf die Festung Narikala und die Altstadt bietet, verbindet das Sandali Metekhi georgischen Charme mit modernem Komfort.",
     "amenities": ["Kostenloses WLAN", "Dachbar & Restaurant", "Klimaanlage", "Privatparkplatz", "24/7-Concierge"],

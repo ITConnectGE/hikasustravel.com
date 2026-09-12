@@ -1,4 +1,49 @@
 {
+  "DoubleTree by Hilton Yerevan City Centre": {
+    "description": "Elegancki międzynarodowy hotel niedaleko centrum Erywania, łączący przestronne, nowoczesne pokoje ze sprawdzonym komfortem marki Hilton. DoubleTree by Hilton Yerevan City Centre leży około 10 minut spacerem od placu Republiki i oferuje własną restaurację, taras na dachu, strefę spa oraz siłownię — wygodną, premium bazę na trzy noce w stolicy Armenii.",
+    "amenities": [
+      "Bezpłatne Wi-Fi",
+      "Restauracja i bar",
+      "Siłownia",
+      "Spa i wellness",
+      "Recepcja 24/7"
+    ],
+    "locationHighlights": [
+      "Około 10 minut spacerem od placu Republiki",
+      "Centralna lokalizacja z łatwym dostępem do głównych atrakcji Erywania",
+      "Taras na dachu z widokiem na miasto"
+    ]
+  },
+  "Yerevan Place": {
+    "description": "Komfortowy hotel 4-gwiazdkowy w sercu Erywania, zaledwie kilka kroków od placu Republiki. Yerevan Place łączy nowoczesne pokoje z wyjątkowo centralną lokalizacją, a także restaurację z barem, siłownię i przydatne usługi hotelowe — wygodny wybór w kategorii Mid-Range do zwiedzania stolicy Armenii pieszo.",
+    "amenities": [
+      "Bezpłatne Wi-Fi",
+      "Restauracja i bar",
+      "Siłownia",
+      "Konsjerż i room service",
+      "Taras zewnętrzny"
+    ],
+    "locationHighlights": [
+      "Kilka kroków od placu Republiki",
+      "Odległość spacerowa od głównych atrakcji centrum Erywania",
+      "Blisko Muzeum Historii, Opery i Kaskady"
+    ]
+  },
+  "Ani Central Inn": {
+    "description": "Komfortowy i korzystny cenowo hotel 4-gwiazdkowy w centrum Erywania, w łatwym zasięgu placu Republiki i głównych atrakcji miasta. Ani Central Inn oferuje jasne pokoje, codzienne śniadanie, kryty basen i saunę, co czyni go praktyczną opcją w kategorii Classic, oferującą więcej udogodnień, niż mogłaby sugerować jego prosta pozycja.",
+    "amenities": [
+      "Bezpłatne Wi-Fi",
+      "Codzienne śniadanie",
+      "Basen kryty",
+      "Sauna",
+      "Recepcja 24/7"
+    ],
+    "locationHighlights": [
+      "Centrum Erywania, przy alei Tigran Mets",
+      "Około 10 minut spacerem od placu Republiki",
+      "Odległość spacerowa od Galerii Narodowej Armenii"
+    ]
+  },
   "Sandali Metekhi By Old Hospitality": {
     "description": "Butikowy hotel w stylu art déco w historycznej dzielnicy Metechi w Tbilisi. Z barem na dachu oferującym panoramiczny widok na twierdzę Narikala i Stare Miasto, Sandali Metekhi łączy gruziński urok z nowoczesnym komfortem.",
     "amenities": ["Bezpłatne Wi-Fi", "Bar i restauracja na dachu", "Klimatyzacja", "Parking prywatny", "Konsjerż 24/7"],

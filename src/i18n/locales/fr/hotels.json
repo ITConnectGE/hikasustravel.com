@@ -1,4 +1,49 @@
 {
+  "DoubleTree by Hilton Yerevan City Centre": {
+    "description": "Un hôtel international soigné proche du centre d'Erevan, alliant des chambres spacieuses et contemporaines au confort fiable de l'enseigne Hilton. Le DoubleTree by Hilton Yerevan City Centre se trouve à environ 10 minutes à pied de la place de la République et propose un restaurant, une terrasse sur le toit, un espace spa et une salle de sport — une base premium confortable pour trois nuits dans la capitale arménienne.",
+    "amenities": [
+      "Wi-Fi gratuit",
+      "Restaurant & bar",
+      "Salle de sport",
+      "Spa & bien-être",
+      "Réception 24h/24"
+    ],
+    "locationHighlights": [
+      "À environ 10 minutes à pied de la place de la République",
+      "Emplacement central avec un accès facile aux principaux sites d'Erevan",
+      "Terrasse sur le toit avec vue sur la ville"
+    ]
+  },
+  "Yerevan Place": {
+    "description": "Un hôtel 4 étoiles confortable au cœur d'Erevan, à quelques pas de la place de la République. Le Yerevan Place associe des chambres modernes à un emplacement exceptionnellement central, ainsi qu'un restaurant avec bar, une salle de sport et des services pratiques pour les clients — un choix milieu de gamme pratique pour découvrir la capitale arménienne à pied.",
+    "amenities": [
+      "Wi-Fi gratuit",
+      "Restaurant & bar",
+      "Salle de sport",
+      "Conciergerie & service en chambre",
+      "Terrasse extérieure"
+    ],
+    "locationHighlights": [
+      "À quelques pas de la place de la République",
+      "À distance de marche des principaux sites du centre d'Erevan",
+      "Proche du musée d'Histoire, de l'Opéra et de la Cascade"
+    ]
+  },
+  "Ani Central Inn": {
+    "description": "Un hôtel 4 étoiles confortable et abordable dans le centre d'Erevan, à proximité de la place de la République et des principaux sites de la ville. L'Ani Central Inn propose des chambres lumineuses, un petit-déjeuner quotidien, une piscine intérieure et un sauna — une option Classic pratique, avec plus de prestations que son positionnement simple ne le laisse supposer.",
+    "amenities": [
+      "Wi-Fi gratuit",
+      "Petit-déjeuner quotidien",
+      "Piscine intérieure",
+      "Sauna",
+      "Réception 24h/24"
+    ],
+    "locationHighlights": [
+      "Situé dans le centre d'Erevan, avenue Tigran Mets",
+      "À environ 10 minutes à pied de la place de la République",
+      "À distance de marche de la Galerie nationale d'Arménie"
+    ]
+  },
   "Sandali Metekhi By Old Hospitality": {
     "description": "Un hôtel-boutique Art déco niché dans le quartier historique de Metekhi, à Tbilissi. Avec son bar sur le toit offrant une vue panoramique sur la forteresse de Narikala et la vieille ville, le Sandali Metekhi allie charme géorgien et confort moderne.",
     "amenities": ["Wi-Fi gratuit", "Bar & restaurant sur le toit", "Climatisation", "Parking privé", "Conciergerie 24h/24"],

@@ -861,6 +861,64 @@ const hotelData = {
     // and facilities. No photographs are available from the hotel yet.
     description: 'A large hotel in the ski town of Bakuriani, on Koba Tsakadze Street between the resort\'s two ski zones. The property states that it has 153 rooms and space for up to 450 guests, along with a wellness centre containing a swimming pool, jacuzzis, a sauna, massage rooms and a gym. It sits in the pine forest on the northern slope of the Trialeti Range and is geared towards families and active guests.',
   },
+  // Yerevan hotels for the 10-Day Georgia and Armenia Tour. No photographs are
+  // available from any of the three properties yet -- HotelPanels.jsx already
+  // renders correctly with `images: []` (see the Bakuriani Inn entry above for
+  // the same pattern), showing description/amenities/locationHighlights with
+  // no photo grid. Facts verified against each property's own site and
+  // aggregator listings in September 2026; add real photos here later with no
+  // other code changes needed.
+  'DoubleTree by Hilton Yerevan City Centre': {
+    images: [],
+    stars: 4,
+    description: 'A polished international hotel close to central Yerevan, combining spacious contemporary rooms with reliable Hilton comfort. DoubleTree by Hilton Yerevan City Centre is about a 10-minute walk from Republic Square and offers an on-site restaurant, a rooftop terrace, a spa and a fitness center, making it a comfortable premium base for three nights in the Armenian capital.',
+    amenities: [
+      { icon: 'wifi', label: 'Free Wi-Fi' },
+      { icon: 'restaurant', label: 'On-Site Restaurant & Bar' },
+      { icon: 'gym', label: 'Fitness Center' },
+      { icon: 'spa', label: 'Spa & Wellness Facilities' },
+      { icon: 'concierge', label: '24/7 Reception' },
+    ],
+    locationHighlights: [
+      'About a 10-minute walk from Republic Square',
+      'Central location with easy access to Yerevan\'s main sights',
+      'Rooftop terrace with city views',
+    ],
+  },
+  'Yerevan Place': {
+    images: [],
+    stars: 4,
+    description: 'A comfortable 4-star hotel in the heart of Yerevan, just steps from Republic Square. Yerevan Place combines modern rooms with an exceptionally central location, along with a restaurant and bar, a gym and useful guest services — a convenient mid-range choice for exploring the Armenian capital on foot.',
+    amenities: [
+      { icon: 'wifi', label: 'Free Wi-Fi' },
+      { icon: 'restaurant', label: 'Restaurant & Bar' },
+      { icon: 'gym', label: 'Fitness Center' },
+      { icon: 'concierge', label: 'Concierge & Room Service' },
+      { icon: 'terrace', label: 'Open-Air Terrace' },
+    ],
+    locationHighlights: [
+      'Steps from Republic Square',
+      'Walking distance to central Yerevan attractions',
+      'Close to the History Museum, the Opera House and the Cascade',
+    ],
+  },
+  'Ani Central Inn': {
+    images: [],
+    stars: 4,
+    description: 'A comfortable and good-value 4-star hotel in central Yerevan, within easy reach of Republic Square and the city\'s main sights. Ani Central Inn offers bright rooms, daily breakfast, an indoor swimming pool and a sauna, making it a practical Classic option with more facilities than its straightforward positioning might suggest.',
+    amenities: [
+      { icon: 'wifi', label: 'Free Wi-Fi' },
+      { icon: 'breakfast', label: 'Daily Breakfast' },
+      { icon: 'pool', label: 'Indoor Swimming Pool' },
+      { icon: 'spa', label: 'Sauna' },
+      { icon: 'concierge', label: '24/7 Reception' },
+    ],
+    locationHighlights: [
+      'Central Yerevan, on Tigran Mets Avenue',
+      'About a 10-minute walk from Republic Square',
+      'Within walking distance of the National Gallery of Armenia',
+    ],
+  },
 }
 
 // Retired spellings that map onto a canonical entry. Nothing in tours.js uses
@@ -870,6 +928,12 @@ const hotelData = {
 // instead of silently dropping back to unlinked plain text.
 export const hotelAliases = {
   'Hotel Arge': 'Hotel & Wine Cellar ARGE',
+  // The 10-Day Georgia and Armenia Tour's accommodation table uses the
+  // shorter "DoubleTree by Hilton" for the Premium cell (unchanged, per the
+  // owner's instruction not to alter the table); the canonical record above
+  // uses the property's full official name as both the registry key and the
+  // detail-card heading.
+  'DoubleTree by Hilton': 'DoubleTree by Hilton Yerevan City Centre',
 }
 
 // Resolve a name as written in the tour data to its canonical hotelData key,
