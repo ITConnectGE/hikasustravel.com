@@ -3772,7 +3772,15 @@ export const regions = [
     noAutolink: true,
   },
   {
-    slug: 'nakhchivan', name: 'Nakhchivan', published: false, country: 'azerbaijan',
+    // Region article covers Momine Khatun's corrected height (34 m original,
+    // ~26 m current — "covering lost" not "never preserved"), all three
+    // Tentative List entries kept separate (mausoleums 1998, Ordubad 2001,
+    // Gamigaya/Goy-gol 2024, none inscribed), Noah/Ilandag/Ashabi-Kahf framed
+    // as tradition and legend, Alinja's reconstruction distinguished from the
+    // medieval original, Duzdag with no independent medical claims, and the
+    // land-border section for Nakhchivan's Armenia/Turkey/Iran neighbours —
+    // same pattern as the other Azerbaijan regions.
+    slug: 'nakhchivan', name: 'Nakhchivan', published: true, country: 'azerbaijan',
     seoKey: 'nakhchivan', contentKey: 'nakhchivan',
     noHero: true,
     noAutolink: true,
