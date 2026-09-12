@@ -113,7 +113,7 @@ export default function CountryToursHubPage({ country }) {
                           className="tour-tile-image"
                         />
                         <div className="tour-tile-overlay">
-                          <h3>{tt?.title || tour.title}</h3>
+                          <h2>{tt?.title || tour.title}</h2>
                           <p>{tour.days} {t('tour.days')}</p>
                         </div>
                       </LocaleLink>

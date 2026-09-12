@@ -33,6 +33,11 @@ export function buildTourSeo({ tour, tt, lang }) {
       name: 'Hikasus Travel',
       url: 'https://www.hikasustravel.com',
     },
+    // Every existing tour has no `areaServed` field and falls back to
+    // Georgia — byte-identical output to before this was added. A tour that
+    // crosses into another country (e.g. the Georgia+Armenia tour) sets its
+    // own `areaServed` array instead.
+    areaServed: (tour.areaServed || ['Georgia']).map((name) => ({ '@type': 'Country', name })),
     ...(tour.gallery?.length > 0
       ? { image: tour.gallery.map(img => `https://www.hikasustravel.com${img.src}`) }
       : tour.heroImage && { image: `https://www.hikasustravel.com${tour.heroImage}` }),
@@ -50,13 +55,16 @@ export function buildTourSeo({ tour, tt, lang }) {
     .map(day => day.title)
     .filter(Boolean)
   const typeLabel = tour.type === 'group' ? 'group tour' : 'private tour'
-  const daysLabel = tour.days ? `${tour.days}-day Georgia tour` : 'Georgia tour'
+  // Falls back to 'Georgia' for every tour without its own `areaServed` —
+  // identical output to before this was made tour-aware.
+  const areaNames = (tour.areaServed || ['Georgia']).join(' and ')
+  const daysLabel = tour.days ? `${tour.days}-day ${areaNames} tour` : `${areaNames} tour`
   const keywords = [
-    `book ${typeLabel} Georgia`,
+    `book ${typeLabel} ${areaNames}`,
     daysLabel,
     ...locations.map(loc => `${loc} tour`),
-    `Georgia ${typeLabel} itinerary`,
-    'book Georgia adventure',
+    `${areaNames} ${typeLabel} itinerary`,
+    `book ${areaNames} adventure`,
   ].join(', ')
 
   // Offer price (lowest available) for richer product/trip schema.

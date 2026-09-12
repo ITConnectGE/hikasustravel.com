@@ -18493,6 +18493,227 @@ export const tours = [
       ]
     },
     "tourFormTitle": "20-Day Georgia Grand Tour: Wine, Hiking & Culture"
+  },
+  {
+    "slug": "10-day-georgia-armenia-tour",
+    "type": "private",
+    "country": "caucasus",
+    "areaServed": ["Georgia", "Armenia"],
+    "title": "10-Day Georgia and Armenia Tour: Kazbegi, Kakheti Wine & Yerevan",
+    "heroImage": "/images/tours/10-day-georgia-armenia-tour/route-map-10-day-georgia-armenia-tour-2400.webp",
+    "ogImage": { "src": "/images/tours/10-day-georgia-armenia-tour/route-map-10-day-georgia-armenia-tour-og-1200x630.jpg", "width": 1200, "height": 630 },
+    "tileImage": "/images/tours/10-day-georgia-armenia-tour/route-map-10-day-georgia-armenia-tour-1200.webp",
+    "listingImage": "/images/tours/10-day-georgia-armenia-tour/route-map-10-day-georgia-armenia-tour-1200.webp",
+    "days": 10,
+    "description": "Ten days across two countries — Georgia's cities, mountains and wine country, then over the border into Armenia for its monasteries, its alpine lake and the view of Ararat. This private cultural tour starts with your arrival in Tbilisi and ends with your flight out of Yerevan, with a guided border crossing in between.\n\nThe Georgian half runs from Tbilisi to the cave town of Uplistsikhe and Gori, north up the Military Highway to Mtskheta and Kazbegi, and east into Kakheti for Sighnaghi, Bodbe and the qvevri wineries around Telavi. On day seven you drive south to the Sadakhlo crossing, walk across into Armenia, and meet your Armenian guide and driver at Bagratashen — then it's Haghpat, Lake Sevan and three nights in Yerevan, with days out to Echmiadzin, Khor Virap, Garni and Geghard.\n\nFour UNESCO World Heritage sites, two capitals and two wine cultures in one trip. A few of the days carry real driving, and the border day is a long one, but the route is built so each stretch lands somewhere worth arriving — and because it's private, the pace and the stops bend around you.",
+    "listingDescription": "A private 10-day route across Georgia and Armenia — Kazbegi, Kakheti wine country, a guided border crossing, then Yerevan, Lake Sevan and the view of Mount Ararat.",
+    "seoTitle": "10-Day Georgia and Armenia Tour: Kazbegi, Kakheti Wine & Yerevan",
+    "metaDescription": "Private 10-day tour across Georgia and Armenia: Kazbegi, Kakheti wine country, a guided border crossing, Yerevan, Lake Sevan and Mount Ararat — hotels, transport and guides included.",
+    "itinerary": [
+      {
+        "title": "Day 1: Arrival and City Tour in Tbilisi",
+        "content": "<p>You'll be met at the airport and taken to your hotel. Check-in is from 14:00, so if you arrive earlier, we'll begin the city tour first and settle you in afterwards. Either way, the tour starts at Holy Trinity Cathedral — Sameba — one of the largest Orthodox churches in the world, rising above the city. From there you'll visit the clifftop Metekhi church, perched above the river, then ride the cable car up to the Narikala fortress for the view over the whole of Tbilisi. Walking down from the fortress, you'll pass through <a href=\"/en/georgia/tbilisi/abanotubani-sulfur-baths\" data-internal=\"/georgia/tbilisi/abanotubani-sulfur-baths\" class=\"entity-link\">Abanotubani</a>, the district of brick-domed sulfur bathhouses the city was built on and named after, then wander the Old Town lanes to the leaning clock tower of the <a href=\"/en/georgia/tbilisi/rezo-gabriadze-marionette-theatre\" data-internal=\"/georgia/tbilisi/rezo-gabriadze-marionette-theatre\" class=\"entity-link\">Rezo Gabriadze theatre</a>. After the tour, you'll have free time until the evening. The day ends with a welcome dinner of Georgian food and local wine.</p><ul><li>Arrival in Tbilisi and hotel check-in;</li><li>Visit Holy Trinity Cathedral (Sameba);</li><li>See Metekhi Church;</li><li>Ride the cable car to Narikala Fortress;</li><li>Walk through the Abanotubani sulfur bath district;</li><li>See the Rezo Gabriadze Theatre clock tower;</li><li>Walk across the Peace Bridge;</li><li>Welcome dinner in Tbilisi;</li><li>Overnight stay in Tbilisi.</li><li><strong>Duration of the tour:</strong> 4-5 hours</li><li><strong>Driving duration:</strong> 30 minutes</li></ul>"
+      },
+      {
+        "title": "Day 2: Tbilisi – Uplistsikhe – Gori Stalin Museum – Tbilisi",
+        "content": "<p>A day west of the capital into the heart of the country. First is Uplistsikhe, a town carved into the rock that goes back to the Iron Age, its halls and tunnels still climbing the hillside above the river. Then Gori and its Stalin Museum, in the town where he was born — a place that has stayed largely unchanged since Soviet times. Back in Tbilisi for the night.</p><ul><li>Visit Uplistsikhe cave town;</li><li>Visit the Stalin Museum in Gori;</li><li>Overnight stay in Tbilisi.</li><li><strong>Duration of the tour:</strong> 7-8 hours</li><li><strong>Driving duration:</strong> 3 hours</li></ul>"
+      },
+      {
+        "title": "Day 3: Tbilisi – Jvari – Mtskheta – Ananuri – Stepantsminda (Kazbegi)",
+        "content": "<p>North today, up the old Georgian Military Highway into the Caucasus. First stop is Mtskheta, Georgia's spiritual heart — the great Svetitskhoveli cathedral in the town, and Jvari monastery on the hill above it, both UNESCO sites. Then a pause at <a href=\"/en/georgia/mtskheta-mtianeti/ananuri-fortress\" data-internal=\"/georgia/mtskheta-mtianeti/ananuri-fortress\" class=\"entity-link\">Ananuri</a>, a fortress standing over the turquoise Jinvali reservoir. Further up you'll stop where the black and white Aragvi rivers meet, their two colours running side by side before they blend into one, and again at the Gudauri Panorama for the wide view back down the valley. From there the road climbs to Kazbegi, a small town under the snows of Mount Kazbek where the air changes completely.</p><ul><li>Visit Jvari Monastery (UNESCO World Heritage Site);</li><li>Explore Mtskheta and Svetitskhoveli Cathedral;</li><li>Stop at Ananuri Architectural Complex and enjoy views of Jinvali Reservoir;</li><li>See the confluence of Black and White Aragvi rivers;</li><li>Stop at Gudauri Panorama;</li><li>Overnight stay in Kazbegi.</li><li><strong>Duration of the tour:</strong> 8-9 hours</li><li><strong>Driving duration:</strong> 3.5 hours</li></ul>"
+      },
+      {
+        "title": "Day 4: Kazbegi – Gergeti Trinity Church – Tbilisi",
+        "content": "<p>Your morning is the big one — up to Gergeti Trinity, the lone church at 2,170 metres with Mount Kazbek behind it, one of Georgia's great views and best in the early light. Afterwards you leave the mountains and drive back down the Military Highway to Tbilisi, arriving in the afternoon with the rest of the day free.</p><ul><li>Visit Gergeti Trinity Church;</li><li>Drive back to Tbilisi;</li><li>Overnight stay in Tbilisi.</li><li><strong>Duration of the tour:</strong> 6-7 hours</li><li><strong>Driving duration:</strong> 3.5 hours</li></ul>"
+      },
+      {
+        "title": "Day 5: Tbilisi – Bodbe – Sighnaghi – Khareba Winery – Telavi",
+        "content": "<p>East today, into Kakheti, Georgia's main wine region. You'll start at Bodbe, a hilltop convent above the Alazani valley, then wander Sighnaghi, the small walled \"City of Love\" with its cobbled streets and long views. The wine begins at Khareba, whose cellar is a tunnel cut into the hillside, before you settle into Telavi, the heart of the region, for the night.</p><ul><li>Visit Bodbe Monastery;</li><li>Visit Sighnaghi;</li><li>Wine tasting at Khareba Winery;</li><li>Overnight stay in Telavi.</li><li><strong>Duration of the tour:</strong> 8-9 hours</li><li><strong>Driving duration:</strong> 3 hours</li></ul>"
+      },
+      {
+        "title": "Day 6: Telavi – Tsinandali – Vardisubani – Tbilisi",
+        "content": "<p>The day starts with a walk through Telavi — the old town, the giant 900-year-old plane tree, and the Batonistsikhe castle, the former royal residence of the kings of Kakheti. Then out to the Tsinandali estate, the 19th-century home and gardens of Prince Alexander Chavchavadze, and a local winery where you get hands-on with a qvevri — the buried clay vessel Georgians have fermented wine in for millennia. A last stop in Vardisubani, known for its qvevri-making, before the drive back to Tbilisi for the night.</p><ul><li>Walk through Telavi and see the 900-year-old plane tree;</li><li>Visit Batonistsikhe Castle;</li><li>Visit Tsinandali Estate;</li><li>Qvevri winemaking at a local winery;</li><li>Visit Vardisubani;</li><li>Overnight stay in Tbilisi.</li><li><strong>Duration of the tour:</strong> 8-9 hours</li><li><strong>Driving duration:</strong> 3 hours</li></ul>"
+      },
+      {
+        "title": "Day 7: Tbilisi – Sadakhlo Border – Bagratashen – Haghpat – Lake Sevan – Sevanavank – Yerevan",
+        "content": "<p>Your Georgian driver takes you south from Tbilisi to the Sadakhlo border crossing, where you walk across into Armenia. On the Armenian side, at Bagratashen, your new guide and driver are waiting, and the tour carries on. First stop is Haghpat, a 10th-century monastery on a green plateau in the Lori hills and one of Armenia's UNESCO sites. The road then climbs to Lake Sevan, a vast alpine lake at nearly 1,900 metres, where the Sevanavank monastery sits on a headland above the blue water. From there it's on to Yerevan for the first of three nights.</p><ul><li>Transfer to the Sadakhlo border crossing;</li><li>Cross into Armenia and meet your Armenian guide and driver at Bagratashen;</li><li>Visit Haghpat Monastery (UNESCO World Heritage Site);</li><li>Stop at Lake Sevan;</li><li>Visit Sevanavank Monastery;</li><li>Overnight stay in Yerevan.</li><li><strong>Duration of the tour:</strong> 10-11 hours</li><li><strong>Driving duration:</strong> 5 hours</li></ul>"
+      },
+      {
+        "title": "Day 8: Yerevan – Echmiadzin – Zvartnots – Yerevan City Tour",
+        "content": "<p>Today pairs Armenia's spiritual heart with its capital. You'll drive out to Echmiadzin, the seat of the Armenian Apostolic Church, home to a cathedral founded in the 4th century — one of the oldest in the world and a UNESCO site — and stop at the ruins of Zvartnots, a 7th-century cathedral whose great ring of columns stands open to the sky, also on the UNESCO list. Back in Yerevan, the city tour takes in Republic Square, the Cascade with its view to Mount Ararat, the Opera House and the Matenadaran manuscript museum. The day ends with a dinner of Armenian food and local wine.</p><ul><li>Visit Echmiadzin Cathedral (UNESCO World Heritage Site);</li><li>See the Zvartnots ruins;</li><li>Yerevan city tour;</li><li>Dinner at Armenian restaurant;</li><li>Overnight stay in Yerevan.</li><li><strong>Duration of the tour:</strong> 6-7 hours</li><li><strong>Driving duration:</strong> 1.5 hours</li></ul>"
+      },
+      {
+        "title": "Day 9: Yerevan – Khor Virap – Garni – Symphony of Stones – Geghard – Yerevan",
+        "content": "<p>A full day to Armenia's three most famous sights. You start south at Khor Virap, a monastery set right below Mount Ararat with the finest views of the mountain in the country — the place where Gregory the Illuminator was imprisoned before Armenia adopted Christianity. Then east to Garni, a 1st-century Greco-Roman temple standing above a river gorge — the only colonnaded pagan temple of its kind in the region — with a walk down to the Symphony of Stones, a wall of natural basalt columns in the canyon below. Nearby is Geghard, a UNESCO-listed monastery partly hewn straight into the rock. Back in Yerevan for your last night.</p><ul><li>Visit Khor Virap Monastery with views of Mount Ararat;</li><li>Visit the Garni Temple;</li><li>See the Symphony of Stones basalt columns;</li><li>Visit Geghard Monastery (UNESCO World Heritage Site);</li><li>Overnight stay in Yerevan.</li><li><strong>Duration of the tour:</strong> 8-9 hours</li><li><strong>Driving duration:</strong> 3.5 hours</li></ul>"
+      },
+      {
+        "title": "Day 10: Departure from Yerevan",
+        "content": "<p>Check out of your hotel by 12:00 p.m. When it's time, we'll transfer you to Zvartnots International Airport for your departure.</p><ul><li>Hotel check-out by 12:00 p.m.;</li><li>Transfer to Zvartnots International Airport;</li><li>Departure.</li><li><strong>Driving duration:</strong> 30 minutes</li></ul>"
+      }
+    ],
+    "accommodations": [
+      { "city": "Tbilisi (4 nights)", "luxury": "Rooms Hotel Tbilisi", "midRange": "Ibis Styles Tbilisi Center", "economy": "Ginger Hotel" },
+      { "city": "Kazbegi (1 night)", "luxury": "Rooms Hotel Kazbegi", "midRange": "Northgate", "economy": "Hotel Horizon" },
+      { "city": "Telavi (1 night)", "luxury": "Tsinandali Estate, A Radisson Collection Hotel", "midRange": "Park Hotel Tsinandali", "economy": "Hotel & Wine Cellar ARGE" },
+      { "city": "Yerevan (3 nights)", "luxury": "DoubleTree by Hilton", "midRange": "Yerevan Place", "economy": "Ani Central Inn" }
+    ],
+    "pricing": [
+      { "travelers": "Single Supplement", "luxury": "€795", "midRange": "€470", "economy": "€290" },
+      { "travelers": "1", "luxury": "€4860", "midRange": "€3995", "economy": "€3580" },
+      { "travelers": "2", "luxury": "€2595", "midRange": "€2140", "economy": "€1935" },
+      { "travelers": "3", "luxury": "€2435", "midRange": "€1855", "economy": "€1595" },
+      { "travelers": "4", "luxury": "€1980", "midRange": "€1530", "economy": "€1295" }
+    ],
+    "included": [
+      "Accommodation in standard double/twin room, with breakfast included;",
+      "Transfers as per itinerary;",
+      "English-speaking guide and driver throughout — a Georgian team for Days 1–7 and an Armenian team for Days 7–10, with the handover at the border;",
+      "Entrance fees;",
+      "Welcome dinner in Tbilisi on day 1;",
+      "3 wine tastings in Georgia;",
+      "Dinner in Yerevan on day 8;",
+      "Still water."
+    ],
+    "notIncluded": [
+      "Lunches and dinners not mentioned in the itinerary;",
+      "Additional hotel expenses;",
+      "Travel insurance."
+    ],
+    "gallery": [
+      {
+        "src": "/images/tours/10-day-georgia-armenia-tour/route-map-10-day-georgia-armenia-tour-2400.webp",
+        "base": "/images/tours/10-day-georgia-armenia-tour/route-map-10-day-georgia-armenia-tour",
+        "widths": [768, 1200, 1600, 2400],
+        "width": 2400,
+        "height": 1600,
+        "caption": {
+          "en": "Route Map",
+          "de": "Routenkarte",
+          "fr": "Carte de l'itinéraire",
+          "es": "Mapa de la ruta",
+          "nl": "Routekaart",
+          "cs": "Mapa trasy",
+          "pl": "Mapa trasy"
+        },
+        "altText": {
+          "en": "Illustrated route map of the 10-day private tour across Georgia and Armenia: Tbilisi, Uplistsikhe, Gori, Kazbegi, Kakheti and Telavi, then the Sadakhlo–Bagratashen border crossing, Haghpat, Lake Sevan and Yerevan, with day trips to Khor Virap, Garni and Geghard",
+          "de": "Illustrierte Routenkarte der 10-tägigen Privatreise durch Georgien und Armenien: Tiflis, Uplistsikhe, Gori, Kazbegi, Kachetien und Telavi, dann der Grenzübergang Sadakhlo–Bagratashen, Haghpat, der Sewansee und Jerewan, mit Tagesausflügen nach Khor Virap, Garni und Geghard",
+          "fr": "Carte illustrée de l'itinéraire du circuit privé de 10 jours en Géorgie et en Arménie : Tbilissi, Uplistsikhe, Gori, Kazbegi, la Kakhétie et Telavi, puis le passage frontalier de Sadakhlo–Bagratashen, Haghpat, le lac Sevan et Erevan, avec des excursions à Khor Virap, Garni et Guégard",
+          "es": "Mapa ilustrado de la ruta del tour privado de 10 días por Georgia y Armenia: Tiflis, Uplistsikhe, Gori, Kazbegi, Kajetia y Telavi, después el paso fronterizo de Sadakhlo–Bagratashen, Haghpat, el lago Sevan y Ereván, con excursiones a Khor Virap, Garni y Geghard",
+          "nl": "Geïllustreerde routekaart van de 10-daagse privétour door Georgië en Armenië: Tbilisi, Uplistsikhe, Gori, Kazbegi, Kacheti en Telavi, dan de grensovergang Sadakhlo–Bagratashen, Haghpat, het Sevanmeer en Jerevan, met dagtochten naar Khor Virap, Garni en Geghard",
+          "cs": "Ilustrovaná mapa trasy 10denního soukromého zájezdu po Gruzii a Arménii: Tbilisi, Uplistsikhe, Gori, Kazbegi, Kachetie a Telavi, poté hraniční přechod Sadakhlo–Bagratašen, Haghpat, jezero Sevan a Jerevan, s výlety do Khor Virapu, Garni a Geghardu",
+          "pl": "Ilustrowana mapa trasy 10-dniowej prywatnej wycieczki po Gruzji i Armenii: Tbilisi, Uplisciche, Gori, Kazbegi, Kachetia i Telavi, następnie przejście graniczne Sadakhlo–Bagratashen, Haghpat, jezioro Sewan i Erywań, z wycieczkami do Khor Virap, Garni i Geghardu"
+        }
+      }
+    ],
+    "routeMapImage": {
+      "en": {
+        "@type": "ImageObject",
+        "contentUrl": "https://www.hikasustravel.com/images/tours/10-day-georgia-armenia-tour/route-map-10-day-georgia-armenia-tour-2400.webp",
+        "url": "https://www.hikasustravel.com/images/tours/10-day-georgia-armenia-tour/route-map-10-day-georgia-armenia-tour-2400.webp",
+        "width": 2400,
+        "height": 1600,
+        "encodingFormat": "image/webp",
+        "name": "10-Day Georgia and Armenia Tour: Kazbegi, Kakheti Wine & Yerevan — Route Map",
+        "description": "Illustrated route map of the 10-day private tour across Georgia and Armenia: Tbilisi, Uplistsikhe, Gori, Kazbegi, Kakheti and Telavi, then the Sadakhlo–Bagratashen border crossing, Haghpat, Lake Sevan and Yerevan, with day trips to Khor Virap, Garni and Geghard.",
+        "creditText": "Hikasus Travel",
+        "creator": { "@type": "Organization", "name": "Hikasus Travel LTD" },
+        "copyrightNotice": "© Hikasus Travel LTD",
+        "license": "https://www.hikasustravel.com/en/terms-and-conditions",
+        "inLanguage": "en"
+      },
+      "de": {
+        "@type": "ImageObject",
+        "contentUrl": "https://www.hikasustravel.com/images/tours/10-day-georgia-armenia-tour/route-map-10-day-georgia-armenia-tour-2400.webp",
+        "url": "https://www.hikasustravel.com/images/tours/10-day-georgia-armenia-tour/route-map-10-day-georgia-armenia-tour-2400.webp",
+        "width": 2400,
+        "height": 1600,
+        "encodingFormat": "image/webp",
+        "name": "10-Day Georgia and Armenia Tour: Kazbegi, Kakheti Wine & Yerevan — Routenkarte",
+        "description": "Illustrierte Routenkarte der 10-tägigen Privatreise durch Georgien und Armenien: Tiflis, Uplistsikhe, Gori, Kazbegi, Kachetien und Telavi, dann der Grenzübergang Sadakhlo–Bagratashen, Haghpat, der Sewansee und Jerewan, mit Tagesausflügen nach Khor Virap, Garni und Geghard.",
+        "creditText": "Hikasus Travel",
+        "creator": { "@type": "Organization", "name": "Hikasus Travel LTD" },
+        "copyrightNotice": "© Hikasus Travel LTD",
+        "license": "https://www.hikasustravel.com/de/terms-and-conditions",
+        "inLanguage": "de"
+      },
+      "fr": {
+        "@type": "ImageObject",
+        "contentUrl": "https://www.hikasustravel.com/images/tours/10-day-georgia-armenia-tour/route-map-10-day-georgia-armenia-tour-2400.webp",
+        "url": "https://www.hikasustravel.com/images/tours/10-day-georgia-armenia-tour/route-map-10-day-georgia-armenia-tour-2400.webp",
+        "width": 2400,
+        "height": 1600,
+        "encodingFormat": "image/webp",
+        "name": "10-Day Georgia and Armenia Tour: Kazbegi, Kakheti Wine & Yerevan — Carte de l'itinéraire",
+        "description": "Carte illustrée de l'itinéraire du circuit privé de 10 jours en Géorgie et en Arménie : Tbilissi, Uplistsikhe, Gori, Kazbegi, la Kakhétie et Telavi, puis le passage frontalier de Sadakhlo–Bagratashen, Haghpat, le lac Sevan et Erevan, avec des excursions à Khor Virap, Garni et Guégard.",
+        "creditText": "Hikasus Travel",
+        "creator": { "@type": "Organization", "name": "Hikasus Travel LTD" },
+        "copyrightNotice": "© Hikasus Travel LTD",
+        "license": "https://www.hikasustravel.com/fr/terms-and-conditions",
+        "inLanguage": "fr"
+      },
+      "es": {
+        "@type": "ImageObject",
+        "contentUrl": "https://www.hikasustravel.com/images/tours/10-day-georgia-armenia-tour/route-map-10-day-georgia-armenia-tour-2400.webp",
+        "url": "https://www.hikasustravel.com/images/tours/10-day-georgia-armenia-tour/route-map-10-day-georgia-armenia-tour-2400.webp",
+        "width": 2400,
+        "height": 1600,
+        "encodingFormat": "image/webp",
+        "name": "10-Day Georgia and Armenia Tour: Kazbegi, Kakheti Wine & Yerevan — Mapa de la ruta",
+        "description": "Mapa ilustrado de la ruta del tour privado de 10 días por Georgia y Armenia: Tiflis, Uplistsikhe, Gori, Kazbegi, Kajetia y Telavi, después el paso fronterizo de Sadakhlo–Bagratashen, Haghpat, el lago Sevan y Ereván, con excursiones a Khor Virap, Garni y Geghard.",
+        "creditText": "Hikasus Travel",
+        "creator": { "@type": "Organization", "name": "Hikasus Travel LTD" },
+        "copyrightNotice": "© Hikasus Travel LTD",
+        "license": "https://www.hikasustravel.com/es/terms-and-conditions",
+        "inLanguage": "es"
+      },
+      "nl": {
+        "@type": "ImageObject",
+        "contentUrl": "https://www.hikasustravel.com/images/tours/10-day-georgia-armenia-tour/route-map-10-day-georgia-armenia-tour-2400.webp",
+        "url": "https://www.hikasustravel.com/images/tours/10-day-georgia-armenia-tour/route-map-10-day-georgia-armenia-tour-2400.webp",
+        "width": 2400,
+        "height": 1600,
+        "encodingFormat": "image/webp",
+        "name": "10-Day Georgia and Armenia Tour: Kazbegi, Kakheti Wine & Yerevan — Routekaart",
+        "description": "Geïllustreerde routekaart van de 10-daagse privétour door Georgië en Armenië: Tbilisi, Uplistsikhe, Gori, Kazbegi, Kacheti en Telavi, dan de grensovergang Sadakhlo–Bagratashen, Haghpat, het Sevanmeer en Jerevan, met dagtochten naar Khor Virap, Garni en Geghard.",
+        "creditText": "Hikasus Travel",
+        "creator": { "@type": "Organization", "name": "Hikasus Travel LTD" },
+        "copyrightNotice": "© Hikasus Travel LTD",
+        "license": "https://www.hikasustravel.com/nl/terms-and-conditions",
+        "inLanguage": "nl"
+      },
+      "cs": {
+        "@type": "ImageObject",
+        "contentUrl": "https://www.hikasustravel.com/images/tours/10-day-georgia-armenia-tour/route-map-10-day-georgia-armenia-tour-2400.webp",
+        "url": "https://www.hikasustravel.com/images/tours/10-day-georgia-armenia-tour/route-map-10-day-georgia-armenia-tour-2400.webp",
+        "width": 2400,
+        "height": 1600,
+        "encodingFormat": "image/webp",
+        "name": "10-Day Georgia and Armenia Tour: Kazbegi, Kakheti Wine & Yerevan — Mapa trasy",
+        "description": "Ilustrovaná mapa trasy 10denního soukromého zájezdu po Gruzii a Arménii: Tbilisi, Uplistsikhe, Gori, Kazbegi, Kachetie a Telavi, poté hraniční přechod Sadakhlo–Bagratašen, Haghpat, jezero Sevan a Jerevan, s výlety do Khor Virapu, Garni a Geghardu.",
+        "creditText": "Hikasus Travel",
+        "creator": { "@type": "Organization", "name": "Hikasus Travel LTD" },
+        "copyrightNotice": "© Hikasus Travel LTD",
+        "license": "https://www.hikasustravel.com/cs/terms-and-conditions",
+        "inLanguage": "cs"
+      },
+      "pl": {
+        "@type": "ImageObject",
+        "contentUrl": "https://www.hikasustravel.com/images/tours/10-day-georgia-armenia-tour/route-map-10-day-georgia-armenia-tour-2400.webp",
+        "url": "https://www.hikasustravel.com/images/tours/10-day-georgia-armenia-tour/route-map-10-day-georgia-armenia-tour-2400.webp",
+        "width": 2400,
+        "height": 1600,
+        "encodingFormat": "image/webp",
+        "name": "10-Day Georgia and Armenia Tour: Kazbegi, Kakheti Wine & Yerevan — Mapa trasy",
+        "description": "Ilustrowana mapa trasy 10-dniowej prywatnej wycieczki po Gruzji i Armenii: Tbilisi, Uplisciche, Gori, Kazbegi, Kachetia i Telavi, następnie przejście graniczne Sadakhlo–Bagratashen, Haghpat, jezioro Sewan i Erywań, z wycieczkami do Khor Virap, Garni i Geghardu.",
+        "creditText": "Hikasus Travel",
+        "creator": { "@type": "Organization", "name": "Hikasus Travel LTD" },
+        "copyrightNotice": "© Hikasus Travel LTD",
+        "license": "https://www.hikasustravel.com/pl/terms-and-conditions",
+        "inLanguage": "pl"
+      }
+    },
+    "tourFormTitle": "10-Day Georgia and Armenia Tour: Kazbegi, Kakheti Wine & Yerevan"
   }
 ]
 
