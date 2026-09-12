@@ -40,7 +40,7 @@ function FeaturedTourTile({ tour, t, tourTranslations }) {
   )
 }
 
-function FeaturedCountryPanel({ country, comingSoonKey, t, tourTranslations }) {
+function FeaturedCountryPanel({ country, comingSoonKey, t, tourTranslations, seeAllHref, seeAllLabel }) {
   const countryTours = featuredToursFor(country)
   if (!countryTours.length) {
     return (
@@ -59,6 +59,11 @@ function FeaturedCountryPanel({ country, comingSoonKey, t, tourTranslations }) {
           <FeaturedTourTile key={tour.slug} tour={tour} t={t} tourTranslations={tourTranslations} />
         ))}
       </div>
+      {seeAllHref && (
+        <p className="city-ttd-cta">
+          <LocaleLink to={seeAllHref} className="button">{seeAllLabel}</LocaleLink>
+        </p>
+      )}
     </FadeUp>
   )
 }
@@ -87,7 +92,15 @@ export default function HomePage() {
     {
       key: 'georgia',
       label: t('nav.destinations.georgia'),
-      content: <FeaturedCountryPanel country="georgia" t={t} tourTranslations={tourTranslations} />,
+      content: (
+        <FeaturedCountryPanel
+          country="georgia"
+          t={t}
+          tourTranslations={tourTranslations}
+          seeAllHref="/private-tours"
+          seeAllLabel={t('home.seeAllGeorgiaTours', { n: georgiaTourCount })}
+        />
+      ),
     },
     {
       key: 'armenia',
@@ -179,13 +192,6 @@ export default function HomePage() {
             <h2>{t('home.featuredToursTitle')}</h2>
           </FadeUp>
           <CountryTabs tabs={featuredTabs} ariaLabel={t('home.featuredToursTitle')} />
-          <FadeUp>
-            <p className="city-ttd-cta">
-              <LocaleLink to="/private-tours" className="button">
-                {t('home.seeAllGeorgiaTours', { n: georgiaTourCount })}
-              </LocaleLink>
-            </p>
-          </FadeUp>
         </div>
       </section>
 
