@@ -934,6 +934,10 @@ export const hotelAliases = {
   // uses the property's full official name as both the registry key and the
   // detail-card heading.
   'DoubleTree by Hilton': 'DoubleTree by Hilton Yerevan City Centre',
+  // The 10-Day Georgia and Armenia Tour's accommodation table shortens the
+  // Kazbegi mid-range hotel to "Northgate" (unchanged, per the owner's
+  // instruction not to alter the table).
+  'Northgate': 'Northgate Hotel',
 }
 
 // Resolve a name as written in the tour data to its canonical hotelData key,
