@@ -1110,9 +1110,24 @@
     "keywords": "Aktivitäten in Bakuriani, Bakuriani Georgien, Skifahren in Bakuriani, Didveli, Kokhta, Skikurse Bakuriani, Kukushka-Bahn, Borjomi, Bakuriani Sommer, Wandern Bakuriani"
   },
   "home": {
-    "title": "Hikasus Travel – Entdecke Georgien | Touren & Shuttle-Services",
-    "description": "Entdecken Sie Georgien mit privaten und Gruppentouren, Shuttle-Transfers und lokalen Erlebnissen. Buchen Sie Ihr Georgien-Abenteuer.",
-    "keywords": "Georgien Touren, Reise Georgien, Reisebüro Georgien, Privattouren Georgien, Gruppentouren Georgien, Shuttle Georgien, Urlaub Georgien, Kaukasus Reise"
+    "title": "Reisen in Georgien, Armenien und Aserbaidschan | Hikasus Travel",
+    "description": "Private und Gruppenreisen in Georgien, Armenien und Aserbaidschan sowie kombinierte Kaukasus-Reiserouten. Örtlicher Reiseleiter bei jeder Reise; Privatreisen ganz nach Ihren Terminen, Ihrer Route und Reisedauer.",
+    "keywords": "Georgien Reisen, Armenien Reisen, Aserbaidschan Reisen, Kaukasus Reise, Privatreisen Kaukasus, Gruppenreisen Kaukasus, kombinierte Kaukasus-Reiseroute"
+  },
+  "toursArmenia": {
+    "title": "Reisen nach Armenien | Hikasus Travel",
+    "description": "Private und Gruppenreisen nach Armenien — Jerewan, Sewansee, Dilischan und mehr. Örtlicher Reiseleiter bei jeder Reise; kombinierbar mit Georgien oder Aserbaidschan.",
+    "keywords": "Armenien Reisen, Privatreisen Armenien, Gruppenreisen Armenien, Jerewan Reisen, Sewansee, Dilischan"
+  },
+  "toursAzerbaijan": {
+    "title": "Reisen nach Aserbaidschan | Hikasus Travel",
+    "description": "Private und Gruppenreisen nach Aserbaidschan — Baku, Absheron, Gobustan, Sheki. Örtlicher Reiseleiter bei jeder Reise; kombinierbar mit Georgien oder Armenien.",
+    "keywords": "Aserbaidschan Reisen, Privatreisen Aserbaidschan, Gruppenreisen Aserbaidschan, Baku Reisen, Gobustan, Sheki"
+  },
+  "toursCaucasus": {
+    "title": "Kaukasus-Reisen: Georgien, Armenien und Aserbaidschan | Hikasus Travel",
+    "description": "Kombinierte Kaukasus-Reiserouten durch Georgien, Armenien und Aserbaidschan, mit einem örtlichen Reiseleiter während der gesamten Reise.",
+    "keywords": "Kaukasus Reisen, kombinierte Reisen Georgien Armenien Aserbaidschan, Mehrländerreise Kaukasus"
   },
   "aboutUs": {
     "title": "Über Uns – Hikasus Travel",

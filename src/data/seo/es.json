@@ -1110,9 +1110,24 @@
     "keywords": "qué hacer en Bakuriani, Bakuriani Georgia, esquí en Bakuriani, Didveli, Kokhta, clases de esquí Bakuriani, ferrocarril Kukushka, Borjomi, Bakuriani verano, senderismo Bakuriani"
   },
   "home": {
-    "title": "Hikasus Travel – Descubre Georgia | Tours y Servicios de Transporte",
-    "description": "Explora Georgia con tours privados y grupales, traslados y experiencias locales. Reserva tu aventura georgiana hoy.",
-    "keywords": "tours Georgia, viajar a Georgia, agencia de viajes Georgia, tours privados Georgia, tours grupales Georgia, shuttle Georgia, vacaciones Georgia"
+    "title": "Tours en Georgia, Armenia y Azerbaiyán | Hikasus Travel",
+    "description": "Tours privados y en grupo por Georgia, Armenia y Azerbaiyán, además de itinerarios combinados por el Cáucaso. Guía local en cada tour; los tours privados se diseñan según tus fechas, ruta y duración.",
+    "keywords": "tours Georgia, tours Armenia, tours Azerbaiyán, viajar al Cáucaso, tours privados Cáucaso, tours grupales Cáucaso, itinerario combinado Cáucaso"
+  },
+  "toursArmenia": {
+    "title": "Tours en Armenia | Hikasus Travel",
+    "description": "Tours privados y en grupo por Armenia — Ereván, lago Sevan, Dilijan y más. Guía local en cada tour; combinable con Georgia o Azerbaiyán.",
+    "keywords": "tours Armenia, tours privados Armenia, tours grupales Armenia, tours Ereván, lago Sevan, Dilijan"
+  },
+  "toursAzerbaijan": {
+    "title": "Tours en Azerbaiyán | Hikasus Travel",
+    "description": "Tours privados y en grupo por Azerbaiyán — Bakú, Absherón, Gobustán, Sheki. Guía local en cada tour; combinable con Georgia o Armenia.",
+    "keywords": "tours Azerbaiyán, tours privados Azerbaiyán, tours grupales Azerbaiyán, tours Bakú, Gobustán, Sheki"
+  },
+  "toursCaucasus": {
+    "title": "Tours por el Cáucaso: Georgia, Armenia y Azerbaiyán | Hikasus Travel",
+    "description": "Itinerarios combinados por el Cáucaso — Georgia, Armenia y Azerbaiyán — con un guía local durante todo el recorrido.",
+    "keywords": "tours Cáucaso, tours combinados Georgia Armenia Azerbaiyán, viaje multi-país Cáucaso"
   },
   "aboutUs": {
     "title": "Sobre Nosotros – Hikasus Travel",

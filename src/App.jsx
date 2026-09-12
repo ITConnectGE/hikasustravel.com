@@ -45,6 +45,7 @@ const PrivateToursPage = routeComponent(() => import('./components/pages/Private
 const GroupToursPage = routeComponent(() => import('./components/pages/GroupToursPage'))
 const TourDetailPage = routeComponent(() => import('./components/pages/TourDetailPage'))
 const EntityToursPage = routeComponent(() => import('./components/pages/EntityToursPage'))
+const CountryToursHubPage = routeComponent(() => import('./components/pages/CountryToursHubPage'))
 const PrivateTourCollectionPage = routeComponent(() => import('./components/pages/PrivateTourCollectionPage'))
 const FaqPage = routeComponent(() => import('./components/pages/FaqPage'))
 const ContactPage = routeComponent(() => import('./components/pages/ContactPage'))
@@ -176,6 +177,13 @@ export function AppRoutes() {
           ))}
           <Route path="private-tours/:slug" element={<TourDetailPage />} />
           <Route path="group-tours/:slug" element={<TourDetailPage />} />
+          {/* Country tours hubs — declared before the dynamic entity-tours
+              route below. Safe: every EntityToursPage slug ends in the
+              literal "-tours" (e.g. tbilisi-tours), so armenia/azerbaijan/
+              caucasus never collide with one. */}
+          <Route path="tours/armenia" element={<CountryToursHubPage country="armenia" />} />
+          <Route path="tours/azerbaijan" element={<CountryToursHubPage country="azerbaijan" />} />
+          <Route path="tours/caucasus" element={<CountryToursHubPage country="caucasus" />} />
           {/* Destination/attraction tour listings: /:lang/tours/<entity>-tours */}
           <Route path="tours/:slug" element={<EntityToursPage />} />
           {/* Renamed tour slugs: the old URL 301-redirects to the new canonical

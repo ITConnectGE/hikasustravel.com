@@ -1,17 +1,67 @@
 import { useContext } from 'react'
 import HeroSection from '../shared/HeroSection'
 import FadeUp from '../shared/FadeUp'
-import PrivateTourCollectionLinks from '../shared/PrivateTourCollectionLinks'
 import CardImage from '../shared/CardImage'
+import DestinationCard from '../shared/DestinationCard'
+import CountryTabs from '../shared/CountryTabs'
 import Testimonials from '../shared/Testimonials'
 import ContactForm from '../shared/ContactForm'
-import { tours } from '../../data/tours'
+import { tours, privateTourCountFor, countryHasAnyTours, featuredToursFor } from '../../data/tours'
 import useT from '../../i18n/useT'
 import useLang from '../../i18n/useLang'
 import LocaleLink from '../../i18n/LocaleLink'
 import { I18nContext } from '../../i18n/I18nContext'
 import useSEO from '../../hooks/useSEO'
 import { getSEO } from '../../data/seoData'
+
+function FeaturedTourTile({ tour, t, tourTranslations }) {
+  const tt = tourTranslations?.[tour.slug]
+  const classicRow = tour.pricing?.find((r) => r.travelers === '4')
+  const classicNum = classicRow ? parseFloat((classicRow.economy || '').replace(/[^0-9.]/g, '')) : NaN
+  const priceFrom = !isNaN(classicNum) && classicNum > 0 ? `€${classicNum.toLocaleString('en-US')}` : null
+  const basePath = tour.type === 'group' ? 'group-tours' : 'private-tours'
+  return (
+    <div className="tour-tile">
+      <LocaleLink to={`/${basePath}/${tour.slug}`} className="tour-tile-link">
+        <CardImage
+          src={tour.tileImage || tour.heroImage}
+          position={tour.cardPosition}
+          className="tour-tile-image"
+        />
+        <div className="tour-tile-overlay">
+          <h3>{tt?.title || tour.title}</h3>
+          <p>{tour.days} {t('tour.days')}</p>
+          {priceFrom && (
+            <p className="tour-tile-overlay__price">{t('tour.pricesFrom', { price: priceFrom })}</p>
+          )}
+        </div>
+      </LocaleLink>
+    </div>
+  )
+}
+
+function FeaturedCountryPanel({ country, comingSoonKey, t, tourTranslations }) {
+  const countryTours = featuredToursFor(country)
+  if (!countryTours.length) {
+    return (
+      <FadeUp>
+        <p>{t(comingSoonKey)}</p>
+        <p className="city-ttd-cta">
+          <LocaleLink to="/contact" className="button">{t('home.requestItinerary')}</LocaleLink>
+        </p>
+      </FadeUp>
+    )
+  }
+  return (
+    <FadeUp>
+      <div className="tours-grid">
+        {countryTours.map((tour) => (
+          <FeaturedTourTile key={tour.slug} tour={tour} t={t} tourTranslations={tourTranslations} />
+        ))}
+      </div>
+    </FadeUp>
+  )
+}
 
 export default function HomePage() {
   const t = useT()
@@ -23,31 +73,133 @@ export default function HomePage() {
   // Eagerly load tour translations for homepage tiles
   if (!tourTranslations) loadTourTranslations()
 
+  const georgiaTourCount = privateTourCountFor('georgia')
+  const destStatus = (country, combined = false) => {
+    if (countryHasAnyTours(country)) {
+      return t('home.destStatusTours', { n: privateTourCountFor(country) })
+    }
+    return combined ? t('home.destStatusCombined') : t('home.destStatusComingSoon')
+  }
+
+  const groupTours = tours.filter((tour) => tour.type === 'group')
+
+  const featuredTabs = [
+    {
+      key: 'georgia',
+      label: t('nav.destinations.georgia'),
+      content: <FeaturedCountryPanel country="georgia" t={t} tourTranslations={tourTranslations} />,
+    },
+    {
+      key: 'armenia',
+      label: t('nav.destinations.armenia'),
+      content: <FeaturedCountryPanel country="armenia" comingSoonKey="home.featuredComingSoonArmenia" t={t} tourTranslations={tourTranslations} />,
+    },
+    {
+      key: 'azerbaijan',
+      label: t('nav.destinations.azerbaijan'),
+      content: <FeaturedCountryPanel country="azerbaijan" comingSoonKey="home.featuredComingSoonAzerbaijan" t={t} tourTranslations={tourTranslations} />,
+    },
+    {
+      key: 'caucasus',
+      label: t('home.destCaucasus'),
+      content: <FeaturedCountryPanel country="caucasus" comingSoonKey="home.featuredComingSoonCaucasus" t={t} tourTranslations={tourTranslations} />,
+    },
+  ]
+
   return (
     <>
       <HeroSection
         image="/images/files/Sighnaghi.jpg"
         title={t('home.heroTitle')}
+        subtitle={t('home.heroSubtitle')}
         actions={(
-          <>
-            <LocaleLink to="/private-tours" className="iv-pill">
-              {t('home.ctaPrivateTours')}
-            </LocaleLink>
-            <LocaleLink to="/contact" className="iv-pill iv-pill--onphoto">
-              {t('home.ctaTailorMade')}
-            </LocaleLink>
-          </>
+          <div className="button">
+            <LocaleLink to="/contact">{t('home.ctaPlanTrip')}</LocaleLink>
+          </div>
         )}
       />
 
-      {(() => {
-        const groupTour = tours.find((tour) => tour.type === 'group')
-        if (!groupTour) return null
-        const tt = tourTranslations?.[groupTour.slug]
-        return (
-          <section className="home-items">
-            <div className="tour-listing" style={{ background: 'none', maxWidth: '1600px' }}>
-              <FadeUp>
+      {/* Where do you want to go? — four destination cards, status line driven
+          by the same tour-count check that gates the country hubs' noindex
+          state and sitemap inclusion (privateTourCountFor/countryHasAnyTours
+          in src/data/tours.js). */}
+      <section className="home-items">
+        <div className="tours-grid-container">
+          <FadeUp>
+            <h2>{t('home.whereToGoTitle')}</h2>
+          </FadeUp>
+          <FadeUp>
+            <ul className="dest-hub-grid">
+              <li>
+                <DestinationCard
+                  name={t('nav.destinations.georgia')}
+                  image="/images/files/Sighnaghi.jpg"
+                  to="/private-tours"
+                  locationLine={destStatus('georgia')}
+                  headingLevel="h3"
+                />
+              </li>
+              <li>
+                <DestinationCard
+                  name={t('nav.destinations.armenia')}
+                  image="/images/files/amberd-fortress-aragats-armenia-1086.webp"
+                  to="/tours/armenia"
+                  locationLine={destStatus('armenia')}
+                  headingLevel="h3"
+                />
+              </li>
+              <li>
+                <DestinationCard
+                  name={t('nav.destinations.azerbaijan')}
+                  to="/tours/azerbaijan"
+                  locationLine={destStatus('azerbaijan')}
+                  headingLevel="h3"
+                />
+              </li>
+              <li>
+                <DestinationCard
+                  name={t('home.destCaucasus')}
+                  image="/images/files/svaneti-caucasus-mountains-georgia-1200.webp"
+                  to="/tours/caucasus"
+                  locationLine={destStatus('caucasus', true)}
+                  headingLevel="h3"
+                />
+              </li>
+            </ul>
+          </FadeUp>
+        </div>
+      </section>
+
+      {/* Featured tours — country tabs. Georgia's panel is index 0, so it is
+          the one baked into the static prerendered HTML (see CountryTabs.jsx
+          — every panel always renders, only `hidden` toggles). */}
+      <section className="home-items">
+        <div className="tours-grid-container">
+          <FadeUp>
+            <h2>{t('home.featuredToursTitle')}</h2>
+          </FadeUp>
+          <CountryTabs tabs={featuredTabs} ariaLabel={t('home.featuredToursTitle')} />
+          <FadeUp>
+            <p className="city-ttd-cta">
+              <LocaleLink to="/private-tours" className="button">
+                {t('home.seeAllGeorgiaTours', { n: georgiaTourCount })}
+              </LocaleLink>
+            </p>
+          </FadeUp>
+        </div>
+      </section>
+
+      {/* Scheduled group departures — one card per group tour (currently one),
+          so future Armenia/Azerbaijan/Caucasus departures appear automatically. */}
+      <section className="home-items">
+        <div className="tour-listing" style={{ background: 'none', maxWidth: '1600px' }}>
+          <FadeUp>
+            <h2>{t('home.groupDeparturesTitle')}</h2>
+          </FadeUp>
+          {groupTours.map((groupTour) => {
+            const tt = tourTranslations?.[groupTour.slug]
+            return (
+              <FadeUp key={groupTour.slug}>
                 <div className="tour-item tour-item-card">
                   <LocaleLink
                     to={`/group-tours/${groupTour.slug}`}
@@ -96,88 +248,62 @@ export default function HomePage() {
                   </div>
                 </div>
               </FadeUp>
-            </div>
-          </section>
-        )
-      })()}
-
-      <section className="home-items">
-        <div className="tours-grid-container">
+            )
+          })}
           <FadeUp>
-            <h2>{t('tour.privateTours')}</h2>
-          </FadeUp>
-          {/* Browse-by-interest links to the six category landing pages. They
-              sit under the heading and above the cards so those pages get a
-              homepage entry point without competing with the cards or CTAs. */}
-          <FadeUp>
-            <PrivateTourCollectionLinks variant="home" />
-          </FadeUp>
-          <FadeUp>
-            <div className="tours-grid tours-grid--private-home">
-              {tours.filter((tour) => tour.type === 'private').map((tour) => {
-                const tt = tourTranslations?.[tour.slug]
-                const classicRow = tour.pricing?.find((r) => r.travelers === '4')
-                const classicNum = classicRow ? parseFloat((classicRow.economy || '').replace(/[^0-9.]/g, '')) : NaN
-                const priceFrom = !isNaN(classicNum) && classicNum > 0 ? `€${classicNum.toLocaleString('en-US')}` : null
-                return (
-                  <div className="tour-tile" key={tour.slug}>
-                    <LocaleLink
-                      to={`/${tour.type === 'group' ? 'group-tours' : 'private-tours'}/${tour.slug}`}
-                      className="tour-tile-link"
-                    >
-                      <CardImage
-                        src={tour.tileImage || tour.heroImage}
-                        position={tour.cardPosition}
-                        className="tour-tile-image"
-                      />
-                      <div className="tour-tile-overlay">
-                        <h3>{tt?.title || tour.title}</h3>
-                        <p>{tour.days} {t('tour.days')}</p>
-                        {priceFrom && (
-                          <p className="tour-tile-overlay__price">{t('tour.pricesFrom', { price: priceFrom })}</p>
-                        )}
-                      </div>
-                    </LocaleLink>
-                  </div>
-                )
-              })}
-            </div>
+            <p className="city-ttd-cta">
+              <LocaleLink to="/group-tours" className="button">{t('home.allGroupTours')}</LocaleLink>
+            </p>
           </FadeUp>
         </div>
       </section>
 
+      {/* Build your own trip + compact shuttle teaser (same existing copy,
+          moved out of its own full section into one line under this CTA). */}
       <section className="home-items">
         <div className="home-items">
           <FadeUp>
-            <h2>{t('home.shuttleTitle')}</h2>
+            <h2>{t('home.buildTripTitle')}</h2>
           </FadeUp>
-          <p>{t('home.shuttleText')}</p>
+          <p>{t('home.buildTripText')}</p>
           <FadeUp>
             <div className="button">
-              <p><LocaleLink to="/shuttle-service">{t('home.shuttleLink')}</LocaleLink></p>
+              <LocaleLink to="/contact">{t('home.requestItinerary')}</LocaleLink>
+            </div>
+          </FadeUp>
+          <div className="home-shuttle-compact">
+            <p>
+              {t('home.shuttleText')}{' '}
+              <LocaleLink to="/shuttle-service">{t('home.shuttleLink')}</LocaleLink>
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* Why Hikasus — four fact tiles, no photos/icons. */}
+      <section className="home-items">
+        <div className="tours-grid-container">
+          <FadeUp>
+            <h2>{t('home.whyHikasusTitle')}</h2>
+          </FadeUp>
+          <FadeUp>
+            <div className="why-tiles">
+              <div className="why-tile">{t('home.whyTile1')}</div>
+              <div className="why-tile">{t('home.whyTile2')}</div>
+              <div className="why-tile">{t('home.whyTile3')}</div>
+              <div className="why-tile">{t('home.whyTile4')}</div>
             </div>
           </FadeUp>
         </div>
       </section>
 
-      {/* Testimonials — social proof sits between the shuttle section and the
-          enquiry form, so a visitor reads why others chose us immediately
-          before the form that asks them to get in touch. */}
+      {/* Reviews — existing testimonials, unchanged layout, retitled heading. */}
       <section className="td-testimonials-section">
         <FadeUp>
           <h2 className="td-section__title">{t('testimonials.title')}</h2>
           <Testimonials />
         </FadeUp>
       </section>
-
-      {/* The Georgia map that used to sit between the testimonials and the
-          enquiry form has been removed. Only this render is gone: MapboxMap,
-          MapErrorBoundary, MapFallback and mapUtils are all kept intact, ready
-          for a map to be reintroduced — this was their last consumer, since the
-          tour-detail route map had already been replaced by a gallery image.
-          The whole <section> went with it rather than being emptied, so the
-          enquiry form now follows the testimonials directly with no leftover
-          70vh `.page-map` slot. */}
 
       <section className="home-items">
         <div className="home-items">

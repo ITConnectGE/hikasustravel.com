@@ -10753,6 +10753,91 @@ img[data-lightbox] {
 }
 
 /* ──────────────────────────────────────────────────────────────────────────
+   Homepage multi-country rebuild (hero subtitle, country tabs, why tiles).
+   `.hero-copy`/`.hero-actions` previously had CSS only under `.theme-ivory`
+   (tour-detail routes) — the homepage isn't in that theme, so its own CTA
+   rendered with no visible button chrome at all. These base rules give every
+   non-Ivory HeroSection consumer real, visible styling using the same tokens
+   `.button` already uses elsewhere on this page.
+   ────────────────────────────────────────────────────────────────────────── */
+.hero-copy {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: calc(var(--indent) / 2);
+}
+.hero-subtitle {
+  max-width: 640px;
+  margin: 0;
+  color: #fff;
+  font-size: calc(var(--font-size) * 1.05);
+  line-height: 1.5;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
+}
+.hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: calc(var(--indent) / 2);
+}
+
+/* Country tabs (Featured Tours section). Same dark-on-.home-items inversion as
+   `.ptc-links--home .ptc-chip` — same tokens, reused rather than duplicated. */
+.country-tabs__list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 8px;
+  margin: 0 0 calc(var(--indent) * 1.1);
+}
+.country-tabs__list .ptc-chip {
+  cursor: pointer;
+  padding: 6px 14px;
+  font-size: 0.82rem;
+  color: var(--color-bg);
+  border-color: rgba(239, 239, 215, 0.5);
+}
+.country-tabs__list .ptc-chip:hover,
+.country-tabs__list .ptc-chip:focus-visible,
+.country-tabs__list .ptc-chip[aria-selected="true"] {
+  background-color: var(--color-bg);
+  border-color: var(--color-bg);
+  color: var(--color-h2);
+}
+
+/* "Why Hikasus" fact tiles — plain text, no photos/icons, 4/2/1 responsive. */
+.why-tiles {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: calc(var(--indent) / 1.2);
+  max-width: 1100px;
+  margin: 0 auto;
+}
+.why-tile {
+  padding: calc(var(--indent) / 1.2);
+  border: 1px solid rgba(239, 239, 215, 0.3);
+  border-radius: 12px;
+  font-family: "rockwell";
+  font-size: 1rem;
+  line-height: 1.4;
+}
+@media (max-width: 1024px) {
+  .why-tiles { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 480px) {
+  .why-tiles { grid-template-columns: 1fr; }
+}
+
+/* Compact shuttle teaser under "Build your own trip" — one line + one link,
+   not a full section with its own large heading. */
+.home-shuttle-compact {
+  padding-top: 0;
+}
+.home-shuttle-compact p {
+  margin-bottom: calc(var(--indent) / 2);
+}
+
+/* ──────────────────────────────────────────────────────────────────────────
    Global site search
    Button lives in the header (desktop nav row + compact mobile bar); the panel
    is a portal-rendered overlay. Palette is the existing nav-dropdown one —

@@ -1110,9 +1110,24 @@
     "keywords": "co dělat v Bakuriani, Bakuriani Gruzie, lyžování v Bakuriani, Didveli, Kokhta, lekce lyžování Bakuriani, vláček Kukushka, Borjomi, Bakuriani léto, turistika Bakuriani"
   },
   "home": {
-    "title": "Hikasus Travel – Objevte Gruzii | Zájezdy a Shuttle Služby",
-    "description": "Prozkoumejte Gruzii s privátními a skupinovými zájezdy, shuttle transfery a místními zážitky. Rezervujte si své gruzínské dobrodružství.",
-    "keywords": "zájezdy Gruzie, cestování Gruzie, cestovní kancelář Gruzie, soukromé zájezdy Gruzie, skupinové zájezdy Gruzie, shuttle Gruzie, dovolená Gruzie"
+    "title": "Zájezdy do Gruzie, Arménie a Ázerbájdžánu | Hikasus Travel",
+    "description": "Soukromé a skupinové zájezdy do Gruzie, Arménie a Ázerbájdžánu i kombinované trasy po Kavkaze. Místní průvodce na každém zájezdu; soukromé zájezdy podle vašich termínů, trasy a délky cesty.",
+    "keywords": "zájezdy Gruzie, zájezdy Arménie, zájezdy Ázerbájdžán, cestování Kavkaz, soukromé zájezdy Kavkaz, kombinovaná trasa Kavkaz"
+  },
+  "toursArmenia": {
+    "title": "Zájezdy do Arménie | Hikasus Travel",
+    "description": "Soukromé a skupinové zájezdy do Arménie — Jerevan, jezero Sevan, Dilidžan a další. Místní průvodce na každém zájezdu; lze kombinovat s Gruzií nebo Ázerbájdžánem.",
+    "keywords": "zájezdy Arménie, soukromé zájezdy Arménie, skupinové zájezdy Arménie, Jerevan, jezero Sevan, Dilidžan"
+  },
+  "toursAzerbaijan": {
+    "title": "Zájezdy do Ázerbájdžánu | Hikasus Travel",
+    "description": "Soukromé a skupinové zájezdy do Ázerbájdžánu — Baku, Abšeron, Gobustan, Šeki. Místní průvodce na každém zájezdu; lze kombinovat s Gruzií nebo Arménií.",
+    "keywords": "zájezdy Ázerbájdžán, soukromé zájezdy Ázerbájdžán, skupinové zájezdy Ázerbájdžán, Baku, Gobustan, Šeki"
+  },
+  "toursCaucasus": {
+    "title": "Zájezdy po Kavkaze: Gruzie, Arménie a Ázerbájdžán | Hikasus Travel",
+    "description": "Kombinované trasy po Kavkaze — Gruzie, Arménie a Ázerbájdžán — s místním průvodcem po celou dobu cesty.",
+    "keywords": "zájezdy Kavkaz, kombinované zájezdy Gruzie Arménie Ázerbájdžán, cesta po více zemích Kavkaz"
   },
   "aboutUs": {
     "title": "O Nás – Hikasus Travel",

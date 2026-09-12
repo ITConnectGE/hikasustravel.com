@@ -47,7 +47,7 @@ const { privateTourCollectionPages } = await import(
 // page's JSON-LD graph. Importing the module (rather than re-deriving the
 // graph here) is the point: the browser and the build cannot disagree about
 // structured data if they run the same function.
-const { tours: tourRecords } = await import(
+const { tours: tourRecords, tourHubRobots } = await import(
   pathToFileURL(join(__dirname, '../src/data/tours.js')).href
 )
 const { buildTourSeo } = await import(
@@ -342,6 +342,13 @@ const seoPageMap = {
   // destination registry (publishedDestinationPages), not from this map.
   'private-tours': 'privateTours',
   'group-tours': 'groupTours',
+  // Country tours hubs. Robots (below) and sitemap inclusion are driven by the
+  // SAME `tourHubRobots`/`countryHasAnyTours` tour-count check as the runtime
+  // page — noindex while a country has zero tours, indexable the moment it
+  // has one, with no manual toggle.
+  'tours/armenia': 'toursArmenia',
+  'tours/azerbaijan': 'toursAzerbaijan',
+  'tours/caucasus': 'toursCaucasus',
   'shuttle-service': 'shuttle',
   'embassies': 'embassies',
   'blog': 'blog',
@@ -369,6 +376,9 @@ const staticPageImages = {
   'azerbaijan/cities': null,
   'azerbaijan/places-to-visit': null,
   'azerbaijan-visa-entry-requirements': null,
+  // No Azerbaijan photograph exists in the repo yet — strip the site-wide
+  // Georgian default rather than let this hub inherit another country's photo.
+  'tours/azerbaijan': null,
 }
 
 // Dedicated social records ({ src, width, height, alt{lang} }) for a country's
@@ -392,6 +402,11 @@ const staticPageRobots = {
   'azerbaijan/regions': countryHubMeta('azerbaijan'),
   'azerbaijan/cities': countryHubMeta('azerbaijan'),
   'azerbaijan/places-to-visit': countryHubMeta('azerbaijan'),
+  // Country tours hubs — a SEPARATE, tour-count-driven mechanism (unrelated to
+  // countryHubMeta above, which gates the destination-guide hubs).
+  'tours/armenia': tourHubRobots('armenia'),
+  'tours/azerbaijan': tourHubRobots('azerbaijan'),
+  'tours/caucasus': tourHubRobots('caucasus'),
 }
 
 // ---------------------------------------------------------------------------

@@ -1394,6 +1394,7 @@ export const tours = [
     "slug": "3-day-kakheti-wine-and-food-tour-from-tbilisi",
     "formerSlug": "savor-the-flavors-of-kakheti-3-day-wine-and-culture-adventure",
     "type": "private",
+    "featured": true,
     "title": "3-Day Kakheti Wine and Food Tour from Tbilisi",
     "heroImage": "/images/files/kakheti-wine-tasting.jpg",
     "tileImage": "/images/files/kakheti-wine-tasting.jpg",
@@ -3026,6 +3027,7 @@ export const tours = [
     "slug": "6-day-georgia-private-tour-highlights-from-tbilisi",
     "formerSlug": "tbilisi-to-treasures-a-6-day-journey-through-georgias-icons-and-hidden-gems",
     "type": "private",
+    "featured": true,
     "title": "6-Day Georgia Private Tour: Highlights from Tbilisi",
     "seoTitle": "6-Day Georgia Private Tour: Highlights & Culture from Tbilisi",
     "heroImage": "/images/tours/highlights-from-tbilisi/vardzia-cave-monastery-georgia-1200.webp",
@@ -4479,6 +4481,7 @@ export const tours = [
   {
     "slug": "7-day-gudauri-ski-tour-from-tbilisi",
     "type": "private",
+    "featured": true,
     "title": "7-Day Gudauri Ski Tour from Tbilisi",
     // Hero: real Gudauri ski photo via the .hero--gudauri-ski image-set() ladder
     // (styles.css) + imageMeta/ogImage below. heroImage is the SEO fallback ref.
@@ -5773,6 +5776,7 @@ export const tours = [
   },
   {
     "slug": "8-day-georgia-culture-and-adventure-tour",
+    "featured": true,
     "enTouristTrip": {
       "@context": "https://schema.org",
       "@type": "TouristTrip",
@@ -8111,6 +8115,7 @@ export const tours = [
     "slug": "georgia-grand-tour-9-days-from-tbilisi-to-batumi",
     "formerSlug": "wander-wonder-and-wine-9-days-of-georgias-best",
     "type": "private",
+    "featured": true,
     "title": "Georgia Grand Tour: 9 Days from Tbilisi to Batumi",
     "heroImage": "/images/tours/grand-tour-tbilisi-batumi/batumi-black-sea-beach-batumi-georgia/batumi-black-sea-beach-batumi-georgia-1200.webp",
     "heroBgClass": "hero--grand-tour-batumi",
@@ -15437,6 +15442,7 @@ export const tours = [
   {
     "slug": "ultimate-15-day-georgia-tour-from-tbilisi-to-svaneti--wine-culture-and-natural-beauty",
     "type": "private",
+    "featured": true,
     "title": "Ultimate 15-Day Georgia Tour: From Tbilisi to Svaneti – Wine, Culture, and Natural Beauty",
     "heroImage": "/images/tours/ultimate-15-day-georgia-tour-from-tbilisi-to-svaneti--wine-culture-and-natural-beauty/holy-trinity-cathedral-tbilisi-georgia-1200.webp",
     "heroBgClass": "hero--15day-ultimate-sameba",
@@ -18489,3 +18495,23 @@ export const tours = [
     "tourFormTitle": "20-Day Georgia Grand Tour: Wine, Hiking & Culture"
   }
 ]
+
+// Country dimension for the homepage's multi-country sections and the new
+// country tours hub pages. A tour's `country` is OPTIONAL and defaults to
+// 'georgia' — the 20 tours above stay untouched.
+export const tourCountry = (tour) => tour.country || 'georgia'
+export const toursForCountry = (country) => tours.filter((t) => tourCountry(t) === country)
+export const privateTourCountFor = (country) =>
+  toursForCountry(country).filter((t) => t.type === 'private').length
+export const countryHasAnyTours = (country) => toursForCountry(country).length > 0
+export const featuredToursFor = (country) => {
+  const inCountry = toursForCountry(country).filter((t) => t.type !== 'group')
+  const flagged = inCountry.filter((t) => t.featured)
+  return (flagged.length ? flagged : inCountry).slice(0, 6)
+}
+// Single source of truth for the country tours hub pages' robots directive:
+// noindex while a country has zero tours, indexable the moment it has one.
+// Read client-side by CountryToursHubPage (via useSEO), and independently by
+// scripts/prerender.js (static <head>) and scripts/generate-sitemap.js.
+export const tourHubRobots = (country) =>
+  countryHasAnyTours(country) ? null : 'noindex,follow'

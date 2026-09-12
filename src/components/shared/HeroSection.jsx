@@ -24,7 +24,7 @@ function heroBackground(image, imageAvif) {
 const srcSetFor = (base, widths, ext) =>
   widths.map((w) => `${asset(`${base}-${w}.${ext}`)} ${w}w`).join(', ')
 
-export default function HeroSection({ image, imageAvif, title, className = '', isTaxi = false, bgClass = '', infographic = null, actions = null }) {
+export default function HeroSection({ image, imageAvif, title, subtitle, className = '', isTaxi = false, bgClass = '', infographic = null, actions = null }) {
   const t = useT()
   const sectionRef = useRef(null)
 
@@ -81,6 +81,7 @@ export default function HeroSection({ image, imageAvif, title, className = '', i
              would otherwise sit beside the heading. */
           <div className="hero-copy">
             <h1 className={isTaxi ? 'taxiH1' : ''}>{title}</h1>
+            {subtitle && <p className="hero-subtitle">{subtitle}</p>}
             <div className="hero-actions">{actions}</div>
           </div>
         ) : (

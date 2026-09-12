@@ -1110,9 +1110,24 @@
     "keywords": "co robić w Bakuriani, Bakuriani Gruzja, narty w Bakuriani, Didveli, Kokhta, lekcje narciarstwa Bakuriani, kolejka Kukushka, Borjomi, Bakuriani lato, wędrówki Bakuriani"
   },
   "home": {
-    "title": "Hikasus Travel – Odkryj Gruzję | Wycieczki i Transfery",
-    "description": "Odkrywaj Gruzję dzięki prywatnym i grupowym wycieczkom, transferom i lokalnym doświadczeniom. Zarezerwuj swoją gruzińską przygodę.",
-    "keywords": "wycieczki Gruzja, podróż do Gruzji, biuro podróży Gruzja, wycieczki prywatne Gruzja, wycieczki grupowe Gruzja, transfer Gruzja, wakacje Gruzja"
+    "title": "Wycieczki po Gruzji, Armenii i Azerbejdżanie | Hikasus Travel",
+    "description": "Wycieczki prywatne i grupowe po Gruzji, Armenii i Azerbejdżanie oraz łączone trasy po Kaukazie. Lokalny przewodnik na każdej wycieczce; wycieczki prywatne dopasowane do Twoich dat, trasy i długości podróży.",
+    "keywords": "wycieczki Gruzja, wycieczki Armenia, wycieczki Azerbejdżan, podróż po Kaukazie, wycieczki prywatne Kaukaz, łączona trasa Kaukaz"
+  },
+  "toursArmenia": {
+    "title": "Wycieczki po Armenii | Hikasus Travel",
+    "description": "Wycieczki prywatne i grupowe po Armenii — Erywań, jezioro Sewan, Dilidżan i więcej. Lokalny przewodnik na każdej wycieczce; do połączenia z Gruzją lub Azerbejdżanem.",
+    "keywords": "wycieczki Armenia, wycieczki prywatne Armenia, wycieczki grupowe Armenia, Erywań, jezioro Sewan, Dilidżan"
+  },
+  "toursAzerbaijan": {
+    "title": "Wycieczki po Azerbejdżanie | Hikasus Travel",
+    "description": "Wycieczki prywatne i grupowe po Azerbejdżanie — Baku, Abszeron, Gobustan, Sheki. Lokalny przewodnik na każdej wycieczce; do połączenia z Gruzją lub Armenią.",
+    "keywords": "wycieczki Azerbejdżan, wycieczki prywatne Azerbejdżan, wycieczki grupowe Azerbejdżan, Baku, Gobustan, Sheki"
+  },
+  "toursCaucasus": {
+    "title": "Wycieczki po Kaukazie: Gruzja, Armenia i Azerbejdżan | Hikasus Travel",
+    "description": "Łączone trasy po Kaukazie — Gruzja, Armenia i Azerbejdżan — z lokalnym przewodnikiem przez całą podróż.",
+    "keywords": "wycieczki Kaukaz, wycieczki łączone Gruzja Armenia Azerbejdżan, podróż po kilku krajach Kaukaz"
   },
   "aboutUs": {
     "title": "O Nas – Hikasus Travel",

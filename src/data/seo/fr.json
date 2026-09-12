@@ -1110,9 +1110,24 @@
     "keywords": "que faire à Bakuriani, Bakuriani Géorgie, ski à Bakuriani, Didveli, Kokhta, cours de ski Bakuriani, chemin de fer Kukushka, Borjomi, Bakuriani été, randonnée Bakuriani"
   },
   "home": {
-    "title": "Hikasus Travel – Découvrez la Géorgie | Tours et Navettes",
-    "description": "Explorez la Géorgie avec des tours privés et en groupe, des navettes et des expériences locales. Réservez votre aventure géorgienne.",
-    "keywords": "tours Géorgie, voyager en Géorgie, agence de voyage Géorgie, tours privés Géorgie, tours en groupe Géorgie, navette Géorgie, vacances Géorgie"
+    "title": "Tours en Géorgie, Arménie et Azerbaïdjan | Hikasus Travel",
+    "description": "Tours privés et en groupe en Géorgie, en Arménie et en Azerbaïdjan, ainsi que des itinéraires combinés dans le Caucase. Guide local sur chaque tour ; les tours privés s'adaptent à vos dates, votre itinéraire et votre durée de séjour.",
+    "keywords": "tours Géorgie, tours Arménie, tours Azerbaïdjan, voyage Caucase, tours privés Caucase, tours en groupe Caucase, itinéraire combiné Caucase"
+  },
+  "toursArmenia": {
+    "title": "Tours en Arménie | Hikasus Travel",
+    "description": "Tours privés et en groupe en Arménie — Erevan, lac Sevan, Dilijan et plus. Guide local sur chaque tour ; combinable avec la Géorgie ou l'Azerbaïdjan.",
+    "keywords": "tours Arménie, tours privés Arménie, tours en groupe Arménie, tours Erevan, lac Sevan, Dilijan"
+  },
+  "toursAzerbaijan": {
+    "title": "Tours en Azerbaïdjan | Hikasus Travel",
+    "description": "Tours privés et en groupe en Azerbaïdjan — Bakou, Absheron, Gobustan, Sheki. Guide local sur chaque tour ; combinable avec la Géorgie ou l'Arménie.",
+    "keywords": "tours Azerbaïdjan, tours privés Azerbaïdjan, tours en groupe Azerbaïdjan, tours Bakou, Gobustan, Sheki"
+  },
+  "toursCaucasus": {
+    "title": "Tours dans le Caucase : Géorgie, Arménie et Azerbaïdjan | Hikasus Travel",
+    "description": "Itinéraires combinés à travers le Caucase — Géorgie, Arménie et Azerbaïdjan — avec un guide local tout au long du voyage.",
+    "keywords": "tours Caucase, tours combinés Géorgie Arménie Azerbaïdjan, voyage multi-pays Caucase"
   },
   "aboutUs": {
     "title": "À Propos – Hikasus Travel",

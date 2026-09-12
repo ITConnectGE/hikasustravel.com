@@ -30,7 +30,7 @@ const {
 
 // Full tour objects for the same purpose. The path list below still comes from
 // the regex scan, so the set of emitted URLs is unaffected by this import.
-const { tours: tourObjects } = await import(
+const { tours: tourObjects, countryHasAnyTours } = await import(
   pathToFileURL(join(__dirname, '../src/data/tours.js')).href
 )
 
@@ -96,6 +96,13 @@ const staticPages = [
   // registry below (publishedDestinationPages), so they are not listed here.
   { path: 'private-tours', changefreq: 'weekly', priority: '0.9' },
   { path: 'group-tours', changefreq: 'weekly', priority: '0.9' },
+  // Country tours hubs. `tourHubCountry` is a SEPARATE, tour-count-driven gate
+  // from `country`/countryHubIndexable above (which is for the destination-
+  // guide hubs) — dropped from the sitemap while that country has zero tours,
+  // admitted the moment its first tour is published, with no edit to this list.
+  { path: 'tours/armenia', changefreq: 'monthly', priority: '0.6', tourHubCountry: 'armenia' },
+  { path: 'tours/azerbaijan', changefreq: 'monthly', priority: '0.6', tourHubCountry: 'azerbaijan' },
+  { path: 'tours/caucasus', changefreq: 'monthly', priority: '0.6', tourHubCountry: 'caucasus' },
   { path: 'shuttle-service', changefreq: 'monthly', priority: '0.8' },
   { path: 'embassies', changefreq: 'monthly', priority: '0.7' },
   { path: 'blog', changefreq: 'weekly', priority: '0.8' },
@@ -116,6 +123,8 @@ const allPaths = []
 for (const page of staticPages) {
   // A country hub whose robots directive says noindex is not a sitemap URL.
   if (page.country && !countryHubIndexable(page.country)) continue
+  // A country tours hub with zero tours is not a sitemap URL either.
+  if (page.tourHubCountry && !countryHasAnyTours(page.tourHubCountry)) continue
   allPaths.push({ path: page.path, changefreq: page.changefreq, priority: page.priority })
 }
 

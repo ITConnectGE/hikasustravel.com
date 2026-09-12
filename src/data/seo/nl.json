@@ -1110,9 +1110,24 @@
     "keywords": "wat te doen in Bakuriani, Bakuriani Georgië, skiën in Bakuriani, Didveli, Kokhta, skilessen Bakuriani, Kukushka-spoorlijn, Borjomi, Bakuriani zomer, wandelen Bakuriani"
   },
   "home": {
-    "title": "Hikasus Travel – Ontdek Georgië | Tours & Shuttlediensten",
-    "description": "Ontdek Georgië met privé- en groepsreizen, shuttletransfers en lokale ervaringen. Boek vandaag nog uw Georgisch avontuur.",
-    "keywords": "tours Georgië, reizen Georgië, reisbureau Georgië, privéreizen Georgië, groepsreizen Georgië, shuttle Georgië, vakantie Georgië"
+    "title": "Reizen in Georgië, Armenië en Azerbeidzjan | Hikasus Travel",
+    "description": "Privé- en groepsreizen in Georgië, Armenië en Azerbeidzjan, plus gecombineerde reizen door de Kaukasus. Lokale gids op elke reis; privéreizen samengesteld rond je data, route en reisduur.",
+    "keywords": "Georgië reizen, Armenië reizen, Azerbeidzjan reizen, Kaukasus reizen, privéreizen Kaukasus, groepsreizen Kaukasus, gecombineerde Kaukasus route"
+  },
+  "toursArmenia": {
+    "title": "Reizen in Armenië | Hikasus Travel",
+    "description": "Privé- en groepsreizen in Armenië — Jerevan, Sevanmeer, Dilijan en meer. Lokale gids op elke reis; te combineren met Georgië of Azerbeidzjan.",
+    "keywords": "Armenië reizen, privéreizen Armenië, groepsreizen Armenië, Jerevan reizen, Sevanmeer, Dilijan"
+  },
+  "toursAzerbaijan": {
+    "title": "Reizen in Azerbeidzjan | Hikasus Travel",
+    "description": "Privé- en groepsreizen in Azerbeidzjan — Baku, Absheron, Gobustan, Sheki. Lokale gids op elke reis; te combineren met Georgië of Armenië.",
+    "keywords": "Azerbeidzjan reizen, privéreizen Azerbeidzjan, groepsreizen Azerbeidzjan, Baku reizen, Gobustan, Sheki"
+  },
+  "toursCaucasus": {
+    "title": "Kaukasusreizen: Georgië, Armenië en Azerbeidzjan | Hikasus Travel",
+    "description": "Gecombineerde reizen door de Kaukasus — Georgië, Armenië en Azerbeidzjan — met een lokale gids gedurende de hele reis.",
+    "keywords": "Kaukasus reizen, gecombineerde reizen Georgië Armenië Azerbeidzjan, meerlandenreis Kaukasus"
   },
   "aboutUs": {
     "title": "Over Ons – Hikasus Travel",

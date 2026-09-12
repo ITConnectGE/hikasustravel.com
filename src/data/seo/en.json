@@ -1110,9 +1110,24 @@
     "keywords": "things to do in Bakuriani, Bakuriani Georgia, skiing in Bakuriani, Didveli, Kokhta, ski lessons Bakuriani, Kukushka railway, Borjomi, Bakuriani summer, hiking Bakuriani, snowmobiling Bakuriani"
   },
   "home": {
-    "title": "Hikasus Travel – Discover Georgia | Tours & Shuttle Services",
-    "description": "Explore Georgia with expertly curated private and group tours, shuttle transfers, and local experiences. Book your Georgian adventure today.",
-    "keywords": "Georgia tours, travel Georgia, Georgia travel agency, private tours Georgia, group tours Georgia, shuttle service Georgia, Tbilisi tours, Georgia vacation, Caucasus travel, book tour Georgia"
+    "title": "Tours in Georgia, Armenia and Azerbaijan | Hikasus Travel",
+    "description": "Private and group tours in Georgia, Armenia and Azerbaijan, plus combined Caucasus itineraries. Local guide on every tour; private trips built around your dates, route and trip length.",
+    "keywords": "Georgia tours, Armenia tours, Azerbaijan tours, Caucasus travel, private tours Caucasus, group tours Caucasus, combined Caucasus itinerary, book tour Georgia"
+  },
+  "toursArmenia": {
+    "title": "Tours in Armenia | Hikasus Travel",
+    "description": "Private and group tours in Armenia — Yerevan, Lake Sevan, Dilijan and beyond. Local guide on every tour; combine with Georgia or Azerbaijan.",
+    "keywords": "Armenia tours, private tours Armenia, group tours Armenia, Yerevan tours, Lake Sevan, Dilijan, Hikasus Travel"
+  },
+  "toursAzerbaijan": {
+    "title": "Tours in Azerbaijan | Hikasus Travel",
+    "description": "Private and group tours in Azerbaijan — Baku, Absheron, Gobustan, Sheki. Local guide on every tour; combine with Georgia or Armenia.",
+    "keywords": "Azerbaijan tours, private tours Azerbaijan, group tours Azerbaijan, Baku tours, Gobustan, Sheki, Hikasus Travel"
+  },
+  "toursCaucasus": {
+    "title": "Caucasus Tours: Georgia, Armenia and Azerbaijan | Hikasus Travel",
+    "description": "Combined Caucasus itineraries across Georgia, Armenia and Azerbaijan, with a local guide throughout and border crossings handled for you.",
+    "keywords": "Caucasus tours, combined tours Georgia Armenia Azerbaijan, multi-country Caucasus trip, Hikasus Travel"
   },
   "aboutUs": {
     "title": "About Us – Hikasus Travel",
